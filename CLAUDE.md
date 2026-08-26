@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 # 学习小站 — 项目准则
 
 给自己孩子做的学习站：语文、英语、数学的练习单和讲义，一处收齐。
-手机/iPad 上翻，A4 打印。域名 `study.hi-ruby.com`（GitHub Pages）。
+手机/iPad 上翻，A4 打印。域名 `s.hi-ruby.com`（GitHub Pages）。
 
 ## 一条铁律：源码只放输入
 
