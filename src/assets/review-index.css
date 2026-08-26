@@ -1,0 +1,45 @@
+/* ── 打卡评价的目录页 ────────────────────────────────────
+   接在 site.css 后面，只加它没有的三样：按日期分组的小标题、
+   分类标签、分数徽章。
+
+   每个 <li> 上由 build.py 注入四个变量：
+     --s / --sbg    分数色（越差越红）
+     --c / --cbg    分类色（这是哪一类）
+   两套色同时在一行上，各管各的 —— 别合并成一套。 */
+
+.day{
+  font-family:var(--font-display); font-size:.95rem; color:var(--ink-soft);
+  margin:26px 4px 10px; letter-spacing:.02em;
+}
+/* site.css 的 .list li 是 grid 两列（左列 minmax(0,1fr) 可收缩、右列 auto），
+   这里不动它 —— 右边三样打包进 .meta 当作那一个 auto 列，
+   窄屏上左列自己收缩、右列整体保持，不会把按钮挤到下一行去。 */
+.list .meta{
+  display:flex; align-items:center; gap:8px; justify-self:end;
+}
+.list .cat{
+  flex:0 0 auto; font-size:.76rem; font-weight:700; font-family:var(--font-display);
+  color:var(--c,var(--english)); background:var(--cbg,var(--english-bg));
+  border-radius:999px; padding:3px 10px; white-space:nowrap;
+}
+.list .sc{
+  flex:0 0 auto; width:38px; height:38px; border-radius:12px;
+  display:grid; place-items:center; font-family:var(--font-display); font-weight:800;
+  color:var(--s,var(--ink-soft)); background:var(--sbg,rgba(120,104,84,.10));
+}
+.empty{ color:var(--ink-soft); text-align:center; padding:40px 0; }
+
+/* site.css 里的「打印单」按钮吃的是语文橙红。放到这一页就不对了：
+   同一行右边就是分数徽章（越差越红），一个橙红的按钮挨着它，
+   看着像在说「这份分数很差」。这里压成中性描边，只当一个次要入口。 */
+.list .pdf{
+  color:var(--ink-soft); background:transparent;
+  border:1.5px solid var(--line);
+}
+.list .pdf:active{ background:var(--ink-soft); color:var(--card); }
+
+/* 手机上标题会被右边那组挤成两行。分类标签是这里最先该让位的 ——
+   标题本身就以「超8」开头，同一行挂两遍是白占 50px。 */
+@media (max-width:430px){
+  .list .cat{ display:none; }
+}

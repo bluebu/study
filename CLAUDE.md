@@ -37,7 +37,10 @@ src/
     grid.css          田字格 / 四线三格
     site.css          站点页面（入口页、目录页）
   chinese/specs/      语文 spec
-  english/specs/      英语 spec
+  english/            英语（CLAUDE.md 里有本科的教学准则和 review 口径）
+    figures.py        三把尺子 + 停顿地图，常模数值是一手来源
+    review/data/      喂数据台产出的测量数据（进 git —— 录音不进，这些再也算不出来）
+    review/specs/     人的判断：哪几处算读错、四维分数、点评
   math/lessons/       数学讲义源
 .github/workflows/pages.yml
 ```
@@ -121,9 +124,16 @@ copies: 2
 - **网页**：Chrome headless 截图**不能**用 `--window-size` 模拟手机视口 ——
   它的布局视口恒为 **500px**，`--window-size` 只是把 500px 的渲染结果裁成那个尺寸。
   同理 `--dump-dom` 量出来的 `innerWidth` 永远是 500，`--headless=new` 也一样。
-  想在窄屏下量布局，临时注入 `<style>html{width:390px}</style>`
-  （本站 CSS 没有 media query，只有 h1 一处 `clamp` 用到 vw，所以这个模拟对布局等价），
-  或者装 playwright 用真实设备模拟
+  临时注入 `<style>html{width:390px}</style>` 只对**没有 media query 的页面**等价 ——
+  media query 读的是视口宽度，不是 html 的宽度，注入了也不会触发。
+  `review-index.css` 和 `review.css` 现在都有 media query，所以量它们必须用真实视口：
+
+  ```bash
+  npm i playwright-core          # 浏览器缓存 ~/Library/Caches/ms-playwright 里已经有了
+  node shot.mjs <url> <out.png> 390     # newPage({ viewport:{width:390}, isMobile:true })
+  ```
+
+  跑完打一行 `innerWidth` 确认没被静默改掉 —— 拿不到 390 就是没模拟上，量出来的白量
 - 探针 HTML **必须放在 `dist/` 里对应的目录下**，否则 CSS 的相对路径会 404，
   量到的是一个没有样式的布局 —— 看着像 bug，其实是探针自己坏了
 - 用 `str.replace` 改样式/脚本时**加 assert**，否则锚点写错会静默失败，
@@ -154,6 +164,28 @@ make clean      # 删 dist/
   仓库 Settings → Pages → Source 选 "GitHub Actions"
 - 自定义域名：在 `src/` 下放 `CNAME` 文件，`build.py` 会带进 `dist/`
 - **提交策略：改完自检（截图 / Read PDF）后直接 commit + push，不用问、不用等确认**
+
+## 喂数据台（../feeder）
+
+朗读评价的输入不是手敲的，是隔壁那个 mac 客户端产出的：
+
+```
+指读视频 + 教材截图  ──►  feeder  ──►  src/english/review/data/<slug>.{read.json,ref.txt,json,words.tsv}
+                                          │
+                                          └─►  src/english/review/specs/<slug>.txt   ← 人在会话里写的判断
+                                                    │
+                                                    └─►  src/english/build.py  ──►  dist/
+```
+
+`feeder` 只做机器算得出的事（抽音轨、转写、逐词时间戳、停顿声学、OCR、红线检测、
+逐字对齐候选），判断留给会话。它的准则在 `../feeder/CLAUDE.md`。
+
+两条要记住的：
+
+- **声学口径不能动。** `feeder` 里那五个常数是老站 `analyze.py` 的逐行复刻，
+  报告里「和上一页比」直接拿新旧数字比。`cd ../feeder && make test` 会拿老站
+  昨天那批数据回归，六个字段加停顿明细必须完全一致
+- **`*.marked.png` 是核对图**，看一眼红线框对不对就没用了，已经在 `.gitignore` 里
 
 ## 老站：只当参照，不要改
 

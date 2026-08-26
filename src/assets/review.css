@@ -1,0 +1,179 @@
+/* ── 打卡评价的报告页 ──────────────────────────────────────
+   从老站 ../english/review/reports/*.html 的内联 style 搬过来，
+   色值全部换成 palette.css 的变量 —— 老站每份报告各带一份同样的
+   178 行 style，改个颜色要改 7 个文件。
+
+   两个变量由 build.py 按页注入到 .sheet 上，别写死：
+     --read   分类色（超8 橙 / G3 蓝 / 单词 绿 / 语法 青），整页的主色
+     --score  分数色（越差越红），只给总分和四维条用
+   分类色说「这是哪一类」，分数色说「做得怎么样」，同一页上各管各的。 */
+
+:root{ --radius:20px; }
+
+*{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; }
+body{
+  margin:0; font-family:var(--font-cn); color:var(--ink); line-height:1.7;
+  background-color:var(--paper);
+  background-image:
+    radial-gradient(60% 50% at 88% -5%, rgba(226,164,19,.12), transparent 70%),
+    radial-gradient(55% 45% at -8% 8%,  rgba(62,155,214,.10), transparent 70%),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size:100% 100%,100% 100%,26px 26px,26px 26px;
+  background-attachment:fixed,fixed,scroll,scroll;
+}
+.wrap{ max-width:760px; margin:0 auto; padding:0 20px 80px; }
+
+.hero{ text-align:center; padding:40px 0 6px; }
+.eyebrow{
+  display:inline-block; font-family:var(--font-display); font-size:.78rem;
+  letter-spacing:.18em; color:var(--ink-soft);
+  border:1.5px solid var(--line); border-radius:999px; padding:4px 14px;
+  background:var(--card);
+}
+h1{ font-family:var(--font-display); font-size:clamp(1.7rem,6.4vw,2.4rem);
+    margin:14px 0 6px; line-height:1.25; }
+h1 b{ color:var(--read); }
+.sub{ color:var(--ink-soft); margin:0; font-size:.95rem; }
+
+.box{
+  background:var(--card); border:1.5px solid var(--line); border-radius:var(--radius);
+  padding:18px 20px; box-shadow:0 2px 0 var(--line); margin:0 0 18px;
+}
+.mini-h{
+  font-family:var(--font-display); font-size:1.05rem; margin:32px 4px 12px;
+  display:flex; align-items:center; gap:8px;
+}
+
+/* 总分 */
+.score{ display:flex; align-items:center; gap:20px; flex-wrap:wrap; margin-top:26px; }
+.score .num{
+  flex:0 0 auto; width:112px; height:112px; border-radius:28px;
+  background:var(--score-bg,var(--read-bg)); display:grid; place-items:center; line-height:1;
+}
+.score .num b{ font-family:var(--font-display); font-size:2.9rem; color:var(--score,var(--read)); }
+.score .num span{ font-size:.78rem; color:var(--ink-soft); margin-top:4px; }
+.score .say{ flex:1 1 220px; min-width:0; }
+.score .say p{ margin:0; }
+.score .say .lead{ font-weight:600; font-size:1.05rem; }
+.score .say .tip{ color:var(--ink-soft); font-size:.9rem; margin-top:6px; }
+
+.bars{ margin-top:18px; display:flex; flex-direction:column; gap:10px; }
+.bar{ display:flex; align-items:center; gap:10px; font-size:.9rem; }
+.bar .nm{ flex:0 0 5.2em; color:var(--ink-soft); }
+.bar .track{
+  flex:1 1 auto; height:12px; border-radius:999px; background:rgba(120,104,84,.10);
+  overflow:hidden;
+}
+.bar .fill{ display:block; height:100%; border-radius:999px; background:var(--score,var(--read)); }
+.bar .val{ flex:0 0 3.4em; text-align:right; font-family:var(--font-display); font-weight:700; }
+
+/* 四个数字 */
+.stats{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+.stat{
+  background:var(--card); border:1.5px solid var(--line); border-radius:16px;
+  box-shadow:0 2px 0 var(--line); padding:14px 8px; text-align:center;
+}
+.stat b{ display:block; font-family:var(--font-display); font-size:1.35rem; line-height:1.2; }
+.stat span{ display:block; font-size:.76rem; color:var(--ink-soft); margin-top:4px; }
+.stat.s1 b{ color:var(--math); }   .stat.s2 b{ color:var(--chinese); }
+.stat.s3 b{ color:var(--english); } .stat.s4 b{ color:var(--read); }
+
+/* 三把尺子。viewBox 宽 1000：手机上缩到约 0.31，iPad 上封顶 0.56，
+   字号才两头都读得清 —— SVG 里的 font-size 是按这个缩放定的，别单独调 */
+.scales svg{ display:block; width:100%; max-width:560px; height:auto;
+             overflow:visible; margin:10px auto 0; }
+.sc-h{ font-family:var(--font-display); font-weight:700; font-size:.95rem; margin:0 0 2px; }
+.sc-h.sc-sep{ margin-top:30px; padding-top:22px; border-top:1.5px dashed var(--line); }
+.sc-note{ font-size:.88rem; color:var(--ink-soft); margin:14px 0 0; }
+.sc-note b{ color:var(--ink); }
+.naep{ display:flex; flex-direction:column; gap:6px; margin-top:12px; }
+.nv{ display:flex; align-items:center; gap:10px; padding:8px 10px; border-radius:12px;
+     background:rgba(120,104,84,.05); font-size:.9rem; color:var(--ink-soft); }
+.nv .lv{ flex:0 0 auto; width:24px; height:24px; border-radius:8px; display:grid; place-items:center;
+         font-family:var(--font-display); font-weight:800; font-size:.82rem;
+         background:var(--card); border:1.5px solid var(--line); }
+.nv .ds{ flex:1 1 auto; }
+.nv .you{ flex:0 0 auto; font-size:.76rem; font-weight:700; color:var(--read); white-space:nowrap; }
+.nv.now{ background:var(--read-bg); color:var(--ink); font-weight:600; }
+.nv.now .lv{ background:var(--read); color:var(--card); border-color:transparent; }
+
+/* 和上一页比 */
+.cmp{ display:flex; flex-direction:column; gap:10px; }
+.cmp .r{ display:flex; align-items:center; gap:10px; font-size:.92rem; }
+.cmp .r .k{ flex:0 0 5.6em; color:var(--ink-soft); }
+.cmp .r .v{ flex:1 1 auto; font-family:var(--font-display); min-width:0; }
+.cmp .r .v s{ color:var(--ink-soft); text-decoration:none; opacity:.65; }
+.cmp .r .d{ flex:0 0 auto; font-family:var(--font-display); font-weight:700; font-size:.82rem;
+            border-radius:999px; padding:3px 10px; white-space:nowrap; }
+.cmp .r .d.up{ background:var(--math-bg); color:#1F7A55; }
+.cmp .r .d.down{ background:var(--chinese-bg); color:#B4442A; }
+.cmp .r .d.flat{ background:rgba(120,104,84,.08); color:var(--ink-soft); }
+
+/* 停顿地图 */
+.tl svg{ display:block; width:100%; height:auto; overflow:visible; }
+.legend{ display:flex; flex-wrap:wrap; gap:12px; margin-top:16px; font-size:.82rem; color:var(--ink-soft); }
+.legend i{ display:inline-block; width:14px; height:14px; border-radius:4px;
+           vertical-align:-2px; margin-right:5px; border:1px solid var(--line); }
+.tl-note{ font-size:.9rem; margin:14px 0 0; }
+
+/* 逐字比对 */
+.diff{ display:flex; flex-direction:column; gap:12px; }
+.d{
+  background:var(--card); border:1.5px solid var(--line); border-radius:16px;
+  box-shadow:0 2px 0 var(--line); padding:14px 16px;
+  display:grid; grid-template-columns:34px 1fr; gap:4px 12px; align-items:start;
+}
+.d .n{
+  grid-row:1 / span 3; width:34px; height:34px; border-radius:12px;
+  display:grid; place-items:center; background:var(--chinese-bg); color:var(--chinese);
+  font-family:var(--font-display); font-weight:800; font-size:.92rem;
+}
+/* 存疑的一处：编号出 ?，别让它长得像已经定案的 */
+.d.doubt .n{ background:var(--warn-bg); color:var(--warn); }
+.d .en{ font-family:var(--font-display); font-size:.98rem; overflow-wrap:break-word; }
+.d .en .lbl{ color:var(--ink-soft); font-size:.76rem; margin-right:6px; font-family:var(--font-cn); }
+.d .why{ font-size:.85rem; color:var(--ink-soft); }
+ins{ background:var(--chinese-bg); color:#B4442A; text-decoration:none;
+     border-radius:5px; padding:0 3px; font-weight:700; }
+mark{ background:var(--math-bg); color:#1F7A55; border-radius:5px; padding:0 3px; }
+
+/* 磕巴、亮点、斜线版共用 */
+.text{ font-family:var(--font-display); font-size:1.02rem; line-height:2.1; }
+.text .sl{ color:var(--english); font-weight:800; padding:0 3px; }
+.note-soft{ color:var(--ink-soft); font-size:.9rem; margin:12px 0 0; }
+
+.todo{ display:flex; flex-direction:column; gap:12px; }
+.todo .t{
+  background:var(--card); border:1.5px solid var(--line); border-radius:16px;
+  box-shadow:0 2px 0 var(--line); padding:14px 16px;
+  display:flex; gap:12px; align-items:flex-start;
+}
+.todo .t .ic{
+  flex:0 0 auto; width:34px; height:34px; border-radius:12px; display:grid; place-items:center;
+  background:var(--english-bg); font-size:1.05rem;
+}
+.todo .t p{ margin:0; }
+.todo .t .h{ font-weight:600; }
+.todo .t .d2{ font-size:.88rem; color:var(--ink-soft); margin-top:2px; }
+
+.how{ font-size:.86rem; color:var(--ink-soft); }
+.how p{ margin:0 0 8px; }
+.how p:last-child{ margin-bottom:0; }
+.how b{ color:var(--ink); }
+
+.back{
+  display:inline-block; margin-top:34px; font-family:var(--font-display);
+  font-weight:700; text-decoration:none; color:var(--ink-soft);
+}
+.foot{ text-align:center; color:var(--ink-soft); font-size:.85rem; margin-top:40px; }
+
+@media (max-width:520px){
+  .stats{ grid-template-columns:repeat(2,1fr); }
+}
+@media print{
+  body{ background:#fff; }
+  .box,.stat,.d,.todo .t{ box-shadow:none; }
+  .back{ display:none; }
+}

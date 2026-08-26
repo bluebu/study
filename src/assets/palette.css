@@ -19,6 +19,22 @@
   /* 提示色。注意：分类色里刻意没有红——红专属「分数越差越红」 */
   --warn:       #E2A413;  --warn-bg:    #FBEFC9;
 
+  /* 打卡评价的内容分类色。取值照搬老站 ../english/palette.css，
+     两边同时在线，同一份报告换个站不该换个颜色。
+     一份报告整页的主色就是它的分类色 —— 打开就知道这是哪一类。 */
+  --c-listen:   #4A90D9;  --c-listen-bg:#DFECFA;   /* G3 · Wonders */
+  --c-read:     #E08B3C;  --c-read-bg:  #FBEBD9;   /* 超8 */
+  --c-word:     #5BA97E;  --c-word-bg:  #E2F1E9;   /* 单词表 */
+  --c-gram:     #2E9A96;  --c-gram-bg:  #DCEFEE;   /* 语法 */
+  --c-drill:    #A97EC4;  --c-drill-bg: #F0E7F7;   /* 新分类先用这个 */
+
+  /* 图表用色：三把尺子的分档底、停顿地图的四种段。
+     停顿地图：绿=在读，蓝=句末停顿（该停的），橙=句中长停，灰=句中短停 */
+  --sc-hard:    #F6DCD1;  --sc-inst:    #FBEFC9;  --sc-indep:  #D8F2E6;
+  --sc-band1:   #EAE0D0;  --sc-band2:   #CFE3F3;  --sc-mid:    #3E9BD6;
+  --tl-speech:  #CDEBDD;  --tl-end:     #6FB6E2;
+  --tl-long:    #EE7D5B;  --tl-mid:     #CBBCA9;
+
   /* 字体栈：显示体走圆体，正文走系统中文。
      ⚠️ 每个栈都必须带 Linux 字体名 —— PDF 是 GitHub Actions 的 ubuntu
         runner 上导出的，那儿没有 PingFang / Kaiti，缺了 Noto 和 UKai

@@ -1,0 +1,85 @@
+# 超8 · Lesson 3
+# 第 65 页。[比对] 列了 6 处，但只有 5 处计错 —— 第 5 处是「读多了自己退回去重来」，
+# 按口径属于不流利、不计错，所以 errors 写 5 不是 6。
+date: 2026-08-25
+cat: 超8
+order: 65
+page: 65
+book: Prince Darling
+part: 划线段落
+grade: 三年级
+words: 105
+errors: 5
+score: 58
+naep: 2
+
+[评分] 准确度=23/30 流利度=14/30 断句语调=12/25 发音=9/15
+
+[总评] 词都认得，就差「一口气读一串」。
+    precious、diamonds、disappeared、friendship 这些长词全读对了，说明拼读能力够；
+    丢分集中在词尾的 -s 和句子中间的停顿。
+
+[句末] 11.06, 21.3, 47.64, 56.83, 79.02, 82.49
+
+[卡壳] 67.9-71.7 = 卡 3.4 秒
+    全段只有 **6 次**停在句号上，另外 **41 次**断在句子中间——平均每 2.2 个词就要歇一下。
+    发声 55 秒、停顿 28 秒，三分之一的时间在等下一个词。
+
+[比对]
+原文 for his *faults*
+实读 for his *fault*
+    词尾 -s 没出来
+原文 a bad deed, *it will prick* your finger
+实读 a bad deed, *if* it will prick your finger
+    多冒出一个 if — 眼睛提前跳到了下一行行末的 If（25.2s 处连着三次半秒停顿）
+原文 in spite of its *pricking*
+实读 in spite of its *breaking*
+    前一句刚读对 prick，这里换了个词 — 大概率是看走眼或音没咬准
+原文 After *these words*
+实读 After *this word*
+    指示词和复数一起丢了，和第 1 处是同一个毛病
+原文 He had *gone back* to
+实读 He had gone *out*, gone*…* back to
+    全段最大一次卡壳：67.9–71.7 秒之间静了 3.4 秒，退回去重读了一遍
+原文 the *hunting* ground
+实读 the *honking* ground
+    hunting 的 /ʌ/ 读成了 /ɒ/ — 同一句前面的 hunting 是读对的
+
+[亮点]
+第二句 **一字不差**：“Take great care of this ring,” she said. “It is more precious than diamonds.”
+    precious / diamonds / disappeared / friendship / continue 这些长词，还有
+    “Prince Darling the Happy” 这个名字，全都一次读对。
+
+[三件事]
+🧩 给长句画斜线，按斜线换气
+    直接对着下面这版读，一条斜线一口气 —— 专治「每 2.3 个词断一次」。
+⏱ 同一段读三遍，每遍记时间
+    这次 83 秒，第三遍能到 60 秒左右就很棒了（≈ 每分钟 105 词）。
+🐝 词尾的 -s 单独玩一玩
+    faults · these words · ways · times · animals —— 读的时候让最后那个「丝」音留久一点。
+
+[斜线]
+“Take great care of this ring,”
+she said.
+“It is more precious than diamonds.
+Every time you do a bad deed,
+it will prick your finger.
+If, in spite of its pricking,
+you continue in your own evil ways,
+you will lose my friendship,
+and I will become your enemy.”
+After these words,
+the Fairy disappeared,
+leaving Prince Darling in shock.
+
+[尺子]
+    95.2% 压在「要带一带」这一档的**左边缘**——再低一点就掉进「偏难」了。想读得自己顺，得摸到 98% 以上。
+    72 个正确词/分钟：放在美国母语学生里，约当**二年级秋季的 50–75 百分位**、**三年级秋季的 25–50 百分位**，
+        离四年级秋季的 25 百分位线（75）还差一步。母语常模只当参照系，不是及格线。
+    平均 2.2 个词一组，是标准的第 2 级：两个词一蹦，还没有语调起伏。
+
+[怎么来的]
+**准确率 95.2%**（读对 100 / 全段 105 词）。按 Fountas & Pinnell 的口径，95–97% 属于「需要带一带」的教学级，98% 以上才算能自己独立读 —— 说明这一页对她**偏难约半级**。
+**每分钟正确词数 72**（WCPM）。对照 Hasbrouck & Tindal 的母语儿童常模，大致在**三年级秋季的 25–50 百分位**之间。母语常模只当参照系，不是及格线。
+**断句**按 NAEP 朗读流利度量表（共 4 级）看，处在 **第 2 级**：以两三个词一组往外读，还没有明显的语调起伏。
+录音 83.2 秒，用 macOS 本机语音框架离线转写并取逐词时间戳，再用能量包络找出所有 ≥0.25 秒的停顿；比对基准是课本第 65 页红线划出的段落。**发音一项是从转写结果推断的**，不如亲耳听准。
