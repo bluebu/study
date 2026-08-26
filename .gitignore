@@ -11,7 +11,11 @@ __pycache__/
 # 本地素材（作业照片 / 录音，不上传）
 inbox/
 
-# 喂数据台（../feeder）产出的核对图：只用来核一眼红线框对不对，
-# 看完就没用了，而且能从原图重新生成。数据本身（.read.json / .ref.txt）要进 git ——
+# 喂数据台（../feeder）的中间产物，都不进 git：
+#   *.marked.png   核对图，看一眼红线框对不对就没用了
+#   *.page.json    整页 OCR + 每行每词的坐标，85 KB 一份。真正的输入是
+#                  人核对定稿的 .ref.txt，这份只是它的来路
+# 数据本身（.read.json / .ref.txt / .json / .words.tsv）要进 git ——
 # 录音和教材照片不进仓库，那些测量再也算不出来。
 *.marked.png
+*.page.json
