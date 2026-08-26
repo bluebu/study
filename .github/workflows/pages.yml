@@ -1,0 +1,54 @@
+# 线上构建 + 部署。
+# 关键点：跑的是和本地 `make pdf` 完全同一个 build.py，
+# 所以「本地能出」就等于「线上能出」，不存在两套构建逻辑。
+name: Build & Deploy
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同时只跑一个部署，新的把旧的顶掉
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # ubuntu runner 预装了 google-chrome，lib/sheet.py 会自己探测到。
+      # 万一哪天镜像不带了，build.py 只会跳过 PDF、不会让构建失败。
+      - name: 确认 Chrome
+        run: |
+          which google-chrome || which chromium || echo "⚠️ 没有 Chrome，PDF 会跳过"
+          google-chrome --version || true
+
+      - name: 构建
+        run: python3 build.py --pdf
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

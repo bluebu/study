@@ -1,0 +1,48 @@
+/* ── A4 打印锁 ──────────────────────────────────────────────
+   这一份是三科打印单的共同地基，每一条都是踩过坑换来的，别删：
+
+   1) @page size:A4 + margin:0，边距写在 .sheet 上（用 mm）
+      不这么做的话，手机 / Epson 等会沿用屏幕窄宽度排版再缩放，
+      打出来是「移动布局」。
+   2) print-color-adjust: exact 必须留着
+      否则打印时田字格红线、四线格、色条全部消失。
+   3) .screen-only 屏幕可见、打印隐藏（返回链接、打印按钮）
+      .print-only  反之。 */
+
+@page { size: A4; margin: 0; }
+
+.sheet{
+  width: 210mm;
+  margin: 0 auto;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 14mm 12mm;
+}
+
+@media print{
+  html, body{
+    width: 210mm;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .sheet{
+    width: 210mm;
+    max-width: none;
+    box-shadow: none;
+    page-break-after: always;
+  }
+  .sheet:last-child{ page-break-after: auto; }
+  .screen-only{ display: none !important; }
+}
+
+@media screen{
+  .print-only{ display: none !important; }
+  .sheet{
+    max-width: 100%;
+    box-shadow: 0 2px 12px rgba(74,63,54,.12);
+    margin-bottom: 18px;
+  }
+}

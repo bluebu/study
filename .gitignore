@@ -1,0 +1,12 @@
+# 构建产物一律不进库（由 GitHub Actions 在部署时生成）
+dist/
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# 本地素材（作业照片 / 录音，不上传）
+inbox/

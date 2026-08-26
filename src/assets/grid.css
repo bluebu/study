@@ -1,0 +1,102 @@
+/* ── 格子：田字格 / 四线三格 ────────────────────────────────
+   三科写字类打印单的共同地基。依赖 palette.css 的 --ink / --font-kai。
+   必须配合 print.css 的 print-color-adjust:exact，否则打印时线全没了。 */
+
+/* ══════ 田字格（语文）══════
+   两个旋钮：--cell 控格子大小、外部控每行几个 —— 一起决定能否排满一页 A4。 */
+.tian{
+  --cell: 15mm;
+  --rule: .75pt;
+  --rule-color: #E3735E;
+
+  box-sizing: border-box;
+  display: inline-grid;
+  place-items: center;
+  vertical-align: top;
+  position: relative;
+
+  width: var(--cell);
+  height: var(--cell);
+  border: var(--rule) solid var(--rule-color);
+
+  font-family: var(--font-kai);
+  font-size: calc(var(--cell) * .68);
+  line-height: 1;
+  color: var(--ink);
+}
+
+/* 十字虚线。用 border 画才是真虚线，别用 height+background（实心条） */
+.tian::before,
+.tian::after{
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+.tian::before{                      /* 横中线 */
+  left: 0; right: 0; top: 50%;
+  border-top: var(--rule) dashed var(--rule-color);
+  transform: translateY(-50%);
+}
+.tian::after{                       /* 竖中线 */
+  top: 0; bottom: 0; left: 50%;
+  border-left: var(--rule) dashed var(--rule-color);
+  transform: translateX(-50%);
+}
+
+/* 相邻格子共享边线：靠负边距。
+   ⚠️ 别改成每格各画一圈边框 —— 相邻边会叠成双倍粗线。 */
+.tian + .tian{ margin-left: calc(var(--rule) * -1); }
+
+/* 描红态：印浅字给孩子照着描 */
+.tian.faint{ color: rgba(74,63,54,.20); }
+
+/* 一行格子。--cell 在这里改，整行跟着变 */
+.tian-row{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+.tian-row + .tian-row{ margin-top: 3mm; }
+
+
+/* ══════ 四线三格（英语）══════ */
+.four{
+  --h: 9mm;                 /* 三格总高 */
+  --rule: .5pt;
+  --rule-color: #7FB2D9;
+
+  box-sizing: border-box;
+  position: relative;
+  height: var(--h);
+  border-top:    var(--rule) solid var(--rule-color);
+  border-bottom: var(--rule) solid var(--rule-color);
+}
+.four::before,               /* 第 2 线 */
+.four::after{                /* 第 3 线（基线） */
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  border-top: var(--rule) solid var(--rule-color);
+  pointer-events: none;
+}
+.four::before{ top: calc(var(--h) / 3); }
+.four::after { top: calc(var(--h) / 3 * 2); }
+
+/* 写在四线三格里的词：基线对齐到第 3 线，小写字母主体落在中格 */
+.four .w{
+  position: absolute;
+  left: 2mm;
+  bottom: calc(var(--h) / 3 - .6mm);
+  font-family: var(--font-display);
+  font-size: calc(var(--h) / 3 * 1.05);
+  line-height: 1;
+  color: var(--ink);
+}
+.four .w.faint{ color: rgba(74,63,54,.20); }
+
+
+/* ══════ 竖式（数学）══════
+   TODO: 搬数学讲义时再定。老站 math 的竖式是逐页手写 HTML
+   （撇缩短至与数字等高、除数靠左、撇居中、批注不挤偏 —— 见老站
+   commit「竖式排版微调」），格式还没稳定成可复用的类，
+   等有第一份真实讲义时再从中抽取，别凭想象先写。 */

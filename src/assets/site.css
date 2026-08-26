@@ -1,0 +1,157 @@
+/* ── 站点页面（入口页 / 各科目录页）────────────────────────
+   打印单不用这一份，它们走 print.css + grid.css。
+   依赖 palette.css。 */
+
+*{ box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html{ -webkit-text-size-adjust: 100%; }
+
+body{
+  margin: 0;
+  min-height: 100svh;
+  font-family: var(--font-cn);
+  color: var(--ink);
+  line-height: 1.7;
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(60% 50% at 88% -5%, rgba(238,125,91,.10), transparent 70%),
+    radial-gradient(55% 45% at -8% 8%,  rgba(62,155,214,.10), transparent 70%),
+    radial-gradient(50% 40% at 50% 110%, rgba(69,185,136,.08), transparent 70%),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 26px 26px, 26px 26px;
+  background-attachment: fixed, fixed, fixed, scroll, scroll;
+}
+
+.wrap{
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 30px 18px calc(28px + var(--safe-b));
+}
+
+/* ── 页头 ── */
+.hero{ text-align: center; margin-bottom: 26px; }
+.eyebrow{
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: .72rem;
+  letter-spacing: .18em;
+  color: var(--ink-soft);
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 13px;
+  background: var(--card);
+}
+.hero h1{
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 7vw, 2.2rem);
+  margin: 12px 0 4px;
+  line-height: 1.25;
+}
+.hero .sub{ color: var(--ink-soft); margin: 0; font-size: .92rem; }
+
+/* ── 学科卡片 ── */
+.subjects{ display: grid; gap: 15px; }
+
+.subj{
+  background: var(--card);
+  border: 2px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 3px 0 var(--line);
+  padding: 17px 18px 8px;
+  position: relative;
+  overflow: hidden;
+}
+.subj::before{           /* 左侧学科色条 */
+  content: "";
+  position: absolute;
+  left: 0; top: 17px; bottom: 17px;
+  width: 5px;
+  border-radius: 0 4px 4px 0;
+  background: var(--c);
+}
+.subj[data-s="chinese"]{ --c: var(--chinese); --c-bg: var(--chinese-bg); }
+.subj[data-s="english"]{ --c: var(--english); --c-bg: var(--english-bg); }
+.subj[data-s="math"]   { --c: var(--math);    --c-bg: var(--math-bg); }
+
+.subj h2{
+  font-family: var(--font-display);
+  font-size: 1.06rem;
+  margin: 0 0 3px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.subj h2 .emo{ font-size: 1.3rem; line-height: 1; }
+.subj h2 .cnt{
+  margin-left: auto;
+  font-family: var(--font-cn);
+  font-size: .72rem;
+  font-weight: 400;
+  color: var(--c);
+  background: var(--c-bg);
+  border-radius: 999px;
+  padding: 1px 9px;
+}
+.subj .note{ color: var(--ink-soft); font-size: .82rem; margin: 0 0 10px; }
+
+/* ── 栏目列表 ── */
+.subj ul{ list-style: none; margin: 0; padding: 0; }
+.subj li{ border-top: 1.5px solid var(--line); }
+
+.subj li > a,
+.subj li > span{
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  padding: 11px 2px;
+  text-decoration: none;
+  color: var(--ink);
+  font-size: .96rem;
+}
+.subj li > a{ transition: color .12s ease; }
+.subj li > a:active{ color: var(--c); }
+.subj li > a::after{
+  content: "›";
+  margin-left: auto;
+  color: var(--c);
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.subj li small{
+  color: var(--ink-soft);
+  font-size: .78rem;
+  font-weight: 400;
+}
+
+/* 未做的栏目：灰显 + soon 角标，点不动 */
+.subj li > span{ color: var(--ink-soft); cursor: default; }
+.subj li > span::after{
+  content: "待做";
+  margin-left: auto;
+  font-family: var(--font-display);
+  font-size: .68rem;
+  color: var(--ink-soft);
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  padding: 0 8px;
+  line-height: 1.5;
+  flex: 0 0 auto;
+}
+
+/* ── 页脚 ── */
+.foot{
+  margin-top: 26px;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: .76rem;
+  line-height: 1.9;
+}
+.foot code{
+  font-size: .95em;
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: 6px;
+  padding: 1px 6px;
+}

@@ -1,0 +1,29 @@
+/* ── 色板：全站单一真源 ────────────────────────────────────
+   改颜色只改这里。三科色沿用「学习小站」家族既有取值，
+   和老的 english 站 --who/--do/--done 是对齐过的，别随手换。 */
+
+:root{
+  /* 纸与墨 */
+  --paper:      #FBF6EB;   /* 页面底色：暖纸 */
+  --card:       #FFFDF8;   /* 卡片底色 */
+  --ink:        #4A3F36;   /* 正文 */
+  --ink-soft:   #9A8C7C;   /* 次要文字 */
+  --line:       rgba(120,104,84,.16);  /* 描边 */
+  --grid:       rgba(120,104,84,.05);  /* 背景格纹 */
+
+  /* 三科色（前景 / 浅底） */
+  --english:    #3E9BD6;  --english-bg: #DCEFFB;
+  --chinese:    #EE7D5B;  --chinese-bg: #FBE0D5;
+  --math:       #45B988;  --math-bg:    #D8F2E6;
+
+  /* 提示色。注意：分类色里刻意没有红——红专属「分数越差越红」 */
+  --warn:       #E2A413;  --warn-bg:    #FBEFC9;
+
+  /* 字体栈：显示体走圆体，正文走系统中文 */
+  --font-display: ui-rounded,"SF Pro Rounded","Hiragino Maru Gothic ProN",
+                  "Varela Round","Quicksand","PingFang SC",system-ui,sans-serif;
+  --font-cn:      "PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --font-kai:     "Kaiti SC","STKaiti","KaiTi",serif;  /* 田字格里的范字 */
+
+  --safe-b: env(safe-area-inset-bottom, 0px);
+}
