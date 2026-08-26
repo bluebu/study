@@ -39,7 +39,7 @@ SUBJECTS = [
         "emoji": "📖",
         "note": "生字词、背诵、抽查，都是能直接打印的 A4 单子",
         "sections": [
-            {"name": "今日练习", "desc": "看拼音写汉字",       "href": "practice/", "state": "soon"},
+            {"name": "今日练习", "desc": "看拼音写汉字",       "href": "practice/", "state": "ready"},
             {"name": "朗读打卡", "desc": "大字课文 + 打卡圈",   "href": "recite/",   "state": "soon"},
             {"name": "抽查单",   "desc": "一课一张，家长照着问", "href": "check/",    "state": "soon"},
             {"name": "要求总表", "desc": "哪篇要背、哪首要默写", "href": "outline/",  "state": "soon"},

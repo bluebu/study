@@ -155,3 +155,76 @@ body{
   border-radius: 6px;
   padding: 1px 6px;
 }
+
+
+/* ══════ 栏目目录页 ══════ */
+
+/* 返回链接靠左，别跟着 .hero 的居中走 */
+.hero .back{
+  display: block;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: .82rem;
+  color: var(--ink-soft);
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+.hero .back:active{ color: var(--ink); }
+
+.list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(--card);
+  border: 2px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 3px 0 var(--line);
+  overflow: hidden;
+}
+/* 左边一行内容 + 右边一个「打印单」按钮。
+   grid 而不是 flex：两列的意图直接写在 grid-template-columns 里，
+   minmax(0,1fr) 明确「左列可以收缩到 0」，窄屏上 small 会自己换行。 */
+.list li{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  padding-right: 13px;
+}
+.list li + li{ border-top: 1.5px solid var(--line); }
+
+/* 整行：点进网页版 */
+.list .main{
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  flex-wrap: wrap;
+  padding: 14px 4px 14px 17px;
+  text-decoration: none;
+  color: var(--ink);
+  font-size: .98rem;
+}
+.list .main small{
+  color: var(--ink-soft);
+  font-size: .78rem;
+}
+
+/* 右侧：直接拿 PDF 去打印 */
+.list .pdf{
+  flex: 0 0 auto;
+  font-family: var(--font-display);
+  font-size: .78rem;
+  text-decoration: none;
+  color: var(--chinese);
+  background: var(--chinese-bg);
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+.list .pdf:active{ background: var(--chinese); color: #fff; }
+
+.list .empty{
+  padding: 16px 17px;
+  color: var(--ink-soft);
+  font-size: .9rem;
+}

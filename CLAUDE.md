@@ -99,6 +99,20 @@ copies: 2
 - 不想被搜到的页面（讲义之类）用 `page.render(noindex=True)`，
   **别用 robots.txt Disallow** —— 那样爬虫读不到 noindex 反而会收录
 
+## 自检（改完排版必看，但工具有坑）
+
+- **打印单**：Read 生成的 **PDF**，别凭 HTML 源码想象效果
+- **网页**：Chrome headless 截图**不能**用 `--window-size` 模拟手机视口 ——
+  它的布局视口恒为 **500px**，`--window-size` 只是把 500px 的渲染结果裁成那个尺寸。
+  同理 `--dump-dom` 量出来的 `innerWidth` 永远是 500，`--headless=new` 也一样。
+  想在窄屏下量布局，临时注入 `<style>html{width:390px}</style>`
+  （本站 CSS 没有 media query，只有 h1 一处 `clamp` 用到 vw，所以这个模拟对布局等价），
+  或者装 playwright 用真实设备模拟
+- 探针 HTML **必须放在 `dist/` 里对应的目录下**，否则 CSS 的相对路径会 404，
+  量到的是一个没有样式的布局 —— 看着像 bug，其实是探针自己坏了
+- 用 `str.replace` 改样式/脚本时**加 assert**，否则锚点写错会静默失败，
+  然后你会去调一个根本没改动的文件
+
 ## 内容准则
 
 - **不增不删**：给的字词一个不落、也不自己加练习项；课次分组照抄，不重排合并
