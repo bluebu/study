@@ -19,11 +19,22 @@
   /* 提示色。注意：分类色里刻意没有红——红专属「分数越差越红」 */
   --warn:       #E2A413;  --warn-bg:    #FBEFC9;
 
-  /* 字体栈：显示体走圆体，正文走系统中文 */
+  /* 字体栈：显示体走圆体，正文走系统中文。
+     ⚠️ 每个栈都必须带 Linux 字体名 —— PDF 是 GitHub Actions 的 ubuntu
+        runner 上导出的，那儿没有 PingFang / Kaiti，缺了 Noto 和 UKai
+        这几个名字，整份 PDF 的中文会全变成方块。
+        实际装了哪些字体，看 CI 日志里「可用的中文字体」那一步。 */
   --font-display: ui-rounded,"SF Pro Rounded","Hiragino Maru Gothic ProN",
-                  "Varela Round","Quicksand","PingFang SC",system-ui,sans-serif;
-  --font-cn:      "PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
-  --font-kai:     "Kaiti SC","STKaiti","KaiTi",serif;  /* 田字格里的范字 */
+                  "Varela Round","Quicksand","PingFang SC",
+                  "Noto Sans CJK SC","Noto Sans SC",system-ui,sans-serif;
+  --font-cn:      "PingFang SC","Hiragino Sans GB","Microsoft YaHei",
+                  "Noto Sans CJK SC","Noto Sans SC","WenQuanYi Zen Hei",
+                  system-ui,sans-serif;
+  /* 田字格里的范字。楷体在 Linux 上只有文鼎 UKai，
+     实在没有就退到宋体（Noto Serif）—— 字形不理想，但总比方块好。 */
+  --font-kai:     "Kaiti SC","STKaiti","KaiTi",
+                  "LXGW WenKai","AR PL UKai CN","AR PL UKai TW",
+                  "Noto Serif CJK SC","Noto Serif SC",serif;
 
   --safe-b: env(safe-area-inset-bottom, 0px);
 }

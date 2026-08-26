@@ -99,6 +99,22 @@ copies: 2
 - 不想被搜到的页面（讲义之类）用 `page.render(noindex=True)`，
   **别用 robots.txt Disallow** —— 那样爬虫读不到 noindex 反而会收录
 
+## 字体（PDF 里的中文全靠它）
+
+- PDF 是 GitHub Actions 的 ubuntu runner 导出的，那儿**不带任何中文字体**。
+  不装的话整份 PDF 的中文都是方块（拼音是拉丁字符，照常显示，所以很容易漏看）。
+  workflow 里装 `fonts-noto-cjk`（正文黑体）+ `fonts-arphic-ukai`（田字格范字的楷体）
+- `palette.css` 的每个字体栈都必须同时带 mac / win / **linux** 三套名字。
+  CI 日志里「可用的中文字体」那一步会打印实际装到的 family 名，对不上就看那儿
+- **本地和线上字形不一样**：本地 mac 用 PingFang + Kaiti，线上 ubuntu 用
+  Noto Sans CJK + AR PL UKai。田字格是固定尺寸、字在格里居中，所以只是字形差异、
+  不影响排版；拼音那行 Times New Roman 和 Liberation Serif 是等宽替换，宽度一致。
+  **家长实际点「打印单」拿到的是线上那份**，所以线上字形才是要紧的
+- 嫌文鼎 UKai 的楷体字形旧，可以换开源的 **LXGW WenKai**（霞鹜文楷，专为中文阅读
+  设计，字形好得多）：在 workflow 里 curl 它 release 的 TTF 丢进
+  `/usr/share/fonts/` 再 `fc-cache -f`。字体栈里已经把 `"LXGW WenKai"`
+  排在 UKai 前面了，装上就自动生效
+
 ## 自检（改完排版必看，但工具有坑）
 
 - **打印单**：Read 生成的 **PDF**，别凭 HTML 源码想象效果

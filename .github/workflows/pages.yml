@@ -35,6 +35,17 @@ jobs:
           which google-chrome || which chromium || echo "⚠️ 没有 Chrome，PDF 会跳过"
           google-chrome --version || true
 
+      # runner 不带任何中文字体，不装的话导出的 PDF 中文全是方块。
+      # fonts-noto-cjk = 正文黑体，fonts-arphic-ukai = 田字格范字用的楷体。
+      - name: 装中文字体
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq \
+            fonts-noto-cjk fonts-arphic-ukai
+          fc-cache -f >/dev/null
+          echo "── 可用的中文字体（palette.css 的字体栈要能对上其中之一）──"
+          fc-list :lang=zh family | tr ',' '\n' | sort -u
+
       - name: 构建
         run: python3 build.py --pdf
 
