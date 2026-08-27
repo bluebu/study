@@ -209,9 +209,12 @@ make clean      # 删 dist/
 | 语文练习单 / 朗读单 / 抽查单 / 总表 | `../chinese/{practice,recite,check,outline}/` + 各自 README |
 | KET 四线三格默写卷、群公告 → 打卡单 | `../english/{ket,homework}/` + `.claude/skills/` |
 | 朗读声学分析（本机 Speech 离线转写 + 逐词时间戳） | `../english/review/tools/{words.swift,analyze.py}` |
-| 儿童语法关卡（颜色教成分 + 点击朗读） | `../english/grammar/` |
 | 数学讲义版式、竖式排版 | `../math/docs/*.html` |
 | 各科教学体系准则 | 三份 `../*/CLAUDE.md` |
+
+老站 `../english/grammar/`（11 关儿童语法，颜色教成分 + 点击朗读）**那一版作废了**，
+不搬也不参照。将来真要做语法内容，从 `src/english/CLAUDE.md` 的「对标美国本土」
+那节重新起手。
 
 ⚠️ 老站的坑（别再踩）：
 - Chrome 路径硬编码成 mac 的 `/Applications/...`，CI 里跑不了 →
