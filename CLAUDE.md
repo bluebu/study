@@ -46,6 +46,9 @@ src/
     specs/            秘籍 spec：错题按错因分组写，练习题只写题面、答案脚本算
     lessons/          数学讲义源
 .github/workflows/pages.yml
+.claude/skills/
+  kousuan/            口算卷照片 → 错题清单 + 秘籍单
+                      crop.py 转正放大照片、check.py 逐题判对错（数字别自己数）
 ```
 
 ## 加科目 / 加栏目
