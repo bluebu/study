@@ -52,7 +52,7 @@ SUBJECTS = [
         "note": "对标美国本土语法体系，不教中国式五大句型",
         "sections": [
             {"name": "语法小手册", "desc": "颜色教成分 + 点读",   "href": "grammar/",  "state": "soon"},
-            {"name": "词汇默写",   "desc": "KET 核心词四线三格", "href": "ket/",      "state": "soon"},
+            {"name": "词汇默写",   "desc": "KET 核心词四线三格", "href": "ket/",      "state": "ready"},
             {"name": "每日打卡",   "desc": "作业清单，打印打勾",  "href": "homework/", "state": "soon"},
             {"name": "打卡评价",   "desc": "朗读流利度 + 成绩单", "href": "review/",   "state": "ready"},
         ],

@@ -34,6 +34,7 @@ from lib import page, sheet, spec as spec_lib
 HERE = Path(__file__).parent
 sys.path.insert(0, str(HERE))
 import figures  # noqa: E402
+import ket      # noqa: E402  词汇默写栏目
 
 REVIEW = HERE / "review"
 SPECS = REVIEW / "specs"
@@ -602,6 +603,8 @@ def build_index(out_dir: Path, reports: list[Report], pdfs: dict[str, bool]) -> 
 
 
 def build(dist: Path, pdf: bool = False) -> None:
+    ket.build(dist, pdf=pdf)        # 词汇默写。放前面：打卡评价那段可能提前 return
+
     out_dir = dist / "review"
     specs = sorted(SPECS.glob("*.txt")) if SPECS.exists() else []
     if not specs:

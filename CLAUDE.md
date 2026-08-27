@@ -41,6 +41,9 @@ src/
     figures.py        三把尺子 + 停顿地图，常模数值是一手来源
     review/data/      喂数据台产出的测量数据（进 git —— 录音不进，这些再也算不出来）
     review/specs/     人的判断：哪几处算读错、四维分数、点评
+    ket.py            词汇默写：CSV → A4 默写卷（单主题 / 合集 / 抽选卷 / 答案对照）
+    ket/words/        KET 词表 CSV（25 个主题，带 BOM 给 Excel 用）
+    ket/selections/   抽选卷 spec：跨主题挑词，题号沿用原主题
   math/
     build.py          计算秘籍：错题清单 + 口诀卡 + 重练题（两页 A4）
     specs/            秘籍 spec：错题按错因分组写，练习题只写题面、答案脚本算

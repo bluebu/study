@@ -171,6 +171,16 @@ body{
 }
 .hero .back:active{ color: var(--ink); }
 
+/* 分区小标题：一个栏目里有几类单子时用（KET 的合集 / 抽选卷 / 分主题） */
+.sec{
+  font-family: var(--font-display);
+  font-size: .82rem;
+  color: var(--ink-soft);
+  margin: 22px 4px 8px;
+  font-weight: 700;
+}
+.sec:first-of-type{ margin-top: 0; }
+
 .list{
   list-style: none;
   margin: 0;

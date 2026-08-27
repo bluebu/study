@@ -17,10 +17,13 @@
   --tian-cross-color: #E79A9A;
   --tian-ink:         #444;      /* 答案版印出来的字色 */
 
-  /* 四线三格 */
-  --four-h:           9mm;       /* 三格总高 */
-  --four-rule:        .5pt;
-  --four-rule-color:  #7FB2D9;
+  /* 四线三格。颜色和高度是老站 ket 定稿的（用户拍过板）：
+     绿四线 + 红第三线（基线），总高 11mm ≈ 小学英语本的行距。
+     孩子四年级，行距宁松勿密 —— 别为了一页多放几个词调小。 */
+  --four-h:           11mm;      /* 三格总高 */
+  --four-rule:        1px;       /* 老站是 1px 实线；.5pt 打出来太淡，孩子看不清 */
+  --four-rule-color:  #4FAE7E;
+  --four-base-color:  #E04B4B;   /* 基线（第 3 线）单独一色，写字时对齐它 */
 }
 
 
@@ -95,7 +98,10 @@
   pointer-events: none;
 }
 .four::before{ top: calc(var(--four-h) / 3); }
-.four::after { top: calc(var(--four-h) / 3 * 2); }
+.four::after {
+  top: calc(var(--four-h) / 3 * 2);
+  border-top-color: var(--four-base-color);   /* 基线是红的 */
+}
 
 /* 写在四线三格里的词：基线落在第 3 线，小写字母主体占中格 */
 .four .w{
