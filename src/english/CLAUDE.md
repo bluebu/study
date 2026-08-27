@@ -21,13 +21,14 @@ Shurley English、Reed-Kellogg、Warriner's），**不教中国式五大句型**
 review/     打卡评价 —— 每天的朗读作业，一份能和下次比的成绩单   ← 已上线
 ket/        KET 核心词四线三格默写 —— 看中文写英文，25 个主题     ← 已上线
 homework/   每日打卡 —— 群公告 → A4 打印单                       ← 已上线
+retell/     复述故事 —— 老师白板的 Story Map → A4 关键词地图      ← 已上线
 ```
 
 老站的 `grammar/`（11 关，颜色教成分 + 点击朗读）**不搬** —— 那一版作废了。
 上面「对标美国本土」那节是整个英语科的准则，将来真要做语法内容仍然照它来，
 只是不从老站那版起手。
 
-一个栏目一个模块（`review.py` / `ket.py` / `homework.py`），`build.py` 只做分发，
+一个栏目一个模块（`review.py` / `ket.py` / `homework.py` / `retell.py`），`build.py` 只做分发，
 **每个栏目单独一层 try** —— 一个栏目的 spec 写错不该把另外两个带下水
 （原先 review 和 ket 挤在一个函数里，review 那段提前 return 就会静默跳过 ket）。
 
@@ -167,6 +168,39 @@ WCPM     = 读对词数 ÷ 时长 × 60
 
 排版目标是「**干净地放满一页**」：底部空太多就加大 `memo:` 行数，
 快溢出到第二页就减备注行或精简说明行。**改完 Read PDF 自检**，别凭 HTML 想象。
+
+## 复述故事（retell/）
+
+老师在白板上把整个故事拆成十几段，每段一串关键词、用箭头竖着串下来，
+拍下来是十几张照片。翻着照片没法复述 —— 挪到一张 A4 上，一段一行，
+眼睛一次扫完整个故事的走向。
+
+```
+[地图]
+king · just, hunting, rabbit, safe · hurt, food · cozy place
+Fairy Truth, rabbit · rescue, test · kind, kinder people, friend · wish come true
+```
+
+一行一段，**逗号分隔节点**；节点内部并列的词用 `·` 连着写
+（`safe · hurt` 是一个节点，不是两个）。渲染时逗号变成箭头。
+
+### 三条
+
+1. **只出英文，不配中文。** 配了中文，眼睛会先去看中文，复述就变成翻译了。
+   生词（shepherdess / caretaker / unrewarded）留给她在故事里猜 ——
+   这批词本来就是她这两周指读过的
+2. **照抄板书，包括拼写错误**（`docter`、`wasn't die` 都是老师写的）。
+   要改也是口头提一句，别在纸上改 —— 孩子对着的是老师给的那张图
+3. **一段不能被分页切开**（`break-inside: avoid`），排不下就调行距，
+   别让一段的关键词裂在两页上
+
+### 排版上的两个坑
+
+- 「词 + 它后面的箭头」要绑成一个不换行的 unit。不这么做，折行时箭头会落到
+  下一行的行首（「→ kinder people」），读着像这行是从箭头开始的
+- 行距要试出来：16 段调到 `padding: 2.6mm` 正好一页，2.7mm 就溢出到第二页。
+  **单独跑这个栏目试**（`from retell import build_retell`），
+  别用 `build.py --pdf` —— 那要顺带出 31 份 ket 卷，一轮两分钟起
 
 ### 还有
 

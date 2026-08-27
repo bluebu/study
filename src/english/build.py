@@ -3,6 +3,7 @@
     ket/         词汇默写：KET 核心词 → 四线三格 A4 卷
     review/      打卡评价：朗读录音 + 教材原文 → 一份能和下次比的成绩单
     homework/    每日打卡：群公告 → A4 打印单
+    retell/      复述故事：老师白板的 Story Map → 一张 A4 关键词地图
 
 一个栏目一个模块，各管各的产物目录，这里只按顺序调。
 
@@ -23,12 +24,14 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 import ket           # noqa: E402
 from homework import build_homework  # noqa: E402
+from retell import build_retell      # noqa: E402
 from review import build_review      # noqa: E402
 
 SECTIONS = [
     ("词汇默写", ket.build),
     ("打卡评价", build_review),
     ("每日打卡", build_homework),
+    ("复述故事", build_retell),
 ]
 
 

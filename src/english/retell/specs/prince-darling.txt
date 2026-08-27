@@ -1,0 +1,25 @@
+# Prince Darling
+# 老师白板上的 Story Map，16 段。关键词照抄板书（docter、wasn't die 都是板上的写法），
+# 段内并列的词用 · 连，节点之间用逗号分隔 —— 渲染时自己变成箭头。
+date: 8月27日
+book: 超8 · 第 1 册
+pages: 63–79
+task: 指读 91–92 页 Summary 部分 2–3 遍，然后看着这张图复述
+
+[地图]
+king · just, hunting, rabbit, safe · hurt, food · cozy place
+Fairy Truth, rabbit · rescue, test · kind, kinder people, friend · wish come true
+son, his friend, handsome · powerful · richest, one?, good man
+can't help, good advice · punish
+died, sad, friend · present, golden ring, prick finger, behaved well, love
+foolish nurse, spoiled, whatever, proud, father · kind · change, bad habit
+hunting, any animals, angry, press, return palace, dog, kicked, prick finger
+Fairy, 2 mistakes, 1. animals　2. cruel, kind · good
+Celia, fall in love, marry, shepherdess, dislike, wrong thing · dislike · hate, angry
+catch, foster-brother, bad advice, wrong?, better man, refuse · cut off · listen
+tutor, escape, capture, Fairy Truth, monster, lion · wolf · snake · bull
+caretaker · hit, tiger, save · cruel, unrewarded, dog
+Duchess, fat, docter, bread, palace, girl · grass, gave
+Celia, food, poisoned, reward, dove, desert, cave
+dove, love, prince Darling, first time · love, wicked, kingdom, crown, wear ring · prick
+pit, kingdom, celebrating, dead · thunder, tutor, wasn't die · good king return

@@ -1,0 +1,71 @@
+/* ── 复述地图（英语 · A4 打印）────────────────────────────
+   一段一行，关键词用箭头串起来。孩子拿着这张纸把故事讲一遍，
+   所以第一优先是「一眼能扫到下一个词」：词要大、箭头要淡、
+   行与行之间留得开。A4 尺寸和边距由 print.css 的 .sheet 管。 */
+
+body{ font-family:var(--font-cn); color:var(--ink); font-size:13px; line-height:1.5; }
+.sheet{ background:var(--card); padding:12mm 12mm; }
+
+/* 页头 */
+.head{
+  display:flex; align-items:flex-end; justify-content:space-between;
+  border-bottom:2.5px solid var(--english); padding-bottom:7px; margin-bottom:3mm;
+}
+.head h1{
+  font-family:var(--font-display); font-size:21px; margin:0;
+  letter-spacing:.5px; color:var(--ink);
+}
+.head .meta{ font-size:11.5px; color:var(--ink-soft); margin:2px 0 0; }
+.head .who{ font-size:11.5px; color:var(--ink); white-space:nowrap; }
+.head .who span{ margin-left:14px; }
+.u{ display:inline-block; border-bottom:1px solid var(--ink-soft); width:58px; }
+
+.task{
+  font-size:11.5px; color:var(--english); background:var(--english-bg);
+  border-radius:2mm; padding:2.5mm 4mm; margin:0 0 5mm;
+}
+
+/* 关键词链 */
+.map{ list-style:none; margin:0; padding:0; counter-reset:seg; }
+.map li{
+  display:flex; align-items:baseline; gap:3mm;
+  padding:2.6mm 0;          /* 撑满一页 —— 这张纸是拿着讲的，行距松一点眼睛好找下一段 */
+  border-bottom:1px dashed var(--line);
+  break-inside:avoid;          /* 一段不能被分页切开 */
+}
+.map li:last-child{ border-bottom:none; }
+
+.map .no{
+  flex:0 0 auto; width:6mm; height:6mm; margin-top:.6mm;
+  border-radius:50%; background:var(--english-bg); color:var(--english);
+  font-family:var(--font-display); font-size:10.5px; font-weight:800; font-style:normal;
+  display:flex; align-items:center; justify-content:center;
+}
+
+/* 词自己会折行，箭头跟着走 —— 长的那几段（8 个节点）折成两行也不散 */
+.map .chain{ flex:1 1 auto; min-width:0; display:flex; flex-wrap:wrap; align-items:baseline; gap:0 1.5mm; }
+/* 一个 unit = 一个词 + 跟在它后面的箭头，整体不拆开 */
+.map .unit{ white-space:nowrap; }
+.map .kw{
+  font-family:var(--font-display); font-size:15.5px; font-weight:600;
+  letter-spacing:.2px;
+}
+.map .arw{
+  color:var(--ink-soft); opacity:.45; font-size:12px; font-weight:400;
+  /* 左边要留气：箭头和它前面的词现在是一个 unit，不留就贴成「just→」。
+     右边不用留，unit 之间本来就有 gap */
+  margin-left:1.3mm;
+}
+
+.foot{
+  margin-top:5mm; padding-top:3mm; border-top:2px dashed var(--line);
+  font-size:11px; color:var(--ink-soft); text-align:center;
+}
+
+/* 手机上：序号和词都收一点，词还是不换行（换了就断在词中间） */
+@media screen and (max-width:620px){
+  .sheet{ padding:8mm 5mm; }
+  .head{ flex-wrap:wrap; row-gap:3px; }
+  .map .kw{ font-size:14px; }
+  .map li{ gap:2mm; }
+}
