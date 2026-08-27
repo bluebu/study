@@ -145,6 +145,23 @@ copies: 2
   跑完打一行 `innerWidth` 确认没被静默改掉 —— 拿不到 390 就是没模拟上，量出来的白量
 - 探针 HTML **必须放在 `dist/` 里对应的目录下**，否则 CSS 的相对路径会 404，
   量到的是一个没有样式的布局 —— 看着像 bug，其实是探针自己坏了
+- **打印单在手机上要量一次横向溢出**：`.sheet` 有 `max-width:100%`，元素本身
+  会缩到屏幕宽，但**里面的内容不一定跟着缩** —— 多列 grid、`max-content` 的列、
+  `white-space:nowrap` 的长算式都压不动，于是内容跑到纸外面，屏幕上看着就是
+  「白色背景不全、右边一条内容浮在灰底上」。量法：
+
+  ```js
+  document.documentElement.scrollWidth   // > 视口宽就是溢出了
+  document.querySelector('.sheet').scrollWidth
+  ```
+
+  排查顺序：先找 `right` 最大的**叶子**节点，再把可疑容器克隆到
+  `width:min-content` 里量 —— 撑破纸的常常是容器（一行两列的 grid），
+  不是文本。**`max-content` 的列宽是「不换行时的宽度」，光给子元素解 nowrap
+  压不下来，必须改列定义本身**（踩过：改了 `.compare` 的列，可真正是 grid 的是
+  `.compare .row`，白改一轮）。
+  修完两件事都要验：手机上零溢出，以及 **PDF 还是原来的版式**
+  （只在 `@media screen` 里改，`@media print` 一个字都不动）
 - 用 `str.replace` 改样式/脚本时**加 assert**，否则锚点写错会静默失败，
   然后你会去调一个根本没改动的文件
 

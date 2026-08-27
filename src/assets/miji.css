@@ -191,3 +191,46 @@ body{
   font-weight: 700;
   color: var(--math);
 }
+
+/* ── 手机 / iPad 上的收窄 ─────────────────────────────────
+   这两页是 A4 打印单，但家长多半先在微信里点开看一眼。
+   默认那套三列在窄屏上排不下：一道「240÷20 = 120 → 12」在 18px 下
+   就要 200px，三列光内容 600px+，撑破 390px 的屏幕 —— 于是页面横向
+   溢出，白纸只铺了屏幕的一部分，剩下的题目落在灰色桌面上（看着像
+   「背景没铺满」，其实是内容跑出纸外了）。
+
+   全部只在 @media screen 里改，打印那条路一个字没动，A4 还是三列。 */
+
+/* iPad 竖屏（768）：三列放得下，纸边窄一点就行 */
+@media screen and (max-width: 860px){
+  .sheet{ padding: 10mm 6mm; }
+}
+
+/* 手机：三列改一列。字号不动 —— 这页是拿来照着讲的，看得清比排得像重要 */
+@media screen and (max-width: 620px){
+  .diag{ row-gap: 8mm; }
+  .diag, .ws, .qs{ grid-template-columns: 1fr; }
+  /* 行距是按「三列三行」定的，单列后变成九行，原样留着满屏都是空白 */
+  .ws, .qs{ row-gap: 3.5mm; }
+
+  /* 页头两段各占一行：「50 题 对 38 错 12 正确率 76%」是 nowrap 的，
+     和标题挤在一行就把纸撑破了 */
+  .head{ flex-wrap: wrap; row-gap: 2px; }
+  .head h1{ padding-right: 0; }
+  .head .info{ white-space: normal; }
+  .head .info span:first-child{ margin-left: 0; }
+
+  /* 对比卡和口诀卡里，「算式 + 注解」是一行两列的 grid，两列都是
+     max-content —— 一步都压不动，那行「140÷70 → 14÷7=2 → 把 140 的 0
+     抄回来 = 20」光自己就要 379px，加上右边的注解直接把纸撑破。
+     手机上摞成两行：上面算式，下面注解。
+     注意要改的是 .row（真正的 grid），不是 .compare / .rule 本身。 */
+  .compare .row, .rule .row{ grid-template-columns: 1fr; row-gap: 1mm; }
+
+  /* max-content 的列宽是「不换行时的宽度」，就算允许折行也压不下来，
+     所以上面那条改列定义是必须的，这条只是让折行真的能发生 */
+  .compare .ex, .rule .ex, .q, .w{ white-space: normal; }
+  .compare .ex{ font-size: 16px; }
+
+  .sheet{ padding: 8mm 5mm; }
+}

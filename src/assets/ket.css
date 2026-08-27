@@ -100,3 +100,19 @@ body{
   align-items: flex-end;
   margin-bottom: 8px;
 }
+
+/* ── 手机上收成一栏 ────────────────────────────────────
+   默写版是两栏词位，每栏在 390px 的屏上只剩 175px，
+   而一个词位要放「题号 26 + 中文 + 四线格至少 60」——
+   差 8px 放不下，纸就被撑破一点点：白纸只铺了屏幕的一部分，
+   右边一小条内容落在灰色桌面上。
+
+   合集的章节标题占「2 个词位」，一栏之后要跟着改成占 1 个，
+   否则那一行会空出半行。打印那条路不受影响，A4 还是两栏。 */
+@media screen and (max-width: 620px){
+  .items{ grid-template-columns: 1fr; row-gap: 14px; }
+  .item.section{ grid-column: span 1; }
+  .item.pad{ display: none; }          /* 对齐用的空位，一栏时没意义 */
+  .items.compact .band{ grid-template-columns: 1fr; }
+  .sheet{ padding: 10mm 6mm; }
+}
