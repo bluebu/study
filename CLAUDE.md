@@ -28,7 +28,8 @@ build.py              总构建器。站点地图 SUBJECTS 就在文件头部
 Makefile              日常命令入口
 lib/
   spec.py             spec DSL 解析（三科共用）
-  page.py             HTML 页面骨架（head / og / 资产链接）
+  page.py             HTML 页面骨架（head / og / 资产链接 / 页脚）
+  site.py             站点常量：备案号、访问统计。改页脚只改这一个文件
   sheet.py            A4 → PDF（无头 Chrome，路径自动探测）
 src/
   assets/
@@ -36,14 +37,21 @@ src/
     print.css         A4 打印锁
     grid.css          田字格 / 四线三格
     site.css          站点页面（入口页、目录页）
+    foot.css          页脚（备案号 + 统计），page.py 挂页脚时自动引上
   chinese/specs/      语文 spec
-  english/            英语（CLAUDE.md 里有本科的教学准则和 review 口径）
+  english/            英语（CLAUDE.md 里有本科的教学准则和四个栏目的口径）
+    build.py          只做分发：一个栏目一层 try
+    review.py         打卡评价：朗读成绩单（数只写 words / errors，其余算出来）
     figures.py        三把尺子 + 停顿地图，常模数值是一手来源
     review/data/      喂数据台产出的测量数据（进 git —— 录音不进，这些再也算不出来）
     review/specs/     人的判断：哪几处算读错、四维分数、点评
     ket.py            词汇默写：CSV → A4 默写卷（单主题 / 合集 / 抽选卷 / 答案对照）
     ket/words/        KET 词表 CSV（25 个主题，带 BOM 给 Excel 用）
     ket/selections/   抽选卷 spec：跨主题挑词，题号沿用原主题
+    homework.py       每日打卡：群公告 → 一张 A4 作业清单
+    homework/specs/   一天一份，文件名是 YYYYMMDD
+    retell.py         复述故事：关键词按情节五阶段分组，看着讲一遍
+    retell/specs/     一个区块一个阶段，区块内一行一段
   math/
     build.py          计算秘籍：错题清单 + 口诀卡 + 重练题（两页 A4）
     specs/            秘籍 spec：错题按错因分组写，练习题只写题面、答案脚本算
@@ -52,6 +60,7 @@ src/
 .claude/skills/
   kousuan/            口算卷照片 → 错题清单 + 秘籍单
                       crop.py 转正放大照片、check.py 逐题判对错（数字别自己数）
+  ket/                KET 词卡照片 → CSV，出卷 / 抽选卷的完整流程
 ```
 
 ## 加科目 / 加栏目
@@ -99,6 +108,26 @@ copies: 2
 
 田字格（`grid.css`）：相邻格靠负边距共享边线，**别改成每格各画一圈边框**
 （相邻边会叠成双倍粗线）。
+
+## 页脚：备案号 + 访问统计
+
+都在 **`lib/site.py`** 一处：备案号 `BEIAN`、不蒜子开关 `ANALYTICS`。
+换号、换统计、想关掉（置空串）都只动这一个文件，各栏目的生成器一行不改。
+
+`lib/page.py` 自动决定挂不挂：
+
+```
+引了 print.css 的页面（打印单）    → 不挂。纸上不印备案号
+其余页面（入口页、目录页、报告页）  → 挂，样式走 foot.css，@media print 里隐藏
+noindex 的页面（孩子的成绩单）     → 只出备案号，不挂统计
+```
+
+最后一条是有意的：不蒜子是第三方，挂上等于把这些私页的地址连同 Referer 送出去。
+要单独控制传 `page.render(footer=False)`。
+
+⚠️ **本地预览时不蒜子的数字是假的**（localhost 会显示七百多万）。它按域名计数，
+线上才是本站的真数 —— 老站 english.hi-ruby.com 现在是 uv 53 / pv 65，正常。
+别在本地看到大数就去"修"。
 
 ## 视觉
 
@@ -228,10 +257,6 @@ make clean      # 删 dist/
 | 朗读声学分析（本机 Speech 离线转写 + 逐词时间戳） | `../english/review/tools/{words.swift,analyze.py}` |
 | 数学讲义版式、竖式排版 | `../math/docs/*.html` |
 | 各科教学体系准则 | 三份 `../*/CLAUDE.md` |
-
-老站 `../english/grammar/`（11 关儿童语法，颜色教成分 + 点击朗读）**那一版作废了**，
-不搬也不参照。将来真要做语法内容，从 `src/english/CLAUDE.md` 的「对标美国本土」
-那节重新起手。
 
 ⚠️ 老站的坑（别再踩）：
 - Chrome 路径硬编码成 mac 的 `/Applications/...`，CI 里跑不了 →

@@ -26,8 +26,8 @@ body{ font-family:var(--font-cn); color:var(--ink); font-size:13px; line-height:
 }
 
 /* ── 阶段分组 ─────────────────────────────────────────────
-   Plot Diagram 的五个阶段（美国四年级在学的那套），阶段名挂在左边当路标。
-   顶上原来还画了一座情节山，去掉了 —— 它吃掉两成页高，说的是同一件事。 */
+   Plot Diagram 的五个阶段（美国四年级在学的那套），阶段名挂在左边当路标，
+   段落归在它右边。CLIMAX 那格实心，整本书的转折一眼看见。 */
 .acts{ display:flex; flex-direction:column; gap:3.6mm; }
 .act{ display:flex; gap:2.5mm; align-items:flex-start; }
 

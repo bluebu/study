@@ -9,6 +9,8 @@ from __future__ import annotations
 import html
 from pathlib import Path
 
+from . import site
+
 # og:title / og:description 逐字照抄本页 title / description。
 # 这是老站定下来的约定：微信/群里分享出去的卡片和页面标题必须一致。
 
@@ -25,6 +27,7 @@ def render(
     noindex: bool = False,
     lang: str = "zh-CN",
     extra_head: str = "",
+    footer: bool | None = None,
 ) -> str:
     """渲染一整页 HTML。
 
@@ -34,11 +37,18 @@ def render(
     noindex            —— 打印讲义这类不想被搜到的页面设 True，
                           用 meta 而不是 robots.txt Disallow
                           （Disallow 会让爬虫读不到 noindex，反而收录）
+    footer             —— 备案号 + 访问统计那一条（配置在 lib/site.py）。
+                          默认：**引了 print.css 的算打印单，不挂**，其余都挂。
+                          noindex 的页面只出备案号、不挂统计
     """
     t = html.escape(title)
     d = html.escape(description)
 
-    sheets = ["palette.css", *css]
+    if footer is None:
+        footer = "print.css" not in css
+    foot = site.foot_html(analytics=not noindex) if footer else ""
+
+    sheets = ["palette.css", *css] + (["foot.css"] if foot else [])
     links = "\n".join(f'<link rel="stylesheet" href="{root}/assets/{s}" />' for s in sheets)
 
     robots = '\n<meta name="robots" content="noindex, nofollow, noarchive" />' if noindex else ""
@@ -59,6 +69,7 @@ def render(
 {extra_head}</head>
 <body>
 {body}
+{foot}
 </body>
 </html>
 """
