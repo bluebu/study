@@ -6,6 +6,9 @@ spec 在 specs/<YYYYMMDD>.txt，产物落在 dist/chinese/practice/：
     <日期>-answers.html / .pdf      答案版（格子里印楷体字，给家长批改）
     index.html                      目录页（**答案版不列进去**）
 
+拼音候选可以让喂数据台先给（`../../feeder/bin/feeder pinyin 潮 据 堤` 或者
+直接喂生字表照片），它会把**多音字全标出来** —— 但按课文语境定音仍然是人的活。
+
 这个栏目的核心职责是**标对拼音**，也是唯一容易出错的地方：
 脚本只排版、不判断读音。多音字必须在 spec 里手写，按课文语境定音
 （`单=dān` 不是 shàn、`悄悄=qiāo qiāo` 不是 qiǎo）。

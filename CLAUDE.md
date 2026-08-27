@@ -58,8 +58,7 @@ src/
     lessons/          数学讲义源
 .github/workflows/pages.yml
 .claude/skills/
-  kousuan/            口算卷照片 → 错题清单 + 秘籍单
-                      crop.py 转正放大照片、check.py 逐题判对错（数字别自己数）
+  kousuan/            口算卷照片 → 错题清单 + 秘籍单（图和判对错都走 ../feeder）
   ket/                KET 词卡照片 → CSV，出卷 / 抽选卷的完整流程
 ```
 
@@ -220,27 +219,38 @@ make clean      # 删 dist/
 - 自定义域名：在 `src/` 下放 `CNAME` 文件，`build.py` 会带进 `dist/`
 - **提交策略：改完自检（截图 / Read PDF）后直接 commit + push，不用问、不用等确认**
 
-## 喂数据台（../feeder）
+## 喂数据台（../feeder）—— 统一录入
 
-朗读评价的输入不是手敲的，是隔壁那个 mac 客户端产出的：
+**素材不手敲。** 照片、录音、板书进隔壁那个 mac 客户端，出来的是这边能直接用的输入：
 
 ```
-指读视频 + 教材截图  ──►  feeder  ──►  src/english/review/data/<slug>.{read.json,ref.txt,json,words.tsv}
-                                          │
-                                          └─►  src/english/review/specs/<slug>.txt   ← 人在会话里写的判断
-                                                    │
-                                                    └─►  src/english/build.py  ──►  dist/
+指读视频 + 教材截图 ──► read / scan   ──► src/english/review/data/<slug>.{read,ref,words}
+口算卷照片          ──► sheet / check ──► 转正分块图 + 逐题对错（过程产物，不进仓库）
+单词卡照片          ──► cards         ──► src/english/ket/words/<slug>.draft.csv
+白板照片            ──► board         ──► src/english/retell/specs/<slug>.draft.txt
+生字词 / 生字表照片 ──► pinyin        ──► src/chinese/specs/<slug>.draft.txt
+                                              │
+                          人在会话里核对、定性、归组、定多音字
+                                              │
+                                     正式的 spec / CSV ──► build.py ──► dist/
 ```
 
-`feeder` 只做机器算得出的事（抽音轨、转写、逐词时间戳、停顿声学、OCR、红线检测、
-逐字对齐候选），判断留给会话。它的准则在 `../feeder/CLAUDE.md`。
+命令行 `../feeder/bin/feeder <动词>`（没编过先 `cd ../feeder && make cli`），
+或者开客户端把文件拖进去 —— 它自己猜链路，猜错了在下拉里改。
 
-两条要记住的：
+`feeder` 只做机器算得出的事，判断留给会话。它的准则在 `../feeder/CLAUDE.md`。
+四条要记住的：
 
+- **`.draft.` 是候选，`.gitignore` 掉了。** 人核对完**另存成正式文件名**再进 git ——
+  没核过的东西不许混进仓库。`read` / `scan` 的产出不带这个标记：那是测量数据，
+  机器算的就是最终值
+- **机器认不准的地方它自己会说**：口算卷的手写数字根本不认（题是人抄的）、
+  音标认不住就留空、多音字全标出来。这几处别嫌它啰嗦，那正是要人做的判断
 - **声学口径不能动。** `feeder` 里那五个常数是老站 `analyze.py` 的逐行复刻，
   报告里「和上一页比」直接拿新旧数字比。`cd ../feeder && make test` 会拿老站
-  昨天那批数据回归，六个字段加停顿明细必须完全一致
-- **`*.marked.png` 是核对图**，看一眼红线框对不对就没用了，已经在 `.gitignore` 里
+  那批数据回归，六个字段加停顿明细必须完全一致
+- **核对图（`*.marked.png`）看完就没用了**，和 `*.page.json` / `*.cards.json` /
+  `*.board.json` 一样都在 `.gitignore` 里
 
 ## 老站：只当参照，不要改
 

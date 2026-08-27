@@ -7,9 +7,9 @@ argument-hint: [主题编号 + 照片，或要抽选的词号]
 # ket：单词卡照片 → CSV → A4 默写卷
 
 ```
-单词卡照片 ──会话逐张读──► src/english/ket/words/<NN>_<主题>.csv
-                                        │
-       src/english/ket/selections/*.txt │ ← 抽选卷 spec（人挑的词号）
+单词卡照片 ──feeder cards──► <NN>_<主题>.draft.csv ──人核对──► src/english/ket/words/<NN>_<主题>.csv
+                             + 核对图 + .cards.json                      │
+                    src/english/ket/selections/*.txt  ← 抽选卷 spec（人挑的词号）
                                         ▼
                           python3 build.py --pdf
                                         ▼
@@ -21,21 +21,37 @@ CSV 是唯一输入，卷子全是产物 —— **改词表就重新构建，不
 
 ## 工作流 1：照片 → CSV（这段最容易出错）
 
-1. **HEIC 先转 PNG**：`sips -s format png IMG_xxxx.heic --out <scratchpad>/IMG_xxxx.png`
-2. **按文件编号从小到大**逐张 Read。每行通常是 `word /音标/ 词性.中文释义`。
-3. **处理照片重叠与边界**：相邻照片有重叠，合并时去重；顶部/底部被裁掉一半的行
-   必须放大确认是重叠词还是漏词 —— 用 PIL 裁剪再 Read，**别用 `sips --cropOffset`**
-   （实测偏移不生效，永远裁中心）。字母序可以辅助判断连续性，但以图为准。
-4. **忠实转录**：词性、释义照卡片原文写，看着像印刷错误也保留（用户明确要求过，
+先让**喂数据台**（`../feeder`）扫一遍，它做机器该做的两件事：OCR 成词条、
+把相邻照片的重叠去掉；认不准的（贴着图边、把握低、音标没认住）全标出来。
+
+```bash
+../feeder/bin/feeder cards 卡1.jpg 卡2.jpg --slug 26_body_and_face
+   # → src/english/ket/words/26_body_and_face.draft.csv（候选，gitignore 掉了）
+   #   + .cards.json（每条的把握程度和出处）+ 核对图
+```
+
+**照片顺序就是词表顺序**，按文件编号从小到大给参数，别让它自己排。
+HEIC 直接吃，不用先转 PNG。
+
+然后逐条核对 —— 这一步是人的活：
+
+1. **⚠️ 标出来的那几条对着照片看**（核对图里红框就是）。贴边的多半是
+   两张照片的接缝，要么被裁了一半，要么和上一张重了。
+2. **音标要补**。Vision 认 IPA 十有八九退成 ASCII（`/ˈæksɪdənt/` → `/'zeksident/`），
+   认不住的一律留空了 —— 印一个错音标比不印更糟。看着照片把音标填回去。
+3. **忠实转录**：词性、释义照卡片原文写，看着像印刷错误也保留（用户明确要求过，
    如 boil 卡片印 n.），只在汇报时口头提一句。全角标点（；，（））保留，
    正好避开 CSV 的逗号转义。
-5. **CSV 格式**：表头 `no,word,phonetic,pos,meaning`。`no` 从 1 开始、每个主题独立编号
-   （默写卷题号直接用它）。词组（ice cream、wash up）卡片上没音标词性就留空。
-6. **写完补 UTF-8 BOM**（Excel/WPS 打开中文才不乱码）：
-   `printf '\xEF\xBB\xBF' | cat - x.csv > .tmp && mv .tmp x.csv`
-7. 新主题要在 `src/english/ket.py` 的 `TITLES` 里加一条显示名（key 是去掉编号前缀的文件名）。
+4. **CSV 格式**：表头 `no,word,phonetic,pos,meaning`，带 UTF-8 BOM（feeder 已经写上了）。
+   `no` 从 1 开始、每个主题独立编号（默写卷题号直接用它）。
+   词组（ice cream、wash up）卡片上没音标词性就留空。
+5. 核完**另存成正式文件名**（去掉 `.draft`），draft 不进 git。
+6. 新主题要在 `src/english/ket.py` 的 `TITLES` 里加一条显示名（key 是去掉编号前缀的文件名）。
    **英文名太长会把页眉挤成两行**，取个短名（见 personal_feelings 那条）。
-8. 汇报总词数、板块起止词、边界行的核对结论。
+7. 汇报总词数、板块起止词、边界行的核对结论。
+
+照片糊到 OCR 认不动（`.cards.json` 里把握普遍很低）就退回老办法：逐张 Read 手抄。
+裁切放大用 PIL，**别用 `sips --cropOffset`**（实测偏移不生效，永远裁中心）。
 
 ## 工作流 2：出卷子
 
