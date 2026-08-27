@@ -41,7 +41,10 @@ src/
     figures.py        三把尺子 + 停顿地图，常模数值是一手来源
     review/data/      喂数据台产出的测量数据（进 git —— 录音不进，这些再也算不出来）
     review/specs/     人的判断：哪几处算读错、四维分数、点评
-  math/lessons/       数学讲义源
+  math/
+    build.py          计算秘籍：错题清单 + 口诀卡 + 重练题（两页 A4）
+    specs/            秘籍 spec：错题按错因分组写，练习题只写题面、答案脚本算
+    lessons/          数学讲义源
 .github/workflows/pages.yml
 ```
 

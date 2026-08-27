@@ -63,7 +63,7 @@ SUBJECTS = [
         "emoji": "🔢",
         "note": "把题型提炼成一句口诀，再用口诀解真题",
         "sections": [
-            {"name": "计算秘籍", "desc": "一个秘籍一页 A4", "href": "miji/",  "state": "soon"},
+            {"name": "计算秘籍", "desc": "错题清单 + 一条口诀", "href": "miji/",  "state": "ready"},
             {"name": "易错字本", "desc": "写错的字描红重练", "href": "zi/",    "state": "soon"},
         ],
     },
