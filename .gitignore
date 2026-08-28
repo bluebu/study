@@ -8,6 +8,8 @@ __pycache__/
 # macOS
 .DS_Store
 
+.idea
+
 # 本地素材（作业照片 / 录音，不上传）
 inbox/
 
