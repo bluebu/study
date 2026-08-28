@@ -142,19 +142,19 @@ body{
 
 /* ── 页脚 ── */
 .foot{
-  margin-top: 26px;
+  margin: 26px 0 0;
   text-align: center;
   color: var(--ink-soft);
   font-size: .76rem;
-  line-height: 1.9;
+  line-height: 1.7;
 }
-.foot code{
-  font-size: .95em;
-  background: var(--card);
-  border: 1.5px solid var(--line);
-  border-radius: 6px;
-  padding: 1px 6px;
-}
+
+/* 入口页的「构建于 …」和下面的备案号是同一块页脚的两行，中间不该有
+   wrap 的 28px 内边距 + site-foot 的 26px 上边距，加起来 66px。
+   只收紧「最后一项就是 .foot 的 wrap」—— 目录页最后是一整块带边框的卡片，
+   那圈留白是对的，别一起改。不支持 :has 的浏览器忽略这两条，退回原样，不会坏。 */
+.wrap:has(> .foot:last-child){ padding-bottom: 0; }
+.wrap:has(> .foot:last-child) + .site-foot{ margin-top: 5px; }
 
 
 /* ══════ 栏目目录页 ══════ */

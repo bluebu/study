@@ -30,9 +30,6 @@
 {% endfor %}
   </section>
 
-  <p class="foot">
-    打印单点进栏目就能拿 PDF<br />
-    本地预览 <code>make up</code> · 线上由 GitHub Actions 构建<br />
-    构建于 {{ stamp }}
-  </p>
+  {# 构建时间和下面的备案号读成同一块页脚，间距在 site.css 里收紧过 #}
+  <p class="foot">构建于 {{ stamp }}</p>
 </main>
