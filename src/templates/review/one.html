@@ -1,9 +1,24 @@
 {#-
-  打卡评价 · 一份朗读成绩单。**整张报告的版式都在这一个文件里** ——
-  原先散在 review.py 的 12 个片段函数里，改一处小标题得翻 144 行 f-string。
+  **日页里的一次录音**。一天一个页面（`day.html`），当天每次录音是页内的一节，
+  这个文件就是那一节的版式。
+
+  以前是「一次录音一个页面」。并进日页是因为平时看的是「今天整体怎么样」——
+  为一次 90 秒的朗读单开一个 URL，每天要点开三次才看得全。
 
   Python 那边只出上下文：算好的数、选好的类名、rich()/marked() 处理过的富文本。
   区块给 None 就整块不出（`[对比] [比对] [亮点]` 这些 spec 里可以不写）。
+
+  ## 两套色注在这一节上，不在 :root
+
+  原先按页注进 `<head>` 的 `:root`（那时一页只有一次录音）。现在一页有好几次、
+  分数各不同，所以挪到 `<article>` 的行内 style —— CSS 自定义属性会往下继承，
+  `review.css` 和三张 SVG 里的 `var(--read)` / `var(--score)` 一个字都不用改。
+
+    --read / --read-bg     这一节的主色，跟着**分类**走（听 / 读 / 词 / 练 / 语）
+    --score / --score-bg   只给总分那个圈和四维条，跟着**分数**走（越差越红）
+
+  两套是有意分开的：分类色说「这是哪一类」，分数色说「做得怎么样」。
+  **分类色里刻意没有红** —— 红专属分数。色值在 palette.css 和 figures.score_color()。
 
   ⚠️ 不许留空白的地方：
      .d .en 里的 `<span class="lbl">原文</span>` 紧跟正文 —— .en 是 grid item
@@ -19,78 +34,78 @@
 {#- mini：小标题。`{% macro %}` 那侧**不能写 -%}** —— 它会连下一行的 4 格缩进
     一起吃掉；`{%- endmacro %}` 那侧要写，否则每个标题后面多一个空行 -#}
 {% macro mini(icon, heading) %}
-    <h2 class="mini-h"><span>{{ icon }}</span> {{ heading }}</h2>
+    <h3 class="mini-h"><span>{{ icon }}</span> {{ heading }}</h3>
 {%- endmacro %}
-<main class="wrap">
-    <header class="hero">
-      <span class="eyebrow">DAILY REVIEW · 打卡评价</span>
-      <h1>{{ hero.title|safe }}</h1>
-      <p class="sub">{{ hero.sub }}</p>
-    </header>
+{% macro card(r) %}
+    <article class="one" id="{{ r.anchor }}" style="--read:var(--c-{{ r.cat }});--read-bg:var(--c-{{ r.cat }}-bg);--score:{{ r.fg }};--score-bg:{{ r.bg }}">
+      <header class="one-h">
+        <h2 class="one-t">{{ r.hero.title|safe }}</h2>
+        <p class="sub">{{ r.hero.sub }}</p>
+      </header>
     <section class="box score">
-      <span class="num"><b>{{ score.num }}</b><span>／100</span></span>
+      <span class="num"><b>{{ r.score.num }}</b><span>／100</span></span>
       <span class="say">
-        <p class="lead">{{ score.lead }}</p>
-{% if score.tip %}
-        <p class="tip">{{ score.tip|safe }}</p>
+        <p class="lead">{{ r.score.lead }}</p>
+{% if r.score.tip %}
+        <p class="tip">{{ r.score.tip|safe }}</p>
 {% endif %}
       </span>
       <div class="bars" style="flex-basis:100%">
-{% for b in score.bars %}
+{% for b in r.score.bars %}
         <div class="bar"><span class="nm">{{ b.name }}</span><span class="track"><i class="fill" style="width:{{ b.pct }}%"></i></span><span class="val">{{ b.val }}</span></div>
 {% endfor %}
       </div>
     </section>
 {{ mini("📊", "四个数字") }}
     <div class="stats">
-{% for s in stats %}
+{% for s in r.stats %}
       <div class="stat {{ s.cls }}"><b>{{ s.value }}{% if s.unit %}<small>{{ s.unit }}</small>{% endif %}</b><span>{{ s.label }}</span></div>
 {% endfor %}
     </div>
-{% if compare %}
-{{ mini(compare.icon, compare.heading) }}
+{% if r.compare %}
+{{ mini(r.compare.icon, r.compare.heading) }}
     <section class="box cmp">
-{% for r in compare.rows %}
-      <div class="r"><span class="k">{{ r.k }}</span><span class="v">{% for v in r.was %}<s>{{ v }}</s> → {% endfor %}{{ r.now }}</span><span class="d {{ r.cls }}">{{ r.tag }}</span></div>
+{% for row in r.compare.rows %}
+      <div class="r"><span class="k">{{ row.k }}</span><span class="v">{% for v in row.was %}<s>{{ v }}</s> → {% endfor %}{{ row.now }}</span><span class="d {{ row.cls }}">{{ row.tag }}</span></div>
 {% endfor %}
-{% if compare.note %}
-      <p class="sc-note" style="margin-top:4px">{{ compare.note|safe }}</p>
+{% if r.compare.note %}
+      <p class="sc-note" style="margin-top:4px">{{ r.compare.note|safe }}</p>
 {% endif %}
     </section>
 {% endif %}
-{% if timeline %}
-{{ mini("⏱", "这 " ~ timeline.seconds ~ " 秒长什么样") }}
+{% if r.timeline %}
+{{ mini("⏱", "这 " ~ r.timeline.seconds ~ " 秒长什么样") }}
     <section class="box tl">
-{{ timeline.svg|indent(6, true)|safe }}
+{{ r.timeline.svg|indent(6, true)|safe }}
       <div class="legend">
         <span><i style="background:var(--tl-speech)"></i>在读</span>
-        <span><i style="background:var(--tl-end)"></i>句末停顿 · {{ timeline.counts.end }} 次</span>
-        <span><i style="background:var(--tl-long)"></i>句中长停 ≥0.8 秒 · {{ timeline.counts.long }} 次</span>
-        <span><i style="background:var(--tl-mid)"></i>句中短停 · {{ timeline.counts.mid }} 次</span>
+        <span><i style="background:var(--tl-end)"></i>句末停顿 · {{ r.timeline.counts.end }} 次</span>
+        <span><i style="background:var(--tl-long)"></i>句中长停 ≥0.8 秒 · {{ r.timeline.counts.long }} 次</span>
+        <span><i style="background:var(--tl-mid)"></i>句中短停 · {{ r.timeline.counts.mid }} 次</span>
       </div>
-{% if timeline.note %}
-      <p class="tl-note">{{ timeline.note|safe }}</p>
+{% if r.timeline.note %}
+      <p class="tl-note">{{ r.timeline.note|safe }}</p>
 {% endif %}
     </section>
 {% endif %}
-{% if pages %}
+{% if r.pages %}
 {#- 一次录音跨了几页时的小结。**颗粒度是一次录音** —— 这张表只是标注，
     数字是喂数据台从同一份对齐里派生的，不是分开测的。一页的录音不出这张表。
     ⚠️ .pg 的两列之间不许换行：左右是行内块，多一个空格列宽就歪了。 -#}
-{{ mini("📄", pages.heading) }}
+{{ mini("📄", r.pages.heading) }}
     <section class="box pg">
-{% for p in pages.rows %}
+{% for p in r.pages.rows %}
       <div class="row"><b>{{ p.k|safe }}</b><span>{{ p.v|safe }}</span></div>
 {% endfor %}
-{% if pages.note %}
-      <p class="pg-note">{{ pages.note|safe }}</p>
+{% if r.pages.note %}
+      <p class="pg-note">{{ r.pages.note|safe }}</p>
 {% endif %}
     </section>
 {% endif %}
-{% if diffs %}
-{{ mini("🔍", diffs.heading) }}
+{% if r.diffs %}
+{{ mini("🔍", r.diffs.heading) }}
     <div class="diff">
-{% for d in diffs.rows %}
+{% for d in r.diffs.rows %}
 
       <div class="d{{ ' doubt' if d.doubt }}">
         <span class="n">{{ d.num }}</span>
@@ -104,7 +119,7 @@
 
     </div>
 {% endif %}
-{% for blk in texts %}
+{% for blk in r.texts %}
 {{ mini(blk.icon, blk.heading) }}
     <section class="box">
 {% for p in blk.paras %}
@@ -115,10 +130,10 @@
 {% endif %}
     </section>
 {% endfor %}
-{% if todos %}
+{% if r.todos %}
 {{ mini("✏️", "下次试试这三件事") }}
     <div class="todo">
-{% for t in todos %}
+{% for t in r.todos %}
       <div class="t">
         <span class="ic">{{ t.icon }}</span>
         <span><p class="h">{{ t.title|safe }}</p>
@@ -127,24 +142,22 @@
 {% endfor %}
     </div>
 {% endif %}
-{% if slashes %}
+{% if r.slashes %}
 {{ mini("🪄", "画好斜线的版本") }}
     <section class="box">
       {# 斜线两边都要留空气 —— 它是「在这儿换口气」的记号，贴着字母会读成单词的一部分 #}
-      <p class="text" style="margin:0">{% for ln in slashes %}{{ ln }}{% if not loop.last %} <span class="sl">/</span> {% endif %}{% endfor %}</p>
+      <p class="text" style="margin:0">{% for ln in r.slashes %}{{ ln }}{% if not loop.last %} <span class="sl">/</span> {% endif %}{% endfor %}</p>
     </section>
 {% endif %}
 {# figures.block() 自带尾换行，不去掉就和下一个小标题之间多一个空行 #}
-{{ scales.rstrip("\n")|safe }}
-{% if how %}
+{{ r.scales.rstrip("\n")|safe }}
+{% if r.how %}
 {{ mini("📐", "分数是怎么来的") }}
     <section class="box how">
-{% for p in how %}
+{% for p in r.how %}
       <p>{{ p|safe }}</p>
 {% endfor %}
     </section>
 {% endif %}
-    {# 名字带目录时，返回目录页要按深度回退（review/super8/L3/p68.html → ../../） #}
-    <a class="back" href="{{ back_href }}">← 返回打卡评价</a>
-    <p class="foot">打卡评价 · 每天的作业，一份成绩单 📋</p>
-</main>
+    </article>
+{%- endmacro %}

@@ -11,8 +11,9 @@ argument-hint: [点读视频或录音] [第几页]
     +      （一次录音 = 一份，        └─► spec 候选（…/<slug>.draft.txt）
 教材原文     跨页只当标注）                │ 会话核对：定性 · 打分 · 写点评
 .ref.txt                                  ▼
-              storage/spec/english/review/<slug>.txt ──build.py──► 单次报告
-                                                      + 目录页（每天一条汇总）+ 趋势页
+              storage/spec/english/review/<slug>.txt ──build.py──► <那天>.html
+                                            （一天一份，当天每次录音是页内一节）
+                                             + 目录页 + 趋势页
 ```
 
 先读根 `CLAUDE.md`（发布策略）和 `src/generator/english/CLAUDE.md`
@@ -100,7 +101,9 @@ WCPM 常模 Hasbrouck & Tindal 2017 Table 4，是**母语儿童**常模。
 ## 自检
 
 - **`[评分]` 四维之和 == `score`。** 全仓库**没有任何求和校验**，纯靠这一步。
-- `make build` 之后 **Read 生成的报告页**，别凭 spec 想象。
+- `make build` 之后 **Read 生成的日页**（`dist/english/review/<YYYY-MM-DD>.html`），
+  别凭 spec 想象。**报告是一天一份** —— 当天读了几次，就是页内几节；
+  单次录音不再单独占一个 URL，目录页的行链的是日页的锚点。
 - **核一眼停顿地图。** 没写 `[句末]` 时 `review.py` 从原文句号自动推
   （`auto_bounds()`），它**认不出段落切换和引号内的分句** —— 句末少几次，
   时间轴的三个计数就跟着偏。不对就手写 `[句末]`，**一行写完**（续行会被静默丢掉）。

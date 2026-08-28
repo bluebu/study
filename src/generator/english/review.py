@@ -12,14 +12,22 @@
                               算出来的指标，每次构建全量重算覆盖（趋势页读它）
 
 `<slug>` 是「书 / 课 / 第几页」，**斜杠就是目录**：`super8/L3/p68` 落成
-`storage/data/english/review/super8/L3/p68.ref.txt`、
-报告出到 `dist/english/review/super8/L3/p68.html`。
+`storage/data/english/review/super8/L3/p68.ref.txt`。一次录音读了几页就写区间
+（`p68-69`）—— 颗粒度是**一次录音**，不是一页。
 喂数据台一次扫一叠截图时就是这么落的（页码它自己认页角那枚绿圆盘）。
 
 spec 里**没有任何字段指向数据文件** —— 全靠这个名字拼路径，spec 叫什么，
 data 就得叫什么。要不要 push 哪些文件见根目录 DATA.md。
 
-产物落在 dist/english/review/：一页一份报告 + 一个目录页。
+产物落在 dist/english/review/：**一天一份报告** + 一个目录页 + 一张趋势页。
+
+    <YYYY-MM-DD>.html   当天的成绩单：页眉是日期 + 当天汇总，
+                        当天每次录音是页内的一节（锚点 `#<slug 里的斜杠换成->`）
+    index.html          按日期倒序，每天一条汇总 + 当天每次录音一行
+    trend.html          全部放在一条线上（从 result/english/review.csv 读回来）
+
+并进日页之前是「一次录音一个页面」。改掉是因为平时看的就是「今天整体怎么样」——
+为一次 90 秒的朗读单开一个 URL，每天要点开三次才看得全。
 
 **数字一个都不从 spec 抄**：准确率、WCPM、几个词一停、停顿占比全部由这里算，
 spec 只写 words（核对过的原文词数）和 errors（认定的计错数）。老站那 7 份报告是
@@ -219,24 +227,54 @@ def _join(a: str, b: str) -> str:
 # 各区块
 # ══════════════════════════════════════════════════════════════
 
-def hero(r: Report) -> dict:
-    head = (f'第 {r.spec.get("page")} 页' if r.spec.get("page") else "")
-    if r.spec.get("book"):
-        head += f'《{r.spec.get("book")}》'
-    # 「划线三段 110 词」是一节，不要在中间再断开
-    part = " ".join(x for x in (r.spec.get("part"), f"{r.words} 词") if x)
-    sub = ""
-    for piece in (head, part, pretty_date(r.date)):
+# 成对的标点自己就占半个字的空，间隔号贴着它写才不显得散开。
+# 收尾的（右半）在左边不留空格，起头的（左半）在右边不留空格。
+_TAIL_TIGHT = "》」』”"
+_HEAD_TIGHT = "《「『“"
+
+
+def dot_join(pieces) -> str:
+    """用「·」把几段拼成一行，**书名号 / 引号那一侧不留空格**。
+
+        超8 · Lesson 3 ·《Prince Darling》· 2 次朗读
+
+    而不是 `Lesson 3 · 《Prince Darling》 · 2 次朗读` —— 左右书名号本身
+    已经各占半个字，再加空格就散了。页眉和每节的副标题都要这条规则，收在一处。
+    """
+    out = ""
+    for piece in pieces:
         if not piece:
             continue
-        # 书名号 / 引号收尾后直接跟间隔号，中间不留空格
-        sep = "" if not sub else ("· " if sub[-1] in "》」』”" else " · ")
-        sub += sep + piece
+        if out:
+            left = "" if out[-1] in _TAIL_TIGHT else " "
+            right = "" if piece[0] in _HEAD_TIGHT else " "
+            out += f"{left}·{right}"
+        out += piece
+    return out
 
-    # 卷名里的最后一个数字描成主色（「超8 · Lesson 3」的 3）
-    title = html.escape(r.spec.title)
-    title = re.sub(r"(\d+)(?!.*\d)", r"<b>\1</b>", title, count=1)
-    return {"title": title, "sub": sub}
+
+def hero(r: Report, *, lesson: bool = False, book: bool = False) -> dict:
+    """日页里**一节**的标题。
+
+    页面的 h1 已经是日期、页眉已经写了卷名和书名，所以这儿一概不重复 ——
+    节标题就是「第 69 页」。只有当天跨了课（`lesson`）或跨了本（`book`）时，
+    才把那一样补回到副标题里，否则每节都在重复同一行字。
+
+    并进日页之前这儿是整页的 h1，带着卷名 + 页码 + 书名 + 日期一长串。
+    """
+    head = f'第 {r.spec.get("page")} 页' if r.spec.get("page") else r.spec.title
+    # 页码里的数字描成这一节的主色（「第 69 页」的 69）
+    title = re.sub(r"(\d+)(?!.*\d)", r"<b>\1</b>", html.escape(head), count=1)
+
+    pieces = []
+    if lesson:
+        pieces.append(r.spec.title)
+    if book and r.spec.get("book"):
+        pieces.append(f'《{r.spec.get("book")}》')
+    # 「划线三段 110 词」是一节，不要在中间再断开
+    pieces.append(" ".join(x for x in (r.spec.get("part"), f"{r.words} 词") if x))
+
+    return {"title": title, "sub": dot_join(pieces)}
 
 
 def pretty_date(iso: str) -> str:
@@ -513,53 +551,84 @@ def how(r: Report) -> list[str]:
 # 组装
 # ══════════════════════════════════════════════════════════════
 
-def render(r: Report, others: dict[str, Report], out_dir: Path, pdf: bool) -> bool:
+def anchor(slug: str) -> str:
+    """slug → 日页里的锚点 id：`super8/L3/p68-69` → `super8-L3-p68-69`。"""
+    return slug.replace("/", "-")
+
+
+def card_ctx(r: Report, others: dict[str, Report], *,
+             lesson: bool = False, book: bool = False) -> dict:
+    """日页里**一次录音**那一节的上下文。版式在 review/one.html 的 card 宏。
+
+    两套色（分类色 / 分数色）作为 fg / bg / cat 传出去，由模板注在这一节的
+    行内 style 上 —— 一页有好几次录音、分数各不同，注在 :root 上会互相盖掉。
+    """
     fg, bg = figures.score_color(r.score)
-    c = r.color_var
+    return {
+        "anchor": anchor(r.slug),
+        "cat": r.color_var, "fg": fg, "bg": bg,
+        "hero": hero(r, lesson=lesson, book=book),
+        "score": score_box(r),
+        "stats": stats(r),
+        "compare": compare(r, others),
+        "timeline": timeline(r),
+        "pages": pages(r),
+        "diffs": diffs(r),
+        # 「磕巴」和「亮点」是同一种版式（几行内容 + 一段小字注），排在一个列表里
+        "texts": [x for x in (lines_block(r, "磕巴", "🌀", "磕巴（不计错，但能看出在想）"),
+                              highlight(r)) if x],
+        "todos": todos(r),
+        "slashes": slashes(r),
+        "scales": scales(r),
+        "how": how(r),
+    }
+
+
+def render_day(date: str, rows: list[Report], others: dict[str, Report],
+               summary: dict, out_dir: Path, pdf: bool) -> bool:
+    """**一天一个页面**：dist/english/review/<YYYY-MM-DD>.html。
+
+    以前是一次录音一个页面，目录页列着当天的三条各自点进去。并成一页是因为
+    平时看的就是「今天整体怎么样」—— 为一次 90 秒的朗读单开一个 URL，
+    每天要点三次才看得全。目录页仍然列出每一次，只是链到这一页的锚点。
+    """
+    # 当天只读了一课 / 一本，卷名和书名就归页眉，每节不再重复；跨了才下放到节里
+    lessons = {r.spec.title for r in rows}
+    books = {r.spec.get("book", "") for r in rows if r.spec.get("book")}
+    pieces = []
+    if len(lessons) == 1:
+        pieces.append(next(iter(lessons)))
+    if len(books) == 1:
+        pieces.append(f"《{next(iter(books))}》")
+    pieces.append(f"{len(rows)} 次朗读")
 
     body = tmpl.body(
-        "review/report.html",
-        hero=hero(r),
-        score=score_box(r),
-        stats=stats(r),
-        compare=compare(r, others),
-        timeline=timeline(r),
-        pages=pages(r),
-        diffs=diffs(r),
-        # 「磕巴」和「亮点」是同一种版式（几行内容 + 一段小字注），排在一个列表里
-        texts=[x for x in (lines_block(r, "磕巴", "🌀", "磕巴（不计错，但能看出在想）"),
-                           highlight(r)) if x],
-        todos=todos(r),
-        slashes=slashes(r),
-        scales=scales(r),
-        how=how(r),
-        # 名字带目录时，返回目录页要按深度回退（review/super8/L3/p68.html → ../../）
-        back_href="../" * r.slug.count("/") or "./",
+        "review/day.html",
+        day={"label": pretty_date(date),
+             "sub": dot_join(pieces),
+             "sum": summary},
+        reports=[card_ctx(r, others, lesson=len(lessons) > 1, book=len(books) > 1)
+                 for r in rows],
     )
 
-    desc = (f"{r.spec.get('book', '')}一段 {round(r.duration)} 秒朗读的逐字比对："
-            f"读对 {r.correct}/{r.words} 个词，每分钟 {r.wcpm} 个正确词，"
-            f"{r.pause_count} 次停顿，总分 {r.score} 分。")
-    title = f"{r.title} 打卡评价"
-
-    # 分类色和分数色按页注入，两套各管各的（模板里有为什么）
-    style = tmpl.render("review/page-vars.html", cat=c, fg=fg, bg=bg)
+    total = summary["words"]
+    desc = (f"{pretty_date(date)}：{summary['times']} 次朗读共 {total} 个词，"
+            f"合计读对 {summary['accuracy']}%，每分钟 {summary['wcpm']} 个正确词。")
 
     out = page.write(
-        out_dir / f"{r.slug}.html",
+        out_dir / f"{date}.html",
         page.render(
-            title=title,
+            title=f"{pretty_date(date)} · 打卡评价",
             description=desc,
             body=body,
             emoji="🎤",
-            css=("review.css",),
-            # dist/english/review/<slug>.html —— 名字带几层目录就多回退几层
-            root="/".join([".."] * (2 + r.slug.count("/"))),
-            noindex=True,          # 孩子的成绩单，不进搜索引擎
-            extra_head=style,
+            css=("review.css", "daysum.css"),
+            root="../..",           # dist/english/review/<date>.html，日页是平的
+            noindex=True,           # 孩子的成绩单，不进搜索引擎
         ),
     )
-    print(f"    → review/{r.slug}.html  （{r.accuracy}% · WCPM {r.wcpm} · {r.score} 分）")
+    names = "、".join(r.title for r in rows)
+    print(f"    → review/{date}.html  （{names}）")
     return bool(pdf) and sheet.to_pdf(out, out.with_suffix(".pdf"))
 
 
@@ -705,43 +774,37 @@ def day_summary(rows: list[Report], prev: list[Report] | None) -> dict:
     return out
 
 
-def build_index(out_dir: Path, reports: list[Report], pdfs: dict[str, bool],
-                trend: bool = False) -> None:
-    """目录页：按日期倒序分组，组内按分类顺序、再按 order。
+def build_index(out_dir: Path, by_date: dict[str, list[Report]], order: list[str],
+                sums: dict[str, dict], pdfs: dict[str, bool],
+                trend: bool, total: int) -> None:
+    """目录页：按日期倒序，每天一条汇总 + 当天每次录音一行。
 
-    每个日期头上带一条**当天汇总** —— 报告的颗粒度是一次录音，但平时想看的是
-    「今天整体怎么样」。汇总全部从已有的 Report 算出来，不用人多写一个字。
+    行链的是**日页的锚点**（`2026-08-27.html#super8-L3-p68-69`）——
+    报告已经并进日页了，一次录音不再单独占一个 URL。
     """
-    by_date: dict[str, list[Report]] = {}
-    for r in reports:
-        by_date.setdefault(r.date, []).append(r)
-
-    cat_rank = {c: i for i, c in enumerate(CATS)}
     days = []
-    # 倒序渲染，但「和上一天比」要拿**时间上更早**的那一天，所以先算好顺序
-    order = sorted(by_date, reverse=True)
-    earlier = {d: order[i + 1] if i + 1 < len(order) else None for i, d in enumerate(order)}
     for date in order:
-        rows = sorted(by_date[date], key=lambda x: (cat_rank.get(x.cat, 99), x.order))
         items = []
-        for r in rows:
+        for r in by_date[date]:
             fg, bg = figures.score_color(r.score)
             items.append({
-                "href": f"{r.slug}.html",
+                "href": f"{date}.html#{anchor(r.slug)}",
                 "title": r.title,
                 "small": f"{r.sub} · {r.accuracy}% · 每分钟 {r.wcpm} 词",
                 "cat": r.cat, "score": r.score,
                 "fg": fg, "bg": bg, "color": r.color_var,
-                # 报告本身是网页（手机上看），PDF 只是想转发给别人时的附加件
-                "pdf": f"{r.slug}.pdf" if pdfs.get(r.slug) else None,
             })
-        days.append({"label": pretty_date(date), "rows": items,
-                     "sum": day_summary(rows, by_date.get(earlier[date]))})
+        days.append({
+            "label": pretty_date(date),
+            "href": f"{date}.html",
+            # 报告本身是网页（手机上看），PDF 只是想转发给别人时的附加件。
+            # 现在一天一份，所以挂在日期那一行，不再一次录音一个
+            "pdf": f"{date}.pdf" if pdfs.get(date) else None,
+            "rows": items,
+            "sum": sums[date],
+        })
 
-    body = tmpl.body(
-        "review/index.html",
-        total=len(reports), trend=trend, days=days,
-    )
+    body = tmpl.body("review/index.html", total=total, trend=trend, days=days)
 
     page.write(
         out_dir / "index.html",
@@ -750,11 +813,11 @@ def build_index(out_dir: Path, reports: list[Report], pdfs: dict[str, bool],
             description="每天的朗读作业，一份能和下次比的成绩单：逐字比对、停顿地图、三把尺子上的位置。",
             body=body,
             emoji="🎤",
-            css=("site.css", "review-index.css"),
+            css=("site.css", "review-index.css", "daysum.css"),
             root="../..",
         ),
     )
-    print(f"    → review/index.html  （{len(reports)} 份）")
+    print(f"    → review/index.html  （{len(order)} 天 · {total} 次）")
 
 
 def build_review(dist: Path, pdf: bool = False) -> None:
@@ -772,11 +835,23 @@ def build_review(dist: Path, pdf: bool = False) -> None:
         if r.prevs and r.prevs[-1] in others:
             r._prev_acc = others[r.prevs[-1]].accuracy
 
-    pdfs = {}
-    for r in sorted(reports, key=lambda x: (x.date, x.order)):
-        pdfs[r.slug] = render(r, others, out_dir, pdf)
+    # 一天一个页面：先按日期分组，组内按分类顺序再按 order
+    by_date: dict[str, list[Report]] = {}
+    for r in reports:
+        by_date.setdefault(r.date, []).append(r)
+    cat_rank = {c: i for i, c in enumerate(CATS)}
+    for rows in by_date.values():
+        rows.sort(key=lambda x: (cat_rank.get(x.cat, 99), x.order))
+
+    # 「和上一天比」要拿时间上更早的那一天 —— 目录页是倒序渲染的，先把顺序算好
+    order = sorted(by_date, reverse=True)
+    earlier = {d: order[i + 1] if i + 1 < len(order) else None for i, d in enumerate(order)}
+    sums = {d: day_summary(by_date[d], by_date.get(earlier[d])) for d in order}
+
+    pdfs = {d: render_day(d, by_date[d], others, sums[d], out_dir, pdf)
+            for d in sorted(by_date)}
 
     # 先落 result 表，趋势页再从那张表读回来 —— 顺序不能反
     write_result(reports)
     trend = build_trend(out_dir)
-    build_index(out_dir, reports, pdfs, trend)
+    build_index(out_dir, by_date, order, sums, pdfs, trend, len(reports))

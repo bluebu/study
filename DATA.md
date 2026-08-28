@@ -54,7 +54,7 @@ dist/  单页报告、练习单     dist/  趋势页、汇总列表
 ```
 super8/L3/p68   →   storage/data/english/review/super8/L3/p68.ref.txt
                     storage/spec/english/review/super8/L3/p68.txt
-                    dist/english/review/super8/L3/p68.html
+                    dist/english/review/<那天>.html#super8-L3-p68
 ```
 
 - **一叠截图一次进来时，名字只填到「书 / 课」**（`super8/L3`），页码机器从页角

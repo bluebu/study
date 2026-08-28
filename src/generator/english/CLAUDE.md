@@ -77,7 +77,9 @@ spec 不用从零写：`feeder read --draft` 会起草一份 `<slug>.draft.txt` 
 （`lib/spec.py` 的 `specs()`）。整条流程和判断口径见 `.claude/skills/review/SKILL.md`。
 
 **slug 是「书 / 课 / 页」，斜杠就是目录**：`super8/L3/p68` →
-`spec/…/super8/L3/p68.txt` + `data/…/super8/L3/p68.*` → `dist/english/review/super8/L3/p68.html`。
+`spec/…/super8/L3/p68.txt` + `data/…/super8/L3/p68.*` →
+`dist/english/review/2026-08-27.html#super8-L3-p68`（**一天一个页面**，
+当天每次录音是页内的一节）。
 spec 里**没有任何字段指向数据文件**，全靠 `data/<slug>.<ext>` 拼路径 ——
 名字错了 spec 和数据就配不上对，所以喂数据台在写盘前就校验名字形状。
 slug 是反推出来的：`spec_path.relative_to(SPECS)` 去掉后缀。

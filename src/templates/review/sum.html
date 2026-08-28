@@ -1,0 +1,21 @@
+{#-
+  一天的汇总条。**目录页和日页共用这一个宏** —— 两处各写一遍，改一处就会漂。
+
+  报告的颗粒度是一次录音，可平时想看的是「今天整体怎么样」。
+  合计不是平均：准确率 = 当天读对的总词数 ÷ 总词数，WCPM 除的是当天总时长。
+  涨跌只在「两天读的是同一本书」时才有（口径见 review.py 的 day_summary）。
+
+  ⚠️ `<b>` 和 `<i>` 之间不许换行 —— 都是行内元素，会多出一个空格。
+-#}
+{% macro strip(s) %}
+    <div class="sum">
+      <span>{{ s.times }} 次{% if s.pages > s.times %} · {{ s.pages }} 页{% endif %}</span>
+      <span>{{ s.words }} 词</span>
+      <span><b>{{ s.accuracy }}%</b>{% for d in s.deltas %}{% if d.k == "accuracy" and not d.flat %}<i class="{{ 'up' if d.up else 'down' }}">{{ d.tag }}</i>{% endif %}{% endfor %}</span>
+      <span>每分钟 {{ s.wcpm }} 词{% for d in s.deltas %}{% if d.k == "wcpm" and not d.flat %}<i class="{{ 'up' if d.up else 'down' }}">{{ d.tag }}</i>{% endif %}{% endfor %}</span>
+      <span>{{ s.minutes }} 分钟</span>
+{% if s.mixed %}
+      <span class="mix">跨了不止一本书 · 合计只当流水</span>
+{% endif %}
+    </div>
+{%- endmacro %}

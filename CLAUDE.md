@@ -82,7 +82,9 @@ src/
     list.html         目录页，五个栏目共用
     sheet-info.html   打印单页眉「姓名 __ 日期 __ 得分 __」，三个栏目共用
     practice/ miji/ ket/ homework/ retell/   各栏目的打印单版式
-    review/           成绩单 + 目录页 + 趋势页 + 按页注入的色变量
+    review/           day.html 一天一份成绩单（当天每次录音一节）
+                      one.html 一节的版式（card 宏）· sum.html 当天汇总条
+                      index.html 目录页 · trend.html 趋势页
     figures/          三把尺子 / 停顿地图 / 趋势曲线的 SVG
   assets/
     palette.css       色板单一真源
@@ -91,6 +93,7 @@ src/
     site.css          站点页面（入口页、目录页）
     foot.css          页脚（备案号 + 统计），page.py 挂页脚时自动引上
     trend.css         趋势页（曲线卡片 + 指标总表）
+    daysum.css        当天汇总条（目录页和日页共用，两边引的 CSS 谁也不包含谁）
   generator/          **所有生成器 .py**，一科一层目录
     chinese/build.py  语文练习单
     english/          英语（CLAUDE.md 里有本科的教学准则和四个栏目的口径）
