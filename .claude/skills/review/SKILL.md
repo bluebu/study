@@ -8,10 +8,11 @@ argument-hint: [点读视频或录音] [第几页]
 
 ```
 点读视频 ──feeder read --draft──► 测量数据（storage/data/…）
-    +      （跨页加 --split，        └─► spec 候选（…/<slug>.draft.txt）
-教材原文     边界机器算）                 │ 会话核对：定性 · 打分 · 写点评
-.ref.txt                                 ▼
-              storage/spec/english/review/<slug>.txt ──build.py──► 报告 + 趋势页
+    +      （一次录音 = 一份，        └─► spec 候选（…/<slug>.draft.txt）
+教材原文     跨页只当标注）                │ 会话核对：定性 · 打分 · 写点评
+.ref.txt                                  ▼
+              storage/spec/english/review/<slug>.txt ──build.py──► 单次报告
+                                                      + 目录页（每天一条汇总）+ 趋势页
 ```
 
 先读根 `CLAUDE.md`（发布策略）和 `src/generator/english/CLAUDE.md`
@@ -24,28 +25,26 @@ F=../feeder/bin/feeder        # 没编过就先 cd ../feeder && make cli
 
 ## 流程
 
-1. **确认页码和原文。** slug 是「书/课/页」：`super8/L3/p70`。
-   `super8/L3` 的 **p63–p79 原文已经在库里**（`storage/data/…/pNN.ref.txt`），
-   直接用。换课换书才要先 `$F scan <教材截图…> --split --slug <书>/<课>`。
-2. **跑测量 + 起草。** 一页一份：
+1. **确认读了哪几页、原文在不在。** `super8/L3` 的 **p63–p79 原文已经在库里**
+   （`storage/data/…/pNN.ref.txt`），直接用。换课换书才要先
+   `$F scan <教材截图…> --split --slug <书>/<课>`。
+2. **跑测量 + 起草。** **颗粒度是一次录音** —— 一口气读了几页就是一份，
+   `--ref` 按朗读顺序给几份，名字写区间：
 
    ```bash
    R=storage/data/english/review/super8/L3
-   $F read 点读.mp4 --slug super8/L3/p70 --ref $R/p70.ref.txt --draft
+   # 一页
+   $F read 点读.mp4 --slug super8/L3/p70    --ref $R/p70.ref.txt --draft
+   # 两页（同一段录音）
+   $F read 点读.mp4 --slug super8/L3/p68-69 --ref $R/p68.ref.txt,$R/p69.ref.txt --draft
    ```
 
-   **一段录音跨几页不用先剪** —— 名字只填到课，`--ref` 按朗读顺序给几份：
-
-   ```bash
-   $F read 点读.mp4 --slug super8/L3 --split \
-       --ref $R/p68.ref.txt,$R/p69.ref.txt --draft
-   ```
-
-   页边界机器算（几页原文拼起来当基准，每页末词读完的时刻就是切点），
-   然后一页裁一段音频各跑一遍。跑完会打出「认出 N 页 + 各自的时间区间 + 对上多少词」，
-   **对上的百分比低就是 `--ref` 的页码或顺序给错了**，回去改。
-3. 十几秒出结果：每页三份测量数据落 `storage/data/…`，一份 `pNN.draft.txt`
-   落 `storage/spec/…`。**`--ref` 别省** —— 没有它就没有逐字比对，草稿也就空了大半。
+   **不切文件、不重跑。** 每页多少词、错几处、占哪段时间是从同一份对齐里派生的，
+   跑完会打出来。**某一页「只对上 N%」就是 `--ref` 的页码或顺序给错了** ——
+   回去改再跑，别在草稿上硬改（`[比对]` / `[卡壳]` 全是照错的基准算的）。
+   名字和 `--ref` 的页对不上会被当场拒掉，不用担心配错。
+3. 十几秒出结果：三份测量数据落 `storage/data/…`，一份 `.draft.txt` 落
+   `storage/spec/…`。**`--ref` 别省** —— 没有它就没有逐字比对，草稿也就空了大半。
 4. **核对草稿。** 机器填好的部分（文件头、`[比对]`、`[卡壳]`、`[磕巴]`）过一眼，
    `⟨⟩` 包着的是判断，见下一节。**带 `.draft.` 的文件 build 会跳过**，
    所以草稿放在那儿慢慢改，不会污染线上报告。
@@ -68,6 +67,9 @@ F=../feeder/bin/feeder        # 没编过就先 cd ../feeder && make cli
 那是给「判不准该算谁的」用的，不是给「懒得判」用的。
 
 `words` 机器数好了，一般不动；只有「划线范围和 `.ref.txt` 不一致」时才按实际朗读范围改。
+
+`[分页]` 那张小表机器填好了（跨页才有），数字别动 —— 它是从同一份对齐派生的。
+缩进那一句是判断：写「哪一页更吃力、为什么」。整块删掉也行，报告就不出这张表。
 
 ## `[尺子]` / `[怎么来的]` 的套话
 
@@ -104,6 +106,9 @@ WCPM 常模 Hasbrouck & Tindal 2017 Table 4，是**母语儿童**常模。
   时间轴的三个计数就跟着偏。不对就手写 `[句末]`，**一行写完**（续行会被静默丢掉）。
   `[卡壳]` 同理。
 - 趋势页和 `storage/result/english/review.csv` 会自动重算，扫一眼新那行对不对。
+- **目录页每天头上那一条汇总**也会自动重算（当天几次、几页、多少词、合计准确率
+  和 WCPM）。合计是「读对的总词数 ÷ 总词数」，不是取平均；**跨本的那天不出涨跌**
+  —— 换书就换了一把尺子。看一眼数对不对，别去改代码里的口径。
 
 ## 已知坑
 

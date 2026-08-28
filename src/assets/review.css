@@ -107,8 +107,8 @@ h1 b{ color:var(--read); }
 .cmp .r .v s{ color:var(--ink-soft); text-decoration:none; opacity:.65; }
 .cmp .r .d{ flex:0 0 auto; font-family:var(--font-display); font-weight:700; font-size:.82rem;
             border-radius:999px; padding:3px 10px; white-space:nowrap; }
-.cmp .r .d.up{ background:var(--math-bg); color:#1F7A55; }
-.cmp .r .d.down{ background:var(--chinese-bg); color:#B4442A; }
+.cmp .r .d.up{ background:var(--math-bg); color:var(--up); }
+.cmp .r .d.down{ background:var(--chinese-bg); color:var(--down); }
 .cmp .r .d.flat{ background:rgba(120,104,84,.08); color:var(--ink-soft); }
 
 /* 停顿地图 */
@@ -176,4 +176,25 @@ mark{ background:var(--math-bg); color:#1F7A55; border-radius:5px; padding:0 3px
   body{ background:#fff; }
   .box,.stat,.d,.todo .t{ box-shadow:none; }
   .back{ display:none; }
+}
+
+/* ── 一次录音跨了几页时的小表 ────────────────────────────
+   颗粒度是**一次录音**，不按页拆成几份报告。这张表只是标注：
+   哪几页、各自多少词、错几处 —— 数字由喂数据台从同一份对齐里派生。
+
+   两列：左边页码固定宽，右边明细自己撑。手机上右列会换行，
+   左列不跟着缩（`auto` 而不是 `min-content`），一列页码对齐才看得出是一张表。 */
+.pg .row{
+  display:grid; grid-template-columns:auto 1fr; gap:4px 12px;
+  padding:7px 0; border-bottom:1px solid var(--line);
+}
+.pg .row:last-of-type{ border-bottom:0; }
+.pg .row b{
+  font-family:var(--font-display); font-weight:800; color:var(--ink);
+  white-space:nowrap;
+}
+.pg .row span{ color:var(--ink-soft); font-size:.9rem; line-height:1.5; }
+.pg-note{
+  margin:10px 0 0; padding-top:10px; border-top:1px solid var(--line);
+  color:var(--ink-soft); font-size:.88rem; line-height:1.7;
 }

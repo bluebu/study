@@ -20,6 +20,24 @@
 {% if days %}
 {% for day in days %}
     <h2 class="day">{{ day.label }}</h2>
+{#- 当天汇总。报告的颗粒度是一次录音，但平时想看的是「今天整体怎么样」。
+    合计不是平均：准确率 = 当天读对的总词数 ÷ 总词数，WCPM 除的是当天总时长。
+    ⚠️ `<b>` 和 `<i>` 之间不许换行 —— 是行内元素，会多出一个空格。 -#}
+    <div class="sum">
+      <span>{{ day.sum.times }} 次{% if day.sum.pages > day.sum.times %} · {{ day.sum.pages }} 页{% endif %}</span>
+      <span>{{ day.sum.words }} 词</span>
+{% for d in day.sum.deltas %}{% if d.k == "accuracy" %}
+      <span><b>{{ day.sum.accuracy }}%</b>{% if not d.flat %}<i class="{{ 'up' if d.up else 'down' }}">{{ d.tag }}</i>{% endif %}</span>
+{% endif %}{% endfor %}
+{% if not day.sum.deltas %}
+      <span><b>{{ day.sum.accuracy }}%</b></span>
+{% endif %}
+      <span>每分钟 {{ day.sum.wcpm }} 词{% for d in day.sum.deltas %}{% if d.k == "wcpm" and not d.flat %}<i class="{{ 'up' if d.up else 'down' }}">{{ d.tag }}</i>{% endif %}{% endfor %}</span>
+      <span>{{ day.sum.minutes }} 分钟</span>
+{% if day.sum.mixed %}
+      <span class="mix">跨了不止一本书 · 合计只当流水</span>
+{% endif %}
+    </div>
     <ul class="list">
 {% for r in day.rows %}
       <li style="--s:{{ r.fg }};--sbg:{{ r.bg }};--c:var(--c-{{ r.color }});--cbg:var(--c-{{ r.color }}-bg)">

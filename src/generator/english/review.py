@@ -131,6 +131,17 @@ class Report:
         return f"{book} · {self.words} words" if book else f"{self.words} words"
 
     @property
+    def page_count(self) -> int:
+        """这次录音读了几页。没有 [分页] 就是一页。
+
+        颗粒度是**一次录音**，页只是标注 —— 所以这个数只用来在当天的汇总里
+        报「今天读了几页」，不影响任何指标的算法。
+        """
+        b = self.blocks.get("分页")
+        n = len([ln for ln in b.lines if ln.strip() and not ln[:1].isspace()]) if b else 0
+        return n or 1
+
+    @property
     def color_var(self) -> str:
         return CATS.get(self.cat, CAT_FALLBACK)
 
@@ -446,6 +457,32 @@ def todos(r: Report) -> list[dict]:
              "desc": rich(joined(it["desc"]))} for it in items]
 
 
+def pages(r: Report) -> dict | None:
+    """一次录音跨几页时的小结（`[分页]`）。
+
+    **只是标注。** 颗粒度是一次录音 —— 一份数据、一份 spec、一份报告；
+    这张表里的数是喂数据台从**同一份对齐**里派生的，不是分开测的。
+    一页的录音不写这个区块，也就不出这张表。
+
+    一行一页，`第 68 页 = 2.9-138.5 秒 · 128 词 · 候选错 9 处`，
+    缩进行是整段的小字注。右边原样印，人怎么改都行。
+    """
+    b = r.blocks.get("分页")
+    if not b:
+        return None
+    rows = []
+    for ln in b.lines:
+        if not ln.strip() or ln[:1].isspace():
+            continue
+        k, _, v = ln.strip().partition("=")
+        rows.append({"k": rich(k.strip()), "v": rich(v.strip())})
+    if not rows:
+        return None
+    note = joined(b.notes())
+    return {"heading": b.head or f"这次读了 {len(rows)} 页",
+            "rows": rows, "note": rich(note) if note else ""}
+
+
 def slashes(r: Report) -> list[str]:
     """画好斜线的版本 —— 按意群断句，一条斜线一口气。斜线由模板插。"""
     b = r.blocks.get("斜线")
@@ -487,6 +524,7 @@ def render(r: Report, others: dict[str, Report], out_dir: Path, pdf: bool) -> bo
         stats=stats(r),
         compare=compare(r, others),
         timeline=timeline(r),
+        pages=pages(r),
         diffs=diffs(r),
         # 「磕巴」和「亮点」是同一种版式（几行内容 + 一段小字注），排在一个列表里
         texts=[x for x in (lines_block(r, "磕巴", "🌀", "磕巴（不计错，但能看出在想）"),
@@ -617,16 +655,73 @@ def build_trend(out_dir: Path) -> bool:
     return True
 
 
+def day_summary(rows: list[Report], prev: list[Report] | None) -> dict:
+    """一天的整体汇总 —— 目录页每个日期分组头上那一条。
+
+    **合计不是平均。** 准确率按「当天读对的总词数 ÷ 当天总词数」算，不是把几份
+    报告的准确率取平均 —— 读了 30 个词的一次和读了 130 个词的一次，权重本来
+    就不该一样。WCPM 同理，除的是当天的总时长。
+
+    **跨本不给涨跌。** 「换书就换了一把尺子」是这个栏目的铁律：分数是给
+    「这个孩子 + 这本书」的。当天读了两本书、或者和上一天读的不是同一本，
+    合计只当个流水，不标 +N / −N —— 标了就是在拿两把尺子量出来的数相减。
+    """
+    words = sum(r.words for r in rows)
+    correct = sum(r.correct for r in rows)
+    dur = sum(r.duration for r in rows)
+    books = {r.spec.get("book", "") for r in rows}
+
+    out = {
+        "times": len(rows),
+        "pages": sum(r.page_count for r in rows),
+        "words": words,
+        "accuracy": round(correct / words * 100, 1) if words else 0,
+        "wcpm": round(correct / dur * 60) if dur else 0,
+        "minutes": round(dur / 60),
+        "mixed": len(books) > 1,
+        "deltas": [],
+    }
+
+    # 涨跌只在「两天都只读了同一本书」时给
+    if not prev or len(books) != 1:
+        return out
+    pb = {r.spec.get("book", "") for r in prev}
+    if pb != books:
+        return out
+
+    pw = sum(r.words for r in prev)
+    pc = sum(r.correct for r in prev)
+    pd = sum(r.duration for r in prev)
+    if not (pw and pd):
+        return out
+    for key, now, was, digits in (
+        ("accuracy", out["accuracy"], round(pc / pw * 100, 1), 1),
+        ("wcpm", out["wcpm"], round(pc / pd * 60), 0),
+    ):
+        d = round(now - was, digits)
+        out["deltas"].append({"k": key, "up": d > 0,
+                              "flat": abs(d) < 10 ** -digits / 2,
+                              "tag": f"{'+' if d > 0 else '−'}{abs(d)}"})
+    return out
+
+
 def build_index(out_dir: Path, reports: list[Report], pdfs: dict[str, bool],
                 trend: bool = False) -> None:
-    """目录页：按日期倒序分组，组内按分类顺序、再按 order。"""
+    """目录页：按日期倒序分组，组内按分类顺序、再按 order。
+
+    每个日期头上带一条**当天汇总** —— 报告的颗粒度是一次录音，但平时想看的是
+    「今天整体怎么样」。汇总全部从已有的 Report 算出来，不用人多写一个字。
+    """
     by_date: dict[str, list[Report]] = {}
     for r in reports:
         by_date.setdefault(r.date, []).append(r)
 
     cat_rank = {c: i for i, c in enumerate(CATS)}
     days = []
-    for date in sorted(by_date, reverse=True):
+    # 倒序渲染，但「和上一天比」要拿**时间上更早**的那一天，所以先算好顺序
+    order = sorted(by_date, reverse=True)
+    earlier = {d: order[i + 1] if i + 1 < len(order) else None for i, d in enumerate(order)}
+    for date in order:
         rows = sorted(by_date[date], key=lambda x: (cat_rank.get(x.cat, 99), x.order))
         items = []
         for r in rows:
@@ -640,7 +735,8 @@ def build_index(out_dir: Path, reports: list[Report], pdfs: dict[str, bool],
                 # 报告本身是网页（手机上看），PDF 只是想转发给别人时的附加件
                 "pdf": f"{r.slug}.pdf" if pdfs.get(r.slug) else None,
             })
-        days.append({"label": pretty_date(date), "rows": items})
+        days.append({"label": pretty_date(date), "rows": items,
+                     "sum": day_summary(rows, by_date.get(earlier[date]))})
 
     body = tmpl.body(
         "review/index.html",

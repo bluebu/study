@@ -73,6 +73,20 @@
 {% endif %}
     </section>
 {% endif %}
+{% if pages %}
+{#- 一次录音跨了几页时的小结。**颗粒度是一次录音** —— 这张表只是标注，
+    数字是喂数据台从同一份对齐里派生的，不是分开测的。一页的录音不出这张表。
+    ⚠️ .pg 的两列之间不许换行：左右是行内块，多一个空格列宽就歪了。 -#}
+{{ mini("📄", pages.heading) }}
+    <section class="box pg">
+{% for p in pages.rows %}
+      <div class="row"><b>{{ p.k|safe }}</b><span>{{ p.v|safe }}</span></div>
+{% endfor %}
+{% if pages.note %}
+      <p class="pg-note">{{ pages.note|safe }}</p>
+{% endif %}
+    </section>
+{% endif %}
 {% if diffs %}
 {{ mini("🔍", diffs.heading) }}
     <div class="diff">

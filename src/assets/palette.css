@@ -31,6 +31,11 @@
   /* 图表用色：三把尺子的分档底、停顿地图的四种段。
      停顿地图：绿=在读，蓝=句末停顿（该停的），橙=句中长停，灰=句中短停 */
   --sc-hard:    #F6DCD1;  --sc-inst:    #FBEFC9;  --sc-indep:  #D8F2E6;
+
+  /* 涨跌两色。报告里的「和上一页比」和目录页的「当天汇总」用同一对 ——
+     原来这两个值硬编码在 review.css 里，另一处要用就得抄一份，所以收到这儿。
+     注意这支红是**文字色**，别和上面 --sc-hard 那种浅底纹混用。 */
+  --up:         #1F7A55;  --down:       #B4442A;
   --sc-band1:   #EAE0D0;  --sc-band2:   #CFE3F3;  --sc-mid:    #3E9BD6;
   --tl-speech:  #CDEBDD;  --tl-end:     #6FB6E2;
   --tl-long:    #EE7D5B;  --tl-mid:     #CBBCA9;

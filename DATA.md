@@ -67,7 +67,7 @@ super8/L3/p68   →   storage/data/english/review/super8/L3/p68.ref.txt
 
 | 链路 | 名字填到哪 | 产出 | 落到 | 去向 |
 |---|---|---|---|---|
-| `read` 朗读录音 | `<书>/<课>/pNN` 人给全<br>（`--split` 时只给到 `<书>/<课>`，**页边界机器从对齐算**） | `.read.json` 主产物（声学 + 转写 + 逐字对齐）<br>`.json` 停顿声学（老站字段）<br>`.words.tsv` 逐词时间戳 | `storage/data/english/review/` | **进 repo** |
+| `read` 朗读录音 | `<书>/<课>/pNN`；一次读了几页写区间 `pNN-MM` | `.read.json` 主产物（声学 + 转写 + 逐字对齐）<br>`.json` 停顿声学（老站字段）<br>`.words.tsv` 逐词时间戳<br>`.read.json` 里的 `pages`：这次读了哪几页、每页多少词错几处（**从同一份对齐派生，不是分开测的**） | `storage/data/english/review/` | **进 repo** |
 | `read --draft` | 同上 | `.draft.txt` spec 候选（`[比对]`/`[卡壳]`/`[磕巴]` 和文件头填好，判断留 `⟨⟩`） | `storage/spec/english/review/` | **候选** → 另存 `pNN.txt` |
 | `scan` 教材截图 | `<书>/<课>`，**页码机器认** | `.ref.txt` 红线划中的课文原文 | `storage/data/english/review/` | **进 repo** |
 | | | `.page.json` 整页 OCR + 坐标<br>`.marked.png` 核对图<br>`.full.txt` 整页全文（`--full`） | 同上 | **临时** |
