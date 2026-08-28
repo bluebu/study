@@ -19,7 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent.resolve()
 sys.path.insert(0, str(ROOT))
-from lib import page, paths  # noqa: E402
+from lib import page, paths, tmpl  # noqa: E402
 
 # 各层的位置全在 lib/paths.py 一处定义，这儿只是取个短名
 SRC, DIST = paths.SRC, paths.DIST
@@ -71,48 +71,18 @@ SUBJECTS = [
 
 
 def build_index() -> None:
-    """总入口页。"""
-    cards = []
+    """总入口页。卡片内容全从 SUBJECTS 出，版式在 src/templates/home.html。"""
+    subjects = []
     for s in SUBJECTS:
         ready = sum(1 for x in s["sections"] if x["state"] == "ready")
-        total = len(s["sections"])
-        badge = f"{ready}/{total}" if ready else "筹备中"
+        subjects.append({**s,
+                         "badge": f"{ready}/{len(s['sections'])}" if ready else "筹备中"})
 
-        rows = []
-        for sec in s["sections"]:
-            inner = (f'{sec["name"]}<small>{sec["desc"]}</small>')
-            if sec["state"] == "ready":
-                rows.append(f'<li><a href="{s["key"]}/{sec["href"]}">{inner}</a></li>')
-            else:
-                rows.append(f"<li><span>{inner}</span></li>")
-
-        cards.append(
-            f'<article class="subj" data-s="{s["key"]}">\n'
-            f'  <h2><span class="emo">{s["emoji"]}</span>{s["name"]}'
-            f'<span class="cnt">{badge}</span></h2>\n'
-            f'  <p class="note">{s["note"]}</p>\n'
-            f'  <ul>\n    ' + "\n    ".join(rows) + "\n  </ul>\n"
-            f"</article>"
-        )
-
-    stamp = datetime.now(CST).strftime("%Y-%m-%d %H:%M")
-    body = f"""<main class="wrap">
-  <header class="hero">
-    <span class="eyebrow">HI-RUBY · STUDY</span>
-    <h1>学习小站</h1>
-    <p class="sub">语文 · 英语 · 数学，一处收齐</p>
-  </header>
-
-  <section class="subjects">
-{chr(10).join(cards)}
-  </section>
-
-  <p class="foot">
-    打印单点进栏目就能拿 PDF<br />
-    本地预览 <code>make up</code> · 线上由 GitHub Actions 构建<br />
-    构建于 {stamp}
-  </p>
-</main>"""
+    body = tmpl.body(
+        "home.html",
+        subjects=subjects,
+        stamp=datetime.now(CST).strftime("%Y-%m-%d %H:%M"),
+    )
 
     page.write(
         DIST / "index.html",

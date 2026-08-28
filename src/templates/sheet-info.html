@@ -1,0 +1,9 @@
+{#-
+  打印单页眉右边那行「姓名 ___ 日期 ___ 得分 ___」。三个栏目共用
+  （语文练习 / 数学秘籍 / 词汇默写），原先各存一份 INFO 常量。
+
+  ⚠️ 整行必须留在一行：`.head .info` 是 white-space:nowrap 的普通块，
+  「姓名 」后面那个空格是有意的，换行会多出空格、也可能把 nowrap 顶宽。
+  答案版不出这一行（传 show=False）—— 家长批改用，不需要签名格。
+-#}
+{% if show %}姓名 <span class="blank"></span> 日期 <span class="blank"></span> {{ third }} <span class="blank"></span>{% endif %}

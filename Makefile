@@ -10,13 +10,14 @@ PORT ?= 8002
 HOST ?= 0.0.0.0
 PY   ?= python3
 
-.PHONY: help build pdf up open stop clean
+.PHONY: help deps build pdf up open stop clean
 .DEFAULT_GOAL := help
 
 help:
 	@echo ""
 	@echo "  学习小站"
 	@echo "  ─────────────────────────────────────────"
+	@echo "  make deps    装依赖（只有 Jinja2，做 HTML 模板）"
 	@echo "  make build   构建到 dist/（只出 HTML）"
 	@echo "  make pdf     构建 + 导 PDF"
 	@echo "  make up      构建 + 本地预览（端口 $(PORT)）"
@@ -26,6 +27,11 @@ help:
 	@echo ""
 	@echo "  make up PORT=9000    换端口"
 	@echo ""
+
+# 唯一的第三方依赖。版本钉在 requirements.txt —— CI 装的是同一个版本，
+# 不然「本地能出就等于线上能出」不成立
+deps:
+	@$(PY) -m pip install -q -r requirements.txt && echo "  依赖装好了"
 
 build:
 	@$(PY) build.py

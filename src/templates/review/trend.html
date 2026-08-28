@@ -1,0 +1,43 @@
+{#-
+  趋势页：两条曲线 + 一张全量数据表。数据来自 storage/result/english/review.csv，
+  **不是从 spec 现算的** —— 那张表必须真能被别的工具消费，所以这一页故意绕一圈读文件。
+
+  表在 390px 上放不下 8 列，靠 trend.css 的 media query 藏掉第 3/4/7 列，
+  外面再套一层 .scroll 兜底。日期只留月/日、slug 只留「课/页」也是为了这个。
+-#}
+<main class="wrap">
+  <header class="hero">
+    <a class="back" href="./">‹ 打卡评价</a>
+    <h1>朗读趋势</h1>
+    <p class="sub">{{ n }} 次朗读放在一条线上看 · 数据来自 result 层，不是现算的</p>
+  </header>
+
+  <section class="chart">
+    <h2>准确率</h2>
+    <p class="note">读对的词占划线原文的比例。98% 以上能自己读，95–97% 要带一带。</p>
+    {{ accuracy_svg|indent(4)|safe }}
+  </section>
+
+  <section class="chart">
+    <h2>每分钟正确词数</h2>
+    <p class="note">WCPM = 读对的词数 ÷ 用时。和美国母语学生常模的比较在每页的报告里。</p>
+    {{ wcpm_svg|indent(4)|safe }}
+  </section>
+
+  <section class="chart">
+    <h2>全部数据</h2>
+    <div class="scroll">
+      <table class="tbl">
+        <thead><tr><th>日期</th><th>课/页</th><th>词数</th><th>错</th>
+          <th>准确率</th><th>WCPM</th><th>几词一停</th><th>分</th></tr></thead>
+        <tbody>
+{% for r in rows %}
+      <tr><td>{{ r.date }}</td><td>{{ r.slug }}</td><td class="n">{{ r.words }}</td><td class="n">{{ r.errors }}</td><td class="n">{{ r.accuracy }}%</td><td class="n">{{ r.wcpm }}</td><td class="n">{{ r.per_group }}</td><td class="n" style="--s:{{ r.fg }}">{{ r.score }}</td></tr>
+{% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="note">整张表在 <code>storage/result/english/review.csv</code>，
+      每次构建全量重算覆盖。</p>
+  </section>
+</main>

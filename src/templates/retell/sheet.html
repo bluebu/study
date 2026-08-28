@@ -1,0 +1,33 @@
+{#-
+  复述故事 —— 整个故事一张 A4，一段一行，按情节五阶段分组。
+
+  ⚠️ 两处不许留空白：
+     .head .who  —— 普通块 + nowrap，「姓名 」后面那个空格是有意的
+     .unit 内部  —— `.unit{white-space:nowrap}` 本身不是 flex，「词 + 它后面的箭头」
+                    必须紧贴。绑成一个 unit 就是为了折行时箭头不落到下一行行首
+                    （「→ kinder people」读着像这行是从箭头开始的）
+  .acts / .act / .segs / .seg / .chain 全是 flex，空白文本节点不生成盒子，随便缩进。
+-#}
+<div class="sheet">
+  <div class="head">
+    <div><h1>{{ heading }}</h1>
+      <p class="meta">{{ meta }}</p></div>
+    <div class="who">姓名 <i class="u"></i><span>日期 <i class="u"></i></span></div>
+  </div>
+{% if task %}
+  <p class="task">{{ task }}</p>
+{% endif %}
+  <div class="acts">
+{% for st in stages %}
+      <div class="act{{ ' climax' if st.is_climax }}">
+        <span class="tag">{{ st.name }}<small>{% if st.short %}{{ st.short }} · {% endif %}{{ st.segs|length }} 段</small></span>
+        <span class="segs">
+{% for seg in st.segs %}
+        <span class="seg"><i>{{ seg.no }}</i><span class="chain">{% for n in seg.nodes %}<span class="unit"><span class="kw">{{ n }}</span>{% if not loop.last %}<b class="arw">→</b>{% endif %}</span>{% endfor %}</span></span>
+{% endfor %}
+        </span>
+      </div>
+{% endfor %}
+  </div>
+  <p class="foot">看着关键词讲，讲不出来的地方圈一下 · CLIMAX 只有一段，那是整本书的转折</p>
+</div>

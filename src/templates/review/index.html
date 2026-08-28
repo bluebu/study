@@ -1,0 +1,35 @@
+{#-
+  打卡评价的目录页。**不走共用的 list.html** —— 这一页每条都带分数徽章和分类色，
+  还按日期分组，和另外五个栏目的目录页不是一张页面。
+
+  每条 <li> 上注入四个 CSS 变量：--s/--sbg 是分数色（越差越红）、
+  --c/--cbg 是分类色（分类色里刻意没有红）。两套色在同一张卡上各管各的。
+
+  ⚠️ `.meta` 是 flex（gap:8px 管间距），里面的 <span> 随便换行都行；
+  但 `{{ title }}<small>` 中间不许有空白 —— .main 是 flex，一条一行这个形状要保住。
+-#}
+<main class="wrap">
+  <header class="hero">
+    <a class="back" href="../../">‹ 学习小站</a>
+    <h1>打卡评价</h1>
+    <p class="sub">每天的朗读作业，一份能和下次比的成绩单 · 共 {{ total }} 份</p>
+{% if trend %}
+    <a class="trend" href="trend.html">📈 看趋势 · 全部放在一条线上</a>
+{% endif %}
+  </header>
+{% if days %}
+{% for day in days %}
+    <h2 class="day">{{ day.label }}</h2>
+    <ul class="list">
+{% for r in day.rows %}
+      <li style="--s:{{ r.fg }};--sbg:{{ r.bg }};--c:var(--c-{{ r.color }});--cbg:var(--c-{{ r.color }}-bg)">
+        <a class="main" href="{{ r.href }}">{{ r.title }}<small>{{ r.small }}</small></a>
+        <span class="meta"><span class="cat">{{ r.cat }}</span><span class="sc">{{ r.score }}</span>{% if r.pdf %}<a class="pdf" href="{{ r.pdf }}">PDF</a>{% endif %}</span>
+      </li>
+{% endfor %}
+    </ul>
+{% endfor %}
+{% else %}
+  <p class="empty">还没有报告 —— 用喂数据台跑一份录音，再往 storage/spec/english/review/ 放一份 spec</p>
+{% endif %}
+</main>

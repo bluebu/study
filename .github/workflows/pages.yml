@@ -28,6 +28,11 @@ jobs:
         with:
           python-version: "3.12"
 
+      # 只有一个依赖：Jinja2（HTML 模板）。版本钉在 requirements.txt 里，
+      # 本地和这儿装同一个版本 —— 不然「本地能出 = 线上能出」就不成立了。
+      - name: 装依赖
+        run: pip install -q -r requirements.txt
+
       # ubuntu runner 预装了 google-chrome，lib/sheet.py 会自己探测到。
       # 万一哪天镜像不带了，build.py 只会跳过 PDF、不会让构建失败。
       - name: 确认 Chrome

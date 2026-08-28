@@ -1,0 +1,32 @@
+{#-
+  「三把尺子上的位置」——准确率 / WCPM 常模 / NAEP 断句，三张图各配一句话。
+  三句 note 的顺序是固定的（准确率 → WCPM → 断句语调），错位了印出来看不出是 bug，
+  只觉得读着别扭 —— 所以 review.py 的 grouped() 先按缩进把三句分好再传进来。
+
+  三张 svg 各自缩进 6 格（|indent(6, true)）。常模数值是一手来源，改动前先读
+  figures.py 顶部那三条出处。
+
+  ⚠️ 这段注释结尾**不带减号**：带了会把下一行的 4 格缩进一起吃掉，出来的 <h2>
+  顶到行首（trim_blocks 已经负责吃掉那个换行）。注释正文里也不能写注释的收尾记号
+  —— 那会把注释自己提前关掉，剩下的说明文字原样印进页面。两条都踩过。
+#}
+    <h2 class="mini-h"><span>📍</span> 三把尺子上的位置</h2>
+    <section class="box scales">
+
+      <p class="sc-h">准确率 · Fountas &amp; Pinnell 分档</p>
+{{ accuracy_svg|indent(6, true)|safe }}
+      <p class="sc-note">{{ notes[0]|safe }}</p>
+
+      <p class="sc-h sc-sep">每分钟正确词数 · Hasbrouck &amp; Tindal 2017 秋季常模</p>
+{{ wcpm_svg|indent(6, true)|safe }}
+      <p class="sc-note">{{ notes[1]|safe }}</p>
+
+      <p class="sc-h sc-sep">断句语调 · NAEP 朗读流利度 4 级</p>
+      <div class="naep">
+{% for lv in naep %}
+        <div class="nv{{ ' now' if lv.now }}"><span class="lv">{{ lv.level }}</span><span class="ds">{{ lv.desc }}</span>{% if lv.now %}<span class="you">在这里</span>{% endif %}</div>
+{% endfor %}
+      </div>
+      <p class="sc-note">{{ notes[2]|safe }}</p>
+
+    </section>

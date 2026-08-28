@@ -1,0 +1,136 @@
+{#-
+  打卡评价 · 一份朗读成绩单。**整张报告的版式都在这一个文件里** ——
+  原先散在 review.py 的 12 个片段函数里，改一处小标题得翻 144 行 f-string。
+
+  Python 那边只出上下文：算好的数、选好的类名、rich()/marked() 处理过的富文本。
+  区块给 None 就整块不出（`[对比] [比对] [亮点]` 这些 spec 里可以不写）。
+
+  ⚠️ 不许留空白的地方：
+     .d .en 里的 `<span class="lbl">原文</span>` 紧跟正文 —— .en 是 grid item
+            不是 flex，中间换行会多一个空格，「原文」和句子就分开了
+     .legend span 里的 `<i></i>在读` —— 同理
+     .num / .bar / .stat 那几处虽然是 grid / flex（空白本来不生成盒子），
+            也一并写紧，省得以后有人把 display 改回 inline 就悄悄错位
+  .mini-h 是 flex，`<span>{icon}</span> {heading}` 那个空格不影响（gap:8px 管间距）。
+
+  `|safe` 全部来自 rich() / marked() / figures.*：这些函数内部先 escape 再插标签。
+  spec 里的纯文本（heading / lead / cat）交给 autoescape。
+-#}
+{#- mini：小标题。`{% macro %}` 那侧**不能写 -%}** —— 它会连下一行的 4 格缩进
+    一起吃掉；`{%- endmacro %}` 那侧要写，否则每个标题后面多一个空行 -#}
+{% macro mini(icon, heading) %}
+    <h2 class="mini-h"><span>{{ icon }}</span> {{ heading }}</h2>
+{%- endmacro %}
+<main class="wrap">
+    <header class="hero">
+      <span class="eyebrow">DAILY REVIEW · 打卡评价</span>
+      <h1>{{ hero.title|safe }}</h1>
+      <p class="sub">{{ hero.sub }}</p>
+    </header>
+    <section class="box score">
+      <span class="num"><b>{{ score.num }}</b><span>／100</span></span>
+      <span class="say">
+        <p class="lead">{{ score.lead }}</p>
+{% if score.tip %}
+        <p class="tip">{{ score.tip|safe }}</p>
+{% endif %}
+      </span>
+      <div class="bars" style="flex-basis:100%">
+{% for b in score.bars %}
+        <div class="bar"><span class="nm">{{ b.name }}</span><span class="track"><i class="fill" style="width:{{ b.pct }}%"></i></span><span class="val">{{ b.val }}</span></div>
+{% endfor %}
+      </div>
+    </section>
+{{ mini("📊", "四个数字") }}
+    <div class="stats">
+{% for s in stats %}
+      <div class="stat {{ s.cls }}"><b>{{ s.value }}{% if s.unit %}<small>{{ s.unit }}</small>{% endif %}</b><span>{{ s.label }}</span></div>
+{% endfor %}
+    </div>
+{% if compare %}
+{{ mini(compare.icon, compare.heading) }}
+    <section class="box cmp">
+{% for r in compare.rows %}
+      <div class="r"><span class="k">{{ r.k }}</span><span class="v">{% for v in r.was %}<s>{{ v }}</s> → {% endfor %}{{ r.now }}</span><span class="d {{ r.cls }}">{{ r.tag }}</span></div>
+{% endfor %}
+{% if compare.note %}
+      <p class="sc-note" style="margin-top:4px">{{ compare.note|safe }}</p>
+{% endif %}
+    </section>
+{% endif %}
+{% if timeline %}
+{{ mini("⏱", "这 " ~ timeline.seconds ~ " 秒长什么样") }}
+    <section class="box tl">
+{{ timeline.svg|indent(6, true)|safe }}
+      <div class="legend">
+        <span><i style="background:var(--tl-speech)"></i>在读</span>
+        <span><i style="background:var(--tl-end)"></i>句末停顿 · {{ timeline.counts.end }} 次</span>
+        <span><i style="background:var(--tl-long)"></i>句中长停 ≥0.8 秒 · {{ timeline.counts.long }} 次</span>
+        <span><i style="background:var(--tl-mid)"></i>句中短停 · {{ timeline.counts.mid }} 次</span>
+      </div>
+{% if timeline.note %}
+      <p class="tl-note">{{ timeline.note|safe }}</p>
+{% endif %}
+    </section>
+{% endif %}
+{% if diffs %}
+{{ mini("🔍", diffs.heading) }}
+    <div class="diff">
+{% for d in diffs.rows %}
+
+      <div class="d{{ ' doubt' if d.doubt }}">
+        <span class="n">{{ d.num }}</span>
+        <span class="en"><span class="lbl">原文</span>{{ d.ref|safe }}</span>
+        <span class="en"><span class="lbl">{{ d.lbl }}</span>{{ d.read|safe }}</span>
+{% if d.why %}
+        <span class="why">{{ d.why|safe }}</span>
+{% endif %}
+      </div>
+{% endfor %}
+
+    </div>
+{% endif %}
+{% for blk in texts %}
+{{ mini(blk.icon, blk.heading) }}
+    <section class="box">
+{% for p in blk.paras %}
+      <p{% if blk.cls %} class="{{ blk.cls }}"{% endif %} style="margin:0 0 {{ blk.gap }}px">{{ p|safe }}</p>
+{% endfor %}
+{% if blk.note %}
+      <p class="note-soft">{{ blk.note|safe }}</p>
+{% endif %}
+    </section>
+{% endfor %}
+{% if todos %}
+{{ mini("✏️", "下次试试这三件事") }}
+    <div class="todo">
+{% for t in todos %}
+      <div class="t">
+        <span class="ic">{{ t.icon }}</span>
+        <span><p class="h">{{ t.title|safe }}</p>
+          <p class="d2">{{ t.desc|safe }}</p></span>
+      </div>
+{% endfor %}
+    </div>
+{% endif %}
+{% if slashes %}
+{{ mini("🪄", "画好斜线的版本") }}
+    <section class="box">
+      {# 斜线两边都要留空气 —— 它是「在这儿换口气」的记号，贴着字母会读成单词的一部分 #}
+      <p class="text" style="margin:0">{% for ln in slashes %}{{ ln }}{% if not loop.last %} <span class="sl">/</span> {% endif %}{% endfor %}</p>
+    </section>
+{% endif %}
+{# figures.block() 自带尾换行，不去掉就和下一个小标题之间多一个空行 #}
+{{ scales.rstrip("\n")|safe }}
+{% if how %}
+{{ mini("📐", "分数是怎么来的") }}
+    <section class="box how">
+{% for p in how %}
+      <p>{{ p|safe }}</p>
+{% endfor %}
+    </section>
+{% endif %}
+    {# 名字带目录时，返回目录页要按深度回退（review/super8/L3/p68.html → ../../） #}
+    <a class="back" href="{{ back_href }}">← 返回打卡评价</a>
+    <p class="foot">打卡评价 · 每天的作业，一份成绩单 📋</p>
+</main>

@@ -1,0 +1,25 @@
+{#-
+  WCPM 标尺：各年级秋季 10–90 百分位带 + 本次位置的虚线。
+  常模是 Hasbrouck & Tindal (2017) Table 4 的**秋季**一列（figures.py 的 ORF_FALL），
+  按录音季节换。字号同 accuracy.svg，别往小调。
+-#}
+<svg viewBox="0 -32 {{ W }} {{ view_h }}" role="img" aria-label="每分钟正确词数 {{ wcpm }} 与美国母语学生各年级秋季常模的比较">
+{% for g in grades %}
+<text x="{{ gut_label }}" y="{{ g.ty }}" font-size="32" fill="var(--ink-soft)" text-anchor="end">{{ g.grade }}</text>
+<rect x="{{ g.x10 }}" y="{{ g.y_band1 }}" width="{{ g.w10 }}" height="{{ g.h_band1 }}" rx="6" fill="var(--sc-band1)"/>
+<rect x="{{ g.x25 }}" y="{{ g.y }}" width="{{ g.w25 }}" height="{{ rh }}" rx="8" fill="var(--sc-band2)"/>
+<line x1="{{ g.x50 }}" y1="{{ g.y_mid1 }}" x2="{{ g.x50 }}" y2="{{ g.y_mid2 }}" stroke="var(--sc-mid)" stroke-width="5"/>
+{% endfor %}
+<line x1="{{ now.x }}" y1="6" x2="{{ now.x }}" y2="{{ now.y2 }}" stroke="var(--tl-long)" stroke-width="4" stroke-dasharray="9 7"/>
+<text x="{{ now.x }}" y="-4" font-size="36" font-weight="700" fill="var(--tl-long)" text-anchor="middle">本页 {{ wcpm }}</text>
+<line x1="{{ GUT }}" y1="{{ ax }}" x2="{{ W }}" y2="{{ ax }}" stroke="var(--line)" stroke-width="2"/>
+{% for t in ticks %}
+<line x1="{{ t.x }}" y1="{{ ax }}" x2="{{ t.x }}" y2="{{ ax9 }}" stroke="var(--ink-soft)" stroke-width="2"/>
+<text x="{{ t.x }}" y="{{ ax40 }}" font-size="28" fill="var(--ink-soft)" text-anchor="middle">{{ t.v }}</text>
+{% endfor %}
+<text x="{{ W }}" y="{{ ax40 }}" font-size="26" fill="var(--ink-soft)" text-anchor="end">WCPM</text>
+<rect x="{{ GUT }}" y="{{ lg.band_y }}" width="48" height="25" rx="6" fill="var(--sc-band2)"/>
+<text x="{{ lg.text_x }}" y="{{ lg.l1 }}" font-size="28" fill="var(--ink-soft)">中间一半 · 25–75 百分位</text>
+<line x1="{{ lg.tick_x }}" y1="{{ lg.tick_y1 }}" x2="{{ lg.tick_x }}" y2="{{ lg.tick_y2 }}" stroke="var(--sc-mid)" stroke-width="5"/>
+<text x="{{ lg.text_x }}" y="{{ lg.l2 }}" font-size="28" fill="var(--ink-soft)">一半人在这条线上 · 50 百分位</text>
+</svg>

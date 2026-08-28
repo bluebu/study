@@ -1,0 +1,23 @@
+{#-
+  页脚：备案号 + 访问统计。配置在 lib/site.py（BEIAN / ANALYTICS），
+  挂不挂由 lib/page.py 决定 —— 打印单不挂（纸上不印备案号），
+  noindex 的私页只出备案号、不挂统计（不蒜子是第三方，挂上等于把地址连同
+  Referer 送出去）。
+
+  ⚠️ `.hits` 里那两个 <span> 之间不许换行 —— 它们是行内元素，「位小朋友来过」和
+  「· 共翻开」中间会多出一个空格。不蒜子拿到数字后才把它们显出来，所以先 display:none，
+  不占位、不闪动。
+-#}
+<footer class="site-foot">
+{% if beian %}
+  <p class="beian"><a href="{{ beian_url }}" target="_blank" rel="noopener">{{ beian }}</a></p>
+{% endif %}
+{% if hits %}
+  <p class="hits"><span id="busuanzi_container_site_uv" style="display:none;">👀 <span id="busuanzi_value_site_uv"></span> 位小朋友来过</span><span id="busuanzi_container_site_pv" style="display:none;"> · 共翻开 <span id="busuanzi_value_site_pv"></span> 次</span></p>
+{% endif %}
+</footer>
+{# 统计脚本在 </footer> 外面。这两行的 {% %} **不带减号** ——
+   带了会把 </footer> 后面那个换行也吃掉，脚本粘到闭标签上 #}
+{% if hits %}
+<script async src="{{ busuanzi_js }}"></script>
+{% endif %}

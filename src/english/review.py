@@ -43,7 +43,7 @@ import re
 import sys
 from pathlib import Path
 
-from lib import page, paths, sheet, spec as spec_lib
+from lib import page, paths, sheet, spec as spec_lib, tmpl
 
 HERE = Path(__file__).parent
 sys.path.insert(0, str(HERE))
@@ -208,7 +208,7 @@ def _join(a: str, b: str) -> str:
 # 各区块
 # ══════════════════════════════════════════════════════════════
 
-def hero(r: Report) -> str:
+def hero(r: Report) -> dict:
     head = (f'第 {r.spec.get("page")} 页' if r.spec.get("page") else "")
     if r.spec.get("book"):
         head += f'《{r.spec.get("book")}》'
@@ -225,11 +225,7 @@ def hero(r: Report) -> str:
     # 卷名里的最后一个数字描成主色（「超8 · Lesson 3」的 3）
     title = html.escape(r.spec.title)
     title = re.sub(r"(\d+)(?!.*\d)", r"<b>\1</b>", title, count=1)
-    return (f'    <header class="hero">\n'
-            f'      <span class="eyebrow">DAILY REVIEW · 打卡评价</span>\n'
-            f'      <h1>{title}</h1>\n'
-            f'      <p class="sub">{html.escape(sub)}</p>\n'
-            f'    </header>\n')
+    return {"title": title, "sub": sub}
 
 
 def pretty_date(iso: str) -> str:
@@ -237,9 +233,9 @@ def pretty_date(iso: str) -> str:
     return f"{m.group(1)} 年 {int(m.group(2))} 月 {int(m.group(3))} 日" if m else (iso or "")
 
 
-def score_box(r: Report) -> str:
+def score_box(r: Report) -> dict:
     b = r.blocks.get("总评")
-    lead = html.escape(b.head) if b else ""
+    lead = b.head if b else ""
     tip = joined(b.notes()) if b else ""
 
     bars = []
@@ -249,22 +245,9 @@ def score_box(r: Report) -> str:
         if not raw:
             continue
         n = int(raw.split("/")[0])
-        bars.append(
-            f'        <div class="bar"><span class="nm">{name}</span>'
-            f'<span class="track"><i class="fill" style="width:{round(n / full * 100)}%"></i></span>'
-            f'<span class="val">{n}/{full}</span></div>'
-        )
+        bars.append({"name": name, "pct": round(n / full * 100), "val": f"{n}/{full}"})
 
-    return (f'    <section class="box score">\n'
-            f'      <span class="num"><b>{r.score}</b><span>／100</span></span>\n'
-            f'      <span class="say">\n'
-            f'        <p class="lead">{lead}</p>\n'
-            + (f'        <p class="tip">{rich(tip)}</p>\n' if tip else "")
-            + f'      </span>\n'
-            f'      <div class="bars" style="flex-basis:100%">\n'
-            + "\n".join(bars) + "\n"
-            f'      </div>\n'
-            f'    </section>\n')
+    return {"num": r.score, "lead": lead, "tip": rich(tip) if tip else "", "bars": bars}
 
 
 def parse_pairs(text: str) -> list[tuple[str, str]]:
@@ -277,30 +260,28 @@ def parse_pairs(text: str) -> list[tuple[str, str]]:
             for m in re.finditer(r"([^\s=]+)\s*=\s*([^\s]+)", text or "")]
 
 
-def stats(r: Report) -> str:
-    cells = [
-        ("s1", f"{r.accuracy}%", f"读对 {r.correct}/{r.words} 词"),
-        ("s2", str(r.wcpm), "每分钟正确词数"),
-        ("s3", f"{round(r.duration)}<small>秒</small>", "读完全段"),
-        ("s4", str(r.pause_count), "次停顿"),
+def stats(r: Report) -> list[dict]:
+    """四个数字。"""
+    return [
+        {"cls": "s1", "value": f"{r.accuracy}%", "unit": "", "label": f"读对 {r.correct}/{r.words} 词"},
+        {"cls": "s2", "value": r.wcpm, "unit": "", "label": "每分钟正确词数"},
+        # 「秒」小一号，跟在数字后面 —— 单位单独给，模板里套 <small>
+        {"cls": "s3", "value": round(r.duration), "unit": "秒", "label": "读完全段"},
+        {"cls": "s4", "value": r.pause_count, "unit": "", "label": "次停顿"},
     ]
-    body = "\n".join(f'      <div class="stat {c}"><b>{v}</b><span>{html.escape(l)}</span></div>'
-                     for c, v, l in cells)
-    return ('    <h2 class="mini-h"><span>📊</span> 四个数字</h2>\n'
-            f'    <div class="stats">\n{body}\n    </div>\n')
 
 
-def compare(r: Report, others: dict[str, Report]) -> str:
+def compare(r: Report, others: dict[str, Report]) -> dict | None:
     """和上一页比 / 三页放在一起看。
 
     四行数值全部算出来，spec 里只给趋势词（不给就用 +N / −N）。
     """
     b = r.blocks.get("对比")
     if not b or not r.prevs:
-        return ""
+        return None
     chain = [others[s] for s in r.prevs if s in others] + [r]
     if len(chain) < 2:
-        return ""
+        return None
 
     words = dict(parse_pairs("\n".join(
         ln.strip() for ln in b.lines if ln.strip() and not ln[:1].isspace())))
@@ -320,20 +301,17 @@ def compare(r: Report, others: dict[str, Report]) -> str:
         good = delta < 0 if name == "停顿占时长" else delta > 0
         cls = "flat" if abs(delta) < 10 ** -digits / 2 else ("up" if good else "down")
         tag = words.get(name) or (f"{'+' if delta > 0 else '−'}{abs(round(delta, digits) if digits else abs(int(delta)))}")
-        shown = " → ".join(f"<s>{v}</s>" for v in values[:-1]) + f" → {values[-1]}"
-        out.append(f'      <div class="r"><span class="k">{name}</span>'
-                   f'<span class="v">{shown}</span>'
-                   f'<span class="d {cls}">{html.escape(str(tag))}</span></div>')
+        # 前几次划掉、最后一次不划：「95.2% → 96.4% → 94.7%」。箭头由模板插
+        out.append({"k": name, "was": values[:-1], "now": values[-1],
+                    "cls": cls, "tag": str(tag)})
 
     note = joined(b.notes())
     icon, heading = ("📈", b.head) if len(chain) > 2 else ("↗️", b.head or "和上一页比")
-    return (f'    <h2 class="mini-h"><span>{icon}</span> {html.escape(heading)}</h2>\n'
-            f'    <section class="box cmp">\n' + "\n".join(out) + "\n"
-            + (f'      <p class="sc-note" style="margin-top:4px">{rich(note)}</p>\n' if note else "")
-            + f'    </section>\n')
+    return {"icon": icon, "heading": heading, "rows": out,
+            "note": rich(note) if note else ""}
 
 
-def timeline(r: Report) -> str:
+def timeline(r: Report) -> dict:
     """停顿地图。
 
     bounds（原文真正的句末时刻）优先用 spec 里 [句末] 写的；没写就从原文的句号
@@ -350,19 +328,9 @@ def timeline(r: Report) -> str:
             stalls.append((float(a), float(bnd), label))
 
     svg, counts = figures.timeline_svg(r.acoustics, bounds, stalls)
-    legend = (f'      <div class="legend">\n'
-              f'        <span><i style="background:var(--tl-speech)"></i>在读</span>\n'
-              f'        <span><i style="background:var(--tl-end)"></i>句末停顿 · {counts["end"]} 次</span>\n'
-              f'        <span><i style="background:var(--tl-long)"></i>句中长停 ≥0.8 秒 · {counts["long"]} 次</span>\n'
-              f'        <span><i style="background:var(--tl-mid)"></i>句中短停 · {counts["mid"]} 次</span>\n'
-              f'      </div>')
     note = joined(r.blocks["卡壳"].notes()) if "卡壳" in r.blocks else ""
-    return (f'    <h2 class="mini-h"><span>⏱</span> 这 {round(r.duration)} 秒长什么样</h2>\n'
-            f'    <section class="box tl">\n'
-            + "\n".join("      " + l for l in svg.split("\n")) + "\n"
-            + legend + "\n"
-            + (f'      <p class="tl-note">{rich(note)}</p>\n' if note else "")
-            + f'    </section>\n')
+    return {"seconds": round(r.duration), "svg": svg, "counts": counts,
+            "note": rich(note) if note else ""}
 
 
 def auto_bounds(r: Report) -> list[float]:
@@ -376,7 +344,7 @@ def auto_bounds(r: Report) -> list[float]:
             if i < len(times) and times[i] is not None and re.search(r"[.!?][\"']?$", w)]
 
 
-def diffs(r: Report) -> str:
+def diffs(r: Report) -> dict | None:
     """逐字比对。
 
     条目按「原文 / 实读」成对出现，缩进行是说明。用「识别成」代替「实读」
@@ -384,7 +352,7 @@ def diffs(r: Report) -> str:
     """
     b = r.blocks.get("比对")
     if not b:
-        return ""
+        return None
 
     items, cur = [], None
     for line in b.lines:
@@ -414,55 +382,54 @@ def diffs(r: Report) -> str:
             n += 1
             num = str(n)
         why = joined(it["why"])
-        out.append(
-            f'      <div class="d{" doubt" if doubt else ""}">\n'
-            f'        <span class="n">{num}</span>\n'
-            f'        <span class="en"><span class="lbl">原文</span>{marked(it["ref"], "mark")}</span>\n'
-            f'        <span class="en"><span class="lbl">{it["lbl"]}</span>{marked(it["read"], "ins")}</span>\n'
-            + (f'        <span class="why">{rich(why)}</span>\n' if why else "")
-            + f'      </div>'
-        )
+        out.append({"num": num, "doubt": doubt, "lbl": it["lbl"],
+                    "ref": marked(it["ref"], "mark"),
+                    "read": marked(it["read"], "ins"),
+                    "why": rich(why) if why else ""})
     # 抬头不写就自己数。存疑那条也算一处 —— 它同样是对不上的地方，
     # 只是判不准该算谁的，所以编号出 ? 而不是从计数里拿掉
-    heading = b.head or f"逐字比对 · {len(items)} 处"
-    return (f'    <h2 class="mini-h"><span>🔍</span> {html.escape(heading)}</h2>\n'
-            f'    <div class="diff">\n\n' + "\n\n".join(out) + '\n\n    </div>\n')
+    return {"heading": b.head or f"逐字比对 · {len(items)} 处", "rows": out}
 
 
-def lines_block(r: Report, name: str, icon: str, default_head: str, cls: str = "text") -> str:
-    """磕巴 / 亮点这类「几行内容 + 一段小字注」的区块。"""
+def lines_block(r: Report, name: str, icon: str, default_head: str, cls: str = "text") -> dict | None:
+    """磕巴 / 亮点这类「几行内容 + 一段小字注」的区块。模板里的 `texts` 一节。"""
     b = r.blocks.get(name)
     if not b:
-        return ""
-    body = [f'      <p class="{cls}" style="margin:0 0 8px">{marked(ln.strip(), "ins")}</p>'
-            for ln in b.lines if ln.strip() and not ln[:1].isspace()]
+        return None
     note = joined(b.notes())
-    return (f'    <h2 class="mini-h"><span>{icon}</span> {html.escape(b.head or default_head)}</h2>\n'
-            f'    <section class="box">\n' + "\n".join(body) + "\n"
-            + (f'      <p class="note-soft">{rich(note)}</p>\n' if note else "")
-            + f'    </section>\n')
+    return {
+        "icon": icon,
+        "heading": b.head or default_head,
+        "cls": cls,
+        "gap": 8,
+        "paras": [marked(ln.strip(), "ins")
+                  for ln in b.lines if ln.strip() and not ln[:1].isspace()],
+        "note": rich(note) if note else "",
+    }
 
 
-def highlight(r: Report) -> str:
-    """读得好的地方：主段是正文，缩进行是小字注。"""
+def highlight(r: Report) -> dict | None:
+    """读得好的地方：主段是正文，缩进行是小字注。也走模板的 `texts` 一节。"""
     b = r.blocks.get("亮点")
     if not b:
-        return ""
-    mains = grouped([ln for ln in b.lines if ln.strip() and not ln[:1].isspace()])
+        return None
     note = joined(b.notes())
-    paras = "\n".join(f'      <p style="margin:0 0 6px">{rich(m)}</p>' for m in mains)
-    return ('    <h2 class="mini-h"><span>🌟</span> 读得好的地方</h2>\n'
-            '    <section class="box">\n'
-            f'{paras}\n'
-            + (f'      <p class="note-soft">{rich(note)}</p>\n' if note else "")
-            + '    </section>\n')
+    return {
+        "icon": "🌟",
+        "heading": "读得好的地方",
+        "cls": "",          # 这一节的段落不加 .text（字号跟正文走）
+        "gap": 6,
+        "paras": [rich(m) for m in
+                  grouped([ln for ln in b.lines if ln.strip() and not ln[:1].isspace()])],
+        "note": rich(note) if note else "",
+    }
 
 
-def todos(r: Report) -> str:
+def todos(r: Report) -> list[dict]:
     """下次试试这三件事。每条：一个 emoji 起头的标题行 + 缩进的说明行。"""
     b = r.blocks.get("三件事")
     if not b:
-        return ""
+        return []
     items, cur = [], None
     for line in b.lines:
         if not line.strip():
@@ -475,28 +442,16 @@ def todos(r: Report) -> str:
         cur = {"icon": icon, "title": title, "desc": []}
         items.append(cur)
 
-    out = "\n".join(
-        f'      <div class="t">\n'
-        f'        <span class="ic">{html.escape(it["icon"])}</span>\n'
-        f'        <span><p class="h">{rich(it["title"])}</p>\n'
-        f'          <p class="d2">{rich(joined(it["desc"]))}</p></span>\n'
-        f'      </div>' for it in items)
-    return ('    <h2 class="mini-h"><span>✏️</span> 下次试试这三件事</h2>\n'
-            f'    <div class="todo">\n{out}\n    </div>\n')
+    return [{"icon": it["icon"], "title": rich(it["title"]),
+             "desc": rich(joined(it["desc"]))} for it in items]
 
 
-def slashes(r: Report) -> str:
-    """画好斜线的版本 —— 按意群断句，一条斜线一口气。"""
+def slashes(r: Report) -> list[str]:
+    """画好斜线的版本 —— 按意群断句，一条斜线一口气。斜线由模板插。"""
     b = r.blocks.get("斜线")
     if not b:
-        return ""
-    # 斜线两边都要留空气 —— 它是「在这儿换口气」的记号，贴着字母会读成单词的一部分
-    body = " <span class=\'sl\'>/</span>\n      ".join(
-        html.escape(ln.strip()) for ln in b.lines if ln.strip() and not ln[:1].isspace())
-    return ('    <h2 class="mini-h"><span>🪄</span> 画好斜线的版本</h2>\n'
-            '    <section class="box">\n'
-            f'      <p class="text" style="margin:0">{body}</p>\n'
-            '    </section>\n')
+        return []
+    return [ln.strip() for ln in b.lines if ln.strip() and not ln[:1].isspace()]
 
 
 def scales(r: Report) -> str:
@@ -510,13 +465,11 @@ def scales(r: Report) -> str:
     return figures.block(r.accuracy, r.wcpm, r.naep, tuple(rich(n) for n in notes[:3]), prev_acc)
 
 
-def how(r: Report) -> str:
+def how(r: Report) -> list[str]:
     b = r.blocks.get("怎么来的")
     if not b:
-        return ""
-    paras = [f'      <p>{rich(para)}</p>' for para in grouped(b.lines)]
-    return ('    <h2 class="mini-h"><span>📐</span> 分数是怎么来的</h2>\n'
-            '    <section class="box how">\n' + "\n".join(paras) + "\n    </section>\n")
+        return []
+    return [rich(para) for para in grouped(b.lines)]
 
 
 # ══════════════════════════════════════════════════════════════
@@ -527,24 +480,23 @@ def render(r: Report, others: dict[str, Report], out_dir: Path, pdf: bool) -> bo
     fg, bg = figures.score_color(r.score)
     c = r.color_var
 
-    body = (
-        '<main class="wrap">\n'
-        + hero(r)
-        + score_box(r)
-        + stats(r)
-        + compare(r, others)
-        + timeline(r)
-        + diffs(r)
-        + lines_block(r, "磕巴", "🌀", "磕巴（不计错，但能看出在想）")
-        + highlight(r)
-        + todos(r)
-        + slashes(r)
-        + scales(r)
-        + how(r)
+    body = tmpl.body(
+        "review/report.html",
+        hero=hero(r),
+        score=score_box(r),
+        stats=stats(r),
+        compare=compare(r, others),
+        timeline=timeline(r),
+        diffs=diffs(r),
+        # 「磕巴」和「亮点」是同一种版式（几行内容 + 一段小字注），排在一个列表里
+        texts=[x for x in (lines_block(r, "磕巴", "🌀", "磕巴（不计错，但能看出在想）"),
+                           highlight(r)) if x],
+        todos=todos(r),
+        slashes=slashes(r),
+        scales=scales(r),
+        how=how(r),
         # 名字带目录时，返回目录页要按深度回退（review/super8/L3/p68.html → ../../）
-        + f'    <a class="back" href="{"../" * r.slug.count("/") or "./"}">← 返回打卡评价</a>\n'
-        + '    <p class="foot">打卡评价 · 每天的作业，一份成绩单 📋</p>\n'
-        + '</main>'
+        back_href="../" * r.slug.count("/") or "./",
     )
 
     desc = (f"{r.spec.get('book', '')}一段 {round(r.duration)} 秒朗读的逐字比对："
@@ -552,9 +504,8 @@ def render(r: Report, others: dict[str, Report], out_dir: Path, pdf: bool) -> bo
             f"{r.pause_count} 次停顿，总分 {r.score} 分。")
     title = f"{r.title} 打卡评价"
 
-    # 分类色和分数色按页注入。--read 是整页主色，--score 只给总分和四维条
-    style = (f'<style>:root{{ --read:var(--c-{c}); --read-bg:var(--c-{c}-bg);'
-             f' --score:{fg}; --score-bg:{bg}; }}</style>\n')
+    # 分类色和分数色按页注入，两套各管各的（模板里有为什么）
+    style = tmpl.render("review/page-vars.html", cat=c, fg=fg, bg=bg)
 
     out = page.write(
         out_dir / f"{r.slug}.html",
@@ -637,50 +588,18 @@ def build_trend(out_dir: Path) -> bool:
         parts = iso.split("-")
         return f"{int(parts[1])}/{int(parts[2])}" if len(parts) == 3 else iso
 
-    trs = "\n".join(
-        f'      <tr><td>{html.escape(short_date(r["date"]))}</td>'
-        f'<td>{html.escape("/".join(r["slug"].split("/")[-2:]))}</td>'
-        f'<td class="n">{r["words"]}</td><td class="n">{r["errors"]}</td>'
-        f'<td class="n">{r["accuracy"]}%</td><td class="n">{r["wcpm"]}</td>'
-        f'<td class="n">{r["per_group"]}</td>'
-        f'<td class="n" style="--s:{figures.score_color(int(r["score"]))[0]}">'
-        f'{r["score"]}</td></tr>'
-        for r in rows)
-
-    body = f"""<main class="wrap">
-  <header class="hero">
-    <a class="back" href="./">‹ 打卡评价</a>
-    <h1>朗读趋势</h1>
-    <p class="sub">{len(rows)} 次朗读放在一条线上看 · 数据来自 result 层，不是现算的</p>
-  </header>
-
-  <section class="chart">
-    <h2>准确率</h2>
-    <p class="note">读对的词占划线原文的比例。98% 以上能自己读，95–97% 要带一带。</p>
-    {figures.trend_svg(acc, 86, 100, (90, 95, 98), "准确率 %")}
-  </section>
-
-  <section class="chart">
-    <h2>每分钟正确词数</h2>
-    <p class="note">WCPM = 读对的词数 ÷ 用时。和美国母语学生常模的比较在每页的报告里。</p>
-    {figures.trend_svg(wcpm, 0, 100, (0, 50, 100), "WCPM", "var(--c-listen)")}
-  </section>
-
-  <section class="chart">
-    <h2>全部数据</h2>
-    <div class="scroll">
-      <table class="tbl">
-        <thead><tr><th>日期</th><th>课/页</th><th>词数</th><th>错</th>
-          <th>准确率</th><th>WCPM</th><th>几词一停</th><th>分</th></tr></thead>
-        <tbody>
-{trs}
-        </tbody>
-      </table>
-    </div>
-    <p class="note">整张表在 <code>storage/result/english/review.csv</code>，
-      每次构建全量重算覆盖。</p>
-  </section>
-</main>"""
+    body = tmpl.body(
+        "review/trend.html",
+        n=len(rows),
+        accuracy_svg=figures.trend_svg(acc, 86, 100, (90, 95, 98), "准确率 %"),
+        wcpm_svg=figures.trend_svg(wcpm, 0, 100, (0, 50, 100), "WCPM", "var(--c-listen)"),
+        rows=[{**r,
+               "date": short_date(r["date"]),
+               # 表里只留「课/页」，全 slug 在 390px 上放不下
+               "slug": "/".join(r["slug"].split("/")[-2:]),
+               "fg": figures.score_color(int(r["score"]))[0]}
+              for r in rows],
+    )
 
     page.write(
         out_dir / "trend.html",
@@ -706,35 +625,27 @@ def build_index(out_dir: Path, reports: list[Report], pdfs: dict[str, bool],
         by_date.setdefault(r.date, []).append(r)
 
     cat_rank = {c: i for i, c in enumerate(CATS)}
-    groups = []
+    days = []
     for date in sorted(by_date, reverse=True):
         rows = sorted(by_date[date], key=lambda x: (cat_rank.get(x.cat, 99), x.order))
         items = []
         for r in rows:
             fg, bg = figures.score_color(r.score)
-            # 报告本身是网页（手机上看），PDF 只是想转发给别人时的附加件
-            pdf_link = (f'<a class="pdf" href="{r.slug}.pdf">PDF</a>'
-                        if pdfs.get(r.slug) else "")
-            items.append(
-                f'      <li style="--s:{fg};--sbg:{bg};--c:var(--c-{r.color_var});'
-                f'--cbg:var(--c-{r.color_var}-bg)">\n'
-                f'        <a class="main" href="{r.slug}.html">{html.escape(r.title)}'
-                f'<small>{html.escape(r.sub)} · {r.accuracy}% · 每分钟 {r.wcpm} 词</small></a>\n'
-                f'        <span class="meta"><span class="cat">{html.escape(r.cat)}</span>'
-                f'<span class="sc">{r.score}</span>{pdf_link}</span>\n'
-                f'      </li>')
-        groups.append(f'    <h2 class="day">{pretty_date(date)}</h2>\n'
-                      f'    <ul class="list">\n' + "\n".join(items) + "\n    </ul>")
+            items.append({
+                "href": f"{r.slug}.html",
+                "title": r.title,
+                "small": f"{r.sub} · {r.accuracy}% · 每分钟 {r.wcpm} 词",
+                "cat": r.cat, "score": r.score,
+                "fg": fg, "bg": bg, "color": r.color_var,
+                # 报告本身是网页（手机上看），PDF 只是想转发给别人时的附加件
+                "pdf": f"{r.slug}.pdf" if pdfs.get(r.slug) else None,
+            })
+        days.append({"label": pretty_date(date), "rows": items})
 
-    body = f"""<main class="wrap">
-  <header class="hero">
-    <a class="back" href="../../">‹ 学习小站</a>
-    <h1>打卡评价</h1>
-    <p class="sub">每天的朗读作业，一份能和下次比的成绩单 · 共 {len(reports)} 份</p>
-{'    <a class="trend" href="trend.html">📈 看趋势 · 全部放在一条线上</a>' if trend else ''}
-  </header>
-{chr(10).join(groups) if groups else '  <p class="empty">还没有报告 —— 用喂数据台跑一份录音，再往 storage/spec/english/review/ 放一份 spec</p>'}
-</main>"""
+    body = tmpl.body(
+        "review/index.html",
+        total=len(reports), trend=trend, days=days,
+    )
 
     page.write(
         out_dir / "index.html",

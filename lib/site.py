@@ -23,23 +23,11 @@ BUSUANZI_JS = "//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
 
 
 def foot_html(*, analytics: bool = True) -> str:
-    """页脚 HTML（含统计脚本）。两项都关掉时返回空串。"""
-    rows = []
-    if BEIAN:
-        rows.append(f'  <p class="beian"><a href="{BEIAN_URL}" target="_blank"'
-                    f' rel="noopener">{BEIAN}</a></p>')
-
-    script = ""
-    if analytics and ANALYTICS == "busuanzi":
-        # 不蒜子拿到数字后才把这两段显出来 —— 先藏起来，不占位、不闪动
-        rows.append(
-            '  <p class="hits">'
-            '<span id="busuanzi_container_site_uv" style="display:none;">'
-            '👀 <span id="busuanzi_value_site_uv"></span> 位小朋友来过</span>'
-            '<span id="busuanzi_container_site_pv" style="display:none;">'
-            ' · 共翻开 <span id="busuanzi_value_site_pv"></span> 次</span></p>')
-        script = f'\n<script async src="{BUSUANZI_JS}"></script>'
-
-    if not rows:
+    """页脚 HTML（含统计脚本）。两项都关掉时返回空串。标记在 templates/foot.html。"""
+    hits = analytics and ANALYTICS == "busuanzi"
+    if not (BEIAN or hits):
         return ""
-    return '<footer class="site-foot">\n' + "\n".join(rows) + "\n</footer>" + script
+    # 循环 import：page → site → tmpl → paths，tmpl 不引 page，所以放函数里就够了
+    from . import tmpl
+    return tmpl.render("foot.html", beian=BEIAN, beian_url=BEIAN_URL,
+                       hits=hits, busuanzi_js=BUSUANZI_JS).rstrip("\n")

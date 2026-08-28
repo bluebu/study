@@ -22,12 +22,9 @@ import html
 import re
 from pathlib import Path
 
-from lib import page, paths, sheet, spec as spec_lib
+from lib import page, paths, sheet, spec as spec_lib, tmpl
 
 SPECS = paths.spec("math", "miji")
-
-INFO = ('姓名 <span class="blank"></span> 日期 <span class="blank"></span> '
-        '用时 <span class="blank"></span>')
 
 # 示范行：「算式 | 注解」，算式里 <x> 表示这个字符被划掉
 CUT = re.compile(r"&lt;(.+?)&gt;")
@@ -55,129 +52,80 @@ def _answer(expr: str, sp: spec_lib.Spec) -> str:
 
 # ── 第 1 页：昨天错在哪 ────────────────────────────────────
 
-def _wrong(block: spec_lib.Block, sp: spec_lib.Spec) -> tuple[str, int]:
+def _wrong(block: spec_lib.Block, sp: spec_lib.Spec) -> dict:
     """一组同因错题。行格式「题, 你写的, 正确的」，抬头是错因。"""
     rows = []
     for line in block.lines:
         parts = [p.strip() for p in line.strip().split(",")]
         if len(parts) != 3:
             spec_lib.die(f"{sp.path.name}：错题行要写成「题, 你写的, 正确的」：{line.strip()!r}")
-        q, bad, good = (html.escape(p) for p in parts)
-        rows.append(
-            f'      <div class="w"><span class="e">{q}</span>'
-            f'<s>{bad}</s><b>{good}</b></div>'
-        )
-    n = len(rows)
-    tag = f'<span class="n">{html.escape(block.tag)}</span>' if block.tag else ""
-    return (
-        f'  <section class="wrong{" one" if n == 1 else ""}">\n'
-        f'    <h2>{html.escape(block.head)}{tag}</h2>\n'
-        f'    <div class="ws">\n' + "\n".join(rows) + "\n    </div>\n  </section>",
-        n,
-    )
+        rows.append(dict(zip(("q", "bad", "good"), parts)))
+    return {"head": block.head, "tag": block.tag, "rows": rows}
 
 
-def _compare(block: spec_lib.Block) -> str:
+def _compare(block: spec_lib.Block) -> dict:
     """错在哪一步：两行并置，✗ 那行灰掉，✓ 那行是正解。"""
     rows = []
     for line in block.lines:
         expr, _, why = line.strip().partition("|")
         why = why.strip()
-        cls = "row bad" if why.startswith("✗") else "row"
-        rows.append(
-            f'    <div class="{cls}"><div class="ex">{_mark(expr.strip())}</div>'
-            f'<div class="why">{html.escape(why)}</div></div>'
-        )
-    head = f'    <h3>{html.escape(block.head)}</h3>\n' if block.head else ""
-    return ('  <section class="compare">\n' + head
-            + "\n".join(rows) + "\n  </section>")
+        rows.append({"cls": "row bad" if why.startswith("✗") else "row",
+                     "ex": _mark(expr.strip()), "why": why})
+    return {"head": block.head, "rows": rows}
 
 
 def _page_diag(sp: spec_lib.Spec, wrongs: list[spec_lib.Block],
                compare: spec_lib.Block | None) -> str:
-    blocks, total = [], 0
-    for b in wrongs:
-        chunk, n = _wrong(b, sp)
-        blocks.append(chunk)
-        total += n
+    groups = [_wrong(b, sp) for b in wrongs]
 
     heading = sp.get("diag", "错在哪")
     if sp.get("date"):
         heading += f'　{sp.get("date")}'
-    score = sp.get("score", "")
-    tip = sp.get("tip", "")
 
-    return (
-        '<div class="sheet diag">\n'
-        '  <div class="head">\n'
-        f"    <h1>{html.escape(heading)}</h1>\n"
-        f'    <div class="info">{html.escape(score)}</div>\n'
-        "  </div>\n"
-        + "\n".join(blocks)
-        + ("\n" + _compare(compare) if compare else "")
-        + (f'\n  <div class="tip">{html.escape(tip)}</div>' if tip else "")
-        + f'\n  <div class="foot">错 {total} 题</div>\n</div>'
+    return tmpl.body(
+        "miji/diag.html",
+        heading=heading,
+        score=sp.get("score", ""),
+        wrongs=groups,
+        compare=_compare(compare) if compare else None,
+        tip=sp.get("tip", ""),
+        total=sum(len(g["rows"]) for g in groups),
     )
 
 
 # ── 第 2 页：秘籍 ──────────────────────────────────────────
 
-def _demo(block: spec_lib.Block) -> str:
+def _demo(block: spec_lib.Block) -> list[dict]:
     """口诀卡：每行一条示范，左边算式、右边一句为什么。"""
-    return "\n".join(
-        f'    <div class="row"><div class="ex">{_mark(expr.strip())}</div>'
-        f'<div class="why">{html.escape(why.strip())}</div></div>'
-        for expr, _, why in (line.strip().partition("|") for line in block.lines)
-    )
+    return [{"ex": _mark(expr.strip()), "why": why.strip()}
+            for expr, _, why in (line.strip().partition("|") for line in block.lines)]
 
 
-def _group(block: spec_lib.Block, sp: spec_lib.Spec, answers: bool) -> tuple[str, int]:
-    items = [w for w, _ in block.items()]
-    qs = "\n      ".join(
-        f'<div class="q">{html.escape(e)} =<i>{_answer(e, sp) if answers else ""}</i></div>'
-        for e in items
-    )
-    head = html.escape(block.name)
-    if block.head:
-        head += f"<small>{html.escape(block.head)}</small>"
-    return (
-        f'  <section class="grp">\n    <h2>{head}</h2>\n'
-        f'    <div class="qs">\n      {qs}\n    </div>\n  </section>',
-        len(items),
-    )
+def _group(block: spec_lib.Block, sp: spec_lib.Spec, answers: bool) -> dict:
+    """一组练习题。**答案脚本算**，spec 里只写题面 —— 抄一遍就多一次抄错的机会。"""
+    return {
+        "name": block.name,
+        "head": block.head,
+        "qs": [{"expr": e, "ans": _answer(e, sp) if answers else ""}
+               for e, _ in block.items()],
+    }
 
 
 def _page_drill(sp: spec_lib.Spec, demo: spec_lib.Block | None,
                 groups: list[spec_lib.Block], answers: bool) -> str:
-    blocks, total = [], 0
-    for b in groups:
-        chunk, n = _group(b, sp, answers)
-        blocks.append(chunk)
-        total += n
+    grps = [_group(b, sp, answers) for b in groups]
 
     heading = sp.title + ("（答案）" if answers else "")
     if sp.get("date"):
         heading += f'　{sp.get("date")}'
 
-    card = ""
-    if demo:
-        verify = sp.get("verify", "")
-        card = (
-            '  <section class="rule">\n'
-            f"{_demo(demo)}\n"
-            + (f'    <div class="verify">{html.escape(verify)}</div>\n' if verify else "")
-            + "  </section>\n"
-        )
-
-    return (
-        '<div class="sheet">\n'
-        '  <div class="head">\n'
-        f"    <h1>{html.escape(heading)}</h1>\n"
-        f'    <div class="info">{"" if answers else INFO}</div>\n'
-        "  </div>\n"
-        f"{card}"
-        + "\n".join(blocks)
-        + f'\n  <div class="foot">共 {total} 题　·　写完挑 3 题乘回去验</div>\n</div>'
+    return tmpl.body(
+        "miji/drill.html",
+        heading=heading,
+        info=page.sheet_info("用时", show=not answers),
+        card={"rows": _demo(demo), "verify": sp.get("verify", "")} if demo else None,
+        groups=grps,
+        total=sum(len(g["qs"]) for g in grps),
     )
 
 
@@ -214,35 +162,16 @@ def _render(sp: spec_lib.Spec, out_dir: Path, *, pdf: bool, answers: bool) -> bo
 
 
 def _index(out_dir: Path, entries: list[dict]) -> None:
-    rows = "\n".join(
-        f'    <li><a class="main" href="{e["href"]}">{html.escape(e["label"])}'
-        f'<small>{html.escape(e["sub"])}</small></a>'
-        + (f'<a class="pdf" href="{e["pdf"]}">打印单</a>' if e["pdf"] else "")
-        + "</li>"
-        for e in entries
-    ) or '    <li><span class="empty">还没有秘籍 —— 往 storage/spec/math/miji/ 放一份 spec</span></li>'
-
-    body = f"""<main class="wrap" style="--accent: var(--math); --accent-bg: var(--math-bg)">
-  <header class="hero">
-    <a class="back" href="../../">‹ 学习小站</a>
-    <h1>计算秘籍</h1>
-    <p class="sub">一个错因两页 A4 · 共 {len(entries)} 份</p>
-  </header>
-  <ul class="list">
-{rows}
-  </ul>
-</main>"""
-
-    page.write(
-        out_dir / "index.html",
-        page.render(
-            title="计算秘籍 · 数学",
-            description="一个错因两页 A4：先看错在哪，再用一条口诀重做同类题。",
-            body=body,
-            emoji="🔢",
-            css=("site.css",),
-            root="../..",
-        ),
+    page.listing(
+        out_dir,
+        title="计算秘籍 · 数学",
+        description="一个错因两页 A4：先看错在哪，再用一条口诀重做同类题。",
+        emoji="🔢",
+        h1="计算秘籍",
+        sub=f"一个错因两页 A4 · 共 {len(entries)} 份",
+        sections=[(None, entries)],
+        empty="还没有秘籍 —— 往 storage/spec/math/miji/ 放一份 spec",
+        accent="math",
     )
     print(f"    → miji/index.html  （{len(entries)} 份）")
 
@@ -260,7 +189,7 @@ def build(dist: Path, pdf: bool = False) -> None:
         entries.append({
             "href": f"{path.stem}.html",
             "label": sp.title + (f'　{sp.get("date")}' if sp.get("date") else ""),
-            "sub": f"错题 {bad} 题 · 重练 {n} 题",
+            "small": f"错题 {bad} 题 · 重练 {n} 题",
             "pdf": f"{path.stem}.pdf" if pdf_ok else None,
         })
 

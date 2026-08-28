@@ -2,17 +2,15 @@
 
 把 <head> 里那堆容易漏的东西（viewport / og / favicon / 资产链接）
 收成一处。老站是每个栏目模板各抄一份，漏一行就少一个分享缩略图。
+
+标记在 `src/templates/page.html`，这儿只算「引哪几张样式、挂不挂页脚」。
 """
 
 from __future__ import annotations
 
-import html
 from pathlib import Path
 
-from . import site
-
-# og:title / og:description 逐字照抄本页 title / description。
-# 这是老站定下来的约定：微信/群里分享出去的卡片和页面标题必须一致。
+from . import site, tmpl
 
 
 def render(
@@ -41,38 +39,80 @@ def render(
                           默认：**引了 print.css 的算打印单，不挂**，其余都挂。
                           noindex 的页面只出备案号、不挂统计
     """
-    t = html.escape(title)
-    d = html.escape(description)
-
     if footer is None:
         footer = "print.css" not in css
     foot = site.foot_html(analytics=not noindex) if footer else ""
 
-    sheets = ["palette.css", *css] + (["foot.css"] if foot else [])
-    links = "\n".join(f'<link rel="stylesheet" href="{root}/assets/{s}" />' for s in sheets)
+    return tmpl.render(
+        "page.html",
+        title=title,
+        description=description,
+        body=body,
+        emoji=emoji,
+        theme=theme,
+        sheets=["palette.css", *css] + (["foot.css"] if foot else []),
+        root=root,
+        noindex=noindex,
+        lang=lang,
+        extra_head=extra_head,
+        foot=foot,
+    )
 
-    robots = '\n<meta name="robots" content="noindex, nofollow, noarchive" />' if noindex else ""
-    desc = f'\n<meta name="description" content="{d}" />' if d else ""
-    og_desc = f'\n<meta property="og:description" content="{d}" />' if d else ""
 
-    return f"""<!doctype html>
-<html lang="{lang}">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>{t}</title>{desc}{robots}
-<meta name="theme-color" content="{theme}" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="{t}" />{og_desc}
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>{emoji}</text></svg>" />
-{links}
-{extra_head}</head>
-<body>
-{body}
-{foot}
-</body>
-</html>
-"""
+def sheet_info(third: str = "得分", *, show: bool = True) -> str:
+    """打印单页眉右边那行「姓名 ___ 日期 ___ <third> ___」。
+
+    三个栏目共用（语文 / 数学 / 词汇默写），第三格的名字不同（得分 / 用时）。
+    原先各栏目存一份 INFO 常量，改一处要改三个文件。
+    """
+    return tmpl.render("sheet-info.html", third=third, show=show).rstrip("\n")
+
+
+def listing(
+    out_dir: str | Path,
+    *,
+    title: str,
+    description: str,
+    emoji: str,
+    h1: str,
+    sub: str,
+    sections: list[tuple[str | None, list[dict]]],
+    empty: str = "",
+    pdf_label: str = "打印单",
+    accent: str | None = None,
+    back_href: str = "../../",
+    back_label: str = "学习小站",
+    root: str = "../..",
+) -> Path:
+    """写一个栏目的目录页（`src/templates/list.html`）。
+
+    五个栏目的目录页是同一张页面，原先各拼一遍 —— 改一处 hero 要改五个文件。
+    这儿只做两件事：把条目补齐成模板要的形状、把 sections 的元组换成有名字的字段。
+
+    sections   —— [(小标题 或 None, [条目…])]。只有词汇默写分了组，
+                  其余栏目传一节、小标题给 None
+    条目       —— {href, label, small, pdf}，`pdf` 给 None 就不出打印单按钮
+    empty      —— 一条都没有时显示的话（「往 …/ 放一份 spec」）
+    """
+    # 键叫 rows 不叫 items —— Jinja 的 `sec.items` 会取到 dict 自带的方法
+    secs = [
+        {"title": name,
+         "rows": [{"href": it["href"], "label": it["label"],
+                   "small": it.get("small", ""), "pdf": it.get("pdf")}
+                  for it in items]}
+        for name, items in sections
+    ]
+    body = tmpl.body(
+        "list.html",
+        accent=accent, back_href=back_href, back_label=back_label,
+        h1=h1, sub=sub, sections=secs, empty=empty, pdf_label=pdf_label,
+    )
+
+    return write(
+        Path(out_dir) / "index.html",
+        render(title=title, description=description, body=body,
+               emoji=emoji, css=("site.css",), root=root),
+    )
 
 
 def write(path: str | Path, content: str) -> Path:

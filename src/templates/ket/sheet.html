@@ -1,0 +1,42 @@
+{#-
+  词汇默写 —— 一页 A4。同一张模板出两种版式，靠 `cls` 和 cell 的 `kind` 分：
+
+    默写版  .items（2 列 grid）   kind = item / section / pad
+    答案版  .items.compact（块）  kind = ans-section / band，紧凑无线格
+
+  **分页在 Python 里做完了**：默写版按词位数（PER_PAGE），答案版按 px 估高
+  （ANS_PAGE_H）。模板只负责把已经分好的 cells 摆出来 —— 别在这儿算页。
+
+  ⚠️ `.head .info` 是 nowrap 的普通块，INFO 常量里的空格是有意的 → |safe。
+  其余全是 flex / grid（.items / .item / .band / .group / .ans），空白不生成盒子。
+-#}
+<div class="sheet">
+  <div class="head">
+    <h1>{{ title }}</h1>
+    <div class="info">{{ info|safe }}</div>
+  </div>
+  <div class="items{{ cls }}">
+{% for c in cells %}
+{% if c.kind == 'section' %}
+    <div class="item section">{{ c.title }}</div>
+{% elif c.kind == 'pad' %}
+    <div class="item pad"></div>
+{% elif c.kind == 'item' %}
+    <div class="item"><span class="no">{{ c.no }}</span><span class="zh">{{ c.zh }}</span>{% if c.pos %}<span class="pos">{{ c.pos }}</span>{% endif %}<span class="four"></span></div>
+{% elif c.kind == 'ans-section' %}
+  <div class="ans section">{{ c.title }}</div>
+{% else %}
+  <div class="band{{ ' alt' if c.alt }}">
+{% for g in c.groups %}
+    <div class="group">
+{% for w in g %}
+      <div class="ans"><span class="no">{{ w.no }}</span><span class="zh">{{ w.zh }}</span>{% if w.pos %}<span class="pos">{{ w.pos }}</span>{% endif %}<span class="en">{{ w.en }}</span>{% if w.ph %}<span class="ph">{{ w.ph }}</span>{% endif %}</div>
+{% endfor %}
+    </div>
+{% endfor %}
+  </div>
+{% endif %}
+{% endfor %}
+  </div>
+  <div class="foot">共 {{ total }} 词 · 第 {{ page_no }}/{{ page_count }} 页</div>
+</div>

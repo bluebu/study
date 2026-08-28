@@ -1,0 +1,64 @@
+{#-
+  每日打卡 —— 一张 A4，一项作业一行，右边一个大方框打勾。
+
+  ⚠️ 两处**必须留在一行**，因为它们不是 flex / grid 容器，换行会多出一个空格：
+     .head .who  —— 普通块 + white-space:nowrap，「姓名 」后面那个空格是有意的
+     .foot .sign —— 普通块，两个 <span> 靠 margin-right 拉开，中间不能有空白
+  其余（.tip / .task / .words / .w 全是 flex 或 grid）空白文本节点不生成盒子，
+  按正常缩进写就行。
+
+  `|safe` 的三处都是 inline() 出来的：它内部先 escape 再插标签，出来是可信 HTML。
+  spec 里人写的纯文本（title / cheer / date）一律交给 autoescape。
+-#}
+<div class="sheet">
+  <div class="head">
+    <div class="t">
+{% if date %}
+      <div class="date">{{ date }}</div>
+{% endif %}
+      <div>
+        <h1>{{ title }}</h1>
+        <div class="en">{{ subtitle }}</div>
+      </div>
+    </div>
+    <div class="who">姓名 <i class="u"></i><span>家长签字 <i class="u"></i></span></div>
+  </div>
+
+  <div class="tip">
+    <span>{{ tip_left|safe }}</span>
+    <span>{{ tip_right|safe }}</span>
+  </div>
+
+{% for t in tasks %}
+  <div class="task" style="--c:var(--c-{{ t.color }})">
+    <div class="no">{{ loop.index }}</div>
+    <div class="body">
+      <div class="title">{{ t.title|safe }}{% if t.tag %} <span class="tag">{{ t.tag|safe }}</span>{% endif %}</div>
+{% for note in t.notes %}
+      <div class="sub">{{ note|safe }}</div>
+{% endfor %}
+{% if t.bullets %}
+      <ul class="sub">{% for it in t.bullets %}<li>{{ it|safe }}</li>{% endfor %}</ul>
+{% endif %}
+{% if t.words %}
+      {# 两列，按列填：grid-auto-flow:column + 行数固定 #}
+      <div class="words" style="grid-template-rows:repeat({{ t.word_rows }},auto)">{% for w in t.words %}<div class="w"><i class="box"></i><b>{{ w.word }}</b><s>{{ w.mean }}</s></div>{% endfor %}</div>
+{% endif %}
+    </div>
+    <i class="box big"></i>
+  </div>
+{% endfor %}
+
+{% if memo_lines %}
+  <div class="memo">
+      <div class="lb">今日备注 · 想记下来的话</div>
+{% for _ in range(memo_lines) %}
+      <div class="ln"></div>
+{% endfor %}
+  </div>
+{% endif %}
+  <div class="foot">
+    <div class="sign"><span>完成时间 <i class="u"></i></span><span>今日自评 ☆☆☆☆☆</span></div>
+    <div class="cheer">{{ cheer }}</div>
+  </div>
+</div>

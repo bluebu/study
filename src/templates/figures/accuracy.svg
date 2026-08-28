@@ -1,0 +1,25 @@
+{#-
+  准确率标尺：88%–100%，三档分区 + 本页指针（+ 上一页的空心圈）。
+
+  字号按 viewBox 单位给：整张图在手机上会被压到 ~310px 宽（缩放约 0.31），
+  32 号字落地才 10px 出头 —— **别再往小调**。
+  颜色全走 CSS 变量（palette.css 是单一真源），这儿一个色值都不写死。
+  <text> 里的内容必须紧贴标签 —— SVG 的文本首尾空白会被渲染器吃掉，但换行会。
+-#}
+<svg viewBox="0 -32 {{ W }} 240" role="img" aria-label="准确率 {{ acc }}% 落在 Fountas &amp; Pinnell 的哪一档">
+{% for z in zones %}
+<rect x="{{ z.x }}" y="{{ y }}" width="{{ z.w }}" height="{{ h }}" fill="{{ z.fill }}"/>
+<text x="{{ z.mid }}" y="{{ z.ty }}" font-size="32" fill="var(--ink)" text-anchor="middle" opacity=".7">{{ z.name }}</text>
+{% endfor %}
+<rect x="0" y="{{ y }}" width="{{ W }}" height="{{ h }}" rx="10" fill="none" stroke="var(--line)" stroke-width="2"/>
+{% for t in ticks %}
+<line x1="{{ t.x }}" y1="{{ y }}" x2="{{ t.x }}" y2="{{ y2 }}" stroke="var(--card)" stroke-width="4"/>
+<text x="{{ t.x }}" y="{{ t.ty }}" font-size="28" fill="var(--ink-soft)" text-anchor="middle">{{ t.v }}%</text>
+{% endfor %}
+{% if prev %}
+<circle cx="{{ prev.x }}" cy="{{ prev.cy }}" r="9" fill="none" stroke="var(--ink-soft)" stroke-width="3"/>
+<text x="{{ prev.x }}" y="{{ prev.ty }}" font-size="28" fill="var(--ink-soft)" text-anchor="middle">上一页 {{ prev.v }}%</text>
+{% endif %}
+<path d="M{{ mark.x }} {{ mark.y }} l-13 -18 h26 z" fill="var(--read)"/>
+<text x="{{ mark.x }}" y="{{ mark.ty }}" font-size="36" font-weight="700" fill="var(--read)" text-anchor="middle">本页 {{ acc }}%</text>
+</svg>

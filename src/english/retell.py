@@ -24,11 +24,10 @@ Exposition → Rising Action → Climax → Falling Action → Resolution。
 
 from __future__ import annotations
 
-import html
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from lib import page, paths, sheet, spec as spec_lib
+from lib import page, paths, sheet, spec as spec_lib, tmpl
 
 SPECS = paths.spec("english", "retell")
 
@@ -68,59 +67,33 @@ def stages(sp: spec_lib.Spec) -> list[Stage]:
     return out
 
 
-def chain(nodes: list[str]) -> str:
-    """一串关键词 → 带箭头的 HTML。
-
-    「词 + 它后面的箭头」绑成一个不换行的 unit —— 不这么做，折行时箭头会落到
-    下一行的行首（「→ kinder people」），读着像这一行是从箭头开始的。
-    """
-    return "".join(
-        f'<span class="unit"><span class="kw">{html.escape(n)}</span>'
-        + ('<b class="arw">→</b>' if i < len(nodes) - 1 else "")
-        + "</span>"
-        for i, n in enumerate(nodes))
-
-
 def render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, int, int]:
     items = stages(sp)
     total_segs = sum(len(s.segs) for s in items)
     total_nodes = sum(len(seg) for s in items for seg in s.segs)
 
-    acts, no = [], 0
+    # 段号跨阶段连续编，所以在这儿一次编完再交给模板
+    no = 0
+    ctx = []
     for stage in items:
-        rows = []
+        segs = []
         for nodes in stage.segs:
             no += 1
-            rows.append(f'        <span class="seg"><i>{no}</i>'
-                        f'<span class="chain">{chain(nodes)}</span></span>')
-        tag = (f'<span class="tag">{html.escape(stage.name)}'
-               + (f'<small>{html.escape(stage.short)} · {len(stage.segs)} 段</small>'
-                  if stage.short else f'<small>{len(stage.segs)} 段</small>')
-               + '</span>')
-        acts.append(f'      <div class="act{" climax" if stage.is_climax else ""}">\n'
-                    f'        {tag}\n'
-                    f'        <span class="segs">\n' + "\n".join(rows) + "\n"
-                    f'        </span>\n'
-                    f'      </div>')
+            segs.append({"no": no, "nodes": nodes})
+        ctx.append({"name": stage.name, "short": stage.short,
+                    "is_climax": stage.is_climax, "segs": segs})
 
     heading = sp.title or "复述地图"
     meta = " · ".join(x for x in (sp.get("book"),
                                  f'第 {sp.get("pages")} 页' if sp.get("pages") else "",
                                  f"{total_segs} 段") if x)
-    task = sp.get("task", "")
 
-    body = (
-        f'<div class="sheet">\n'
-        f'  <div class="head">\n'
-        f'    <div><h1>{html.escape(heading)}</h1>\n'
-        f'      <p class="meta">{html.escape(meta)}</p></div>\n'
-        f'    <div class="who">姓名 <i class="u"></i><span>日期 <i class="u"></i></span></div>\n'
-        f'  </div>\n'
-        + (f'  <p class="task">{html.escape(task)}</p>\n' if task else "")
-        + f'  <div class="acts">\n' + "\n".join(acts) + f'\n  </div>\n'
-        f'  <p class="foot">看着关键词讲，讲不出来的地方圈一下 · '
-        f'CLIMAX 只有一段，那是整本书的转折</p>\n'
-        f'</div>'
+    body = tmpl.body(
+        "retell/sheet.html",
+        heading=heading,
+        meta=meta,
+        task=sp.get("task", ""),
+        stages=ctx,
     )
 
     out = page.write(
@@ -142,38 +115,21 @@ def render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, int, int]
 
 
 def build_index(out_dir: Path, entries: list[dict]) -> None:
-    rows = "\n".join(
-        f'      <li>\n'
-        f'        <a class="main" href="{e["stem"]}.html">{html.escape(e["title"])}'
-        f'<small>{e["segs"]} 段 · {e["nodes"]} 个词'
-        + (f' · {html.escape(e["book"])}' if e["book"] else "")
-        + '</small></a>\n'
-        + (f'        <a class="pdf" href="{e["stem"]}.pdf">PDF</a>\n' if e["pdf"] else "")
-        + f'      </li>'
-        for e in entries
-    ) or '      <li><span class="empty">还没有复述地图 —— 往 storage/spec/english/retell/ 放一份 spec</span></li>'
-
-    body = f"""<main class="wrap">
-  <header class="hero">
-    <a class="back" href="../../">‹ 学习小站</a>
-    <h1>复述故事</h1>
-    <p class="sub">整个故事拆成几段关键词，按情节的五个阶段排好，看着讲一遍 · 共 {len(entries)} 份</p>
-  </header>
-  <ul class="list">
-{rows}
-  </ul>
-</main>"""
-
-    page.write(
-        out_dir / "index.html",
-        page.render(
-            title="复述故事 · 英语",
-            description="把故事拆成几段关键词，按情节的五个阶段排好，看着关键词把整个故事讲出来。A4 打印。",
-            body=body,
-            emoji="🗺️",
-            css=("site.css",),
-            root="../..",
-        ),
+    page.listing(
+        out_dir,
+        title="复述故事 · 英语",
+        description="把故事拆成几段关键词，按情节的五个阶段排好，看着关键词把整个故事讲出来。A4 打印。",
+        emoji="🗺️",
+        h1="复述故事",
+        sub=f"整个故事拆成几段关键词，按情节的五个阶段排好，看着讲一遍 · 共 {len(entries)} 份",
+        sections=[(None, [
+            {"href": f'{e["stem"]}.html',
+             "label": e["title"],
+             "small": " · ".join(x for x in (f'{e["segs"]} 段', f'{e["nodes"]} 个词', e["book"]) if x),
+             "pdf": f'{e["stem"]}.pdf' if e["pdf"] else None}
+            for e in entries])],
+        empty="还没有复述地图 —— 往 storage/spec/english/retell/ 放一份 spec",
+        pdf_label="PDF",
     )
     print(f"    → retell/index.html  （{len(entries)} 份）")
 

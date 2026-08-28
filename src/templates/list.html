@@ -1,0 +1,32 @@
+{#-
+  目录页 —— 语文练习 / 数学秘籍 / 词汇默写 / 每日打卡 / 复述故事五个栏目共用。
+  GitHub Pages 不列目录，每个栏目都得自己生成一份。原先 5 个生成器各拼一遍，
+  改一处 hero 得改五个文件。
+
+  条目那个键叫 `rows` 不叫 `items`：Jinja 的 `.` 先找属性，`sec.items` 会取到
+  dict 自带的 `items` 方法，不是这儿要的列表 —— 踩过一次。
+
+  ⚠️ `{{ label }}<small>` 和 `</a><a class="pdf">` 之间**不许出现空白**。
+  .list li 是 grid、.list .main 是 flex，空白文本节点本身会被忽略，但一条一行
+  这个形状要保住 —— 拆成多行以后 diff 里看不出是不是真的没动版式。
+-#}
+<main class="wrap"{% if accent %} style="--accent: var(--{{ accent }}); --accent-bg: var(--{{ accent }}-bg)"{% endif %}>
+  <header class="hero">
+    <a class="back" href="{{ back_href }}">‹ {{ back_label }}</a>
+    <h1>{{ h1 }}</h1>
+    <p class="sub">{{ sub }}</p>
+  </header>
+{% for sec in sections %}
+{% if sec.title %}
+  <h2 class="sec">{{ sec.title }}</h2>
+{% endif %}
+  <ul class="list">
+{% for it in sec.rows %}
+    <li><a class="main" href="{{ it.href }}">{{ it.label }}<small>{{ it.small }}</small></a>{% if it.pdf %}<a class="pdf" href="{{ it.pdf }}">{{ pdf_label }}</a>{% endif %}</li>
+{% endfor %}
+{% if not sec.rows %}
+    <li><span class="empty">{{ empty }}</span></li>
+{% endif %}
+  </ul>
+{% endfor %}
+</main>

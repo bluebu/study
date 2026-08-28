@@ -1,0 +1,22 @@
+{#-
+  停顿地图：一整段朗读里每一次歇气。绿条是在读，上面盖的是停顿：
+  蓝 = 句末（该停的）、橙 = 句中长停 ≥0.8 秒、灰 = 句中短停。
+
+  这张图每行前面有 2 格缩进（原来是 `''.join(f'  {s}\n')` 拼的），保持不变。
+  刻度间距随时长放宽（step 在 Python 里算），否则长录音末尾两个标签会叠在一起。
+-#}
+<svg viewBox="0 -4 {{ W }} {{ view_h }}" role="img" aria-label="{{ seconds }} 秒朗读的停顿分布：绿色是发声，蓝色是句末停顿，橙色和灰色是句中停顿">
+  <rect x="0" y="{{ TOP }}" width="{{ W }}" height="{{ H }}" rx="8" fill="var(--tl-speech)"/>
+{% for p in pauses %}
+  <rect x="{{ p.x }}" y="{{ TOP }}" width="{{ p.w }}" height="{{ H }}" fill="var(--tl-{{ p.kind }})"/>
+{% endfor %}
+  <rect x="0" y="{{ TOP }}" width="{{ W }}" height="{{ H }}" rx="8" fill="none" stroke="var(--line)" stroke-width="1.5"/>
+{% for t in ticks %}
+  <line x1="{{ t.x }}" y1="{{ base }}" x2="{{ t.x }}" y2="{{ base5 }}" stroke="var(--ink-soft)" stroke-width="1.4"/>
+  <text x="{{ t.x }}" y="{{ base20 }}" font-size="15" fill="var(--ink-soft)" text-anchor="{{ t.anchor }}">{{ t.v }}s</text>
+{% endfor %}
+{% for s in stalls %}
+  <path d="M{{ s.x1 }} {{ y_bracket_lo }} L{{ s.x1 }} {{ y_bracket_hi }} L{{ s.x2 }} {{ y_bracket_hi }} L{{ s.x2 }} {{ y_bracket_lo }}" fill="none" stroke="var(--tl-long)" stroke-width="2"/>
+  <text x="{{ s.mid }}" y="{{ y_label }}" font-size="16" font-weight="700" fill="var(--tl-long)" text-anchor="middle">{{ s.label }}</text>
+{% endfor %}
+</svg>

@@ -16,10 +16,9 @@ spec 在 storage/spec/chinese/practice/<YYYYMMDD>.txt，产物落在 dist/chines
 
 from __future__ import annotations
 
-import html
 from pathlib import Path
 
-from lib import page, paths, sheet, spec as spec_lib
+from lib import page, paths, sheet, spec as spec_lib, tmpl
 
 SPECS = paths.spec("chinese", "practice")
 
@@ -27,9 +26,6 @@ SPECS = paths.spec("chinese", "practice")
 # 装不满就加大，快溢出到第二页就调小。
 DEFAULTS = {"title": "今日练习", "hint": "看拼音，在田字格里写汉字。",
             "copies": 1, "cell": 15, "gap": 4, "py": 11}
-
-INFO = ('姓名 <span class="blank"></span> 日期 <span class="blank"></span> '
-        '得分 <span class="blank"></span>')
 
 try:                                     # 可选增强：只用来补单音字
     from pypinyin import Style, pinyin
@@ -56,18 +52,6 @@ def _syllables(word: str, raw: str, sp: spec_lib.Spec) -> list[str]:
     return syl
 
 
-def _item(word: str, syl: list[str], copies: int, answers: bool) -> str:
-    """一项 = 拼音行 + copies 行田字格。抄多遍时拼音只标在最上面一行。"""
-    py = "".join(f"<span>{html.escape(s)}</span>" for s in syl)
-    cells = "".join(
-        '<div class="tian-row">'
-        + "".join(f'<i class="tian">{html.escape(c) if answers else ""}</i>' for c in word)
-        + "</div>"
-        for _ in range(copies)
-    )
-    return f'<div class="item"><div class="py">{py}</div>{cells}</div>'
-
-
 def _render(sp: spec_lib.Spec, out_dir: Path, *, pdf: bool, answers: bool) -> bool:
     """渲染一份练习单。返回 PDF 是否真的生成出来了。"""
     copies_all = sp.int_("copies", DEFAULTS["copies"])
@@ -84,14 +68,14 @@ def _render(sp: spec_lib.Spec, out_dir: Path, *, pdf: bool, answers: bool) -> bo
         if not items:
             continue
         n = int(b.attr("copies", copies_all))
-        rows = "\n      ".join(
-            _item(w, _syllables(w, raw, sp), n, answers) for w, raw in items
-        )
-        label = html.escape(" ".join(x for x in (b.name, b.head) if x))
-        blocks.append(
-            f'  <div class="block">\n    <h2>{label}</h2>\n'
-            f'    <div class="items">\n      {rows}\n    </div>\n  </div>'
-        )
+        blocks.append({
+            "label": " ".join(x for x in (b.name, b.head) if x),
+            # 一项 = 拼音行 + n 行田字格。题面版格子里是空的，答案版印字
+            "rows": [{"py": _syllables(w, raw, sp),
+                      "copies": n,
+                      "chars": list(w) if answers else [""] * len(w)}
+                     for w, raw in items],
+        })
         total += len(items)
 
     heading = sp.get("title", DEFAULTS["title"]) + ("（答案）" if answers else "")
@@ -99,17 +83,15 @@ def _render(sp: spec_lib.Spec, out_dir: Path, *, pdf: bool, answers: bool) -> bo
         heading += f'　{sp.get("date")}'
 
     hint_text = sp.get("hint", DEFAULTS["hint"])
-    hint = f'  <p class="hint">{html.escape(hint_text)}</p>\n' if hint_text and not answers else ""
 
-    body = (
-        f'<div class="sheet" style="--cell:{cell}mm; --gap:{gap}mm; --py:{py_size}px">\n'
-        f'  <div class="head">\n'
-        f'    <h1>{html.escape(heading)}</h1>\n'
-        f'    <div class="info">{"" if answers else INFO}</div>\n'
-        f"  </div>\n"
-        f"{hint}"
-        + "\n".join(blocks)
-        + f'\n  <div class="foot">共 {total} 项</div>\n</div>'
+    body = tmpl.body(
+        "practice/sheet.html",
+        cell=cell, gap=gap, py_size=py_size,
+        heading=heading,
+        info=page.sheet_info("得分", show=not answers),
+        hint=hint_text if hint_text and not answers else "",
+        blocks=blocks,
+        total=total,
     )
 
     name = sp.path.stem + ("-answers" if answers else "")
@@ -130,35 +112,15 @@ def _render(sp: spec_lib.Spec, out_dir: Path, *, pdf: bool, answers: bool) -> bo
 
 def _index(out_dir: Path, entries: list[dict]) -> None:
     """目录页。GitHub Pages 不列目录，所以必须自己生成一份。"""
-    rows = "\n".join(
-        f'    <li><a class="main" href="{e["href"]}">{html.escape(e["label"])}'
-        f'<small>{html.escape(e["sub"])}</small></a>'
-        + (f'<a class="pdf" href="{e["pdf"]}">打印单</a>' if e["pdf"] else "")
-        + "</li>"
-        for e in entries
-    ) or '    <li><span class="empty">还没有练习单 —— 往 storage/spec/chinese/practice/ 放一份 spec</span></li>'
-
-    body = f"""<main class="wrap">
-  <header class="hero">
-    <a class="back" href="../../">‹ 学习小站</a>
-    <h1>今日练习</h1>
-    <p class="sub">看拼音写汉字 · 共 {len(entries)} 份</p>
-  </header>
-  <ul class="list">
-{rows}
-  </ul>
-</main>"""
-
-    page.write(
-        out_dir / "index.html",
-        page.render(
-            title="今日练习 · 语文",
-            description="看拼音写汉字的 A4 打印单，点进去直接打印。",
-            body=body,
-            emoji="📖",
-            css=("site.css",),
-            root="../..",
-        ),
+    page.listing(
+        out_dir,
+        title="今日练习 · 语文",
+        description="看拼音写汉字的 A4 打印单，点进去直接打印。",
+        emoji="📖",
+        h1="今日练习",
+        sub=f"看拼音写汉字 · 共 {len(entries)} 份",
+        sections=[(None, entries)],
+        empty="还没有练习单 —— 往 storage/spec/chinese/practice/ 放一份 spec",
     )
     print(f"    → practice/index.html  （{len(entries)} 份）")
 
@@ -180,7 +142,7 @@ def build(dist: Path, pdf: bool = False) -> None:
         entries.append({
             "href": f"{path.stem}.html",
             "label": sp.get("title", DEFAULTS["title"]) + (f'　{sp.get("date")}' if sp.get("date") else ""),
-            "sub": " · ".join(f"{k} {v} 项" for k, v in counts.items()),
+            "small": " · ".join(f"{k} {v} 项" for k, v in counts.items()),
             "pdf": f"{path.stem}.pdf" if pdf_ok else None,
         })
 

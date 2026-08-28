@@ -7,7 +7,8 @@
 （老站五份 spec 直接能跑），改的是三处工程上的东西：
 
   · 骨架交给 lib/spec.py 解析 —— 老站那份自己写了一遍 key: value 和 [标签] 的解析
-  · 页面交给 lib/page.py + src/assets/{print,homework}.css —— 老站是 250 行内联 style
+  · 版式交给 src/templates/homework/sheet.html + src/assets/{print,homework}.css
+    —— 老站是 250 行内联 style
   · PDF 交给 lib/sheet.py（Chrome 路径自动探测，CI 里也能出）
 
 spec 长这样：
@@ -31,7 +32,7 @@ import math
 import re
 from pathlib import Path
 
-from lib import page, paths, sheet, spec as spec_lib
+from lib import page, paths, sheet, spec as spec_lib, tmpl
 
 SPECS = paths.spec("english", "homework")
 
@@ -106,33 +107,19 @@ def inline(text: str) -> str:
     return out
 
 
-def render_task(task: Task, no: int) -> str:
-    title = inline(task.title)
-    if task.tag:
-        title += f' <span class="tag">{inline(task.tag)}</span>'
-
-    body = [f'      <div class="title">{title}</div>']
-    for text in task.notes:
-        body.append(f'      <div class="sub">{inline(text)}</div>')
-    if task.items:
-        lis = "".join(f"<li>{inline(t)}</li>" for t in task.items)
-        body.append(f'      <ul class="sub">{lis}</ul>')
-    if task.words:
-        # 两列，按列填：grid-auto-flow:column + 行数固定
-        rows = math.ceil(len(task.words) / 2)
-        cells = "".join(
-            f'<div class="w"><i class="box"></i><b>{html.escape(w)}</b>'
-            f"<s>{html.escape(m)}</s></div>"
-            for w, m in task.words)
-        body.append(f'      <div class="words" style="grid-template-rows:repeat({rows},auto)">'
-                    f"{cells}</div>")
-
-    return (f'  <div class="task" style="--c:var(--c-{task.color})">\n'
-            f'    <div class="no">{no}</div>\n'
-            f'    <div class="body">\n' + "\n".join(body) + "\n"
-            f"    </div>\n"
-            f'    <i class="box big"></i>\n'
-            f"  </div>")
+def task_ctx(task: Task) -> dict:
+    """一项作业交给模板的形状 —— 标记全在模板里，这儿只做 inline 和分列算行数。"""
+    return {
+        "color": task.color,
+        "title": inline(task.title),
+        "tag": inline(task.tag) if task.tag else "",
+        "notes": [inline(t) for t in task.notes],
+        # 键不能叫 items —— Jinja 的 `t.items` 会取到 dict 自带的方法（见 lib/tmpl.py）
+        "bullets": [inline(t) for t in task.items],
+        "words": [{"word": w, "mean": m} for w, m in task.words],
+        # 两列，按列填：grid-auto-flow:column，所以要先算出行数
+        "word_rows": math.ceil(len(task.words) / 2) if task.words else 0,
+    }
 
 
 def render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, int]:
@@ -142,40 +129,17 @@ def render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, int]:
 
     date = sp.get("date", "")
     title = sp.get("title", DEFAULTS["title"])
-    memo_lines = sp.int_("memo", DEFAULTS["memo"])
-    memo = ""
-    if memo_lines:
-        lns = "\n".join('      <div class="ln"></div>' for _ in range(memo_lines))
-        memo = ('  <div class="memo">\n'
-                '      <div class="lb">今日备注 · 想记下来的话</div>\n'
-                f"{lns}\n"
-                "  </div>\n")
 
-    body = (
-        f'<div class="sheet">\n'
-        f'  <div class="head">\n'
-        f'    <div class="t">\n'
-        + (f'      <div class="date">{html.escape(date)}</div>\n' if date else "")
-        + f"      <div>\n"
-        f"        <h1>{html.escape(title)}</h1>\n"
-        f'        <div class="en">{html.escape(sp.get("subtitle", DEFAULTS["subtitle"]))}</div>\n'
-        f"      </div>\n"
-        f"    </div>\n"
-        f'    <div class="who">姓名 <i class="u"></i><span>家长签字 <i class="u"></i></span></div>\n'
-        f"  </div>\n\n"
-        f'  <div class="tip">\n'
-        f'    <span>{inline(sp.get("tip-left", DEFAULTS["tip-left"]))}</span>\n'
-        f'    <span>{inline(sp.get("tip-right", DEFAULTS["tip-right"]))}</span>\n'
-        f"  </div>\n\n"
-        + "\n".join(render_task(t, i + 1) for i, t in enumerate(tasks))
-        + "\n\n"
-        + memo
-        + f'  <div class="foot">\n'
-        f'    <div class="sign"><span>完成时间 <i class="u"></i></span>'
-        f"<span>今日自评 ☆☆☆☆☆</span></div>\n"
-        f'    <div class="cheer">{html.escape(sp.get("cheer", DEFAULTS["cheer"]))}</div>\n'
-        f"  </div>\n"
-        f"</div>"
+    body = tmpl.body(
+        "homework/sheet.html",
+        date=date,
+        title=title,
+        subtitle=sp.get("subtitle", DEFAULTS["subtitle"]),
+        tip_left=inline(sp.get("tip-left", DEFAULTS["tip-left"])),
+        tip_right=inline(sp.get("tip-right", DEFAULTS["tip-right"])),
+        tasks=[task_ctx(t) for t in tasks],
+        memo_lines=sp.int_("memo", DEFAULTS["memo"]),
+        cheer=sp.get("cheer", DEFAULTS["cheer"]),
     )
 
     out = page.write(
@@ -196,36 +160,20 @@ def render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, int]:
 
 
 def build_index(out_dir: Path, entries: list[dict]) -> None:
-    rows = "\n".join(
-        f'      <li>\n'
-        f'        <a class="main" href="{e["stem"]}.html">{html.escape(e["label"])}'
-        f'<small>{e["count"]} 项 · {e["en"]}</small></a>\n'
-        + (f'        <a class="pdf" href="{e["stem"]}.pdf">PDF</a>\n' if e["pdf"] else "")
-        + f"      </li>"
-        for e in entries
-    ) or '      <li><span class="empty">还没有打卡单 —— 往 storage/spec/english/homework/ 放一份 spec</span></li>'
-
-    body = f"""<main class="wrap">
-  <header class="hero">
-    <a class="back" href="../../">‹ 学习小站</a>
-    <h1>每日打卡</h1>
-    <p class="sub">群公告整理成一张 A4，打印出来打勾 · 共 {len(entries)} 份</p>
-  </header>
-  <ul class="list">
-{rows}
-  </ul>
-</main>"""
-
-    page.write(
-        out_dir / "index.html",
-        page.render(
-            title="每日打卡 · 英语",
-            description="每天的作业清单，整理成一张 A4 打印单，做完一项打一个勾。",
-            body=body,
-            emoji="✅",
-            css=("site.css",),
-            root="../..",
-        ),
+    page.listing(
+        out_dir,
+        title="每日打卡 · 英语",
+        description="每天的作业清单，整理成一张 A4 打印单，做完一项打一个勾。",
+        emoji="✅",
+        h1="每日打卡",
+        sub=f"群公告整理成一张 A4，打印出来打勾 · 共 {len(entries)} 份",
+        sections=[(None, [{"href": f'{e["stem"]}.html',
+                           "label": e["label"],
+                           "small": f'{e["count"]} 项 · {e["en"]}',
+                           "pdf": f'{e["stem"]}.pdf' if e["pdf"] else None}
+                          for e in entries])],
+        empty="还没有打卡单 —— 往 storage/spec/english/homework/ 放一份 spec",
+        pdf_label="PDF",
     )
     print(f"    → homework/index.html  （{len(entries)} 份）")
 

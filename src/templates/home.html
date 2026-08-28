@@ -1,0 +1,38 @@
+{#-
+  总入口页。三张学科卡片，内容全部来自 build.py 顶部的 SUBJECTS ——
+  **加科目 / 加栏目只改那一处**，这儿一行不用动。
+
+  state = ready 的栏目出 <a> 能点进去，soon 出 <span> 灰显。
+  .subj h2 和 .subj li > a/span 都是 flex，空白文本节点不生成盒子，随便缩进。
+-#}
+<main class="wrap">
+  <header class="hero">
+    <span class="eyebrow">HI-RUBY · STUDY</span>
+    <h1>学习小站</h1>
+    <p class="sub">语文 · 英语 · 数学，一处收齐</p>
+  </header>
+
+  <section class="subjects">
+{% for s in subjects %}
+<article class="subj" data-s="{{ s.key }}">
+  <h2><span class="emo">{{ s.emoji }}</span>{{ s.name }}<span class="cnt">{{ s.badge }}</span></h2>
+  <p class="note">{{ s.note }}</p>
+  <ul>
+{% for sec in s.sections %}
+{% if sec.state == 'ready' %}
+    <li><a href="{{ s.key }}/{{ sec.href }}">{{ sec.name }}<small>{{ sec.desc }}</small></a></li>
+{% else %}
+    <li><span>{{ sec.name }}<small>{{ sec.desc }}</small></span></li>
+{% endif %}
+{% endfor %}
+  </ul>
+</article>
+{% endfor %}
+  </section>
+
+  <p class="foot">
+    打印单点进栏目就能拿 PDF<br />
+    本地预览 <code>make up</code> · 线上由 GitHub Actions 构建<br />
+    构建于 {{ stamp }}
+  </p>
+</main>

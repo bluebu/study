@@ -69,11 +69,21 @@ Makefile              日常命令入口
 lib/
   paths.py            各层的位置。**改目录名只改这一个文件**
   spec.py             spec DSL 解析（三科共用）
-  page.py             HTML 页面骨架（head / og / 资产链接 / 页脚）
+  tmpl.py             Jinja2 环境。模板的三条规矩写在它的文档串里
+  page.py             页面骨架 + 目录页 + 打印单页眉（都只填模板，不拼字符串）
   site.py             站点常量：备案号、访问统计。改页脚只改这一个文件
   sheet.py            A4 → PDF（无头 Chrome，路径自动探测）
 src/
   CNAME               自定义域名，build.py 带进 dist/
+  templates/          **所有 HTML / SVG 标记**。改版式改这儿，不动 .py
+    page.html         全站页面骨架（head / og / 资产链接 / 页脚）
+    foot.html         页脚（备案号 + 统计）
+    home.html         总入口页的三张学科卡
+    list.html         目录页，五个栏目共用
+    sheet-info.html   打印单页眉「姓名 __ 日期 __ 得分 __」，三个栏目共用
+    practice/ miji/ ket/ homework/ retell/   各栏目的打印单版式
+    review/           成绩单 + 目录页 + 趋势页 + 按页注入的色变量
+    figures/          三把尺子 / 停顿地图 / 趋势曲线的 SVG
   assets/
     palette.css       色板单一真源
     print.css         A4 打印锁
@@ -109,6 +119,29 @@ def build(dist: Path, pdf: bool = False) -> None: ...
 ```
 
 `build.py` 会自动发现并调用（没有这个文件就跳过，不报错）。
+
+## HTML 模板（`src/templates/`）
+
+**Python 里不拼标记。** 生成器只出上下文：算好的数、选好的类名、处理过的富文本；
+`<div>` `<svg>` 那些全在 `src/templates/` 下的 `.html` / `.svg` 里。
+引擎是 Jinja2（唯一的第三方依赖，版本钉在 `requirements.txt`，CI 里 pip 装）。
+
+环境配置和三条规矩在 **`lib/tmpl.py`** 的文档串里，写代码前先读那一段。摘要：
+
+- `autoescape=True`，模板里不写 escape。**`|safe` 只给自己生成的 HTML**
+  （`rich()` / `marked()` / `inline()` / `figures.*` 这些内部先 escape 再插标签）
+- `StrictUndefined`：写错变量名当场报错，不是静默出一个空字符串
+- **上下文的键不许叫 `items` / `keys` / `values` / `get`** —— Jinja 的 `a.b` 先找属性，
+  `sec.items` 会拿到 dict 自带的方法。踩过两次
+- **行内元素之间不许留空白**：`.head .info`、`.foot .sign`、`.unit` 里的箭头、
+  `.d .en` 的「原文」标签、`.legend` 的色块，这几处换行会多出一个空格、版式就变了。
+  哪几处、为什么，各模板顶部的注释里写着
+- `trim_blocks` / `lstrip_blocks` 都开着，模板按正常缩进写。但注意：
+  `{% ... -%}` 和 `{#- ... -#}` 的**收尾减号会把下一行的缩进一起吃掉**，
+  该缩进的地方别写那个减号（macro 的 `endmacro` 那侧要写，起始那侧不能写）
+
+**行内标记替换留在 Python**：`**粗**` → `<b>`、`__` → 填空横线、`<<3>>` → 小方格、
+`<x>` → 划掉。这些是在一段文字**内部**按内容定位插标签，模板表达不了。
 
 ## spec DSL
 
@@ -192,6 +225,11 @@ noindex 的页面（孩子的成绩单）     → 只出备案号，不挂统计
 
 ## 自检（改完排版必看，但工具有坑）
 
+- **改模板要拿旧产物对比**：`make build` 前先 `cp -r dist <临时目录>`，改完
+  `diff -rq`。HTML 是确定性输出，**理想结果是字节级零差异**；有差异就得逐条能解释
+  （空白归一化、`&#x27;` vs `&#39;` 这类），解释不了的就是真改坏了。
+  空白差异再用真实视口截图做**像素比对**（`ImageChops.difference(...).getbbox()`
+  返回 `None` 才算过）—— 光看 diff 判断不了 flex/grid 里的空白到底有没有影响
 - **打印单**：Read 生成的 **PDF**，别凭 HTML 源码想象效果
 - **网页**：Chrome headless 截图**不能**用 `--window-size` 模拟手机视口 ——
   它的布局视口恒为 **500px**，`--window-size` 只是把 500px 的渲染结果裁成那个尺寸。

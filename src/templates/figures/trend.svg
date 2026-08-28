@@ -1,0 +1,22 @@
+{#-
+  趋势折线。数据来自 storage/result/english/review.csv（result 层），不是从 spec 现算的。
+
+  x **等距**排开，不按真实日期间距 —— 朗读不是每天都有，按日期排会挤成一堆，
+  而且同一天读两页就重叠了（p68 / p69 就是同一天）。标签写页码，日期在下面的表里。
+  y 超出 [lo, hi] 的夹住，免得一次异常把整张图压平。
+  右侧留白 PAD：末点的 x 标签 text-anchor=middle，留少了会伸出 viewBox 被裁掉。
+-#}
+<svg viewBox="0 0 {{ W }} {{ view_h }}" role="img" aria-label="{{ n }} 次朗读的{{ unit }}变化，从 {{ first }} 到 {{ last }}">
+{% for t in ticks %}
+<line x1="{{ GUT }}" y1="{{ t.y }}" x2="{{ right }}" y2="{{ t.y }}" stroke="var(--line)" stroke-width="2"/>
+<text x="{{ label_x }}" y="{{ t.ty }}" font-size="28" fill="var(--ink-soft)" text-anchor="end">{{ t.v }}</text>
+{% endfor %}
+<path d="{{ path }}" fill="none" stroke="{{ color }}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+{% for p in points %}
+<circle cx="{{ p.x }}" cy="{{ p.y }}" r="10" fill="var(--card)" stroke="{{ color }}" stroke-width="5"/>
+<text x="{{ p.x }}" y="{{ p.vy }}" font-size="30" font-weight="700" fill="{{ color }}" text-anchor="middle">{{ p.v }}</text>
+<text x="{{ p.x }}" y="{{ label_y }}" font-size="28" fill="var(--ink-soft)" text-anchor="middle">{{ p.label }}</text>
+{% endfor %}
+<line x1="{{ GUT }}" y1="{{ bot }}" x2="{{ right }}" y2="{{ bot }}" stroke="var(--line)" stroke-width="3"/>
+<text x="{{ right }}" y="{{ unit_y }}" font-size="26" fill="var(--ink-soft)" text-anchor="end">{{ unit }}</text>
+</svg>

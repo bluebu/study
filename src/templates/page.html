@@ -1,0 +1,37 @@
+{#-
+  全站页面骨架。每一页都从这儿出去。
+
+  og:title / og:description **逐字照抄本页 title / description** —— 老站定下来的
+  约定：分享到群里的卡片必须和页面标题一致，所以这两处不许分开写。
+
+  links / extra_head / body / foot 都是自己生成的 HTML，所以 |safe；
+  title / description 是输入，交给 autoescape。
+-#}
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>{{ title }}</title>
+{% if description %}
+<meta name="description" content="{{ description }}" />
+{% endif %}
+{% if noindex %}
+<meta name="robots" content="noindex, nofollow, noarchive" />
+{% endif %}
+<meta name="theme-color" content="{{ theme }}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ title }}" />
+{% if description %}
+<meta property="og:description" content="{{ description }}" />
+{% endif %}
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>{{ emoji }}</text></svg>" />
+{% for s in sheets %}
+<link rel="stylesheet" href="{{ root }}/assets/{{ s }}" />
+{% endfor %}
+{{ extra_head|safe }}</head>
+<body>
+{{ body|safe }}
+{{ foot|safe }}
+</body>
+</html>

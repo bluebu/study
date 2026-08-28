@@ -2,7 +2,7 @@
 
 从老站 ../english/ket/ 搬过来，格式一条没动（用户拍过板），改的只是地基：
 Chrome 路径不再写死（走 lib/sheet.py 自动探测）、样式抽进 src/assets/ket.css、
-页面骨架走 lib/page.py、目录页由脚本生成而不是手写 18 KB 的 index.html。
+版式抽进 src/templates/ket/sheet.html、目录页由脚本生成而不是手写 18 KB 的 index.html。
 
     storage/spec/english/ket/words/<NN>_<主题>.csv    词表（唯一输入，带 BOM）
     storage/spec/english/ket/selections/<名字>.txt    抽选卷 spec（跨主题挑词）
@@ -22,17 +22,13 @@ Chrome 路径不再写死（走 lib/sheet.py 自动探测）、样式抽进 src/
 from __future__ import annotations
 
 import csv
-import html
 import re
 from pathlib import Path
 
-from lib import page, paths, sheet, spec as spec_lib
+from lib import page, paths, sheet, spec as spec_lib, tmpl
 
 WORDS = paths.spec("english", "ket", "words")
 SELECTIONS = paths.spec("english", "ket", "selections")
-
-INFO = ('姓名 <span class="blank"></span> 日期 <span class="blank"></span> '
-        '得分 <span class="blank"></span>')
 
 PER_PAGE = 30        # 默写卷：2 栏 × 15 行。四线格 11mm + row-gap 20px 正好一页
 
@@ -101,45 +97,33 @@ def read_rows(src: Path) -> list[dict]:
 
 # ── 一个词位 ──────────────────────────────────────────────
 
-def _pos(row: dict) -> str:
-    p = row["pos"].strip()
-    return f'<span class="pos">{html.escape(p)}</span>' if p else ""
-
-
 def _no(row: dict, fallback: int) -> str:
     return (row.get("no", "").strip() or str(fallback)) + "."
 
 
-def _item(row: dict, fallback: int) -> str:
-    """默写版：序号 + 中文 + 词性 + 四线三格。"""
-    return ('    <div class="item"><span class="no">' + html.escape(_no(row, fallback))
-            + f'</span><span class="zh">{html.escape(row["meaning"])}</span>'
-            + _pos(row) + '<span class="four"></span></div>')
+def _item(row: dict, fallback: int) -> dict:
+    """默写版一个词位：序号 + 中文 + 词性 + 四线三格。"""
+    return {"kind": "item", "no": _no(row, fallback),
+            "zh": row["meaning"], "pos": row["pos"].strip()}
 
 
-def _ans_item(row: dict, fallback: int) -> str:
-    """答案版：序号 + 中文 + 词性 → 英文（靠右）+ 音标。"""
-    ph = row["phonetic"].strip()
-    return ('    <div class="ans"><span class="no">' + html.escape(_no(row, fallback))
-            + f'</span><span class="zh">{html.escape(row["meaning"])}</span>'
-            + _pos(row)
-            + f'<span class="en">{html.escape(row["word"])}</span>'
-            + (f'<span class="ph">{html.escape(ph)}</span>' if ph else "")
-            + "</div>")
+def _ans_item(row: dict, fallback: int) -> dict:
+    """答案版一个词位：序号 + 中文 + 词性 → 英文（靠右）+ 音标。"""
+    return {"no": _no(row, fallback), "zh": row["meaning"],
+            "pos": row["pos"].strip(), "en": row["word"],
+            "ph": row["phonetic"].strip()}
 
 
-SECTION = '    <div class="item section">{title}</div>'
-PAD = '    <div class="item pad"></div>'
+PAD = {"kind": "pad"}
 
 
-def _page(title: str, items: list[str], total: int, page_no: int,
-          page_count: int, *, cls: str = "", info: str = INFO) -> str:
-    return (f'<div class="sheet">\n  <div class="head">\n'
-            f"    <h1>{html.escape(title)}</h1>\n"
-            f'    <div class="info">{info}</div>\n  </div>\n'
-            f'  <div class="items{cls}">\n' + "\n".join(items) + "\n  </div>\n"
-            f'  <div class="foot">共 {total} 词 · 第 {page_no}/{page_count} 页</div>\n'
-            "</div>")
+def _page(title: str, cells: list[dict], total: int, page_no: int,
+          page_count: int, *, cls: str = "", info: str | None = None) -> str:
+    if info is None:
+        info = page.sheet_info("得分")
+    return tmpl.body("ket/sheet.html", title=title, info=info, cls=cls,
+                     cells=cells, total=total,
+                     page_no=page_no, page_count=page_count)
 
 
 def _write(out_dir: Path, stem: str, title: str, pages: list[str], pdf: bool) -> bool:
@@ -162,23 +146,19 @@ def _write(out_dir: Path, stem: str, title: str, pages: list[str], pdf: bool) ->
 def _answer_doc(sections: list[tuple[str, list[dict]]], stem: str, title: str,
                 out_dir: Path, pdf: bool) -> dict:
     """答案对照版：整组不跨页，章节标题也不落在页尾（后面至少跟一组）。"""
-    blocks, total = [], 0        # blocks: (高度, html, 是不是章节标题)
+    blocks, total = [], 0        # blocks: (高度, cell, 是不是章节标题)
     for sec_title, rows in sections:
         total += len(rows)
         blocks.append((ANS_SEC_H + ANS_SEC_GAP,
-                       f'  <div class="ans section">{html.escape(sec_title)}</div>', True))
+                       {"kind": "ans-section", "title": sec_title}, True))
         items = [_ans_item(r, i) for i, r in enumerate(rows, 1)]
         groups = [items[i:i + ANS_GROUP] for i in range(0, len(items), ANS_GROUP)]
         for i in range(0, len(groups), 2):
             pair = groups[i:i + 2]
             n = max(len(g) for g in pair)
-            inner = "\n".join(
-                '    <div class="group">\n' + "\n".join("  " + it for it in g)
-                + "\n    </div>" for g in pair)
-            band = (f'  <div class="band{"" if (i // 2) % 2 == 0 else " alt"}">\n'
-                    f"{inner}\n  </div>")
             blocks.append((n * ANS_ROW_H + (n - 1) * ANS_ROW_GAP + ANS_BAND_GAP,
-                           band, False))
+                           {"kind": "band", "alt": (i // 2) % 2 == 1, "groups": pair},
+                           False))
 
     paged, cur, used = [], [], 0
     for i, (h, cell, is_sec) in enumerate(blocks):
@@ -216,7 +196,7 @@ def _doc(sections: list[tuple[str, list[dict]]], stem: str, title: str,
             used += 1
         if used % PER_PAGE == PER_PAGE - 2:     # 标题别落在页面最后一行
             cells += [(1, PAD), (1, PAD)]
-        cells.append((2, SECTION.format(title=html.escape(sec_title))))
+        cells.append((2, {"kind": "section", "title": sec_title}))
         cells += [(1, _item(r, i)) for i, r in enumerate(rows, 1)]
 
     paged, cur, used = [], [], 0
@@ -318,40 +298,22 @@ def _selection(path: Path, out_dir: Path, pdf: bool, answers: bool) -> dict:
 # ── 目录页 ────────────────────────────────────────────────
 
 def _index(out_dir: Path, groups: list[tuple[str, list[dict]]]) -> None:
-    secs = []
-    for name, entries in groups:
-        if not entries:
-            continue
-        rows = "\n".join(
-            f'    <li><a class="main" href="{e["stem"]}.html">{html.escape(e["title"])}'
-            f'<small>{e["total"]} 词 · {e["pages"]} 页</small></a>'
-            + (f'<a class="pdf" href="{e["stem"]}.pdf">打印单</a>' if e["pdf"] else "")
-            + "</li>"
-            for e in entries
-        )
-        secs.append(f'  <h2 class="sec">{html.escape(name)}</h2>\n'
-                    f'  <ul class="list">\n{rows}\n  </ul>')
-
     total = sum(len(e) for _, e in groups)
-    body = f"""<main class="wrap" style="--accent: var(--english); --accent-bg: var(--english-bg)">
-  <header class="hero">
-    <a class="back" href="../../">‹ 学习小站</a>
-    <h1>词汇默写</h1>
-    <p class="sub">KET 核心词 · 看中文写英文 · 共 {total} 份</p>
-  </header>
-{chr(10).join(secs)}
-</main>"""
-
-    page.write(
-        out_dir / "index.html",
-        page.render(
-            title="词汇默写 · 英语",
-            description="KET 核心词汇的 A4 默写卷：看中文写英文，四线三格，点进去直接打印。",
-            body=body,
-            emoji="🔤",
-            css=("site.css",),
-            root="../..",
-        ),
+    page.listing(
+        out_dir,
+        title="词汇默写 · 英语",
+        description="KET 核心词汇的 A4 默写卷：看中文写英文，四线三格，点进去直接打印。",
+        emoji="🔤",
+        h1="词汇默写",
+        sub=f"KET 核心词 · 看中文写英文 · 共 {total} 份",
+        # 空的那节整节不出（没有抽选卷时不该留一个空标题）
+        sections=[(name, [{"href": f'{e["stem"]}.html',
+                           "label": e["title"],
+                           "small": f'{e["total"]} 词 · {e["pages"]} 页',
+                           "pdf": f'{e["stem"]}.pdf' if e["pdf"] else None}
+                          for e in entries])
+                  for name, entries in groups if entries],
+        accent="english",
     )
     print(f"    → ket/index.html  （{total} 份）")
 

@@ -14,7 +14,11 @@
 SVG 里不写死任何色值 —— 换色只改色板一处。
 
 用法：import 后调 block(...) / timeline_svg(...)，返回可直接塞进报告页的 HTML 片段。
+标记（那些 <svg> / <rect> / <text>）全在 `src/templates/figures/` 下，
+**这个文件只算坐标** —— 换版式改模板，改常模改下面那两张表。
 """
+
+from lib import tmpl
 
 # Hasbrouck & Tindal 2017 · Table 4 · 秋季（10 / 25 / 50 / 75 / 90 百分位）
 ORF_FALL = {
@@ -33,108 +37,73 @@ NAEP = [
 
 
 def accuracy_svg(acc, prev=None):
-    """准确率标尺：88%–100%，三档分区。
+    """准确率标尺：88%–100%，三档分区。标记在 templates/figures/accuracy.svg。
 
-    字号按 viewBox 单位给：整张图在手机上会被压到 ~310px 宽（缩放约 0.31），
-    32 号字落地才 10px 出头 —— 别再往小调。
+    档位分界（95 / 98）来自 Fountas & Pinnell，见本文件顶部的出处。
     """
     lo, hi, W = 88.0, 100.0, 1000.0
     x = lambda v: round((v - lo) / (hi - lo) * W, 1)
     y, h = 34, 64
-    s = [f'<svg viewBox="0 -32 {W:.0f} 240" role="img" '
-         f'aria-label="准确率 {acc}% 落在 Fountas &amp; Pinnell 的哪一档">']
-    for a, b, fill, name in [(lo, 95, 'var(--sc-hard)', '偏难'),
-                             (95, 98, 'var(--sc-inst)', '要带一带'),
-                             (98, hi, 'var(--sc-indep)', '能自己读')]:
-        s.append(f'<rect x="{x(a)}" y="{y}" width="{x(b)-x(a)}" height="{h}" fill="{fill}"/>')
-        s.append(f'<text x="{(x(a)+x(b))/2}" y="{y+h/2+11}" font-size="32" fill="var(--ink)" '
-                 f'text-anchor="middle" opacity=".7">{name}</text>')
-    s.append(f'<rect x="0" y="{y}" width="{W:.0f}" height="{h}" rx="10" fill="none" '
-             f'stroke="var(--line)" stroke-width="2"/>')
-    for v in (95, 98):
-        s.append(f'<line x1="{x(v)}" y1="{y}" x2="{x(v)}" y2="{y+h}" stroke="var(--card)" stroke-width="4"/>')
-        s.append(f'<text x="{x(v)}" y="{y+h+34}" font-size="28" fill="var(--ink-soft)" '
-                 f'text-anchor="middle">{v}%</text>')
-    if prev is not None:
-        s.append(f'<circle cx="{x(prev)}" cy="{y+h+64}" r="9" fill="none" '
-                 f'stroke="var(--ink-soft)" stroke-width="3"/>')
-        s.append(f'<text x="{x(prev)}" y="{y+h+112}" font-size="28" fill="var(--ink-soft)" '
-                 f'text-anchor="middle">上一页 {prev}%</text>')
-    s.append(f'<path d="M{x(acc)} {y-4} l-13 -18 h26 z" fill="var(--read)"/>')
-    s.append(f'<text x="{x(acc)}" y="{y-34}" font-size="36" font-weight="700" fill="var(--read)" '
-             f'text-anchor="middle">本页 {acc}%</text>')
-    s.append('</svg>')
-    return '\n'.join(s)
+    return tmpl.render(
+        "figures/accuracy.svg",
+        acc=acc, W=f"{W:.0f}", y=y, h=h, y2=y + h,
+        zones=[{"x": x(a), "w": x(b) - x(a), "mid": (x(a) + x(b)) / 2,
+                "ty": y + h / 2 + 11, "fill": fill, "name": name}
+               for a, b, fill, name in [(lo, 95, "var(--sc-hard)", "偏难"),
+                                        (95, 98, "var(--sc-inst)", "要带一带"),
+                                        (98, hi, "var(--sc-indep)", "能自己读")]],
+        ticks=[{"x": x(v), "v": v, "ty": y + h + 34} for v in (95, 98)],
+        prev=None if prev is None else
+             {"x": x(prev), "cy": y + h + 64, "ty": y + h + 112, "v": prev},
+        mark={"x": x(acc), "y": y - 4, "ty": y - 34},
+    ).rstrip("\n")
 
 
 def wcpm_svg(wcpm):
-    """WCPM 标尺：各年级秋季 10–90 百分位带 + 本次位置。"""
+    """WCPM 标尺：各年级秋季 10–90 百分位带 + 本次位置。
+
+    标记在 templates/figures/wcpm.svg，这儿只算坐标。
+    常模数值在 ORF_FALL（Hasbrouck & Tindal 2017 Table 4 秋季列），别动。
+    """
     W, GUT, MAX = 1000.0, 176.0, 190.0
     x = lambda v: round(GUT + v / MAX * (W - GUT), 1)
     rows, rh, gap, top = list(ORF_FALL.items()), 44, 16, 34
     bottom = top + len(rows) * (rh + gap) - gap
-    s = [f'<svg viewBox="0 -32 {W:.0f} {bottom+212:.0f}" role="img" '
-         f'aria-label="每分钟正确词数 {wcpm} 与美国母语学生各年级秋季常模的比较">']
+    ax = bottom + 20
+    l1, l2 = ax + 86, ax + 138
+
+    grades = []
     for i, (grade, (p10, p25, p50, p75, p90)) in enumerate(rows):
         yy = top + i * (rh + gap)
-        s.append(f'<text x="{GUT-18}" y="{yy+rh/2+11}" font-size="32" fill="var(--ink-soft)" '
-                 f'text-anchor="end">{grade}</text>')
-        s.append(f'<rect x="{x(p10)}" y="{yy+11}" width="{x(p90)-x(p10)}" height="{rh-22}" rx="6" '
-                 f'fill="var(--sc-band1)"/>')
-        s.append(f'<rect x="{x(p25)}" y="{yy}" width="{x(p75)-x(p25)}" height="{rh}" rx="8" '
-                 f'fill="var(--sc-band2)"/>')
-        s.append(f'<line x1="{x(p50)}" y1="{yy-5}" x2="{x(p50)}" y2="{yy+rh+5}" '
-                 f'stroke="var(--sc-mid)" stroke-width="5"/>')
-    s.append(f'<line x1="{x(wcpm)}" y1="6" x2="{x(wcpm)}" y2="{bottom+8}" stroke="var(--tl-long)" '
-             f'stroke-width="4" stroke-dasharray="9 7"/>')
-    s.append(f'<text x="{x(wcpm)}" y="-4" font-size="36" font-weight="700" fill="var(--tl-long)" '
-             f'text-anchor="middle">本页 {wcpm}</text>')
-    ax = bottom + 20
-    s.append(f'<line x1="{GUT}" y1="{ax}" x2="{W:.0f}" y2="{ax}" stroke="var(--line)" stroke-width="2"/>')
-    for v in (0, 50, 100, 150):
-        s.append(f'<line x1="{x(v)}" y1="{ax}" x2="{x(v)}" y2="{ax+9}" stroke="var(--ink-soft)" stroke-width="2"/>')
-        s.append(f'<text x="{x(v)}" y="{ax+40}" font-size="28" fill="var(--ink-soft)" text-anchor="middle">{v}</text>')
-    s.append(f'<text x="{W:.0f}" y="{ax+40}" font-size="26" fill="var(--ink-soft)" text-anchor="end">WCPM</text>')
-    l1, l2 = ax + 86, ax + 138
-    s.append(f'<rect x="{GUT}" y="{l1-23}" width="48" height="25" rx="6" fill="var(--sc-band2)"/>')
-    s.append(f'<text x="{GUT+66}" y="{l1}" font-size="28" fill="var(--ink-soft)">中间一半 · 25–75 百分位</text>')
-    s.append(f'<line x1="{GUT+22}" y1="{l2-27}" x2="{GUT+22}" y2="{l2+4}" stroke="var(--sc-mid)" stroke-width="5"/>')
-    s.append(f'<text x="{GUT+66}" y="{l2}" font-size="28" fill="var(--ink-soft)">一半人在这条线上 · 50 百分位</text>')
-    s.append('</svg>')
-    return '\n'.join(s)
+        grades.append({
+            "grade": grade, "y": yy, "ty": yy + rh / 2 + 11,
+            "x10": x(p10), "w10": x(p90) - x(p10), "y_band1": yy + 11, "h_band1": rh - 22,
+            "x25": x(p25), "w25": x(p75) - x(p25),
+            "x50": x(p50), "y_mid1": yy - 5, "y_mid2": yy + rh + 5,
+        })
 
-
-def naep_html(level):
-    out = ['      <div class="naep">']
-    for lv, desc in NAEP:
-        cls = ' now' if lv == level else ''
-        tag = '<span class="you">在这里</span>' if lv == level else ''
-        out.append(f'        <div class="nv{cls}"><span class="lv">{lv}</span>'
-                   f'<span class="ds">{desc}</span>{tag}</div>')
-    out.append('      </div>')
-    return '\n'.join(out)
+    return tmpl.render(
+        "figures/wcpm.svg",
+        wcpm=wcpm, W=f"{W:.0f}", view_h=f"{bottom + 212:.0f}",
+        GUT=GUT, gut_label=GUT - 18, rh=rh,
+        grades=grades,
+        now={"x": x(wcpm), "y2": bottom + 8},
+        ax=ax, ax9=ax + 9, ax40=ax + 40,
+        ticks=[{"x": x(v), "v": v} for v in (0, 50, 100, 150)],
+        lg={"band_y": l1 - 23, "text_x": GUT + 66, "l1": l1, "l2": l2,
+            "tick_x": GUT + 22, "tick_y1": l2 - 27, "tick_y2": l2 + 4},
+    ).rstrip("\n")
 
 
 def block(acc, wcpm, level, notes, prev_acc=None):
-    """notes = (准确率一句话, WCPM 一句话, NAEP 一句话)"""
-    ind = lambda svg: '\n'.join('      ' + l for l in svg.split('\n'))
-    return f"""    <h2 class="mini-h"><span>📍</span> 三把尺子上的位置</h2>
-    <section class="box scales">
-
-      <p class="sc-h">准确率 · Fountas &amp; Pinnell 分档</p>
-{ind(accuracy_svg(acc, prev_acc))}
-      <p class="sc-note">{notes[0]}</p>
-
-      <p class="sc-h sc-sep">每分钟正确词数 · Hasbrouck &amp; Tindal 2017 秋季常模</p>
-{ind(wcpm_svg(wcpm))}
-      <p class="sc-note">{notes[1]}</p>
-
-      <p class="sc-h sc-sep">断句语调 · NAEP 朗读流利度 4 级</p>
-{naep_html(level)}
-      <p class="sc-note">{notes[2]}</p>
-
-    </section>
-"""
+    """三把尺子整块。notes = (准确率一句话, WCPM 一句话, NAEP 一句话)，顺序固定。"""
+    return tmpl.render(
+        "figures/scales.html",
+        accuracy_svg=accuracy_svg(acc, prev_acc),
+        wcpm_svg=wcpm_svg(wcpm),
+        naep=[{"level": lv, "desc": desc, "now": lv == level} for lv, desc in NAEP],
+        notes=notes,
+    )
 
 
 def timeline_svg(data, bounds, stalls):
@@ -154,27 +123,29 @@ def timeline_svg(data, bounds, stalls):
         return 'long' if p['dur'] >= .8 else 'mid'
 
     counts = {'end': 0, 'long': 0, 'mid': 0}
-    out = [f'<rect x="0" y="{TOP}" width="{W:.0f}" height="{H:.0f}" rx="8" fill="var(--tl-speech)"/>']
+    pauses = []
     for p in P:
         k = kind(p); counts[k] += 1
-        w = max(x(p['end']) - x(p['start']), 1.4)
-        out.append(f'<rect x="{x(p["start"])}" y="{TOP}" width="{w}" height="{H:.0f}" fill="var(--tl-{k})"/>')
-    out.append(f'<rect x="0" y="{TOP}" width="{W:.0f}" height="{H:.0f}" rx="8" fill="none" '
-               f'stroke="var(--line)" stroke-width="1.5"/>')
+        pauses.append({"x": x(p["start"]), "kind": k,
+                       # 最窄 1.4：再细就看不见了，一次歇气该在图上留下痕迹
+                       "w": max(x(p["end"]) - x(p["start"]), 1.4)})
+
     step = 10 if D <= 120 else 20 if D <= 300 else 60   # 长录音刻度放宽，否则末尾两个标签会叠在一起
-    ticks = list(range(0, int(D) + 1, step))
-    for t in ticks:
-        anchor = 'start' if t == ticks[0] else 'end' if t == ticks[-1] else 'middle'
-        out.append(f'<line x1="{x(t)}" y1="{TOP+H}" x2="{x(t)}" y2="{TOP+H+5}" stroke="var(--ink-soft)" stroke-width="1.4"/>')
-        out.append(f'<text x="{x(t)}" y="{TOP+H+20}" font-size="15" fill="var(--ink-soft)" text-anchor="{anchor}">{t}s</text>')
-    for a, b, label in stalls:
-        out.append(f'<path d="M{x(a)} {TOP-8} L{x(a)} {TOP-14} L{x(b)} {TOP-14} L{x(b)} {TOP-8}" '
-                   f'fill="none" stroke="var(--tl-long)" stroke-width="2"/>')
-        out.append(f'<text x="{(x(a)+x(b))/2}" y="{TOP-20}" font-size="16" font-weight="700" '
-                   f'fill="var(--tl-long)" text-anchor="middle">{label}</text>')
-    svg = (f'<svg viewBox="0 -4 {W:.0f} {TOP+H+28:.0f}" role="img" aria-label="{int(D)} 秒朗读的停顿分布：'
-           f'绿色是发声，蓝色是句末停顿，橙色和灰色是句中停顿">\n'
-           + ''.join(f'  {s}\n' for s in out) + '</svg>')
+    tk = list(range(0, int(D) + 1, step))
+
+    svg = tmpl.render(
+        "figures/timeline.svg",
+        W=f"{W:.0f}", H=f"{H:.0f}", TOP=TOP, view_h=f"{TOP + H + 28:.0f}",
+        seconds=int(D),
+        pauses=pauses,
+        base=TOP + H, base5=TOP + H + 5, base20=TOP + H + 20,
+        ticks=[{"x": x(t), "v": t,
+                "anchor": "start" if t == tk[0] else "end" if t == tk[-1] else "middle"}
+               for t in tk],
+        stalls=[{"x1": x(a), "x2": x(b), "mid": (x(a) + x(b)) / 2, "label": label}
+                for a, b, label in stalls],
+        y_bracket_lo=TOP - 8, y_bracket_hi=TOP - 14, y_label=TOP - 20,
+    ).rstrip("\n")
     return svg, counts
 
 
@@ -197,30 +168,18 @@ def trend_svg(points, lo, hi, ticks, unit="", color="var(--c-read)"):
     x = lambda i: round(GUT + i * (W - GUT - PAD) / (n - 1), 1)
     y = lambda v: round(TOP + (1 - (min(max(v, lo), hi) - lo) / (hi - lo)) * H, 1)
 
-    s = [f'<svg viewBox="0 0 {W:.0f} {bot + 96:.0f}" role="img" '
-         f'aria-label="{n} 次朗读的{unit}变化，从 {points[0][1]} 到 {points[-1][1]}">']
-    for v in ticks:
-        s.append(f'<line x1="{GUT}" y1="{y(v)}" x2="{W - PAD:.0f}" y2="{y(v)}" '
-                 f'stroke="var(--line)" stroke-width="2"/>')
-        s.append(f'<text x="{GUT - 16}" y="{y(v) + 10}" font-size="28" fill="var(--ink-soft)" '
-                 f'text-anchor="end">{v}</text>')
-    d = " ".join(f"{'M' if i == 0 else 'L'}{x(i)} {y(v)}"
-                 for i, (_, v) in enumerate(points))
-    s.append(f'<path d="{d}" fill="none" stroke="{color}" stroke-width="5" '
-             f'stroke-linecap="round" stroke-linejoin="round"/>')
-    for i, (label, v) in enumerate(points):
-        s.append(f'<circle cx="{x(i)}" cy="{y(v)}" r="10" fill="var(--card)" '
-                 f'stroke="{color}" stroke-width="5"/>')
-        s.append(f'<text x="{x(i)}" y="{y(v) - 26}" font-size="30" font-weight="700" '
-                 f'fill="{color}" text-anchor="middle">{v}</text>')
-        s.append(f'<text x="{x(i)}" y="{bot + 44}" font-size="28" fill="var(--ink-soft)" '
-                 f'text-anchor="middle">{label}</text>')
-    s.append(f'<line x1="{GUT}" y1="{bot}" x2="{W - PAD:.0f}" y2="{bot}" '
-             f'stroke="var(--line)" stroke-width="3"/>')
-    s.append(f'<text x="{W - PAD:.0f}" y="{bot + 88}" font-size="26" fill="var(--ink-soft)" '
-             f'text-anchor="end">{unit}</text>')
-    s.append('</svg>')
-    return "\n".join(s)
+    return tmpl.render(
+        "figures/trend.svg",
+        W=f"{W:.0f}", view_h=f"{bot + 96:.0f}", GUT=GUT, right=f"{W - PAD:.0f}",
+        bot=bot, label_x=GUT - 16, label_y=bot + 44, unit_y=bot + 88,
+        n=n, unit=unit, color=color,
+        first=points[0][1], last=points[-1][1],
+        ticks=[{"y": y(v), "ty": y(v) + 10, "v": v} for v in ticks],
+        path=" ".join(f"{'M' if i == 0 else 'L'}{x(i)} {y(v)}"
+                      for i, (_, v) in enumerate(points)),
+        points=[{"x": x(i), "y": y(v), "vy": y(v) - 26, "v": v, "label": label}
+                for i, (label, v) in enumerate(points)],
+    ).rstrip("\n")
 
 
 # ── 分数色：越差越红 ────────────────────────────────────────────

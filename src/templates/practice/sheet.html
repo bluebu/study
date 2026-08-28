@@ -1,0 +1,30 @@
+{#-
+  语文今日练习 —— 看拼音写汉字，一项 = 拼音行 + 若干行田字格。
+
+  ⚠️ `.head .info` 是 white-space:nowrap 的普通块，「姓名 」「日期 」后面那些空格
+  是有意的，所以整串当可信 HTML 传进来（INFO 常量），不在模板里拆。
+
+  田字格这块不用担心空白：`.items` 和 `.tian-row` 都是 grid、`.item` 和 `.py` 是
+  flex / inline-grid，空白文本节点不生成盒子。**相邻格靠 .tian + .tian 的负边距
+  共享边线**（grid.css），别在这儿给格子加包装元素 —— 相邻边会叠成双倍粗线。
+-#}
+<div class="sheet" style="--cell:{{ cell }}mm; --gap:{{ gap }}mm; --py:{{ py_size }}px">
+  <div class="head">
+    <h1>{{ heading }}</h1>
+    <div class="info">{{ info|safe }}</div>
+  </div>
+{% if hint %}
+  <p class="hint">{{ hint }}</p>
+{% endif %}
+{% for blk in blocks %}
+  <div class="block">
+    <h2>{{ blk.label }}</h2>
+    <div class="items">
+{% for it in blk.rows %}
+      <div class="item"><div class="py">{% for s in it.py %}<span>{{ s }}</span>{% endfor %}</div>{% for _ in range(it.copies) %}<div class="tian-row">{% for c in it.chars %}<i class="tian">{{ c }}</i>{% endfor %}</div>{% endfor %}</div>
+{% endfor %}
+    </div>
+  </div>
+{% endfor %}
+  <div class="foot">共 {{ total }} 项</div>
+</div>

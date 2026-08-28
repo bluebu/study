@@ -1,0 +1,40 @@
+{#-
+  计算秘籍 第 1 页 —— 昨天错在哪。整页一个 3 列 grid（.diag），
+  9 题那组占满一行、单题组并排一行，所以 .wrong 的 `one` 类不能丢。
+
+  ⚠️ `.wrong h2` 是普通块，`{{ head }}<span class="n">` 中间不许有空白 ——
+  .n 靠 margin-left:8px 拉开，多一个空格就变成 8px + 一个空格宽。
+  .ws 是 grid、.w 是 flex，那两层随便缩进。
+
+  `ex`/`why` 里的 `|safe` 是 _mark() 出来的：它先 escape 再插 <span class="cut">。
+-#}
+<div class="sheet diag">
+  <div class="head">
+    <h1>{{ heading }}</h1>
+    <div class="info">{{ score }}</div>
+  </div>
+{% for g in wrongs %}
+  <section class="wrong{{ ' one' if g.rows|length == 1 }}">
+    <h2>{{ g.head }}{% if g.tag %}<span class="n">{{ g.tag }}</span>{% endif %}</h2>
+    <div class="ws">
+{% for w in g.rows %}
+      <div class="w"><span class="e">{{ w.q }}</span><s>{{ w.bad }}</s><b>{{ w.good }}</b></div>
+{% endfor %}
+    </div>
+  </section>
+{% endfor %}
+{% if compare %}
+  <section class="compare">
+{% if compare.head %}
+    <h3>{{ compare.head }}</h3>
+{% endif %}
+{% for r in compare.rows %}
+    <div class="{{ r.cls }}"><div class="ex">{{ r.ex|safe }}</div><div class="why">{{ r.why }}</div></div>
+{% endfor %}
+  </section>
+{% endif %}
+{% if tip %}
+  <div class="tip">{{ tip }}</div>
+{% endif %}
+  <div class="foot">错 {{ total }} 题</div>
+</div>
