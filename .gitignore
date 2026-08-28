@@ -11,17 +11,17 @@ __pycache__/
 # 本地素材（作业照片 / 录音，不上传）
 inbox/
 
-# 喂数据台（../feeder）的中间产物，都不进 git：
-#   *.marked.png   核对图，看一眼框对不对就没用了
-#   *.page.json    整页 OCR + 每行每词的坐标，85 KB 一份。真正的输入是
-#   *.cards.json   人核对定稿的那份，这些只是它的来路
-#   *.board.json
-#   *.draft.*      机器出的候选（词表 CSV、复述关键词、拼音）。
-#                  **人核对完另存成正式文件名**再进 git —— 没核过的不许混进来
-# 数据本身（.read.json / .ref.txt / .json / .words.tsv）要进 git ——
-# 录音和教材照片不进仓库，那些测量再也算不出来。
+# 喂数据台（../feeder）的过程产物和候选，都不进 git：
+#   *.marked.png / *.page.json / *.cards.json / *.board.json / *.full.txt
+#       核对用的临时产物，看一眼框对不对就没用了，从素材随时能再算一遍
+#   *.draft.*
+#       机器出的候选。**人核对完另存成正式文件名**再进 git —— 没核过的不许混进来
+#
+# 哪些要 push、哪些是临时的，四档去向见 **DATA.md** —— 那张表是唯一真源，
+# 别在这儿维护第二份说明。
 *.marked.png
 *.page.json
 *.cards.json
 *.board.json
+*.full.txt
 *.draft.*

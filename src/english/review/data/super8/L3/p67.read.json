@@ -1,0 +1,826 @@
+{
+  "acoustics": {
+    "duration": 55.51,
+    "pause_count": 25,
+    "pause_ratio": 0.347,
+    "pause_total": 19.24,
+    "pauses": [
+      {
+        "dur": 0.35,
+        "end": 2.4,
+        "start": 2.05
+      },
+      {
+        "dur": 0.35,
+        "end": 3.77,
+        "start": 3.42
+      },
+      {
+        "dur": 0.65,
+        "end": 5.91,
+        "start": 5.26
+      },
+      {
+        "dur": 0.35,
+        "end": 8.49,
+        "start": 8.14
+      },
+      {
+        "dur": 0.44,
+        "end": 10.06,
+        "start": 9.62
+      },
+      {
+        "dur": 0.25,
+        "end": 11.02,
+        "start": 10.77
+      },
+      {
+        "dur": 1.45,
+        "end": 13.81,
+        "start": 12.36
+      },
+      {
+        "dur": 1.28,
+        "end": 16.34,
+        "start": 15.06
+      },
+      {
+        "dur": 0.99,
+        "end": 20.9,
+        "start": 19.91
+      },
+      {
+        "dur": 1.06,
+        "end": 21.99,
+        "start": 20.93
+      },
+      {
+        "dur": 0.95,
+        "end": 27.4,
+        "start": 26.45
+      },
+      {
+        "dur": 2.99,
+        "end": 33.61,
+        "start": 30.62
+      },
+      {
+        "dur": 0.27,
+        "end": 36.67,
+        "start": 36.4
+      },
+      {
+        "dur": 1.23,
+        "end": 38.69,
+        "start": 37.46
+      },
+      {
+        "dur": 0.64,
+        "end": 40.47,
+        "start": 39.83
+      },
+      {
+        "dur": 0.32,
+        "end": 42.81,
+        "start": 42.49
+      },
+      {
+        "dur": 0.83,
+        "end": 44.15,
+        "start": 43.32
+      },
+      {
+        "dur": 1.05,
+        "end": 45.61,
+        "start": 44.56
+      },
+      {
+        "dur": 0.31,
+        "end": 45.97,
+        "start": 45.66
+      },
+      {
+        "dur": 0.96,
+        "end": 48.42,
+        "start": 47.46
+      },
+      {
+        "dur": 0.64,
+        "end": 49.18,
+        "start": 48.54
+      },
+      {
+        "dur": 0.4,
+        "end": 51.48,
+        "start": 51.08
+      },
+      {
+        "dur": 0.62,
+        "end": 52.56,
+        "start": 51.94
+      },
+      {
+        "dur": 0.43,
+        "end": 53.5,
+        "start": 53.07
+      },
+      {
+        "dur": 0.43,
+        "end": 55.48,
+        "start": 55.05
+      }
+    ],
+    "source": "IMG_9039.m4a",
+    "speech_time": 36.27,
+    "threshold_db": -27.5
+  },
+  "alignment": {
+    "accuracy": 93.4,
+    "correctWordCount": 71,
+    "diffs": [
+      {
+        "context": "nurse who always spoiled him since he",
+        "end": 7.26,
+        "kind": "substitute",
+        "read": "spelled",
+        "ref": "spoiled",
+        "refIndex": 13,
+        "start": 6.48
+      },
+      {
+        "context": "spoiled him since he was a child",
+        "end": 8.7,
+        "kind": "insert",
+        "read": "he",
+        "refIndex": 16,
+        "start": 8.1
+      },
+      {
+        "context": "spoiled him since he was a child",
+        "end": 9.12,
+        "kind": "insert",
+        "read": "was",
+        "refIndex": 16,
+        "start": 8.7
+      },
+      {
+        "context": "spoiled him since he was a child",
+        "end": 9.48,
+        "kind": "insert",
+        "read": "a",
+        "refIndex": 16,
+        "start": 9.12
+      },
+      {
+        "context": "spoiled him since he was a child",
+        "end": 11.28,
+        "kind": "insert",
+        "read": "little",
+        "refIndex": 16,
+        "start": 9.48
+      },
+      {
+        "context": "one day you will be king as",
+        "end": 17.46,
+        "kind": "insert",
+        "read": "will",
+        "refIndex": 26,
+        "start": 17.22
+      },
+      {
+        "context": "one day you will be king as",
+        "end": 17.88,
+        "kind": "insert",
+        "read": "be",
+        "refIndex": 26,
+        "start": 17.46
+      },
+      {
+        "context": "one day you will be king as",
+        "end": 18.48,
+        "kind": "insert",
+        "read": "a",
+        "refIndex": 26,
+        "start": 17.88
+      },
+      {
+        "context": "unhappy to have to struggle against my",
+        "end": 36.18,
+        "kind": "substitute",
+        "read": "the",
+        "ref": "to",
+        "refIndex": 52,
+        "start": 35.82
+      },
+      {
+        "context": "pride every day he thought to himself",
+        "end": 46.32,
+        "kind": "substitute",
+        "read": "kiss",
+        "ref": "he",
+        "refIndex": 61,
+        "start": 44.4
+      },
+      {
+        "context": "every day he thought to himself if",
+        "end": 46.56,
+        "kind": "substitute",
+        "read": "out",
+        "ref": "thought",
+        "refIndex": 62,
+        "start": 46.32
+      },
+      {
+        "context": "been punished for them when i was",
+        "kind": "omit",
+        "ref": "them",
+        "refIndex": 71
+      }
+    ],
+    "readWordCount": 82,
+    "refTimes": [
+      0.42,
+      0.84,
+      1.44,
+      1.8,
+      2.52,
+      3,
+      3.36,
+      4.02,
+      4.26,
+      4.8,
+      5.58,
+      6.12,
+      6.48,
+      7.26,
+      7.62,
+      8.1,
+      11.58,
+      11.7,
+      11.88,
+      12.12,
+      14.46,
+      14.58,
+      15.12,
+      16.62,
+      17.1,
+      17.22,
+      19.26,
+      19.38,
+      19.68,
+      22.14,
+      22.38,
+      22.68,
+      23.76,
+      24,
+      24.36,
+      24.78,
+      25.62,
+      26.1,
+      27.72,
+      27.96,
+      28.26,
+      28.68,
+      29.1,
+      29.4,
+      29.76,
+      30,
+      30.78,
+      34.14,
+      34.62,
+      35.16,
+      35.52,
+      35.82,
+      36.18,
+      37.14,
+      39.06,
+      40.74,
+      41.46,
+      41.76,
+      42.42,
+      42.96,
+      44.34,
+      46.32,
+      46.56,
+      46.86,
+      47.28,
+      49.68,
+      49.98,
+      50.16,
+      50.4,
+      50.94,
+      53.1,
+      null,
+      53.88,
+      54.06,
+      54.12,
+      54.48
+    ],
+    "refWordCount": 76,
+    "wcpm": 77
+  },
+  "reference": "Prince Darling had\nalso been brought up by a foolish nurse,\nwho always spoiled him since he was a\nchild.\n\"Remember,\nmy dear, one day you will be King. As a king, you can do whatever you please.\nNo one will have the power to stop you.\"\n\"I'm very unhappy to have to struggle against my anger and pride every\nday,\" he thought to himself. \"If I had been punished for them when I was little,",
+  "slug": "super8/L3/p67",
+  "transcript": {
+    "contextPrimed": true,
+    "locale": "en-US",
+    "runs": [
+      {
+        "end": 0.42,
+        "start": 0,
+        "text": "Prince"
+      },
+      {
+        "end": 0.84,
+        "start": 0.42,
+        "text": " darling"
+      },
+      {
+        "end": 1.44,
+        "start": 0.84,
+        "text": " had"
+      },
+      {
+        "end": 1.8,
+        "start": 1.44,
+        "text": " also"
+      },
+      {
+        "end": 2.52,
+        "start": 1.8,
+        "text": " been"
+      },
+      {
+        "end": 3,
+        "start": 2.52,
+        "text": " brought"
+      },
+      {
+        "end": 3.36,
+        "start": 3,
+        "text": " up"
+      },
+      {
+        "end": 4.02,
+        "start": 3.36,
+        "text": " by"
+      },
+      {
+        "end": 4.26,
+        "start": 4.02,
+        "text": " a"
+      },
+      {
+        "end": 4.8,
+        "start": 4.26,
+        "text": " foolish"
+      },
+      {
+        "end": 5.58,
+        "start": 4.8,
+        "text": " nurse,"
+      },
+      {
+        "end": 6.12,
+        "start": 5.58,
+        "text": " who"
+      },
+      {
+        "end": 6.48,
+        "start": 6.12,
+        "text": " always"
+      },
+      {
+        "end": 7.26,
+        "start": 6.48,
+        "text": " spelled"
+      },
+      {
+        "end": 7.62,
+        "start": 7.26,
+        "text": " him"
+      },
+      {
+        "end": 8.1,
+        "start": 7.62,
+        "text": " since"
+      },
+      {
+        "end": 8.7,
+        "start": 8.1,
+        "text": " he"
+      },
+      {
+        "end": 9.12,
+        "start": 8.7,
+        "text": " was"
+      },
+      {
+        "end": 9.48,
+        "start": 9.12,
+        "text": " a"
+      },
+      {
+        "end": 11.28,
+        "start": 9.48,
+        "text": " little,"
+      },
+      {
+        "end": 11.58,
+        "start": 11.28,
+        "text": " he"
+      },
+      {
+        "end": 11.7,
+        "start": 11.58,
+        "text": " was"
+      },
+      {
+        "end": 11.88,
+        "start": 11.7,
+        "text": " a"
+      },
+      {
+        "end": 12.12,
+        "start": 11.88,
+        "text": " child."
+      },
+      {
+        "end": 14.46,
+        "start": 12.24,
+        "text": " Remember,"
+      },
+      {
+        "end": 14.58,
+        "start": 14.46,
+        "text": " my"
+      },
+      {
+        "end": 15.12,
+        "start": 14.58,
+        "text": " dear."
+      },
+      {
+        "end": 16.62,
+        "start": 15.24,
+        "text": " One"
+      },
+      {
+        "end": 17.1,
+        "start": 16.62,
+        "text": " day,"
+      },
+      {
+        "end": 17.22,
+        "start": 17.1,
+        "text": " you"
+      },
+      {
+        "end": 17.46,
+        "start": 17.22,
+        "text": " will"
+      },
+      {
+        "end": 17.88,
+        "start": 17.46,
+        "text": " be"
+      },
+      {
+        "end": 18.48,
+        "start": 17.88,
+        "text": " a,"
+      },
+      {
+        "end": 19.26,
+        "start": 18.48,
+        "text": " will"
+      },
+      {
+        "end": 19.38,
+        "start": 19.26,
+        "text": " be"
+      },
+      {
+        "end": 19.68,
+        "start": 19.38,
+        "text": " king."
+      },
+      {
+        "end": 22.14,
+        "start": 19.8,
+        "text": " As"
+      },
+      {
+        "end": 22.38,
+        "start": 22.14,
+        "text": " a"
+      },
+      {
+        "end": 22.68,
+        "start": 22.38,
+        "text": " king."
+      },
+      {
+        "end": 23.76,
+        "start": 22.8,
+        "text": " You"
+      },
+      {
+        "end": 24,
+        "start": 23.76,
+        "text": " can"
+      },
+      {
+        "end": 24.36,
+        "start": 24,
+        "text": " do"
+      },
+      {
+        "end": 24.78,
+        "start": 24.36,
+        "text": " whatever"
+      },
+      {
+        "end": 25.62,
+        "start": 24.78,
+        "text": " you"
+      },
+      {
+        "end": 26.1,
+        "start": 25.62,
+        "text": " please."
+      },
+      {
+        "end": 27.72,
+        "start": 26.16,
+        "text": " No"
+      },
+      {
+        "end": 27.96,
+        "start": 27.72,
+        "text": " one"
+      },
+      {
+        "end": 28.26,
+        "start": 27.96,
+        "text": " will"
+      },
+      {
+        "end": 28.68,
+        "start": 28.26,
+        "text": " have"
+      },
+      {
+        "end": 29.1,
+        "start": 28.68,
+        "text": " the"
+      },
+      {
+        "end": 29.4,
+        "start": 29.1,
+        "text": " power"
+      },
+      {
+        "end": 29.76,
+        "start": 29.4,
+        "text": " to"
+      },
+      {
+        "end": 30,
+        "start": 29.76,
+        "text": " stop"
+      },
+      {
+        "end": 30.78,
+        "start": 30,
+        "text": " you."
+      },
+      {
+        "end": 34.14,
+        "start": 30.84,
+        "text": " I'm"
+      },
+      {
+        "end": 34.62,
+        "start": 34.14,
+        "text": " very"
+      },
+      {
+        "end": 35.16,
+        "start": 34.62,
+        "text": " unhappy"
+      },
+      {
+        "end": 35.52,
+        "start": 35.16,
+        "text": " to"
+      },
+      {
+        "end": 35.82,
+        "start": 35.52,
+        "text": " have"
+      },
+      {
+        "end": 36.18,
+        "start": 35.82,
+        "text": " the"
+      },
+      {
+        "end": 37.14,
+        "start": 36.18,
+        "text": " struggle"
+      },
+      {
+        "end": 39.06,
+        "start": 37.14,
+        "text": " against"
+      },
+      {
+        "end": 40.74,
+        "start": 39.06,
+        "text": " my"
+      },
+      {
+        "end": 41.46,
+        "start": 40.74,
+        "text": " anger"
+      },
+      {
+        "end": 41.76,
+        "start": 41.46,
+        "text": " and"
+      },
+      {
+        "end": 42.42,
+        "start": 41.76,
+        "text": " pride"
+      },
+      {
+        "end": 42.96,
+        "start": 42.42,
+        "text": " every"
+      },
+      {
+        "end": 44.34,
+        "start": 42.96,
+        "text": " day."
+      },
+      {
+        "end": 46.32,
+        "start": 44.4,
+        "text": " Kiss"
+      },
+      {
+        "end": 46.56,
+        "start": 46.32,
+        "text": " out"
+      },
+      {
+        "end": 46.86,
+        "start": 46.56,
+        "text": " to"
+      },
+      {
+        "end": 47.28,
+        "start": 46.86,
+        "text": " himself."
+      },
+      {
+        "end": 49.68,
+        "start": 47.34,
+        "text": " If"
+      },
+      {
+        "end": 49.98,
+        "start": 49.68,
+        "text": " I"
+      },
+      {
+        "end": 50.16,
+        "start": 49.98,
+        "text": " had"
+      },
+      {
+        "end": 50.4,
+        "start": 50.16,
+        "text": " been"
+      },
+      {
+        "end": 50.94,
+        "start": 50.4,
+        "text": " punished"
+      },
+      {
+        "end": 53.1,
+        "start": 50.94,
+        "text": " for,"
+      },
+      {
+        "end": 53.88,
+        "start": 53.1,
+        "text": " when"
+      },
+      {
+        "end": 54.06,
+        "start": 53.88,
+        "text": " I"
+      },
+      {
+        "end": 54.12,
+        "start": 54.06,
+        "text": " was"
+      },
+      {
+        "end": 54.48,
+        "start": 54.12,
+        "text": " little."
+      }
+    ],
+    "source": "IMG_9039.m4a"
+  },
+  "words": [
+    "prince",
+    "darling",
+    "had",
+    "also",
+    "been",
+    "brought",
+    "up",
+    "by",
+    "a",
+    "foolish",
+    "nurse",
+    "who",
+    "always",
+    "spelled",
+    "him",
+    "since",
+    "he",
+    "was",
+    "a",
+    "little",
+    "he",
+    "was",
+    "a",
+    "child",
+    "remember",
+    "my",
+    "dear",
+    "one",
+    "day",
+    "you",
+    "will",
+    "be",
+    "a",
+    "will",
+    "be",
+    "king",
+    "as",
+    "a",
+    "king",
+    "you",
+    "can",
+    "do",
+    "whatever",
+    "you",
+    "please",
+    "no",
+    "one",
+    "will",
+    "have",
+    "the",
+    "power",
+    "to",
+    "stop",
+    "you",
+    "i'm",
+    "very",
+    "unhappy",
+    "to",
+    "have",
+    "the",
+    "struggle",
+    "against",
+    "my",
+    "anger",
+    "and",
+    "pride",
+    "every",
+    "day",
+    "kiss",
+    "out",
+    "to",
+    "himself",
+    "if",
+    "i",
+    "had",
+    "been",
+    "punished",
+    "for",
+    "when",
+    "i",
+    "was",
+    "little"
+  ]
+}

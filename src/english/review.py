@@ -6,10 +6,12 @@
       data/<slug>.ref.txt     红线划中的课文原文 —— 比对基准
       specs/<slug>.txt        人的判断：哪几处算读错、四维分数、点评
 
-`<slug>` 是「书 / 课 / 第几页」，**可以带目录**：`super8/L3/p68` 落成
+`<slug>` 是「书 / 课 / 第几页」，**斜杠就是目录**：`super8/L3/p68` 落成
 `data/super8/L3/p68.ref.txt`、报告出到 `dist/english/review/super8/L3/p68.html`。
 喂数据台一次扫一叠截图时就是这么落的（页码它自己认页角那枚绿圆盘）。
-老的平铺名字（`chao8-lesson3-p68`）照样能用，两种混着放也行。
+
+spec 里**没有任何字段指向数据文件** —— 全靠这个名字拼路径，spec 叫什么，
+data 就得叫什么。要不要 push 哪些文件见根目录 DATA.md。
 
 产物落在 dist/english/review/：一页一份报告 + 一个目录页。
 

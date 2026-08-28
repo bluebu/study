@@ -1,0 +1,1622 @@
+{
+  "acoustics": {
+    "duration": 138.7,
+    "pause_count": 39,
+    "pause_ratio": 0.141,
+    "pause_total": 19.52,
+    "pauses": [
+      {
+        "dur": 0.61,
+        "end": 0.79,
+        "start": 0.18
+      },
+      {
+        "dur": 0.32,
+        "end": 6.94,
+        "start": 6.62
+      },
+      {
+        "dur": 1.17,
+        "end": 12.53,
+        "start": 11.36
+      },
+      {
+        "dur": 0.29,
+        "end": 13.18,
+        "start": 12.89
+      },
+      {
+        "dur": 0.31,
+        "end": 14.06,
+        "start": 13.75
+      },
+      {
+        "dur": 0.54,
+        "end": 20.56,
+        "start": 20.02
+      },
+      {
+        "dur": 0.38,
+        "end": 22.46,
+        "start": 22.08
+      },
+      {
+        "dur": 0.81,
+        "end": 23.53,
+        "start": 22.72
+      },
+      {
+        "dur": 0.55,
+        "end": 34.97,
+        "start": 34.42
+      },
+      {
+        "dur": 0.34,
+        "end": 37.31,
+        "start": 36.97
+      },
+      {
+        "dur": 0.26,
+        "end": 37.59,
+        "start": 37.33
+      },
+      {
+        "dur": 0.3,
+        "end": 38.12,
+        "start": 37.82
+      },
+      {
+        "dur": 1.36,
+        "end": 41.27,
+        "start": 39.91
+      },
+      {
+        "dur": 0.49,
+        "end": 52.73,
+        "start": 52.24
+      },
+      {
+        "dur": 0.48,
+        "end": 53.26,
+        "start": 52.78
+      },
+      {
+        "dur": 0.37,
+        "end": 53.69,
+        "start": 53.32
+      },
+      {
+        "dur": 0.86,
+        "end": 58.74,
+        "start": 57.88
+      },
+      {
+        "dur": 0.27,
+        "end": 63.98,
+        "start": 63.71
+      },
+      {
+        "dur": 0.32,
+        "end": 64.79,
+        "start": 64.47
+      },
+      {
+        "dur": 0.66,
+        "end": 68.84,
+        "start": 68.18
+      },
+      {
+        "dur": 0.75,
+        "end": 70.91,
+        "start": 70.16
+      },
+      {
+        "dur": 0.31,
+        "end": 84.2,
+        "start": 83.89
+      },
+      {
+        "dur": 0.8,
+        "end": 85.4,
+        "start": 84.6
+      },
+      {
+        "dur": 0.49,
+        "end": 88.19,
+        "start": 87.7
+      },
+      {
+        "dur": 0.34,
+        "end": 89.38,
+        "start": 89.04
+      },
+      {
+        "dur": 0.51,
+        "end": 93.77,
+        "start": 93.26
+      },
+      {
+        "dur": 0.29,
+        "end": 94.43,
+        "start": 94.14
+      },
+      {
+        "dur": 0.44,
+        "end": 95.81,
+        "start": 95.37
+      },
+      {
+        "dur": 0.35,
+        "end": 100.74,
+        "start": 100.39
+      },
+      {
+        "dur": 0.58,
+        "end": 103.51,
+        "start": 102.93
+      },
+      {
+        "dur": 0.49,
+        "end": 104.89,
+        "start": 104.4
+      },
+      {
+        "dur": 0.79,
+        "end": 106.05,
+        "start": 105.26
+      },
+      {
+        "dur": 0.27,
+        "end": 106.34,
+        "start": 106.07
+      },
+      {
+        "dur": 0.5,
+        "end": 113.4,
+        "start": 112.9
+      },
+      {
+        "dur": 0.43,
+        "end": 114.54,
+        "start": 114.11
+      },
+      {
+        "dur": 0.53,
+        "end": 128.68,
+        "start": 128.15
+      },
+      {
+        "dur": 0.33,
+        "end": 129.78,
+        "start": 129.45
+      },
+      {
+        "dur": 0.32,
+        "end": 134.66,
+        "start": 134.34
+      },
+      {
+        "dur": 0.31,
+        "end": 135.99,
+        "start": 135.68
+      }
+    ],
+    "source": "点读超8.mp4 [0.00-138.70]",
+    "speech_time": 119.18,
+    "threshold_db": -40
+  },
+  "alignment": {
+    "accuracy": 92.2,
+    "correctWordCount": 118,
+    "diffs": [
+      {
+        "context": "tired of the constant reminders of his",
+        "end": 11.94,
+        "kind": "insert",
+        "read": "constant",
+        "refIndex": 18,
+        "start": 10.26
+      },
+      {
+        "context": "reminders of his bad behavior he wanted",
+        "end": 18.36,
+        "kind": "insert",
+        "read": "bed",
+        "refIndex": 22,
+        "start": 17.52
+      },
+      {
+        "context": "reminders of his bad behavior he wanted",
+        "end": 18.66,
+        "kind": "insert",
+        "read": "uh",
+        "refIndex": 22,
+        "start": 18.36
+      },
+      {
+        "context": "of his bad behavior he wanted to",
+        "end": 20.1,
+        "kind": "insert",
+        "read": "be",
+        "refIndex": 23,
+        "start": 19.44
+      },
+      {
+        "context": "of his bad behavior he wanted to",
+        "end": 21.66,
+        "kind": "substitute",
+        "read": "heavier",
+        "ref": "behavior",
+        "refIndex": 23,
+        "start": 20.1
+      },
+      {
+        "context": "his ring aside and thought himself the",
+        "end": 33.96,
+        "kind": "insert",
+        "read": "and",
+        "refIndex": 40,
+        "start": 32.58
+      },
+      {
+        "context": "ring aside and thought himself the happiest",
+        "end": 36.9,
+        "kind": "substitute",
+        "read": "so",
+        "ref": "thought",
+        "refIndex": 41,
+        "start": 35.64
+      },
+      {
+        "context": "have got rid of its teasing pricks",
+        "end": 47.04,
+        "kind": "insert",
+        "read": "of",
+        "refIndex": 51,
+        "start": 46.62
+      },
+      {
+        "context": "its teasing pricks sir i'm only a",
+        "end": 52.32,
+        "kind": "insert",
+        "read": "hey",
+        "refIndex": 55,
+        "start": 51.42
+      },
+      {
+        "context": "its teasing pricks sir i'm only a",
+        "end": 54.54,
+        "kind": "insert",
+        "read": "okay",
+        "refIndex": 55,
+        "start": 52.44
+      },
+      {
+        "context": "its teasing pricks sir i'm only a",
+        "end": 57.06,
+        "kind": "insert",
+        "read": "do",
+        "refIndex": 55,
+        "start": 54.54
+      },
+      {
+        "context": "its teasing pricks sir i'm only a",
+        "end": 58.98,
+        "kind": "insert",
+        "read": "do",
+        "refIndex": 55,
+        "start": 57.18
+      },
+      {
+        "context": "its teasing pricks sir i'm only a",
+        "end": 59.34,
+        "kind": "insert",
+        "read": "you",
+        "refIndex": 55,
+        "start": 58.98
+      },
+      {
+        "context": "its teasing pricks sir i'm only a",
+        "end": 60.24,
+        "kind": "insert",
+        "read": "dislike",
+        "refIndex": 55,
+        "start": 59.34
+      },
+      {
+        "context": "its teasing pricks sir i'm only a",
+        "end": 61.56,
+        "kind": "insert",
+        "read": "me",
+        "refIndex": 55,
+        "start": 60.24
+      },
+      {
+        "context": "its teasing pricks sir i'm only a",
+        "end": 64.74,
+        "kind": "insert",
+        "read": "asked",
+        "refIndex": 55,
+        "start": 61.56
+      },
+      {
+        "context": "i'm only a shepherdess and a poor",
+        "end": 67.14,
+        "kind": "insert",
+        "read": "chef",
+        "refIndex": 59,
+        "start": 66.72
+      },
+      {
+        "context": "i'm only a shepherdess and a poor",
+        "end": 67.38,
+        "kind": "insert",
+        "read": "for",
+        "refIndex": 59,
+        "start": 67.14
+      },
+      {
+        "context": "i'm only a shepherdess and a poor",
+        "end": 67.86,
+        "kind": "insert",
+        "read": "this",
+        "refIndex": 59,
+        "start": 67.38
+      },
+      {
+        "context": "i'm only a shepherdess and a poor",
+        "end": 69.24,
+        "kind": "insert",
+        "read": "and",
+        "refIndex": 59,
+        "start": 67.92
+      },
+      {
+        "context": "i'm only a shepherdess and a poor",
+        "end": 69.42,
+        "kind": "insert",
+        "read": "i",
+        "refIndex": 59,
+        "start": 69.24
+      },
+      {
+        "context": "i'm only a shepherdess and a poor",
+        "end": 71.46,
+        "kind": "substitute",
+        "read": "uh",
+        "ref": "shepherdess",
+        "refIndex": 59,
+        "start": 69.42
+      },
+      {
+        "context": "you do you dislike me asked prince",
+        "end": 77.34,
+        "kind": "substitute",
+        "read": "like",
+        "ref": "dislike",
+        "refIndex": 73,
+        "start": 75.96
+      },
+      {
+        "context": "my prince replied celia i notice you",
+        "end": 92.22,
+        "kind": "insert",
+        "read": "syria",
+        "refIndex": 86,
+        "start": 90.72
+      },
+      {
+        "context": "my prince replied celia i notice you",
+        "end": 92.7,
+        "kind": "substitute",
+        "read": "um",
+        "ref": "celia",
+        "refIndex": 86,
+        "start": 92.22
+      },
+      {
+        "context": "prince replied celia i notice you are",
+        "end": 96.12,
+        "kind": "substitute",
+        "read": "and",
+        "ref": "i",
+        "refIndex": 87,
+        "start": 92.82
+      },
+      {
+        "context": "very rich but what good would richness",
+        "end": 100.26,
+        "kind": "substitute",
+        "read": "what's",
+        "ref": "what",
+        "refIndex": 94,
+        "start": 99.3
+      },
+      {
+        "context": "what good would richness be to me",
+        "end": 106.92,
+        "kind": "insert",
+        "read": "reach",
+        "refIndex": 97,
+        "start": 101.82
+      },
+      {
+        "context": "what good would richness be to me",
+        "end": 107.7,
+        "kind": "insert",
+        "read": "needs",
+        "refIndex": 97,
+        "start": 106.92
+      },
+      {
+        "context": "what good would richness be to me",
+        "end": 109.32,
+        "kind": "insert",
+        "read": "to",
+        "refIndex": 97,
+        "start": 107.7
+      },
+      {
+        "context": "what good would richness be to me",
+        "end": 109.44,
+        "kind": "insert",
+        "read": "which",
+        "refIndex": 97,
+        "start": 109.32
+      },
+      {
+        "context": "what good would richness be to me",
+        "end": 109.92,
+        "kind": "insert",
+        "read": "needs",
+        "refIndex": 97,
+        "start": 109.44
+      },
+      {
+        "context": "what good would richness be to me",
+        "end": 110.22,
+        "kind": "substitute",
+        "read": "to",
+        "ref": "richness",
+        "refIndex": 97,
+        "start": 109.92
+      },
+      {
+        "context": "if i see you commit wrongdoings every",
+        "end": 114.24,
+        "kind": "insert",
+        "read": "you",
+        "refIndex": 104,
+        "start": 112.68
+      },
+      {
+        "context": "you and even hate you what will",
+        "end": 123.24,
+        "kind": "substitute",
+        "read": "hit",
+        "ref": "hate",
+        "refIndex": 115,
+        "start": 123
+      },
+      {
+        "context": "you what will our marriage be like",
+        "end": 126.96,
+        "kind": "insert",
+        "read": "or",
+        "refIndex": 119,
+        "start": 125.94
+      },
+      {
+        "context": "you what will our marriage be like",
+        "end": 128.1,
+        "kind": "insert",
+        "read": "you",
+        "refIndex": 119,
+        "start": 126.96
+      },
+      {
+        "context": "you what will our marriage be like",
+        "end": 129.72,
+        "kind": "insert",
+        "read": "oh",
+        "refIndex": 119,
+        "start": 128.22
+      },
+      {
+        "context": "you what will our marriage be like",
+        "end": 130.68,
+        "kind": "substitute",
+        "read": "or",
+        "ref": "our",
+        "refIndex": 119,
+        "start": 129.72
+      }
+    ],
+    "readWordCount": 157,
+    "refTimes": [
+      1.32,
+      1.8,
+      2.34,
+      2.88,
+      3.24,
+      3.66,
+      4.02,
+      4.38,
+      4.56,
+      5.22,
+      5.76,
+      6.84,
+      7.74,
+      7.98,
+      8.34,
+      8.88,
+      9.84,
+      10.26,
+      13.68,
+      16.38,
+      16.86,
+      17.52,
+      19.44,
+      21.66,
+      23.82,
+      24.24,
+      24.9,
+      25.32,
+      25.74,
+      26.16,
+      27,
+      27.72,
+      28.26,
+      28.98,
+      30,
+      30.84,
+      31.32,
+      31.56,
+      31.98,
+      32.58,
+      35.64,
+      36.9,
+      39.42,
+      41.64,
+      42.54,
+      43.5,
+      43.98,
+      44.82,
+      45.3,
+      46.2,
+      46.62,
+      47.76,
+      48.72,
+      49.86,
+      51.36,
+      65.46,
+      65.7,
+      66.3,
+      66.72,
+      71.46,
+      71.64,
+      71.88,
+      72.12,
+      72.72,
+      73.02,
+      73.32,
+      73.68,
+      73.98,
+      74.46,
+      74.7,
+      75.12,
+      75.72,
+      75.96,
+      77.34,
+      77.76,
+      78.84,
+      79.8,
+      80.76,
+      81.42,
+      82.62,
+      82.98,
+      83.52,
+      86.34,
+      86.52,
+      87.12,
+      90.72,
+      92.7,
+      96.12,
+      97.14,
+      97.5,
+      97.8,
+      98.04,
+      98.7,
+      99.3,
+      100.26,
+      100.98,
+      101.82,
+      110.22,
+      110.34,
+      110.58,
+      111.42,
+      111.6,
+      111.9,
+      112.68,
+      114.78,
+      116.04,
+      117.9,
+      118.56,
+      119.22,
+      119.76,
+      120.24,
+      121.5,
+      121.8,
+      122.34,
+      123,
+      123.24,
+      123.48,
+      124.8,
+      125.94,
+      130.68,
+      131.22,
+      132.06,
+      132.54,
+      133.02,
+      133.38,
+      133.68,
+      135,
+      138.54
+    ],
+    "refWordCount": 128,
+    "wcpm": 51
+  },
+  "reference": "they would not be such a trouble to me now.\"\nAt last, the prince got tired of the constant reminders of his bad behavior.\nHe wanted to be able to do as he liked, so he threw his ring aside, and thought\nhimself the happiest of men to have got rid of its teasing pricks.\n\"Sir, I'm\nonly a shepherdess and a poor girl,\" she said, \"but I won't marry you,\n\"Do you dislike me?\" asked Prince Darling, annoyed at this answer.\n\"No, my prince,\" replied Celia. \"I notice you are very rich, but what good\nwould richness be to me? If I see you commit wrongdoings every day, I will\ndislike you and even hate you. What will our marriage be like if I am a witness",
+  "slug": "super8/L3/p68",
+  "transcript": {
+    "contextPrimed": true,
+    "locale": "en-US",
+    "runs": [
+      {
+        "end": 1.32,
+        "start": 0,
+        "text": "They"
+      },
+      {
+        "end": 1.8,
+        "start": 1.32,
+        "text": " would"
+      },
+      {
+        "end": 2.34,
+        "start": 1.8,
+        "text": " not"
+      },
+      {
+        "end": 2.88,
+        "start": 2.34,
+        "text": " be"
+      },
+      {
+        "end": 3.24,
+        "start": 2.88,
+        "text": " such"
+      },
+      {
+        "end": 3.66,
+        "start": 3.24,
+        "text": " a"
+      },
+      {
+        "end": 4.02,
+        "start": 3.66,
+        "text": " trouble"
+      },
+      {
+        "end": 4.38,
+        "start": 4.02,
+        "text": " to"
+      },
+      {
+        "end": 4.56,
+        "start": 4.38,
+        "text": " me"
+      },
+      {
+        "end": 5.22,
+        "start": 4.56,
+        "text": " now,"
+      },
+      {
+        "end": 5.76,
+        "start": 5.22,
+        "text": " at"
+      },
+      {
+        "end": 6.84,
+        "start": 5.76,
+        "text": " last."
+      },
+      {
+        "end": 7.74,
+        "start": 6.9,
+        "text": " The"
+      },
+      {
+        "end": 7.98,
+        "start": 7.74,
+        "text": " prince"
+      },
+      {
+        "end": 8.34,
+        "start": 7.98,
+        "text": " got"
+      },
+      {
+        "end": 8.88,
+        "start": 8.34,
+        "text": " tired"
+      },
+      {
+        "end": 9.84,
+        "start": 8.88,
+        "text": " of"
+      },
+      {
+        "end": 10.26,
+        "start": 9.84,
+        "text": " the"
+      },
+      {
+        "end": 11.94,
+        "start": 10.26,
+        "text": " constant."
+      },
+      {
+        "end": 13.68,
+        "start": 11.94,
+        "text": " Constant."
+      },
+      {
+        "end": 16.38,
+        "start": 13.68,
+        "text": " Reminders"
+      },
+      {
+        "end": 16.86,
+        "start": 16.38,
+        "text": " of"
+      },
+      {
+        "end": 17.52,
+        "start": 16.86,
+        "text": " his"
+      },
+      {
+        "end": 18.36,
+        "start": 17.52,
+        "text": " bed,"
+      },
+      {
+        "end": 18.66,
+        "start": 18.36,
+        "text": " uh,"
+      },
+      {
+        "end": 19.44,
+        "start": 18.66,
+        "text": " bad"
+      },
+      {
+        "end": 20.1,
+        "start": 19.44,
+        "text": " be,"
+      },
+      {
+        "end": 21.66,
+        "start": 20.1,
+        "text": " heavier."
+      },
+      {
+        "end": 23.82,
+        "start": 21.72,
+        "text": " He"
+      },
+      {
+        "end": 24.24,
+        "start": 23.82,
+        "text": " wanted"
+      },
+      {
+        "end": 24.9,
+        "start": 24.24,
+        "text": " to"
+      },
+      {
+        "end": 25.32,
+        "start": 24.9,
+        "text": " be"
+      },
+      {
+        "end": 25.74,
+        "start": 25.32,
+        "text": " able"
+      },
+      {
+        "end": 26.16,
+        "start": 25.74,
+        "text": " to"
+      },
+      {
+        "end": 27,
+        "start": 26.16,
+        "text": " do"
+      },
+      {
+        "end": 27.72,
+        "start": 27,
+        "text": " as"
+      },
+      {
+        "end": 28.26,
+        "start": 27.72,
+        "text": " he"
+      },
+      {
+        "end": 28.98,
+        "start": 28.26,
+        "text": " liked."
+      },
+      {
+        "end": 30,
+        "start": 29.04,
+        "text": " So"
+      },
+      {
+        "end": 30.84,
+        "start": 30,
+        "text": " he"
+      },
+      {
+        "end": 31.32,
+        "start": 30.84,
+        "text": " threw"
+      },
+      {
+        "end": 31.56,
+        "start": 31.32,
+        "text": " his"
+      },
+      {
+        "end": 31.98,
+        "start": 31.56,
+        "text": " ring"
+      },
+      {
+        "end": 32.58,
+        "start": 31.98,
+        "text": " aside"
+      },
+      {
+        "end": 33.96,
+        "start": 32.58,
+        "text": " and."
+      },
+      {
+        "end": 35.64,
+        "start": 33.96,
+        "text": " And"
+      },
+      {
+        "end": 36.9,
+        "start": 35.64,
+        "text": " so."
+      },
+      {
+        "end": 39.42,
+        "start": 37.02,
+        "text": " Himself."
+      },
+      {
+        "end": 41.64,
+        "start": 39.48,
+        "text": " The"
+      },
+      {
+        "end": 42.54,
+        "start": 41.64,
+        "text": " happiest"
+      },
+      {
+        "end": 43.5,
+        "start": 42.54,
+        "text": " of"
+      },
+      {
+        "end": 43.98,
+        "start": 43.5,
+        "text": " men"
+      },
+      {
+        "end": 44.82,
+        "start": 43.98,
+        "text": " to"
+      },
+      {
+        "end": 45.3,
+        "start": 44.82,
+        "text": " have"
+      },
+      {
+        "end": 46.2,
+        "start": 45.3,
+        "text": " got"
+      },
+      {
+        "end": 46.62,
+        "start": 46.2,
+        "text": " rid"
+      },
+      {
+        "end": 47.04,
+        "start": 46.62,
+        "text": " of"
+      },
+      {
+        "end": 47.76,
+        "start": 47.04,
+        "text": " of"
+      },
+      {
+        "end": 48.72,
+        "start": 47.76,
+        "text": " its"
+      },
+      {
+        "end": 49.86,
+        "start": 48.72,
+        "text": " teasing"
+      },
+      {
+        "end": 51.36,
+        "start": 49.86,
+        "text": " pricks."
+      },
+      {
+        "end": 52.32,
+        "start": 51.42,
+        "text": " Hey."
+      },
+      {
+        "end": 54.54,
+        "start": 52.44,
+        "text": " Okay."
+      },
+      {
+        "end": 57.06,
+        "start": 54.54,
+        "text": " Do."
+      },
+      {
+        "end": 58.98,
+        "start": 57.18,
+        "text": " Do"
+      },
+      {
+        "end": 59.34,
+        "start": 58.98,
+        "text": " you"
+      },
+      {
+        "end": 60.24,
+        "start": 59.34,
+        "text": " dislike"
+      },
+      {
+        "end": 61.56,
+        "start": 60.24,
+        "text": " me?"
+      },
+      {
+        "end": 64.74,
+        "start": 61.56,
+        "text": " Asked,"
+      },
+      {
+        "end": 65.46,
+        "start": 64.74,
+        "text": " sir,"
+      },
+      {
+        "end": 65.7,
+        "start": 65.46,
+        "text": " I'm"
+      },
+      {
+        "end": 66.3,
+        "start": 65.7,
+        "text": " only"
+      },
+      {
+        "end": 66.72,
+        "start": 66.3,
+        "text": " a"
+      },
+      {
+        "end": 67.14,
+        "start": 66.72,
+        "text": " chef"
+      },
+      {
+        "end": 67.38,
+        "start": 67.14,
+        "text": " for"
+      },
+      {
+        "end": 67.86,
+        "start": 67.38,
+        "text": " this."
+      },
+      {
+        "end": 69.24,
+        "start": 67.92,
+        "text": " And"
+      },
+      {
+        "end": 69.42,
+        "start": 69.24,
+        "text": " I"
+      },
+      {
+        "end": 71.46,
+        "start": 69.42,
+        "text": " uh,"
+      },
+      {
+        "end": 71.64,
+        "start": 71.46,
+        "text": " and"
+      },
+      {
+        "end": 71.88,
+        "start": 71.64,
+        "text": " a"
+      },
+      {
+        "end": 72.12,
+        "start": 71.88,
+        "text": " poor"
+      },
+      {
+        "end": 72.72,
+        "start": 72.12,
+        "text": " girl,"
+      },
+      {
+        "end": 73.02,
+        "start": 72.72,
+        "text": " she"
+      },
+      {
+        "end": 73.32,
+        "start": 73.02,
+        "text": " said,"
+      },
+      {
+        "end": 73.68,
+        "start": 73.32,
+        "text": " but"
+      },
+      {
+        "end": 73.98,
+        "start": 73.68,
+        "text": " I"
+      },
+      {
+        "end": 74.46,
+        "start": 73.98,
+        "text": " won't"
+      },
+      {
+        "end": 74.7,
+        "start": 74.46,
+        "text": " marry"
+      },
+      {
+        "end": 75.12,
+        "start": 74.7,
+        "text": " you."
+      },
+      {
+        "end": 75.72,
+        "start": 75.18,
+        "text": " Do"
+      },
+      {
+        "end": 75.96,
+        "start": 75.72,
+        "text": " you"
+      },
+      {
+        "end": 77.34,
+        "start": 75.96,
+        "text": " like"
+      },
+      {
+        "end": 77.76,
+        "start": 77.34,
+        "text": " me"
+      },
+      {
+        "end": 78.84,
+        "start": 77.76,
+        "text": " asked"
+      },
+      {
+        "end": 79.8,
+        "start": 78.84,
+        "text": " Prince"
+      },
+      {
+        "end": 80.76,
+        "start": 79.8,
+        "text": " Darling"
+      },
+      {
+        "end": 81.42,
+        "start": 80.76,
+        "text": " annoyed"
+      },
+      {
+        "end": 82.62,
+        "start": 81.42,
+        "text": " at"
+      },
+      {
+        "end": 82.98,
+        "start": 82.62,
+        "text": " this"
+      },
+      {
+        "end": 83.52,
+        "start": 82.98,
+        "text": " answer?"
+      },
+      {
+        "end": 86.34,
+        "start": 83.58,
+        "text": " No,"
+      },
+      {
+        "end": 86.52,
+        "start": 86.34,
+        "text": " my"
+      },
+      {
+        "end": 87.12,
+        "start": 86.52,
+        "text": " prince."
+      },
+      {
+        "end": 90.72,
+        "start": 87.18,
+        "text": " Replied,"
+      },
+      {
+        "end": 92.22,
+        "start": 90.72,
+        "text": " Syria,"
+      },
+      {
+        "end": 92.7,
+        "start": 92.22,
+        "text": " um."
+      },
+      {
+        "end": 96.12,
+        "start": 92.82,
+        "text": " And"
+      },
+      {
+        "end": 97.14,
+        "start": 96.12,
+        "text": " notice"
+      },
+      {
+        "end": 97.5,
+        "start": 97.14,
+        "text": " you"
+      },
+      {
+        "end": 97.8,
+        "start": 97.5,
+        "text": " are"
+      },
+      {
+        "end": 98.04,
+        "start": 97.8,
+        "text": " very"
+      },
+      {
+        "end": 98.7,
+        "start": 98.04,
+        "text": " rich,"
+      },
+      {
+        "end": 99.3,
+        "start": 98.7,
+        "text": " but"
+      },
+      {
+        "end": 100.26,
+        "start": 99.3,
+        "text": " what's"
+      },
+      {
+        "end": 100.98,
+        "start": 100.26,
+        "text": " good"
+      },
+      {
+        "end": 101.82,
+        "start": 100.98,
+        "text": " would."
+      },
+      {
+        "end": 106.92,
+        "start": 101.82,
+        "text": " Reach"
+      },
+      {
+        "end": 107.7,
+        "start": 106.92,
+        "text": " needs"
+      },
+      {
+        "end": 109.32,
+        "start": 107.7,
+        "text": " to,"
+      },
+      {
+        "end": 109.44,
+        "start": 109.32,
+        "text": " which"
+      },
+      {
+        "end": 109.92,
+        "start": 109.44,
+        "text": " needs"
+      },
+      {
+        "end": 110.22,
+        "start": 109.92,
+        "text": " to"
+      },
+      {
+        "end": 110.34,
+        "start": 110.22,
+        "text": " be"
+      },
+      {
+        "end": 110.58,
+        "start": 110.34,
+        "text": " to"
+      },
+      {
+        "end": 111.42,
+        "start": 110.58,
+        "text": " me."
+      },
+      {
+        "end": 111.6,
+        "start": 111.42,
+        "text": " If"
+      },
+      {
+        "end": 111.9,
+        "start": 111.6,
+        "text": " I"
+      },
+      {
+        "end": 112.68,
+        "start": 111.9,
+        "text": " see,"
+      },
+      {
+        "end": 114.24,
+        "start": 112.68,
+        "text": " you,"
+      },
+      {
+        "end": 114.78,
+        "start": 114.24,
+        "text": " you"
+      },
+      {
+        "end": 116.04,
+        "start": 114.78,
+        "text": " commit"
+      },
+      {
+        "end": 117.9,
+        "start": 116.04,
+        "text": " wrongdoings"
+      },
+      {
+        "end": 118.56,
+        "start": 117.9,
+        "text": " every"
+      },
+      {
+        "end": 119.22,
+        "start": 118.56,
+        "text": " day,"
+      },
+      {
+        "end": 119.76,
+        "start": 119.22,
+        "text": " I"
+      },
+      {
+        "end": 120.24,
+        "start": 119.76,
+        "text": " will"
+      },
+      {
+        "end": 121.5,
+        "start": 120.24,
+        "text": " dislike"
+      },
+      {
+        "end": 121.8,
+        "start": 121.5,
+        "text": " you"
+      },
+      {
+        "end": 122.34,
+        "start": 121.8,
+        "text": " and"
+      },
+      {
+        "end": 123,
+        "start": 122.34,
+        "text": " even"
+      },
+      {
+        "end": 123.24,
+        "start": 123,
+        "text": " hit"
+      },
+      {
+        "end": 123.48,
+        "start": 123.24,
+        "text": " you."
+      },
+      {
+        "end": 124.8,
+        "start": 123.54,
+        "text": " What"
+      },
+      {
+        "end": 125.94,
+        "start": 124.8,
+        "text": " will"
+      },
+      {
+        "end": 126.96,
+        "start": 125.94,
+        "text": " or"
+      },
+      {
+        "end": 128.1,
+        "start": 126.96,
+        "text": " you."
+      },
+      {
+        "end": 129.72,
+        "start": 128.22,
+        "text": " Oh,"
+      },
+      {
+        "end": 130.68,
+        "start": 129.72,
+        "text": " or"
+      },
+      {
+        "end": 131.22,
+        "start": 130.68,
+        "text": " marriage"
+      },
+      {
+        "end": 132.06,
+        "start": 131.22,
+        "text": " be"
+      },
+      {
+        "end": 132.54,
+        "start": 132.06,
+        "text": " like"
+      },
+      {
+        "end": 133.02,
+        "start": 132.54,
+        "text": " if"
+      },
+      {
+        "end": 133.38,
+        "start": 133.02,
+        "text": " I"
+      },
+      {
+        "end": 133.68,
+        "start": 133.38,
+        "text": " am"
+      },
+      {
+        "end": 135,
+        "start": 133.68,
+        "text": " a"
+      },
+      {
+        "end": 138.54,
+        "start": 135,
+        "text": " witness."
+      }
+    ],
+    "source": "点读超8.mp4 [0.00-138.70]"
+  },
+  "words": [
+    "they",
+    "would",
+    "not",
+    "be",
+    "such",
+    "a",
+    "trouble",
+    "to",
+    "me",
+    "now",
+    "at",
+    "last",
+    "the",
+    "prince",
+    "got",
+    "tired",
+    "of",
+    "the",
+    "constant",
+    "constant",
+    "reminders",
+    "of",
+    "his",
+    "bed",
+    "uh",
+    "bad",
+    "be",
+    "heavier",
+    "he",
+    "wanted",
+    "to",
+    "be",
+    "able",
+    "to",
+    "do",
+    "as",
+    "he",
+    "liked",
+    "so",
+    "he",
+    "threw",
+    "his",
+    "ring",
+    "aside",
+    "and",
+    "and",
+    "so",
+    "himself",
+    "the",
+    "happiest",
+    "of",
+    "men",
+    "to",
+    "have",
+    "got",
+    "rid",
+    "of",
+    "of",
+    "its",
+    "teasing",
+    "pricks",
+    "hey",
+    "okay",
+    "do",
+    "do",
+    "you",
+    "dislike",
+    "me",
+    "asked",
+    "sir",
+    "i'm",
+    "only",
+    "a",
+    "chef",
+    "for",
+    "this",
+    "and",
+    "i",
+    "uh",
+    "and",
+    "a",
+    "poor",
+    "girl",
+    "she",
+    "said",
+    "but",
+    "i",
+    "won't",
+    "marry",
+    "you",
+    "do",
+    "you",
+    "like",
+    "me",
+    "asked",
+    "prince",
+    "darling",
+    "annoyed",
+    "at",
+    "this",
+    "answer",
+    "no",
+    "my",
+    "prince",
+    "replied",
+    "syria",
+    "um",
+    "and",
+    "notice",
+    "you",
+    "are",
+    "very",
+    "rich",
+    "but",
+    "what's",
+    "good",
+    "would",
+    "reach",
+    "needs",
+    "to",
+    "which",
+    "needs",
+    "to",
+    "be",
+    "to",
+    "me",
+    "if",
+    "i",
+    "see",
+    "you",
+    "you",
+    "commit",
+    "wrongdoings",
+    "every",
+    "day",
+    "i",
+    "will",
+    "dislike",
+    "you",
+    "and",
+    "even",
+    "hit",
+    "you",
+    "what",
+    "will",
+    "or",
+    "you",
+    "oh",
+    "or",
+    "marriage",
+    "be",
+    "like",
+    "if",
+    "i",
+    "am",
+    "a",
+    "witness"
+  ]
+}

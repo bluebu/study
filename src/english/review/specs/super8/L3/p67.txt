@@ -12,7 +12,7 @@ words: 76
 errors: 4
 score: 61
 naep: 2
-prev: chao8-lesson3-p65, chao8-lesson3-p66
+prev: p65, p66
 
 [评分] 准确度=22/30 流利度=16/30 断句语调=14/25 发音=9/15
 

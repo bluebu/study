@@ -1,0 +1,122 @@
+# 超8 · Lesson 3
+# 第 68 页。这一页和第 69 页是同一段 4 分 45 秒录音（点读超8.mp4）的前后两半，
+# 按「读完 witness 那一刻」切开：p68 = 0.00–138.70 秒，p69 = 138.70–236.60 秒，
+# 各自过一遍 feeder read（带 --ref），所以两页的声学和逐字对齐都是机器算的。
+# 录音末尾还有 42 秒生词表朗读，没有对应的划线课文，不进报告。
+# ⚠️ 这次是视频录的，底噪比前三页低得多，停顿阈值撞到 −40 dB 的下限
+#（前三页是 −21.8 / −26.4 / −27.5）。所以「停顿占时长」和前三页不可比，
+# [对比] 里那一行的趋势词写的是「不可比」，不是「变好了」。
+date: 2026-08-27
+cat: 超8
+order: 68
+page: 68
+book: Prince Darling
+part: 划线五段
+grade: 三年级
+words: 128
+errors: 9
+score: 50
+naep: 2
+prev: p65, p66, p67
+
+[评分] 准确度=20/30 流利度=10/30 断句语调=13/25 发音=7/15
+
+[总评] 生词一下多了一倍，卡在三个长词上。
+    128 个词里，shepherdess / richness / behavior 这三个之前没碰过的长词全栽了，
+    加上 51 秒那次跳到下一段、回来花掉 14 秒 —— 慢下来和读错都集中在这几个点上，
+    其余地方读得和前三页一样稳。
+
+[句末] 5.22, 21.66, 51.36, 75.12, 77.76, 83.52, 92.7, 111.42, 123.48, 138.54
+
+[卡壳] 51.4-65.5 = 跳段 14 秒, 101.8-110.2 = 卡 8.4 秒, 125.9-130.7 = 卡 4.7 秒
+    三处加起来 27 秒，正好是这一页比前三页慢下来的那部分。51 秒读完 pricks 之后，
+    眼睛跳到了下一自然段的 “Do you dislike me?”，读完才回到 “Sir, I'm only a shepherdess” ——
+    **书上这两段是挨着的、中间没有空行**，跳过去很自然。richness 试了两轮
+   （reach needs / which needs），8.4 秒；our 读成 or、自己「哦」了一声想改，改出来还是 or。
+
+[对比] 四页放在一起看
+准确率 = 掉了一档
+正确词/分 = 慢了三成
+几个词一停 = 还在变长
+停顿占时长 = 不可比
+    **这一页换了一把尺子**：前三页是三段单独录的短音频（55–86 秒、76–110 词），
+    这一页是一段 4 分 45 秒连读里的前半段，生词密度也高一截 —— 所以准确率和速度都掉了，
+    不是前三页的进步没了。最后一行尤其不能直接看：这次底噪低得多，停顿阈值撞到 −40 dB 的
+    下限，同样的歇气有一部分没被算进停顿里。**68 页和 69 页之间可以比**，它们是同一段录音。
+
+[比对]
+原文 reminders of his bad *behavior*
+实读 reminders of his bad *be heavier*
+    behavior 读成了两截「be + heavier」。前面 bad 先读成 bed、马上自己改回来了，那处不计错
+原文 threw his ring aside, and *thought* himself
+实读 threw his ring aside, and *so* himself
+    thought 读成了 so
+原文 only a *shepherdess* and a poor girl
+实读 only a *chef for this* and a poor girl
+    shepherdess 试了 2 秒，出来的是三个短音节
+原文 “Do you *dislike* me?” asked Prince Darling
+实读 “Do you *like* me?” asked Prince Darling
+    dis- 掉了。有意思的是这个词她跳段那次先读过一遍，那一遍是对的
+原文 “No, my prince,” replied *Celia*
+实读 “No, my prince,” replied *Syria*
+    人名读成了国名 Syria
+原文 replied Celia. “*I* notice you are very rich
+识别成 replied Syria, um, *and* notice you are very rich
+    **这处转写不可信**：她在 Celia 后面「呃」了一下才接着读，机器很可能把「呃 + I」连成了
+    and。计分时按错了 1 处算；如果 I 其实读对了，准确率是 93.8%
+原文 but what good would *richness* be to me?
+实读 but what good would *reach needs to, which needs to* be to me?
+    8.4 秒里试了两轮，两轮都不对。rich 她上一句「you are very rich」刚读对，
+    -ness 一加上就散了
+原文 dislike you and even *hate* you
+实读 dislike you and even *hit* you
+    hate 读成 hit
+原文 What will *our* marriage be like
+实读 What will *or you*, oh, *or* marriage be like
+    our 读成 or，中间「哦」了一声想改，改出来还是 or
+
+[磕巴] 五次退回去重来（不计错）
+the constant, *constant* reminders
+his *bed*, uh, *bad* behavior
+ring aside and *and*, so himself
+got rid *of, of* its teasing pricks
+if I see *you, you* commit wrongdoings
+    五处都是**半个词读出去、自己听出不对、退回来重读**。bad 那处改对了，
+    behavior 和 our 那两处改了但没改对。她读的时候在听自己，这一点前三页也看得到。
+
+[亮点]
+第二段整段 **“He wanted to be able to do as he liked, so he threw his ring aside, … to have got rid of its teasing pricks.”** —— 30 个词只错 thought 一处，happiest / teasing / pricks 都是一次读对的。
+**“If I see you commit wrongdoings every day, I will dislike you”** —— wrongdoings 这个 11 个字母的长词读得干脆。
+跳段读的那半句 **“Do you dislike me?” asked** —— 虽然读错了地方，那句本身一个字没错，dislike 也对。
+
+[三件事]
+📍 开口前先用手指点住这一行
+    51 秒那次跳段，是因为书上两段挨得太近。手指压在正在读的那一行上，眼睛回来就找得到。
+🔤 三个长词先拆开看一眼：shep-herd-ess / rich-ness / be-hav-ior
+    richness 里的 rich 她读对了，behavior 里的 be 也读对了 —— 长词都是从中间散的，
+    拆成音节就好办。
+🔁 这一页单独再读一遍，只读 68 页
+    今天是一口气读了两页加生词表、快 5 分钟。单读这一页 2 分钟，看看那三个词第二遍能不能过。
+
+[斜线]
+“No, my prince,” replied Celia.
+“I notice you are very rich,
+but what good would richness be to me?
+If I see you commit wrongdoings every day,
+I will dislike you and even hate you.
+
+[尺子]
+    93.0% 落在「偏难」这一档 —— 比上一页（94.7%）再往左挪了一格。
+        128 个词错 9 处，其中 3 处是同一类：没见过的长词。存疑那处若其实读对了是 93.8%，
+        档位不变。
+    51 个正确词/分钟：放在美国母语学生里，正好压在**二年级秋季的 50 百分位**线上
+        （三年级秋季落在 10–25 百分位之间）。前三页是 72 / 74 / 78，这一页慢了三成 ——
+        27 秒卡在三个点上是主要原因。母语常模只当参照系，不是及格线。
+    平均 3.3 个词一组，比上一页（3.0）还长一点。不过这次的停顿是在更低的阈值下数出来的，
+        这一档先按第 2 级放着。
+
+[怎么来的]
+**准确率 93.0%**（读对 119 / 划线五段共 128 词）。替换、漏读、读错音计错；插入的词和退回去重读只算不流利、不计错。喂数据台的逐字对齐给了 10 处换词候选，人核过之后计 9 处 —— what 读成 what's 那处判成连读误识，不计错。
+**每分钟正确词数 51**（WCPM）= 读对的词数 ÷ 138.7 秒 × 60。
+**断句**取 39 次停顿里断在句子中间的那些，平均 3.3 个词一组。
+录音是一整段 4 分 45 秒（68 页 + 69 页 + 42 秒生词表），按读完 witness 那一刻切开，这一页是前 138.7 秒，单独过了一遍 macOS 本机语音框架的离线转写 + 逐词时间戳，再用能量包络找出所有 ≥0.25 秒的停顿；比对基准是课本第 68 页红线划出的五段。**这次的底噪比前三页低得多**，停顿阈值撞到 −40 dB 的下限（前三页是 −21.8 / −26.4 / −27.5 dB），所以「停顿占时长 14%」不能和前三页的 33–38% 直接比。**发音一项是从转写结果推断的**，不如亲耳听准。

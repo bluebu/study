@@ -44,16 +44,24 @@ CSV 是唯一输入，卷子全是产物。格式老站定稿过，别随手改�
 ```
 review/
   data/<slug>.read.json    喂数据台（../../feeder）产出：声学 + 转写 + 逐字对齐
-  data/<slug>.json         停顿声学，字段和老站 review/data/ 逐个对齐
-  data/<slug>.ref.txt      红线划中的课文原文 —— 比对基准
-  data/<slug>.words.tsv    逐词时间戳
+  data/<slug>.json         停顿声学，字段和老站 review/data/ 逐个对齐（**必需**）
+  data/<slug>.ref.txt      红线划中的课文原文 —— 比对基准（可选，兜底算句末）
+  data/<slug>.words.tsv    逐词时间戳（人核对用，生成器不读）
   specs/<slug>.txt         人的判断：哪几处算读错、四维分数、点评
 figures.py                 三把尺子 + 停顿地图（常模数值是一手来源，别动）
 build.py                   生成器
 ```
 
-slug 沿用老站的「书-课-页」：`chao8-lesson3-p66`。**页码从 slug 解析**，
-所以必须带上（`p66` → 第 66 页）。
+**slug 是「书 / 课 / 页」，斜杠就是目录**：`super8/L3/p68` →
+`specs/super8/L3/p68.txt` + `data/super8/L3/p68.*` → `dist/english/review/super8/L3/p68.html`。
+spec 里**没有任何字段指向数据文件**，全靠 `data/<slug>.<ext>` 拼路径 ——
+名字错了 spec 和数据就配不上对，所以喂数据台在写盘前就校验名字形状。
+
+四份文件要不要 push、哪些是核对完就扔的，见根目录 [DATA.md](../../DATA.md)。
+
+页码印在报告上的那个数**读的是 spec 的 `page:` 字段**，不是从 slug 解析的
+（slug 里的 `p68` 只是名字的一部分）。`prev:` 可以只写页（`p67`），
+同一课里会自动补成 `super8/L3/p67`。
 
 ### 一条分工线
 
@@ -225,5 +233,6 @@ tutor, escape, capture, Fairy Truth, monster, lion · wolf · snake · bull
 - 分类色（超8 橙 / G3 蓝 / 单词 绿 / 语法 青）在 `src/assets/palette.css`，
   一份报告整页的主色就是它的分类色；**分数色是另一套**（越差越红），两套同页并存
 - 报告页 `noindex` —— 孩子的成绩单不进搜索引擎
-- 录音和教材照片**不进仓库**，测量数据（`.read.json` / `.ref.txt`）**要进**：
-  音频不在库里，那些数字再也算不出来
+- 录音和教材照片**不进仓库**，测量数据（`.read.json` / `.ref.txt` / `.json` /
+  `.words.tsv`）**要进**：音频不在库里，那些数字再也算不出来。
+  四档去向见根目录 [DATA.md](../../DATA.md)

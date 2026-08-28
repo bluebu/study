@@ -1,0 +1,104 @@
+# 超8 · Lesson 3
+# 第 69 页。和第 68 页同属一段录音（点读超8.mp4），这一页是第 138.70–236.60 秒。
+# 切分口径和阈值都写在 p68 那份 spec 的头注里 —— 两页阈值同为 −40 dB，
+# 所以 68 / 69 之间的停顿数可以直接比，和 65–67 页不能比。
+date: 2026-08-27
+cat: 超8
+order: 69
+page: 69
+book: Prince Darling
+part: 划线五段
+grade: 三年级
+words: 91
+errors: 10
+score: 45
+naep: 2
+prev: p68
+
+[评分] 准确度=17/30 流利度=10/30 断句语调=12/25 发音=6/15
+
+[总评] 一次 16 秒的回读，退回去那一遍全对了。
+    91 个词错 10 处，一半集中在名字和难词上（Celia's / foster-brother / Darling / gaze）。
+    中间那次 16 秒的回读是四页里最长的一次 —— 读到一半发现不对，退回去从 opinion 重读，
+    第二遍 13 个词一字不差。这个动作是对的，只是退得有点远。
+
+[句末] 4.38, 13.56, 25.8, 34.02, 71.22, 80.04, 97.38
+
+[卡壳] 5.3-11.7 = 卡 6.4 秒, 42.8-59.2 = 回读 16 秒
+    “she added with a questioning gaze” 里，with 读完停了 6.4 秒才接上 a（其中一次长停 2.7 秒）
+    —— questioning 和 gaze 是这一页最难的两个词。42.8 秒起那 16 秒是一次完整的回读：
+    读成 “could not bear the flesh”、一路读到 “in a” 才刹住，退回 opinion 重读了一遍，
+    **第二遍全对**。
+
+[对比] 和上一页比
+准确率 = 又掉了
+正确词/分 = 差不多
+几个词一停 = 没变
+停顿占时长 = 卡得更多
+    这两页是**同一段录音的前后两半**，录音条件和阈值完全一样，所以这四行都能直接比。
+    速度和断句和 68 页几乎一模一样，掉下来的只有准确率：这一页 91 个词里挤了
+    Celia's / foster-brother / questioning / gaze / determined 五个难词，密度比 68 页高。
+
+[比对]
+原文 “to your cruelty?” *she* added
+实读 “to your cruelty?” *he* added
+    she 读成 he。说话的是 Celia，这里是「她」
+原文 with a questioning *gaze*
+实读 with a questioning *（一个近似 is 的音）*
+    gaze 前面停了 6.4 秒，最后出来的音机器只听成 is。这个词值得亲耳听 12–14 秒那一段
+原文 He always gave Prince *Darling* *bad* advice
+实读 He always gave Prince *starling* *better* advice
+    Prince 读对了；Darling 少了开头的 D、bad 读成 better。计 2 处
+原文 his *foster-brother* asked him
+实读 his *first brother, first brother* asked him
+    foster 读成 first，读了两遍都是 first
+原文 was. *Prince Darling explained* that he could not bear
+实读 was. *press, starting, is, exclaimed* that he could not bear
+    这三个词整段散了。Prince Darling 这个名字同一页前面刚读对过一次。计 3 处
+原文 could not bear *Celia's* opinion of him
+实读 could not bear *the flesh* opinion of him
+    Celia's 读成了 the flesh。紧接着就是那 16 秒的回读
+原文 if she still *refuses* to marry you
+实读 if she still *refused* to marry you
+    词尾的 -s 读成了 -d
+
+[磕巴] 四次退回去重来（不计错）
+*To*, *to your* cruelty
+his *first brother*, *first brother* asked him
+have her head *cuts down*, *cut off* to teach
+bear the flesh … *in a*, 退回 *opinion of him and was determined*…
+    head cuts down 那次**自己改对了**：读出 cuts down、马上刹住、改成 cut off。
+    最后一次是整页最大的一次回读，16 秒；退回去那一遍 13 个词全对。
+
+[亮点]
+回读的第二遍 **“and was determined to be a better man in order to please her.”** —— 13 个词一字不差，determined 一次到位。
+**“encouraged him in all his evil ways”** —— encouraged 读得干脆，没有拆。
+这一页最后一句 **“to teach the other people that you mean to be obeyed.”** —— 11 个词一个没错，obeyed 也对。
+
+[三件事]
+🔁 回读是好事，只是可以退近一点
+    今天那次 16 秒，退回去重读的部分全对 —— 这个动作本身是对的。下次读错了，退回**这一句的开头**就够。
+🔤 两个名字先读顺：Ce-li-a's / fos-ter-brother
+    这一页两个都栽了，而它们后面几页还会一直出现。foster 不是 first，中间有个 s-t-e-r。
+📖 长句先切成两半再读
+    “he could not bear Celia's opinion of him / and was determined to be a better man” ——
+    中间那道斜线就是换气的地方，一口气读半句。
+
+[斜线]
+Prince Darling explained
+that he could not bear Celia's opinion of him
+and was determined to be a better man
+in order to please her.
+
+[尺子]
+    89.0% 在「偏难」这一档里 —— 比 68 页（93.0%）又往左挪了一截。
+        91 个词错 10 处，段落越短一处错占的百分点越多（这一页一处 = 1.1 个百分点）。
+    50 个正确词/分钟：和 68 页（51）几乎一样，压在**二年级秋季的 50 百分位**线上
+        （三年级秋季落在 10–25 百分位之间）。母语常模只当参照系，不是及格线。
+    平均 3.3 个词一组，和 68 页一样。这两页同一段录音、同一个阈值，这个数之间可以直接比。
+
+[怎么来的]
+**准确率 89.0%**（读对 81 / 划线五段共 91 词）。替换、漏读、读错音计错；插入的词和退回去重读只算不流利、不计错。上面的比对列了 7 条、计错 10 处 —— 「Darling / bad」那条含 2 处，「Prince Darling explained」那条含 3 处。
+**每分钟正确词数 50**（WCPM）= 读对的词数 ÷ 97.9 秒 × 60。
+**断句**取 28 次停顿里断在句子中间的那些，平均 3.3 个词一组。
+这一页是那段 4 分 45 秒录音的第 138.7–236.6 秒（68 页读完 witness 之后，到读完 obeyed 为止），单独过了一遍离线转写 + 逐词时间戳，停顿按能量包络取 ≥0.25 秒的段；比对基准是课本第 69 页红线划出的五段。停顿阈值和 68 页同为 −40 dB，所以**这两页之间的停顿数可以直接比**，但和 65–67 页不能比（那三页是 −21.8 / −26.4 / −27.5 dB）。**发音一项是从转写结果推断的**，不如亲耳听准 —— gaze 那处尤其，机器只听出一个近似 is 的音。

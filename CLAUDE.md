@@ -21,6 +21,9 @@ dist/      ← 产物（HTML + PDF）。**不进 git**，每次全新构建
 `dist/` 由 `build.py` 生成：本地 `make build`，线上 GitHub Actions 跑
 **同一个** `build.py`。所以「本地能出」就等于「线上能出」，不存在两套构建逻辑。
 
+**`src/` 下哪些文件要 push、哪些是核对完就扔的临时产物 —— 见 [DATA.md](DATA.md)。**
+那张表是 data 构成的唯一真源，`.gitignore`、各科生成器、隔壁 `../feeder` 都照它执行。
+
 ## 目录
 
 ```
@@ -43,9 +46,9 @@ src/
     build.py          只做分发：一个栏目一层 try
     review.py         打卡评价：朗读成绩单（数只写 words / errors，其余算出来）
     figures.py        三把尺子 + 停顿地图，常模数值是一手来源
-    review/data/      喂数据台产出的测量数据（进 git —— 录音不进，这些再也算不出来）
-                      名字是「书/课/页」，斜杠就是目录：super8/L3/p68.ref.txt
-    review/specs/     人的判断：哪几处算读错、四维分数、点评
+    review/data/      喂数据台产出的测量数据。名字是「书/课/页」，斜杠就是目录：
+                      super8/L3/p68.ref.txt。要不要 push 见 DATA.md
+    review/specs/     人的判断：哪几处算读错、四维分数、点评（同名同路径对应 data/）
     ket.py            词汇默写：CSV → A4 默写卷（单主题 / 合集 / 抽选卷 / 答案对照）
     ket/words/        KET 词表 CSV（25 个主题，带 BOM 给 Excel 用）
     ket/selections/   抽选卷 spec：跨主题挑词，题号沿用原主题
@@ -225,39 +228,39 @@ make clean      # 删 dist/
 **素材不手敲。** 照片、录音、板书进隔壁那个 mac 客户端，出来的是这边能直接用的输入：
 
 ```
-指读视频 + 教材截图 ──► read / scan   ──► src/english/review/data/<书>/<课>/pNN.{read,ref,words}
-口算卷照片          ──► sheet / check ──► 转正分块图 + 逐题对错（过程产物，不进仓库）
-单词卡照片          ──► cards         ──► src/english/ket/words/<slug>.draft.csv
-白板照片            ──► board         ──► src/english/retell/specs/<slug>.draft.txt
-生字词 / 生字表照片 ──► pinyin        ──► src/chinese/specs/<slug>.draft.txt
+指读视频 + 教材截图 ──► read / scan   ──► 打卡评价的测量数据
+口算卷照片          ──► sheet / check ──► 转正分块图 + 逐题对错
+单词卡照片          ──► cards         ──► KET 词表候选
+白板照片            ──► board         ──► 复述关键词候选
+生字词 / 生字表照片 ──► pinyin        ──► 拼音候选 + 多音字标记
                                               │
                           人在会话里核对、定性、归组、定多音字
                                               │
                                      正式的 spec / CSV ──► build.py ──► dist/
 ```
 
+**每条链路产出哪些文件、叫什么名、落在哪、要不要 push —— 见 [DATA.md](DATA.md)。**
+别在这儿重复一遍：四份口径互相漂移正是那张表被写出来的原因。
+
 命令行 `../feeder/bin/feeder <动词>`（没编过先 `cd ../feeder && make cli`），
 或者开客户端把文件拖进去 —— 它自己猜链路，猜错了在下拉里改。
 
 `feeder` 只做机器算得出的事，判断留给会话。它的准则在 `../feeder/CLAUDE.md`。
-五条要记住的：
+三条要记住的：
 
 - **一叠教材截图一次进来，页码机器自己认。** 页角那枚绿圆盘（对开页在外侧，
   左页左下、右页右下）—— 名字只填到「书/课」（`super8/L3`），17 页一次落成
   `data/super8/L3/p63.ref.txt` … `p79.ref.txt`，不用一张张改名。
   图片名和拖进来的顺序都不可靠：那批里第 63 页和第 65 页相邻、第 64 页排在最后。
-  客户端三张以上自动按页拆，命令行加 `--split`。认不出页码的那张退回原图名，
-  跑完还会报「认出第 63–79 页，中间不缺页」
-- **`.draft.` 是候选，`.gitignore` 掉了。** 人核对完**另存成正式文件名**再进 git ——
-  没核过的东西不许混进仓库。`read` / `scan` 的产出不带这个标记：那是测量数据，
-  机器算的就是最终值
+  客户端三张以上自动按页拆，命令行加 `--split`。**名字形状不对会被当场拒掉** ——
+  把图片文件名当成书课名，是落一地 `微信图片_2026….ref.txt` 的唯一来路，
+  现在跑都跑不起来。认不出页码的那张退回原图名，跑完还会报
+  「认出第 63–79 页，中间不缺页」
 - **机器认不准的地方它自己会说**：口算卷的手写数字根本不认（题是人抄的）、
   音标认不住就留空、多音字全标出来。这几处别嫌它啰嗦，那正是要人做的判断
 - **声学口径不能动。** `feeder` 里那五个常数是老站 `analyze.py` 的逐行复刻，
   报告里「和上一页比」直接拿新旧数字比。`cd ../feeder && make test` 会拿老站
   那批数据回归，六个字段加停顿明细必须完全一致
-- **核对图（`*.marked.png`）看完就没用了**，和 `*.page.json` / `*.cards.json` /
-  `*.board.json` 一样都在 `.gitignore` 里
 
 ## 老站：只当参照，不要改
 
