@@ -54,11 +54,12 @@ make            # 看全部命令
 ## 结构
 
 - `storage/` — 数据层，累积、push。`data/` 机器测的 / `spec/` 人写的 / `result/` 算出来的
-- `src/` — 代码 + 资产（生成器 `.py`、`templates/*.html`、`assets/*.css`），
+- `src/` — 代码 + 资产（`generator/<科>/*.py`、`templates/*.html`、`assets/*.css`），
   **一个内容文件都不放**。标记全在 `templates/`，Python 里不拼 HTML
 - `lib/` — 通用库。各层的位置全在 `lib/paths.py` 一处，改目录名只改它
 - `dist/` — 产物，**不进 git**；线上由 GitHub Actions 构建部署
 
-改内容改 `storage/`，改版式改 `src/templates/`，改样式改 `src/assets/`，
+改内容改 `storage/`，改生成逻辑改 `src/generator/`，改版式改 `src/templates/`，
+改样式改 `src/assets/`，
 加栏目改 `build.py` 顶部的 `SUBJECTS`。
 详细约定见 `CLAUDE.md`。

@@ -24,7 +24,7 @@ homework    每日打卡 —— 群公告 → A4 打印单                      
 retell      复述故事 —— 老师白板的 Story Map → A4 关键词地图      ← 已上线
 ```
 
-**栏目名不是目录名。** 代码在 `src/english/<栏目>.py`，内容在
+**栏目名不是目录名。** 代码在 `src/generator/english/<栏目>.py`，内容在
 `storage/spec/english/<栏目>/`，测量数据在 `storage/data/english/<栏目>/` ——
 两棵树靠栏目名对齐，取路径一律走 `paths.spec("english", "<栏目>")`（`lib/paths.py`），
 **别用 `Path(__file__).parent` 往下拼**，代码和数据不在同一棵树上。
@@ -57,7 +57,7 @@ storage/spec/english/review/
   <slug>.txt               人的判断：哪几处算读错、四维分数、点评
 storage/result/
   english/review.csv       算出来的指标，`write_result()` 每次全量重算覆盖
-src/english/
+src/generator/english/
   review.py                生成器：单页报告 + index 汇总 + 趋势页
   figures.py               三把尺子 + 停顿地图 + 趋势曲线（常模数值是一手来源，别动）
 ```

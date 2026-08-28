@@ -46,7 +46,7 @@ HEIC 直接吃，不用先转 PNG。
    `no` 从 1 开始、每个主题独立编号（默写卷题号直接用它）。
    词组（ice cream、wash up）卡片上没音标词性就留空。
 5. 核完**另存成正式文件名**（去掉 `.draft`），draft 不进 git。
-6. 新主题要在 `src/english/ket.py` 的 `TITLES` 里加一条显示名（key 是去掉编号前缀的文件名）。
+6. 新主题要在 `src/generator/english/ket.py` 的 `TITLES` 里加一条显示名（key 是去掉编号前缀的文件名）。
    **英文名太长会把页眉挤成两行**，取个短名（见 personal_feelings 那条）。
 7. 汇报总词数、板块起止词、边界行的核对结论。
 

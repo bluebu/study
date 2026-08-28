@@ -11,7 +11,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```
 storage/   ← 数据层。天天长，只累积不重排。data 机器测的 / spec 人写的 / result 算出来的
-src/       ← 代码 + 资产：生成器 .py、assets/*.css、CNAME。**一个内容文件都不放**
+src/       ← 代码 + 资产：generator/ 各科生成器、templates/ 标记、assets/ 样式。**一个内容文件都不放**
 lib/       ← 通用库。工具，不是内容
 dist/      ← 产物（HTML + PDF）。**不进 git**，每次全新构建
 ```
@@ -91,16 +91,17 @@ src/
     site.css          站点页面（入口页、目录页）
     foot.css          页脚（备案号 + 统计），page.py 挂页脚时自动引上
     trend.css         趋势页（曲线卡片 + 指标总表）
-  chinese/build.py    语文练习单
-  english/            英语（CLAUDE.md 里有本科的教学准则和四个栏目的口径）
-    build.py          只做分发：一个栏目一层 try
-    review.py         打卡评价：朗读成绩单（数只写 words / errors，其余算出来）
+  generator/          **所有生成器 .py**，一科一层目录
+    chinese/build.py  语文练习单
+    english/          英语（CLAUDE.md 里有本科的教学准则和四个栏目的口径）
+      build.py        只做分发：一个栏目一层 try
+      review.py       打卡评价：朗读成绩单（数只写 words / errors，其余算出来）
                       末尾落 storage/result/english/review.csv，再出趋势页
-    figures.py        三把尺子 + 停顿地图 + 趋势曲线，常模数值是一手来源
-    ket.py            词汇默写：CSV → A4 默写卷（单主题 / 合集 / 抽选卷 / 答案对照）
-    homework.py       每日打卡：群公告 → 一张 A4 作业清单
-    retell.py         复述故事：关键词按情节五阶段分组，看着讲一遍
-  math/build.py       计算秘籍：错题清单 + 口诀卡 + 重练题（两页 A4）
+      figures.py      三把尺子 + 停顿地图 + 趋势曲线，常模数值是一手来源
+      ket.py          词汇默写：CSV → A4 默写卷（单主题 / 合集 / 抽选卷 / 答案对照）
+      homework.py     每日打卡：群公告 → 一张 A4 作业清单
+      retell.py       复述故事：关键词按情节五阶段分组，看着讲一遍
+    math/build.py     计算秘籍：错题清单 + 口诀卡 + 重练题（两页 A4）
 .github/workflows/pages.yml
 .claude/skills/
   kousuan/            口算卷照片 → 错题清单 + 秘籍单（图和判对错都走 ../feeder）
@@ -112,7 +113,7 @@ src/
 改 `build.py` 顶部的 `SUBJECTS` 一处即可 —— 入口页的卡片、栏目列表、
 `ready`/`soon` 状态全从它出。栏目做好了把 `"state": "soon"` 改成 `"ready"`。
 
-各科的生成逻辑放 `src/<科>/build.py`，约定暴露：
+各科的生成逻辑放 `src/generator/<科>/build.py`，约定暴露：
 
 ```python
 def build(dist: Path, pdf: bool = False) -> None: ...
@@ -272,7 +273,7 @@ noindex 的页面（孩子的成绩单）     → 只出备案号，不挂统计
 - 内容有歧义（字词数量对不上、看不出哪一课）**先问，别猜**
 - 中文与数字/英文之间留空格（`16 课`）
 - 各科的教学体系准则（英语对标美国本土语法体系、语文多音字按课文语境定音、
-  数学用算术不用代数方程）在搬对应科目内容时写进 `src/<科>/CLAUDE.md`
+  数学用算术不用代数方程）在搬对应科目内容时写进 `src/generator/<科>/CLAUDE.md`
 
 ## 命令
 

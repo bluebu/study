@@ -14,7 +14,7 @@
     ▼
 storage/data/     机器测的 —— 源没了就算不出来，所以 push
 storage/spec/     人写的判断 —— 哪几处算读错、几分、怎么归组
-    │  build.py（src/ 下的生成器）
+    │  build.py（src/generator/ 下的生成器）
     ├──────────────► storage/result/   算出来的指标（可再生，push 当回归基准）
     │                      │
     ▼                      ▼
@@ -86,12 +86,12 @@ super8/L3/p68   →   storage/data/english/review/super8/L3/p68.ref.txt
 
 | 栏目 | 目录 | 命名 | 读它的生成器 |
 |---|---|---|---|
-| 打卡评价 | `storage/spec/english/review/` | `<书>/<课>/pNN.txt` | `src/english/review.py` |
-| 词汇默写 | `storage/spec/english/ket/words/`<br>`storage/spec/english/ket/selections/` | `<NN>_<主题>.csv`<br>`<YYYYMMDD>.txt` | `src/english/ket.py` |
-| 每日打卡 | `storage/spec/english/homework/` | `<YYYYMMDD>.txt` | `src/english/homework.py` |
-| 复述故事 | `storage/spec/english/retell/` | `<故事slug>.txt` | `src/english/retell.py` |
-| 语文练习 | `storage/spec/chinese/practice/` | `<YYYYMMDD>.txt` | `src/chinese/build.py` |
-| 数学秘籍 | `storage/spec/math/miji/` | `<错因slug>.txt` | `src/math/build.py` |
+| 打卡评价 | `storage/spec/english/review/` | `<书>/<课>/pNN.txt` | `src/generator/english/review.py` |
+| 词汇默写 | `storage/spec/english/ket/words/`<br>`storage/spec/english/ket/selections/` | `<NN>_<主题>.csv`<br>`<YYYYMMDD>.txt` | `src/generator/english/ket.py` |
+| 每日打卡 | `storage/spec/english/homework/` | `<YYYYMMDD>.txt` | `src/generator/english/homework.py` |
+| 复述故事 | `storage/spec/english/retell/` | `<故事slug>.txt` | `src/generator/english/retell.py` |
+| 语文练习 | `storage/spec/chinese/practice/` | `<YYYYMMDD>.txt` | `src/generator/chinese/build.py` |
+| 数学秘籍 | `storage/spec/math/miji/` | `<错因slug>.txt` | `src/generator/math/build.py` |
 
 **只有打卡评价读 spec 之外的数据文件**，其余六个栏目都是 spec 单一输入。
 打卡评价的三份数据里 `.json` 是必需的（缺了直接报错），`.read.json` 和 `.ref.txt` 可选；
@@ -101,7 +101,7 @@ super8/L3/p68   →   storage/data/english/review/super8/L3/p68.ref.txt
 
 | 表 | 一行是什么 | 谁写 | 谁读 |
 |---|---|---|---|
-| `english/review.csv` | 一次朗读的全部指标 | `src/english/review.py` 的 `write_result()` | 趋势页 `dist/english/review/trend.html`；别的工具直接读 CSV |
+| `english/review.csv` | 一次朗读的全部指标 | `src/generator/english/review.py` 的 `write_result()` | 趋势页 `dist/english/review/trend.html`；别的工具直接读 CSV |
 
 列就是 `review.py` 已经在算的那些：`accuracy` `wcpm` `per_group` `correct` +
 spec 里人给的 `words` `errors` `score` `naep`。**不新增任何计算** —— 这张表是

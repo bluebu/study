@@ -3,7 +3,10 @@
     storage/data/     机器测的（../feeder 产出，源没了就算不出来 → push）
     storage/spec/     人写的判断和内容（会话产出 → push）
     storage/result/   算出来的指标（可再生，push 当回归基准）
-    src/              代码 + 资产（生成器 .py、assets/*.css、CNAME）
+    src/              代码 + 资产（一个内容文件都不放）
+      generator/      各科生成器 .py
+      templates/      HTML / SVG 标记
+      assets/         *.css、CNAME
     dist/             产物，不进 git，每次全新构建
 
 四档去向和各链路产出什么文件，见根目录 DATA.md（唯一真源）。
@@ -25,7 +28,15 @@ SPEC = STORAGE / "spec"
 RESULT = STORAGE / "result"
 
 SRC = ROOT / "src"
+GEN = SRC / "generator"          # 各科生成器：generator/<科>/build.py
+TEMPLATES = SRC / "templates"
+ASSETS = SRC / "assets"
 DIST = ROOT / "dist"
+
+
+def gen(*parts: str) -> Path:
+    """src/generator/<...> —— 各科的生成器代码。"""
+    return GEN.joinpath(*parts)
 
 
 def data(*parts: str) -> Path:

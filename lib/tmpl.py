@@ -41,7 +41,7 @@ from jinja2 import Environment, FileSystemLoader, StrictUndefined
 
 from . import paths
 
-TEMPLATES = paths.SRC / "templates"
+TEMPLATES = paths.TEMPLATES
 
 env = Environment(
     loader=FileSystemLoader(TEMPLATES),

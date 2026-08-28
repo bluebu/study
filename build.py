@@ -22,7 +22,7 @@ sys.path.insert(0, str(ROOT))
 from lib import page, paths, tmpl  # noqa: E402
 
 # 各层的位置全在 lib/paths.py 一处定义，这儿只是取个短名
-SRC, DIST = paths.SRC, paths.DIST
+SRC, GEN, DIST = paths.SRC, paths.GEN, paths.DIST
 
 CST = timezone(timedelta(hours=8))
 
@@ -99,14 +99,14 @@ def build_index() -> None:
 
 
 def build_subjects(pdf: bool) -> None:
-    """调各科自己的构建器 src/<科>/build.py（有就调，没有就跳过）。
+    """调各科自己的构建器 src/generator/<科>/build.py（有就调，没有就跳过）。
 
     约定：各科 build.py 暴露 build(dist: Path, pdf: bool) -> None
     """
     for s in SUBJECTS:
-        script = SRC / s["key"] / "build.py"
+        script = GEN / s["key"] / "build.py"
         if not script.exists():
-            print(f"  · {s['name']}：还没有 src/{s['key']}/build.py，跳过")
+            print(f"  · {s['name']}：还没有 src/generator/{s['key']}/build.py，跳过")
             continue
 
         spec_ = importlib.util.spec_from_file_location(f"build_{s['key']}", script)
@@ -126,7 +126,7 @@ def main() -> int:
 
     print(f"\n构建 → {DIST.relative_to(ROOT)}/" + ("  (含 PDF)" if pdf else ""))
 
-    shutil.copytree(SRC / "assets", DIST / "assets", dirs_exist_ok=True)
+    shutil.copytree(paths.ASSETS, DIST / "assets", dirs_exist_ok=True)
     print(f"  → dist/assets/  ({len(list((DIST / 'assets').iterdir()))} 个文件)")
 
     build_index()
