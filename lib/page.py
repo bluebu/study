@@ -30,7 +30,8 @@ def render(
     """渲染一整页 HTML。
 
     title/description  —— 同时用于 <title>/<meta> 和 og:*，别分开写
-    css                —— assets/ 下要额外引的样式（palette.css 总是引）
+    css                —— assets/ 下要额外引的样式
+                          （palette.css 色板 + base.css 全站基线总是引）
     root               —— 本页到站点根的相对路径（根上是 "."，子目录是 ".."）
     noindex            —— 打印讲义这类不想被搜到的页面设 True，
                           用 meta 而不是 robots.txt Disallow
@@ -50,7 +51,7 @@ def render(
         body=body,
         emoji=emoji,
         theme=theme,
-        sheets=["palette.css", *css] + (["foot.css"] if foot else []),
+        sheets=["palette.css", "base.css", *css] + (["foot.css"] if foot else []),
         root=root,
         noindex=noindex,
         lang=lang,
