@@ -6,6 +6,11 @@
       data/<slug>.ref.txt     红线划中的课文原文 —— 比对基准
       specs/<slug>.txt        人的判断：哪几处算读错、四维分数、点评
 
+`<slug>` 是「书 / 课 / 第几页」，**可以带目录**：`super8/L3/p68` 落成
+`data/super8/L3/p68.ref.txt`、报告出到 `dist/english/review/super8/L3/p68.html`。
+喂数据台一次扫一叠截图时就是这么落的（页码它自己认页角那枚绿圆盘）。
+老的平铺名字（`chao8-lesson3-p68`）照样能用，两种混着放也行。
+
 产物落在 dist/english/review/：一页一份报告 + 一个目录页。
 
 **数字一个都不从 spec 抄**：准确率、WCPM、几个词一停、停顿占比全部由这里算，
@@ -63,7 +68,11 @@ class Report:
 
     def __init__(self, sp: spec_lib.Spec):
         self.spec = sp
-        self.slug = sp.path.stem
+        # 名字可以带目录（specs/super8/L3/p68.txt → super8/L3/p68）
+        try:
+            self.slug = sp.path.resolve().relative_to(SPECS.resolve()).with_suffix("").as_posix()
+        except ValueError:
+            self.slug = sp.path.stem
         self.blocks = {b.name: b for b in sp.blocks}
 
         acoustics = DATA / f"{self.slug}.json"
@@ -96,7 +105,10 @@ class Report:
         self.cat = sp.get("cat", "超8")
         self.date = sp.get("date", "")
         self.order = sp.int_("order", 0)
-        self.prevs = [s.strip() for s in (sp.get("prev") or "").split(",") if s.strip()]
+        # prev 写全名（super8/L3/p67）或只写页（p67，当成同一课里的上一页）
+        folder = self.slug.rsplit("/", 1)[0] + "/" if "/" in self.slug else ""
+        self.prevs = [s if "/" in s or not folder else folder + s
+                      for s in (x.strip() for x in (sp.get("prev") or "").split(",")) if s]
 
     # ── 供目录页和当日小结用的元信息
     @property
@@ -520,7 +532,8 @@ def render(r: Report, others: dict[str, Report], out_dir: Path, pdf: bool) -> bo
         + slashes(r)
         + scales(r)
         + how(r)
-        + '    <a class="back" href="./">← 返回打卡评价</a>\n'
+        # 名字带目录时，返回目录页要按深度回退（review/super8/L3/p68.html → ../../）
+        + f'    <a class="back" href="{"../" * r.slug.count("/") or "./"}">← 返回打卡评价</a>\n'
         + '    <p class="foot">打卡评价 · 每天的作业，一份成绩单 📋</p>\n'
         + '</main>'
     )
@@ -542,12 +555,13 @@ def render(r: Report, others: dict[str, Report], out_dir: Path, pdf: bool) -> bo
             body=body,
             emoji="🎤",
             css=("review.css",),
-            root="../..",
+            # dist/english/review/<slug>.html —— 名字带几层目录就多回退几层
+            root="/".join([".."] * (2 + r.slug.count("/"))),
             noindex=True,          # 孩子的成绩单，不进搜索引擎
             extra_head=style,
         ),
     )
-    print(f"    → review/{out.name}  （{r.accuracy}% · WCPM {r.wcpm} · {r.score} 分）")
+    print(f"    → review/{r.slug}.html  （{r.accuracy}% · WCPM {r.wcpm} · {r.score} 分）")
     return bool(pdf) and sheet.to_pdf(out, out.with_suffix(".pdf"))
 
 
@@ -603,7 +617,7 @@ def build_index(out_dir: Path, reports: list[Report], pdfs: dict[str, bool]) -> 
 
 def build_review(dist: Path, pdf: bool = False) -> None:
     out_dir = dist / "review"
-    specs = sorted(SPECS.glob("*.txt")) if SPECS.exists() else []
+    specs = sorted(SPECS.rglob("*.txt")) if SPECS.exists() else []
     if not specs:
         print("    · 打卡评价：specs/ 里还没有 spec，跳过")
         return

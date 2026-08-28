@@ -44,6 +44,7 @@ src/
     review.py         打卡评价：朗读成绩单（数只写 words / errors，其余算出来）
     figures.py        三把尺子 + 停顿地图，常模数值是一手来源
     review/data/      喂数据台产出的测量数据（进 git —— 录音不进，这些再也算不出来）
+                      名字是「书/课/页」，斜杠就是目录：super8/L3/p68.ref.txt
     review/specs/     人的判断：哪几处算读错、四维分数、点评
     ket.py            词汇默写：CSV → A4 默写卷（单主题 / 合集 / 抽选卷 / 答案对照）
     ket/words/        KET 词表 CSV（25 个主题，带 BOM 给 Excel 用）
@@ -224,7 +225,7 @@ make clean      # 删 dist/
 **素材不手敲。** 照片、录音、板书进隔壁那个 mac 客户端，出来的是这边能直接用的输入：
 
 ```
-指读视频 + 教材截图 ──► read / scan   ──► src/english/review/data/<slug>.{read,ref,words}
+指读视频 + 教材截图 ──► read / scan   ──► src/english/review/data/<书>/<课>/pNN.{read,ref,words}
 口算卷照片          ──► sheet / check ──► 转正分块图 + 逐题对错（过程产物，不进仓库）
 单词卡照片          ──► cards         ──► src/english/ket/words/<slug>.draft.csv
 白板照片            ──► board         ──► src/english/retell/specs/<slug>.draft.txt
@@ -239,8 +240,14 @@ make clean      # 删 dist/
 或者开客户端把文件拖进去 —— 它自己猜链路，猜错了在下拉里改。
 
 `feeder` 只做机器算得出的事，判断留给会话。它的准则在 `../feeder/CLAUDE.md`。
-四条要记住的：
+五条要记住的：
 
+- **一叠教材截图一次进来，页码机器自己认。** 页角那枚绿圆盘（对开页在外侧，
+  左页左下、右页右下）—— 名字只填到「书/课」（`super8/L3`），17 页一次落成
+  `data/super8/L3/p63.ref.txt` … `p79.ref.txt`，不用一张张改名。
+  图片名和拖进来的顺序都不可靠：那批里第 63 页和第 65 页相邻、第 64 页排在最后。
+  客户端三张以上自动按页拆，命令行加 `--split`。认不出页码的那张退回原图名，
+  跑完还会报「认出第 63–79 页，中间不缺页」
 - **`.draft.` 是候选，`.gitignore` 掉了。** 人核对完**另存成正式文件名**再进 git ——
   没核过的东西不许混进仓库。`read` / `scan` 的产出不带这个标记：那是测量数据，
   机器算的就是最终值
