@@ -8,9 +8,9 @@ argument-hint: [点读视频或录音] [第几页]
 
 ```
 点读视频 ──feeder read --draft──► 测量数据（storage/data/…）
-    +                            └─► spec 候选（…/<slug>.draft.txt）
-教材原文 .ref.txt                        │ 会话核对：定性 · 打分 · 写点评
-（feeder scan，多半已有）                 ▼
+    +      （跨页加 --split，        └─► spec 候选（…/<slug>.draft.txt）
+教材原文     边界机器算）                 │ 会话核对：定性 · 打分 · 写点评
+.ref.txt                                 ▼
               storage/spec/english/review/<slug>.txt ──build.py──► 报告 + 趋势页
 ```
 
@@ -27,17 +27,24 @@ F=../feeder/bin/feeder        # 没编过就先 cd ../feeder && make cli
 1. **确认页码和原文。** slug 是「书/课/页」：`super8/L3/p70`。
    `super8/L3` 的 **p63–p79 原文已经在库里**（`storage/data/…/pNN.ref.txt`），
    直接用。换课换书才要先 `$F scan <教材截图…> --split --slug <书>/<课>`。
-2. **一段录音跨多页就先切开。** `feeder read` 没有时间区间参数，本机也没有
-   ffmpeg —— 只能在外部剪好再喂。省事的做法：先整段跑一遍 read，拿
-   `<slug>.words.tsv` 的逐词时间戳找切点，再切（p68/p69 就是这么分的）。
-3. **跑测量 + 起草**：
+2. **跑测量 + 起草。** 一页一份：
 
    ```bash
-   $F read 点读.mp4 --slug super8/L3/p70 \
-       --ref storage/data/english/review/super8/L3/p70.ref.txt --draft
+   R=storage/data/english/review/super8/L3
+   $F read 点读.mp4 --slug super8/L3/p70 --ref $R/p70.ref.txt --draft
    ```
 
-   十几秒出四份：三份测量数据落 `storage/data/…`，一份 `p70.draft.txt`
+   **一段录音跨几页不用先剪** —— 名字只填到课，`--ref` 按朗读顺序给几份：
+
+   ```bash
+   $F read 点读.mp4 --slug super8/L3 --split \
+       --ref $R/p68.ref.txt,$R/p69.ref.txt --draft
+   ```
+
+   页边界机器算（几页原文拼起来当基准，每页末词读完的时刻就是切点），
+   然后一页裁一段音频各跑一遍。跑完会打出「认出 N 页 + 各自的时间区间 + 对上多少词」，
+   **对上的百分比低就是 `--ref` 的页码或顺序给错了**，回去改。
+3. 十几秒出结果：每页三份测量数据落 `storage/data/…`，一份 `pNN.draft.txt`
    落 `storage/spec/…`。**`--ref` 别省** —— 没有它就没有逐字比对，草稿也就空了大半。
 4. **核对草稿。** 机器填好的部分（文件头、`[比对]`、`[卡壳]`、`[磕巴]`）过一眼，
    `⟨⟩` 包着的是判断，见下一节。**带 `.draft.` 的文件 build 会跳过**，
