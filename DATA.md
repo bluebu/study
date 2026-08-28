@@ -68,6 +68,7 @@ super8/L3/p68   →   storage/data/english/review/super8/L3/p68.ref.txt
 | 链路 | 名字填到哪 | 产出 | 落到 | 去向 |
 |---|---|---|---|---|
 | `read` 朗读录音 | `<书>/<课>/pNN` 人给全 | `.read.json` 主产物（声学 + 转写 + 逐字对齐）<br>`.json` 停顿声学（老站字段）<br>`.words.tsv` 逐词时间戳 | `storage/data/english/review/` | **进 repo** |
+| `read --draft` | 同上 | `.draft.txt` spec 候选（`[比对]`/`[卡壳]`/`[磕巴]` 和文件头填好，判断留 `⟨⟩`） | `storage/spec/english/review/` | **候选** → 另存 `pNN.txt` |
 | `scan` 教材截图 | `<书>/<课>`，**页码机器认** | `.ref.txt` 红线划中的课文原文 | `storage/data/english/review/` | **进 repo** |
 | | | `.page.json` 整页 OCR + 坐标<br>`.marked.png` 核对图<br>`.full.txt` 整页全文（`--full`） | 同上 | **临时** |
 | `cards` 单词卡 | `<NN>_<主题>` | `.draft.csv`（带 BOM 给 Excel） | `storage/spec/english/ket/words/` | **候选** → 另存 `<NN>_<主题>.csv` |
@@ -78,9 +79,17 @@ super8/L3/p68   →   storage/data/english/review/super8/L3/p68.ref.txt
 | `sheet` 口算卷 | 不需要名字 | `full.jpg` `block_N.png` `zoom_x_y.png` | 本机临时目录，**不落 `storage/`** | **临时** |
 | `check` 判对错 | 不需要名字 | 只打 stdout，不落文件 | — | — |
 
-**为什么 `read` / `scan` 的产出不带 `.draft.`**：那是测量数据，机器算的就是最终值。
-`cards` / `board` / `pinyin` 出的是候选 —— 词性、关键词归哪个阶段、多音字按课文读哪个音，
-判断在人这儿。
+**为什么 `read` / `scan` 的**测量数据**不带 `.draft.`**：那是机器算的最终值，
+没有「候选」一说 —— 停顿就是那么多次，逐词时间戳就是那个时刻。
+`cards` / `board` / `pinyin` 出的才是候选：词性、关键词归哪个阶段、多音字按课文
+读哪个音，判断在人这儿。
+
+`read --draft` 是**同一条链路的第二个去向**，不矛盾：它出的不是测量数据，是一份
+**spec 候选**（人写的那一层），所以带 `.draft.`、落 `storage/spec/`。read 因此是
+唯一一条两层都写的链路 —— 测量进 data，候选进 spec。
+
+**带 `.draft.` 的文件生成器一律跳过**（`lib/spec.py` 的 `specs()`，各科发现 spec
+都走它）。所以草稿躺在 spec 目录里既不进 git、也不会被建成一页。
 
 ## 人写的判断（会话产出，全部**进 repo**）
 

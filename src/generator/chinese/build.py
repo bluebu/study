@@ -127,7 +127,7 @@ def _index(out_dir: Path, entries: list[dict]) -> None:
 
 def build(dist: Path, pdf: bool = False) -> None:
     out_dir = dist / "practice"
-    specs = sorted(SPECS.glob("*.txt"), reverse=True)   # 新的排前面
+    specs = spec_lib.specs(SPECS, reverse=True)         # 新的排前面
 
     entries = []
     for path in specs:

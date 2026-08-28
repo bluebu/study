@@ -62,6 +62,11 @@ src/generator/english/
   figures.py               三把尺子 + 停顿地图 + 趋势曲线（常模数值是一手来源，别动）
 ```
 
+spec 不用从零写：`feeder read --draft` 会起草一份 `<slug>.draft.txt` 落到
+`storage/spec/english/review/`，`[比对]` / `[卡壳]` / `[磕巴]` 和文件头都填好，
+判断留 `⟨⟩`。人核对完改名成 `<slug>.txt` —— **带 `.draft.` 的文件生成器会跳过**
+（`lib/spec.py` 的 `specs()`）。整条流程和判断口径见 `.claude/skills/review/SKILL.md`。
+
 **slug 是「书 / 课 / 页」，斜杠就是目录**：`super8/L3/p68` →
 `spec/…/super8/L3/p68.txt` + `data/…/super8/L3/p68.*` → `dist/english/review/super8/L3/p68.html`。
 spec 里**没有任何字段指向数据文件**，全靠 `data/<slug>.<ext>` 拼路径 ——

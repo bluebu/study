@@ -106,6 +106,7 @@ src/
 .claude/skills/
   kousuan/            口算卷照片 → 错题清单 + 秘籍单（图和判对错都走 ../feeder）
   ket/                KET 词卡照片 → CSV，出卷 / 抽选卷的完整流程
+  review/             点读视频 → 朗读成绩单（feeder read --draft 起草 spec，人只定性）
 ```
 
 ## 加科目 / 加栏目

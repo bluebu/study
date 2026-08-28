@@ -234,7 +234,7 @@ def _topic(src: Path, out_dir: Path, pdf: bool) -> dict:
 def _volume(stem: str, out_dir: Path, pdf: bool, answers: bool) -> dict | None:
     """一册合集：把该册范围内的主题连排。"""
     lo, hi = VOLUMES[stem]
-    paths = [p for p in sorted(WORDS.glob("[0-9]*_*.csv"))
+    paths = [p for p in spec_lib.specs(WORDS, "[0-9]*_*.csv")
              if lo <= int(p.stem.split("_")[0]) <= hi]
     if not paths:
         return None
@@ -277,7 +277,7 @@ def _selection(path: Path, out_dir: Path, pdf: bool, answers: bool) -> dict:
 
     sections = []
     for topic, nos in picks:
-        matches = sorted(WORDS.glob(f"{int(topic):02d}_*.csv"))
+        matches = spec_lib.specs(WORDS, f"{int(topic):02d}_*.csv")
         if not matches:
             spec_lib.die(f"{path.name}：找不到主题 {topic} 的词表")
         src = matches[0]
@@ -325,7 +325,7 @@ def build(dist: Path, pdf: bool = False) -> None:
         return
 
     out_dir = dist / "ket"
-    topics = [_topic(p, out_dir, pdf) for p in sorted(WORDS.glob("[0-9]*_*.csv"))]
+    topics = [_topic(p, out_dir, pdf) for p in spec_lib.specs(WORDS, "[0-9]*_*.csv")]
 
     volumes = []
     for stem in VOLUMES:
@@ -335,7 +335,7 @@ def build(dist: Path, pdf: bool = False) -> None:
                 volumes.append(got)
 
     picks = []
-    for path in sorted(SELECTIONS.glob("*.txt")) if SELECTIONS.exists() else []:
+    for path in spec_lib.specs(SELECTIONS):
         picks += [_selection(path, out_dir, pdf, False),
                   _selection(path, out_dir, pdf, True)]
 

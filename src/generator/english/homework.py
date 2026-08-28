@@ -180,7 +180,7 @@ def build_index(out_dir: Path, entries: list[dict]) -> None:
 
 def build_homework(dist: Path, pdf: bool = False) -> None:
     out_dir = dist / "homework"
-    specs = sorted(SPECS.glob("*.txt"), reverse=True) if SPECS.exists() else []
+    specs = spec_lib.specs(SPECS, reverse=True)
     if not specs:
         print("    · 每日打卡：specs/ 里还没有 spec，跳过")
         return

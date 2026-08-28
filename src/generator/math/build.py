@@ -179,7 +179,7 @@ def _index(out_dir: Path, entries: list[dict]) -> None:
 def build(dist: Path, pdf: bool = False) -> None:
     out_dir = dist / "miji"
     entries = []
-    for path in sorted(SPECS.glob("*.txt"), reverse=True):
+    for path in spec_lib.specs(SPECS, reverse=True):
         sp = spec_lib.parse(path)
         pdf_ok = _render(sp, out_dir, pdf=pdf, answers=False)
         _render(sp, out_dir, pdf=pdf, answers=True)

@@ -663,7 +663,7 @@ def build_index(out_dir: Path, reports: list[Report], pdfs: dict[str, bool],
 
 def build_review(dist: Path, pdf: bool = False) -> None:
     out_dir = dist / "review"
-    specs = sorted(SPECS.rglob("*.txt")) if SPECS.exists() else []
+    specs = spec_lib.specs(SPECS, deep=True)
     if not specs:
         print("    · 打卡评价：specs/ 里还没有 spec，跳过")
         return

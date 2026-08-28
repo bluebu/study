@@ -136,7 +136,7 @@ def build_index(out_dir: Path, entries: list[dict]) -> None:
 
 def build_retell(dist: Path, pdf: bool = False) -> None:
     out_dir = dist / "retell"
-    specs = sorted(SPECS.glob("*.txt")) if SPECS.exists() else []
+    specs = spec_lib.specs(SPECS)
     if not specs:
         print("    · 复述故事：specs/ 里还没有 spec，跳过")
         return

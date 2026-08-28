@@ -93,6 +93,36 @@ def die(msg: str) -> None:
     sys.exit(1)
 
 
+# ── 候选文件 ──────────────────────────────────────────────────
+#
+# 喂数据台（../feeder）出的候选一律带 `.draft.` 中缀：`p70.draft.txt`。
+# 那是**没人核对过的机器输出**，不许当正式 spec 建页 —— 人核对完改成
+# `p70.txt` 才算定稿（口径见 ../study/DATA.md 的四档去向）。
+#
+# .gitignore 挡的是「不进 git」，可本地磁盘上它就躺在 spec 目录里，而各科原本
+# 都是 `glob("*.txt")` —— 一落草稿就多建一页。所以发现 spec 一律走 specs()。
+DRAFT_MARK = ".draft"
+
+
+def is_draft(path: str | Path) -> bool:
+    """`p70.draft.txt` → True。`.suffixes` 是 ['.draft', '.txt']。"""
+    return DRAFT_MARK in Path(path).suffixes
+
+
+def specs(spec_dir: str | Path, pattern: str = "*.txt", *,
+          deep: bool = False, reverse: bool = False) -> list[Path]:
+    """一个栏目下的正式 spec，**跳过 `.draft.` 候选**。
+
+    目录不存在返回空列表（各科原本各写一遍 `if SPECS.exists() else []`）。
+    `deep=True` 递归子目录（打卡评价的 slug 带「书/课」两层）。
+    """
+    spec_dir = Path(spec_dir)
+    if not spec_dir.exists():
+        return []
+    found = spec_dir.rglob(pattern) if deep else spec_dir.glob(pattern)
+    return sorted((p for p in found if not is_draft(p)), reverse=reverse)
+
+
 def _split_attrs(text: str) -> tuple[str, dict[str, str]]:
     """把 '听外教音频 | 120 分钟  copies=3 pass=错 ≤ 1 个' 拆成
     ('听外教音频 | 120 分钟', {'copies':'3', 'pass':'错 ≤ 1 个'})
@@ -172,7 +202,8 @@ def latest(spec_dir: str | Path, pattern: str = "*.txt") -> Path:
     不给文件名时的默认行为 —— 老站四个脚本各自复制了一份这个逻辑。
     """
     spec_dir = Path(spec_dir)
-    found = sorted(spec_dir.glob(pattern), key=lambda p: p.stat().st_mtime)
+    found = sorted((p for p in spec_dir.glob(pattern) if not is_draft(p)),
+                   key=lambda p: p.stat().st_mtime)
     if not found:
         die(f"{spec_dir}/ 里没有 {pattern}")
     return found[-1]
