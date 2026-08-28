@@ -18,11 +18,11 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).parent.resolve()
-SRC = ROOT / "src"
-DIST = ROOT / "dist"
-
 sys.path.insert(0, str(ROOT))
-from lib import page  # noqa: E402
+from lib import page, paths  # noqa: E402
+
+# 各层的位置全在 lib/paths.py 一处定义，这儿只是取个短名
+SRC, DIST = paths.SRC, paths.DIST
 
 CST = timezone(timedelta(hours=8))
 

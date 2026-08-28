@@ -1,6 +1,6 @@
 """每日打卡 —— 群公告整理成一张 A4 打印单。
 
-    src/english/homework/specs/<YYYYMMDD>.txt   群公告整理出的 spec
+    storage/spec/english/homework/<YYYYMMDD>.txt   群公告整理出的 spec
     → dist/english/homework/<YYYYMMDD>.html + .pdf + index.html
 
 从老站 ../english/homework/generate_checklist.py 搬来。spec 格式一条没改
@@ -31,10 +31,9 @@ import math
 import re
 from pathlib import Path
 
-from lib import page, sheet, spec as spec_lib
+from lib import page, paths, sheet, spec as spec_lib
 
-HERE = Path(__file__).parent
-SPECS = HERE / "homework" / "specs"
+SPECS = paths.spec("english", "homework")
 
 MONTHS_EN = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
              "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -204,7 +203,7 @@ def build_index(out_dir: Path, entries: list[dict]) -> None:
         + (f'        <a class="pdf" href="{e["stem"]}.pdf">PDF</a>\n' if e["pdf"] else "")
         + f"      </li>"
         for e in entries
-    ) or '      <li><span class="empty">还没有打卡单 —— 往 src/english/homework/specs/ 放一份 spec</span></li>'
+    ) or '      <li><span class="empty">还没有打卡单 —— 往 storage/spec/english/homework/ 放一份 spec</span></li>'
 
     body = f"""<main class="wrap">
   <header class="hero">

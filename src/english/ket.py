@@ -4,8 +4,8 @@
 Chrome 路径不再写死（走 lib/sheet.py 自动探测）、样式抽进 src/assets/ket.css、
 页面骨架走 lib/page.py、目录页由脚本生成而不是手写 18 KB 的 index.html。
 
-    src/english/ket/words/<NN>_<主题>.csv    词表（唯一输入，带 BOM）
-    src/english/ket/selections/<名字>.txt    抽选卷 spec（跨主题挑词）
+    storage/spec/english/ket/words/<NN>_<主题>.csv    词表（唯一输入，带 BOM）
+    storage/spec/english/ket/selections/<名字>.txt    抽选卷 spec（跨主题挑词）
                     ↓
     dist/english/ket/<NN>_<主题>.html/.pdf   单主题默写卷
                      words_1[_answers].*     上册合集 01–12（默写 / 答案对照）
@@ -26,11 +26,10 @@ import html
 import re
 from pathlib import Path
 
-from lib import page, sheet, spec as spec_lib
+from lib import page, paths, sheet, spec as spec_lib
 
-HERE = Path(__file__).parent
-WORDS = HERE / "ket" / "words"
-SELECTIONS = HERE / "ket" / "selections"
+WORDS = paths.spec("english", "ket", "words")
+SELECTIONS = paths.spec("english", "ket", "selections")
 
 INFO = ('姓名 <span class="blank"></span> 日期 <span class="blank"></span> '
         '得分 <span class="blank"></span>')

@@ -1,0 +1,66 @@
+/* 朗读趋势页 —— 两条曲线 + 一张全量数据表。
+   数据来自 storage/result/english/review.csv（result 层），页面自己不算任何指标。
+   骨架（.wrap / .hero / .back）复用 site.css，这儿只加图区和表。 */
+
+.chart{ --pad: 16px; }
+
+.chart{
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: 14px;
+  padding: var(--pad);
+  margin-bottom: 16px;
+}
+.chart h2{
+  margin: 0 0 4px;
+  font-size: 1rem;
+  letter-spacing: .01em;
+}
+.chart .note{
+  margin: 0 0 10px;
+  color: var(--ink-soft);
+  font-size: .78rem;
+  line-height: 1.55;
+}
+.chart .note:last-child{ margin: 10px 0 0; }
+.chart .note code{
+  font-size: .95em;
+  padding: 1px 4px;
+  border-radius: 4px;
+  background: var(--english-bg);
+}
+.chart svg{ display: block; width: 100%; height: auto; }
+
+/* 表在窄屏上横向滚，别把页面撑破 —— 打印单那条「零横向溢出」的规矩同样适用 */
+.scroll{ overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+.tbl{
+  border-collapse: collapse;
+  width: 100%;
+  font-size: .82rem;
+  white-space: nowrap;
+}
+.tbl th,
+.tbl td{
+  padding: 7px 10px;
+  border-bottom: 1.5px solid var(--line);
+  text-align: left;
+}
+.tbl th{
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: .76rem;
+}
+.tbl td.n{ text-align: right; font-variant-numeric: tabular-nums; }
+.tbl tbody tr:last-child td{ border-bottom: 0; }
+/* 分数列：越差越红，色由 figures.score_color() 算好塞进 --s */
+.tbl td.n[style*="--s"]{ color: var(--s); font-weight: 700; }
+
+/* 窄屏：8 列挤不下，把能从别处看到的三列收起来（词数 / 错 / 几词一停 ——
+   每页的报告里都有）。留下日期、页、准确率、WCPM、分数这五列。 */
+@media (max-width: 560px){
+  .tbl th:nth-child(3), .tbl td:nth-child(3),
+  .tbl th:nth-child(4), .tbl td:nth-child(4),
+  .tbl th:nth-child(7), .tbl td:nth-child(7){ display: none; }
+  .tbl th, .tbl td{ padding: 7px 6px; }
+}

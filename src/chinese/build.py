@@ -1,6 +1,6 @@
 """语文 · 今日练习 —— 看拼音写汉字的 A4 打印单。
 
-spec 在 specs/<YYYYMMDD>.txt，产物落在 dist/chinese/practice/：
+spec 在 storage/spec/chinese/practice/<YYYYMMDD>.txt，产物落在 dist/chinese/practice/：
 
     <日期>.html / .pdf              题面版（格子空着）
     <日期>-answers.html / .pdf      答案版（格子里印楷体字，给家长批改）
@@ -19,10 +19,9 @@ from __future__ import annotations
 import html
 from pathlib import Path
 
-from lib import page, sheet, spec as spec_lib
+from lib import page, paths, sheet, spec as spec_lib
 
-HERE = Path(__file__).parent
-SPECS = HERE / "specs"
+SPECS = paths.spec("chinese", "practice")
 
 # 排版旋钮的默认值。cell 和 copies 是「排满一页 A4」的两个主要旋钮：
 # 装不满就加大，快溢出到第二页就调小。
@@ -137,7 +136,7 @@ def _index(out_dir: Path, entries: list[dict]) -> None:
         + (f'<a class="pdf" href="{e["pdf"]}">打印单</a>' if e["pdf"] else "")
         + "</li>"
         for e in entries
-    ) or '    <li><span class="empty">还没有练习单 —— 往 src/chinese/specs/ 放一份 spec</span></li>'
+    ) or '    <li><span class="empty">还没有练习单 —— 往 storage/spec/chinese/practice/ 放一份 spec</span></li>'
 
     body = f"""<main class="wrap">
   <header class="hero">

@@ -1,6 +1,6 @@
 ---
 name: kousuan
-description: 口算卷照片 → 错题清单 + 计算秘籍单（src/math/specs/ + dist/math/miji/）。把孩子做完的口算卷照片转正放大、逐题判对错、按错因归组，出两页 A4：第 1 页错在哪，第 2 页口诀 + 27 道同类重练题。当用户发来口算卷 / 计算练习照片时使用。
+description: 口算卷照片 → 错题清单 + 计算秘籍单（storage/spec/math/miji/ + dist/math/miji/）。把孩子做完的口算卷照片转正放大、逐题判对错、按错因归组，出两页 A4：第 1 页错在哪，第 2 页口诀 + 27 道同类重练题。当用户发来口算卷 / 计算练习照片时使用。
 argument-hint: [口算卷照片]
 ---
 
@@ -13,7 +13,7 @@ argument-hint: [口算卷照片]
                         抄的.txt ──feeder check──► 对错 · 统计 · 「多/少一个 0」线索
                                  │ 会话归错因、挑同类题（换数）
                                  ▼
-             src/math/specs/<slug>.txt ──build.py──► 两页 A4 + 答案版
+     storage/spec/math/miji/<slug>.txt ──build.py──► 两页 A4 + 答案版
 ```
 
 第 1 页「错在哪」：错题按错因分组 + 一组对照点破错在哪一步。
@@ -38,7 +38,7 @@ F=../feeder/bin/feeder        # 没编过就先 cd ../feeder && make cli
    （坐标按转正后的 `full.jpg` 量）。
 3. **判对错**：`$F check 抄的.txt`（只看错题加 `--wrong`）。
    **正确率、错几题这些数字一律照抄它的输出，不要自己数**。
-4. **归错因 → 写 spec**（`src/math/specs/<slug>.txt`，语法见下）：
+4. **归错因 → 写 spec**（`storage/spec/math/miji/<slug>.txt`，语法见下）：
    错题按错因分组，一组一句话；练习题挑同类型的，**必须换数字**。
 5. **构建自检**：`python3 build.py --pdf`，然后 **Read 生成的 PDF 两页**
    （别凭 HTML 想象）。目标：第 1 页内容落在 2/3 页以上、第 2 页正好一页不溢出。

@@ -1,0 +1,6 @@
+slug,date,order,cat,book,page,words,errors,correct,accuracy,wcpm,duration,pause_count,pause_ratio,per_group,score,naep
+super8/L3/p65,2026-08-25,65,超8,Prince Darling,65,105,5,100,95.2,72,83.25,47,0.334,2.2,58,2
+super8/L3/p66,2026-08-25,66,超8,Prince Darling,66,110,4,106,96.4,74,85.99,39,0.376,2.8,61,2
+super8/L3/p67,2026-08-25,67,超8,Prince Darling,67,76,4,72,94.7,78,55.51,25,0.347,3.0,61,2
+super8/L3/p68,2026-08-27,68,超8,Prince Darling,68,128,9,119,93.0,51,138.7,39,0.141,3.3,50,2
+super8/L3/p69,2026-08-27,69,超8,Prince Darling,69,91,10,81,89.0,50,97.9,28,0.204,3.2,45,2

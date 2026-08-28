@@ -21,18 +21,29 @@ make            # 看全部命令
         │
         │   ../feeder  只做机器算得出的（转正、OCR、声学、逐词对齐）
         ▼
-  测量数据  src/**/data/  ──┐   算不出第二遍，所以 push
-                            │
-  人的判断  src/**/specs/  ─┤   哪几处读错、几分、怎么归组。会话里写，push
-                            ▼
-                         build.py
-                            ▼
-                   dist/  HTML + PDF      产物，不进 git
+  测量数据  storage/data/  ──┐   算不出第二遍，所以 push
+                             │
+  人的判断  storage/spec/  ──┤   哪几处读错、几分、怎么归组。会话里写，push
+                             ▼
+                          build.py
+                             │
+        ┌────────────────────┴────────────────────┐
+        ▼                                         ▼
+  storage/result/  算出来的指标            dist/  单页报告、练习单
+  （可再生，push 当回归基准）                 HTML + PDF，不进 git
+        │
+        └──► dist/  趋势页、汇总列表
 ```
 
 两条输入线是有意分开的：机器给数字，人给判断。
-只有打卡评价同时吃两条（`data/` + `specs/` 同名同路径配对），
+只有打卡评价同时吃两条（`data/` + `spec/` 同名同路径配对），
 其余栏目只有一份 spec。
+
+**原始数据落地一次、可以被计算多次** —— 这是分层的全部理由。改了算法重跑构建，
+报告和 `storage/result/` 里的指标都变，`storage/data/` 一个字不动。
+
+`storage/result/` 是**旁路不是必经**：单页报告仍直接吃 spec 全文 + 完整测量 JSON
+（评语要逐字印在纸上、停顿地图要每次歇气的起止时刻），指标表装不下这些。
 
 产物一律不提交 —— 本地 `make build` 和线上 GitHub Actions 跑的是同一个
 `build.py`，「本地能出」就等于「线上能出」。
@@ -41,9 +52,10 @@ make            # 看全部命令
 
 ## 结构
 
-- `src/` — 内容源（spec、讲义、样式）
-- `lib/` — Python 生成器
+- `storage/` — 数据层，累积、push。`data/` 机器测的 / `spec/` 人写的 / `result/` 算出来的
+- `src/` — 代码 + 资产（生成器 `.py`、`assets/*.css`），**一个内容文件都不放**
+- `lib/` — 通用库。各层的位置全在 `lib/paths.py` 一处，改目录名只改它
 - `dist/` — 产物，**不进 git**；线上由 GitHub Actions 构建部署
 
-改内容改 `src/`，加栏目改 `build.py` 顶部的 `SUBJECTS`。
+改内容改 `storage/`，改排版改 `src/`，加栏目改 `build.py` 顶部的 `SUBJECTS`。
 详细约定见 `CLAUDE.md`。

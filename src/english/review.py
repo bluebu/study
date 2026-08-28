@@ -1,13 +1,19 @@
 """打卡评价 —— 每天的朗读作业，一份能和下次比的成绩单。
 
-    src/english/review/
-      data/<slug>.read.json   喂数据台（../feeder）产出：声学 + 转写 + 逐字对齐
-      data/<slug>.json        同上，停顿声学单独一份（和老站 data/ 字段逐个对齐）
-      data/<slug>.ref.txt     红线划中的课文原文 —— 比对基准
-      specs/<slug>.txt        人的判断：哪几处算读错、四维分数、点评
+    storage/data/english/review/<slug>.read.json
+                              喂数据台（../feeder）产出：声学 + 转写 + 逐字对齐
+    storage/data/english/review/<slug>.json
+                              同上，停顿声学单独一份（和老站 data/ 字段逐个对齐）
+    storage/data/english/review/<slug>.ref.txt
+                              红线划中的课文原文 —— 比对基准
+    storage/spec/english/review/<slug>.txt
+                              人的判断：哪几处算读错、四维分数、点评
+    storage/result/english/review.csv
+                              算出来的指标，每次构建全量重算覆盖（趋势页读它）
 
 `<slug>` 是「书 / 课 / 第几页」，**斜杠就是目录**：`super8/L3/p68` 落成
-`data/super8/L3/p68.ref.txt`、报告出到 `dist/english/review/super8/L3/p68.html`。
+`storage/data/english/review/super8/L3/p68.ref.txt`、
+报告出到 `dist/english/review/super8/L3/p68.html`。
 喂数据台一次扫一叠截图时就是这么落的（页码它自己认页角那枚绿圆盘）。
 
 spec 里**没有任何字段指向数据文件** —— 全靠这个名字拼路径，spec 叫什么，
@@ -30,21 +36,22 @@ spec 只写 words（核对过的原文词数）和 errors（认定的计错数�
 
 from __future__ import annotations
 
+import csv
 import html
 import json
 import re
 import sys
 from pathlib import Path
 
-from lib import page, sheet, spec as spec_lib
+from lib import page, paths, sheet, spec as spec_lib
 
 HERE = Path(__file__).parent
 sys.path.insert(0, str(HERE))
 import figures  # noqa: E402
 
-REVIEW = HERE / "review"
-SPECS = REVIEW / "specs"
-DATA = REVIEW / "data"
+SPECS = paths.spec("english", "review")
+DATA = paths.data("english", "review")
+RESULT = paths.result("english", "review.csv")
 
 # 内容分类 → 色板变量名。顺序就是目录页的分组顺序。
 # 和老站 CAT_ORDER / CAT_COLOR 一致，但那边在两个脚本里各存了一份、
@@ -567,7 +574,132 @@ def render(r: Report, others: dict[str, Report], out_dir: Path, pdf: bool) -> bo
     return bool(pdf) and sheet.to_pdf(out, out.with_suffix(".pdf"))
 
 
-def build_index(out_dir: Path, reports: list[Report], pdfs: dict[str, bool]) -> None:
+# ══════════════════════════════════════════════════════════════
+# result 层：算出来的指标落成一张表
+# ══════════════════════════════════════════════════════════════
+
+RESULT_FIELDS = ["slug", "date", "order", "cat", "book", "page",
+                 "words", "errors", "correct", "accuracy", "wcpm",
+                 "duration", "pause_count", "pause_ratio", "per_group",
+                 "score", "naep"]
+
+
+def write_result(reports: list[Report]) -> None:
+    """把每份报告算出来的指标落成 storage/result/english/review.csv。
+
+    **全量重算覆盖，不追加。** 追加不幂等，而且没必要 —— 全部 spec 和测量数据都在
+    git 里，历史随时能重算一遍。push 这张表是为了 `git diff` 能看出「改了算法，
+    哪些指标动了」，不是为了记住历史。
+
+    **只放纯数据，一个 HTML 标签都不许进来。** 这张表要能直接喂给别的工具
+    （趋势页、notebook、Excel），混进 `<a>` 就得先清洗才能用。
+    """
+    RESULT.parent.mkdir(parents=True, exist_ok=True)
+    with RESULT.open("w", newline="", encoding="utf-8") as f:
+        # lineterminator 必须显式给 —— csv 默认写 \r\n，git 会当 CRLF 反复归一化，
+        # 「git diff 看指标变化」这条用途就被换行噪音盖掉了
+        w = csv.writer(f, lineterminator="\n")
+        w.writerow(RESULT_FIELDS)
+        for r in sorted(reports, key=lambda x: (x.date, x.order)):
+            w.writerow([r.slug, r.date, r.order, r.cat,
+                        r.spec.get("book", ""), r.spec.get("page", ""),
+                        r.words, r.errors, r.correct, r.accuracy, r.wcpm,
+                        r.duration, r.pause_count, r.pause_ratio, r.per_group,
+                        r.score, r.naep])
+    print(f"    → result/english/review.csv  （{len(reports)} 行）")
+
+
+def read_result() -> list[dict]:
+    """读回 result 表。缺文件当空 —— 和 data 那几个可选文件一个口径。"""
+    if not RESULT.exists():
+        return []
+    with RESULT.open(encoding="utf-8") as f:
+        return list(csv.DictReader(f))
+
+
+def build_trend(out_dir: Path) -> bool:
+    """趋势页：两条曲线 + 一张全量数据表。
+
+    **故意从 CSV 读，不用内存里的 reports。** 这样 result 表就必须是能被别处消费的
+    纯数据，而不是构建内部的一个临时变量 —— 别的工具从同一个文件取数，看到的和
+    这一页完全一样。少于两次朗读画不出趋势，直接不出这一页。
+    """
+    rows = read_result()
+    if len(rows) < 2:
+        print("    · 趋势：不足两次朗读，跳过")
+        return False
+
+    acc = [(f'第 {r["page"] or r["order"]} 页', float(r["accuracy"])) for r in rows]
+    wcpm = [(f'第 {r["page"] or r["order"]} 页', int(r["wcpm"])) for r in rows]
+
+    def short_date(iso: str) -> str:
+        """趋势表里日期只留月/日 —— 390px 宽放不下「2026 年 8 月 25 日」。"""
+        parts = iso.split("-")
+        return f"{int(parts[1])}/{int(parts[2])}" if len(parts) == 3 else iso
+
+    trs = "\n".join(
+        f'      <tr><td>{html.escape(short_date(r["date"]))}</td>'
+        f'<td>{html.escape("/".join(r["slug"].split("/")[-2:]))}</td>'
+        f'<td class="n">{r["words"]}</td><td class="n">{r["errors"]}</td>'
+        f'<td class="n">{r["accuracy"]}%</td><td class="n">{r["wcpm"]}</td>'
+        f'<td class="n">{r["per_group"]}</td>'
+        f'<td class="n" style="--s:{figures.score_color(int(r["score"]))[0]}">'
+        f'{r["score"]}</td></tr>'
+        for r in rows)
+
+    body = f"""<main class="wrap">
+  <header class="hero">
+    <a class="back" href="./">‹ 打卡评价</a>
+    <h1>朗读趋势</h1>
+    <p class="sub">{len(rows)} 次朗读放在一条线上看 · 数据来自 result 层，不是现算的</p>
+  </header>
+
+  <section class="chart">
+    <h2>准确率</h2>
+    <p class="note">读对的词占划线原文的比例。98% 以上能自己读，95–97% 要带一带。</p>
+    {figures.trend_svg(acc, 86, 100, (90, 95, 98), "准确率 %")}
+  </section>
+
+  <section class="chart">
+    <h2>每分钟正确词数</h2>
+    <p class="note">WCPM = 读对的词数 ÷ 用时。和美国母语学生常模的比较在每页的报告里。</p>
+    {figures.trend_svg(wcpm, 0, 100, (0, 50, 100), "WCPM", "var(--c-listen)")}
+  </section>
+
+  <section class="chart">
+    <h2>全部数据</h2>
+    <div class="scroll">
+      <table class="tbl">
+        <thead><tr><th>日期</th><th>课/页</th><th>词数</th><th>错</th>
+          <th>准确率</th><th>WCPM</th><th>几词一停</th><th>分</th></tr></thead>
+        <tbody>
+{trs}
+        </tbody>
+      </table>
+    </div>
+    <p class="note">整张表在 <code>storage/result/english/review.csv</code>，
+      每次构建全量重算覆盖。</p>
+  </section>
+</main>"""
+
+    page.write(
+        out_dir / "trend.html",
+        page.render(
+            title="朗读趋势 · 打卡评价",
+            description="把每次朗读的准确率和每分钟正确词数放在一条线上看。",
+            body=body,
+            emoji="📈",
+            css=("site.css", "trend.css"),
+            root="../..",
+            noindex=True,
+        ),
+    )
+    print(f"    → review/trend.html  （{len(rows)} 次）")
+    return True
+
+
+def build_index(out_dir: Path, reports: list[Report], pdfs: dict[str, bool],
+                trend: bool = False) -> None:
     """目录页：按日期倒序分组，组内按分类顺序、再按 order。"""
     by_date: dict[str, list[Report]] = {}
     for r in reports:
@@ -599,8 +731,9 @@ def build_index(out_dir: Path, reports: list[Report], pdfs: dict[str, bool]) -> 
     <a class="back" href="../../">‹ 学习小站</a>
     <h1>打卡评价</h1>
     <p class="sub">每天的朗读作业，一份能和下次比的成绩单 · 共 {len(reports)} 份</p>
+{'    <a class="trend" href="trend.html">📈 看趋势 · 全部放在一条线上</a>' if trend else ''}
   </header>
-{chr(10).join(groups) if groups else '  <p class="empty">还没有报告 —— 用喂数据台跑一份录音，再往 specs/ 放一份 spec</p>'}
+{chr(10).join(groups) if groups else '  <p class="empty">还没有报告 —— 用喂数据台跑一份录音，再往 storage/spec/english/review/ 放一份 spec</p>'}
 </main>"""
 
     page.write(
@@ -636,4 +769,7 @@ def build_review(dist: Path, pdf: bool = False) -> None:
     for r in sorted(reports, key=lambda x: (x.date, x.order)):
         pdfs[r.slug] = render(r, others, out_dir, pdf)
 
-    build_index(out_dir, reports, pdfs)
+    # 先落 result 表，趋势页再从那张表读回来 —— 顺序不能反
+    write_result(reports)
+    trend = build_trend(out_dir)
+    build_index(out_dir, reports, pdfs, trend)

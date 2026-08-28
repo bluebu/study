@@ -6,7 +6,7 @@
 诊断和练习分开印，是因为清单上写着正确答案 —— 和练习题印在一起，
 孩子会照着抄。所以第 2 页的题都换了数字，只留题型。
 
-spec 在 specs/<slug>.txt，产物落在 dist/math/miji/：
+spec 在 storage/spec/math/miji/<slug>.txt，产物落在 dist/math/miji/：
 
     <slug>.html / .pdf              题面版（横线空着）
     <slug>-answers.html / .pdf      答案版（横线上印答案，给家长批改）
@@ -22,10 +22,9 @@ import html
 import re
 from pathlib import Path
 
-from lib import page, sheet, spec as spec_lib
+from lib import page, paths, sheet, spec as spec_lib
 
-HERE = Path(__file__).parent
-SPECS = HERE / "specs"
+SPECS = paths.spec("math", "miji")
 
 INFO = ('姓名 <span class="blank"></span> 日期 <span class="blank"></span> '
         '用时 <span class="blank"></span>')
@@ -221,7 +220,7 @@ def _index(out_dir: Path, entries: list[dict]) -> None:
         + (f'<a class="pdf" href="{e["pdf"]}">打印单</a>' if e["pdf"] else "")
         + "</li>"
         for e in entries
-    ) or '    <li><span class="empty">还没有秘籍 —— 往 src/math/specs/ 放一份 spec</span></li>'
+    ) or '    <li><span class="empty">还没有秘籍 —— 往 storage/spec/math/miji/ 放一份 spec</span></li>'
 
     body = f"""<main class="wrap" style="--accent: var(--math); --accent-bg: var(--math-bg)">
   <header class="hero">

@@ -1,15 +1,15 @@
 ---
 name: ket
-description: 单词卡照片 → CSV → A4 默写卷（src/english/ket/ + dist/english/ket/）。把 KET 词汇书的单词卡照片整理成 CSV 词表，或从已有词表出默写卷（看中文写英文、四线三格）、答案对照版、跨主题抽选卷。当用户发来单词表照片要求整理，或要出默写卷、抽选某几个词、要打印 PDF 时使用。
+description: 单词卡照片 → CSV → A4 默写卷（storage/spec/english/ket/ + dist/english/ket/）。把 KET 词汇书的单词卡照片整理成 CSV 词表，或从已有词表出默写卷（看中文写英文、四线三格）、答案对照版、跨主题抽选卷。当用户发来单词表照片要求整理，或要出默写卷、抽选某几个词、要打印 PDF 时使用。
 argument-hint: [主题编号 + 照片，或要抽选的词号]
 ---
 
 # ket：单词卡照片 → CSV → A4 默写卷
 
 ```
-单词卡照片 ──feeder cards──► <NN>_<主题>.draft.csv ──人核对──► src/english/ket/words/<NN>_<主题>.csv
-                             + 核对图 + .cards.json                      │
-                    src/english/ket/selections/*.txt  ← 抽选卷 spec（人挑的词号）
+单词卡照片 ──feeder cards──► <NN>_<主题>.draft.csv ──人核对──► storage/spec/english/ket/words/<NN>_<主题>.csv
+                             + 核对图 + .cards.json                              │
+        storage/spec/english/ket/selections/*.txt  ← 抽选卷 spec（人挑的词号）
                                         ▼
                           python3 build.py --pdf
                                         ▼
@@ -26,7 +26,7 @@ CSV 是唯一输入，卷子全是产物 —— **改词表就重新构建，不
 
 ```bash
 ../feeder/bin/feeder cards 卡1.jpg 卡2.jpg --slug 26_body_and_face
-   # → src/english/ket/words/26_body_and_face.draft.csv（候选，gitignore 掉了）
+   # → storage/spec/english/ket/words/26_body_and_face.draft.csv（候选，gitignore 掉了）
    #   + .cards.json（每条的把握程度和出处）+ 核对图
 ```
 
@@ -66,7 +66,7 @@ from lib import sheet; from pathlib import Path
 h = Path("dist/english/ket/words_1.html"); sheet.to_pdf(h, h.with_suffix(".pdf"))
 ```
 
-抽选卷：用户点名「第 N 章的第 x,y,z 个词」时，写 `src/english/ket/selections/<名字>.txt`：
+抽选卷：用户点名「第 N 章的第 x,y,z 个词」时，写 `storage/spec/english/ket/selections/<名字>.txt`：
 
 ```
 # 20260820 词汇          ← 首个 # 行是卷名，页眉显示「20260820 词汇 默写」

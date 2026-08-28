@@ -43,3 +43,18 @@
 @media (max-width:430px){
   .list .cat{ display:none; }
 }
+
+/* 趋势页入口。样式必须放在这儿而不是 trend.css —— 按钮长在**目录页**上，
+   那一页只引 site.css + 本文件，引不到 trend.css。 */
+.hero .trend{
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--ink);
+  font-size: .86rem;
+  text-decoration: none;
+}
+.hero .trend:active{ border-color: var(--english); color: var(--english); }

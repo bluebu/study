@@ -2,20 +2,45 @@
 
 哪条链路产出什么文件、叫什么名、落在哪、要不要 push。
 
-**这是唯一真源。** `src/` 下的生成器、根 `CLAUDE.md`、`.gitignore`、隔壁
+**这是唯一真源。** `src/` 下的生成器、`lib/paths.py`、根 `CLAUDE.md`、`.gitignore`、隔壁
 `../feeder`（喂数据台）全都照这张表执行 —— 别在别处再维护第二份说明，
 四份口径互相漂移正是这张表被写出来的原因。
 
-## 四档去向
+## 三层
 
-| 档 | 要不要 push | 含义 | 谁来清 |
-|---|---|---|---|
-| **进 repo** | ✅ push | 测量数据 + 人写的判断。站的真正输入 | 不清，长期留着 |
-| **候选** | ❌ gitignore | `.draft.*`，机器给的候选。人核对后**另存成正式名**才进 repo | 另存后删掉 draft |
-| **临时** | ❌ gitignore | 核对用的过程产物，看一眼就没用了 | 随手删 |
-| **素材** | ❌ 不进任何仓库 | 录音、视频、照片。留本机 `inbox/` | 自己归档 |
+```
+素材（本机 inbox/，永不进仓库）
+    │  ../feeder：转正、OCR、离线转写、逐词对齐、声学包络
+    ▼
+storage/data/     机器测的 —— 源没了就算不出来，所以 push
+storage/spec/     人写的判断 —— 哪几处算读错、几分、怎么归组
+    │  build.py（src/ 下的生成器）
+    ├──────────────► storage/result/   算出来的指标（可再生，push 当回归基准）
+    │                      │
+    ▼                      ▼
+dist/  单页报告、练习单     dist/  趋势页、汇总列表
+```
 
-判据只有一条：**这份东西丢了还能不能再算出来。**
+**层名就是职责**：`data` 抓来的 / `spec` 人定的 / `result` 算出来的。
+改目录名只改 `lib/paths.py` 一处 —— 各科生成器一律走 `paths.spec(...)`、
+`paths.data(...)`，不许再用 `Path(__file__).parent` 往下拼。
+
+`storage/result/` 是**旁路不是必经**：单页报告仍直接吃 spec 全文 + 完整测量 JSON
+（评语要逐字印在纸上、停顿地图要每次歇气的起止时刻），指标表装不下这些。
+别为了「报告全从 result 出」把散文和大 JSON 塞进 result —— 那就成了 data 的副本。
+
+## 五档去向
+
+| 档 | 落在哪 | 要不要 push | 含义 | 谁来清 |
+|---|---|---|---|---|
+| **输入** | `storage/data/`<br>`storage/spec/` | ✅ push | 测量数据 + 人写的判断。站的真正输入 | 不清，长期留着 |
+| **派生** | `storage/result/` | ✅ push | 算出来的指标。**可再生** —— push 它是判据的有意例外，见下 | 不清，每次构建全量覆盖 |
+| **候选** | 和正式文件同目录 | ❌ gitignore | `.draft.*`，机器给的候选。人核对后**另存成正式名**才进 repo | 另存后删掉 draft |
+| **临时** | 和正式文件同目录 | ❌ gitignore | 核对用的过程产物，看一眼就没用了 | 随手删 |
+| **素材** | 本机 `inbox/` | ❌ 不进任何仓库 | 录音、视频、作业照片 | 自己归档 |
+
+判据只有一条：**这份东西丢了还能不能再算出来。** 算不出来的必须 push，
+算得出来的一律不留 —— `storage/result/` 是唯一的例外，理由在下面那节。
 
 - 测量数据算不出来了 —— 录音和教材照片不进仓库，声学数字、逐词时间戳、
   红线划中的原文，源没了就永远没了。所以必须 push。
@@ -27,8 +52,8 @@
 打卡评价那套名字是「**书 / 课 / 页**」，**斜杠就是目录**：
 
 ```
-super8/L3/p68   →   src/english/review/data/super8/L3/p68.ref.txt
-                    src/english/review/specs/super8/L3/p68.txt
+super8/L3/p68   →   storage/data/english/review/super8/L3/p68.ref.txt
+                    storage/spec/english/review/super8/L3/p68.txt
                     dist/english/review/super8/L3/p68.html
 ```
 
@@ -42,15 +67,15 @@ super8/L3/p68   →   src/english/review/data/super8/L3/p68.ref.txt
 
 | 链路 | 名字填到哪 | 产出 | 落到 | 去向 |
 |---|---|---|---|---|
-| `read` 朗读录音 | `<书>/<课>/pNN` 人给全 | `.read.json` 主产物（声学 + 转写 + 逐字对齐）<br>`.json` 停顿声学（老站字段）<br>`.words.tsv` 逐词时间戳 | `src/english/review/data/` | **进 repo** |
-| `scan` 教材截图 | `<书>/<课>`，**页码机器认** | `.ref.txt` 红线划中的课文原文 | `src/english/review/data/` | **进 repo** |
+| `read` 朗读录音 | `<书>/<课>/pNN` 人给全 | `.read.json` 主产物（声学 + 转写 + 逐字对齐）<br>`.json` 停顿声学（老站字段）<br>`.words.tsv` 逐词时间戳 | `storage/data/english/review/` | **进 repo** |
+| `scan` 教材截图 | `<书>/<课>`，**页码机器认** | `.ref.txt` 红线划中的课文原文 | `storage/data/english/review/` | **进 repo** |
 | | | `.page.json` 整页 OCR + 坐标<br>`.marked.png` 核对图<br>`.full.txt` 整页全文（`--full`） | 同上 | **临时** |
-| `cards` 单词卡 | `<NN>_<主题>` | `.draft.csv`（带 BOM 给 Excel） | `src/english/ket/words/` | **候选** → 另存 `<NN>_<主题>.csv` |
+| `cards` 单词卡 | `<NN>_<主题>` | `.draft.csv`（带 BOM 给 Excel） | `storage/spec/english/ket/words/` | **候选** → 另存 `<NN>_<主题>.csv` |
 | | | `.cards.json` `.cards.marked.png` | 同上 | **临时** |
-| `board` 白板 | `<故事slug>` | `.draft.txt` | `src/english/retell/specs/` | **候选** → 另存 `<故事slug>.txt` |
+| `board` 白板 | `<故事slug>` | `.draft.txt` | `storage/spec/english/retell/` | **候选** → 另存 `<故事slug>.txt` |
 | | | `.board.json` `.board.marked.png` | 同上 | **临时** |
-| `pinyin` 生字词 | `<YYYYMMDD>` | `.draft.txt` | `src/chinese/specs/` | **候选** → 另存 `<YYYYMMDD>.txt` |
-| `sheet` 口算卷 | 不需要名字 | `full.jpg` `block_N.png` `zoom_x_y.png` | 本机临时目录，**不落 `src/`** | **临时** |
+| `pinyin` 生字词 | `<YYYYMMDD>` | `.draft.txt` | `storage/spec/chinese/practice/` | **候选** → 另存 `<YYYYMMDD>.txt` |
+| `sheet` 口算卷 | 不需要名字 | `full.jpg` `block_N.png` `zoom_x_y.png` | 本机临时目录，**不落 `storage/`** | **临时** |
 | `check` 判对错 | 不需要名字 | 只打 stdout，不落文件 | — | — |
 
 **为什么 `read` / `scan` 的产出不带 `.draft.`**：那是测量数据，机器算的就是最终值。
@@ -61,22 +86,43 @@ super8/L3/p68   →   src/english/review/data/super8/L3/p68.ref.txt
 
 | 栏目 | 目录 | 命名 | 读它的生成器 |
 |---|---|---|---|
-| 打卡评价 | `src/english/review/specs/` | `<书>/<课>/pNN.txt` | `src/english/review.py` |
-| 词汇默写 | `src/english/ket/words/`<br>`src/english/ket/selections/` | `<NN>_<主题>.csv`<br>`<YYYYMMDD>.txt` | `src/english/ket.py` |
-| 每日打卡 | `src/english/homework/specs/` | `<YYYYMMDD>.txt` | `src/english/homework.py` |
-| 复述故事 | `src/english/retell/specs/` | `<故事slug>.txt` | `src/english/retell.py` |
-| 语文练习 | `src/chinese/specs/` | `<YYYYMMDD>.txt` | `src/chinese/build.py` |
-| 数学秘籍 | `src/math/specs/` | `<错因slug>.txt` | `src/math/build.py` |
+| 打卡评价 | `storage/spec/english/review/` | `<书>/<课>/pNN.txt` | `src/english/review.py` |
+| 词汇默写 | `storage/spec/english/ket/words/`<br>`storage/spec/english/ket/selections/` | `<NN>_<主题>.csv`<br>`<YYYYMMDD>.txt` | `src/english/ket.py` |
+| 每日打卡 | `storage/spec/english/homework/` | `<YYYYMMDD>.txt` | `src/english/homework.py` |
+| 复述故事 | `storage/spec/english/retell/` | `<故事slug>.txt` | `src/english/retell.py` |
+| 语文练习 | `storage/spec/chinese/practice/` | `<YYYYMMDD>.txt` | `src/chinese/build.py` |
+| 数学秘籍 | `storage/spec/math/miji/` | `<错因slug>.txt` | `src/math/build.py` |
 
 **只有打卡评价读 spec 之外的数据文件**，其余六个栏目都是 spec 单一输入。
 打卡评价的三份数据里 `.json` 是必需的（缺了直接报错），`.read.json` 和 `.ref.txt` 可选；
 `.words.tsv` **目前没有生成器读它**，留着是给人核对时间戳用的。
 
+## 算出来的指标（`storage/result/`）
+
+| 表 | 一行是什么 | 谁写 | 谁读 |
+|---|---|---|---|
+| `english/review.csv` | 一次朗读的全部指标 | `src/english/review.py` 的 `write_result()` | 趋势页 `dist/english/review/trend.html`；别的工具直接读 CSV |
+
+列就是 `review.py` 已经在算的那些：`accuracy` `wcpm` `per_group` `correct` +
+spec 里人给的 `words` `errors` `score` `naep`。**不新增任何计算** —— 这张表是
+把内存里算好的数落到盘上，不是第二套算法。
+
+三条硬规矩：
+
+- **全量重算覆盖，不追加。** 追加不幂等（重复构建会重复追加），也没必要 ——
+  全部 spec 和测量数据都在 git 里，历史随时能重算一遍。
+- **只放纯数据，一个 HTML 标签都不许进来。** 这张表要能直接喂给别的工具
+  （notebook、Excel）。混进 `<a>` 就得先清洗才能用。
+- **push 它，尽管它可再生** —— 这是「算得出来就不留」那条判据的唯一例外。
+  理由不是记住历史（历史能重算），而是 **`git diff` 能看出「改了算法，
+  哪些指标动了」**。和 `../feeder` 用 `make test` 拿老站数据回归是同一个思路。
+
 ## 一眼看清：哪些扩展名要 push
 
 ```
-进 repo   .ref.txt  .read.json  .json  .words.tsv     ← 打卡评价的测量数据
-          .txt（各 specs/）   .csv（ket/words/）      ← 人写的判断
+输入      .ref.txt  .read.json  .json  .words.tsv     ← storage/data/：测量数据
+          .txt（各栏目）  .csv（ket/words/）        ← storage/spec/：人写的判断
+派生      .csv（storage/result/）                   ← 算出来的指标，全量覆盖
 候选      .draft.csv  .draft.txt                      ← 核完另存，别直接 push
 临时      .marked.png  .page.json  .cards.json
           .board.json  .full.txt                      ← 看完就扔

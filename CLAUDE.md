@@ -7,13 +7,27 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 给自己孩子做的学习站：语文、英语、数学的练习单和讲义，一处收齐。
 手机/iPad 上翻，A4 打印。域名 `s.hi-ruby.com`（GitHub Pages）。
 
-## 一条铁律：源码只放输入
+## 一条铁律：数据和代码分开，代码只放输入
 
 ```
-src/       ← 内容源：spec、讲义、样式、图。只有「输入」
-lib/       ← Python 生成器。工具，不是内容
+storage/   ← 数据层。天天长，只累积不重排。data 机器测的 / spec 人写的 / result 算出来的
+src/       ← 代码 + 资产：生成器 .py、assets/*.css、CNAME。**一个内容文件都不放**
+lib/       ← 通用库。工具，不是内容
 dist/      ← 产物（HTML + PDF）。**不进 git**，每次全新构建
 ```
+
+按管道阶段分层，**层名就是职责**：
+
+```
+storage/data/     机器测的 —— ../feeder 产出，源没了就算不出来
+storage/spec/     人写的判断 —— 哪几处算读错、几分、怎么归组
+storage/result/   算出来的指标 —— build.py 全量重算覆盖，push 当回归基准
+```
+
+这么分是为了**原始数据落地一次、可以被计算多次**：改了算法重跑构建，报告和指标都变，
+`storage/data/` 一个字不动。所以生成器一律走 `paths.spec(...)` / `paths.data(...)`
+取路径（`lib/paths.py`），**别再用 `Path(__file__).parent` 往下拼** —— 代码在 `src/`、
+数据在 `storage/`，两棵树的相对关系只在 `lib/paths.py` 写一次，改目录名也只改那一处。
 
 生成出来的 HTML 和 PDF 一律不提交。老站（见下）把 `sheets/*.html` 和
 `*.pdf` 全提交进仓库，翻历史全是产物噪音，这次不重复。
@@ -21,45 +35,62 @@ dist/      ← 产物（HTML + PDF）。**不进 git**，每次全新构建
 `dist/` 由 `build.py` 生成：本地 `make build`，线上 GitHub Actions 跑
 **同一个** `build.py`。所以「本地能出」就等于「线上能出」，不存在两套构建逻辑。
 
-**`src/` 下哪些文件要 push、哪些是核对完就扔的临时产物 —— 见 [DATA.md](DATA.md)。**
-那张表是 data 构成的唯一真源，`.gitignore`、各科生成器、隔壁 `../feeder` 都照它执行。
+**`storage/` 下哪条链路产出什么文件、要不要 push —— 见 [DATA.md](DATA.md)。**
+那张表是 data 构成的唯一真源，`lib/paths.py`、`.gitignore`、各科生成器、
+隔壁 `../feeder` 都照它执行。
 
 ## 目录
+
+**数据层**（累积，push；命名和去向的唯一真源是 [DATA.md](DATA.md)）：
+
+```
+storage/
+  data/               机器测的（../feeder 产出，不可再生）
+    english/review/     打卡评价的测量数据。名字是「书/课/页」，斜杠就是目录：
+                        super8/L3/p68.{ref.txt,read.json,json,words.tsv}
+  spec/               人写的判断和内容
+    english/review/     哪几处算读错、四维分数、点评。同名 slug 对应 data/：
+                        super8/L3/p68.txt
+    english/ket/words/       KET 词表 CSV（25 个主题，带 BOM 给 Excel 用）
+    english/ket/selections/  抽选卷 spec：跨主题挑词，题号沿用原主题
+    english/homework/   一天一份，文件名是 YYYYMMDD
+    english/retell/     一个区块一个阶段，区块内一行一段
+    chinese/practice/   语文 spec，文件名是 YYYYMMDD
+    math/miji/          秘籍 spec：错题按错因分组写，练习题只写题面、答案脚本算
+  result/             算出来的指标（可再生，push 当回归基准）
+    english/review.csv  一行一次朗读的全部指标。趋势页读它
+```
+
+**代码层**（`src/` 一个内容文件都不放）：
 
 ```
 build.py              总构建器。站点地图 SUBJECTS 就在文件头部
 Makefile              日常命令入口
 lib/
+  paths.py            各层的位置。**改目录名只改这一个文件**
   spec.py             spec DSL 解析（三科共用）
   page.py             HTML 页面骨架（head / og / 资产链接 / 页脚）
   site.py             站点常量：备案号、访问统计。改页脚只改这一个文件
   sheet.py            A4 → PDF（无头 Chrome，路径自动探测）
 src/
+  CNAME               自定义域名，build.py 带进 dist/
   assets/
     palette.css       色板单一真源
     print.css         A4 打印锁
     grid.css          田字格 / 四线三格
     site.css          站点页面（入口页、目录页）
     foot.css          页脚（备案号 + 统计），page.py 挂页脚时自动引上
-  chinese/specs/      语文 spec
+    trend.css         趋势页（曲线卡片 + 指标总表）
+  chinese/build.py    语文练习单
   english/            英语（CLAUDE.md 里有本科的教学准则和四个栏目的口径）
     build.py          只做分发：一个栏目一层 try
     review.py         打卡评价：朗读成绩单（数只写 words / errors，其余算出来）
-    figures.py        三把尺子 + 停顿地图，常模数值是一手来源
-    review/data/      喂数据台产出的测量数据。名字是「书/课/页」，斜杠就是目录：
-                      super8/L3/p68.ref.txt。要不要 push 见 DATA.md
-    review/specs/     人的判断：哪几处算读错、四维分数、点评（同名同路径对应 data/）
+                      末尾落 storage/result/english/review.csv，再出趋势页
+    figures.py        三把尺子 + 停顿地图 + 趋势曲线，常模数值是一手来源
     ket.py            词汇默写：CSV → A4 默写卷（单主题 / 合集 / 抽选卷 / 答案对照）
-    ket/words/        KET 词表 CSV（25 个主题，带 BOM 给 Excel 用）
-    ket/selections/   抽选卷 spec：跨主题挑词，题号沿用原主题
     homework.py       每日打卡：群公告 → 一张 A4 作业清单
-    homework/specs/   一天一份，文件名是 YYYYMMDD
     retell.py         复述故事：关键词按情节五阶段分组，看着讲一遍
-    retell/specs/     一个区块一个阶段，区块内一行一段
-  math/
-    build.py          计算秘籍：错题清单 + 口诀卡 + 重练题（两页 A4）
-    specs/            秘籍 spec：错题按错因分组写，练习题只写题面、答案脚本算
-    lessons/          数学讲义源
+  math/build.py       计算秘籍：错题清单 + 口诀卡 + 重练题（两页 A4）
 .github/workflows/pages.yml
 .claude/skills/
   kousuan/            口算卷照片 → 错题清单 + 秘籍单（图和判对错都走 ../feeder）

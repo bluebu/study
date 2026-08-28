@@ -18,11 +18,17 @@ Shurley English、Reed-Kellogg、Warriner's），**不教中国式五大句型**
 ## 栏目
 
 ```
-review/     打卡评价 —— 每天的朗读作业，一份能和下次比的成绩单   ← 已上线
-ket/        KET 核心词四线三格默写 —— 看中文写英文，25 个主题     ← 已上线
-homework/   每日打卡 —— 群公告 → A4 打印单                       ← 已上线
-retell/     复述故事 —— 老师白板的 Story Map → A4 关键词地图      ← 已上线
+review      打卡评价 —— 每天的朗读作业，一份能和下次比的成绩单   ← 已上线
+ket         KET 核心词四线三格默写 —— 看中文写英文，25 个主题     ← 已上线
+homework    每日打卡 —— 群公告 → A4 打印单                       ← 已上线
+retell      复述故事 —— 老师白板的 Story Map → A4 关键词地图      ← 已上线
 ```
+
+**栏目名不是目录名。** 代码在 `src/english/<栏目>.py`，内容在
+`storage/spec/english/<栏目>/`，测量数据在 `storage/data/english/<栏目>/` ——
+两棵树靠栏目名对齐，取路径一律走 `paths.spec("english", "<栏目>")`（`lib/paths.py`），
+**别用 `Path(__file__).parent` 往下拼**，代码和数据不在同一棵树上。
+下面各节标题里的 `spec/…`、`data/…` 都是 `storage/` 下的相对路径。
 
 一个栏目一个模块（`review.py` / `ket.py` / `homework.py` / `retell.py`），`build.py` 只做分发，
 **每个栏目单独一层 try** —— 一个栏目的 spec 写错不该把另外两个带下水
@@ -30,7 +36,7 @@ retell/     复述故事 —— 老师白板的 Story Map → A4 关键词地图
 
 老站 `../english/` 还在线上跑，上面这三个栏目的实现都在那儿，要参照就去翻。
 
-## 词汇默写（ket/）
+## 词汇默写（spec/english/ket/）
 
 CSV 是唯一输入，卷子全是产物。格式老站定稿过，别随手改：一页 30 词、
 四线三格绿线红基线 11mm、合集分上下册（01–12 定稿不动）。
@@ -39,25 +45,35 @@ CSV 是唯一输入，卷子全是产物。格式老站定稿过，别随手改�
 答案对照版按 px 估算切页（`ket.py` 的 `ANS_PAGE_H`）—— 动了页眉页脚或字号，
 **必须验一遍「HTML 里 .sheet 的个数 == PDF 页数」**，不等就是溢出、打出来夹空页。
 
-## 打卡评价（review/）
+## 打卡评价（spec + data/english/review/）
 
 ```
-review/
-  data/<slug>.read.json    喂数据台（../../feeder）产出：声学 + 转写 + 逐字对齐
-  data/<slug>.json         停顿声学，字段和老站 review/data/ 逐个对齐（**必需**）
-  data/<slug>.ref.txt      红线划中的课文原文 —— 比对基准（可选，兜底算句末）
-  data/<slug>.words.tsv    逐词时间戳（人核对用，生成器不读）
-  specs/<slug>.txt         人的判断：哪几处算读错、四维分数、点评
-figures.py                 三把尺子 + 停顿地图（常模数值是一手来源，别动）
-build.py                   生成器
+storage/data/english/review/
+  <slug>.read.json         喂数据台（../../feeder）产出：声学 + 转写 + 逐字对齐
+  <slug>.json              停顿声学，字段和老站 review/data/ 逐个对齐（**必需**）
+  <slug>.ref.txt           红线划中的课文原文 —— 比对基准（可选，兜底算句末）
+  <slug>.words.tsv         逐词时间戳（人核对用，生成器不读）
+storage/spec/english/review/
+  <slug>.txt               人的判断：哪几处算读错、四维分数、点评
+storage/result/
+  english/review.csv       算出来的指标，`write_result()` 每次全量重算覆盖
+src/english/
+  review.py                生成器：单页报告 + index 汇总 + 趋势页
+  figures.py               三把尺子 + 停顿地图 + 趋势曲线（常模数值是一手来源，别动）
 ```
 
 **slug 是「书 / 课 / 页」，斜杠就是目录**：`super8/L3/p68` →
-`specs/super8/L3/p68.txt` + `data/super8/L3/p68.*` → `dist/english/review/super8/L3/p68.html`。
+`spec/…/super8/L3/p68.txt` + `data/…/super8/L3/p68.*` → `dist/english/review/super8/L3/p68.html`。
 spec 里**没有任何字段指向数据文件**，全靠 `data/<slug>.<ext>` 拼路径 ——
 名字错了 spec 和数据就配不上对，所以喂数据台在写盘前就校验名字形状。
+slug 是反推出来的：`spec_path.relative_to(SPECS)` 去掉后缀。
 
 四份文件要不要 push、哪些是核对完就扔的，见根目录 [DATA.md](../../DATA.md)。
+
+`review.csv` 是**旁路不是必经**：单页报告仍直接吃 spec 全文 + 完整测量 JSON
+（评语要逐字印在纸上、停顿地图要每次歇气的起止时刻），指标表装不下这些。
+趋势页 `build_trend()` **故意从 CSV 读回来**，不吃内存里的 reports ——
+那张表必须真能被别的工具消费，不然就是把内存字典换了个存法。
 
 页码印在报告上的那个数**读的是 spec 的 `page:` 字段**，不是从 slug 解析的
 （slug 里的 `p68` 只是名字的一部分）。`prev:` 可以只写页（`p67`），
@@ -140,9 +156,9 @@ WCPM     = 读对词数 ÷ 时长 × 60
    文本偏难（<95%）时建议要落在「偏难文本怎么朗读」上 —— 先扫生词、分段、
    同一段读两遍（repeated reading）
 
-## 每日打卡（homework/）
+## 每日打卡（spec/english/homework/）
 
-群公告 → `homework/specs/<YYYYMMDD>.txt` → 一张 A4。spec 格式和老站
+群公告 → `storage/spec/english/homework/<YYYYMMDD>.txt` → 一张 A4。spec 格式和老站
 `../../english/homework/specs/` 完全一致（那五份直接拿过来就能跑）。
 
 ```
@@ -175,7 +191,7 @@ WCPM     = 读对词数 ÷ 时长 × 60
 排版目标是「**干净地放满一页**」：底部空太多就加大 `memo:` 行数，
 快溢出到第二页就减备注行或精简说明行。**改完 Read PDF 自检**，别凭 HTML 想象。
 
-## 复述故事（retell/）
+## 复述故事（spec/english/retell/）
 
 老师在白板上把整个故事拆成十几段，每段一串关键词、用箭头竖着串下来，
 拍下来是十几张照片。翻着照片没法复述 —— 挪到一张 A4 上，一段一行，

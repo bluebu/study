@@ -1,6 +1,6 @@
 """复述故事 —— 老师白板上的 Story Map 变成一张 A4，孩子看着复述。
 
-    src/english/retell/specs/<slug>.txt  →  dist/english/retell/<slug>.html + .pdf
+    storage/spec/english/retell/<slug>.txt  →  dist/english/retell/<slug>.html + .pdf
 
 老师在白板上把整个故事拆成十几段，每段是一串关键词，用箭头竖着串下来。
 拍下来是十几张照片，翻着看没法复述 —— 挪到一张纸上，一段一行，
@@ -28,10 +28,9 @@ import html
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from lib import page, sheet, spec as spec_lib
+from lib import page, paths, sheet, spec as spec_lib
 
-HERE = Path(__file__).parent
-SPECS = HERE / "retell" / "specs"
+SPECS = paths.spec("english", "retell")
 
 @dataclass
 class Stage:
@@ -152,7 +151,7 @@ def build_index(out_dir: Path, entries: list[dict]) -> None:
         + (f'        <a class="pdf" href="{e["stem"]}.pdf">PDF</a>\n' if e["pdf"] else "")
         + f'      </li>'
         for e in entries
-    ) or '      <li><span class="empty">还没有复述地图 —— 往 src/english/retell/specs/ 放一份 spec</span></li>'
+    ) or '      <li><span class="empty">还没有复述地图 —— 往 storage/spec/english/retell/ 放一份 spec</span></li>'
 
     body = f"""<main class="wrap">
   <header class="hero">

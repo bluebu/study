@@ -178,6 +178,51 @@ def timeline_svg(data, bounds, stalls):
     return svg, counts
 
 
+# ── 趋势：一条随时间的折线 ──────────────────────────────────
+# 数据来自 storage/result/english/review.csv（result 层），不是从 spec 现算的。
+
+def trend_svg(points, lo, hi, ticks, unit="", color="var(--c-read)"):
+    """一条随时间的折线。points = [(标签, 数值), ...]，按时间顺序给。
+
+    x **等距**排开，不按真实日期间距 —— 朗读不是每天都有，按日期排会挤成一堆，
+    而且同一天读两页就重叠了（p68 / p69 就是同一天）。标签写页码，日期在下面的表里。
+    y 线性映射到 [lo, hi]，超出范围的夹住（免得一次异常把整张图压平）。
+    字号按 viewBox 单位给：整张图在手机上会被压到 ~330px 宽，别再往小调。
+    """
+    if len(points) < 2:
+        return ""
+    # PAD 是右侧留白：末点的 x 标签 text-anchor=middle，留少了会伸出 viewBox 被裁掉
+    W, GUT, TOP, H, PAD = 1000.0, 96.0, 60.0, 300.0, 80.0
+    n, bot = len(points), TOP + H
+    x = lambda i: round(GUT + i * (W - GUT - PAD) / (n - 1), 1)
+    y = lambda v: round(TOP + (1 - (min(max(v, lo), hi) - lo) / (hi - lo)) * H, 1)
+
+    s = [f'<svg viewBox="0 0 {W:.0f} {bot + 96:.0f}" role="img" '
+         f'aria-label="{n} 次朗读的{unit}变化，从 {points[0][1]} 到 {points[-1][1]}">']
+    for v in ticks:
+        s.append(f'<line x1="{GUT}" y1="{y(v)}" x2="{W - PAD:.0f}" y2="{y(v)}" '
+                 f'stroke="var(--line)" stroke-width="2"/>')
+        s.append(f'<text x="{GUT - 16}" y="{y(v) + 10}" font-size="28" fill="var(--ink-soft)" '
+                 f'text-anchor="end">{v}</text>')
+    d = " ".join(f"{'M' if i == 0 else 'L'}{x(i)} {y(v)}"
+                 for i, (_, v) in enumerate(points))
+    s.append(f'<path d="{d}" fill="none" stroke="{color}" stroke-width="5" '
+             f'stroke-linecap="round" stroke-linejoin="round"/>')
+    for i, (label, v) in enumerate(points):
+        s.append(f'<circle cx="{x(i)}" cy="{y(v)}" r="10" fill="var(--card)" '
+                 f'stroke="{color}" stroke-width="5"/>')
+        s.append(f'<text x="{x(i)}" y="{y(v) - 26}" font-size="30" font-weight="700" '
+                 f'fill="{color}" text-anchor="middle">{v}</text>')
+        s.append(f'<text x="{x(i)}" y="{bot + 44}" font-size="28" fill="var(--ink-soft)" '
+                 f'text-anchor="middle">{label}</text>')
+    s.append(f'<line x1="{GUT}" y1="{bot}" x2="{W - PAD:.0f}" y2="{bot}" '
+             f'stroke="var(--line)" stroke-width="3"/>')
+    s.append(f'<text x="{W - PAD:.0f}" y="{bot + 88}" font-size="26" fill="var(--ink-soft)" '
+             f'text-anchor="end">{unit}</text>')
+    s.append('</svg>')
+    return "\n".join(s)
+
+
 # ── 分数色：越差越红 ────────────────────────────────────────────
 # 五个锚点，中间线性插值。和分类色是两回事：
 #   分类色说「这是哪一类」，分数色说「做得怎么样」，同一张卡上各管各的。
