@@ -34,7 +34,7 @@ prev: p70-72
     又往上了一点 —— 连着两次都在往上走。
     14 处计错里 9 处是**小词和词尾**（a→the、into→in、as→a、to→in、off→of、
     hunters 和 beasts 少了 -s、asleep 丢了词头、upon 变成一声「um」），实词错了 5 处。
-    另有 10 处机器判的「读错」这次没算（比对里 5 条，标的是「识别成」）：dead 两次、
+    另有 10 处机器判的「读错」这次没算（比对里 5 条，标的是「识别成」）：dead 两次（听过，读对了）、
     三个专有名词（Suliman 两次、Darling）、98–100 秒那一串 5 个词 —— 都是转写自己乱了。
     还有两处她其实读对了：“wanting to cat him up” 是**课本印错**（应该是 eat），
     thunderboll 是**扫描认错** —— 课本印的就是 thunderbolt，是 `.ref.txt` 认岔了。
@@ -71,8 +71,11 @@ prev: p70-72
     两遍都没读对，计错
 原文 people was found *dead* in his room
 识别成 people was found *that* in his room
-    9.8 秒。dead 被听成 that，后面 97.3 秒同一个词又被听成同样的 that ——
-    两次都拿不准，先不计错。这个词值得亲耳听一遍
+    9.8 秒。dead 被听成 that，后面 97.3 秒同一个词又被听成同样的 that。
+    **8 月 30 日回去听过了：她两次读的都是 dead**，是转写没听出来，不计错。
+    这一处值得记一笔 —— 9.8 秒周围那句转写得很干净（“he, was found that in his
+    room”），识别器的候选里也一条都没沾到 dead，看数据像是她读错了；
+    实际听下来是对的。**这两样都判不出「读错」还是「没听准」，只有耳朵能。**
 原文 struck down by *a* thunderboll
 实读 struck down by *the* thunderboll
     a 读成 the
