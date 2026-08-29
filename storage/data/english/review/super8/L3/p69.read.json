@@ -1,470 +1,823 @@
 {
-  "acoustics": {
-    "duration": 97.9,
-    "pause_count": 28,
-    "pause_ratio": 0.204,
-    "pause_total": 19.93,
-    "pauses": [
+  "acoustics" : {
+    "duration" : 97.89,
+    "pause_count" : 55,
+    "pause_ratio" : 0.374,
+    "pause_total" : 36.66,
+    "pauses" : [
       {
-        "dur": 0.82,
-        "end": 1.27,
-        "start": 0.45
+        "dur" : 1.92,
+        "end" : 2.13,
+        "start" : 0.21
       },
       {
-        "dur": 0.72,
-        "end": 2.06,
-        "start": 1.34
+        "dur" : 0.32,
+        "end" : 2.9,
+        "start" : 2.58
       },
       {
-        "dur": 0.38,
-        "end": 7.4,
-        "start": 7.02
+        "dur" : 0.52,
+        "end" : 7.39,
+        "start" : 6.87
       },
       {
-        "dur": 2.74,
-        "end": 10.26,
-        "start": 7.52
+        "dur" : 3.33,
+        "end" : 10.8,
+        "start" : 7.47
       },
       {
-        "dur": 0.48,
-        "end": 10.81,
-        "start": 10.33
+        "dur" : 0.51,
+        "end" : 11.99,
+        "start" : 11.48
       },
       {
-        "dur": 0.66,
-        "end": 14.73,
-        "start": 14.07
+        "dur" : 0.69,
+        "end" : 14.72,
+        "start" : 14.03
       },
       {
-        "dur": 0.46,
-        "end": 15.27,
-        "start": 14.81
+        "dur" : 0.49,
+        "end" : 15.27,
+        "start" : 14.78
       },
       {
-        "dur": 0.69,
-        "end": 23.95,
-        "start": 23.26
+        "dur" : 0.32,
+        "end" : 15.79,
+        "start" : 15.47
       },
       {
-        "dur": 0.29,
-        "end": 30.4,
-        "start": 30.11
+        "dur" : 0.34,
+        "end" : 17.73,
+        "start" : 17.39
       },
       {
-        "dur": 0.71,
-        "end": 34.92,
-        "start": 34.21
+        "dur" : 0.36,
+        "end" : 18.86,
+        "start" : 18.5
       },
       {
-        "dur": 0.4,
-        "end": 35.61,
-        "start": 35.21
+        "dur" : 0.7,
+        "end" : 23.94,
+        "start" : 23.24
       },
       {
-        "dur": 0.88,
-        "end": 38.43,
-        "start": 37.55
+        "dur" : 0.36,
+        "end" : 26.13,
+        "start" : 25.77
       },
       {
-        "dur": 0.33,
-        "end": 40.82,
-        "start": 40.49
+        "dur" : 0.29,
+        "end" : 26.95,
+        "start" : 26.66
       },
       {
-        "dur": 0.44,
-        "end": 44.32,
-        "start": 43.88
+        "dur" : 0.32,
+        "end" : 28.61,
+        "start" : 28.29
       },
       {
-        "dur": 0.7,
-        "end": 47.03,
-        "start": 46.33
+        "dur" : 0.59,
+        "end" : 30.46,
+        "start" : 29.87
       },
       {
-        "dur": 2.66,
-        "end": 49.82,
-        "start": 47.16
+        "dur" : 0.54,
+        "end" : 31.27,
+        "start" : 30.73
       },
       {
-        "dur": 0.77,
-        "end": 51.4,
-        "start": 50.63
+        "dur" : 0.37,
+        "end" : 32.03,
+        "start" : 31.66
       },
       {
-        "dur": 0.49,
-        "end": 52.7,
-        "start": 52.21
+        "dur" : 0.3,
+        "end" : 32.58,
+        "start" : 32.28
       },
       {
-        "dur": 0.29,
-        "end": 60.2,
-        "start": 59.91
+        "dur" : 1.04,
+        "end" : 35.09,
+        "start" : 34.05
       },
       {
-        "dur": 0.83,
-        "end": 61.64,
-        "start": 60.81
+        "dur" : 0.61,
+        "end" : 35.73,
+        "start" : 35.12
       },
       {
-        "dur": 0.3,
-        "end": 70.68,
-        "start": 70.38
+        "dur" : 0.3,
+        "end" : 36.3,
+        "start" : 36
       },
       {
-        "dur": 1.3,
-        "end": 73.3,
-        "start": 72
+        "dur" : 0.28,
+        "end" : 37.18,
+        "start" : 36.9
       },
       {
-        "dur": 0.42,
-        "end": 73.75,
-        "start": 73.33
+        "dur" : 1.11,
+        "end" : 38.42,
+        "start" : 37.31
       },
       {
-        "dur": 0.42,
-        "end": 79.45,
-        "start": 79.03
+        "dur" : 0.43,
+        "end" : 38.95,
+        "start" : 38.52
       },
       {
-        "dur": 0.58,
-        "end": 80.91,
-        "start": 80.33
+        "dur" : 0.4,
+        "end" : 40.13,
+        "start" : 39.73
       },
       {
-        "dur": 0.52,
-        "end": 89.09,
-        "start": 88.57
+        "dur" : 0.46,
+        "end" : 40.88,
+        "start" : 40.42
       },
       {
-        "dur": 0.29,
-        "end": 89.57,
-        "start": 89.28
+        "dur" : 0.3,
+        "end" : 41.52,
+        "start" : 41.22
       },
       {
-        "dur": 0.36,
-        "end": 90.29,
-        "start": 89.93
+        "dur" : 0.26,
+        "end" : 42.18,
+        "start" : 41.92
+      },
+      {
+        "dur" : 0.7,
+        "end" : 44.5,
+        "start" : 43.8
+      },
+      {
+        "dur" : 0.32,
+        "end" : 45.22,
+        "start" : 44.9
+      },
+      {
+        "dur" : 0.83,
+        "end" : 47.02,
+        "start" : 46.19
+      },
+      {
+        "dur" : 2.71,
+        "end" : 49.81,
+        "start" : 47.1
+      },
+      {
+        "dur" : 0.83,
+        "end" : 51.41,
+        "start" : 50.58
+      },
+      {
+        "dur" : 0.79,
+        "end" : 52.94,
+        "start" : 52.15
+      },
+      {
+        "dur" : 0.4,
+        "end" : 53.92,
+        "start" : 53.52
+      },
+      {
+        "dur" : 0.28,
+        "end" : 57.05,
+        "start" : 56.77
+      },
+      {
+        "dur" : 0.58,
+        "end" : 60.46,
+        "start" : 59.88
+      },
+      {
+        "dur" : 1.03,
+        "end" : 61.63,
+        "start" : 60.6
+      },
+      {
+        "dur" : 0.45,
+        "end" : 63.75,
+        "start" : 63.3
+      },
+      {
+        "dur" : 0.81,
+        "end" : 65.26,
+        "start" : 64.45
+      },
+      {
+        "dur" : 0.37,
+        "end" : 68.45,
+        "start" : 68.08
+      },
+      {
+        "dur" : 0.76,
+        "end" : 71.06,
+        "start" : 70.3
+      },
+      {
+        "dur" : 1.95,
+        "end" : 73.77,
+        "start" : 71.82
+      },
+      {
+        "dur" : 0.33,
+        "end" : 78.74,
+        "start" : 78.41
+      },
+      {
+        "dur" : 0.51,
+        "end" : 79.45,
+        "start" : 78.94
+      },
+      {
+        "dur" : 0.99,
+        "end" : 81.26,
+        "start" : 80.27
+      },
+      {
+        "dur" : 0.35,
+        "end" : 83.69,
+        "start" : 83.34
+      },
+      {
+        "dur" : 0.27,
+        "end" : 85.35,
+        "start" : 85.08
+      },
+      {
+        "dur" : 0.27,
+        "end" : 87.65,
+        "start" : 87.38
+      },
+      {
+        "dur" : 1.08,
+        "end" : 89.55,
+        "start" : 88.47
+      },
+      {
+        "dur" : 1.15,
+        "end" : 90.73,
+        "start" : 89.58
+      },
+      {
+        "dur" : 0.41,
+        "end" : 91.83,
+        "start" : 91.42
+      },
+      {
+        "dur" : 0.43,
+        "end" : 93.03,
+        "start" : 92.6
+      },
+      {
+        "dur" : 0.34,
+        "end" : 96.26,
+        "start" : 95.92
+      },
+      {
+        "dur" : 0.26,
+        "end" : 97.87,
+        "start" : 97.61
       }
     ],
-    "source": "点读超8.mp4 [138.70-236.60]",
-    "speech_time": 77.97,
-    "threshold_db": -40
+    "source" : "点读超8.mp4 [138.70-236.60]",
+    "speech_time" : 61.23,
+    "threshold_db" : -31.3
   },
-  "alignment": {
-    "accuracy": 89,
-    "correctWordCount": 81,
-    "diffs": [
+  "alignment" : {
+    "accuracy" : 87.9,
+    "correctWordCount" : 80,
+    "diffs" : [
       {
-        "context": "to your cruelty she",
-        "end": 2.94,
-        "kind": "insert",
-        "read": "to",
-        "refIndex": 0,
-        "start": 0
+        "category" : "extra",
+        "confidence" : 0.413,
+        "context" : "to your cruelty she",
+        "end" : 2.94,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "to",
+        "refIndex" : 0,
+        "start" : 0,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "to your cruelty she added with a",
-        "end": 4.56,
-        "kind": "substitute",
-        "read": "he",
-        "ref": "she",
-        "refIndex": 3,
-        "start": 4.38
+        "category" : "function",
+        "confidence" : 0.989,
+        "context" : "to your cruelty she added with a",
+        "end" : 4.5,
+        "kind" : "substitute",
+        "label" : "小词",
+        "read" : "he",
+        "ref" : "she",
+        "refIndex" : 3,
+        "start" : 4.32,
+        "suggest" : "count",
+        "why" : "两个都是小词，读串了。这类错扎堆出现就是眼睛跑在手指前面"
       },
       {
-        "context": "with a questioning gaze he always gave",
-        "end": 13.56,
-        "kind": "substitute",
-        "read": "is",
-        "ref": "gaze",
-        "refIndex": 8,
-        "start": 12.84
+        "category" : "extra",
+        "confidence" : 0.179,
+        "context" : "she added with a questioning gaze he",
+        "end" : 7.74,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "uh",
+        "refIndex" : 6,
+        "start" : 5.34,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.18 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "always gave prince darling bad advice and",
-        "end": 18.48,
-        "kind": "substitute",
-        "read": "starling",
-        "ref": "darling",
-        "refIndex": 13,
-        "start": 17.46
+        "category" : "content",
+        "confidence" : 0.536,
+        "context" : "she added with a questioning gaze he",
+        "end" : 11.64,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "questioning",
+        "ref" : "a",
+        "refIndex" : 6,
+        "start" : 7.74,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
       },
       {
-        "context": "gave prince darling bad advice and encouraged",
-        "end": 19.32,
-        "kind": "substitute",
-        "read": "better",
-        "ref": "bad",
-        "refIndex": 14,
-        "start": 18.48
+        "category" : "content",
+        "confidence" : 0.614,
+        "context" : "with a questioning gaze he always gave",
+        "end" : 13.5,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "is",
+        "ref" : "gaze",
+        "refIndex" : 8,
+        "start" : 12.84,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
       },
       {
-        "context": "evil ways his foster-brother asked him what",
-        "end": 27.48,
-        "kind": "insert",
-        "read": "first",
-        "refIndex": 25,
-        "start": 26.46
+        "category" : "properNoun",
+        "confidence" : 0.341,
+        "context" : "always gave prince darling bad advice and",
+        "end" : 18.48,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "starting",
+        "ref" : "darling",
+        "refIndex" : 13,
+        "start" : 17.4,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑。识别器对这处只有 0.34 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "evil ways his foster-brother asked him what",
-        "end": 28.2,
-        "kind": "insert",
-        "read": "brother",
-        "refIndex": 25,
-        "start": 27.48
+        "category" : "content",
+        "confidence" : 0.608,
+        "context" : "gave prince darling bad advice and encouraged",
+        "end" : 19.26,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "better",
+        "ref" : "bad",
+        "refIndex" : 14,
+        "start" : 18.48,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
       },
       {
-        "context": "evil ways his foster-brother asked him what",
-        "end": 29.04,
-        "kind": "insert",
-        "read": "first",
-        "refIndex": 25,
-        "start": 28.2
+        "category" : "extra",
+        "confidence" : 0.734,
+        "context" : "evil ways his foster-brother asked him what",
+        "end" : 27.42,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "first",
+        "refIndex" : 25,
+        "start" : 26.4,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "evil ways his foster-brother asked him what",
-        "end": 29.76,
-        "kind": "substitute",
-        "read": "brother",
-        "ref": "foster-brother",
-        "refIndex": 25,
-        "start": 29.04
+        "category" : "extra",
+        "confidence" : 0.628,
+        "context" : "evil ways his foster-brother asked him what",
+        "end" : 28.2,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "brother",
+        "refIndex" : 25,
+        "start" : 27.42,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "his trouble was prince darling explained that",
-        "end": 36.24,
-        "kind": "insert",
-        "read": "press",
-        "refIndex": 32,
-        "start": 34.02
+        "category" : "extra",
+        "confidence" : 0.814,
+        "context" : "evil ways his foster-brother asked him what",
+        "end" : 28.98,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "first",
+        "refIndex" : 25,
+        "start" : 28.2,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "his trouble was prince darling explained that",
-        "end": 36.54,
-        "kind": "substitute",
-        "read": "starting",
-        "ref": "prince",
-        "refIndex": 32,
-        "start": 36.24
+        "category" : "content",
+        "confidence" : 0.525,
+        "context" : "evil ways his foster-brother asked him what",
+        "end" : 29.82,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "brother",
+        "ref" : "foster-brother",
+        "refIndex" : 25,
+        "start" : 28.98,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
       },
       {
-        "context": "trouble was prince darling explained that he",
-        "end": 37.62,
-        "kind": "substitute",
-        "read": "is",
-        "ref": "darling",
-        "refIndex": 33,
-        "start": 36.54
+        "category" : "extra",
+        "confidence" : 0.295,
+        "context" : "his trouble was prince darling explained that",
+        "end" : 36,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "chris",
+        "refIndex" : 32,
+        "start" : 34.08,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "was prince darling explained that he could",
-        "end": 39.54,
-        "kind": "substitute",
-        "read": "exclaimed",
-        "ref": "explained",
-        "refIndex": 34,
-        "start": 37.62
+        "category" : "garbled",
+        "confidence" : 0.342,
+        "context" : "his trouble was prince darling explained that",
+        "end" : 36.54,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "starting",
+        "ref" : "prince",
+        "refIndex" : 32,
+        "start" : 36,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.34 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "could not bear celia's opinion of him",
-        "end": 43.32,
-        "kind": "insert",
-        "read": "the",
-        "refIndex": 40,
-        "start": 42.84
+        "category" : "garbled",
+        "confidence" : 0.112,
+        "context" : "trouble was prince darling explained that he",
+        "end" : 37.56,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "his",
+        "ref" : "darling",
+        "refIndex" : 33,
+        "start" : 36.54,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.11 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "could not bear celia's opinion of him",
-        "end": 46.32,
-        "kind": "insert",
-        "read": "flesh",
-        "refIndex": 40,
-        "start": 43.32
+        "category" : "garbled",
+        "confidence" : 0.715,
+        "context" : "was prince darling explained that he could",
+        "end" : 39.54,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "exclaimed",
+        "ref" : "explained",
+        "refIndex" : 34,
+        "start" : 37.56,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
       },
       {
-        "context": "could not bear celia's opinion of him",
-        "end": 50.16,
-        "kind": "insert",
-        "read": "a",
-        "refIndex": 40,
-        "start": 46.38
+        "category" : "extra",
+        "confidence" : 0.727,
+        "context" : "could not bear celia's opinion of him",
+        "end" : 43.32,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "the",
+        "refIndex" : 40,
+        "start" : 42.84,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "could not bear celia's opinion of him",
-        "end": 50.46,
-        "kind": "insert",
-        "read": "pen",
-        "refIndex": 40,
-        "start": 50.16
+        "category" : "extra",
+        "confidence" : 0.563,
+        "context" : "could not bear celia's opinion of him",
+        "end" : 44.04,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "flesh",
+        "refIndex" : 40,
+        "start" : 43.32,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "could not bear celia's opinion of him",
-        "end": 53.82,
-        "kind": "insert",
-        "read": "of",
-        "refIndex": 40,
-        "start": 50.46
+        "category" : "extra",
+        "confidence" : 0.282,
+        "context" : "could not bear celia's opinion of him",
+        "end" : 45.06,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "uh",
+        "refIndex" : 40,
+        "start" : 44.04,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.28 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "could not bear celia's opinion of him",
-        "end": 54.24,
-        "kind": "insert",
-        "read": "him",
-        "refIndex": 40,
-        "start": 53.82
+        "category" : "extra",
+        "confidence" : 0.054,
+        "context" : "could not bear celia's opinion of him",
+        "end" : 46.14,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "city",
+        "refIndex" : 40,
+        "start" : 45.06,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.05 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "could not bear celia's opinion of him",
-        "end": 54.72,
-        "kind": "insert",
-        "read": "and",
-        "refIndex": 40,
-        "start": 54.24
+        "category" : "extra",
+        "confidence" : 0.253,
+        "context" : "could not bear celia's opinion of him",
+        "end" : 46.26,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "uh",
+        "refIndex" : 40,
+        "start" : 46.14,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.25 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "could not bear celia's opinion of him",
-        "end": 55.2,
-        "kind": "insert",
-        "read": "was",
-        "refIndex": 40,
-        "start": 54.72
+        "category" : "extra",
+        "confidence" : 0.055,
+        "context" : "could not bear celia's opinion of him",
+        "end" : 53.16,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "and",
+        "refIndex" : 40,
+        "start" : 52.38,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.06 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "could not bear celia's opinion of him",
-        "end": 56.34,
-        "kind": "insert",
-        "read": "determined",
-        "refIndex": 40,
-        "start": 55.2
+        "category" : "extra",
+        "confidence" : 0.538,
+        "context" : "could not bear celia's opinion of him",
+        "end" : 53.52,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "of",
+        "refIndex" : 40,
+        "start" : 53.16,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "could not bear celia's opinion of him",
-        "end": 56.64,
-        "kind": "insert",
-        "read": "to",
-        "refIndex": 40,
-        "start": 56.34
+        "category" : "extra",
+        "confidence" : 0.951,
+        "context" : "could not bear celia's opinion of him",
+        "end" : 54.18,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "him",
+        "refIndex" : 40,
+        "start" : 53.52,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "could not bear celia's opinion of him",
-        "end": 57.24,
-        "kind": "insert",
-        "read": "be",
-        "refIndex": 40,
-        "start": 56.64
+        "category" : "extra",
+        "confidence" : 0.995,
+        "context" : "could not bear celia's opinion of him",
+        "end" : 54.66,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "and",
+        "refIndex" : 40,
+        "start" : 54.18,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "could not bear celia's opinion of him",
-        "end": 57.72,
-        "kind": "insert",
-        "read": "a",
-        "refIndex": 40,
-        "start": 57.24
+        "category" : "extra",
+        "confidence" : 0.994,
+        "context" : "could not bear celia's opinion of him",
+        "end" : 55.2,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "was",
+        "refIndex" : 40,
+        "start" : 54.66,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "could not bear celia's opinion of him",
-        "end": 57.9,
-        "kind": "insert",
-        "read": "better",
-        "refIndex": 40,
-        "start": 57.72
+        "category" : "extra",
+        "confidence" : 0.911,
+        "context" : "could not bear celia's opinion of him",
+        "end" : 56.34,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "determined",
+        "refIndex" : 40,
+        "start" : 55.2,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "could not bear celia's opinion of him",
-        "end": 58.32,
-        "kind": "insert",
-        "read": "man",
-        "refIndex": 40,
-        "start": 57.9
+        "category" : "extra",
+        "confidence" : 0.989,
+        "context" : "could not bear celia's opinion of him",
+        "end" : 56.64,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "to",
+        "refIndex" : 40,
+        "start" : 56.34,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "could not bear celia's opinion of him",
-        "end": 58.8,
-        "kind": "insert",
-        "read": "in",
-        "refIndex": 40,
-        "start": 58.32
+        "category" : "extra",
+        "confidence" : 0.964,
+        "context" : "could not bear celia's opinion of him",
+        "end" : 57.18,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "be",
+        "refIndex" : 40,
+        "start" : 56.64,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "could not bear celia's opinion of him",
-        "end": 59.22,
-        "kind": "substitute",
-        "read": "a",
-        "ref": "celia's",
-        "refIndex": 40,
-        "start": 58.8
+        "category" : "extra",
+        "confidence" : 0.974,
+        "context" : "could not bear celia's opinion of him",
+        "end" : 57.72,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "a",
+        "refIndex" : 40,
+        "start" : 57.18,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "if she still refuses to marry you",
-        "end": 83.16,
-        "kind": "substitute",
-        "read": "refuse",
-        "ref": "refuses",
-        "refIndex": 71,
-        "start": 82.38
+        "category" : "extra",
+        "confidence" : 0.739,
+        "context" : "could not bear celia's opinion of him",
+        "end" : 57.9,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "better",
+        "refIndex" : 40,
+        "start" : 57.72,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "refuses to marry you have her head",
-        "end": 84.84,
-        "kind": "insert",
-        "read": "you",
-        "refIndex": 74,
-        "start": 84.12
+        "category" : "extra",
+        "confidence" : 0.546,
+        "context" : "could not bear celia's opinion of him",
+        "end" : 58.26,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "man",
+        "refIndex" : 40,
+        "start" : 57.9,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "have her head cut off to teach",
-        "end": 87.54,
-        "kind": "insert",
-        "read": "cuts",
-        "refIndex": 78,
-        "start": 86.94
+        "category" : "extra",
+        "confidence" : 0.935,
+        "context" : "could not bear celia's opinion of him",
+        "end" : 58.74,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "in",
+        "refIndex" : 40,
+        "start" : 58.26,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "have her head cut off to teach",
-        "end": 88.38,
-        "kind": "insert",
-        "read": "down",
-        "refIndex": 78,
-        "start": 87.54
+        "category" : "properNoun",
+        "confidence" : 0.34,
+        "context" : "could not bear celia's opinion of him",
+        "end" : 59.22,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "a",
+        "ref" : "celia's",
+        "refIndex" : 40,
+        "start" : 58.74,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑。识别器对这处只有 0.34 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.859,
+        "context" : "if she still refuses to marry you",
+        "end" : 83.16,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "refuse",
+        "ref" : "refuses",
+        "refIndex" : 71,
+        "start" : 82.38,
+        "suggest" : "count",
+        "why" : "原文是「refuses」，读出来少了词尾 -s"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.711,
+        "context" : "refuses to marry you have her head",
+        "end" : 84.78,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "you",
+        "refIndex" : 74,
+        "start" : 84.12,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.62,
+        "context" : "have her head cut off to teach",
+        "end" : 87.48,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "cuts",
+        "refIndex" : 78,
+        "start" : 86.88,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.594,
+        "context" : "have her head cut off to teach",
+        "end" : 88.38,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "down",
+        "refIndex" : 78,
+        "start" : 87.48,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       }
     ],
-    "readWordCount": 114,
-    "refTimes": [
+    "readWordCount" : 117,
+    "refTimes" : [
       3.12,
-      3.48,
-      4.38,
-      4.56,
+      3.42,
+      4.32,
+      4.5,
       4.8,
       5.34,
-      11.7,
+      11.64,
       12.84,
-      13.56,
-      16.08,
+      13.5,
+      16.02,
       16.38,
       16.92,
-      17.46,
+      17.4,
       18.48,
-      19.32,
+      19.26,
       20.22,
       20.4,
       21.66,
-      22.2,
+      22.14,
       23.1,
-      24.3,
+      24.24,
       24.6,
       25.2,
       25.8,
-      26.46,
-      29.76,
+      26.4,
+      29.82,
       30.96,
-      31.5,
-      32.34,
-      32.94,
+      31.44,
+      32.28,
+      32.88,
       33.36,
-      34.02,
+      34.08,
       36.54,
-      37.62,
+      37.56,
       39.54,
       40.32,
       41.04,
@@ -472,35 +825,35 @@
       42.48,
       42.84,
       59.22,
-      62.04,
+      61.98,
       62.52,
-      62.7599375,
+      62.76,
       63.12,
       64.26,
       66.12,
       66.36,
       66.6,
-      66.96,
-      67.32,
-      67.86,
-      69.06,
+      66.9,
+      67.26,
+      67.8,
+      69,
       69.42,
       69.9,
       70.14,
       71.22,
       74.22,
-      74.7,
+      74.64,
       75.12,
       75.54,
       75.9,
       76.2,
       77.04,
-      78.12,
+      78.06,
       78.72,
       79.62,
       80.04,
       81.6,
-      81.96,
+      81.9,
       82.38,
       83.16,
       83.76,
@@ -508,7 +861,7 @@
       85.02,
       86.1,
       86.46,
-      86.94,
+      86.88,
       91.02,
       91.26,
       92.22,
@@ -516,596 +869,1017 @@
       93.6,
       93.9,
       94.32,
-      94.92,
+      94.86,
       95.4,
       95.76,
       96.36,
-      96.66,
+      96.6,
       97.38
     ],
-    "refWordCount": 91,
-    "wcpm": 50
+    "refWordCount" : 91,
+    "wcpm" : 49
   },
-  "reference": "to your cruelty?\" she added with a questioning gaze.\nHe always gave Prince\nDarling bad advice and encouraged him in all his evil ways.\nhis foster-brother asked him what his trouble\nwas. Prince Darling explained that he could not bear Celia's opinion of him and\nwas determined to be a better man in order to please her.\n\"You are very kind to trouble\nyourself about this little girl.\nif she still refuses\nto marry you, have her head cut off to teach the other people that you mean\nto be obeyed.",
-  "slug": "super8/L3/p69",
-  "transcript": {
-    "contextPrimed": true,
-    "locale": "en-US",
-    "runs": [
-      {
-        "end": 2.94,
-        "start": 0,
-        "text": "To,"
-      },
-      {
-        "end": 3.12,
-        "start": 2.94,
-        "text": " to"
-      },
-      {
-        "end": 3.48,
-        "start": 3.12,
-        "text": " your"
-      },
-      {
-        "end": 4.38,
-        "start": 3.48,
-        "text": " cruelty,"
-      },
-      {
-        "end": 4.56,
-        "start": 4.38,
-        "text": " he"
-      },
-      {
-        "end": 4.8,
-        "start": 4.56,
-        "text": " added"
-      },
-      {
-        "end": 5.34,
-        "start": 4.8,
-        "text": " with"
-      },
-      {
-        "end": 11.7,
-        "start": 5.34,
-        "text": " a,"
-      },
-      {
-        "end": 12.84,
-        "start": 11.7,
-        "text": " Questioning"
-      },
-      {
-        "end": 13.56,
-        "start": 12.84,
-        "text": " is."
-      },
-      {
-        "end": 16.08,
-        "start": 13.62,
-        "text": " He"
-      },
-      {
-        "end": 16.38,
-        "start": 16.08,
-        "text": " always"
-      },
-      {
-        "end": 16.92,
-        "start": 16.38,
-        "text": " gave"
-      },
-      {
-        "end": 17.46,
-        "start": 16.92,
-        "text": " Prince"
-      },
-      {
-        "end": 18.48,
-        "start": 17.46,
-        "text": " Starling,"
-      },
-      {
-        "end": 19.32,
-        "start": 18.48,
-        "text": " better"
-      },
-      {
-        "end": 20.22,
-        "start": 19.32,
-        "text": " advice,"
-      },
-      {
-        "end": 20.4,
-        "start": 20.22,
-        "text": " and"
-      },
-      {
-        "end": 21.66,
-        "start": 20.4,
-        "text": " encouraged"
-      },
-      {
-        "end": 22.2,
-        "start": 21.66,
-        "text": " him"
-      },
-      {
-        "end": 23.1,
-        "start": 22.2,
-        "text": " in"
-      },
-      {
-        "end": 24.3,
-        "start": 23.1,
-        "text": " all"
-      },
-      {
-        "end": 24.6,
-        "start": 24.3,
-        "text": " his"
-      },
-      {
-        "end": 25.2,
-        "start": 24.6,
-        "text": " evil"
-      },
-      {
-        "end": 25.8,
-        "start": 25.2,
-        "text": " ways."
-      },
-      {
-        "end": 26.46,
-        "start": 25.86,
-        "text": " His"
-      },
-      {
-        "end": 27.48,
-        "start": 26.46,
-        "text": " 1st"
-      },
-      {
-        "end": 28.2,
-        "start": 27.48,
-        "text": " brother,"
-      },
-      {
-        "end": 29.04,
-        "start": 28.2,
-        "text": " 1st"
-      },
-      {
-        "end": 29.76,
-        "start": 29.04,
-        "text": " brother,"
-      },
-      {
-        "end": 30.96,
-        "start": 29.76,
-        "text": " asked"
-      },
-      {
-        "end": 31.5,
-        "start": 30.96,
-        "text": " him"
-      },
-      {
-        "end": 32.34,
-        "start": 31.5,
-        "text": " what"
-      },
-      {
-        "end": 32.94,
-        "start": 32.34,
-        "text": " his"
-      },
-      {
-        "end": 33.36,
-        "start": 32.94,
-        "text": " trouble"
-      },
-      {
-        "end": 34.02,
-        "start": 33.36,
-        "text": " was."
-      },
-      {
-        "end": 36.24,
-        "start": 34.02,
-        "text": " Press"
-      },
-      {
-        "end": 36.54,
-        "start": 36.24,
-        "text": " starting"
-      },
-      {
-        "end": 37.62,
-        "start": 36.54,
-        "text": " is."
-      },
-      {
-        "end": 39.54,
-        "start": 37.62,
-        "text": " Exclaimed"
-      },
-      {
-        "end": 40.32,
-        "start": 39.54,
-        "text": " that"
-      },
-      {
-        "end": 41.04,
-        "start": 40.32,
-        "text": " he"
-      },
-      {
-        "end": 41.64,
-        "start": 41.04,
-        "text": " could"
-      },
-      {
-        "end": 42.48,
-        "start": 41.64,
-        "text": " not"
-      },
-      {
-        "end": 42.84,
-        "start": 42.48,
-        "text": " bear"
-      },
-      {
-        "end": 43.32,
-        "start": 42.84,
-        "text": " the"
-      },
-      {
-        "end": 46.32,
-        "start": 43.32,
-        "text": " flesh."
-      },
-      {
-        "end": 50.16,
-        "start": 46.38,
-        "text": " A"
-      },
-      {
-        "end": 50.46,
-        "start": 50.16,
-        "text": " pen"
-      },
-      {
-        "end": 53.82,
-        "start": 50.46,
-        "text": " of"
-      },
-      {
-        "end": 54.24,
-        "start": 53.82,
-        "text": " him"
-      },
-      {
-        "end": 54.72,
-        "start": 54.24,
-        "text": " and"
-      },
-      {
-        "end": 55.2,
-        "start": 54.72,
-        "text": " was"
-      },
-      {
-        "end": 56.34,
-        "start": 55.2,
-        "text": " determined"
-      },
-      {
-        "end": 56.64,
-        "start": 56.34,
-        "text": " to"
-      },
-      {
-        "end": 57.24,
-        "start": 56.64,
-        "text": " be"
-      },
-      {
-        "end": 57.72,
-        "start": 57.24,
-        "text": " a"
-      },
-      {
-        "end": 57.9,
-        "start": 57.72,
-        "text": " better"
-      },
-      {
-        "end": 58.32,
-        "start": 57.9,
-        "text": " man"
-      },
-      {
-        "end": 58.8,
-        "start": 58.32,
-        "text": " in"
-      },
-      {
-        "end": 59.22,
-        "start": 58.8,
-        "text": " a"
-      },
-      {
-        "end": 62.04,
-        "start": 59.22,
-        "text": " opinion"
-      },
-      {
-        "end": 62.52,
-        "start": 62.04,
-        "text": " of"
-      },
-      {
-        "end": 62.7599375,
-        "start": 62.52,
-        "text": " him"
-      },
-      {
-        "end": 63.12,
-        "start": 62.7599375,
-        "text": " and"
-      },
-      {
-        "end": 64.26,
-        "start": 63.12,
-        "text": " was"
-      },
-      {
-        "end": 66.12,
-        "start": 64.26,
-        "text": " determined"
-      },
-      {
-        "end": 66.36,
-        "start": 66.12,
-        "text": " to"
-      },
-      {
-        "end": 66.6,
-        "start": 66.36,
-        "text": " be"
-      },
-      {
-        "end": 66.96,
-        "start": 66.6,
-        "text": " a"
-      },
-      {
-        "end": 67.32,
-        "start": 66.96,
-        "text": " better"
-      },
-      {
-        "end": 67.86,
-        "start": 67.32,
-        "text": " man"
-      },
-      {
-        "end": 69.06,
-        "start": 67.86,
-        "text": " in"
-      },
-      {
-        "end": 69.42,
-        "start": 69.06,
-        "text": " order"
-      },
-      {
-        "end": 69.9,
-        "start": 69.42,
-        "text": " to"
-      },
-      {
-        "end": 70.14,
-        "start": 69.9,
-        "text": " please"
-      },
-      {
-        "end": 71.22,
-        "start": 70.14,
-        "text": " her."
-      },
-      {
-        "end": 74.22,
-        "start": 71.28,
-        "text": " You"
-      },
-      {
-        "end": 74.7,
-        "start": 74.22,
-        "text": " are"
-      },
-      {
-        "end": 75.12,
-        "start": 74.7,
-        "text": " very"
-      },
-      {
-        "end": 75.54,
-        "start": 75.12,
-        "text": " kind"
-      },
-      {
-        "end": 75.9,
-        "start": 75.54,
-        "text": " to"
-      },
-      {
-        "end": 76.2,
-        "start": 75.9,
-        "text": " trouble"
-      },
-      {
-        "end": 77.04,
-        "start": 76.2,
-        "text": " yourself"
-      },
-      {
-        "end": 78.12,
-        "start": 77.04,
-        "text": " about"
-      },
-      {
-        "end": 78.72,
-        "start": 78.12,
-        "text": " this"
-      },
-      {
-        "end": 79.62,
-        "start": 78.72,
-        "text": " little"
-      },
-      {
-        "end": 80.04,
-        "start": 79.62,
-        "text": " girl."
-      },
-      {
-        "end": 81.6,
-        "start": 80.04,
-        "text": " If"
-      },
-      {
-        "end": 81.96,
-        "start": 81.6,
-        "text": " she"
+  "pages" : [
+    {
+      "end" : 97.38,
+      "errors" : 11,
+      "extras" : 26,
+      "matched" : 91,
+      "page" : 69,
+      "start" : 3.12,
+      "words" : 91
+    }
+  ],
+  "refSuspects" : [
+
+  ],
+  "reference" : "to your cruelty?\" she added with a questioning gaze.\nHe always gave Prince\nDarling bad advice and encouraged him in all his evil ways.\nhis foster-brother asked him what his trouble\nwas. Prince Darling explained that he could not bear Celia's opinion of him and\nwas determined to be a better man in order to please her.\n\"You are very kind to trouble\nyourself about this little girl.\nif she still refuses\nto marry you, have her head cut off to teach the other people that you mean\nto be obeyed.",
+  "slug" : "super8/L3/p69",
+  "transcript" : {
+    "alternatives" : [
+      {
+        "end" : 5.34,
+        "start" : 0,
+        "texts" : [
+          "To, to your cruelty, he added with"
+        ]
+      },
+      {
+        "end" : 11.64,
+        "start" : 5.34,
+        "texts" : [
+          "uh, Questioning.",
+          "a. Questioning.",
+          "a..."
+        ]
+      },
+      {
+        "end" : 13.56,
+        "start" : 11.64,
+        "texts" : [
+          "Questioning is.",
+          "Questioning gates.",
+          "Questioning."
+        ]
+      },
+      {
+        "end" : 16.92,
+        "start" : 13.56,
+        "texts" : [
+          "He always gave"
+        ]
+      },
+      {
+        "end" : 18.48,
+        "start" : 16.92,
+        "texts" : [
+          "Prince starting,",
+          "prince starting,"
+        ]
+      },
+      {
+        "end" : 19.26,
+        "start" : 18.48,
+        "texts" : [
+          "better"
+        ]
+      },
+      {
+        "end" : 20.4,
+        "start" : 19.26,
+        "texts" : [
+          "advice, and",
+          "advice and"
+        ]
+      },
+      {
+        "end" : 22.14,
+        "start" : 20.4,
+        "texts" : [
+          "encouraged him"
+        ]
+      },
+      {
+        "end" : 24.24,
+        "start" : 22.14,
+        "texts" : [
+          "in all",
+          "in, all"
+        ]
+      },
+      {
+        "end" : 25.86,
+        "start" : 24.24,
+        "texts" : [
+          "his evil ways."
+        ]
+      },
+      {
+        "end" : 36.54,
+        "start" : 25.86,
+        "texts" : [
+          "His 1st brother, 1st brother, asked him what his trouble was, Chris starting"
+        ]
       },
       {
-        "end": 82.38,
-        "start": 81.96,
-        "text": " still"
+        "end" : 37.56,
+        "start" : 36.54,
+        "texts" : [
+          "his,",
+          "his."
+        ]
       },
       {
-        "end": 83.16,
-        "start": 82.38,
-        "text": " refuse"
+        "end" : 39.54,
+        "start" : 37.56,
+        "texts" : [
+          "exclaimed",
+          "Exclaimed"
+        ]
       },
       {
-        "end": 83.76,
-        "start": 83.16,
-        "text": " to"
+        "end" : 43.32,
+        "start" : 39.54,
+        "texts" : [
+          "that he could not bear the"
+        ]
       },
       {
-        "end": 84.12,
-        "start": 83.76,
-        "text": " marry"
+        "end" : 46.3799375,
+        "start" : 43.32,
+        "texts" : [
+          "flesh, uh, city, uh,",
+          "flesh, uh,",
+          "flesh, uh, city uh,",
+          "flesh."
+        ]
       },
       {
-        "end": 84.84,
-        "start": 84.12,
-        "text": " you,"
+        "end" : 53.52,
+        "start" : 52.38,
+        "texts" : [
+          "And of",
+          "Of",
+          "of"
+        ]
       },
       {
-        "end": 85.02,
-        "start": 84.84,
-        "text": " you"
+        "end" : 67.8,
+        "start" : 53.52,
+        "texts" : [
+          "him and was determined to be a better man in a opinion of him and was determined to be a better man"
+        ]
       },
       {
-        "end": 86.1,
-        "start": 85.02,
-        "text": " have"
+        "end" : 69,
+        "start" : 67.8,
+        "texts" : [
+          "in",
+          "and in"
+        ]
       },
       {
-        "end": 86.46,
-        "start": 86.1,
-        "text": " her"
+        "end" : 69.9,
+        "start" : 69,
+        "texts" : [
+          "order to"
+        ]
       },
       {
-        "end": 86.94,
-        "start": 86.46,
-        "text": " head"
+        "end" : 71.28,
+        "start" : 69.9,
+        "texts" : [
+          "please her.",
+          "please.",
+          "please her"
+        ]
       },
       {
-        "end": 87.54,
-        "start": 86.94,
-        "text": " cuts"
+        "end" : 75.9,
+        "start" : 71.28,
+        "texts" : [
+          "You are very kind to"
+        ]
       },
       {
-        "end": 88.38,
-        "start": 87.54,
-        "text": " down."
+        "end" : 76.2,
+        "start" : 75.9,
+        "texts" : [
+          "trouble",
+          "travel"
+        ]
       },
       {
-        "end": 91.02,
-        "start": 88.44,
-        "text": " Cut"
+        "end" : 78.06,
+        "start" : 76.2,
+        "texts" : [
+          "yourself about"
+        ]
       },
       {
-        "end": 91.26,
-        "start": 91.02,
-        "text": " off"
+        "end" : 79.62,
+        "start" : 78.06,
+        "texts" : [
+          "this little",
+          "this, little",
+          "this. Little"
+        ]
       },
       {
-        "end": 92.22,
-        "start": 91.26,
-        "text": " to"
+        "end" : 80.1,
+        "start" : 79.62,
+        "texts" : [
+          "girl.",
+          "girl,",
+          "girl"
+        ]
       },
       {
-        "end": 92.34,
-        "start": 92.22,
-        "text": " teach"
+        "end" : 82.38,
+        "start" : 80.1,
+        "texts" : [
+          "If she still"
+        ]
       },
       {
-        "end": 93.6,
-        "start": 92.34,
-        "text": " the"
+        "end" : 83.16,
+        "start" : 82.38,
+        "texts" : [
+          "refuse",
+          "refused"
+        ]
       },
       {
-        "end": 93.9,
-        "start": 93.6,
-        "text": " other"
+        "end" : 84.78,
+        "start" : 83.16,
+        "texts" : [
+          "to marry you,"
+        ]
       },
       {
-        "end": 94.32,
-        "start": 93.9,
-        "text": " people"
+        "end" : 86.1,
+        "start" : 84.78,
+        "texts" : [
+          "you have",
+          "you, have"
+        ]
       },
       {
-        "end": 94.92,
-        "start": 94.32,
-        "text": " that"
+        "end" : 86.88,
+        "start" : 86.1,
+        "texts" : [
+          "her head"
+        ]
       },
       {
-        "end": 95.4,
-        "start": 94.92,
-        "text": " you"
+        "end" : 88.44,
+        "start" : 86.88,
+        "texts" : [
+          "cuts down.",
+          "cut down."
+        ]
       },
       {
-        "end": 95.76,
-        "start": 95.4,
-        "text": " mean"
+        "end" : 91.02,
+        "start" : 88.44,
+        "texts" : [
+          "Cut"
+        ]
       },
       {
-        "end": 96.36,
-        "start": 95.76,
-        "text": " to"
+        "end" : 92.22,
+        "start" : 91.02,
+        "texts" : [
+          "off to",
+          "off, to"
+        ]
       },
       {
-        "end": 96.66,
-        "start": 96.36,
-        "text": " be"
+        "end" : 93.6,
+        "start" : 92.22,
+        "texts" : [
+          "teach the",
+          "teach, the",
+          "teach The"
+        ]
       },
       {
-        "end": 97.38,
-        "start": 96.66,
-        "text": " obeyed."
+        "end" : 97.44,
+        "start" : 93.6,
+        "texts" : [
+          "other people that you mean to be obeyed."
+        ]
       }
     ],
-    "source": "点读超8.mp4 [138.70-236.60]"
+    "contextPrimed" : true,
+    "locale" : "en-US",
+    "runs" : [
+      {
+        "confidence" : 0.413,
+        "end" : 2.94,
+        "start" : 0,
+        "text" : "To,"
+      },
+      {
+        "confidence" : 0.738,
+        "end" : 3.12,
+        "start" : 2.94,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.949,
+        "end" : 3.42,
+        "start" : 3.12,
+        "text" : " your"
+      },
+      {
+        "confidence" : 0.783,
+        "end" : 4.32,
+        "start" : 3.42,
+        "text" : " cruelty,"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 4.5,
+        "start" : 4.32,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 4.8,
+        "start" : 4.5,
+        "text" : " added"
+      },
+      {
+        "confidence" : 0.986,
+        "end" : 5.34,
+        "start" : 4.8,
+        "text" : " with"
+      },
+      {
+        "confidence" : 0.179,
+        "end" : 7.74,
+        "start" : 5.34,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.536,
+        "end" : 11.64,
+        "start" : 7.74,
+        "text" : " Questioning."
+      },
+      {
+        "confidence" : 0.83,
+        "end" : 12.84,
+        "start" : 11.64,
+        "text" : " Questioning"
+      },
+      {
+        "confidence" : 0.614,
+        "end" : 13.5,
+        "start" : 12.84,
+        "text" : " is."
+      },
+      {
+        "confidence" : 0.934,
+        "end" : 16.02,
+        "start" : 13.56,
+        "text" : " He"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 16.38,
+        "start" : 16.02,
+        "text" : " always"
+      },
+      {
+        "confidence" : 0.792,
+        "end" : 16.92,
+        "start" : 16.38,
+        "text" : " gave"
+      },
+      {
+        "confidence" : 0.778,
+        "end" : 17.4,
+        "start" : 16.92,
+        "text" : " Prince"
+      },
+      {
+        "confidence" : 0.341,
+        "end" : 18.48,
+        "start" : 17.4,
+        "text" : " starting,"
+      },
+      {
+        "confidence" : 0.608,
+        "end" : 19.26,
+        "start" : 18.48,
+        "text" : " better"
+      },
+      {
+        "confidence" : 0.503,
+        "end" : 20.22,
+        "start" : 19.26,
+        "text" : " advice,"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 20.4,
+        "start" : 20.22,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.98,
+        "end" : 21.66,
+        "start" : 20.4,
+        "text" : " encouraged"
+      },
+      {
+        "confidence" : 0.985,
+        "end" : 22.14,
+        "start" : 21.66,
+        "text" : " him"
+      },
+      {
+        "confidence" : 0.751,
+        "end" : 23.1,
+        "start" : 22.14,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.591,
+        "end" : 24.24,
+        "start" : 23.1,
+        "text" : " all"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 24.6,
+        "start" : 24.24,
+        "text" : " his"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 25.2,
+        "start" : 24.6,
+        "text" : " evil"
+      },
+      {
+        "confidence" : 0.63,
+        "end" : 25.8,
+        "start" : 25.2,
+        "text" : " ways."
+      },
+      {
+        "confidence" : 0.042,
+        "end" : 26.4,
+        "start" : 25.86,
+        "text" : " His"
+      },
+      {
+        "confidence" : 0.734,
+        "end" : 27.42,
+        "start" : 26.4,
+        "text" : " 1st"
+      },
+      {
+        "confidence" : 0.628,
+        "end" : 28.2,
+        "start" : 27.42,
+        "text" : " brother,"
+      },
+      {
+        "confidence" : 0.814,
+        "end" : 28.98,
+        "start" : 28.2,
+        "text" : " 1st"
+      },
+      {
+        "confidence" : 0.525,
+        "end" : 29.82,
+        "start" : 28.98,
+        "text" : " brother,"
+      },
+      {
+        "confidence" : 0.657,
+        "end" : 30.96,
+        "start" : 29.82,
+        "text" : " asked"
+      },
+      {
+        "confidence" : 0.986,
+        "end" : 31.44,
+        "start" : 30.96,
+        "text" : " him"
+      },
+      {
+        "confidence" : 0.893,
+        "end" : 32.28,
+        "start" : 31.44,
+        "text" : " what"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 32.88,
+        "start" : 32.28,
+        "text" : " his"
+      },
+      {
+        "confidence" : 0.88,
+        "end" : 33.36,
+        "start" : 32.88,
+        "text" : " trouble"
+      },
+      {
+        "confidence" : 0.496,
+        "end" : 34.08,
+        "start" : 33.36,
+        "text" : " was,"
+      },
+      {
+        "confidence" : 0.295,
+        "end" : 36,
+        "start" : 34.08,
+        "text" : " Chris"
+      },
+      {
+        "confidence" : 0.342,
+        "end" : 36.54,
+        "start" : 36,
+        "text" : " starting"
+      },
+      {
+        "confidence" : 0.112,
+        "end" : 37.56,
+        "start" : 36.54,
+        "text" : " his,"
+      },
+      {
+        "confidence" : 0.715,
+        "end" : 39.54,
+        "start" : 37.56,
+        "text" : " exclaimed"
+      },
+      {
+        "confidence" : 0.922,
+        "end" : 40.32,
+        "start" : 39.54,
+        "text" : " that"
+      },
+      {
+        "confidence" : 0.896,
+        "end" : 41.04,
+        "start" : 40.32,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.976,
+        "end" : 41.64,
+        "start" : 41.04,
+        "text" : " could"
+      },
+      {
+        "confidence" : 0.972,
+        "end" : 42.48,
+        "start" : 41.64,
+        "text" : " not"
+      },
+      {
+        "confidence" : 0.467,
+        "end" : 42.84,
+        "start" : 42.48,
+        "text" : " bear"
+      },
+      {
+        "confidence" : 0.727,
+        "end" : 43.32,
+        "start" : 42.84,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.563,
+        "end" : 44.04,
+        "start" : 43.32,
+        "text" : " flesh,"
+      },
+      {
+        "confidence" : 0.282,
+        "end" : 45.06,
+        "start" : 44.04,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.054,
+        "end" : 46.14,
+        "start" : 45.06,
+        "text" : " city,"
+      },
+      {
+        "confidence" : 0.253,
+        "end" : 46.26,
+        "start" : 46.14,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.055,
+        "end" : 53.16,
+        "start" : 52.38,
+        "text" : " And"
+      },
+      {
+        "confidence" : 0.538,
+        "end" : 53.52,
+        "start" : 53.16,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.951,
+        "end" : 54.18,
+        "start" : 53.52,
+        "text" : " him"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 54.66,
+        "start" : 54.18,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 55.2,
+        "start" : 54.66,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.911,
+        "end" : 56.34,
+        "start" : 55.2,
+        "text" : " determined"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 56.64,
+        "start" : 56.34,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.964,
+        "end" : 57.18,
+        "start" : 56.64,
+        "text" : " be"
+      },
+      {
+        "confidence" : 0.974,
+        "end" : 57.72,
+        "start" : 57.18,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.739,
+        "end" : 57.9,
+        "start" : 57.72,
+        "text" : " better"
+      },
+      {
+        "confidence" : 0.546,
+        "end" : 58.26,
+        "start" : 57.9,
+        "text" : " man"
+      },
+      {
+        "confidence" : 0.935,
+        "end" : 58.74,
+        "start" : 58.26,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.34,
+        "end" : 59.22,
+        "start" : 58.74,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.604,
+        "end" : 61.98,
+        "start" : 59.22,
+        "text" : " opinion"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 62.52,
+        "start" : 61.98,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 62.76,
+        "start" : 62.52,
+        "text" : " him"
+      },
+      {
+        "confidence" : 0.965,
+        "end" : 63.12,
+        "start" : 62.76,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.724,
+        "end" : 64.26,
+        "start" : 63.12,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.951,
+        "end" : 66.12,
+        "start" : 64.26,
+        "text" : " determined"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 66.36,
+        "start" : 66.12,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 66.6,
+        "start" : 66.36,
+        "text" : " be"
+      },
+      {
+        "confidence" : 0.988,
+        "end" : 66.9,
+        "start" : 66.6,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.892,
+        "end" : 67.26,
+        "start" : 66.9,
+        "text" : " better"
+      },
+      {
+        "confidence" : 0.679,
+        "end" : 67.8,
+        "start" : 67.26,
+        "text" : " man"
+      },
+      {
+        "confidence" : 0.8,
+        "end" : 69,
+        "start" : 67.8,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 69.42,
+        "start" : 69,
+        "text" : " order"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 69.9,
+        "start" : 69.42,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.741,
+        "end" : 70.14,
+        "start" : 69.9,
+        "text" : " please"
+      },
+      {
+        "confidence" : 0.776,
+        "end" : 71.22,
+        "start" : 70.14,
+        "text" : " her."
+      },
+      {
+        "confidence" : 0.953,
+        "end" : 74.22,
+        "start" : 71.28,
+        "text" : " You"
+      },
+      {
+        "confidence" : 0.941,
+        "end" : 74.64,
+        "start" : 74.22,
+        "text" : " are"
+      },
+      {
+        "confidence" : 0.941,
+        "end" : 75.12,
+        "start" : 74.64,
+        "text" : " very"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 75.54,
+        "start" : 75.12,
+        "text" : " kind"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 75.9,
+        "start" : 75.54,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.498,
+        "end" : 76.2,
+        "start" : 75.9,
+        "text" : " trouble"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 77.04,
+        "start" : 76.2,
+        "text" : " yourself"
+      },
+      {
+        "confidence" : 0.982,
+        "end" : 78.06,
+        "start" : 77.04,
+        "text" : " about"
+      },
+      {
+        "confidence" : 0.915,
+        "end" : 78.72,
+        "start" : 78.06,
+        "text" : " this"
+      },
+      {
+        "confidence" : 0.857,
+        "end" : 79.62,
+        "start" : 78.72,
+        "text" : " little"
+      },
+      {
+        "confidence" : 0.609,
+        "end" : 80.04,
+        "start" : 79.62,
+        "text" : " girl."
+      },
+      {
+        "confidence" : 0.732,
+        "end" : 81.6,
+        "start" : 80.1,
+        "text" : " If"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 81.9,
+        "start" : 81.6,
+        "text" : " she"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 82.38,
+        "start" : 81.9,
+        "text" : " still"
+      },
+      {
+        "confidence" : 0.859,
+        "end" : 83.16,
+        "start" : 82.38,
+        "text" : " refuse"
+      },
+      {
+        "confidence" : 0.961,
+        "end" : 83.76,
+        "start" : 83.16,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 84.12,
+        "start" : 83.76,
+        "text" : " marry"
+      },
+      {
+        "confidence" : 0.711,
+        "end" : 84.78,
+        "start" : 84.12,
+        "text" : " you,"
+      },
+      {
+        "confidence" : 0.724,
+        "end" : 85.02,
+        "start" : 84.78,
+        "text" : " you"
+      },
+      {
+        "confidence" : 0.923,
+        "end" : 86.1,
+        "start" : 85.02,
+        "text" : " have"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 86.46,
+        "start" : 86.1,
+        "text" : " her"
+      },
+      {
+        "confidence" : 0.714,
+        "end" : 86.88,
+        "start" : 86.46,
+        "text" : " head"
+      },
+      {
+        "confidence" : 0.62,
+        "end" : 87.48,
+        "start" : 86.88,
+        "text" : " cuts"
+      },
+      {
+        "confidence" : 0.594,
+        "end" : 88.38,
+        "start" : 87.48,
+        "text" : " down."
+      },
+      {
+        "confidence" : 0.448,
+        "end" : 91.02,
+        "start" : 88.44,
+        "text" : " Cut"
+      },
+      {
+        "confidence" : 0.962,
+        "end" : 91.26,
+        "start" : 91.02,
+        "text" : " off"
+      },
+      {
+        "confidence" : 0.967,
+        "end" : 92.22,
+        "start" : 91.26,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 92.34,
+        "start" : 92.22,
+        "text" : " teach"
+      },
+      {
+        "confidence" : 0.811,
+        "end" : 93.6,
+        "start" : 92.34,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 93.9,
+        "start" : 93.6,
+        "text" : " other"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 94.32,
+        "start" : 93.9,
+        "text" : " people"
+      },
+      {
+        "confidence" : 0.982,
+        "end" : 94.86,
+        "start" : 94.32,
+        "text" : " that"
+      },
+      {
+        "confidence" : 0.542,
+        "end" : 95.4,
+        "start" : 94.86,
+        "text" : " you"
+      },
+      {
+        "confidence" : 0.853,
+        "end" : 95.76,
+        "start" : 95.4,
+        "text" : " mean"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 96.36,
+        "start" : 95.76,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 96.6,
+        "start" : 96.36,
+        "text" : " be"
+      },
+      {
+        "confidence" : 0.915,
+        "end" : 97.38,
+        "start" : 96.6,
+        "text" : " obeyed."
+      }
+    ],
+    "source" : "super8-L3-p69-clip-CBDE6563-997D-407D-8F45-7A75F833EEE8.m4a"
   },
-  "words": [
+  "words" : [
     "to",
     "to",
     "your",
@@ -1113,14 +1887,15 @@
     "he",
     "added",
     "with",
-    "a",
+    "uh",
+    "questioning",
     "questioning",
     "is",
     "he",
     "always",
     "gave",
     "prince",
-    "starling",
+    "starting",
     "better",
     "advice",
     "and",
@@ -1142,9 +1917,9 @@
     "his",
     "trouble",
     "was",
-    "press",
+    "chris",
     "starting",
-    "is",
+    "his",
     "exclaimed",
     "that",
     "he",
@@ -1153,8 +1928,10 @@
     "bear",
     "the",
     "flesh",
-    "a",
-    "pen",
+    "uh",
+    "city",
+    "uh",
+    "and",
     "of",
     "him",
     "and",

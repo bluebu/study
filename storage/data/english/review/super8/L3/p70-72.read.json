@@ -1,679 +1,1114 @@
 {
   "acoustics" : {
     "duration" : 378.62,
-    "pause_count" : 133,
-    "pause_ratio" : 0.24,
-    "pause_total" : 90.96,
+    "pause_count" : 220,
+    "pause_ratio" : 0.436,
+    "pause_total" : 165.05,
     "pauses" : [
       {
-        "dur" : 0.26,
-        "end" : 7.84,
-        "start" : 7.58
-      },
-      {
-        "dur" : 0.49,
-        "end" : 11.18,
-        "start" : 10.69
-      },
-      {
-        "dur" : 0.53,
-        "end" : 13.6,
-        "start" : 13.07
-      },
-      {
-        "dur" : 1.39,
-        "end" : 15.13,
-        "start" : 13.74
-      },
-      {
-        "dur" : 0.4,
-        "end" : 18.5,
-        "start" : 18.1
-      },
-      {
-        "dur" : 0.47,
-        "end" : 20.37,
-        "start" : 19.9
-      },
-      {
-        "dur" : 0.44,
-        "end" : 20.94,
-        "start" : 20.5
-      },
-      {
-        "dur" : 0.35,
-        "end" : 21.31,
-        "start" : 20.96
-      },
-      {
-        "dur" : 0.26,
-        "end" : 35.31,
-        "start" : 35.05
-      },
-      {
-        "dur" : 0.26,
-        "end" : 42.97,
-        "start" : 42.71
-      },
-      {
-        "dur" : 1.31,
-        "end" : 44.3,
-        "start" : 42.99
-      },
-      {
-        "dur" : 0.26,
-        "end" : 46.14,
-        "start" : 45.88
-      },
-      {
-        "dur" : 3.01,
-        "end" : 52.01,
-        "start" : 49
-      },
-      {
-        "dur" : 0.73,
-        "end" : 53.46,
-        "start" : 52.73
-      },
-      {
-        "dur" : 0.93,
-        "end" : 54.43,
-        "start" : 53.5
-      },
-      {
-        "dur" : 0.35,
-        "end" : 54.8,
-        "start" : 54.45
-      },
-      {
-        "dur" : 2.19,
-        "end" : 58.09,
-        "start" : 55.9
-      },
-      {
-        "dur" : 0.41,
-        "end" : 60.15,
-        "start" : 59.74
-      },
-      {
-        "dur" : 0.5,
-        "end" : 61.67,
-        "start" : 61.17
-      },
-      {
-        "dur" : 0.94,
-        "end" : 63.97,
-        "start" : 63.03
-      },
-      {
-        "dur" : 1.07,
-        "end" : 66.77,
-        "start" : 65.7
-      },
-      {
-        "dur" : 1.31,
-        "end" : 68.71,
-        "start" : 67.4
-      },
-      {
-        "dur" : 0.55,
-        "end" : 69.28,
-        "start" : 68.73
-      },
-      {
-        "dur" : 0.35,
-        "end" : 70.88,
-        "start" : 70.53
-      },
-      {
-        "dur" : 0.42,
-        "end" : 77.25,
-        "start" : 76.83
-      },
-      {
-        "dur" : 0.29,
-        "end" : 77.67,
-        "start" : 77.38
-      },
-      {
-        "dur" : 0.33,
-        "end" : 78.02,
-        "start" : 77.69
-      },
-      {
-        "dur" : 0.48,
-        "end" : 78.52,
-        "start" : 78.04
-      },
-      {
-        "dur" : 0.48,
-        "end" : 79.07,
-        "start" : 78.59
-      },
-      {
-        "dur" : 0.77,
-        "end" : 82.48,
-        "start" : 81.71
-      },
-      {
-        "dur" : 0.28,
-        "end" : 88.02,
-        "start" : 87.74
-      },
-      {
-        "dur" : 1.39,
-        "end" : 89.67,
-        "start" : 88.28
-      },
-      {
-        "dur" : 0.29,
-        "end" : 92.85,
-        "start" : 92.56
-      },
-      {
-        "dur" : 0.4,
-        "end" : 96.08,
-        "start" : 95.68
-      },
-      {
-        "dur" : 1.3,
-        "end" : 99.48,
-        "start" : 98.18
-      },
-      {
-        "dur" : 0.67,
-        "end" : 100.21,
-        "start" : 99.54
-      },
-      {
-        "dur" : 0.25,
-        "end" : 108.06,
-        "start" : 107.81
-      },
-      {
         "dur" : 0.37,
-        "end" : 111.03,
-        "start" : 110.66
-      },
-      {
-        "dur" : 0.47,
-        "end" : 112.98,
-        "start" : 112.51
-      },
-      {
-        "dur" : 0.35,
-        "end" : 113.87,
-        "start" : 113.52
+        "end" : 1.25,
+        "start" : 0.88
       },
       {
         "dur" : 0.33,
-        "end" : 116.7,
-        "start" : 116.37
-      },
-      {
-        "dur" : 0.63,
-        "end" : 117.92,
-        "start" : 117.29
-      },
-      {
-        "dur" : 0.34,
-        "end" : 120.43,
-        "start" : 120.09
-      },
-      {
-        "dur" : 1.06,
-        "end" : 123.33,
-        "start" : 122.27
-      },
-      {
-        "dur" : 0.78,
-        "end" : 128.77,
-        "start" : 127.99
-      },
-      {
-        "dur" : 0.32,
-        "end" : 129.76,
-        "start" : 129.44
-      },
-      {
-        "dur" : 0.87,
-        "end" : 130.68,
-        "start" : 129.81
-      },
-      {
-        "dur" : 0.4,
-        "end" : 134.21,
-        "start" : 133.81
-      },
-      {
-        "dur" : 0.55,
-        "end" : 134.88,
-        "start" : 134.33
-      },
-      {
-        "dur" : 0.34,
-        "end" : 137.42,
-        "start" : 137.08
-      },
-      {
-        "dur" : 0.29,
-        "end" : 140.88,
-        "start" : 140.59
-      },
-      {
-        "dur" : 0.48,
-        "end" : 142.13,
-        "start" : 141.65
-      },
-      {
-        "dur" : 0.35,
-        "end" : 145.56,
-        "start" : 145.21
-      },
-      {
-        "dur" : 0.82,
-        "end" : 147.66,
-        "start" : 146.84
-      },
-      {
-        "dur" : 0.31,
-        "end" : 151.95,
-        "start" : 151.64
-      },
-      {
-        "dur" : 0.25,
-        "end" : 160.3,
-        "start" : 160.05
-      },
-      {
-        "dur" : 1.89,
-        "end" : 164.08,
-        "start" : 162.19
-      },
-      {
-        "dur" : 0.99,
-        "end" : 165.61,
-        "start" : 164.62
-      },
-      {
-        "dur" : 0.33,
-        "end" : 167.16,
-        "start" : 166.83
-      },
-      {
-        "dur" : 0.27,
-        "end" : 167.55,
-        "start" : 167.28
-      },
-      {
-        "dur" : 0.27,
-        "end" : 175.58,
-        "start" : 175.31
-      },
-      {
-        "dur" : 1.3,
-        "end" : 178.02,
-        "start" : 176.72
-      },
-      {
-        "dur" : 0.31,
-        "end" : 179.55,
-        "start" : 179.24
-      },
-      {
-        "dur" : 0.27,
-        "end" : 180.84,
-        "start" : 180.57
-      },
-      {
-        "dur" : 0.35,
-        "end" : 181.62,
-        "start" : 181.27
-      },
-      {
-        "dur" : 0.8,
-        "end" : 182.89,
-        "start" : 182.09
-      },
-      {
-        "dur" : 0.58,
-        "end" : 184.88,
-        "start" : 184.3
-      },
-      {
-        "dur" : 0.71,
-        "end" : 188.9,
-        "start" : 188.19
-      },
-      {
-        "dur" : 0.28,
-        "end" : 191.04,
-        "start" : 190.76
-      },
-      {
-        "dur" : 0.32,
-        "end" : 192.21,
-        "start" : 191.89
-      },
-      {
-        "dur" : 0.64,
-        "end" : 195,
-        "start" : 194.36
+        "end" : 4.31,
+        "start" : 3.98
       },
       {
         "dur" : 0.53,
-        "end" : 196.13,
-        "start" : 195.6
+        "end" : 6.64,
+        "start" : 6.11
       },
       {
-        "dur" : 1.65,
-        "end" : 198.36,
-        "start" : 196.71
+        "dur" : 0.28,
+        "end" : 7.84,
+        "start" : 7.56
       },
       {
-        "dur" : 0.29,
-        "end" : 205.09,
-        "start" : 204.8
+        "dur" : 0.47,
+        "end" : 9.35,
+        "start" : 8.88
       },
       {
-        "dur" : 0.3,
-        "end" : 206.91,
-        "start" : 206.61
-      },
-      {
-        "dur" : 0.79,
-        "end" : 210.06,
-        "start" : 209.27
+        "dur" : 0.55,
+        "end" : 11.2,
+        "start" : 10.65
       },
       {
         "dur" : 0.26,
-        "end" : 219.01,
-        "start" : 218.75
+        "end" : 12.96,
+        "start" : 12.7
       },
       {
-        "dur" : 0.27,
-        "end" : 224.16,
-        "start" : 223.89
-      },
-      {
-        "dur" : 0.36,
-        "end" : 228.5,
-        "start" : 228.14
-      },
-      {
-        "dur" : 0.33,
-        "end" : 230.17,
-        "start" : 229.84
-      },
-      {
-        "dur" : 0.25,
-        "end" : 231.18,
-        "start" : 230.93
-      },
-      {
-        "dur" : 0.49,
-        "end" : 233.69,
-        "start" : 233.2
-      },
-      {
-        "dur" : 0.25,
-        "end" : 234.58,
-        "start" : 234.33
-      },
-      {
-        "dur" : 0.97,
-        "end" : 237.4,
-        "start" : 236.43
-      },
-      {
-        "dur" : 0.27,
-        "end" : 237.78,
-        "start" : 237.51
-      },
-      {
-        "dur" : 3.43,
-        "end" : 242.28,
-        "start" : 238.85
-      },
-      {
-        "dur" : 0.59,
-        "end" : 243.42,
-        "start" : 242.83
-      },
-      {
-        "dur" : 0.57,
-        "end" : 245.9,
-        "start" : 245.33
-      },
-      {
-        "dur" : 0.41,
-        "end" : 248.04,
-        "start" : 247.63
-      },
-      {
-        "dur" : 0.46,
-        "end" : 250.42,
-        "start" : 249.96
+        "dur" : 2.44,
+        "end" : 15.41,
+        "start" : 12.97
       },
       {
         "dur" : 0.39,
-        "end" : 255.56,
-        "start" : 255.17
+        "end" : 16.59,
+        "start" : 16.2
       },
       {
-        "dur" : 0.34,
-        "end" : 256.5,
-        "start" : 256.16
+        "dur" : 0.36,
+        "end" : 17.83,
+        "start" : 17.47
       },
       {
-        "dur" : 0.47,
-        "end" : 267.48,
-        "start" : 267.01
+        "dur" : 0.58,
+        "end" : 18.5,
+        "start" : 17.92
+      },
+      {
+        "dur" : 0.52,
+        "end" : 19.05,
+        "start" : 18.53
+      },
+      {
+        "dur" : 1.57,
+        "end" : 21.44,
+        "start" : 19.87
+      },
+      {
+        "dur" : 0.57,
+        "end" : 22.94,
+        "start" : 22.37
+      },
+      {
+        "dur" : 0.58,
+        "end" : 25.08,
+        "start" : 24.5
+      },
+      {
+        "dur" : 0.65,
+        "end" : 26.94,
+        "start" : 26.29
       },
       {
         "dur" : 0.25,
-        "end" : 269.18,
-        "start" : 268.93
+        "end" : 27.64,
+        "start" : 27.39
       },
       {
-        "dur" : 0.43,
-        "end" : 270.8,
-        "start" : 270.37
-      },
-      {
-        "dur" : 1.29,
-        "end" : 278.55,
-        "start" : 277.26
+        "dur" : 0.32,
+        "end" : 28.73,
+        "start" : 28.41
       },
       {
         "dur" : 0.5,
-        "end" : 282.05,
-        "start" : 281.55
+        "end" : 30.75,
+        "start" : 30.25
       },
       {
-        "dur" : 0.62,
-        "end" : 283.44,
-        "start" : 282.82
-      },
-      {
-        "dur" : 0.38,
-        "end" : 293.59,
-        "start" : 293.21
-      },
-      {
-        "dur" : 0.46,
-        "end" : 295.58,
-        "start" : 295.12
-      },
-      {
-        "dur" : 0.27,
-        "end" : 296.62,
-        "start" : 296.35
-      },
-      {
-        "dur" : 0.64,
-        "end" : 300.1,
-        "start" : 299.46
-      },
-      {
-        "dur" : 0.38,
-        "end" : 303.2,
-        "start" : 302.82
-      },
-      {
-        "dur" : 1.27,
-        "end" : 304.48,
-        "start" : 303.21
-      },
-      {
-        "dur" : 0.34,
-        "end" : 308.03,
-        "start" : 307.69
-      },
-      {
-        "dur" : 1.33,
-        "end" : 310.58,
-        "start" : 309.25
-      },
-      {
-        "dur" : 0.25,
-        "end" : 314.23,
-        "start" : 313.98
-      },
-      {
-        "dur" : 0.25,
-        "end" : 319.29,
-        "start" : 319.04
-      },
-      {
-        "dur" : 0.42,
-        "end" : 321.28,
-        "start" : 320.86
-      },
-      {
-        "dur" : 2.9,
-        "end" : 326.06,
-        "start" : 323.16
-      },
-      {
-        "dur" : 2.06,
-        "end" : 330.8,
-        "start" : 328.74
-      },
-      {
-        "dur" : 0.56,
-        "end" : 331.41,
-        "start" : 330.85
-      },
-      {
-        "dur" : 0.42,
-        "end" : 332.03,
-        "start" : 331.61
-      },
-      {
-        "dur" : 0.33,
-        "end" : 333.47,
-        "start" : 333.14
-      },
-      {
-        "dur" : 0.31,
-        "end" : 334.67,
-        "start" : 334.36
+        "dur" : 0.28,
+        "end" : 31.57,
+        "start" : 31.29
       },
       {
         "dur" : 0.35,
-        "end" : 335.95,
-        "start" : 335.6
-      },
-      {
-        "dur" : 0.34,
-        "end" : 336.33,
-        "start" : 335.99
-      },
-      {
-        "dur" : 5.8,
-        "end" : 342.66,
-        "start" : 336.86
-      },
-      {
-        "dur" : 0.44,
-        "end" : 343.13,
-        "start" : 342.69
-      },
-      {
-        "dur" : 0.71,
-        "end" : 347.08,
-        "start" : 346.37
+        "end" : 32.74,
+        "start" : 32.39
       },
       {
         "dur" : 0.4,
-        "end" : 348.21,
-        "start" : 347.81
-      },
-      {
-        "dur" : 0.61,
-        "end" : 355.14,
-        "start" : 354.53
-      },
-      {
-        "dur" : 0.45,
-        "end" : 358.84,
-        "start" : 358.39
-      },
-      {
-        "dur" : 1.01,
-        "end" : 360.27,
-        "start" : 359.26
-      },
-      {
-        "dur" : 0.26,
-        "end" : 361.11,
-        "start" : 360.85
+        "end" : 33.77,
+        "start" : 33.37
       },
       {
         "dur" : 0.84,
-        "end" : 362.07,
-        "start" : 361.23
+        "end" : 35.31,
+        "start" : 34.47
       },
       {
-        "dur" : 0.46,
-        "end" : 363.38,
-        "start" : 362.92
+        "dur" : 0.3,
+        "end" : 38.08,
+        "start" : 37.78
       },
       {
-        "dur" : 0.49,
-        "end" : 363.88,
-        "start" : 363.39
+        "dur" : 0.31,
+        "end" : 41.34,
+        "start" : 41.03
       },
       {
-        "dur" : 0.27,
-        "end" : 364.26,
-        "start" : 363.99
+        "dur" : 0.5,
+        "end" : 42.5,
+        "start" : 42
       },
       {
-        "dur" : 0.37,
-        "end" : 365.66,
-        "start" : 365.29
+        "dur" : 1.64,
+        "end" : 44.3,
+        "start" : 42.66
       },
       {
-        "dur" : 2.08,
-        "end" : 368.4,
-        "start" : 366.32
+        "dur" : 0.55,
+        "end" : 46.37,
+        "start" : 45.82
+      },
+      {
+        "dur" : 0.34,
+        "end" : 47.2,
+        "start" : 46.86
+      },
+      {
+        "dur" : 0.32,
+        "end" : 48.5,
+        "start" : 48.18
+      },
+      {
+        "dur" : 3.19,
+        "end" : 52.02,
+        "start" : 48.83
+      },
+      {
+        "dur" : 2.29,
+        "end" : 54.81,
+        "start" : 52.52
+      },
+      {
+        "dur" : 0.25,
+        "end" : 55.2,
+        "start" : 54.95
+      },
+      {
+        "dur" : 2.28,
+        "end" : 58.13,
+        "start" : 55.85
+      },
+      {
+        "dur" : 0.51,
+        "end" : 60.19,
+        "start" : 59.68
+      },
+      {
+        "dur" : 0.59,
+        "end" : 61.69,
+        "start" : 61.1
       },
       {
         "dur" : 0.29,
-        "end" : 374.74,
-        "start" : 374.45
+        "end" : 62.65,
+        "start" : 62.36
       },
       {
-        "dur" : 1.73,
+        "dur" : 1.06,
+        "end" : 63.99,
+        "start" : 62.93
+      },
+      {
+        "dur" : 1.18,
+        "end" : 66.83,
+        "start" : 65.65
+      },
+      {
+        "dur" : 1.98,
+        "end" : 69.31,
+        "start" : 67.33
+      },
+      {
+        "dur" : 0.51,
+        "end" : 70.25,
+        "start" : 69.74
+      },
+      {
+        "dur" : 0.52,
+        "end" : 70.98,
+        "start" : 70.46
+      },
+      {
+        "dur" : 0.26,
+        "end" : 71.53,
+        "start" : 71.27
+      },
+      {
+        "dur" : 0.51,
+        "end" : 73.73,
+        "start" : 73.22
+      },
+      {
+        "dur" : 1.26,
+        "end" : 77.27,
+        "start" : 76.01
+      },
+      {
+        "dur" : 1.87,
+        "end" : 79.18,
+        "start" : 77.31
+      },
+      {
+        "dur" : 0.39,
+        "end" : 80.02,
+        "start" : 79.63
+      },
+      {
+        "dur" : 0.49,
+        "end" : 81.21,
+        "start" : 80.72
+      },
+      {
+        "dur" : 0.86,
+        "end" : 82.49,
+        "start" : 81.63
+      },
+      {
+        "dur" : 0.65,
+        "end" : 83.89,
+        "start" : 83.24
+      },
+      {
+        "dur" : 0.68,
+        "end" : 85.02,
+        "start" : 84.34
+      },
+      {
+        "dur" : 0.25,
+        "end" : 85.37,
+        "start" : 85.12
+      },
+      {
+        "dur" : 0.25,
+        "end" : 85.63,
+        "start" : 85.38
+      },
+      {
+        "dur" : 0.3,
+        "end" : 87.15,
+        "start" : 86.85
+      },
+      {
+        "dur" : 2.1,
+        "end" : 89.68,
+        "start" : 87.58
+      },
+      {
+        "dur" : 0.49,
+        "end" : 91.8,
+        "start" : 91.31
+      },
+      {
+        "dur" : 0.38,
+        "end" : 92.89,
+        "start" : 92.51
+      },
+      {
+        "dur" : 0.48,
+        "end" : 94.57,
+        "start" : 94.09
+      },
+      {
+        "dur" : 0.54,
+        "end" : 96.08,
+        "start" : 95.54
+      },
+      {
+        "dur" : 2.51,
+        "end" : 100.27,
+        "start" : 97.76
+      },
+      {
+        "dur" : 0.27,
+        "end" : 102.38,
+        "start" : 102.11
+      },
+      {
+        "dur" : 0.43,
+        "end" : 103.56,
+        "start" : 103.13
+      },
+      {
+        "dur" : 0.31,
+        "end" : 104.77,
+        "start" : 104.46
+      },
+      {
+        "dur" : 0.55,
+        "end" : 107.31,
+        "start" : 106.76
+      },
+      {
+        "dur" : 0.33,
+        "end" : 108.08,
+        "start" : 107.75
+      },
+      {
+        "dur" : 0.36,
+        "end" : 108.81,
+        "start" : 108.45
+      },
+      {
+        "dur" : 0.41,
+        "end" : 109.56,
+        "start" : 109.15
+      },
+      {
+        "dur" : 0.5,
+        "end" : 111.03,
+        "start" : 110.53
+      },
+      {
+        "dur" : 0.77,
+        "end" : 113.02,
+        "start" : 112.25
+      },
+      {
+        "dur" : 0.49,
+        "end" : 113.91,
+        "start" : 113.42
+      },
+      {
+        "dur" : 0.36,
+        "end" : 115.12,
+        "start" : 114.76
+      },
+      {
+        "dur" : 0.84,
+        "end" : 116.71,
+        "start" : 115.87
+      },
+      {
+        "dur" : 1.01,
+        "end" : 118.21,
+        "start" : 117.2
+      },
+      {
+        "dur" : 0.63,
+        "end" : 118.9,
+        "start" : 118.27
+      },
+      {
+        "dur" : 0.63,
+        "end" : 120.43,
+        "start" : 119.8
+      },
+      {
+        "dur" : 0.35,
+        "end" : 121.31,
+        "start" : 120.96
+      },
+      {
+        "dur" : 1.36,
+        "end" : 123.44,
+        "start" : 122.08
+      },
+      {
+        "dur" : 0.39,
+        "end" : 126.11,
+        "start" : 125.72
+      },
+      {
+        "dur" : 0.4,
+        "end" : 127.45,
+        "start" : 127.05
+      },
+      {
+        "dur" : 2.92,
+        "end" : 130.71,
+        "start" : 127.79
+      },
+      {
+        "dur" : 0.67,
+        "end" : 134.27,
+        "start" : 133.6
+      },
+      {
+        "dur" : 0.71,
+        "end" : 135.01,
+        "start" : 134.3
+      },
+      {
+        "dur" : 0.4,
+        "end" : 136.61,
+        "start" : 136.21
+      },
+      {
+        "dur" : 0.46,
+        "end" : 137.43,
+        "start" : 136.97
+      },
+      {
+        "dur" : 0.46,
+        "end" : 140.22,
+        "start" : 139.76
+      },
+      {
+        "dur" : 0.4,
+        "end" : 140.92,
+        "start" : 140.52
+      },
+      {
+        "dur" : 0.61,
+        "end" : 142.13,
+        "start" : 141.52
+      },
+      {
+        "dur" : 0.33,
+        "end" : 143.75,
+        "start" : 143.42
+      },
+      {
+        "dur" : 0.27,
+        "end" : 144.81,
+        "start" : 144.54
+      },
+      {
+        "dur" : 0.44,
+        "end" : 145.57,
+        "start" : 145.13
+      },
+      {
+        "dur" : 0.35,
+        "end" : 146.14,
+        "start" : 145.79
+      },
+      {
+        "dur" : 1.09,
+        "end" : 147.75,
+        "start" : 146.66
+      },
+      {
+        "dur" : 1.04,
+        "end" : 150.36,
+        "start" : 149.32
+      },
+      {
+        "dur" : 0.74,
+        "end" : 152.09,
+        "start" : 151.35
+      },
+      {
+        "dur" : 0.5,
+        "end" : 157.23,
+        "start" : 156.73
+      },
+      {
+        "dur" : 0.73,
+        "end" : 160.46,
+        "start" : 159.73
+      },
+      {
+        "dur" : 1.96,
+        "end" : 164.11,
+        "start" : 162.15
+      },
+      {
+        "dur" : 1.45,
+        "end" : 165.83,
+        "start" : 164.38
+      },
+      {
+        "dur" : 0.31,
+        "end" : 166.3,
+        "start" : 165.99
+      },
+      {
+        "dur" : 0.49,
+        "end" : 167.17,
+        "start" : 166.68
+      },
+      {
+        "dur" : 0.32,
+        "end" : 167.56,
+        "start" : 167.24
+      },
+      {
+        "dur" : 0.38,
+        "end" : 170.35,
+        "start" : 169.97
+      },
+      {
+        "dur" : 0.57,
+        "end" : 171.33,
+        "start" : 170.76
+      },
+      {
+        "dur" : 0.3,
+        "end" : 173.02,
+        "start" : 172.72
+      },
+      {
+        "dur" : 1.12,
+        "end" : 176.13,
+        "start" : 175.01
+      },
+      {
+        "dur" : 1.56,
+        "end" : 178.05,
+        "start" : 176.49
+      },
+      {
+        "dur" : 0.39,
+        "end" : 179.58,
+        "start" : 179.19
+      },
+      {
+        "dur" : 0.53,
+        "end" : 180.98,
+        "start" : 180.45
+      },
+      {
+        "dur" : 0.43,
+        "end" : 181.64,
+        "start" : 181.21
+      },
+      {
+        "dur" : 1.09,
+        "end" : 183.14,
+        "start" : 182.05
+      },
+      {
+        "dur" : 0.27,
+        "end" : 183.93,
+        "start" : 183.66
+      },
+      {
+        "dur" : 0.63,
+        "end" : 184.88,
+        "start" : 184.25
+      },
+      {
+        "dur" : 0.26,
+        "end" : 186.81,
+        "start" : 186.55
+      },
+      {
+        "dur" : 1.83,
+        "end" : 189.43,
+        "start" : 187.6
+      },
+      {
+        "dur" : 0.78,
+        "end" : 191.17,
+        "start" : 190.39
+      },
+      {
+        "dur" : 0.71,
+        "end" : 192.22,
+        "start" : 191.51
+      },
+      {
+        "dur" : 0.3,
+        "end" : 193.04,
+        "start" : 192.74
+      },
+      {
+        "dur" : 0.72,
+        "end" : 195.05,
+        "start" : 194.33
+      },
+      {
+        "dur" : 0.59,
+        "end" : 196.16,
+        "start" : 195.57
+      },
+      {
+        "dur" : 2.01,
+        "end" : 198.69,
+        "start" : 196.68
+      },
+      {
+        "dur" : 0.26,
+        "end" : 200.51,
+        "start" : 200.25
+      },
+      {
+        "dur" : 0.33,
+        "end" : 204.37,
+        "start" : 204.04
+      },
+      {
+        "dur" : 0.49,
+        "end" : 205.14,
+        "start" : 204.65
+      },
+      {
+        "dur" : 0.72,
+        "end" : 206.93,
+        "start" : 206.21
+      },
+      {
+        "dur" : 1.93,
+        "end" : 210.98,
+        "start" : 209.05
+      },
+      {
+        "dur" : 0.35,
+        "end" : 212.43,
+        "start" : 212.08
+      },
+      {
+        "dur" : 0.35,
+        "end" : 215.97,
+        "start" : 215.62
+      },
+      {
+        "dur" : 0.26,
+        "end" : 218.21,
+        "start" : 217.95
+      },
+      {
+        "dur" : 0.52,
+        "end" : 219.18,
+        "start" : 218.66
+      },
+      {
+        "dur" : 0.3,
+        "end" : 221.71,
+        "start" : 221.41
+      },
+      {
+        "dur" : 0.36,
+        "end" : 222.4,
+        "start" : 222.04
+      },
+      {
+        "dur" : 0.52,
+        "end" : 224.37,
+        "start" : 223.85
+      },
+      {
+        "dur" : 0.41,
+        "end" : 226.03,
+        "start" : 225.62
+      },
+      {
+        "dur" : 0.64,
+        "end" : 228.68,
+        "start" : 228.04
+      },
+      {
+        "dur" : 2.1,
+        "end" : 231.83,
+        "start" : 229.73
+      },
+      {
+        "dur" : 0.51,
+        "end" : 232.96,
+        "start" : 232.45
+      },
+      {
+        "dur" : 0.57,
+        "end" : 233.7,
+        "start" : 233.13
+      },
+      {
+        "dur" : 0.31,
+        "end" : 234.59,
+        "start" : 234.28
+      },
+      {
+        "dur" : 1.9,
+        "end" : 237.8,
+        "start" : 235.9
+      },
+      {
+        "dur" : 4.98,
+        "end" : 243.45,
+        "start" : 238.47
+      },
+      {
+        "dur" : 0.35,
+        "end" : 244.91,
+        "start" : 244.56
+      },
+      {
+        "dur" : 0.71,
+        "end" : 246,
+        "start" : 245.29
+      },
+      {
+        "dur" : 0.48,
+        "end" : 248.06,
+        "start" : 247.58
+      },
+      {
+        "dur" : 0.51,
+        "end" : 249.59,
+        "start" : 249.08
+      },
+      {
+        "dur" : 0.51,
+        "end" : 250.45,
+        "start" : 249.94
+      },
+      {
+        "dur" : 0.38,
+        "end" : 254.2,
+        "start" : 253.82
+      },
+      {
+        "dur" : 0.95,
+        "end" : 255.97,
+        "start" : 255.02
+      },
+      {
+        "dur" : 1.21,
+        "end" : 257.31,
+        "start" : 256.1
+      },
+      {
+        "dur" : 0.35,
+        "end" : 260.58,
+        "start" : 260.23
+      },
+      {
+        "dur" : 0.35,
+        "end" : 265.92,
+        "start" : 265.57
+      },
+      {
+        "dur" : 0.61,
+        "end" : 267.52,
+        "start" : 266.91
+      },
+      {
+        "dur" : 0.28,
+        "end" : 269.18,
+        "start" : 268.9
+      },
+      {
+        "dur" : 0.94,
+        "end" : 270.97,
+        "start" : 270.03
+      },
+      {
+        "dur" : 0.35,
+        "end" : 273.12,
+        "start" : 272.77
+      },
+      {
+        "dur" : 0.54,
+        "end" : 274.57,
+        "start" : 274.03
+      },
+      {
+        "dur" : 0.27,
+        "end" : 275.59,
+        "start" : 275.32
+      },
+      {
+        "dur" : 0.38,
+        "end" : 276.57,
+        "start" : 276.19
+      },
+      {
+        "dur" : 1.39,
+        "end" : 278.58,
+        "start" : 277.19
+      },
+      {
+        "dur" : 0.36,
+        "end" : 281.1,
+        "start" : 280.74
+      },
+      {
+        "dur" : 0.69,
+        "end" : 282.12,
+        "start" : 281.43
+      },
+      {
+        "dur" : 0.73,
+        "end" : 283.47,
+        "start" : 282.74
+      },
+      {
+        "dur" : 0.49,
+        "end" : 285.68,
+        "start" : 285.19
+      },
+      {
+        "dur" : 0.45,
+        "end" : 287.64,
+        "start" : 287.19
+      },
+      {
+        "dur" : 0.39,
+        "end" : 289.74,
+        "start" : 289.35
+      },
+      {
+        "dur" : 0.63,
+        "end" : 292.47,
+        "start" : 291.84
+      },
+      {
+        "dur" : 0.48,
+        "end" : 293.62,
+        "start" : 293.14
+      },
+      {
+        "dur" : 0.93,
+        "end" : 294.58,
+        "start" : 293.65
+      },
+      {
+        "dur" : 0.55,
+        "end" : 295.6,
+        "start" : 295.05
+      },
+      {
+        "dur" : 0.45,
+        "end" : 296.64,
+        "start" : 296.19
+      },
+      {
+        "dur" : 0.29,
+        "end" : 297.59,
+        "start" : 297.3
+      },
+      {
+        "dur" : 0.76,
+        "end" : 300.17,
+        "start" : 299.41
+      },
+      {
+        "dur" : 0.33,
+        "end" : 301.21,
+        "start" : 300.88
+      },
+      {
+        "dur" : 0.38,
+        "end" : 302.24,
+        "start" : 301.86
+      },
+      {
+        "dur" : 1.74,
+        "end" : 304.52,
+        "start" : 302.78
+      },
+      {
+        "dur" : 0.27,
+        "end" : 305.29,
+        "start" : 305.02
+      },
+      {
+        "dur" : 0.36,
+        "end" : 306.9,
+        "start" : 306.54
+      },
+      {
+        "dur" : 0.51,
+        "end" : 308.05,
+        "start" : 307.54
+      },
+      {
+        "dur" : 1.45,
+        "end" : 310.61,
+        "start" : 309.16
+      },
+      {
+        "dur" : 0.31,
+        "end" : 314.24,
+        "start" : 313.93
+      },
+      {
+        "dur" : 0.45,
+        "end" : 315.05,
+        "start" : 314.6
+      },
+      {
+        "dur" : 0.32,
+        "end" : 317.52,
+        "start" : 317.2
+      },
+      {
+        "dur" : 0.34,
+        "end" : 319.31,
+        "start" : 318.97
+      },
+      {
+        "dur" : 0.31,
+        "end" : 320.3,
+        "start" : 319.99
+      },
+      {
+        "dur" : 1.07,
+        "end" : 321.5,
+        "start" : 320.43
+      },
+      {
+        "dur" : 3.08,
+        "end" : 326.07,
+        "start" : 322.99
+      },
+      {
+        "dur" : 0.31,
+        "end" : 326.75,
+        "start" : 326.44
+      },
+      {
+        "dur" : 3.58,
+        "end" : 332.03,
+        "start" : 328.45
+      },
+      {
+        "dur" : 0.39,
+        "end" : 333.47,
+        "start" : 333.08
+      },
+      {
+        "dur" : 0.48,
+        "end" : 334.72,
+        "start" : 334.24
+      },
+      {
+        "dur" : 0.89,
+        "end" : 336.36,
+        "start" : 335.47
+      },
+      {
+        "dur" : 6.37,
+        "end" : 343.2,
+        "start" : 336.83
+      },
+      {
+        "dur" : 0.33,
+        "end" : 343.57,
+        "start" : 343.24
+      },
+      {
+        "dur" : 0.44,
+        "end" : 344.34,
+        "start" : 343.9
+      },
+      {
+        "dur" : 0.26,
+        "end" : 344.63,
+        "start" : 344.37
+      },
+      {
+        "dur" : 0.5,
+        "end" : 345.2,
+        "start" : 344.7
+      },
+      {
+        "dur" : 0.26,
+        "end" : 345.55,
+        "start" : 345.29
+      },
+      {
+        "dur" : 1.75,
+        "end" : 347.39,
+        "start" : 345.64
+      },
+      {
+        "dur" : 0.46,
+        "end" : 348.24,
+        "start" : 347.78
+      },
+      {
+        "dur" : 0.67,
+        "end" : 348.97,
+        "start" : 348.3
+      },
+      {
+        "dur" : 0.42,
+        "end" : 351.33,
+        "start" : 350.91
+      },
+      {
+        "dur" : 0.5,
+        "end" : 352.27,
+        "start" : 351.77
+      },
+      {
+        "dur" : 0.26,
+        "end" : 353.92,
+        "start" : 353.66
+      },
+      {
+        "dur" : 0.76,
+        "end" : 355.2,
+        "start" : 354.44
+      },
+      {
+        "dur" : 0.33,
+        "end" : 356.45,
+        "start" : 356.12
+      },
+      {
+        "dur" : 0.28,
+        "end" : 357.74,
+        "start" : 357.46
+      },
+      {
+        "dur" : 0.76,
+        "end" : 359.1,
+        "start" : 358.34
+      },
+      {
+        "dur" : 1.15,
+        "end" : 360.31,
+        "start" : 359.16
+      },
+      {
+        "dur" : 1.58,
+        "end" : 362.13,
+        "start" : 360.55
+      },
+      {
+        "dur" : 1.02,
+        "end" : 363.88,
+        "start" : 362.86
+      },
+      {
+        "dur" : 0.32,
+        "end" : 364.28,
+        "start" : 363.96
+      },
+      {
+        "dur" : 0.54,
+        "end" : 365.68,
+        "start" : 365.14
+      },
+      {
+        "dur" : 2.16,
+        "end" : 368.4,
+        "start" : 366.24
+      },
+      {
+        "dur" : 0.25,
+        "end" : 369.14,
+        "start" : 368.89
+      },
+      {
+        "dur" : 0.25,
+        "end" : 369.91,
+        "start" : 369.66
+      },
+      {
+        "dur" : 0.33,
+        "end" : 370.47,
+        "start" : 370.14
+      },
+      {
+        "dur" : 0.33,
+        "end" : 371.25,
+        "start" : 370.92
+      },
+      {
+        "dur" : 0.31,
+        "end" : 372.68,
+        "start" : 372.37
+      },
+      {
+        "dur" : 0.26,
+        "end" : 373.47,
+        "start" : 373.21
+      },
+      {
+        "dur" : 0.51,
+        "end" : 374.86,
+        "start" : 374.35
+      },
+      {
+        "dur" : 1.77,
         "end" : 378.6,
-        "start" : 376.87
+        "start" : 376.83
       }
     ],
     "source" : "s8.mp4",
-    "speech_time" : 287.66,
-    "threshold_db" : -40
+    "speech_time" : 213.57,
+    "threshold_db" : -28.8
   },
   "alignment" : {
     "accuracy" : 84.8,
@@ -691,6 +1126,7 @@
       },
       {
         "category" : "properNoun",
+        "confidence" : 0.369,
         "context" : "room in which celia had been locked",
         "end" : 4.92,
         "kind" : "substitute",
@@ -704,6 +1140,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.994,
         "context" : "in it although he had had the",
         "end" : 16.68,
         "kind" : "insert",
@@ -716,6 +1153,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.508,
         "context" : "in it although he had had the",
         "end" : 17.64,
         "kind" : "insert",
@@ -728,6 +1166,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.342,
         "context" : "although he had had the key in",
         "end" : 21.36,
         "kind" : "insert",
@@ -736,10 +1175,11 @@
         "refIndex" : 27,
         "start" : 19.56,
         "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.34 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "extra",
+        "confidence" : 0.455,
         "context" : "although he had had the key in",
         "end" : 21.54,
         "kind" : "insert",
@@ -752,6 +1192,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.22,
         "context" : "he had had the key in his",
         "end" : 22.98,
         "kind" : "insert",
@@ -760,10 +1201,11 @@
         "refIndex" : 28,
         "start" : 21.84,
         "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.22 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "content",
+        "confidence" : 0.359,
         "context" : "extreme and he vowed that he would",
         "end" : 37.5,
         "kind" : "substitute",
@@ -777,6 +1219,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.917,
         "context" : "had helped her escape when they heard",
         "end" : 48.72,
         "kind" : "insert",
@@ -789,6 +1232,7 @@
       },
       {
         "category" : "morph",
+        "confidence" : 0.652,
         "context" : "had helped her escape when they heard",
         "end" : 52.68,
         "kind" : "substitute",
@@ -802,6 +1246,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.501,
         "context" : "they heard prince darling's vow the cruel",
         "end" : 61.56,
         "kind" : "insert",
@@ -814,6 +1259,7 @@
       },
       {
         "category" : "garbled",
+        "confidence" : 0.541,
         "context" : "they heard prince darling's vow the cruel",
         "end" : 62.52,
         "kind" : "substitute",
@@ -827,6 +1273,7 @@
       },
       {
         "category" : "garbled",
+        "confidence" : 0.162,
         "context" : "heard prince darling's vow the cruel advisers",
         "end" : 63.24,
         "kind" : "substitute",
@@ -836,10 +1283,11 @@
         "refIndex" : 64,
         "start" : 62.52,
         "suggest" : "unsure",
-        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.16 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "garbled",
+        "confidence" : 0.665,
         "context" : "darling's vow the cruel advisers his foster-brother",
         "end" : 64.56,
         "kind" : "substitute",
@@ -853,6 +1301,7 @@
       },
       {
         "category" : "garbled",
+        "confidence" : 0.643,
         "context" : "vow the cruel advisers his foster-brother and",
         "end" : 67.32,
         "kind" : "substitute",
@@ -866,6 +1315,7 @@
       },
       {
         "category" : "garbled",
+        "confidence" : 0.286,
         "context" : "three wicked men resolved to aum his",
         "end" : 79.74,
         "kind" : "substitute",
@@ -875,10 +1325,11 @@
         "refIndex" : 75,
         "start" : 75.9,
         "suggest" : "unsure",
-        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "garbled",
+        "confidence" : 0.396,
         "context" : "wicked men resolved to aum his strong",
         "end" : 80.82,
         "kind" : "substitute",
@@ -892,6 +1343,7 @@
       },
       {
         "category" : "garbled",
+        "confidence" : 0.811,
         "context" : "men resolved to aum his strong anger",
         "end" : 81.42,
         "kind" : "substitute",
@@ -915,6 +1367,7 @@
       },
       {
         "category" : "garbled",
+        "confidence" : 0.486,
         "context" : "aum his strong anger at an old",
         "end" : 86.4,
         "kind" : "substitute",
@@ -928,6 +1381,7 @@
       },
       {
         "category" : "garbled",
+        "confidence" : 0.853,
         "context" : "his strong anger at an old nobleman",
         "end" : 87.3,
         "kind" : "substitute",
@@ -951,6 +1405,7 @@
       },
       {
         "category" : "properNoun",
+        "confidence" : 0.692,
         "context" : "an old nobleman suliman who had been",
         "end" : 92.82,
         "kind" : "substitute",
@@ -964,6 +1419,7 @@
       },
       {
         "category" : "content",
+        "confidence" : 0.595,
         "context" : "had been prince darling's childhood tutor he",
         "end" : 95.58,
         "kind" : "substitute",
@@ -977,6 +1433,7 @@
       },
       {
         "category" : "morph",
+        "confidence" : 0.896,
         "context" : "correct prince darling's faults his foster-brother told",
         "end" : 127.68,
         "kind" : "substitute",
@@ -990,6 +1447,7 @@
       },
       {
         "category" : "properNoun",
+        "confidence" : 0.775,
         "context" : "prince darling that suliman the tutor had",
         "end" : 138.48,
         "kind" : "substitute",
@@ -1003,6 +1461,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.278,
         "context" : "of helping celia escape he even paid",
         "end" : 145.32,
         "kind" : "insert",
@@ -1011,10 +1470,11 @@
         "refIndex" : 141,
         "start" : 144.72,
         "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.28 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "extra",
+        "confidence" : 0.12,
         "context" : "even paid some other men to lie",
         "end" : 151.56,
         "kind" : "insert",
@@ -1023,10 +1483,11 @@
         "refIndex" : 146,
         "start" : 150.6,
         "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.12 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "content",
+        "confidence" : 0.386,
         "context" : "even paid some other men to lie",
         "end" : 152.7,
         "kind" : "substitute",
@@ -1040,6 +1501,7 @@
       },
       {
         "category" : "properNoun",
+        "confidence" : 0.167,
         "context" : "they had heard suliman mention this the",
         "end" : 159.78,
         "kind" : "substitute",
@@ -1049,10 +1511,11 @@
         "refIndex" : 156,
         "start" : 158.58,
         "suggest" : "unsure",
-        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑"
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑。识别器对这处只有 0.17 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "properNoun",
+        "confidence" : 0.972,
         "context" : "foster-brother to bring suliman back with a",
         "end" : 174.9,
         "kind" : "substitute",
@@ -1066,6 +1529,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.178,
         "context" : "soldiers they were to chain him up",
         "end" : 185.46,
         "kind" : "insert",
@@ -1074,10 +1538,11 @@
         "refIndex" : 178,
         "start" : 184.56,
         "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.18 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "content",
+        "confidence" : 0.656,
         "context" : "make him stand trial like a criminal",
         "end" : 193.2,
         "kind" : "substitute",
@@ -1091,6 +1556,7 @@
       },
       {
         "category" : "garbled",
+        "confidence" : 0.283,
         "context" : "trial like a criminal things you've become",
         "end" : 196.02,
         "kind" : "substitute",
@@ -1100,10 +1566,11 @@
         "refIndex" : 189,
         "start" : 194.28,
         "suggest" : "unsure",
-        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.28 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "garbled",
+        "confidence" : 0.596,
         "context" : "like a criminal things you've become a",
         "end" : 196.38,
         "kind" : "substitute",
@@ -1117,6 +1584,7 @@
       },
       {
         "category" : "garbled",
+        "confidence" : 0.786,
         "context" : "a criminal things you've become a monster",
         "end" : 199.02,
         "kind" : "substitute",
@@ -1140,6 +1608,7 @@
       },
       {
         "category" : "content",
+        "confidence" : 0.459,
         "context" : "yourself like the lion in your anger",
         "end" : 205.98,
         "kind" : "substitute",
@@ -1153,6 +1622,7 @@
       },
       {
         "category" : "content",
+        "confidence" : 0.319,
         "context" : "wolf in your greediness and like a",
         "end" : 213.78,
         "kind" : "substitute",
@@ -1162,10 +1632,11 @@
         "refIndex" : 211,
         "start" : 213.06,
         "suggest" : "count",
-        "why" : "实词换了词，是这一页真正要练的地方"
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.32 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "extra",
+        "confidence" : 0.445,
         "context" : "father to you your rudeness has made",
         "end" : 226.68,
         "kind" : "insert",
@@ -1178,6 +1649,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.626,
         "context" : "father to you your rudeness has made",
         "end" : 227.94,
         "kind" : "insert",
@@ -1190,6 +1662,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.329,
         "context" : "to you your rudeness has made you",
         "end" : 229.86,
         "kind" : "insert",
@@ -1198,10 +1671,11 @@
         "refIndex" : 231,
         "start" : 228.9,
         "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.33 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "content",
+        "confidence" : 0.118,
         "context" : "to you your rudeness has made you",
         "end" : 232.68,
         "kind" : "substitute",
@@ -1211,10 +1685,11 @@
         "refIndex" : 231,
         "start" : 231,
         "suggest" : "count",
-        "why" : "实词换了词，是这一页真正要练的地方"
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.12 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "garbled",
+        "confidence" : 0.464,
         "context" : "you like a bull theretore in your",
         "end" : 244.14,
         "kind" : "substitute",
@@ -1228,6 +1703,7 @@
       },
       {
         "category" : "garbled",
+        "confidence" : 0.345,
         "context" : "like a bull theretore in your new",
         "end" : 244.8,
         "kind" : "substitute",
@@ -1237,10 +1713,11 @@
         "refIndex" : 238,
         "start" : 244.14,
         "suggest" : "unsure",
-        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.34 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "garbled",
+        "confidence" : 0.43,
         "context" : "a bull theretore in your new form",
         "end" : 247.02,
         "kind" : "substitute",
@@ -1254,6 +1731,7 @@
       },
       {
         "category" : "garbled",
+        "confidence" : 0.399,
         "context" : "theretore in your new form take the",
         "end" : 248.58,
         "kind" : "substitute",
@@ -1267,6 +1745,7 @@
       },
       {
         "category" : "garbled",
+        "confidence" : 0.558,
         "context" : "in your new form take the appearance",
         "end" : 248.82,
         "kind" : "substitute",
@@ -1300,6 +1779,7 @@
       },
       {
         "category" : "garbled",
+        "confidence" : 0.206,
         "context" : "once the prince thought that the best",
         "end" : 259.14,
         "kind" : "substitute",
@@ -1309,10 +1789,11 @@
         "refIndex" : 254,
         "start" : 257.82,
         "suggest" : "unsure",
-        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.21 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "garbled",
+        "confidence" : 0.912,
         "context" : "the prince thought that the best thing",
         "end" : 259.44,
         "kind" : "substitute",
@@ -1336,6 +1817,7 @@
       },
       {
         "category" : "content",
+        "confidence" : 0.688,
         "context" : "from the clear lake as he could",
         "end" : 268.32,
         "kind" : "substitute",
@@ -1349,6 +1831,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.106,
         "context" : "scary reflection anymore thinking of this he",
         "end" : 281.7,
         "kind" : "insert",
@@ -1357,10 +1840,11 @@
         "refIndex" : 286,
         "start" : 280.8,
         "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.11 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "extra",
+        "confidence" : 0.423,
         "context" : "scary reflection anymore thinking of this he",
         "end" : 282.36,
         "kind" : "insert",
@@ -1373,6 +1857,7 @@
       },
       {
         "category" : "properNoun",
+        "confidence" : 0.103,
         "context" : "scary reflection anymore thinking of this he",
         "end" : 282.78,
         "kind" : "substitute",
@@ -1382,10 +1867,11 @@
         "refIndex" : 286,
         "start" : 282.36,
         "suggest" : "unsure",
-        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑"
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑。识别器对这处只有 0.10 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "extra",
+        "confidence" : 0.281,
         "context" : "before he had gotten far he fell",
         "end" : 295.2,
         "kind" : "insert",
@@ -1394,10 +1880,11 @@
         "refIndex" : 300,
         "start" : 293.16,
         "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.28 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "content",
+        "confidence" : 0.197,
         "context" : "before he had gotten far he fell",
         "end" : 295.98,
         "kind" : "substitute",
@@ -1407,10 +1894,11 @@
         "refIndex" : 300,
         "start" : 295.2,
         "suggest" : "count",
-        "why" : "实词换了词，是这一页真正要练的地方"
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.20 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "content",
+        "confidence" : 0.655,
         "context" : "gotten far he fell into a deep",
         "end" : 298.32,
         "kind" : "substitute",
@@ -1424,6 +1912,7 @@
       },
       {
         "category" : "function",
+        "confidence" : 0.788,
         "context" : "the hunters who were hiding in a",
         "end" : 311.46,
         "kind" : "substitute",
@@ -1437,6 +1926,7 @@
       },
       {
         "category" : "function",
+        "confidence" : 0.518,
         "context" : "were hiding in a tree quickly jumped",
         "end" : 312.48,
         "kind" : "substitute",
@@ -1460,6 +1950,7 @@
       },
       {
         "category" : "garbled",
+        "confidence" : 0.989,
         "context" : "down put him in heavy chains and",
         "end" : 315.66,
         "kind" : "substitute",
@@ -1473,6 +1964,7 @@
       },
       {
         "category" : "garbled",
+        "confidence" : 0.422,
         "context" : "him in heavy chains and led him",
         "end" : 316.92,
         "kind" : "substitute",
@@ -1496,6 +1988,7 @@
       },
       {
         "category" : "content",
+        "confidence" : 0.556,
         "context" : "own kingdom our prince who took pleasure",
         "end" : 332.82,
         "kind" : "substitute",
@@ -1509,6 +2002,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.666,
         "context" : "who took pleasure only in",
         "end" : 336.54,
         "kind" : "insert",
@@ -1521,6 +2015,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.827,
         "context" : "who took pleasure only in",
         "end" : 349.5,
         "kind" : "insert",
@@ -1533,6 +2028,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.295,
         "context" : "who took pleasure only in",
         "end" : 349.8,
         "kind" : "insert",
@@ -1541,10 +2037,11 @@
         "refIndex" : 347,
         "start" : 349.5,
         "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "extra",
+        "confidence" : 0.527,
         "context" : "who took pleasure only in",
         "end" : 350.4,
         "kind" : "insert",
@@ -1557,6 +2054,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.767,
         "context" : "who took pleasure only in",
         "end" : 350.7,
         "kind" : "insert",
@@ -1569,6 +2067,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.242,
         "context" : "who took pleasure only in",
         "end" : 351.3,
         "kind" : "insert",
@@ -1577,10 +2076,11 @@
         "refIndex" : 347,
         "start" : 350.7,
         "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.24 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "extra",
+        "confidence" : 0.437,
         "context" : "who took pleasure only in",
         "end" : 352.02,
         "kind" : "insert",
@@ -1593,6 +2093,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.242,
         "context" : "who took pleasure only in",
         "end" : 353.04,
         "kind" : "insert",
@@ -1601,10 +2102,11 @@
         "refIndex" : 347,
         "start" : 352.02,
         "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.24 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "extra",
+        "confidence" : 0.641,
         "context" : "who took pleasure only in",
         "end" : 353.82,
         "kind" : "insert",
@@ -1617,6 +2119,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.393,
         "context" : "who took pleasure only in",
         "end" : 354.54,
         "kind" : "insert",
@@ -1629,6 +2132,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.625,
         "context" : "who took pleasure only in",
         "end" : 356.28,
         "kind" : "insert",
@@ -1641,6 +2145,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.86,
         "context" : "who took pleasure only in",
         "end" : 357.3,
         "kind" : "insert",
@@ -1653,6 +2158,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.836,
         "context" : "who took pleasure only in",
         "end" : 358.02,
         "kind" : "insert",
@@ -1665,6 +2171,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.626,
         "context" : "who took pleasure only in",
         "end" : 362.88,
         "kind" : "insert",
@@ -1677,6 +2184,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.631,
         "context" : "who took pleasure only in",
         "end" : 365.34,
         "kind" : "insert",
@@ -1689,6 +2197,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.705,
         "context" : "who took pleasure only in",
         "end" : 366.24,
         "kind" : "insert",
@@ -1701,6 +2210,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.5,
         "context" : "who took pleasure only in",
         "end" : 368.88,
         "kind" : "insert",
@@ -1713,6 +2223,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.812,
         "context" : "who took pleasure only in",
         "end" : 369.42,
         "kind" : "insert",
@@ -1725,6 +2236,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.126,
         "context" : "who took pleasure only in",
         "end" : 370.56,
         "kind" : "insert",
@@ -1733,10 +2245,11 @@
         "refIndex" : 347,
         "start" : 369.42,
         "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.13 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "extra",
+        "confidence" : 0.13,
         "context" : "who took pleasure only in",
         "end" : 371.22,
         "kind" : "insert",
@@ -1745,10 +2258,11 @@
         "refIndex" : 347,
         "start" : 370.56,
         "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.13 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "extra",
+        "confidence" : 0.294,
         "context" : "who took pleasure only in",
         "end" : 371.46,
         "kind" : "insert",
@@ -1757,10 +2271,11 @@
         "refIndex" : 347,
         "start" : 371.22,
         "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "extra",
+        "confidence" : 0.756,
         "context" : "who took pleasure only in",
         "end" : 372.66,
         "kind" : "insert",
@@ -1773,6 +2288,7 @@
       },
       {
         "category" : "extra",
+        "confidence" : 0.293,
         "context" : "who took pleasure only in",
         "end" : 373.44,
         "kind" : "insert",
@@ -1781,10 +2297,11 @@
         "refIndex" : 347,
         "start" : 372.66,
         "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "extra",
+        "confidence" : 0.431,
         "context" : "who took pleasure only in",
         "end" : 375.54,
         "kind" : "insert",
@@ -1797,6 +2314,7 @@
       },
       {
         "category" : "content",
+        "confidence" : 0.524,
         "context" : "who took pleasure only in",
         "end" : 376.38,
         "kind" : "substitute",
@@ -1810,6 +2328,7 @@
       },
       {
         "category" : "selfFix",
+        "confidence" : 0.812,
         "context" : "took pleasure only in",
         "end" : 376.74,
         "kind" : "substitute",
@@ -2206,1934 +2725,3432 @@
       "words" : 97
     }
   ],
+  "refSuspects" : [
+
+  ],
   "reference" : "However, when he reached the room in which Celia had been locked up, he\nwas astonished to find that she was not in it, although he had had the key in his\nown pocket since he put her in the room. His anger was extreme, and he vowed\nthat he would kill the people whoever had helped her escape.\nWhen they heard Prince Darling's vow, the cruel advisers his foster-brother\nand the three wicked men resolved to aum his strong anger at an old nobleman,\nSuliman, who had been Prince Darling's childhood tutor. He loved the prince\nas if he had been his own son and wished that he would always take the path of\ngoodness. So, sometimes, as a tutor, he would correct Prince Darling's faults.\nHis foster-brother told Prince Darling that Suliman, the tutor, had boasted\nof helping Celia escape. He even paid some other men to lie and say that\nthey had heard Suliman mention this. The prince, in great anger, ordered his\nfoster-brother to bring Suliman back with a troop of soldiers. They were to chain\nhim up and make him stand trial like a criminal.\nthings. You've become a monster,\ncontinued, \"You have made yourself like the lion in your anger, like\nthe wolf in your greediness, and like a snake. You ungratefully turned upon your\ntutor, who was like a second father to you. Your rudeness has made you like a\nbull. Theretore, in your new form, take the appearance of all these animals at\nonce.\"\nThe prince thought that the best thing he could do would be to get as\nfar away from the clear lake as he could, so he wouldn't have to see his scary\nreflection anymore. Thinking of this, he started to run toward the wood. But\nbefore he had gotten far, he fell into a deep pit which was made to trap bears.\nThe hunters, who were hiding in a tree, quickly jumped down, put him in heavy\nchains, and led him back to the main city of his own kingdom.\n\"Our prince, who took pleasure only in",
   "slug" : "super8/L3/p70-72",
   "transcript" : {
+    "alternatives" : [
+      {
+        "end" : 0.9,
+        "start" : 0,
+        "texts" : [
+          "When",
+          "Ever when"
+        ]
+      },
+      {
+        "end" : 2.4,
+        "start" : 0.9,
+        "texts" : [
+          "he reached the"
+        ]
+      },
+      {
+        "end" : 3.9,
+        "start" : 2.4,
+        "texts" : [
+          "room, in",
+          "room in"
+        ]
+      },
+      {
+        "end" : 9.84,
+        "start" : 3.9,
+        "texts" : [
+          "which Syria had been locked up, he was astonished to find"
+        ]
+      },
+      {
+        "end" : 11.64,
+        "start" : 9.84,
+        "texts" : [
+          "that she",
+          "that, she"
+        ]
+      },
+      {
+        "end" : 13.2,
+        "start" : 11.64,
+        "texts" : [
+          "was not in it."
+        ]
+      },
+      {
+        "end" : 21.84,
+        "start" : 13.2,
+        "texts" : [
+          "Although he had, he had the, he had"
+        ]
+      },
+      {
+        "end" : 23.16,
+        "start" : 21.84,
+        "texts" : [
+          "the, the",
+          "the"
+        ]
+      },
+      {
+        "end" : 25.32,
+        "start" : 23.16,
+        "texts" : [
+          "key in his own"
+        ]
+      },
+      {
+        "end" : 27.42,
+        "start" : 25.32,
+        "texts" : [
+          "pocket since",
+          "pocket, since"
+        ]
+      },
+      {
+        "end" : 29.46,
+        "start" : 27.42,
+        "texts" : [
+          "he put her in the"
+        ]
+      },
+      {
+        "end" : 30,
+        "start" : 29.46,
+        "texts" : [
+          "room.",
+          "room,"
+        ]
+      },
+      {
+        "end" : 33,
+        "start" : 30,
+        "texts" : [
+          "His anger was"
+        ]
+      },
+      {
+        "end" : 35.58,
+        "start" : 33,
+        "texts" : [
+          "extreme, and",
+          "extreme. And",
+          "extreme and"
+        ]
+      },
+      {
+        "end" : 38.52,
+        "start" : 35.58,
+        "texts" : [
+          "he bold that",
+          "he bald that",
+          "keyboard that"
+        ]
+      },
+      {
+        "end" : 40.56,
+        "start" : 38.52,
+        "texts" : [
+          "he would kill the people"
+        ]
+      },
+      {
+        "end" : 42.78,
+        "start" : 40.56,
+        "texts" : [
+          "who.",
+          "who..."
+        ]
+      },
+      {
+        "end" : 46.86,
+        "start" : 42.78,
+        "texts" : [
+          "Ever had helped",
+          "ever had helped",
+          "Ever had, helped",
+          "Ever, had helped"
+        ]
+      },
+      {
+        "end" : 47.34,
+        "start" : 46.86,
+        "texts" : [
+          "her"
+        ]
+      },
+      {
+        "end" : 48.78,
+        "start" : 47.34,
+        "texts" : [
+          "escaped.",
+          "escaped?"
+        ]
+      },
+      {
+        "end" : 52.74,
+        "start" : 48.78,
+        "texts" : [
+          "Escaped.",
+          "Escape.",
+          "Escaped?",
+          "escaped.",
+          "Escaped.."
+        ]
+      },
+      {
+        "end" : 62.52,
+        "start" : 52.74,
+        "texts" : [
+          "When they heard Prince Darlings, wow,"
+        ]
+      },
+      {
+        "end" : 63.24,
+        "start" : 62.52,
+        "texts" : [
+          "they,",
+          "this,"
+        ]
+      },
+      {
+        "end" : 64.56,
+        "start" : 63.24,
+        "texts" : [
+          "the cool"
+        ]
+      },
+      {
+        "end" : 67.38,
+        "start" : 64.56,
+        "texts" : [
+          "advisor.",
+          "advisors.",
+          "advisor, there."
+        ]
+      },
+      {
+        "end" : 86.4,
+        "start" : 67.38,
+        "texts" : [
+          "His foster brother, and the 3 wicked men. We solved to his stronger"
+        ]
+      },
+      {
+        "end" : 89.94,
+        "start" : 86.4,
+        "texts" : [
+          "that an",
+          "that, an",
+          "that. An"
+        ]
+      },
+      {
+        "end" : 94.74,
+        "start" : 89.94,
+        "texts" : [
+          "old noble, who had been Prince"
+        ]
+      },
+      {
+        "end" : 96.84,
+        "start" : 94.74,
+        "texts" : [
+          "Darlings childhood",
+          "Darlings, childhood"
+        ]
+      },
+      {
+        "end" : 97.74,
+        "start" : 96.84,
+        "texts" : [
+          "tutor.",
+          "tutor,"
+        ]
+      },
+      {
+        "end" : 101.58,
+        "start" : 97.74,
+        "texts" : [
+          "He loved the"
+        ]
+      },
+      {
+        "end" : 102.66,
+        "start" : 101.58,
+        "texts" : [
+          "prince as",
+          "prince, as"
+        ]
+      },
+      {
+        "end" : 105.84,
+        "start" : 102.66,
+        "texts" : [
+          "if he had been his own"
+        ]
+      },
+      {
+        "end" : 107.7,
+        "start" : 105.84,
+        "texts" : [
+          "son, and",
+          "son and"
+        ]
+      },
+      {
+        "end" : 114.3,
+        "start" : 107.7,
+        "texts" : [
+          "wished that he would always take the path"
+        ]
+      },
+      {
+        "end" : 114.66,
+        "start" : 114.3,
+        "texts" : [
+          "of",
+          "off"
+        ]
+      },
+      {
+        "end" : 115.8,
+        "start" : 114.66,
+        "texts" : [
+          "goodness.",
+          "goodness,"
+        ]
+      },
+      {
+        "end" : 117.1199375,
+        "start" : 115.8,
+        "texts" : [
+          "So.",
+          "So,",
+          "so.",
+          "So",
+          "So?"
+        ]
+      },
+      {
+        "end" : 122.1,
+        "start" : 117.12,
+        "texts" : [
+          "Sometimes, as a tutor,"
+        ]
+      },
+      {
+        "end" : 123.84,
+        "start" : 122.1,
+        "texts" : [
+          "He",
+          "he"
+        ]
+      },
+      {
+        "end" : 124.74,
+        "start" : 123.84,
+        "texts" : [
+          "would"
+        ]
+      },
+      {
+        "end" : 126.36,
+        "start" : 124.74,
+        "texts" : [
+          "correct Prince",
+          "correct, Prince",
+          "crack, Prince"
+        ]
+      },
+      {
+        "end" : 127.32,
+        "start" : 126.36,
+        "texts" : [
+          "Darling's"
+        ]
+      },
+      {
+        "end" : 127.8,
+        "start" : 127.32,
+        "texts" : [
+          "fault.",
+          "fault,"
+        ]
+      },
+      {
+        "end" : 132.66,
+        "start" : 127.8,
+        "texts" : [
+          "His foster brother"
+        ]
+      },
+      {
+        "end" : 135.24,
+        "start" : 132.66,
+        "texts" : [
+          "told, Prince",
+          "told Prince"
+        ]
+      },
+      {
+        "end" : 136.86,
+        "start" : 135.24,
+        "texts" : [
+          "darling, that",
+          "Darling that",
+          "Darling, that"
+        ]
+      },
+      {
+        "end" : 139.62,
+        "start" : 136.86,
+        "texts" : [
+          "Solomon, the tutor, had"
+        ]
+      },
+      {
+        "end" : 142.5,
+        "start" : 139.62,
+        "texts" : [
+          "boasted, of",
+          "boasted of"
+        ]
+      },
+      {
+        "end" : 143.34,
+        "start" : 142.5,
+        "texts" : [
+          "helping"
+        ]
+      },
+      {
+        "end" : 145.32,
+        "start" : 143.34,
+        "texts" : [
+          "Celia, uh,",
+          "Celia,"
+        ]
+      },
+      {
+        "end" : 146.5799375,
+        "start" : 145.32,
+        "texts" : [
+          "escape.",
+          "escape,"
+        ]
+      },
+      {
+        "end" : 148.44,
+        "start" : 146.58,
+        "texts" : [
+          "He even"
+        ]
+      },
+      {
+        "end" : 151.56,
+        "start" : 148.44,
+        "texts" : [
+          "paid some uh,",
+          "paid, some, uh,"
+        ]
+      },
+      {
+        "end" : 154.2,
+        "start" : 151.56,
+        "texts" : [
+          "their men to"
+        ]
+      },
+      {
+        "end" : 155.46,
+        "start" : 154.2,
+        "texts" : [
+          "lie and",
+          "lie, and"
+        ]
+      },
+      {
+        "end" : 158.58,
+        "start" : 155.46,
+        "texts" : [
+          "say that they had heard"
+        ]
+      },
+      {
+        "end" : 162,
+        "start" : 158.58,
+        "texts" : [
+          "Solomon, mention this.",
+          "Solomon."
+        ]
+      },
+      {
+        "end" : 166.02,
+        "start" : 162,
+        "texts" : [
+          "The",
+          "The, The",
+          "The, the"
+        ]
+      },
+      {
+        "end" : 167.82,
+        "start" : 166.02,
+        "texts" : [
+          "prince in",
+          "prince, in"
+        ]
+      },
+      {
+        "end" : 168.24,
+        "start" : 167.82,
+        "texts" : [
+          "great"
+        ]
+      },
+      {
+        "end" : 169.8,
+        "start" : 168.24,
+        "texts" : [
+          "anger ordered",
+          "anger, ordered"
+        ]
+      },
+      {
+        "end" : 173.58,
+        "start" : 169.8,
+        "texts" : [
+          "his foster brother to bring"
+        ]
+      },
+      {
+        "end" : 176.52,
+        "start" : 173.58,
+        "texts" : [
+          "Solomon back.",
+          "Solomon."
+        ]
+      },
+      {
+        "end" : 178.32,
+        "start" : 176.52,
+        "texts" : [
+          "With",
+          "with"
+        ]
+      },
+      {
+        "end" : 178.98,
+        "start" : 178.32,
+        "texts" : [
+          "a"
+        ]
+      },
+      {
+        "end" : 180.6,
+        "start" : 178.98,
+        "texts" : [
+          "troop of",
+          "Troop of",
+          "troupe of"
+        ]
+      },
+      {
+        "end" : 182.1,
+        "start" : 180.6,
+        "texts" : [
+          "soldiers.",
+          "soldiers,"
+        ]
+      },
+      {
+        "end" : 185.64,
+        "start" : 182.1,
+        "texts" : [
+          "They were, uh, to"
+        ]
+      },
+      {
+        "end" : 186.9,
+        "start" : 185.64,
+        "texts" : [
+          "chain him",
+          "change him"
+        ]
+      },
+      {
+        "end" : 189.66,
+        "start" : 186.9,
+        "texts" : [
+          "up, and",
+          "up. And"
+        ]
+      },
+      {
+        "end" : 193.8,
+        "start" : 189.66,
+        "texts" : [
+          "make him stand true like"
+        ]
+      },
+      {
+        "end" : 196.0799375,
+        "start" : 193.8,
+        "texts" : [
+          "a creamy.",
+          "a.",
+          "a cream."
+        ]
+      },
+      {
+        "end" : 196.5,
+        "start" : 196.08,
+        "texts" : [
+          "No.",
+          "no.",
+          "Now.",
+          "No. no.",
+          "No, no,"
+        ]
+      },
+      {
+        "end" : 199.8,
+        "start" : 196.5,
+        "texts" : [
+          "You become",
+          "You've become"
+        ]
+      },
+      {
+        "end" : 205.32,
+        "start" : 199.8,
+        "texts" : [
+          "a monster, you have made yourself like the"
+        ]
+      },
+      {
+        "end" : 207.42,
+        "start" : 205.32,
+        "texts" : [
+          "lying in",
+          "line in"
+        ]
+      },
+      {
+        "end" : 207.78,
+        "start" : 207.42,
+        "texts" : [
+          "your"
+        ]
+      },
+      {
+        "end" : 208.98,
+        "start" : 207.78,
+        "texts" : [
+          "anger like.",
+          "anger, like."
+        ]
+      },
+      {
+        "end" : 211.32,
+        "start" : 208.98,
+        "texts" : [
+          "The"
+        ]
+      },
+      {
+        "end" : 212.82,
+        "start" : 211.32,
+        "texts" : [
+          "wolf in",
+          "wall in"
+        ]
+      },
+      {
+        "end" : 213.06,
+        "start" : 212.82,
+        "texts" : [
+          "your"
+        ]
+      },
+      {
+        "end" : 214.32,
+        "start" : 213.06,
+        "texts" : [
+          "witness and",
+          "business and"
+        ]
+      },
+      {
+        "end" : 226.68,
+        "start" : 214.32,
+        "texts" : [
+          "like a snake, you ungratefully turned upon your tutor who was like a 2nd father to you, your"
+        ]
+      },
+      {
+        "end" : 228,
+        "start" : 226.68,
+        "texts" : [
+          "goodness.",
+          "goodness,"
+        ]
+      },
+      {
+        "end" : 228.9,
+        "start" : 228,
+        "texts" : [
+          "Your"
+        ]
+      },
+      {
+        "end" : 231,
+        "start" : 228.9,
+        "texts" : [
+          "roses.",
+          "rules.",
+          "loses.",
+          "roses?",
+          "roses,"
+        ]
+      },
+      {
+        "end" : 232.68,
+        "start" : 231,
+        "texts" : [
+          "Had,"
+        ]
+      },
+      {
+        "end" : 234.3,
+        "start" : 232.68,
+        "texts" : [
+          "has made",
+          "has, made",
+          "had, made"
+        ]
+      },
+      {
+        "end" : 235.26,
+        "start" : 234.3,
+        "texts" : [
+          "you like"
+        ]
+      },
+      {
+        "end" : 238.5,
+        "start" : 235.26,
+        "texts" : [
+          "a.",
+          "a,"
+        ]
+      },
+      {
+        "end" : 247.02,
+        "start" : 238.5,
+        "texts" : [
+          "They're from, therefore,"
+        ]
+      },
+      {
+        "end" : 247.8,
+        "start" : 247.02,
+        "texts" : [
+          "your,",
+          "you,"
+        ]
+      },
+      {
+        "end" : 249.9,
+        "start" : 247.8,
+        "texts" : [
+          "you're from take",
+          "your, take",
+          "you're from, take"
+        ]
+      },
+      {
+        "end" : 254.8799375,
+        "start" : 249.9,
+        "texts" : [
+          "the appearance of these animals at once."
+        ]
+      },
+      {
+        "end" : 280.8,
+        "start" : 254.88,
+        "texts" : [
+          "The princess, that's the best thing he could do would be to get as far from the, clear like as he could. So he wouldn't have to see his scary reflection anymore,"
+        ]
+      },
+      {
+        "end" : 281.7,
+        "start" : 280.8,
+        "texts" : [
+          "thing,",
+          "think,",
+          "sing,"
+        ]
+      },
+      {
+        "end" : 283.14,
+        "start" : 281.7,
+        "texts" : [
+          "king of.",
+          "king."
+        ]
+      },
+      {
+        "end" : 283.74,
+        "start" : 283.14,
+        "texts" : [
+          "Of",
+          "of"
+        ]
+      },
+      {
+        "end" : 284.88,
+        "start" : 283.74,
+        "texts" : [
+          "this, he",
+          "this he"
+        ]
+      },
+      {
+        "end" : 287.16,
+        "start" : 284.88,
+        "texts" : [
+          "started to run"
+        ]
+      },
+      {
+        "end" : 288.24,
+        "start" : 287.16,
+        "texts" : [
+          "toward",
+          "towards"
+        ]
+      },
+      {
+        "end" : 289.38,
+        "start" : 288.24,
+        "texts" : [
+          "the wood."
+        ]
+      },
+      {
+        "end" : 293.16,
+        "start" : 289.38,
+        "texts" : [
+          "But before he had,"
+        ]
+      },
+      {
+        "end" : 295.2,
+        "start" : 293.16,
+        "texts" : [
+          "go,",
+          "Go,"
+        ]
+      },
+      {
+        "end" : 297.3,
+        "start" : 295.2,
+        "texts" : [
+          "then far,",
+          "then, far,"
+        ]
+      },
+      {
+        "end" : 297.78,
+        "start" : 297.3,
+        "texts" : [
+          "he"
+        ]
+      },
+      {
+        "end" : 298.32,
+        "start" : 297.78,
+        "texts" : [
+          "felt",
+          "fell"
+        ]
+      },
+      {
+        "end" : 300.9,
+        "start" : 298.32,
+        "texts" : [
+          "into a deep"
+        ]
+      },
+      {
+        "end" : 301.98,
+        "start" : 300.9,
+        "texts" : [
+          "pit,",
+          "peed,"
+        ]
+      },
+      {
+        "end" : 302.7,
+        "start" : 301.98,
+        "texts" : [
+          "which,"
+        ]
+      },
+      {
+        "end" : 304.98,
+        "start" : 302.7,
+        "texts" : [
+          "was",
+          "Was"
+        ]
+      },
+      {
+        "end" : 309.12,
+        "start" : 304.98,
+        "texts" : [
+          "made to trap bears, the hunters."
+        ]
+      },
+      {
+        "end" : 312.48,
+        "start" : 309.12,
+        "texts" : [
+          "Who are hiding in the"
+        ]
+      },
+      {
+        "end" : 313.32,
+        "start" : 312.48,
+        "texts" : [
+          "tree quickly",
+          "tree, quickly"
+        ]
+      },
+      {
+        "end" : 315,
+        "start" : 313.32,
+        "texts" : [
+          "jumped down,"
+        ]
+      },
+      {
+        "end" : 315.66,
+        "start" : 315,
+        "texts" : [
+          "put the",
+          "puts the"
+        ]
+      },
+      {
+        "end" : 315.9,
+        "start" : 315.66,
+        "texts" : [
+          "heavy"
+        ]
+      },
+      {
+        "end" : 317.76,
+        "start" : 315.9,
+        "texts" : [
+          "trees, and",
+          "trees and"
+        ]
+      },
+      {
+        "end" : 319.44,
+        "start" : 317.76,
+        "texts" : [
+          "led him to"
+        ]
+      },
+      {
+        "end" : 322.08,
+        "start" : 319.44,
+        "texts" : [
+          "the main",
+          "the. Main"
+        ]
+      },
+      {
+        "end" : 323.04,
+        "start" : 322.08,
+        "texts" : [
+          "city."
+        ]
+      },
+      {
+        "end" : 326.58,
+        "start" : 323.04,
+        "texts" : [
+          "Of",
+          "of",
+          "Oh"
+        ]
+      },
+      {
+        "end" : 327.24,
+        "start" : 326.58,
+        "texts" : [
+          "his own"
+        ]
+      },
+      {
+        "end" : 328.14,
+        "start" : 327.24,
+        "texts" : [
+          "kingdom.",
+          "kingdom,"
+        ]
+      },
+      {
+        "end" : 332.34,
+        "start" : 328.14,
+        "texts" : [
+          "Our",
+          "Or"
+        ]
+      },
+      {
+        "end" : 333.84,
+        "start" : 332.34,
+        "texts" : [
+          "friends who",
+          "friends, who"
+        ]
+      },
+      {
+        "end" : 334.26,
+        "start" : 333.84,
+        "texts" : [
+          "took"
+        ]
+      },
+      {
+        "end" : 336.5999375,
+        "start" : 334.26,
+        "texts" : [
+          "pleasure in.",
+          "pleasure.",
+          "pleasure, in"
+        ]
+      },
+      {
+        "end" : 349.5,
+        "start" : 348.6,
+        "texts" : [
+          "Just"
+        ]
+      },
+      {
+        "end" : 349.8,
+        "start" : 349.5,
+        "texts" : [
+          "a",
+          "the"
+        ]
+      },
+      {
+        "end" : 350.7,
+        "start" : 349.8,
+        "texts" : [
+          "wicked, the"
+        ]
+      },
+      {
+        "end" : 352.02,
+        "start" : 350.7,
+        "texts" : [
+          "best, prick,",
+          "best prick,"
+        ]
+      },
+      {
+        "end" : 353.04,
+        "start" : 352.02,
+        "texts" : [
+          "crows,",
+          "cross,"
+        ]
+      },
+      {
+        "end" : 358.08,
+        "start" : 353.04,
+        "texts" : [
+          "habit, come, companion, please live."
+        ]
+      },
+      {
+        "end" : 362.94,
+        "start" : 358.08,
+        "texts" : [
+          "Tutor.",
+          "Tutor,",
+          "Tutor?",
+          "Tutor"
+        ]
+      },
+      {
+        "end" : 365.34,
+        "start" : 362.94,
+        "texts" : [
+          "Greatness,",
+          "Goodness,"
+        ]
+      },
+      {
+        "end" : 366.36,
+        "start" : 365.34,
+        "texts" : [
+          "greediness.",
+          "greetiness.",
+          "greediness,",
+          "Greediness."
+        ]
+      },
+      {
+        "end" : 371.22,
+        "start" : 366.36,
+        "texts" : [
+          "I'm gratefully paid, thrown,"
+        ]
+      },
+      {
+        "end" : 372.66,
+        "start" : 371.22,
+        "texts" : [
+          "and rewarded,",
+          "I'm rewarded,"
+        ]
+      },
+      {
+        "end" : 375.54,
+        "start" : 372.66,
+        "texts" : [
+          "brook, starve,"
+        ]
+      },
+      {
+        "end" : 376.8,
+        "start" : 375.54,
+        "texts" : [
+          "desert, hermit.",
+          "desert hermit.",
+          "desert, the hermit."
+        ]
+      }
+    ],
     "contextPrimed" : true,
     "locale" : "en-US",
     "runs" : [
       {
+        "confidence" : 0.135,
         "end" : 0.9,
         "start" : 0,
         "text" : "When"
       },
       {
+        "confidence" : 0.909,
         "end" : 1.44,
         "start" : 0.9,
         "text" : " he"
       },
       {
+        "confidence" : 0.986,
         "end" : 2.04,
         "start" : 1.44,
         "text" : " reached"
       },
       {
+        "confidence" : 0.982,
         "end" : 2.4,
         "start" : 2.04,
         "text" : " the"
       },
       {
+        "confidence" : 0.631,
         "end" : 3.18,
         "start" : 2.4,
         "text" : " room,"
       },
       {
+        "confidence" : 0.961,
         "end" : 3.9,
         "start" : 3.18,
         "text" : " in"
       },
       {
+        "confidence" : 0.983,
         "end" : 4.08,
         "start" : 3.9,
         "text" : " which"
       },
       {
+        "confidence" : 0.369,
         "end" : 4.92,
         "start" : 4.08,
         "text" : " Syria"
       },
       {
+        "confidence" : 0.984,
         "end" : 5.22,
         "start" : 4.92,
         "text" : " had"
       },
       {
+        "confidence" : 0.996,
         "end" : 5.46,
         "start" : 5.22,
         "text" : " been"
       },
       {
+        "confidence" : 0.939,
         "end" : 5.88,
         "start" : 5.46,
         "text" : " locked"
       },
       {
+        "confidence" : 0.707,
         "end" : 6.42,
         "start" : 5.88,
         "text" : " up,"
       },
       {
+        "confidence" : 0.617,
         "end" : 6.9,
         "start" : 6.42,
         "text" : " he"
       },
       {
+        "confidence" : 0.986,
         "end" : 7.32,
         "start" : 6.9,
         "text" : " was"
       },
       {
+        "confidence" : 0.994,
         "end" : 8.76,
         "start" : 7.32,
         "text" : " astonished"
       },
       {
+        "confidence" : 0.971,
         "end" : 9.42,
         "start" : 8.76,
         "text" : " to"
       },
       {
+        "confidence" : 0.998,
         "end" : 9.84,
         "start" : 9.42,
         "text" : " find"
       },
       {
+        "confidence" : 0.995,
         "end" : 10.44,
         "start" : 9.84,
         "text" : " that"
       },
       {
+        "confidence" : 0.807,
         "end" : 11.64,
         "start" : 10.44,
         "text" : " she"
       },
       {
+        "confidence" : 0.996,
         "end" : 11.88,
         "start" : 11.64,
         "text" : " was"
       },
       {
+        "confidence" : 0.998,
         "end" : 12.12,
         "start" : 11.88,
         "text" : " not"
       },
       {
+        "confidence" : 0.963,
         "end" : 12.36,
         "start" : 12.12,
         "text" : " in"
       },
       {
+        "confidence" : 0.817,
         "end" : 12.96,
         "start" : 12.36,
         "text" : " it."
       },
       {
+        "confidence" : 0.784,
         "end" : 16.14,
         "start" : 13.2,
         "text" : " Although"
       },
       {
+        "confidence" : 0.994,
         "end" : 16.68,
         "start" : 16.14,
         "text" : " he"
       },
       {
+        "confidence" : 0.508,
         "end" : 17.64,
         "start" : 16.68,
         "text" : " had,"
       },
       {
+        "confidence" : 0.663,
         "end" : 19.26,
         "start" : 17.64,
         "text" : " he"
       },
       {
+        "confidence" : 0.782,
         "end" : 19.56,
         "start" : 19.26,
         "text" : " had"
       },
       {
+        "confidence" : 0.342,
         "end" : 21.36,
         "start" : 19.56,
         "text" : " the,"
       },
       {
+        "confidence" : 0.455,
         "end" : 21.54,
         "start" : 21.36,
         "text" : " he"
       },
       {
+        "confidence" : 0.94,
         "end" : 21.84,
         "start" : 21.54,
         "text" : " had"
       },
       {
+        "confidence" : 0.22,
         "end" : 22.98,
         "start" : 21.84,
         "text" : " the,"
       },
       {
+        "confidence" : 0.699,
         "end" : 23.16,
         "start" : 22.98,
         "text" : " the"
       },
       {
+        "confidence" : 0.993,
         "end" : 23.52,
         "start" : 23.16,
         "text" : " key"
       },
       {
+        "confidence" : 0.993,
         "end" : 24.06,
         "start" : 23.52,
         "text" : " in"
       },
       {
+        "confidence" : 0.99,
         "end" : 24.36,
         "start" : 24.06,
         "text" : " his"
       },
       {
+        "confidence" : 0.917,
         "end" : 25.32,
         "start" : 24.36,
         "text" : " own"
       },
       {
+        "confidence" : 0.726,
         "end" : 26.22,
         "start" : 25.32,
         "text" : " pocket"
       },
       {
+        "confidence" : 0.623,
         "end" : 27.42,
         "start" : 26.22,
         "text" : " since"
       },
       {
+        "confidence" : 0.935,
         "end" : 27.9,
         "start" : 27.42,
         "text" : " he"
       },
       {
+        "confidence" : 0.991,
         "end" : 28.32,
         "start" : 27.9,
         "text" : " put"
       },
       {
+        "confidence" : 0.973,
         "end" : 28.92,
         "start" : 28.32,
         "text" : " her"
       },
       {
+        "confidence" : 0.995,
         "end" : 29.28,
         "start" : 28.92,
         "text" : " in"
       },
       {
+        "confidence" : 0.996,
         "end" : 29.46,
         "start" : 29.28,
         "text" : " the"
       },
       {
+        "confidence" : 0.653,
         "end" : 29.94,
         "start" : 29.46,
         "text" : " room."
       },
       {
+        "confidence" : 0.431,
         "end" : 31.14,
         "start" : 30,
         "text" : " His"
       },
       {
+        "confidence" : 0.976,
         "end" : 32.22,
         "start" : 31.14,
         "text" : " anger"
       },
       {
+        "confidence" : 0.977,
         "end" : 33,
         "start" : 32.22,
         "text" : " was"
       },
       {
+        "confidence" : 0.669,
         "end" : 34.68,
         "start" : 33,
         "text" : " extreme,"
       },
       {
+        "confidence" : 0.686,
         "end" : 35.58,
         "start" : 34.68,
         "text" : " and"
       },
       {
+        "confidence" : 0.272,
         "end" : 36.42,
         "start" : 35.58,
         "text" : " he"
       },
       {
+        "confidence" : 0.359,
         "end" : 37.5,
         "start" : 36.42,
         "text" : " bold"
       },
       {
+        "confidence" : 0.971,
         "end" : 38.52,
         "start" : 37.5,
         "text" : " that"
       },
       {
+        "confidence" : 0.819,
         "end" : 39,
         "start" : 38.52,
         "text" : " he"
       },
       {
+        "confidence" : 0.951,
         "end" : 39.42,
         "start" : 39,
         "text" : " would"
       },
       {
+        "confidence" : 0.978,
         "end" : 39.9,
         "start" : 39.42,
         "text" : " kill"
       },
       {
+        "confidence" : 0.953,
         "end" : 40.38,
         "start" : 39.9,
         "text" : " the"
       },
       {
+        "confidence" : 0.998,
         "end" : 40.56,
         "start" : 40.38,
         "text" : " people"
       },
       {
+        "confidence" : 0.534,
         "end" : 42.66,
         "start" : 40.56,
         "text" : " who."
       },
       {
+        "confidence" : 0.186,
         "end" : 44.76,
         "start" : 42.78,
         "text" : " Ever"
       },
       {
+        "confidence" : 0.978,
         "end" : 45.42,
         "start" : 44.76,
         "text" : " had"
       },
       {
+        "confidence" : 0.678,
         "end" : 46.86,
         "start" : 45.42,
         "text" : " helped"
       },
       {
+        "confidence" : 0.963,
         "end" : 47.34,
         "start" : 46.86,
         "text" : " her"
       },
       {
+        "confidence" : 0.917,
         "end" : 48.72,
         "start" : 47.34,
         "text" : " escaped."
       },
       {
+        "confidence" : 0.652,
         "end" : 52.68,
         "start" : 48.78,
         "text" : " Escaped."
       },
       {
+        "confidence" : 0.9,
         "end" : 58.44,
         "start" : 52.74,
         "text" : " When"
       },
       {
+        "confidence" : 0.945,
         "end" : 58.86,
         "start" : 58.44,
         "text" : " they"
       },
       {
+        "confidence" : 0.759,
         "end" : 59.34,
         "start" : 58.86,
         "text" : " heard"
       },
       {
+        "confidence" : 0.907,
         "end" : 60.36,
         "start" : 59.34,
         "text" : " Prince"
       },
       {
+        "confidence" : 0.501,
         "end" : 61.56,
         "start" : 60.36,
         "text" : " Darlings,"
       },
       {
+        "confidence" : 0.541,
         "end" : 62.52,
         "start" : 61.56,
         "text" : " wow,"
       },
       {
+        "confidence" : 0.162,
         "end" : 63.24,
         "start" : 62.52,
         "text" : " they,"
       },
       {
+        "confidence" : 0.562,
         "end" : 64.2,
         "start" : 63.24,
         "text" : " the"
       },
       {
+        "confidence" : 0.665,
         "end" : 64.56,
         "start" : 64.2,
         "text" : " cool"
       },
       {
+        "confidence" : 0.643,
         "end" : 67.32,
         "start" : 64.56,
         "text" : " advisor."
       },
       {
+        "confidence" : 0.683,
         "end" : 69.66,
         "start" : 67.38,
         "text" : " His"
       },
       {
+        "confidence" : 0.723,
         "end" : 71.58,
         "start" : 69.66,
         "text" : " foster"
       },
       {
+        "confidence" : 0.485,
         "end" : 73.08,
         "start" : 71.58,
         "text" : " brother,"
       },
       {
+        "confidence" : 0.983,
         "end" : 73.14,
         "start" : 73.08,
         "text" : " and"
       },
       {
+        "confidence" : 0.915,
         "end" : 73.98,
         "start" : 73.14,
         "text" : " the"
       },
       {
+        "confidence" : 0.975,
         "end" : 74.4,
         "start" : 73.98,
         "text" : " 3"
       },
       {
+        "confidence" : 0.768,
         "end" : 75.24,
         "start" : 74.4,
         "text" : " wicked"
       },
       {
+        "confidence" : 0.322,
         "end" : 75.9,
         "start" : 75.24,
         "text" : " men."
       },
       {
+        "confidence" : 0.286,
         "end" : 79.74,
         "start" : 75.9,
         "text" : " We"
       },
       {
+        "confidence" : 0.396,
         "end" : 80.82,
         "start" : 79.74,
         "text" : " solved"
       },
       {
+        "confidence" : 0.811,
         "end" : 81.42,
         "start" : 80.82,
         "text" : " to"
       },
       {
+        "confidence" : 0.718,
         "end" : 84.54,
         "start" : 81.42,
         "text" : " his"
       },
       {
+        "confidence" : 0.486,
         "end" : 86.4,
         "start" : 84.54,
         "text" : " stronger"
       },
       {
+        "confidence" : 0.853,
         "end" : 87.3,
         "start" : 86.4,
         "text" : " that"
       },
       {
+        "confidence" : 0.372,
         "end" : 89.94,
         "start" : 87.3,
         "text" : " an"
       },
       {
+        "confidence" : 0.903,
         "end" : 90.42,
         "start" : 89.94,
         "text" : " old"
       },
       {
+        "confidence" : 0.692,
         "end" : 92.82,
         "start" : 90.42,
         "text" : " noble,"
       },
       {
+        "confidence" : 0.975,
         "end" : 93.12,
         "start" : 92.82,
         "text" : " who"
       },
       {
+        "confidence" : 0.877,
         "end" : 93.48,
         "start" : 93.12,
         "text" : " had"
       },
       {
+        "confidence" : 0.975,
         "end" : 93.9,
         "start" : 93.48,
         "text" : " been"
       },
       {
+        "confidence" : 0.628,
         "end" : 94.74,
         "start" : 93.9,
         "text" : " Prince"
       },
       {
+        "confidence" : 0.595,
         "end" : 95.58,
         "start" : 94.74,
         "text" : " Darlings"
       },
       {
+        "confidence" : 0.924,
         "end" : 96.84,
         "start" : 95.58,
         "text" : " childhood"
       },
       {
+        "confidence" : 0.682,
         "end" : 97.68,
         "start" : 96.84,
         "text" : " tutor."
       },
       {
+        "confidence" : 0.963,
         "end" : 100.62,
         "start" : 97.74,
         "text" : " He"
       },
       {
+        "confidence" : 0.866,
         "end" : 101.16,
         "start" : 100.62,
         "text" : " loved"
       },
       {
+        "confidence" : 0.99,
         "end" : 101.58,
         "start" : 101.16,
         "text" : " the"
       },
       {
+        "confidence" : 0.866,
         "end" : 102.18,
         "start" : 101.58,
         "text" : " prince"
       },
       {
+        "confidence" : 0.947,
         "end" : 102.66,
         "start" : 102.18,
         "text" : " as"
       },
       {
+        "confidence" : 0.977,
         "end" : 103.08,
         "start" : 102.66,
         "text" : " if"
       },
       {
+        "confidence" : 0.966,
         "end" : 103.8,
         "start" : 103.08,
         "text" : " he"
       },
       {
+        "confidence" : 0.977,
         "end" : 104.16,
         "start" : 103.8,
         "text" : " had"
       },
       {
+        "confidence" : 0.713,
         "end" : 105,
         "start" : 104.16,
         "text" : " been"
       },
       {
+        "confidence" : 0.993,
         "end" : 105.42,
         "start" : 105,
         "text" : " his"
       },
       {
+        "confidence" : 0.993,
         "end" : 105.84,
         "start" : 105.42,
         "text" : " own"
       },
       {
+        "confidence" : 0.358,
         "end" : 106.86,
         "start" : 105.84,
         "text" : " son,"
       },
       {
+        "confidence" : 0.876,
         "end" : 107.7,
         "start" : 106.86,
         "text" : " and"
       },
       {
+        "confidence" : 0.976,
         "end" : 108.48,
         "start" : 107.7,
         "text" : " wished"
       },
       {
+        "confidence" : 0.997,
         "end" : 108.96,
         "start" : 108.48,
         "text" : " that"
       },
       {
+        "confidence" : 0.978,
         "end" : 109.74,
         "start" : 108.96,
         "text" : " he"
       },
       {
+        "confidence" : 0.937,
         "end" : 110.4,
         "start" : 109.74,
         "text" : " would"
       },
       {
+        "confidence" : 0.955,
         "end" : 111.54,
         "start" : 110.4,
         "text" : " always"
       },
       {
+        "confidence" : 0.983,
         "end" : 112.02,
         "start" : 111.54,
         "text" : " take"
       },
       {
+        "confidence" : 0.791,
         "end" : 113.22,
         "start" : 112.02,
         "text" : " the"
       },
       {
+        "confidence" : 0.803,
         "end" : 114.3,
         "start" : 113.22,
         "text" : " path"
       },
       {
+        "confidence" : 0.586,
         "end" : 114.66,
         "start" : 114.3,
         "text" : " of"
       },
       {
+        "confidence" : 0.723,
         "end" : 115.74,
         "start" : 114.66,
         "text" : " goodness."
       },
       {
+        "confidence" : 0.474,
         "end" : 117,
         "start" : 115.8,
         "text" : " So."
       },
       {
+        "confidence" : 0.67,
         "end" : 119.82,
         "start" : 117.12,
         "text" : " Sometimes,"
       },
       {
+        "confidence" : 0.802,
         "end" : 120.66,
         "start" : 119.82,
         "text" : " as"
       },
       {
+        "confidence" : 0.942,
         "end" : 121.02,
         "start" : 120.66,
         "text" : " a"
       },
       {
+        "confidence" : 0.688,
         "end" : 122.1,
         "start" : 121.02,
         "text" : " tutor,"
       },
       {
+        "confidence" : 0.656,
         "end" : 123.84,
         "start" : 122.1,
         "text" : " He"
       },
       {
+        "confidence" : 0.944,
         "end" : 124.74,
         "start" : 123.84,
         "text" : " would"
       },
       {
+        "confidence" : 0.703,
         "end" : 125.4,
         "start" : 124.74,
         "text" : " correct"
       },
       {
+        "confidence" : 0.024,
         "end" : 126.36,
         "start" : 125.4,
         "text" : " Prince"
       },
       {
+        "confidence" : 0.681,
         "end" : 127.32,
         "start" : 126.36,
         "text" : " Darling's"
       },
       {
+        "confidence" : 0.896,
         "end" : 127.68,
         "start" : 127.32,
         "text" : " fault."
       },
       {
+        "confidence" : 0.866,
         "end" : 131.04,
         "start" : 127.8,
         "text" : " His"
       },
       {
+        "confidence" : 0.942,
         "end" : 132.06,
         "start" : 131.04,
         "text" : " foster"
       },
       {
+        "confidence" : 0.946,
         "end" : 132.66,
         "start" : 132.06,
         "text" : " brother"
       },
       {
+        "confidence" : 0.134,
         "end" : 133.8,
         "start" : 132.66,
         "text" : " told,"
       },
       {
+        "confidence" : 0.897,
         "end" : 135.24,
         "start" : 133.8,
         "text" : " Prince"
       },
       {
+        "confidence" : 0.181,
         "end" : 136.38,
         "start" : 135.24,
         "text" : " darling,"
       },
       {
+        "confidence" : 0.896,
         "end" : 136.86,
         "start" : 136.38,
         "text" : " that"
       },
       {
+        "confidence" : 0.775,
         "end" : 138.48,
         "start" : 136.86,
         "text" : " Solomon,"
       },
       {
+        "confidence" : 0.994,
         "end" : 138.6,
         "start" : 138.48,
         "text" : " the"
       },
       {
+        "confidence" : 0.676,
         "end" : 139.5,
         "start" : 138.6,
         "text" : " tutor,"
       },
       {
+        "confidence" : 0.934,
         "end" : 139.62,
         "start" : 139.5,
         "text" : " had"
       },
       {
+        "confidence" : 0.598,
         "end" : 141.24,
         "start" : 139.62,
         "text" : " boasted,"
       },
       {
+        "confidence" : 0.645,
         "end" : 142.5,
         "start" : 141.24,
         "text" : " of"
       },
       {
+        "confidence" : 0.92,
         "end" : 143.34,
         "start" : 142.5,
         "text" : " helping"
       },
       {
+        "confidence" : 0.569,
         "end" : 144.72,
         "start" : 143.34,
         "text" : " Celia,"
       },
       {
+        "confidence" : 0.278,
         "end" : 145.32,
         "start" : 144.72,
         "text" : " uh,"
       },
       {
+        "confidence" : 0.821,
         "end" : 146.52,
         "start" : 145.32,
         "text" : " escape."
       },
       {
+        "confidence" : 0.697,
         "end" : 148.02,
         "start" : 146.58,
         "text" : " He"
       },
       {
+        "confidence" : 0.99,
         "end" : 148.44,
         "start" : 148.02,
         "text" : " even"
       },
       {
+        "confidence" : 0.82,
         "end" : 149.04,
         "start" : 148.44,
         "text" : " paid"
       },
       {
+        "confidence" : 0.737,
         "end" : 150.6,
         "start" : 149.04,
         "text" : " some"
       },
       {
+        "confidence" : 0.12,
         "end" : 151.56,
         "start" : 150.6,
         "text" : " uh,"
       },
       {
+        "confidence" : 0.386,
         "end" : 152.7,
         "start" : 151.56,
         "text" : " their"
       },
       {
+        "confidence" : 0.163,
         "end" : 153.72,
         "start" : 152.7,
         "text" : " men"
       },
       {
+        "confidence" : 0.951,
         "end" : 154.2,
         "start" : 153.72,
         "text" : " to"
       },
       {
+        "confidence" : 0.892,
         "end" : 154.68,
         "start" : 154.2,
         "text" : " lie"
       },
       {
+        "confidence" : 0.987,
         "end" : 155.46,
         "start" : 154.68,
         "text" : " and"
       },
       {
+        "confidence" : 0.977,
         "end" : 156.12,
         "start" : 155.46,
         "text" : " say"
       },
       {
+        "confidence" : 0.987,
         "end" : 156.54,
         "start" : 156.12,
         "text" : " that"
       },
       {
+        "confidence" : 0.94,
         "end" : 157.68,
         "start" : 156.54,
         "text" : " they"
       },
       {
+        "confidence" : 0.992,
         "end" : 158.04,
         "start" : 157.68,
         "text" : " had"
       },
       {
+        "confidence" : 0.568,
         "end" : 158.58,
         "start" : 158.04,
         "text" : " heard"
       },
       {
+        "confidence" : 0.167,
         "end" : 159.78,
         "start" : 158.58,
         "text" : " Solomon,"
       },
       {
+        "confidence" : 0.783,
         "end" : 161.34,
         "start" : 159.78,
         "text" : " mention"
       },
       {
+        "confidence" : 0.775,
         "end" : 161.88,
         "start" : 161.34,
         "text" : " this."
       },
       {
+        "confidence" : 0.693,
         "end" : 166.02,
         "start" : 162,
         "text" : " The"
       },
       {
+        "confidence" : 0.8,
         "end" : 166.68,
         "start" : 166.02,
         "text" : " prince"
       },
       {
+        "confidence" : 0.577,
         "end" : 167.82,
         "start" : 166.68,
         "text" : " in"
       },
       {
+        "confidence" : 0.764,
         "end" : 168.24,
         "start" : 167.82,
         "text" : " great"
       },
       {
+        "confidence" : 0.822,
         "end" : 169.08,
         "start" : 168.24,
         "text" : " anger"
       },
       {
+        "confidence" : 0.934,
         "end" : 169.8,
         "start" : 169.08,
         "text" : " ordered"
       },
       {
+        "confidence" : 0.954,
         "end" : 170.58,
         "start" : 169.8,
         "text" : " his"
       },
       {
+        "confidence" : 0.921,
         "end" : 171.78,
         "start" : 170.58,
         "text" : " foster"
       },
       {
+        "confidence" : 0.991,
         "end" : 172.38,
         "start" : 171.78,
         "text" : " brother"
       },
       {
+        "confidence" : 0.995,
         "end" : 173.16,
         "start" : 172.38,
         "text" : " to"
       },
       {
+        "confidence" : 0.997,
         "end" : 173.58,
         "start" : 173.16,
         "text" : " bring"
       },
       {
+        "confidence" : 0.972,
         "end" : 174.9,
         "start" : 173.58,
         "text" : " Solomon"
       },
       {
+        "confidence" : 0.866,
         "end" : 176.46,
         "start" : 174.9,
         "text" : " back."
       },
       {
+        "confidence" : 0.436,
         "end" : 178.32,
         "start" : 176.52,
         "text" : " With"
       },
       {
+        "confidence" : 0.927,
         "end" : 178.98,
         "start" : 178.32,
         "text" : " a"
       },
       {
+        "confidence" : 0.787,
         "end" : 180,
         "start" : 178.98,
         "text" : " troop"
       },
       {
+        "confidence" : 0.982,
         "end" : 180.6,
         "start" : 180,
         "text" : " of"
       },
       {
+        "confidence" : 0.793,
         "end" : 182.04,
         "start" : 180.6,
         "text" : " soldiers."
       },
       {
+        "confidence" : 0.521,
         "end" : 183.42,
         "start" : 182.1,
         "text" : " They"
       },
       {
+        "confidence" : 0.481,
         "end" : 184.56,
         "start" : 183.42,
         "text" : " were,"
       },
       {
+        "confidence" : 0.178,
         "end" : 185.46,
         "start" : 184.56,
         "text" : " uh,"
       },
       {
+        "confidence" : 0.953,
         "end" : 185.64,
         "start" : 185.46,
         "text" : " to"
       },
       {
+        "confidence" : 0.35,
         "end" : 186.36,
         "start" : 185.64,
         "text" : " chain"
       },
       {
+        "confidence" : 0.973,
         "end" : 186.9,
         "start" : 186.36,
         "text" : " him"
       },
       {
+        "confidence" : 0.501,
         "end" : 188.28,
         "start" : 186.9,
         "text" : " up,"
       },
       {
+        "confidence" : 0.617,
         "end" : 189.66,
         "start" : 188.28,
         "text" : " and"
       },
       {
+        "confidence" : 0.985,
         "end" : 190.38,
         "start" : 189.66,
         "text" : " make"
       },
       {
+        "confidence" : 0.922,
         "end" : 191.22,
         "start" : 190.38,
         "text" : " him"
       },
       {
+        "confidence" : 0.916,
         "end" : 192.48,
         "start" : 191.22,
         "text" : " stand"
       },
       {
+        "confidence" : 0.656,
         "end" : 193.2,
         "start" : 192.48,
         "text" : " true"
       },
       {
+        "confidence" : 0.987,
         "end" : 193.8,
         "start" : 193.2,
         "text" : " like"
       },
       {
+        "confidence" : 0.797,
         "end" : 194.28,
         "start" : 193.8,
         "text" : " a"
       },
       {
+        "confidence" : 0.283,
         "end" : 196.02,
         "start" : 194.28,
         "text" : " creamy."
       },
       {
+        "confidence" : 0.596,
         "end" : 196.38,
         "start" : 196.08,
         "text" : " No."
       },
       {
+        "confidence" : 0.786,
         "end" : 199.02,
         "start" : 196.5,
         "text" : " You"
       },
       {
+        "confidence" : 0.99,
         "end" : 199.8,
         "start" : 199.02,
         "text" : " become"
       },
       {
+        "confidence" : 0.947,
         "end" : 200.28,
         "start" : 199.8,
         "text" : " a"
       },
       {
+        "confidence" : 0.763,
         "end" : 201.42,
         "start" : 200.28,
         "text" : " monster,"
       },
       {
+        "confidence" : 0.905,
         "end" : 201.9,
         "start" : 201.42,
         "text" : " you"
       },
       {
+        "confidence" : 0.995,
         "end" : 202.38,
         "start" : 201.9,
         "text" : " have"
       },
       {
+        "confidence" : 0.993,
         "end" : 202.92,
         "start" : 202.38,
         "text" : " made"
       },
       {
+        "confidence" : 0.989,
         "end" : 203.7,
         "start" : 202.92,
         "text" : " yourself"
       },
       {
+        "confidence" : 0.975,
         "end" : 204.54,
         "start" : 203.7,
         "text" : " like"
       },
       {
+        "confidence" : 0.945,
         "end" : 205.32,
         "start" : 204.54,
         "text" : " the"
       },
       {
+        "confidence" : 0.459,
         "end" : 205.98,
         "start" : 205.32,
         "text" : " lying"
       },
       {
+        "confidence" : 0.81,
         "end" : 207.42,
         "start" : 205.98,
         "text" : " in"
       },
       {
+        "confidence" : 0.945,
         "end" : 207.78,
         "start" : 207.42,
         "text" : " your"
       },
       {
+        "confidence" : 0.976,
         "end" : 208.38,
         "start" : 207.78,
         "text" : " anger"
       },
       {
+        "confidence" : 0.599,
         "end" : 208.86,
         "start" : 208.38,
         "text" : " like."
       },
       {
+        "confidence" : 0.69,
         "end" : 211.32,
         "start" : 208.98,
         "text" : " The"
       },
       {
+        "confidence" : 0.262,
         "end" : 211.92,
         "start" : 211.32,
         "text" : " wolf"
       },
       {
+        "confidence" : 0.862,
         "end" : 212.82,
         "start" : 211.92,
         "text" : " in"
       },
       {
+        "confidence" : 0.984,
         "end" : 213.06,
         "start" : 212.82,
         "text" : " your"
       },
       {
+        "confidence" : 0.319,
         "end" : 213.78,
         "start" : 213.06,
         "text" : " witness"
       },
       {
+        "confidence" : 0.787,
         "end" : 214.32,
         "start" : 213.78,
         "text" : " and"
       },
       {
+        "confidence" : 0.637,
         "end" : 214.8,
         "start" : 214.32,
         "text" : " like"
       },
       {
+        "confidence" : 0.94,
         "end" : 215.22,
         "start" : 214.8,
         "text" : " a"
       },
       {
+        "confidence" : 0.723,
         "end" : 215.76,
         "start" : 215.22,
         "text" : " snake,"
       },
       {
+        "confidence" : 0.699,
         "end" : 216.24,
         "start" : 215.76,
         "text" : " you"
       },
       {
+        "confidence" : 0.622,
         "end" : 217.5,
         "start" : 216.24,
         "text" : " ungratefully"
       },
       {
+        "confidence" : 0.921,
         "end" : 218.4,
         "start" : 217.5,
         "text" : " turned"
       },
       {
+        "confidence" : 0.942,
         "end" : 219.54,
         "start" : 218.4,
         "text" : " upon"
       },
       {
+        "confidence" : 0.99,
         "end" : 220.08,
         "start" : 219.54,
         "text" : " your"
       },
       {
+        "confidence" : 0.977,
         "end" : 220.92,
         "start" : 220.08,
         "text" : " tutor"
       },
       {
+        "confidence" : 0.983,
         "end" : 221.28,
         "start" : 220.92,
         "text" : " who"
       },
       {
+        "confidence" : 0.942,
         "end" : 221.94,
         "start" : 221.28,
         "text" : " was"
       },
       {
+        "confidence" : 0.992,
         "end" : 222.78,
         "start" : 221.94,
         "text" : " like"
       },
       {
+        "confidence" : 0.995,
         "end" : 223.08,
         "start" : 222.78,
         "text" : " a"
       },
       {
+        "confidence" : 0.968,
         "end" : 223.62,
         "start" : 223.08,
         "text" : " 2nd"
       },
       {
+        "confidence" : 0.744,
         "end" : 224.58,
         "start" : 223.62,
         "text" : " father"
       },
       {
+        "confidence" : 0.994,
         "end" : 225.06,
         "start" : 224.58,
         "text" : " to"
       },
       {
+        "confidence" : 0.561,
         "end" : 225.48,
         "start" : 225.06,
         "text" : " you,"
       },
       {
+        "confidence" : 0.445,
         "end" : 226.68,
         "start" : 225.48,
         "text" : " your"
       },
       {
+        "confidence" : 0.626,
         "end" : 227.94,
         "start" : 226.68,
         "text" : " goodness."
       },
       {
+        "confidence" : 0.157,
         "end" : 228.9,
         "start" : 228,
         "text" : " Your"
       },
       {
+        "confidence" : 0.329,
         "end" : 229.86,
         "start" : 228.9,
         "text" : " roses."
       },
       {
+        "confidence" : 0.118,
         "end" : 232.68,
         "start" : 231,
         "text" : " Had,"
       },
       {
+        "confidence" : 0.655,
         "end" : 233.16,
         "start" : 232.68,
         "text" : " has"
       },
       {
+        "confidence" : 0.688,
         "end" : 234.3,
         "start" : 233.16,
         "text" : " made"
       },
       {
+        "confidence" : 0.928,
         "end" : 234.84,
         "start" : 234.3,
         "text" : " you"
       },
       {
+        "confidence" : 0.973,
         "end" : 235.26,
         "start" : 234.84,
         "text" : " like"
       },
       {
+        "confidence" : 0.61,
         "end" : 238.44,
         "start" : 235.26,
         "text" : " a."
       },
       {
+        "confidence" : 0.464,
         "end" : 244.14,
         "start" : 238.5,
         "text" : " They're"
       },
       {
+        "confidence" : 0.345,
         "end" : 244.8,
         "start" : 244.14,
         "text" : " from,"
       },
       {
+        "confidence" : 0.43,
         "end" : 247.02,
         "start" : 244.8,
         "text" : " therefore,"
       },
       {
+        "confidence" : 0.245,
         "end" : 247.8,
         "start" : 247.02,
         "text" : " your,"
       },
       {
+        "confidence" : 0.399,
         "end" : 248.58,
         "start" : 247.8,
         "text" : " you're"
       },
       {
+        "confidence" : 0.558,
         "end" : 248.82,
         "start" : 248.58,
         "text" : " from"
       },
       {
+        "confidence" : 0.82,
         "end" : 249.9,
         "start" : 248.82,
         "text" : " take"
       },
       {
+        "confidence" : 0.867,
         "end" : 250.74,
         "start" : 249.9,
         "text" : " the"
       },
       {
+        "confidence" : 0.972,
         "end" : 251.88,
         "start" : 250.74,
         "text" : " appearance"
       },
       {
+        "confidence" : 0.985,
         "end" : 252.42,
         "start" : 251.88,
         "text" : " of"
       },
       {
+        "confidence" : 0.093,
         "end" : 252.96,
         "start" : 252.42,
         "text" : " these"
       },
       {
+        "confidence" : 0.991,
         "end" : 253.62,
         "start" : 252.96,
         "text" : " animals"
       },
       {
+        "confidence" : 0.977,
         "end" : 254.34,
         "start" : 253.62,
         "text" : " at"
       },
       {
+        "confidence" : 0.892,
         "end" : 254.76,
         "start" : 254.34,
         "text" : " once."
       },
       {
+        "confidence" : 0.914,
         "end" : 257.82,
         "start" : 254.88,
         "text" : " The"
       },
       {
+        "confidence" : 0.206,
         "end" : 259.14,
         "start" : 257.82,
         "text" : " princess,"
       },
       {
+        "confidence" : 0.912,
         "end" : 259.44,
         "start" : 259.14,
         "text" : " that's"
       },
       {
+        "confidence" : 0.984,
         "end" : 259.62,
         "start" : 259.44,
         "text" : " the"
       },
       {
+        "confidence" : 0.989,
         "end" : 259.86,
         "start" : 259.62,
         "text" : " best"
       },
       {
+        "confidence" : 0.75,
         "end" : 261.18,
         "start" : 259.86,
         "text" : " thing"
       },
       {
+        "confidence" : 0.993,
         "end" : 261.36,
         "start" : 261.18,
         "text" : " he"
       },
       {
+        "confidence" : 0.997,
         "end" : 261.6,
         "start" : 261.36,
         "text" : " could"
       },
       {
+        "confidence" : 0.995,
         "end" : 261.9,
         "start" : 261.6,
         "text" : " do"
       },
       {
+        "confidence" : 0.894,
         "end" : 263.1,
         "start" : 261.9,
         "text" : " would"
       },
       {
+        "confidence" : 0.985,
         "end" : 263.58,
         "start" : 263.1,
         "text" : " be"
       },
       {
+        "confidence" : 0.989,
         "end" : 263.94,
         "start" : 263.58,
         "text" : " to"
       },
       {
+        "confidence" : 0.981,
         "end" : 264.24,
         "start" : 263.94,
         "text" : " get"
       },
       {
+        "confidence" : 0.991,
         "end" : 265.02,
         "start" : 264.24,
         "text" : " as"
       },
       {
+        "confidence" : 0.99,
         "end" : 265.32,
         "start" : 265.02,
         "text" : " far"
       },
       {
+        "confidence" : 0.985,
         "end" : 265.98,
         "start" : 265.32,
         "text" : " from"
       },
       {
+        "confidence" : 0.491,
         "end" : 266.82,
         "start" : 265.98,
         "text" : " the,"
       },
       {
+        "confidence" : 0.617,
         "end" : 267.78,
         "start" : 266.82,
         "text" : " clear"
       },
       {
+        "confidence" : 0.688,
         "end" : 268.32,
         "start" : 267.78,
         "text" : " like"
       },
       {
+        "confidence" : 0.894,
         "end" : 268.98,
         "start" : 268.32,
         "text" : " as"
       },
       {
+        "confidence" : 0.957,
         "end" : 269.4,
         "start" : 268.98,
         "text" : " he"
       },
       {
+        "confidence" : 0.62,
         "end" : 270,
         "start" : 269.4,
         "text" : " could."
       },
       {
+        "confidence" : 0.379,
         "end" : 271.32,
         "start" : 270,
         "text" : " So"
       },
       {
+        "confidence" : 0.951,
         "end" : 271.98,
         "start" : 271.32,
         "text" : " he"
       },
       {
+        "confidence" : 0.991,
         "end" : 272.88,
         "start" : 271.98,
         "text" : " wouldn't"
       },
       {
+        "confidence" : 0.992,
         "end" : 273.3,
         "start" : 272.88,
         "text" : " have"
       },
       {
+        "confidence" : 0.978,
         "end" : 273.72,
         "start" : 273.3,
         "text" : " to"
       },
       {
+        "confidence" : 0.853,
         "end" : 274.74,
         "start" : 273.72,
         "text" : " see"
       },
       {
+        "confidence" : 0.795,
         "end" : 275.28,
         "start" : 274.74,
         "text" : " his"
       },
       {
+        "confidence" : 0.715,
         "end" : 275.88,
         "start" : 275.28,
         "text" : " scary"
       },
       {
+        "confidence" : 0.906,
         "end" : 279.54,
         "start" : 275.88,
         "text" : " reflection"
       },
       {
+        "confidence" : 0.529,
         "end" : 280.8,
         "start" : 279.54,
         "text" : " anymore,"
       },
       {
+        "confidence" : 0.106,
         "end" : 281.7,
         "start" : 280.8,
         "text" : " thing,"
       },
       {
+        "confidence" : 0.423,
         "end" : 282.36,
         "start" : 281.7,
         "text" : " king"
       },
       {
+        "confidence" : 0.103,
         "end" : 282.78,
         "start" : 282.36,
         "text" : " of."
       },
       {
+        "confidence" : 0.098,
         "end" : 283.74,
         "start" : 283.14,
         "text" : " Of"
       },
       {
+        "confidence" : 0.52,
         "end" : 284.58,
         "start" : 283.74,
         "text" : " this,"
       },
       {
+        "confidence" : 0.745,
         "end" : 284.88,
         "start" : 284.58,
         "text" : " he"
       },
       {
+        "confidence" : 0.892,
         "end" : 285.96,
         "start" : 284.88,
         "text" : " started"
       },
       {
+        "confidence" : 0.987,
         "end" : 286.62,
         "start" : 285.96,
         "text" : " to"
       },
       {
+        "confidence" : 0.909,
         "end" : 287.16,
         "start" : 286.62,
         "text" : " run"
       },
       {
+        "confidence" : 0.732,
         "end" : 288.24,
         "start" : 287.16,
         "text" : " toward"
       },
       {
+        "confidence" : 0.978,
         "end" : 288.48,
         "start" : 288.24,
         "text" : " the"
       },
       {
+        "confidence" : 0.437,
         "end" : 289.32,
         "start" : 288.48,
         "text" : " wood."
       },
       {
+        "confidence" : 0.352,
         "end" : 290.22,
         "start" : 289.38,
         "text" : " But"
       },
       {
+        "confidence" : 0.989,
         "end" : 290.88,
         "start" : 290.22,
         "text" : " before"
       },
       {
+        "confidence" : 0.992,
         "end" : 291.48,
         "start" : 290.88,
         "text" : " he"
       },
       {
+        "confidence" : 0.364,
         "end" : 293.16,
         "start" : 291.48,
         "text" : " had,"
       },
       {
+        "confidence" : 0.281,
         "end" : 295.2,
         "start" : 293.16,
         "text" : " go,"
       },
       {
+        "confidence" : 0.197,
         "end" : 295.98,
         "start" : 295.2,
         "text" : " then"
       },
       {
+        "confidence" : 0.598,
         "end" : 297.3,
         "start" : 295.98,
         "text" : " far,"
       },
       {
+        "confidence" : 0.939,
         "end" : 297.78,
         "start" : 297.3,
         "text" : " he"
       },
       {
+        "confidence" : 0.655,
         "end" : 298.32,
         "start" : 297.78,
         "text" : " felt"
       },
       {
+        "confidence" : 0.982,
         "end" : 298.86,
         "start" : 298.32,
         "text" : " into"
       },
       {
+        "confidence" : 0.599,
         "end" : 300.42,
         "start" : 298.86,
         "text" : " a"
       },
       {
+        "confidence" : 0.962,
         "end" : 300.9,
         "start" : 300.42,
         "text" : " deep"
       },
       {
+        "confidence" : 0.244,
         "end" : 301.98,
         "start" : 300.9,
         "text" : " pit,"
       },
       {
+        "confidence" : 0.47,
         "end" : 302.7,
         "start" : 301.98,
         "text" : " which,"
       },
       {
+        "confidence" : 0.484,
         "end" : 304.98,
         "start" : 302.7,
         "text" : " was"
       },
       {
+        "confidence" : 0.991,
         "end" : 305.64,
         "start" : 304.98,
         "text" : " made"
       },
       {
+        "confidence" : 0.991,
         "end" : 306.12,
         "start" : 305.64,
         "text" : " to"
       },
       {
+        "confidence" : 0.889,
         "end" : 306.66,
         "start" : 306.12,
         "text" : " trap"
       },
       {
+        "confidence" : 0.856,
         "end" : 307.74,
         "start" : 306.66,
         "text" : " bears,"
       },
       {
+        "confidence" : 0.969,
         "end" : 308.16,
         "start" : 307.74,
         "text" : " the"
       },
       {
+        "confidence" : 0.76,
         "end" : 309.06,
         "start" : 308.16,
         "text" : " hunters."
       },
       {
+        "confidence" : 0.303,
         "end" : 311.16,
         "start" : 309.12,
         "text" : " Who"
       },
       {
+        "confidence" : 0.788,
         "end" : 311.46,
         "start" : 311.16,
         "text" : " are"
       },
       {
+        "confidence" : 0.964,
         "end" : 311.94,
         "start" : 311.46,
         "text" : " hiding"
       },
       {
+        "confidence" : 0.988,
         "end" : 312.24,
         "start" : 311.94,
         "text" : " in"
       },
       {
+        "confidence" : 0.518,
         "end" : 312.48,
         "start" : 312.24,
         "text" : " the"
       },
       {
+        "confidence" : 0.976,
         "end" : 312.78,
         "start" : 312.48,
         "text" : " tree"
       },
       {
+        "confidence" : 0.995,
         "end" : 313.32,
         "start" : 312.78,
         "text" : " quickly"
       },
       {
+        "confidence" : 0.805,
         "end" : 314.1,
         "start" : 313.32,
         "text" : " jumped"
       },
       {
+        "confidence" : 0.767,
         "end" : 315,
         "start" : 314.1,
         "text" : " down,"
       },
       {
+        "confidence" : 0.934,
         "end" : 315.24,
         "start" : 315,
         "text" : " put"
       },
       {
+        "confidence" : 0.989,
         "end" : 315.66,
         "start" : 315.24,
         "text" : " the"
       },
       {
+        "confidence" : 0.995,
         "end" : 315.9,
         "start" : 315.66,
         "text" : " heavy"
       },
       {
+        "confidence" : 0.422,
         "end" : 316.92,
         "start" : 315.9,
         "text" : " trees,"
       },
       {
+        "confidence" : 0.883,
         "end" : 317.76,
         "start" : 316.92,
         "text" : " and"
       },
       {
+        "confidence" : 0.885,
         "end" : 318.84,
         "start" : 317.76,
         "text" : " led"
       },
       {
+        "confidence" : 0.987,
         "end" : 319.02,
         "start" : 318.84,
         "text" : " him"
       },
       {
+        "confidence" : 0.974,
         "end" : 319.44,
         "start" : 319.02,
         "text" : " to"
       },
       {
+        "confidence" : 0.969,
         "end" : 319.74,
         "start" : 319.44,
         "text" : " the"
       },
       {
+        "confidence" : 0.838,
         "end" : 322.08,
         "start" : 319.74,
         "text" : " main"
       },
       {
+        "confidence" : 0.724,
         "end" : 322.98,
         "start" : 322.08,
         "text" : " city."
       },
       {
+        "confidence" : 0.604,
         "end" : 326.58,
         "start" : 323.04,
         "text" : " Of"
       },
       {
+        "confidence" : 0.991,
         "end" : 326.94,
         "start" : 326.58,
         "text" : " his"
       },
       {
+        "confidence" : 0.997,
         "end" : 327.24,
         "start" : 326.94,
         "text" : " own"
       },
       {
+        "confidence" : 0.856,
         "end" : 328.02,
         "start" : 327.24,
         "text" : " kingdom."
       },
       {
+        "confidence" : 0.794,
         "end" : 332.34,
         "start" : 328.14,
         "text" : " Our"
       },
       {
+        "confidence" : 0.556,
         "end" : 332.82,
         "start" : 332.34,
         "text" : " friends"
       },
       {
+        "confidence" : 0.221,
         "end" : 333.84,
         "start" : 332.82,
         "text" : " who"
       },
       {
+        "confidence" : 0.981,
         "end" : 334.26,
         "start" : 333.84,
         "text" : " took"
       },
       {
+        "confidence" : 0.965,
         "end" : 335.1,
         "start" : 334.26,
         "text" : " pleasure"
       },
       {
+        "confidence" : 0.666,
         "end" : 336.54,
         "start" : 335.1,
         "text" : " in."
       },
       {
+        "confidence" : 0.827,
         "end" : 349.5,
         "start" : 348.6,
         "text" : " Just"
       },
       {
+        "confidence" : 0.295,
         "end" : 349.8,
         "start" : 349.5,
         "text" : " a"
       },
       {
+        "confidence" : 0.527,
         "end" : 350.4,
         "start" : 349.8,
         "text" : " wicked,"
       },
       {
+        "confidence" : 0.767,
         "end" : 350.7,
         "start" : 350.4,
         "text" : " the"
       },
       {
+        "confidence" : 0.242,
         "end" : 351.3,
         "start" : 350.7,
         "text" : " best,"
       },
       {
+        "confidence" : 0.437,
         "end" : 352.02,
         "start" : 351.3,
         "text" : " prick,"
       },
       {
+        "confidence" : 0.242,
         "end" : 353.04,
         "start" : 352.02,
         "text" : " crows,"
       },
       {
+        "confidence" : 0.641,
         "end" : 353.82,
         "start" : 353.04,
         "text" : " habit,"
       },
       {
+        "confidence" : 0.393,
         "end" : 354.54,
         "start" : 353.82,
         "text" : " come,"
       },
       {
+        "confidence" : 0.625,
         "end" : 356.28,
         "start" : 354.54,
         "text" : " companion,"
       },
       {
+        "confidence" : 0.86,
         "end" : 357.3,
         "start" : 356.28,
         "text" : " please"
       },
       {
+        "confidence" : 0.836,
         "end" : 358.02,
         "start" : 357.3,
         "text" : " live."
       },
       {
+        "confidence" : 0.626,
         "end" : 362.88,
         "start" : 358.08,
         "text" : " Tutor."
       },
       {
+        "confidence" : 0.631,
         "end" : 365.34,
         "start" : 362.94,
         "text" : " Greatness,"
       },
       {
+        "confidence" : 0.705,
         "end" : 366.24,
         "start" : 365.34,
         "text" : " greediness."
       },
       {
+        "confidence" : 0.5,
         "end" : 368.88,
         "start" : 366.36,
         "text" : " I'm"
       },
       {
+        "confidence" : 0.812,
         "end" : 369.42,
         "start" : 368.88,
         "text" : " gratefully"
       },
       {
+        "confidence" : 0.126,
         "end" : 370.56,
         "start" : 369.42,
         "text" : " paid,"
       },
       {
+        "confidence" : 0.13,
         "end" : 371.22,
         "start" : 370.56,
         "text" : " thrown,"
       },
       {
+        "confidence" : 0.294,
         "end" : 371.46,
         "start" : 371.22,
         "text" : " and"
       },
       {
+        "confidence" : 0.756,
         "end" : 372.66,
         "start" : 371.46,
         "text" : " rewarded,"
       },
       {
+        "confidence" : 0.293,
         "end" : 373.44,
         "start" : 372.66,
         "text" : " brook,"
       },
       {
+        "confidence" : 0.431,
         "end" : 375.54,
         "start" : 373.44,
         "text" : " starve,"
       },
       {
+        "confidence" : 0.524,
         "end" : 376.38,
         "start" : 375.54,
         "text" : " desert,"
       },
       {
+        "confidence" : 0.812,
         "end" : 376.74,
         "start" : 376.38,
         "text" : " hermit."
       }
     ],
-    "source" : "super8-L3-p70-72-61F8EA26-99C6-4875-910E-AFFF55500437.m4a"
+    "source" : "super8-L3-p70-72-CD261AC0-EF67-4D48-974A-87116FEA08E2.m4a"
   },
   "words" : [
     "when",

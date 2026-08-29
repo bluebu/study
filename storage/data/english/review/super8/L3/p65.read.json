@@ -1,335 +1,365 @@
 {
-  "acoustics": {
-    "duration": 83.25,
-    "pause_count": 47,
-    "pause_ratio": 0.334,
-    "pause_total": 27.8,
-    "pauses": [
+  "acoustics" : {
+    "duration" : 83.25,
+    "pause_count" : 44,
+    "pause_ratio" : 0.311,
+    "pause_total" : 25.85,
+    "pauses" : [
       {
-        "dur": 0.34,
-        "end": 1.1,
-        "start": 0.76
+        "dur" : 0.36,
+        "end" : 1.94,
+        "start" : 1.58
       },
       {
-        "dur": 0.36,
-        "end": 1.94,
-        "start": 1.58
+        "dur" : 0.4,
+        "end" : 4.47,
+        "start" : 4.07
       },
       {
-        "dur": 0.42,
-        "end": 4.48,
-        "start": 4.06
+        "dur" : 0.89,
+        "end" : 5.69,
+        "start" : 4.8
       },
       {
-        "dur": 0.92,
-        "end": 5.71,
-        "start": 4.79
+        "dur" : 0.48,
+        "end" : 7.69,
+        "start" : 7.21
       },
       {
-        "dur": 0.48,
-        "end": 7.69,
-        "start": 7.21
+        "dur" : 0.34,
+        "end" : 8.74,
+        "start" : 8.4
       },
       {
-        "dur": 0.36,
-        "end": 8.76,
-        "start": 8.4
+        "dur" : 0.73,
+        "end" : 9.95,
+        "start" : 9.22
       },
       {
-        "dur": 0.74,
-        "end": 9.96,
-        "start": 9.22
+        "dur" : 0.95,
+        "end" : 12.01,
+        "start" : 11.06
       },
       {
-        "dur": 0.95,
-        "end": 12.01,
-        "start": 11.06
+        "dur" : 0.36,
+        "end" : 14.48,
+        "start" : 14.12
       },
       {
-        "dur": 0.38,
-        "end": 14.49,
-        "start": 14.11
+        "dur" : 0.33,
+        "end" : 15.31,
+        "start" : 14.98
       },
       {
-        "dur": 0.35,
-        "end": 15.32,
-        "start": 14.97
+        "dur" : 0.84,
+        "end" : 16.96,
+        "start" : 16.12
       },
       {
-        "dur": 0.89,
-        "end": 16.96,
-        "start": 16.07
+        "dur" : 0.87,
+        "end" : 20.42,
+        "start" : 19.55
       },
       {
-        "dur": 0.88,
-        "end": 20.42,
-        "start": 19.54
+        "dur" : 0.52,
+        "end" : 21.83,
+        "start" : 21.31
       },
       {
-        "dur": 0.53,
-        "end": 21.83,
-        "start": 21.3
+        "dur" : 0.36,
+        "end" : 24.77,
+        "start" : 24.41
       },
       {
-        "dur": 0.36,
-        "end": 24.77,
-        "start": 24.41
+        "dur" : 0.46,
+        "end" : 26.37,
+        "start" : 25.91
       },
       {
-        "dur": 0.45,
-        "end": 25.63,
-        "start": 25.18
+        "dur" : 0.5,
+        "end" : 27.38,
+        "start" : 26.88
       },
       {
-        "dur": 0.5,
-        "end": 26.4,
-        "start": 25.9
+        "dur" : 0.66,
+        "end" : 30.43,
+        "start" : 29.77
       },
       {
-        "dur": 0.51,
-        "end": 27.38,
-        "start": 26.87
+        "dur" : 0.35,
+        "end" : 32.57,
+        "start" : 32.22
       },
       {
-        "dur": 0.68,
-        "end": 30.43,
-        "start": 29.75
+        "dur" : 0.43,
+        "end" : 38.07,
+        "start" : 37.64
       },
       {
-        "dur": 0.5,
-        "end": 32.71,
-        "start": 32.21
+        "dur" : 0.59,
+        "end" : 41.18,
+        "start" : 40.59
       },
       {
-        "dur": 0.49,
-        "end": 38.07,
-        "start": 37.58
+        "dur" : 1.57,
+        "end" : 44.26,
+        "start" : 42.69
       },
       {
-        "dur": 0.59,
-        "end": 41.18,
-        "start": 40.59
+        "dur" : 0.53,
+        "end" : 44.82,
+        "start" : 44.29
       },
       {
-        "dur": 1.59,
-        "end": 44.27,
-        "start": 42.68
+        "dur" : 0.38,
+        "end" : 45.24,
+        "start" : 44.86
       },
       {
-        "dur": 0.53,
-        "end": 44.82,
-        "start": 44.29
+        "dur" : 1.04,
+        "end" : 48.71,
+        "start" : 47.67
       },
       {
-        "dur": 0.38,
-        "end": 45.24,
-        "start": 44.86
+        "dur" : 0.43,
+        "end" : 49.34,
+        "start" : 48.91
       },
       {
-        "dur": 1.07,
-        "end": 48.71,
-        "start": 47.64
+        "dur" : 1.1,
+        "end" : 52.14,
+        "start" : 51.04
       },
       {
-        "dur": 0.43,
-        "end": 49.34,
-        "start": 48.91
+        "dur" : 0.27,
+        "end" : 54.21,
+        "start" : 53.94
       },
       {
-        "dur": 1.1,
-        "end": 52.14,
-        "start": 51.04
+        "dur" : 0.71,
+        "end" : 57.54,
+        "start" : 56.83
       },
       {
-        "dur": 0.28,
-        "end": 54.22,
-        "start": 53.94
+        "dur" : 0.38,
+        "end" : 58.83,
+        "start" : 58.45
       },
       {
-        "dur": 0.26,
-        "end": 55.27,
-        "start": 55.01
+        "dur" : 1.02,
+        "end" : 60.61,
+        "start" : 59.59
       },
       {
-        "dur": 0.71,
-        "end": 57.54,
-        "start": 56.83
+        "dur" : 0.34,
+        "end" : 63.56,
+        "start" : 63.22
       },
       {
-        "dur": 0.41,
-        "end": 58.83,
-        "start": 58.42
+        "dur" : 0.38,
+        "end" : 64.32,
+        "start" : 63.94
       },
       {
-        "dur": 1.08,
-        "end": 60.61,
-        "start": 59.53
+        "dur" : 0.37,
+        "end" : 64.76,
+        "start" : 64.39
       },
       {
-        "dur": 0.36,
-        "end": 63.57,
-        "start": 63.21
+        "dur" : 0.73,
+        "end" : 66.87,
+        "start" : 66.14
       },
       {
-        "dur": 0.4,
-        "end": 64.33,
-        "start": 63.93
+        "dur" : 0.27,
+        "end" : 67.61,
+        "start" : 67.34
       },
       {
-        "dur": 0.37,
-        "end": 64.76,
-        "start": 64.39
+        "dur" : 0.67,
+        "end" : 68.54,
+        "start" : 67.87
       },
       {
-        "dur": 0.76,
-        "end": 66.89,
-        "start": 66.13
+        "dur" : 0.3,
+        "end" : 69.22,
+        "start" : 68.92
       },
       {
-        "dur": 0.28,
-        "end": 67.61,
-        "start": 67.33
+        "dur" : 1.38,
+        "end" : 70.64,
+        "start" : 69.26
       },
       {
-        "dur": 0.67,
-        "end": 68.54,
-        "start": 67.87
+        "dur" : 0.97,
+        "end" : 71.69,
+        "start" : 70.72
       },
       {
-        "dur": 0.35,
-        "end": 69.22,
-        "start": 68.87
+        "dur" : 0.25,
+        "end" : 72.7,
+        "start" : 72.45
       },
       {
-        "dur": 1.39,
-        "end": 70.64,
-        "start": 69.25
+        "dur" : 0.31,
+        "end" : 74.68,
+        "start" : 74.37
       },
       {
-        "dur": 0.98,
-        "end": 71.69,
-        "start": 70.71
+        "dur" : 0.46,
+        "end" : 76.1,
+        "start" : 75.64
       },
       {
-        "dur": 0.26,
-        "end": 72.7,
-        "start": 72.44
+        "dur" : 0.43,
+        "end" : 79.52,
+        "start" : 79.09
       },
       {
-        "dur": 0.32,
-        "end": 74.69,
-        "start": 74.37
+        "dur" : 0.44,
+        "end" : 80.92,
+        "start" : 80.48
       },
       {
-        "dur": 0.46,
-        "end": 76.1,
-        "start": 75.64
-      },
-      {
-        "dur": 0.5,
-        "end": 79.52,
-        "start": 79.02
-      },
-      {
-        "dur": 0.45,
-        "end": 80.92,
-        "start": 80.47
-      },
-      {
-        "dur": 0.73,
-        "end": 83.22,
-        "start": 82.49
+        "dur" : 0.7,
+        "end" : 83.22,
+        "start" : 82.52
       }
     ],
-    "source": "IMG_9035.m4a",
-    "speech_time": 55.45,
-    "threshold_db": -21.8
+    "source" : "IMG_9035.m4a",
+    "speech_time" : 57.4,
+    "threshold_db" : -22.8
   },
-  "alignment": {
-    "accuracy": 94.3,
-    "correctWordCount": 99,
-    "diffs": [
+  "alignment" : {
+    "accuracy" : 94.3,
+    "correctWordCount" : 99,
+    "diffs" : [
       {
-        "context": "for his faults and to punish",
-        "end": 1.86,
-        "kind": "substitute",
-        "read": "fault",
-        "ref": "faults",
-        "refIndex": 2,
-        "start": 0.9
+        "category" : "morph",
+        "confidence" : 0.669,
+        "context" : "for his faults and to punish",
+        "end" : 1.86,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "fault",
+        "ref" : "faults",
+        "refIndex" : 2,
+        "start" : 0.9,
+        "suggest" : "count",
+        "why" : "原文是「faults」，读出来少了词尾 -s"
       },
       {
-        "context": "a bad deed it will prick your",
-        "end": 25.86,
-        "kind": "insert",
-        "read": "if",
-        "refIndex": 35,
-        "start": 25.2
+        "category" : "extra",
+        "confidence" : 0.614,
+        "context" : "a bad deed it will prick your",
+        "end" : 25.86,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "if",
+        "refIndex" : 35,
+        "start" : 25.2,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "in spite of its pricking you continue",
-        "end": 32.34,
-        "kind": "substitute",
-        "read": "it's",
-        "ref": "its",
-        "refIndex": 44,
-        "start": 31.62
+        "category" : "content",
+        "confidence" : 0.774,
+        "context" : "in spite of its pricking you continue",
+        "end" : 32.34,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "it's",
+        "ref" : "its",
+        "refIndex" : 44,
+        "start" : 31.62,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
       },
       {
-        "context": "spite of its pricking you continue in",
-        "end": 33.42,
-        "kind": "substitute",
-        "read": "breaking",
-        "ref": "pricking",
-        "refIndex": 45,
-        "start": 32.34
+        "category" : "content",
+        "confidence" : 0.738,
+        "context" : "spite of its pricking you continue in",
+        "end" : 33.42,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "breaking",
+        "ref" : "pricking",
+        "refIndex" : 45,
+        "start" : 32.34,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
       },
       {
-        "context": "your enemy after these words the fairy",
-        "end": 50.28,
-        "kind": "substitute",
-        "read": "this",
-        "ref": "these",
-        "refIndex": 65,
-        "start": 49.2
+        "category" : "function",
+        "confidence" : 0.744,
+        "context" : "your enemy after these words the fairy",
+        "end" : 50.28,
+        "kind" : "substitute",
+        "label" : "小词",
+        "read" : "this",
+        "ref" : "these",
+        "refIndex" : 65,
+        "start" : 49.2,
+        "suggest" : "count",
+        "why" : "两个都是小词，读串了。这类错扎堆出现就是眼睛跑在手指前面"
       },
       {
-        "context": "enemy after these words the fairy disappeared",
-        "end": 50.88,
-        "kind": "substitute",
-        "read": "word",
-        "ref": "words",
-        "refIndex": 66,
-        "start": 50.28
+        "category" : "morph",
+        "confidence" : 0.277,
+        "context" : "enemy after these words the fairy disappeared",
+        "end" : 50.88,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "word",
+        "ref" : "words",
+        "refIndex" : 66,
+        "start" : 50.28,
+        "suggest" : "count",
+        "why" : "原文是「words」，读出来少了词尾 -s。识别器对这处只有 0.28 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "hunting he had gone back to the",
-        "end": 67.8,
-        "kind": "insert",
-        "read": "gone",
-        "refIndex": 87,
-        "start": 67.14
+        "category" : "extra",
+        "confidence" : 0.611,
+        "context" : "hunting he had gone back to the",
+        "end" : 67.8,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "gone",
+        "refIndex" : 87,
+        "start" : 67.14,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "hunting he had gone back to the",
-        "end": 69.3,
-        "kind": "insert",
-        "read": "out",
-        "refIndex": 87,
-        "start": 67.8
+        "category" : "extra",
+        "confidence" : 0.436,
+        "context" : "hunting he had gone back to the",
+        "end" : 69.3,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "out",
+        "refIndex" : 87,
+        "start" : 67.8,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "back to the hunting ground many times",
-        "end": 73.74,
-        "kind": "substitute",
-        "read": "honking",
-        "ref": "hunting",
-        "refIndex": 91,
-        "start": 73.08
+        "category" : "content",
+        "confidence" : 0.671,
+        "context" : "back to the hunting ground many times",
+        "end" : 73.74,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "honking",
+        "ref" : "hunting",
+        "refIndex" : 91,
+        "start" : 73.08,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
       }
     ],
-    "readWordCount": 108,
-    "refTimes": [
+    "readWordCount" : 108,
+    "refTimes" : [
       0.48,
       0.9,
       1.86,
@@ -436,559 +466,937 @@
       81.54,
       82.14
     ],
-    "refWordCount": 105,
-    "wcpm": 71
+    "refWordCount" : 105,
+    "wcpm" : 71
   },
-  "reference": "for his faults, and to punish him if he does not correct his mistakes.\"\n\"Take great care of this ring,\" she said. \"It is more precious than diamonds.\nEvery time you do a bad deed, it will prick your finger. If, in spite of its\npricking, you continue in your own evil ways, you will lose my friendship, and\nI will become your enemy.\" After these words, the Fairy disappeared, leaving\nPrince Darling in shock.\nOne day, however, Prince Darling the Happy went out hunting. He had\ngone back to the hunting ground many times but didn't find any animals. This\nmade him very upset.",
-  "slug": "super8/L3/p65",
-  "transcript": {
-    "contextPrimed": true,
-    "locale": "en-US",
-    "runs": [
-      {
-        "end": 0.48,
-        "start": 0,
-        "text": "For"
-      },
-      {
-        "end": 0.9,
-        "start": 0.48,
-        "text": " his"
-      },
-      {
-        "end": 1.86,
-        "start": 0.9,
-        "text": " fault,"
-      },
-      {
-        "end": 2.16,
-        "start": 1.86,
-        "text": " and"
-      },
-      {
-        "end": 2.64,
-        "start": 2.16,
-        "text": " to"
-      },
-      {
-        "end": 3.48,
-        "start": 2.64,
-        "text": " punish"
-      },
-      {
-        "end": 4.38,
-        "start": 3.48,
-        "text": " him,"
-      },
-      {
-        "end": 4.74,
-        "start": 4.38,
-        "text": " if"
-      },
-      {
-        "end": 6.12,
-        "start": 4.74,
-        "text": " he"
-      },
-      {
-        "end": 6.66,
-        "start": 6.12,
-        "text": " does"
-      },
-      {
-        "end": 7.02,
-        "start": 6.66,
-        "text": " not"
-      },
-      {
-        "end": 8.04,
-        "start": 7.02,
-        "text": " correct"
-      },
-      {
-        "end": 8.88,
-        "start": 8.04,
-        "text": " his"
-      },
-      {
-        "end": 11.58,
-        "start": 8.88,
-        "text": " mistakes."
-      },
-      {
-        "end": 12.48,
-        "start": 11.64,
-        "text": " Take"
-      },
-      {
-        "end": 12.96,
-        "start": 12.48,
-        "text": " great"
-      },
-      {
-        "end": 13.32,
-        "start": 12.96,
-        "text": " care"
-      },
-      {
-        "end": 13.74,
-        "start": 13.32,
-        "text": " of"
-      },
-      {
-        "end": 14.1,
-        "start": 13.74,
-        "text": " this"
-      },
-      {
-        "end": 15.48,
-        "start": 14.1,
-        "text": " ring,"
-      },
-      {
-        "end": 15.6,
-        "start": 15.48,
-        "text": " she"
-      },
-      {
-        "end": 15.84,
-        "start": 15.6,
-        "text": " said"
-      },
-      {
-        "end": 17.28,
-        "start": 15.84,
-        "text": " it"
-      },
-      {
-        "end": 17.64,
-        "start": 17.28,
-        "text": " is"
-      },
-      {
-        "end": 18.12,
-        "start": 17.64,
-        "text": " more"
-      },
-      {
-        "end": 18.96,
-        "start": 18.12,
-        "text": " precious"
-      },
-      {
-        "end": 19.44,
-        "start": 18.96,
-        "text": " than"
-      },
-      {
-        "end": 21.24,
-        "start": 19.44,
-        "text": " diamonds."
-      },
-      {
-        "end": 22.44,
-        "start": 21.3,
-        "text": " Every"
-      },
-      {
-        "end": 23.16,
-        "start": 22.44,
-        "text": " time"
-      },
-      {
-        "end": 23.4,
-        "start": 23.16,
-        "text": " you"
-      },
-      {
-        "end": 23.7,
-        "start": 23.4,
-        "text": " do"
-      },
-      {
-        "end": 24.06,
-        "start": 23.7,
-        "text": " a"
-      },
-      {
-        "end": 24.36,
-        "start": 24.06,
-        "text": " bad"
-      },
-      {
-        "end": 25.2,
-        "start": 24.36,
-        "text": " deed,"
-      },
-      {
-        "end": 25.86,
-        "start": 25.2,
-        "text": " if"
-      },
-      {
-        "end": 26.94,
-        "start": 25.86,
-        "text": " it"
-      },
-      {
-        "end": 27.6,
-        "start": 26.94,
-        "text": " will"
-      },
-      {
-        "end": 28.32,
-        "start": 27.6,
-        "text": " prick"
-      },
-      {
-        "end": 28.62,
-        "start": 28.32,
-        "text": " your"
-      },
-      {
-        "end": 29.46,
-        "start": 28.62,
-        "text": " finger,"
-      },
-      {
-        "end": 30.78,
-        "start": 29.46,
-        "text": " if,"
-      },
-      {
-        "end": 30.9,
-        "start": 30.78,
-        "text": " in"
-      },
-      {
-        "end": 31.32,
-        "start": 30.9,
-        "text": " spite"
-      },
-      {
-        "end": 31.62,
-        "start": 31.32,
-        "text": " of"
-      },
-      {
-        "end": 32.34,
-        "start": 31.62,
-        "text": " it's"
-      },
-      {
-        "end": 33.42,
-        "start": 32.34,
-        "text": " breaking,"
-      },
-      {
-        "end": 33.84,
-        "start": 33.42,
-        "text": " you"
-      },
-      {
-        "end": 34.62,
-        "start": 33.84,
-        "text": " continue"
-      },
-      {
-        "end": 35.4,
-        "start": 34.62,
-        "text": " in"
-      },
-      {
-        "end": 35.82,
-        "start": 35.4,
-        "text": " your"
-      },
-      {
-        "end": 36.3,
-        "start": 35.82,
-        "text": " own"
-      },
-      {
-        "end": 37.02,
-        "start": 36.3,
-        "text": " evil"
-      },
-      {
-        "end": 37.5,
-        "start": 37.02,
-        "text": " ways,"
-      },
-      {
-        "end": 38.46,
-        "start": 37.5,
-        "text": " you"
-      },
-      {
-        "end": 38.76,
-        "start": 38.46,
-        "text": " will"
-      },
-      {
-        "end": 39.24,
-        "start": 38.76,
-        "text": " lose"
-      },
-      {
-        "end": 39.66,
-        "start": 39.24,
-        "text": " my"
-      },
-      {
-        "end": 40.62,
-        "start": 39.66,
-        "text": " friendship,"
-      },
-      {
-        "end": 41.4,
-        "start": 40.62,
-        "text": " and"
-      },
-      {
-        "end": 41.94,
-        "start": 41.4,
-        "text": " I"
-      },
-      {
-        "end": 42.36,
-        "start": 41.94,
-        "text": " will"
-      },
-      {
-        "end": 45.48,
-        "start": 42.36,
-        "text": " become"
-      },
-      {
-        "end": 46.38,
-        "start": 45.48,
-        "text": " your"
-      },
-      {
-        "end": 47.4,
-        "start": 46.38,
-        "text": " enemy."
-      },
-      {
-        "end": 49.2,
-        "start": 48.18,
-        "text": " After"
-      },
-      {
-        "end": 50.28,
-        "start": 49.2,
-        "text": " this"
-      },
-      {
-        "end": 50.88,
-        "start": 50.28,
-        "text": " word,"
-      },
-      {
-        "end": 52.38,
-        "start": 50.88,
-        "text": " the"
-      },
-      {
-        "end": 52.98,
-        "start": 52.38,
-        "text": " fairy"
-      },
-      {
-        "end": 53.94,
-        "start": 52.98,
-        "text": " disappeared,"
-      },
-      {
-        "end": 54.54,
-        "start": 53.94,
-        "text": " leaving"
-      },
-      {
-        "end": 55.44,
-        "start": 54.54,
-        "text": " Prince"
-      },
-      {
-        "end": 56.1,
-        "start": 55.44,
-        "text": " Darling"
-      },
-      {
-        "end": 56.46,
-        "start": 56.1,
-        "text": " in"
-      },
-      {
-        "end": 56.94,
-        "start": 56.46,
-        "text": " shock."
-      },
-      {
-        "end": 57.96,
-        "start": 57,
-        "text": " One"
-      },
-      {
-        "end": 58.5,
-        "start": 57.96,
-        "text": " day,"
-      },
-      {
-        "end": 59.46,
-        "start": 58.5,
-        "text": " however,"
-      },
-      {
-        "end": 60.78,
-        "start": 59.46,
-        "text": " Prince"
-      },
-      {
-        "end": 61.92,
-        "start": 60.78,
-        "text": " Darling,"
-      },
-      {
-        "end": 62.04,
-        "start": 61.92,
-        "text": " the"
-      },
-      {
-        "end": 62.82,
-        "start": 62.04,
-        "text": " happy,"
-      },
-      {
-        "end": 63.12,
-        "start": 62.82,
-        "text": " went"
-      },
-      {
-        "end": 63.78,
-        "start": 63.12,
-        "text": " out"
-      },
-      {
-        "end": 65.58,
-        "start": 63.78,
-        "text": " hunting,"
+  "pages" : [
+    {
+      "end" : 82.14,
+      "errors" : 6,
+      "extras" : 3,
+      "matched" : 105,
+      "page" : 65,
+      "start" : 0.48,
+      "words" : 105
+    }
+  ],
+  "refSuspects" : [
+
+  ],
+  "reference" : "for his faults, and to punish him if he does not correct his mistakes.\"\n\"Take great care of this ring,\" she said. \"It is more precious than diamonds.\nEvery time you do a bad deed, it will prick your finger. If, in spite of its\npricking, you continue in your own evil ways, you will lose my friendship, and\nI will become your enemy.\" After these words, the Fairy disappeared, leaving\nPrince Darling in shock.\nOne day, however, Prince Darling the Happy went out hunting. He had\ngone back to the hunting ground many times but didn't find any animals. This\nmade him very upset.",
+  "slug" : "super8/L3/p65",
+  "transcript" : {
+    "alternatives" : [
+      {
+        "end" : 0.9,
+        "start" : 0,
+        "texts" : [
+          "For his"
+        ]
+      },
+      {
+        "end" : 2.16,
+        "start" : 0.9,
+        "texts" : [
+          "fault, and",
+          "fault and"
+        ]
+      },
+      {
+        "end" : 3.48,
+        "start" : 2.16,
+        "texts" : [
+          "to punish"
+        ]
+      },
+      {
+        "end" : 4.74,
+        "start" : 3.48,
+        "texts" : [
+          "him, if",
+          "him if"
+        ]
+      },
+      {
+        "end" : 8.88,
+        "start" : 4.74,
+        "texts" : [
+          "he does not correct his"
+        ]
+      },
+      {
+        "end" : 11.64,
+        "start" : 8.88,
+        "texts" : [
+          "mistakes.",
+          "mistakes,"
+        ]
+      },
+      {
+        "end" : 15.6,
+        "start" : 11.64,
+        "texts" : [
+          "Take great care of this ring, she"
+        ]
+      },
+      {
+        "end" : 17.28,
+        "start" : 15.6,
+        "texts" : [
+          "said it",
+          "said, it",
+          "said, It"
+        ]
+      },
+      {
+        "end" : 19.44,
+        "start" : 17.28,
+        "texts" : [
+          "is more precious than"
+        ]
+      },
+      {
+        "end" : 21.3,
+        "start" : 19.44,
+        "texts" : [
+          "diamonds.",
+          "demons.",
+          "diamonds,"
+        ]
+      },
+      {
+        "end" : 29.46,
+        "start" : 21.3,
+        "texts" : [
+          "Every time you do a bad deed, if it will prick your finger,"
+        ]
       },
       {
-        "end": 65.94,
-        "start": 65.58,
-        "text": " he"
+        "end" : 30.9,
+        "start" : 29.46,
+        "texts" : [
+          "if, in",
+          "if in"
+        ]
       },
       {
-        "end": 67.14,
-        "start": 65.94,
-        "text": " had"
+        "end" : 41.94,
+        "start" : 30.9,
+        "texts" : [
+          "spite of it's breaking, you continue in your own evil ways, you will lose my friendship, and I"
+        ]
       },
       {
-        "end": 67.8,
-        "start": 67.14,
-        "text": " gone"
+        "end" : 45.48,
+        "start" : 41.94,
+        "texts" : [
+          "will become",
+          "will, become"
+        ]
       },
       {
-        "end": 69.3,
-        "start": 67.8,
-        "text": " out,"
+        "end" : 46.38,
+        "start" : 45.48,
+        "texts" : [
+          "your"
+        ]
       },
       {
-        "end": 72,
-        "start": 69.3,
-        "text": " gone"
+        "end" : 48.18,
+        "start" : 46.38,
+        "texts" : [
+          "enemy.",
+          "enemy,"
+        ]
       },
       {
-        "end": 72.48,
-        "start": 72,
-        "text": " back"
+        "end" : 49.2,
+        "start" : 48.18,
+        "texts" : [
+          "After"
+        ]
       },
       {
-        "end": 73.02,
-        "start": 72.48,
-        "text": " to"
+        "end" : 50.28,
+        "start" : 49.2,
+        "texts" : [
+          "this",
+          "these"
+        ]
       },
       {
-        "end": 73.08,
-        "start": 73.02,
-        "text": " the"
+        "end" : 50.88,
+        "start" : 50.28,
+        "texts" : [
+          "word,",
+          "words,"
+        ]
       },
       {
-        "end": 73.74,
-        "start": 73.08,
-        "text": " honking"
+        "end" : 52.38,
+        "start" : 50.88,
+        "texts" : [
+          "the",
+          "The"
+        ]
       },
       {
-        "end": 74.4,
-        "start": 73.74,
-        "text": " ground,"
+        "end" : 52.98,
+        "start" : 52.38,
+        "texts" : [
+          "fairy",
+          "ferry"
+        ]
       },
       {
-        "end": 74.94,
-        "start": 74.4,
-        "text": " many"
+        "end" : 56.46,
+        "start" : 52.98,
+        "texts" : [
+          "disappeared, leaving Prince Darling in"
+        ]
       },
       {
-        "end": 75.78,
-        "start": 74.94,
-        "text": " times,"
+        "end" : 57,
+        "start" : 56.46,
+        "texts" : [
+          "shock.",
+          "shock,"
+        ]
       },
       {
-        "end": 76.32,
-        "start": 75.78,
-        "text": " but"
+        "end" : 63.78,
+        "start" : 57,
+        "texts" : [
+          "One day, however, Prince Darling, the happy, went out"
+        ]
       },
       {
-        "end": 77.16,
-        "start": 76.32,
-        "text": " didn't"
+        "end" : 65.58,
+        "start" : 63.78,
+        "texts" : [
+          "hunting,",
+          "hunting."
+        ]
       },
       {
-        "end": 77.52,
-        "start": 77.16,
-        "text": " find"
+        "end" : 65.94,
+        "start" : 65.58,
+        "texts" : [
+          "he",
+          "He"
+        ]
       },
       {
-        "end": 78.06,
-        "start": 77.52,
-        "text": " any"
+        "end" : 73.08,
+        "start" : 65.94,
+        "texts" : [
+          "had gone out, gone back to the"
+        ]
       },
       {
-        "end": 78.66,
-        "start": 78.06,
-        "text": " animals."
+        "end" : 73.74,
+        "start" : 73.08,
+        "texts" : [
+          "honking",
+          "hunting"
+        ]
       },
       {
-        "end": 79.74,
-        "start": 78.72,
-        "text": " This"
+        "end" : 74.94,
+        "start" : 73.74,
+        "texts" : [
+          "ground, many",
+          "ground many"
+        ]
       },
       {
-        "end": 80.22,
-        "start": 79.74,
-        "text": " made"
+        "end" : 78.72,
+        "start" : 74.94,
+        "texts" : [
+          "times, but didn't find any animals."
+        ]
       },
       {
-        "end": 81.06,
-        "start": 80.22,
-        "text": " him"
+        "end" : 79.74,
+        "start" : 78.72,
+        "texts" : [
+          "This",
+          "They",
+          "These"
+        ]
       },
       {
-        "end": 81.54,
-        "start": 81.06,
-        "text": " very"
+        "end" : 80.22,
+        "start" : 79.74,
+        "texts" : [
+          "made",
+          "may",
+          "me"
+        ]
       },
       {
-        "end": 82.14,
-        "start": 81.54,
-        "text": " upset."
+        "end" : 82.26,
+        "start" : 80.22,
+        "texts" : [
+          "him very upset."
+        ]
       }
     ],
-    "source": "IMG_9035.m4a"
+    "contextPrimed" : true,
+    "locale" : "en-US",
+    "runs" : [
+      {
+        "confidence" : 0.996,
+        "end" : 0.48,
+        "start" : 0,
+        "text" : "For"
+      },
+      {
+        "confidence" : 0.721,
+        "end" : 0.9,
+        "start" : 0.48,
+        "text" : " his"
+      },
+      {
+        "confidence" : 0.669,
+        "end" : 1.86,
+        "start" : 0.9,
+        "text" : " fault,"
+      },
+      {
+        "confidence" : 0.999,
+        "end" : 2.16,
+        "start" : 1.86,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.999,
+        "end" : 2.64,
+        "start" : 2.16,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.999,
+        "end" : 3.48,
+        "start" : 2.64,
+        "text" : " punish"
+      },
+      {
+        "confidence" : 0.539,
+        "end" : 4.38,
+        "start" : 3.48,
+        "text" : " him,"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 4.74,
+        "start" : 4.38,
+        "text" : " if"
+      },
+      {
+        "confidence" : 0.968,
+        "end" : 6.12,
+        "start" : 4.74,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 6.66,
+        "start" : 6.12,
+        "text" : " does"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 7.02,
+        "start" : 6.66,
+        "text" : " not"
+      },
+      {
+        "confidence" : 0.988,
+        "end" : 8.04,
+        "start" : 7.02,
+        "text" : " correct"
+      },
+      {
+        "confidence" : 0.98,
+        "end" : 8.88,
+        "start" : 8.04,
+        "text" : " his"
+      },
+      {
+        "confidence" : 0.826,
+        "end" : 11.58,
+        "start" : 8.88,
+        "text" : " mistakes."
+      },
+      {
+        "confidence" : 0.743,
+        "end" : 12.48,
+        "start" : 11.64,
+        "text" : " Take"
+      },
+      {
+        "confidence" : 0.98,
+        "end" : 12.96,
+        "start" : 12.48,
+        "text" : " great"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 13.32,
+        "start" : 12.96,
+        "text" : " care"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 13.74,
+        "start" : 13.32,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.927,
+        "end" : 14.1,
+        "start" : 13.74,
+        "text" : " this"
+      },
+      {
+        "confidence" : 0.616,
+        "end" : 15.48,
+        "start" : 14.1,
+        "text" : " ring,"
+      },
+      {
+        "confidence" : 0.874,
+        "end" : 15.6,
+        "start" : 15.48,
+        "text" : " she"
+      },
+      {
+        "confidence" : 0.965,
+        "end" : 15.84,
+        "start" : 15.6,
+        "text" : " said"
+      },
+      {
+        "confidence" : 0.736,
+        "end" : 17.28,
+        "start" : 15.84,
+        "text" : " it"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 17.64,
+        "start" : 17.28,
+        "text" : " is"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 18.12,
+        "start" : 17.64,
+        "text" : " more"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 18.96,
+        "start" : 18.12,
+        "text" : " precious"
+      },
+      {
+        "confidence" : 0.905,
+        "end" : 19.44,
+        "start" : 18.96,
+        "text" : " than"
+      },
+      {
+        "confidence" : 0.445,
+        "end" : 21.24,
+        "start" : 19.44,
+        "text" : " diamonds."
+      },
+      {
+        "confidence" : 0.256,
+        "end" : 22.44,
+        "start" : 21.3,
+        "text" : " Every"
+      },
+      {
+        "confidence" : 0.923,
+        "end" : 23.16,
+        "start" : 22.44,
+        "text" : " time"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 23.4,
+        "start" : 23.16,
+        "text" : " you"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 23.7,
+        "start" : 23.4,
+        "text" : " do"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 24.06,
+        "start" : 23.7,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.934,
+        "end" : 24.36,
+        "start" : 24.06,
+        "text" : " bad"
+      },
+      {
+        "confidence" : 0.354,
+        "end" : 25.2,
+        "start" : 24.36,
+        "text" : " deed,"
+      },
+      {
+        "confidence" : 0.614,
+        "end" : 25.86,
+        "start" : 25.2,
+        "text" : " if"
+      },
+      {
+        "confidence" : 0.804,
+        "end" : 26.94,
+        "start" : 25.86,
+        "text" : " it"
+      },
+      {
+        "confidence" : 0.954,
+        "end" : 27.6,
+        "start" : 26.94,
+        "text" : " will"
+      },
+      {
+        "confidence" : 0.918,
+        "end" : 28.32,
+        "start" : 27.6,
+        "text" : " prick"
+      },
+      {
+        "confidence" : 0.988,
+        "end" : 28.62,
+        "start" : 28.32,
+        "text" : " your"
+      },
+      {
+        "confidence" : 0.83,
+        "end" : 29.46,
+        "start" : 28.62,
+        "text" : " finger,"
+      },
+      {
+        "confidence" : 0.532,
+        "end" : 30.78,
+        "start" : 29.46,
+        "text" : " if,"
+      },
+      {
+        "confidence" : 0.812,
+        "end" : 30.9,
+        "start" : 30.78,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.973,
+        "end" : 31.32,
+        "start" : 30.9,
+        "text" : " spite"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 31.62,
+        "start" : 31.32,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.774,
+        "end" : 32.34,
+        "start" : 31.62,
+        "text" : " it's"
+      },
+      {
+        "confidence" : 0.738,
+        "end" : 33.42,
+        "start" : 32.34,
+        "text" : " breaking,"
+      },
+      {
+        "confidence" : 0.928,
+        "end" : 33.84,
+        "start" : 33.42,
+        "text" : " you"
+      },
+      {
+        "confidence" : 0.966,
+        "end" : 34.62,
+        "start" : 33.84,
+        "text" : " continue"
+      },
+      {
+        "confidence" : 0.935,
+        "end" : 35.4,
+        "start" : 34.62,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 35.82,
+        "start" : 35.4,
+        "text" : " your"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 36.3,
+        "start" : 35.82,
+        "text" : " own"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 37.02,
+        "start" : 36.3,
+        "text" : " evil"
+      },
+      {
+        "confidence" : 0.685,
+        "end" : 37.5,
+        "start" : 37.02,
+        "text" : " ways,"
+      },
+      {
+        "confidence" : 0.808,
+        "end" : 38.46,
+        "start" : 37.5,
+        "text" : " you"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 38.76,
+        "start" : 38.46,
+        "text" : " will"
+      },
+      {
+        "confidence" : 0.883,
+        "end" : 39.24,
+        "start" : 38.76,
+        "text" : " lose"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 39.66,
+        "start" : 39.24,
+        "text" : " my"
+      },
+      {
+        "confidence" : 0.688,
+        "end" : 40.62,
+        "start" : 39.66,
+        "text" : " friendship,"
+      },
+      {
+        "confidence" : 0.704,
+        "end" : 41.4,
+        "start" : 40.62,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 41.94,
+        "start" : 41.4,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.975,
+        "end" : 42.36,
+        "start" : 41.94,
+        "text" : " will"
+      },
+      {
+        "confidence" : 0.725,
+        "end" : 45.48,
+        "start" : 42.36,
+        "text" : " become"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 46.38,
+        "start" : 45.48,
+        "text" : " your"
+      },
+      {
+        "confidence" : 0.686,
+        "end" : 47.4,
+        "start" : 46.38,
+        "text" : " enemy."
+      },
+      {
+        "confidence" : 0.272,
+        "end" : 49.2,
+        "start" : 48.18,
+        "text" : " After"
+      },
+      {
+        "confidence" : 0.744,
+        "end" : 50.28,
+        "start" : 49.2,
+        "text" : " this"
+      },
+      {
+        "confidence" : 0.277,
+        "end" : 50.88,
+        "start" : 50.28,
+        "text" : " word,"
+      },
+      {
+        "confidence" : 0.68,
+        "end" : 52.38,
+        "start" : 50.88,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.587,
+        "end" : 52.98,
+        "start" : 52.38,
+        "text" : " fairy"
+      },
+      {
+        "confidence" : 0.665,
+        "end" : 53.94,
+        "start" : 52.98,
+        "text" : " disappeared,"
+      },
+      {
+        "confidence" : 0.863,
+        "end" : 54.54,
+        "start" : 53.94,
+        "text" : " leaving"
+      },
+      {
+        "confidence" : 0.832,
+        "end" : 55.44,
+        "start" : 54.54,
+        "text" : " Prince"
+      },
+      {
+        "confidence" : 0.752,
+        "end" : 56.1,
+        "start" : 55.44,
+        "text" : " Darling"
+      },
+      {
+        "confidence" : 0.978,
+        "end" : 56.46,
+        "start" : 56.1,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.744,
+        "end" : 56.94,
+        "start" : 56.46,
+        "text" : " shock."
+      },
+      {
+        "confidence" : 0.788,
+        "end" : 57.96,
+        "start" : 57,
+        "text" : " One"
+      },
+      {
+        "confidence" : 0.838,
+        "end" : 58.5,
+        "start" : 57.96,
+        "text" : " day,"
+      },
+      {
+        "confidence" : 0.85,
+        "end" : 59.46,
+        "start" : 58.5,
+        "text" : " however,"
+      },
+      {
+        "confidence" : 0.956,
+        "end" : 60.78,
+        "start" : 59.46,
+        "text" : " Prince"
+      },
+      {
+        "confidence" : 0.547,
+        "end" : 61.92,
+        "start" : 60.78,
+        "text" : " Darling,"
+      },
+      {
+        "confidence" : 0.975,
+        "end" : 62.04,
+        "start" : 61.92,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.306,
+        "end" : 62.82,
+        "start" : 62.04,
+        "text" : " happy,"
+      },
+      {
+        "confidence" : 0.937,
+        "end" : 63.12,
+        "start" : 62.82,
+        "text" : " went"
+      },
+      {
+        "confidence" : 0.964,
+        "end" : 63.78,
+        "start" : 63.12,
+        "text" : " out"
+      },
+      {
+        "confidence" : 0.655,
+        "end" : 65.58,
+        "start" : 63.78,
+        "text" : " hunting,"
+      },
+      {
+        "confidence" : 0.663,
+        "end" : 65.94,
+        "start" : 65.58,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.815,
+        "end" : 67.14,
+        "start" : 65.94,
+        "text" : " had"
+      },
+      {
+        "confidence" : 0.611,
+        "end" : 67.8,
+        "start" : 67.14,
+        "text" : " gone"
+      },
+      {
+        "confidence" : 0.436,
+        "end" : 69.3,
+        "start" : 67.8,
+        "text" : " out,"
+      },
+      {
+        "confidence" : 0.217,
+        "end" : 72,
+        "start" : 69.3,
+        "text" : " gone"
+      },
+      {
+        "confidence" : 0.955,
+        "end" : 72.48,
+        "start" : 72,
+        "text" : " back"
+      },
+      {
+        "confidence" : 0.977,
+        "end" : 73.02,
+        "start" : 72.48,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.98,
+        "end" : 73.08,
+        "start" : 73.02,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.671,
+        "end" : 73.74,
+        "start" : 73.08,
+        "text" : " honking"
+      },
+      {
+        "confidence" : 0.562,
+        "end" : 74.4,
+        "start" : 73.74,
+        "text" : " ground,"
+      },
+      {
+        "confidence" : 0.701,
+        "end" : 74.94,
+        "start" : 74.4,
+        "text" : " many"
+      },
+      {
+        "confidence" : 0.64,
+        "end" : 75.78,
+        "start" : 74.94,
+        "text" : " times,"
+      },
+      {
+        "confidence" : 0.855,
+        "end" : 76.32,
+        "start" : 75.78,
+        "text" : " but"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 77.16,
+        "start" : 76.32,
+        "text" : " didn't"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 77.52,
+        "start" : 77.16,
+        "text" : " find"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 78.06,
+        "start" : 77.52,
+        "text" : " any"
+      },
+      {
+        "confidence" : 0.769,
+        "end" : 78.66,
+        "start" : 78.06,
+        "text" : " animals."
+      },
+      {
+        "confidence" : 0.232,
+        "end" : 79.74,
+        "start" : 78.72,
+        "text" : " This"
+      },
+      {
+        "confidence" : 0.173,
+        "end" : 80.22,
+        "start" : 79.74,
+        "text" : " made"
+      },
+      {
+        "confidence" : 0.877,
+        "end" : 81.06,
+        "start" : 80.22,
+        "text" : " him"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 81.54,
+        "start" : 81.06,
+        "text" : " very"
+      },
+      {
+        "confidence" : 0.973,
+        "end" : 82.14,
+        "start" : 81.54,
+        "text" : " upset."
+      }
+    ],
+    "source" : "IMG_9035.m4a"
   },
-  "words": [
+  "words" : [
     "for",
     "his",
     "fault",

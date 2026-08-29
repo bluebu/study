@@ -1,245 +1,324 @@
 {
-  "acoustics": {
-    "duration": 55.51,
-    "pause_count": 25,
-    "pause_ratio": 0.347,
-    "pause_total": 19.24,
-    "pauses": [
+  "acoustics" : {
+    "duration" : 55.51,
+    "pause_count" : 29,
+    "pause_ratio" : 0.408,
+    "pause_total" : 22.65,
+    "pauses" : [
       {
-        "dur": 0.35,
-        "end": 2.4,
-        "start": 2.05
+        "dur" : 0.36,
+        "end" : 2.4,
+        "start" : 2.04
       },
       {
-        "dur": 0.35,
-        "end": 3.77,
-        "start": 3.42
+        "dur" : 0.5,
+        "end" : 3.77,
+        "start" : 3.27
       },
       {
-        "dur": 0.65,
-        "end": 5.91,
-        "start": 5.26
+        "dur" : 0.73,
+        "end" : 5.97,
+        "start" : 5.24
       },
       {
-        "dur": 0.35,
-        "end": 8.49,
-        "start": 8.14
+        "dur" : 0.42,
+        "end" : 8.49,
+        "start" : 8.07
       },
       {
-        "dur": 0.44,
-        "end": 10.06,
-        "start": 9.62
+        "dur" : 0.46,
+        "end" : 10.07,
+        "start" : 9.61
       },
       {
-        "dur": 0.25,
-        "end": 11.02,
-        "start": 10.77
+        "dur" : 0.25,
+        "end" : 10.73,
+        "start" : 10.48
       },
       {
-        "dur": 1.45,
-        "end": 13.81,
-        "start": 12.36
+        "dur" : 0.33,
+        "end" : 11.09,
+        "start" : 10.76
       },
       {
-        "dur": 1.28,
-        "end": 16.34,
-        "start": 15.06
+        "dur" : 1.46,
+        "end" : 13.81,
+        "start" : 12.35
       },
       {
-        "dur": 0.99,
-        "end": 20.9,
-        "start": 19.91
+        "dur" : 1.35,
+        "end" : 16.34,
+        "start" : 14.99
       },
       {
-        "dur": 1.06,
-        "end": 21.99,
-        "start": 20.93
+        "dur" : 0.3,
+        "end" : 17.88,
+        "start" : 17.58
       },
       {
-        "dur": 0.95,
-        "end": 27.4,
-        "start": 26.45
+        "dur" : 0.52,
+        "end" : 18.73,
+        "start" : 18.21
       },
       {
-        "dur": 2.99,
-        "end": 33.61,
-        "start": 30.62
+        "dur" : 2.11,
+        "end" : 22,
+        "start" : 19.89
       },
       {
-        "dur": 0.27,
-        "end": 36.67,
-        "start": 36.4
+        "dur" : 0.39,
+        "end" : 23.48,
+        "start" : 23.09
       },
       {
-        "dur": 1.23,
-        "end": 38.69,
-        "start": 37.46
+        "dur" : 0.99,
+        "end" : 27.41,
+        "start" : 26.42
       },
       {
-        "dur": 0.64,
-        "end": 40.47,
-        "start": 39.83
+        "dur" : 3.02,
+        "end" : 33.62,
+        "start" : 30.6
       },
       {
-        "dur": 0.32,
-        "end": 42.81,
-        "start": 42.49
+        "dur" : 0.45,
+        "end" : 36.81,
+        "start" : 36.36
       },
       {
-        "dur": 0.83,
-        "end": 44.15,
-        "start": 43.32
+        "dur" : 1.28,
+        "end" : 38.69,
+        "start" : 37.41
       },
       {
-        "dur": 1.05,
-        "end": 45.61,
-        "start": 44.56
+        "dur" : 0.7,
+        "end" : 40.48,
+        "start" : 39.78
       },
       {
-        "dur": 0.31,
-        "end": 45.97,
-        "start": 45.66
+        "dur" : 0.32,
+        "end" : 42.81,
+        "start" : 42.49
       },
       {
-        "dur": 0.96,
-        "end": 48.42,
-        "start": 47.46
+        "dur" : 1.03,
+        "end" : 44.28,
+        "start" : 43.25
       },
       {
-        "dur": 0.64,
-        "end": 49.18,
-        "start": 48.54
+        "dur" : 1.06,
+        "end" : 45.62,
+        "start" : 44.56
       },
       {
-        "dur": 0.4,
-        "end": 51.48,
-        "start": 51.08
+        "dur" : 0.38,
+        "end" : 46.01,
+        "start" : 45.63
       },
       {
-        "dur": 0.62,
-        "end": 52.56,
-        "start": 51.94
+        "dur" : 1.02,
+        "end" : 48.43,
+        "start" : 47.41
       },
       {
-        "dur": 0.43,
-        "end": 53.5,
-        "start": 53.07
+        "dur" : 0.92,
+        "end" : 49.42,
+        "start" : 48.5
       },
       {
-        "dur": 0.43,
-        "end": 55.48,
-        "start": 55.05
+        "dur" : 0.41,
+        "end" : 51.48,
+        "start" : 51.07
+      },
+      {
+        "dur" : 0.67,
+        "end" : 52.57,
+        "start" : 51.9
+      },
+      {
+        "dur" : 0.51,
+        "end" : 53.51,
+        "start" : 53
+      },
+      {
+        "dur" : 0.26,
+        "end" : 54.97,
+        "start" : 54.71
+      },
+      {
+        "dur" : 0.45,
+        "end" : 55.48,
+        "start" : 55.03
       }
     ],
-    "source": "IMG_9039.m4a",
-    "speech_time": 36.27,
-    "threshold_db": -27.5
+    "source" : "IMG_9039.m4a",
+    "speech_time" : 32.86,
+    "threshold_db" : -24
   },
-  "alignment": {
-    "accuracy": 93.4,
-    "correctWordCount": 71,
-    "diffs": [
+  "alignment" : {
+    "accuracy" : 93.4,
+    "correctWordCount" : 71,
+    "diffs" : [
       {
-        "context": "nurse who always spoiled him since he",
-        "end": 7.26,
-        "kind": "substitute",
-        "read": "spelled",
-        "ref": "spoiled",
-        "refIndex": 13,
-        "start": 6.48
+        "category" : "content",
+        "confidence" : 0.892,
+        "context" : "nurse who always spoiled him since he",
+        "end" : 7.26,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "spelled",
+        "ref" : "spoiled",
+        "refIndex" : 13,
+        "start" : 6.48,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
       },
       {
-        "context": "spoiled him since he was a child",
-        "end": 8.7,
-        "kind": "insert",
-        "read": "he",
-        "refIndex": 16,
-        "start": 8.1
+        "category" : "extra",
+        "confidence" : 0.967,
+        "context" : "spoiled him since he was a child",
+        "end" : 8.7,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "he",
+        "refIndex" : 16,
+        "start" : 8.1,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "spoiled him since he was a child",
-        "end": 9.12,
-        "kind": "insert",
-        "read": "was",
-        "refIndex": 16,
-        "start": 8.7
+        "category" : "extra",
+        "confidence" : 0.996,
+        "context" : "spoiled him since he was a child",
+        "end" : 9.12,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "was",
+        "refIndex" : 16,
+        "start" : 8.7,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "spoiled him since he was a child",
-        "end": 9.48,
-        "kind": "insert",
-        "read": "a",
-        "refIndex": 16,
-        "start": 9.12
+        "category" : "extra",
+        "confidence" : 0.902,
+        "context" : "spoiled him since he was a child",
+        "end" : 9.48,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "a",
+        "refIndex" : 16,
+        "start" : 9.12,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "spoiled him since he was a child",
-        "end": 11.28,
-        "kind": "insert",
-        "read": "little",
-        "refIndex": 16,
-        "start": 9.48
+        "category" : "extra",
+        "confidence" : 0.088,
+        "context" : "spoiled him since he was a child",
+        "end" : 11.28,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "little",
+        "refIndex" : 16,
+        "start" : 9.48,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.09 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "one day you will be king as",
-        "end": 17.46,
-        "kind": "insert",
-        "read": "will",
-        "refIndex": 26,
-        "start": 17.22
+        "category" : "extra",
+        "confidence" : 0.979,
+        "context" : "one day you will be king as",
+        "end" : 17.46,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "will",
+        "refIndex" : 26,
+        "start" : 17.22,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "one day you will be king as",
-        "end": 17.88,
-        "kind": "insert",
-        "read": "be",
-        "refIndex": 26,
-        "start": 17.46
+        "category" : "extra",
+        "confidence" : 0.938,
+        "context" : "one day you will be king as",
+        "end" : 17.88,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "be",
+        "refIndex" : 26,
+        "start" : 17.46,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "one day you will be king as",
-        "end": 18.48,
-        "kind": "insert",
-        "read": "a",
-        "refIndex": 26,
-        "start": 17.88
+        "category" : "extra",
+        "confidence" : 0.221,
+        "context" : "one day you will be king as",
+        "end" : 18.48,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "a",
+        "refIndex" : 26,
+        "start" : 17.88,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.22 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "unhappy to have to struggle against my",
-        "end": 36.18,
-        "kind": "substitute",
-        "read": "the",
-        "ref": "to",
-        "refIndex": 52,
-        "start": 35.82
+        "category" : "function",
+        "confidence" : 0.982,
+        "context" : "unhappy to have to struggle against my",
+        "end" : 36.18,
+        "kind" : "substitute",
+        "label" : "小词",
+        "read" : "the",
+        "ref" : "to",
+        "refIndex" : 52,
+        "start" : 35.82,
+        "suggest" : "count",
+        "why" : "两个都是小词，读串了。这类错扎堆出现就是眼睛跑在手指前面"
       },
       {
-        "context": "pride every day he thought to himself",
-        "end": 46.32,
-        "kind": "substitute",
-        "read": "kiss",
-        "ref": "he",
-        "refIndex": 61,
-        "start": 44.4
+        "category" : "content",
+        "confidence" : 0.13,
+        "context" : "pride every day he thought to himself",
+        "end" : 46.32,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "kiss",
+        "ref" : "he",
+        "refIndex" : 61,
+        "start" : 44.4,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.13 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "every day he thought to himself if",
-        "end": 46.56,
-        "kind": "substitute",
-        "read": "out",
-        "ref": "thought",
-        "refIndex": 62,
-        "start": 46.32
+        "category" : "content",
+        "confidence" : 0.379,
+        "context" : "every day he thought to himself if",
+        "end" : 46.56,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "out",
+        "ref" : "thought",
+        "refIndex" : 62,
+        "start" : 46.32,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
       },
       {
-        "context": "been punished for them when i was",
-        "kind": "omit",
-        "ref": "them",
-        "refIndex": 71
+        "category" : "omitted",
+        "context" : "been punished for them when i was",
+        "kind" : "omit",
+        "label" : "漏读",
+        "ref" : "them",
+        "refIndex" : 71,
+        "suggest" : "count",
+        "why" : "整个词跳过去了"
       }
     ],
-    "readWordCount": 82,
-    "refTimes": [
+    "readWordCount" : 82,
+    "refTimes" : [
       0.42,
       0.84,
       1.44,
@@ -317,429 +396,794 @@
       54.12,
       54.48
     ],
-    "refWordCount": 76,
-    "wcpm": 77
+    "refWordCount" : 76,
+    "wcpm" : 77
   },
-  "reference": "Prince Darling had\nalso been brought up by a foolish nurse,\nwho always spoiled him since he was a\nchild.\n\"Remember,\nmy dear, one day you will be King. As a king, you can do whatever you please.\nNo one will have the power to stop you.\"\n\"I'm very unhappy to have to struggle against my anger and pride every\nday,\" he thought to himself. \"If I had been punished for them when I was little,",
-  "slug": "super8/L3/p67",
-  "transcript": {
-    "contextPrimed": true,
-    "locale": "en-US",
-    "runs": [
-      {
-        "end": 0.42,
-        "start": 0,
-        "text": "Prince"
-      },
-      {
-        "end": 0.84,
-        "start": 0.42,
-        "text": " darling"
-      },
-      {
-        "end": 1.44,
-        "start": 0.84,
-        "text": " had"
-      },
-      {
-        "end": 1.8,
-        "start": 1.44,
-        "text": " also"
-      },
-      {
-        "end": 2.52,
-        "start": 1.8,
-        "text": " been"
-      },
-      {
-        "end": 3,
-        "start": 2.52,
-        "text": " brought"
-      },
-      {
-        "end": 3.36,
-        "start": 3,
-        "text": " up"
-      },
-      {
-        "end": 4.02,
-        "start": 3.36,
-        "text": " by"
-      },
-      {
-        "end": 4.26,
-        "start": 4.02,
-        "text": " a"
-      },
-      {
-        "end": 4.8,
-        "start": 4.26,
-        "text": " foolish"
-      },
-      {
-        "end": 5.58,
-        "start": 4.8,
-        "text": " nurse,"
-      },
-      {
-        "end": 6.12,
-        "start": 5.58,
-        "text": " who"
-      },
-      {
-        "end": 6.48,
-        "start": 6.12,
-        "text": " always"
-      },
-      {
-        "end": 7.26,
-        "start": 6.48,
-        "text": " spelled"
-      },
-      {
-        "end": 7.62,
-        "start": 7.26,
-        "text": " him"
-      },
-      {
-        "end": 8.1,
-        "start": 7.62,
-        "text": " since"
-      },
-      {
-        "end": 8.7,
-        "start": 8.1,
-        "text": " he"
-      },
-      {
-        "end": 9.12,
-        "start": 8.7,
-        "text": " was"
-      },
-      {
-        "end": 9.48,
-        "start": 9.12,
-        "text": " a"
-      },
-      {
-        "end": 11.28,
-        "start": 9.48,
-        "text": " little,"
-      },
-      {
-        "end": 11.58,
-        "start": 11.28,
-        "text": " he"
-      },
-      {
-        "end": 11.7,
-        "start": 11.58,
-        "text": " was"
-      },
-      {
-        "end": 11.88,
-        "start": 11.7,
-        "text": " a"
-      },
-      {
-        "end": 12.12,
-        "start": 11.88,
-        "text": " child."
-      },
-      {
-        "end": 14.46,
-        "start": 12.24,
-        "text": " Remember,"
-      },
-      {
-        "end": 14.58,
-        "start": 14.46,
-        "text": " my"
-      },
-      {
-        "end": 15.12,
-        "start": 14.58,
-        "text": " dear."
-      },
-      {
-        "end": 16.62,
-        "start": 15.24,
-        "text": " One"
-      },
-      {
-        "end": 17.1,
-        "start": 16.62,
-        "text": " day,"
-      },
-      {
-        "end": 17.22,
-        "start": 17.1,
-        "text": " you"
-      },
-      {
-        "end": 17.46,
-        "start": 17.22,
-        "text": " will"
-      },
-      {
-        "end": 17.88,
-        "start": 17.46,
-        "text": " be"
-      },
-      {
-        "end": 18.48,
-        "start": 17.88,
-        "text": " a,"
-      },
-      {
-        "end": 19.26,
-        "start": 18.48,
-        "text": " will"
-      },
-      {
-        "end": 19.38,
-        "start": 19.26,
-        "text": " be"
-      },
-      {
-        "end": 19.68,
-        "start": 19.38,
-        "text": " king."
-      },
-      {
-        "end": 22.14,
-        "start": 19.8,
-        "text": " As"
-      },
-      {
-        "end": 22.38,
-        "start": 22.14,
-        "text": " a"
-      },
-      {
-        "end": 22.68,
-        "start": 22.38,
-        "text": " king."
-      },
-      {
-        "end": 23.76,
-        "start": 22.8,
-        "text": " You"
-      },
-      {
-        "end": 24,
-        "start": 23.76,
-        "text": " can"
-      },
-      {
-        "end": 24.36,
-        "start": 24,
-        "text": " do"
-      },
-      {
-        "end": 24.78,
-        "start": 24.36,
-        "text": " whatever"
-      },
-      {
-        "end": 25.62,
-        "start": 24.78,
-        "text": " you"
-      },
-      {
-        "end": 26.1,
-        "start": 25.62,
-        "text": " please."
-      },
-      {
-        "end": 27.72,
-        "start": 26.16,
-        "text": " No"
-      },
-      {
-        "end": 27.96,
-        "start": 27.72,
-        "text": " one"
-      },
-      {
-        "end": 28.26,
-        "start": 27.96,
-        "text": " will"
-      },
-      {
-        "end": 28.68,
-        "start": 28.26,
-        "text": " have"
-      },
-      {
-        "end": 29.1,
-        "start": 28.68,
-        "text": " the"
-      },
-      {
-        "end": 29.4,
-        "start": 29.1,
-        "text": " power"
-      },
-      {
-        "end": 29.76,
-        "start": 29.4,
-        "text": " to"
-      },
-      {
-        "end": 30,
-        "start": 29.76,
-        "text": " stop"
-      },
-      {
-        "end": 30.78,
-        "start": 30,
-        "text": " you."
-      },
-      {
-        "end": 34.14,
-        "start": 30.84,
-        "text": " I'm"
-      },
-      {
-        "end": 34.62,
-        "start": 34.14,
-        "text": " very"
-      },
-      {
-        "end": 35.16,
-        "start": 34.62,
-        "text": " unhappy"
-      },
-      {
-        "end": 35.52,
-        "start": 35.16,
-        "text": " to"
-      },
-      {
-        "end": 35.82,
-        "start": 35.52,
-        "text": " have"
+  "pages" : [
+    {
+      "end" : 54.48,
+      "errors" : 5,
+      "extras" : 7,
+      "matched" : 75,
+      "page" : 67,
+      "start" : 0.42,
+      "words" : 76
+    }
+  ],
+  "refSuspects" : [
+
+  ],
+  "reference" : "Prince Darling had\nalso been brought up by a foolish nurse,\nwho always spoiled him since he was a\nchild.\n\"Remember,\nmy dear, one day you will be King. As a king, you can do whatever you please.\nNo one will have the power to stop you.\"\n\"I'm very unhappy to have to struggle against my anger and pride every\nday,\" he thought to himself. \"If I had been punished for them when I was little,",
+  "slug" : "super8/L3/p67",
+  "transcript" : {
+    "alternatives" : [
+      {
+        "end" : 0.42,
+        "start" : 0,
+        "texts" : [
+          "Prince"
+        ]
+      },
+      {
+        "end" : 1.44,
+        "start" : 0.42,
+        "texts" : [
+          "darling had",
+          "Darling had"
+        ]
+      },
+      {
+        "end" : 9.12,
+        "start" : 1.44,
+        "texts" : [
+          "also been brought up by a foolish nurse, who always spelled him since he was"
+        ]
+      },
+      {
+        "end" : 11.58,
+        "start" : 9.12,
+        "texts" : [
+          "a little, he",
+          "a, he",
+          "a little. He"
+        ]
+      },
+      {
+        "end" : 12.24,
+        "start" : 11.58,
+        "texts" : [
+          "was a child."
+        ]
+      },
+      {
+        "end" : 14.58,
+        "start" : 12.24,
+        "texts" : [
+          "Remember, my",
+          "Remember my"
+        ]
+      },
+      {
+        "end" : 15.24,
+        "start" : 14.58,
+        "texts" : [
+          "dear.",
+          "dear?"
+        ]
+      },
+      {
+        "end" : 16.62,
+        "start" : 15.24,
+        "texts" : [
+          "One"
+        ]
+      },
+      {
+        "end" : 17.22,
+        "start" : 16.62,
+        "texts" : [
+          "day, you",
+          "day you"
+        ]
+      },
+      {
+        "end" : 17.46,
+        "start" : 17.22,
+        "texts" : [
+          "will"
+        ]
+      },
+      {
+        "end" : 19.26,
+        "start" : 17.46,
+        "texts" : [
+          "be a, will",
+          "be a will",
+          "be, uh, will"
+        ]
       },
       {
-        "end": 36.18,
-        "start": 35.82,
-        "text": " the"
+        "end" : 19.8,
+        "start" : 19.26,
+        "texts" : [
+          "be king."
+        ]
       },
       {
-        "end": 37.14,
-        "start": 36.18,
-        "text": " struggle"
+        "end" : 22.14,
+        "start" : 19.8,
+        "texts" : [
+          "As",
+          "as"
+        ]
       },
       {
-        "end": 39.06,
-        "start": 37.14,
-        "text": " against"
+        "end" : 22.38,
+        "start" : 22.14,
+        "texts" : [
+          "a"
+        ]
       },
       {
-        "end": 40.74,
-        "start": 39.06,
-        "text": " my"
+        "end" : 22.8,
+        "start" : 22.38,
+        "texts" : [
+          "king.",
+          "King.",
+          "king...",
+          "king. As"
+        ]
       },
       {
-        "end": 41.46,
-        "start": 40.74,
-        "text": " anger"
+        "end" : 23.76,
+        "start" : 22.8,
+        "texts" : [
+          "You",
+          "you"
+        ]
       },
       {
-        "end": 41.76,
-        "start": 41.46,
-        "text": " and"
+        "end" : 24.36,
+        "start" : 23.76,
+        "texts" : [
+          "can do"
+        ]
       },
       {
-        "end": 42.42,
-        "start": 41.76,
-        "text": " pride"
+        "end" : 25.62,
+        "start" : 24.36,
+        "texts" : [
+          "whatever you",
+          "whatever, you"
+        ]
       },
       {
-        "end": 42.96,
-        "start": 42.42,
-        "text": " every"
+        "end" : 26.16,
+        "start" : 25.62,
+        "texts" : [
+          "please.",
+          "please,"
+        ]
       },
       {
-        "end": 44.34,
-        "start": 42.96,
-        "text": " day."
+        "end" : 27.72,
+        "start" : 26.16,
+        "texts" : [
+          "No",
+          "no"
+        ]
       },
       {
-        "end": 46.32,
-        "start": 44.4,
-        "text": " Kiss"
+        "end" : 30,
+        "start" : 27.72,
+        "texts" : [
+          "one will have the power to stop"
+        ]
       },
       {
-        "end": 46.56,
-        "start": 46.32,
-        "text": " out"
+        "end" : 30.84,
+        "start" : 30,
+        "texts" : [
+          "you.",
+          "you?",
+          "you,"
+        ]
       },
       {
-        "end": 46.86,
-        "start": 46.56,
-        "text": " to"
+        "end" : 34.62,
+        "start" : 30.84,
+        "texts" : [
+          "I'm very",
+          "I am very"
+        ]
       },
       {
-        "end": 47.28,
-        "start": 46.86,
-        "text": " himself."
+        "end" : 36.18,
+        "start" : 34.62,
+        "texts" : [
+          "unhappy to have the"
+        ]
       },
       {
-        "end": 49.68,
-        "start": 47.34,
-        "text": " If"
+        "end" : 39.06,
+        "start" : 36.18,
+        "texts" : [
+          "struggle against",
+          "struggle, against"
+        ]
       },
       {
-        "end": 49.98,
-        "start": 49.68,
-        "text": " I"
+        "end" : 41.76,
+        "start" : 39.06,
+        "texts" : [
+          "my anger and"
+        ]
       },
       {
-        "end": 50.16,
-        "start": 49.98,
-        "text": " had"
+        "end" : 44.4,
+        "start" : 41.76,
+        "texts" : [
+          "pride every day.",
+          "pride every.",
+          "pride, every."
+        ]
       },
       {
-        "end": 50.4,
-        "start": 50.16,
-        "text": " been"
+        "end" : 46.56,
+        "start" : 44.4,
+        "texts" : [
+          "Kiss out",
+          "He thought",
+          "Case out"
+        ]
       },
       {
-        "end": 50.94,
-        "start": 50.4,
-        "text": " punished"
+        "end" : 46.86,
+        "start" : 46.56,
+        "texts" : [
+          "to"
+        ]
       },
       {
-        "end": 53.1,
-        "start": 50.94,
-        "text": " for,"
+        "end" : 47.3399375,
+        "start" : 46.86,
+        "texts" : [
+          "himself.",
+          "himself?"
+        ]
       },
       {
-        "end": 53.88,
-        "start": 53.1,
-        "text": " when"
+        "end" : 50.94,
+        "start" : 47.34,
+        "texts" : [
+          "If I had been punished"
+        ]
       },
       {
-        "end": 54.06,
-        "start": 53.88,
-        "text": " I"
+        "end" : 53.88,
+        "start" : 50.94,
+        "texts" : [
+          "for, when",
+          "for them, when",
+          "for them when",
+          "for when"
+        ]
       },
       {
-        "end": 54.12,
-        "start": 54.06,
-        "text": " was"
+        "end" : 54.12,
+        "start" : 53.88,
+        "texts" : [
+          "I was"
+        ]
       },
       {
-        "end": 54.48,
-        "start": 54.12,
-        "text": " little."
+        "end" : 54.54,
+        "start" : 54.12,
+        "texts" : [
+          "little.",
+          "little,"
+        ]
       }
     ],
-    "source": "IMG_9039.m4a"
+    "contextPrimed" : true,
+    "locale" : "en-US",
+    "runs" : [
+      {
+        "confidence" : 0.989,
+        "end" : 0.42,
+        "start" : 0,
+        "text" : "Prince"
+      },
+      {
+        "confidence" : 0.684,
+        "end" : 0.84,
+        "start" : 0.42,
+        "text" : " darling"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 1.44,
+        "start" : 0.84,
+        "text" : " had"
+      },
+      {
+        "confidence" : 1,
+        "end" : 1.8,
+        "start" : 1.44,
+        "text" : " also"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 2.52,
+        "start" : 1.8,
+        "text" : " been"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 3,
+        "start" : 2.52,
+        "text" : " brought"
+      },
+      {
+        "confidence" : 0.999,
+        "end" : 3.36,
+        "start" : 3,
+        "text" : " up"
+      },
+      {
+        "confidence" : 0.975,
+        "end" : 4.02,
+        "start" : 3.36,
+        "text" : " by"
+      },
+      {
+        "confidence" : 0.999,
+        "end" : 4.26,
+        "start" : 4.02,
+        "text" : " a"
+      },
+      {
+        "confidence" : 1,
+        "end" : 4.8,
+        "start" : 4.26,
+        "text" : " foolish"
+      },
+      {
+        "confidence" : 0.814,
+        "end" : 5.58,
+        "start" : 4.8,
+        "text" : " nurse,"
+      },
+      {
+        "confidence" : 0.913,
+        "end" : 6.12,
+        "start" : 5.58,
+        "text" : " who"
+      },
+      {
+        "confidence" : 0.999,
+        "end" : 6.48,
+        "start" : 6.12,
+        "text" : " always"
+      },
+      {
+        "confidence" : 0.892,
+        "end" : 7.26,
+        "start" : 6.48,
+        "text" : " spelled"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 7.62,
+        "start" : 7.26,
+        "text" : " him"
+      },
+      {
+        "confidence" : 0.899,
+        "end" : 8.1,
+        "start" : 7.62,
+        "text" : " since"
+      },
+      {
+        "confidence" : 0.967,
+        "end" : 8.7,
+        "start" : 8.1,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 9.12,
+        "start" : 8.7,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.902,
+        "end" : 9.48,
+        "start" : 9.12,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.088,
+        "end" : 11.28,
+        "start" : 9.48,
+        "text" : " little,"
+      },
+      {
+        "confidence" : 0.748,
+        "end" : 11.58,
+        "start" : 11.28,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 11.7,
+        "start" : 11.58,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 11.88,
+        "start" : 11.7,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.908,
+        "end" : 12.12,
+        "start" : 11.88,
+        "text" : " child."
+      },
+      {
+        "confidence" : 0.686,
+        "end" : 14.46,
+        "start" : 12.24,
+        "text" : " Remember,"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 14.58,
+        "start" : 14.46,
+        "text" : " my"
+      },
+      {
+        "confidence" : 0.73,
+        "end" : 15.12,
+        "start" : 14.58,
+        "text" : " dear."
+      },
+      {
+        "confidence" : 0.301,
+        "end" : 16.62,
+        "start" : 15.24,
+        "text" : " One"
+      },
+      {
+        "confidence" : 0.61,
+        "end" : 17.1,
+        "start" : 16.62,
+        "text" : " day,"
+      },
+      {
+        "confidence" : 0.984,
+        "end" : 17.22,
+        "start" : 17.1,
+        "text" : " you"
+      },
+      {
+        "confidence" : 0.979,
+        "end" : 17.46,
+        "start" : 17.22,
+        "text" : " will"
+      },
+      {
+        "confidence" : 0.938,
+        "end" : 17.88,
+        "start" : 17.46,
+        "text" : " be"
+      },
+      {
+        "confidence" : 0.221,
+        "end" : 18.48,
+        "start" : 17.88,
+        "text" : " a,"
+      },
+      {
+        "confidence" : 0.79,
+        "end" : 19.26,
+        "start" : 18.48,
+        "text" : " will"
+      },
+      {
+        "confidence" : 0.911,
+        "end" : 19.38,
+        "start" : 19.26,
+        "text" : " be"
+      },
+      {
+        "confidence" : 0.652,
+        "end" : 19.68,
+        "start" : 19.38,
+        "text" : " king."
+      },
+      {
+        "confidence" : 0.222,
+        "end" : 22.14,
+        "start" : 19.8,
+        "text" : " As"
+      },
+      {
+        "confidence" : 0.974,
+        "end" : 22.38,
+        "start" : 22.14,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.744,
+        "end" : 22.68,
+        "start" : 22.38,
+        "text" : " king."
+      },
+      {
+        "confidence" : 0.639,
+        "end" : 23.76,
+        "start" : 22.8,
+        "text" : " You"
+      },
+      {
+        "confidence" : 0.985,
+        "end" : 24,
+        "start" : 23.76,
+        "text" : " can"
+      },
+      {
+        "confidence" : 0.988,
+        "end" : 24.36,
+        "start" : 24,
+        "text" : " do"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 24.78,
+        "start" : 24.36,
+        "text" : " whatever"
+      },
+      {
+        "confidence" : 0.973,
+        "end" : 25.62,
+        "start" : 24.78,
+        "text" : " you"
+      },
+      {
+        "confidence" : 0.716,
+        "end" : 26.1,
+        "start" : 25.62,
+        "text" : " please."
+      },
+      {
+        "confidence" : 0.774,
+        "end" : 27.72,
+        "start" : 26.16,
+        "text" : " No"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 27.96,
+        "start" : 27.72,
+        "text" : " one"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 28.26,
+        "start" : 27.96,
+        "text" : " will"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 28.68,
+        "start" : 28.26,
+        "text" : " have"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 29.1,
+        "start" : 28.68,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 29.4,
+        "start" : 29.1,
+        "text" : " power"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 29.76,
+        "start" : 29.4,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 30,
+        "start" : 29.76,
+        "text" : " stop"
+      },
+      {
+        "confidence" : 0.879,
+        "end" : 30.78,
+        "start" : 30,
+        "text" : " you."
+      },
+      {
+        "confidence" : 0.747,
+        "end" : 34.14,
+        "start" : 30.84,
+        "text" : " I'm"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 34.62,
+        "start" : 34.14,
+        "text" : " very"
+      },
+      {
+        "confidence" : 0.985,
+        "end" : 35.16,
+        "start" : 34.62,
+        "text" : " unhappy"
+      },
+      {
+        "confidence" : 0.904,
+        "end" : 35.52,
+        "start" : 35.16,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 35.82,
+        "start" : 35.52,
+        "text" : " have"
+      },
+      {
+        "confidence" : 0.982,
+        "end" : 36.18,
+        "start" : 35.82,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.981,
+        "end" : 37.14,
+        "start" : 36.18,
+        "text" : " struggle"
+      },
+      {
+        "confidence" : 0.865,
+        "end" : 39.06,
+        "start" : 37.14,
+        "text" : " against"
+      },
+      {
+        "confidence" : 0.794,
+        "end" : 40.74,
+        "start" : 39.06,
+        "text" : " my"
+      },
+      {
+        "confidence" : 0.981,
+        "end" : 41.46,
+        "start" : 40.74,
+        "text" : " anger"
+      },
+      {
+        "confidence" : 0.962,
+        "end" : 41.76,
+        "start" : 41.46,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.938,
+        "end" : 42.42,
+        "start" : 41.76,
+        "text" : " pride"
+      },
+      {
+        "confidence" : 0.914,
+        "end" : 42.96,
+        "start" : 42.42,
+        "text" : " every"
+      },
+      {
+        "confidence" : 0.779,
+        "end" : 44.34,
+        "start" : 42.96,
+        "text" : " day."
+      },
+      {
+        "confidence" : 0.13,
+        "end" : 46.32,
+        "start" : 44.4,
+        "text" : " Kiss"
+      },
+      {
+        "confidence" : 0.379,
+        "end" : 46.56,
+        "start" : 46.32,
+        "text" : " out"
+      },
+      {
+        "confidence" : 0.867,
+        "end" : 46.86,
+        "start" : 46.56,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.772,
+        "end" : 47.28,
+        "start" : 46.86,
+        "text" : " himself."
+      },
+      {
+        "confidence" : 0.789,
+        "end" : 49.68,
+        "start" : 47.34,
+        "text" : " If"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 49.98,
+        "start" : 49.68,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 50.16,
+        "start" : 49.98,
+        "text" : " had"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 50.4,
+        "start" : 50.16,
+        "text" : " been"
+      },
+      {
+        "confidence" : 0.988,
+        "end" : 50.94,
+        "start" : 50.4,
+        "text" : " punished"
+      },
+      {
+        "confidence" : 0.522,
+        "end" : 53.1,
+        "start" : 50.94,
+        "text" : " for,"
+      },
+      {
+        "confidence" : 0.849,
+        "end" : 53.88,
+        "start" : 53.1,
+        "text" : " when"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 54.06,
+        "start" : 53.88,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 54.12,
+        "start" : 54.06,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.711,
+        "end" : 54.48,
+        "start" : 54.12,
+        "text" : " little."
+      }
+    ],
+    "source" : "IMG_9039.m4a"
   },
-  "words": [
+  "words" : [
     "prince",
     "darling",
     "had",

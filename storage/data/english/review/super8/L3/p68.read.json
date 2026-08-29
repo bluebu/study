@@ -1,539 +1,891 @@
 {
-  "acoustics": {
-    "duration": 138.7,
-    "pause_count": 39,
-    "pause_ratio": 0.141,
-    "pause_total": 19.52,
-    "pauses": [
+  "acoustics" : {
+    "duration" : 138.71,
+    "pause_count" : 73,
+    "pause_ratio" : 0.329,
+    "pause_total" : 45.67,
+    "pauses" : [
       {
-        "dur": 0.61,
-        "end": 0.79,
-        "start": 0.18
+        "dur" : 1.04,
+        "end" : 1.04,
+        "start" : 0
       },
       {
-        "dur": 0.32,
-        "end": 6.94,
-        "start": 6.62
+        "dur" : 0.28,
+        "end" : 2.09,
+        "start" : 1.81
       },
       {
-        "dur": 1.17,
-        "end": 12.53,
-        "start": 11.36
+        "dur" : 0.38,
+        "end" : 6.22,
+        "start" : 5.84
       },
       {
-        "dur": 0.29,
-        "end": 13.18,
-        "start": 12.89
+        "dur" : 0.65,
+        "end" : 7.2,
+        "start" : 6.55
       },
       {
-        "dur": 0.31,
-        "end": 14.06,
-        "start": 13.75
+        "dur" : 0.29,
+        "end" : 8.55,
+        "start" : 8.26
       },
       {
-        "dur": 0.54,
-        "end": 20.56,
-        "start": 20.02
+        "dur" : 0.47,
+        "end" : 9.57,
+        "start" : 9.1
       },
       {
-        "dur": 0.38,
-        "end": 22.46,
-        "start": 22.08
+        "dur" : 0.31,
+        "end" : 10.75,
+        "start" : 10.44
       },
       {
-        "dur": 0.81,
-        "end": 23.53,
-        "start": 22.72
+        "dur" : 1.21,
+        "end" : 12.53,
+        "start" : 11.32
       },
       {
-        "dur": 0.55,
-        "end": 34.97,
-        "start": 34.42
+        "dur" : 0.45,
+        "end" : 13.28,
+        "start" : 12.83
       },
       {
-        "dur": 0.34,
-        "end": 37.31,
-        "start": 36.97
+        "dur" : 0.48,
+        "end" : 14.19,
+        "start" : 13.71
       },
       {
-        "dur": 0.26,
-        "end": 37.59,
-        "start": 37.33
+        "dur" : 0.29,
+        "end" : 15.03,
+        "start" : 14.74
       },
       {
-        "dur": 0.3,
-        "end": 38.12,
-        "start": 37.82
+        "dur" : 0.35,
+        "end" : 17.28,
+        "start" : 16.93
       },
       {
-        "dur": 1.36,
-        "end": 41.27,
-        "start": 39.91
+        "dur" : 0.39,
+        "end" : 18.93,
+        "start" : 18.54
       },
       {
-        "dur": 0.49,
-        "end": 52.73,
-        "start": 52.24
+        "dur" : 0.95,
+        "end" : 20.84,
+        "start" : 19.89
       },
       {
-        "dur": 0.48,
-        "end": 53.26,
-        "start": 52.78
+        "dur" : 0.26,
+        "end" : 21.42,
+        "start" : 21.16
       },
       {
-        "dur": 0.37,
-        "end": 53.69,
-        "start": 53.32
+        "dur" : 1.76,
+        "end" : 23.57,
+        "start" : 21.81
       },
       {
-        "dur": 0.86,
-        "end": 58.74,
-        "start": 57.88
+        "dur" : 0.34,
+        "end" : 26.82,
+        "start" : 26.48
       },
       {
-        "dur": 0.27,
-        "end": 63.98,
-        "start": 63.71
+        "dur" : 0.25,
+        "end" : 27.5,
+        "start" : 27.25
       },
       {
-        "dur": 0.32,
-        "end": 64.79,
-        "start": 64.47
+        "dur" : 0.35,
+        "end" : 29.66,
+        "start" : 29.31
       },
       {
-        "dur": 0.66,
-        "end": 68.84,
-        "start": 68.18
+        "dur" : 0.28,
+        "end" : 30.56,
+        "start" : 30.28
       },
       {
-        "dur": 0.75,
-        "end": 70.91,
-        "start": 70.16
+        "dur" : 0.27,
+        "end" : 33.91,
+        "start" : 33.64
       },
       {
-        "dur": 0.31,
-        "end": 84.2,
-        "start": 83.89
+        "dur" : 1.38,
+        "end" : 35.4,
+        "start" : 34.02
       },
       {
-        "dur": 0.8,
-        "end": 85.4,
-        "start": 84.6
+        "dur" : 0.82,
+        "end" : 37.61,
+        "start" : 36.79
       },
       {
-        "dur": 0.49,
-        "end": 88.19,
-        "start": 87.7
+        "dur" : 0.75,
+        "end" : 38.37,
+        "start" : 37.62
       },
       {
-        "dur": 0.34,
-        "end": 89.38,
-        "start": 89.04
+        "dur" : 1.39,
+        "end" : 41.27,
+        "start" : 39.88
       },
       {
-        "dur": 0.51,
-        "end": 93.77,
-        "start": 93.26
+        "dur" : 0.43,
+        "end" : 43.25,
+        "start" : 42.82
       },
       {
-        "dur": 0.29,
-        "end": 94.43,
-        "start": 94.14
+        "dur" : 0.52,
+        "end" : 47.52,
+        "start" : 47
       },
       {
-        "dur": 0.44,
-        "end": 95.81,
-        "start": 95.37
+        "dur" : 0.4,
+        "end" : 48.3,
+        "start" : 47.9
       },
       {
-        "dur": 0.35,
-        "end": 100.74,
-        "start": 100.39
+        "dur" : 0.5,
+        "end" : 49.27,
+        "start" : 48.77
       },
       {
-        "dur": 0.58,
-        "end": 103.51,
-        "start": 102.93
+        "dur" : 0.56,
+        "end" : 50.81,
+        "start" : 50.25
       },
       {
-        "dur": 0.49,
-        "end": 104.89,
-        "start": 104.4
+        "dur" : 1.5,
+        "end" : 53.69,
+        "start" : 52.19
       },
       {
-        "dur": 0.79,
-        "end": 106.05,
-        "start": 105.26
+        "dur" : 0.43,
+        "end" : 54.87,
+        "start" : 54.44
       },
       {
-        "dur": 0.27,
-        "end": 106.34,
-        "start": 106.07
+        "dur" : 0.49,
+        "end" : 56.09,
+        "start" : 55.6
       },
       {
-        "dur": 0.5,
-        "end": 113.4,
-        "start": 112.9
+        "dur" : 1.79,
+        "end" : 58.74,
+        "start" : 56.95
       },
       {
-        "dur": 0.43,
-        "end": 114.54,
-        "start": 114.11
+        "dur" : 0.31,
+        "end" : 61.97,
+        "start" : 61.66
       },
       {
-        "dur": 0.53,
-        "end": 128.68,
-        "start": 128.15
+        "dur" : 0.8,
+        "end" : 64.03,
+        "start" : 63.23
       },
       {
-        "dur": 0.33,
-        "end": 129.78,
-        "start": 129.45
+        "dur" : 0.52,
+        "end" : 64.9,
+        "start" : 64.38
       },
       {
-        "dur": 0.32,
-        "end": 134.66,
-        "start": 134.34
+        "dur" : 0.29,
+        "end" : 66.09,
+        "start" : 65.8
       },
       {
-        "dur": 0.31,
-        "end": 135.99,
-        "start": 135.68
+        "dur" : 0.84,
+        "end" : 68.87,
+        "start" : 68.03
+      },
+      {
+        "dur" : 1.11,
+        "end" : 70.91,
+        "start" : 69.8
+      },
+      {
+        "dur" : 0.36,
+        "end" : 76.94,
+        "start" : 76.58
+      },
+      {
+        "dur" : 0.47,
+        "end" : 84.27,
+        "start" : 83.8
+      },
+      {
+        "dur" : 1.47,
+        "end" : 85.75,
+        "start" : 84.28
+      },
+      {
+        "dur" : 1.13,
+        "end" : 88.29,
+        "start" : 87.16
+      },
+      {
+        "dur" : 1.32,
+        "end" : 89.62,
+        "start" : 88.3
+      },
+      {
+        "dur" : 0.94,
+        "end" : 93.8,
+        "start" : 92.86
+      },
+      {
+        "dur" : 0.96,
+        "end" : 94.8,
+        "start" : 93.84
+      },
+      {
+        "dur" : 0.61,
+        "end" : 95.81,
+        "start" : 95.2
+      },
+      {
+        "dur" : 0.26,
+        "end" : 99.11,
+        "start" : 98.85
+      },
+      {
+        "dur" : 0.26,
+        "end" : 99.71,
+        "start" : 99.45
+      },
+      {
+        "dur" : 0.48,
+        "end" : 100.75,
+        "start" : 100.27
+      },
+      {
+        "dur" : 0.35,
+        "end" : 101.41,
+        "start" : 101.06
+      },
+      {
+        "dur" : 0.73,
+        "end" : 102.6,
+        "start" : 101.87
+      },
+      {
+        "dur" : 0.86,
+        "end" : 103.71,
+        "start" : 102.85
+      },
+      {
+        "dur" : 0.56,
+        "end" : 104.9,
+        "start" : 104.34
+      },
+      {
+        "dur" : 1.15,
+        "end" : 106.35,
+        "start" : 105.2
+      },
+      {
+        "dur" : 0.32,
+        "end" : 108.5,
+        "start" : 108.18
+      },
+      {
+        "dur" : 0.36,
+        "end" : 111.31,
+        "start" : 110.95
+      },
+      {
+        "dur" : 0.78,
+        "end" : 113.43,
+        "start" : 112.65
+      },
+      {
+        "dur" : 0.27,
+        "end" : 113.71,
+        "start" : 113.44
+      },
+      {
+        "dur" : 0.57,
+        "end" : 114.57,
+        "start" : 114
+      },
+      {
+        "dur" : 0.29,
+        "end" : 115.23,
+        "start" : 114.94
+      },
+      {
+        "dur" : 0.26,
+        "end" : 118.36,
+        "start" : 118.1
+      },
+      {
+        "dur" : 0.26,
+        "end" : 123.51,
+        "start" : 123.25
+      },
+      {
+        "dur" : 0.4,
+        "end" : 124.2,
+        "start" : 123.8
+      },
+      {
+        "dur" : 0.64,
+        "end" : 125.53,
+        "start" : 124.89
+      },
+      {
+        "dur" : 0.34,
+        "end" : 127.69,
+        "start" : 127.35
+      },
+      {
+        "dur" : 1.09,
+        "end" : 129.15,
+        "start" : 128.06
+      },
+      {
+        "dur" : 0.42,
+        "end" : 129.83,
+        "start" : 129.41
+      },
+      {
+        "dur" : 0.35,
+        "end" : 131.85,
+        "start" : 131.5
+      },
+      {
+        "dur" : 0.65,
+        "end" : 134.7,
+        "start" : 134.05
+      },
+      {
+        "dur" : 0.49,
+        "end" : 136.12,
+        "start" : 135.63
+      },
+      {
+        "dur" : 0.39,
+        "end" : 137.62,
+        "start" : 137.23
       }
     ],
-    "source": "点读超8.mp4 [0.00-138.70]",
-    "speech_time": 119.18,
-    "threshold_db": -40
+    "source" : "点读超8.mp4 [0.00-138.70]",
+    "speech_time" : 93.04,
+    "threshold_db" : -30.3
   },
-  "alignment": {
-    "accuracy": 92.2,
-    "correctWordCount": 118,
-    "diffs": [
+  "alignment" : {
+    "accuracy" : 92.2,
+    "correctWordCount" : 118,
+    "diffs" : [
       {
-        "context": "tired of the constant reminders of his",
-        "end": 11.94,
-        "kind": "insert",
-        "read": "constant",
-        "refIndex": 18,
-        "start": 10.26
+        "category" : "extra",
+        "confidence" : 0.098,
+        "context" : "tired of the constant reminders of his",
+        "end" : 11.94,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "constant",
+        "refIndex" : 18,
+        "start" : 10.26,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.10 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "reminders of his bad behavior he wanted",
-        "end": 18.36,
-        "kind": "insert",
-        "read": "bed",
-        "refIndex": 22,
-        "start": 17.52
+        "category" : "extra",
+        "confidence" : 0.141,
+        "context" : "reminders of his bad behavior he wanted",
+        "end" : 18.36,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "bed",
+        "refIndex" : 22,
+        "start" : 17.52,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.14 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "reminders of his bad behavior he wanted",
-        "end": 18.66,
-        "kind": "insert",
-        "read": "uh",
-        "refIndex": 22,
-        "start": 18.36
+        "category" : "extra",
+        "confidence" : 0.169,
+        "context" : "reminders of his bad behavior he wanted",
+        "end" : 18.66,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "uh",
+        "refIndex" : 22,
+        "start" : 18.36,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.17 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "of his bad behavior he wanted to",
-        "end": 20.1,
-        "kind": "insert",
-        "read": "be",
-        "refIndex": 23,
-        "start": 19.44
+        "category" : "extra",
+        "confidence" : 0.293,
+        "context" : "of his bad behavior he wanted to",
+        "end" : 20.1,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "be",
+        "refIndex" : 23,
+        "start" : 19.44,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "of his bad behavior he wanted to",
-        "end": 21.66,
-        "kind": "substitute",
-        "read": "heavier",
-        "ref": "behavior",
-        "refIndex": 23,
-        "start": 20.1
+        "category" : "content",
+        "confidence" : 0.512,
+        "context" : "of his bad behavior he wanted to",
+        "end" : 21.66,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "heavier",
+        "ref" : "behavior",
+        "refIndex" : 23,
+        "start" : 20.1,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
       },
       {
-        "context": "his ring aside and thought himself the",
-        "end": 33.96,
-        "kind": "insert",
-        "read": "and",
-        "refIndex": 40,
-        "start": 32.58
+        "category" : "extra",
+        "confidence" : 0.563,
+        "context" : "his ring aside and thought himself the",
+        "end" : 33.96,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "and",
+        "refIndex" : 40,
+        "start" : 32.58,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "ring aside and thought himself the happiest",
-        "end": 36.9,
-        "kind": "substitute",
-        "read": "so",
-        "ref": "thought",
-        "refIndex": 41,
-        "start": 35.64
+        "category" : "content",
+        "confidence" : 0.582,
+        "context" : "ring aside and thought himself the happiest",
+        "end" : 36.9,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "so",
+        "ref" : "thought",
+        "refIndex" : 41,
+        "start" : 35.64,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
       },
       {
-        "context": "have got rid of its teasing pricks",
-        "end": 47.04,
-        "kind": "insert",
-        "read": "of",
-        "refIndex": 51,
-        "start": 46.62
+        "category" : "extra",
+        "confidence" : 0.575,
+        "context" : "have got rid of its teasing pricks",
+        "end" : 47.04,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "of",
+        "refIndex" : 51,
+        "start" : 46.62,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "its teasing pricks sir i'm only a",
-        "end": 52.32,
-        "kind": "insert",
-        "read": "hey",
-        "refIndex": 55,
-        "start": 51.42
+        "category" : "extra",
+        "confidence" : 0.223,
+        "context" : "its teasing pricks sir i'm only a",
+        "end" : 54.48,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "okay",
+        "refIndex" : 55,
+        "start" : 52.38,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.22 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "its teasing pricks sir i'm only a",
-        "end": 54.54,
-        "kind": "insert",
-        "read": "okay",
-        "refIndex": 55,
-        "start": 52.44
+        "category" : "extra",
+        "confidence" : 0.213,
+        "context" : "its teasing pricks sir i'm only a",
+        "end" : 57.06,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "do",
+        "refIndex" : 55,
+        "start" : 54.48,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.21 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "its teasing pricks sir i'm only a",
-        "end": 57.06,
-        "kind": "insert",
-        "read": "do",
-        "refIndex": 55,
-        "start": 54.54
+        "category" : "extra",
+        "confidence" : 0.26,
+        "context" : "its teasing pricks sir i'm only a",
+        "end" : 58.98,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "do",
+        "refIndex" : 55,
+        "start" : 57.06,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.26 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "its teasing pricks sir i'm only a",
-        "end": 58.98,
-        "kind": "insert",
-        "read": "do",
-        "refIndex": 55,
-        "start": 57.18
+        "category" : "extra",
+        "confidence" : 0.947,
+        "context" : "its teasing pricks sir i'm only a",
+        "end" : 59.34,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "you",
+        "refIndex" : 55,
+        "start" : 58.98,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "its teasing pricks sir i'm only a",
-        "end": 59.34,
-        "kind": "insert",
-        "read": "you",
-        "refIndex": 55,
-        "start": 58.98
+        "category" : "extra",
+        "confidence" : 0.33,
+        "context" : "its teasing pricks sir i'm only a",
+        "end" : 60.24,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "dislike",
+        "refIndex" : 55,
+        "start" : 59.34,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.33 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "its teasing pricks sir i'm only a",
-        "end": 60.24,
-        "kind": "insert",
-        "read": "dislike",
-        "refIndex": 55,
-        "start": 59.34
+        "category" : "extra",
+        "confidence" : 0.318,
+        "context" : "its teasing pricks sir i'm only a",
+        "end" : 61.56,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "me",
+        "refIndex" : 55,
+        "start" : 60.24,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.32 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "its teasing pricks sir i'm only a",
-        "end": 61.56,
-        "kind": "insert",
-        "read": "me",
-        "refIndex": 55,
-        "start": 60.24
+        "category" : "extra",
+        "confidence" : 0.195,
+        "context" : "its teasing pricks sir i'm only a",
+        "end" : 64.74,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "asked",
+        "refIndex" : 55,
+        "start" : 61.56,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.20 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "its teasing pricks sir i'm only a",
-        "end": 64.74,
-        "kind": "insert",
-        "read": "asked",
-        "refIndex": 55,
-        "start": 61.56
+        "category" : "extra",
+        "confidence" : 0.613,
+        "context" : "i'm only a shepherdess and a poor",
+        "end" : 67.14,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "chef",
+        "refIndex" : 59,
+        "start" : 66.72,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "i'm only a shepherdess and a poor",
-        "end": 67.14,
-        "kind": "insert",
-        "read": "chef",
-        "refIndex": 59,
-        "start": 66.72
+        "category" : "extra",
+        "confidence" : 0.553,
+        "context" : "i'm only a shepherdess and a poor",
+        "end" : 67.38,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "for",
+        "refIndex" : 59,
+        "start" : 67.14,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "i'm only a shepherdess and a poor",
-        "end": 67.38,
-        "kind": "insert",
-        "read": "for",
-        "refIndex": 59,
-        "start": 67.14
+        "category" : "extra",
+        "confidence" : 0.423,
+        "context" : "i'm only a shepherdess and a poor",
+        "end" : 67.86,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "this",
+        "refIndex" : 59,
+        "start" : 67.38,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "i'm only a shepherdess and a poor",
-        "end": 67.86,
-        "kind": "insert",
-        "read": "this",
-        "refIndex": 59,
-        "start": 67.38
+        "category" : "extra",
+        "confidence" : 0.397,
+        "context" : "i'm only a shepherdess and a poor",
+        "end" : 69.18,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "and",
+        "refIndex" : 59,
+        "start" : 67.92,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "i'm only a shepherdess and a poor",
-        "end": 69.24,
-        "kind": "insert",
-        "read": "and",
-        "refIndex": 59,
-        "start": 67.92
+        "category" : "extra",
+        "confidence" : 0.506,
+        "context" : "i'm only a shepherdess and a poor",
+        "end" : 69.78,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "i",
+        "refIndex" : 59,
+        "start" : 69.18,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "i'm only a shepherdess and a poor",
-        "end": 69.42,
-        "kind": "insert",
-        "read": "i",
-        "refIndex": 59,
-        "start": 69.24
+        "category" : "content",
+        "confidence" : 0.198,
+        "context" : "i'm only a shepherdess and a poor",
+        "end" : 71.46,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "uh",
+        "ref" : "shepherdess",
+        "refIndex" : 59,
+        "start" : 69.78,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.20 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "i'm only a shepherdess and a poor",
-        "end": 71.46,
-        "kind": "substitute",
-        "read": "uh",
-        "ref": "shepherdess",
-        "refIndex": 59,
-        "start": 69.42
+        "category" : "content",
+        "confidence" : 0.839,
+        "context" : "you do you dislike me asked prince",
+        "end" : 77.34,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "like",
+        "ref" : "dislike",
+        "refIndex" : 73,
+        "start" : 75.96,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
       },
       {
-        "context": "you do you dislike me asked prince",
-        "end": 77.34,
-        "kind": "substitute",
-        "read": "like",
-        "ref": "dislike",
-        "refIndex": 73,
-        "start": 75.96
+        "category" : "extra",
+        "confidence" : 0.103,
+        "context" : "my prince replied celia i notice you",
+        "end" : 92.22,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "syria",
+        "refIndex" : 86,
+        "start" : 90.72,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.10 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "my prince replied celia i notice you",
-        "end": 92.22,
-        "kind": "insert",
-        "read": "syria",
-        "refIndex": 86,
-        "start": 90.72
+        "category" : "properNoun",
+        "confidence" : 0.487,
+        "context" : "my prince replied celia i notice you",
+        "end" : 92.7,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "um",
+        "ref" : "celia",
+        "refIndex" : 86,
+        "start" : 92.22,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑"
       },
       {
-        "context": "my prince replied celia i notice you",
-        "end": 92.7,
-        "kind": "substitute",
-        "read": "um",
-        "ref": "celia",
-        "refIndex": 86,
-        "start": 92.22
+        "category" : "function",
+        "confidence" : 0.474,
+        "context" : "prince replied celia i notice you are",
+        "end" : 96.12,
+        "kind" : "substitute",
+        "label" : "小词",
+        "read" : "and",
+        "ref" : "i",
+        "refIndex" : 87,
+        "start" : 92.82,
+        "suggest" : "count",
+        "why" : "两个都是小词，读串了。这类错扎堆出现就是眼睛跑在手指前面"
       },
       {
-        "context": "prince replied celia i notice you are",
-        "end": 96.12,
-        "kind": "substitute",
-        "read": "and",
-        "ref": "i",
-        "refIndex": 87,
-        "start": 92.82
+        "category" : "morph",
+        "confidence" : 0.917,
+        "context" : "very rich but what good would richness",
+        "end" : 100.26,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "what's",
+        "ref" : "what",
+        "refIndex" : 94,
+        "start" : 99.3,
+        "suggest" : "count",
+        "why" : "原文是「what」，读出来多了个词尾 -'s"
       },
       {
-        "context": "very rich but what good would richness",
-        "end": 100.26,
-        "kind": "substitute",
-        "read": "what's",
-        "ref": "what",
-        "refIndex": 94,
-        "start": 99.3
+        "category" : "extra",
+        "confidence" : 0.395,
+        "context" : "what good would richness be to me",
+        "end" : 106.92,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "reach",
+        "refIndex" : 97,
+        "start" : 101.82,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "what good would richness be to me",
-        "end": 106.92,
-        "kind": "insert",
-        "read": "reach",
-        "refIndex": 97,
-        "start": 101.82
+        "category" : "extra",
+        "confidence" : 0.896,
+        "context" : "what good would richness be to me",
+        "end" : 107.7,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "needs",
+        "refIndex" : 97,
+        "start" : 106.92,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "what good would richness be to me",
-        "end": 107.7,
-        "kind": "insert",
-        "read": "needs",
-        "refIndex": 97,
-        "start": 106.92
+        "category" : "extra",
+        "confidence" : 0.462,
+        "context" : "what good would richness be to me",
+        "end" : 109.32,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "to",
+        "refIndex" : 97,
+        "start" : 107.7,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "what good would richness be to me",
-        "end": 109.32,
-        "kind": "insert",
-        "read": "to",
-        "refIndex": 97,
-        "start": 107.7
+        "category" : "extra",
+        "confidence" : 0.363,
+        "context" : "what good would richness be to me",
+        "end" : 109.44,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "which",
+        "refIndex" : 97,
+        "start" : 109.32,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "what good would richness be to me",
-        "end": 109.44,
-        "kind": "insert",
-        "read": "which",
-        "refIndex": 97,
-        "start": 109.32
+        "category" : "extra",
+        "confidence" : 0.949,
+        "context" : "what good would richness be to me",
+        "end" : 109.92,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "needs",
+        "refIndex" : 97,
+        "start" : 109.44,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "what good would richness be to me",
-        "end": 109.92,
-        "kind": "insert",
-        "read": "needs",
-        "refIndex": 97,
-        "start": 109.44
+        "category" : "content",
+        "confidence" : 0.08,
+        "context" : "what good would richness be to me",
+        "end" : 110.22,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "to",
+        "ref" : "richness",
+        "refIndex" : 97,
+        "start" : 109.92,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.08 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "what good would richness be to me",
-        "end": 110.22,
-        "kind": "substitute",
-        "read": "to",
-        "ref": "richness",
-        "refIndex": 97,
-        "start": 109.92
+        "category" : "extra",
+        "confidence" : 0.224,
+        "context" : "if i see you commit wrongdoings every",
+        "end" : 114.24,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "you",
+        "refIndex" : 104,
+        "start" : 112.68,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.22 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "if i see you commit wrongdoings every",
-        "end": 114.24,
-        "kind": "insert",
-        "read": "you",
-        "refIndex": 104,
-        "start": 112.68
+        "category" : "content",
+        "confidence" : 0.843,
+        "context" : "you and even hate you what will",
+        "end" : 123.24,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "hit",
+        "ref" : "hate",
+        "refIndex" : 115,
+        "start" : 123,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
       },
       {
-        "context": "you and even hate you what will",
-        "end": 123.24,
-        "kind": "substitute",
-        "read": "hit",
-        "ref": "hate",
-        "refIndex": 115,
-        "start": 123
+        "category" : "extra",
+        "confidence" : 0.767,
+        "context" : "you what will our marriage be like",
+        "end" : 126.96,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "or",
+        "refIndex" : 119,
+        "start" : 125.94,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
       },
       {
-        "context": "you what will our marriage be like",
-        "end": 126.96,
-        "kind": "insert",
-        "read": "or",
-        "refIndex": 119,
-        "start": 125.94
+        "category" : "extra",
+        "confidence" : 0.327,
+        "context" : "you what will our marriage be like",
+        "end" : 128.1,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "you",
+        "refIndex" : 119,
+        "start" : 126.96,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.33 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "you what will our marriage be like",
-        "end": 128.1,
-        "kind": "insert",
-        "read": "you",
-        "refIndex": 119,
-        "start": 126.96
+        "category" : "extra",
+        "confidence" : 0.095,
+        "context" : "you what will our marriage be like",
+        "end" : 129.72,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "oh",
+        "refIndex" : 119,
+        "start" : 128.22,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.10 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
-        "context": "you what will our marriage be like",
-        "end": 129.72,
-        "kind": "insert",
-        "read": "oh",
-        "refIndex": 119,
-        "start": 128.22
-      },
-      {
-        "context": "you what will our marriage be like",
-        "end": 130.68,
-        "kind": "substitute",
-        "read": "or",
-        "ref": "our",
-        "refIndex": 119,
-        "start": 129.72
+        "category" : "function",
+        "confidence" : 0.388,
+        "context" : "you what will our marriage be like",
+        "end" : 130.68,
+        "kind" : "substitute",
+        "label" : "小词",
+        "read" : "or",
+        "ref" : "our",
+        "refIndex" : 119,
+        "start" : 129.72,
+        "suggest" : "count",
+        "why" : "两个都是小词，读串了。这类错扎堆出现就是眼睛跑在手指前面"
       }
     ],
-    "readWordCount": 157,
-    "refTimes": [
+    "readWordCount" : 156,
+    "refTimes" : [
       1.32,
       1.8,
       2.34,
@@ -552,7 +904,7 @@
       8.88,
       9.84,
       10.26,
-      13.68,
+      13.74,
       16.38,
       16.86,
       17.52,
@@ -582,7 +934,7 @@
       43.5,
       43.98,
       44.82,
-      45.3,
+      45.24,
       46.2,
       46.62,
       47.76,
@@ -663,804 +1015,1325 @@
       135,
       138.54
     ],
-    "refWordCount": 128,
-    "wcpm": 51
+    "refWordCount" : 128,
+    "wcpm" : 51
   },
-  "reference": "they would not be such a trouble to me now.\"\nAt last, the prince got tired of the constant reminders of his bad behavior.\nHe wanted to be able to do as he liked, so he threw his ring aside, and thought\nhimself the happiest of men to have got rid of its teasing pricks.\n\"Sir, I'm\nonly a shepherdess and a poor girl,\" she said, \"but I won't marry you,\n\"Do you dislike me?\" asked Prince Darling, annoyed at this answer.\n\"No, my prince,\" replied Celia. \"I notice you are very rich, but what good\nwould richness be to me? If I see you commit wrongdoings every day, I will\ndislike you and even hate you. What will our marriage be like if I am a witness",
-  "slug": "super8/L3/p68",
-  "transcript": {
-    "contextPrimed": true,
-    "locale": "en-US",
-    "runs": [
-      {
-        "end": 1.32,
-        "start": 0,
-        "text": "They"
-      },
-      {
-        "end": 1.8,
-        "start": 1.32,
-        "text": " would"
-      },
-      {
-        "end": 2.34,
-        "start": 1.8,
-        "text": " not"
-      },
-      {
-        "end": 2.88,
-        "start": 2.34,
-        "text": " be"
-      },
-      {
-        "end": 3.24,
-        "start": 2.88,
-        "text": " such"
-      },
-      {
-        "end": 3.66,
-        "start": 3.24,
-        "text": " a"
-      },
-      {
-        "end": 4.02,
-        "start": 3.66,
-        "text": " trouble"
-      },
-      {
-        "end": 4.38,
-        "start": 4.02,
-        "text": " to"
-      },
-      {
-        "end": 4.56,
-        "start": 4.38,
-        "text": " me"
-      },
-      {
-        "end": 5.22,
-        "start": 4.56,
-        "text": " now,"
-      },
-      {
-        "end": 5.76,
-        "start": 5.22,
-        "text": " at"
-      },
-      {
-        "end": 6.84,
-        "start": 5.76,
-        "text": " last."
-      },
-      {
-        "end": 7.74,
-        "start": 6.9,
-        "text": " The"
-      },
-      {
-        "end": 7.98,
-        "start": 7.74,
-        "text": " prince"
-      },
-      {
-        "end": 8.34,
-        "start": 7.98,
-        "text": " got"
-      },
-      {
-        "end": 8.88,
-        "start": 8.34,
-        "text": " tired"
-      },
-      {
-        "end": 9.84,
-        "start": 8.88,
-        "text": " of"
-      },
-      {
-        "end": 10.26,
-        "start": 9.84,
-        "text": " the"
-      },
-      {
-        "end": 11.94,
-        "start": 10.26,
-        "text": " constant."
-      },
-      {
-        "end": 13.68,
-        "start": 11.94,
-        "text": " Constant."
-      },
-      {
-        "end": 16.38,
-        "start": 13.68,
-        "text": " Reminders"
-      },
-      {
-        "end": 16.86,
-        "start": 16.38,
-        "text": " of"
-      },
-      {
-        "end": 17.52,
-        "start": 16.86,
-        "text": " his"
-      },
-      {
-        "end": 18.36,
-        "start": 17.52,
-        "text": " bed,"
-      },
-      {
-        "end": 18.66,
-        "start": 18.36,
-        "text": " uh,"
-      },
-      {
-        "end": 19.44,
-        "start": 18.66,
-        "text": " bad"
-      },
-      {
-        "end": 20.1,
-        "start": 19.44,
-        "text": " be,"
-      },
-      {
-        "end": 21.66,
-        "start": 20.1,
-        "text": " heavier."
-      },
-      {
-        "end": 23.82,
-        "start": 21.72,
-        "text": " He"
-      },
-      {
-        "end": 24.24,
-        "start": 23.82,
-        "text": " wanted"
-      },
-      {
-        "end": 24.9,
-        "start": 24.24,
-        "text": " to"
-      },
-      {
-        "end": 25.32,
-        "start": 24.9,
-        "text": " be"
-      },
-      {
-        "end": 25.74,
-        "start": 25.32,
-        "text": " able"
-      },
-      {
-        "end": 26.16,
-        "start": 25.74,
-        "text": " to"
-      },
-      {
-        "end": 27,
-        "start": 26.16,
-        "text": " do"
-      },
-      {
-        "end": 27.72,
-        "start": 27,
-        "text": " as"
-      },
-      {
-        "end": 28.26,
-        "start": 27.72,
-        "text": " he"
-      },
-      {
-        "end": 28.98,
-        "start": 28.26,
-        "text": " liked."
-      },
-      {
-        "end": 30,
-        "start": 29.04,
-        "text": " So"
-      },
-      {
-        "end": 30.84,
-        "start": 30,
-        "text": " he"
-      },
-      {
-        "end": 31.32,
-        "start": 30.84,
-        "text": " threw"
-      },
-      {
-        "end": 31.56,
-        "start": 31.32,
-        "text": " his"
-      },
-      {
-        "end": 31.98,
-        "start": 31.56,
-        "text": " ring"
-      },
-      {
-        "end": 32.58,
-        "start": 31.98,
-        "text": " aside"
-      },
-      {
-        "end": 33.96,
-        "start": 32.58,
-        "text": " and."
-      },
-      {
-        "end": 35.64,
-        "start": 33.96,
-        "text": " And"
-      },
-      {
-        "end": 36.9,
-        "start": 35.64,
-        "text": " so."
-      },
-      {
-        "end": 39.42,
-        "start": 37.02,
-        "text": " Himself."
-      },
-      {
-        "end": 41.64,
-        "start": 39.48,
-        "text": " The"
-      },
-      {
-        "end": 42.54,
-        "start": 41.64,
-        "text": " happiest"
-      },
-      {
-        "end": 43.5,
-        "start": 42.54,
-        "text": " of"
-      },
-      {
-        "end": 43.98,
-        "start": 43.5,
-        "text": " men"
-      },
-      {
-        "end": 44.82,
-        "start": 43.98,
-        "text": " to"
-      },
-      {
-        "end": 45.3,
-        "start": 44.82,
-        "text": " have"
-      },
-      {
-        "end": 46.2,
-        "start": 45.3,
-        "text": " got"
-      },
-      {
-        "end": 46.62,
-        "start": 46.2,
-        "text": " rid"
-      },
-      {
-        "end": 47.04,
-        "start": 46.62,
-        "text": " of"
-      },
-      {
-        "end": 47.76,
-        "start": 47.04,
-        "text": " of"
-      },
-      {
-        "end": 48.72,
-        "start": 47.76,
-        "text": " its"
-      },
-      {
-        "end": 49.86,
-        "start": 48.72,
-        "text": " teasing"
-      },
-      {
-        "end": 51.36,
-        "start": 49.86,
-        "text": " pricks."
-      },
-      {
-        "end": 52.32,
-        "start": 51.42,
-        "text": " Hey."
-      },
-      {
-        "end": 54.54,
-        "start": 52.44,
-        "text": " Okay."
-      },
-      {
-        "end": 57.06,
-        "start": 54.54,
-        "text": " Do."
-      },
-      {
-        "end": 58.98,
-        "start": 57.18,
-        "text": " Do"
-      },
-      {
-        "end": 59.34,
-        "start": 58.98,
-        "text": " you"
-      },
-      {
-        "end": 60.24,
-        "start": 59.34,
-        "text": " dislike"
-      },
-      {
-        "end": 61.56,
-        "start": 60.24,
-        "text": " me?"
-      },
-      {
-        "end": 64.74,
-        "start": 61.56,
-        "text": " Asked,"
-      },
-      {
-        "end": 65.46,
-        "start": 64.74,
-        "text": " sir,"
-      },
-      {
-        "end": 65.7,
-        "start": 65.46,
-        "text": " I'm"
-      },
-      {
-        "end": 66.3,
-        "start": 65.7,
-        "text": " only"
-      },
-      {
-        "end": 66.72,
-        "start": 66.3,
-        "text": " a"
-      },
-      {
-        "end": 67.14,
-        "start": 66.72,
-        "text": " chef"
-      },
-      {
-        "end": 67.38,
-        "start": 67.14,
-        "text": " for"
-      },
-      {
-        "end": 67.86,
-        "start": 67.38,
-        "text": " this."
-      },
-      {
-        "end": 69.24,
-        "start": 67.92,
-        "text": " And"
+  "pages" : [
+    {
+      "end" : 138.54,
+      "errors" : 10,
+      "extras" : 28,
+      "matched" : 128,
+      "page" : 68,
+      "start" : 1.32,
+      "words" : 128
+    }
+  ],
+  "refSuspects" : [
+
+  ],
+  "reference" : "they would not be such a trouble to me now.\"\nAt last, the prince got tired of the constant reminders of his bad behavior.\nHe wanted to be able to do as he liked, so he threw his ring aside, and thought\nhimself the happiest of men to have got rid of its teasing pricks.\n\"Sir, I'm\nonly a shepherdess and a poor girl,\" she said, \"but I won't marry you,\n\"Do you dislike me?\" asked Prince Darling, annoyed at this answer.\n\"No, my prince,\" replied Celia. \"I notice you are very rich, but what good\nwould richness be to me? If I see you commit wrongdoings every day, I will\ndislike you and even hate you. What will our marriage be like if I am a witness",
+  "slug" : "super8/L3/p68",
+  "transcript" : {
+    "alternatives" : [
+      {
+        "end" : 4.56,
+        "start" : 0,
+        "texts" : [
+          "They would not be such a trouble to me"
+        ]
+      },
+      {
+        "end" : 6.9,
+        "start" : 4.56,
+        "texts" : [
+          "now, at last.",
+          "now at last.",
+          "now, it's last.",
+          "now. At last.",
+          "now, it's."
+        ]
+      },
+      {
+        "end" : 18.66,
+        "start" : 6.9,
+        "texts" : [
+          "The prince got tired of the constant. Constant. Reminders of his bed, uh,"
+        ]
+      },
+      {
+        "end" : 19.44,
+        "start" : 18.66,
+        "texts" : [
+          "bad",
+          "a bad",
+          "a bed"
+        ]
+      },
+      {
+        "end" : 21.72,
+        "start" : 19.44,
+        "texts" : [
+          "be, heavier.",
+          "be."
+        ]
+      },
+      {
+        "end" : 28.26,
+        "start" : 21.72,
+        "texts" : [
+          "He wanted to be able to do as he"
+        ]
+      },
+      {
+        "end" : 29.04,
+        "start" : 28.26,
+        "texts" : [
+          "liked.",
+          "left.",
+          "lacks.",
+          "led.",
+          "lacked"
+        ]
+      },
+      {
+        "end" : 31.98,
+        "start" : 29.04,
+        "texts" : [
+          "So he threw his ring"
+        ]
+      },
+      {
+        "end" : 37.0199375,
+        "start" : 31.98,
+        "texts" : [
+          "aside and. And so.",
+          "aside, and so.",
+          "aside. And so.",
+          "aside and. And so it.",
+          "aside and. And so..."
+        ]
+      },
+      {
+        "end" : 39.48,
+        "start" : 37.02,
+        "texts" : [
+          "Himself.",
+          "Himself,",
+          "Himself?",
+          "Himself"
+        ]
+      },
+      {
+        "end" : 46.62,
+        "start" : 39.48,
+        "texts" : [
+          "The happiest of men to have got rid"
+        ]
       },
-      {
-        "end": 69.42,
-        "start": 69.24,
-        "text": " I"
-      },
-      {
-        "end": 71.46,
-        "start": 69.42,
-        "text": " uh,"
-      },
-      {
-        "end": 71.64,
-        "start": 71.46,
-        "text": " and"
-      },
-      {
-        "end": 71.88,
-        "start": 71.64,
-        "text": " a"
-      },
-      {
-        "end": 72.12,
-        "start": 71.88,
-        "text": " poor"
-      },
-      {
-        "end": 72.72,
-        "start": 72.12,
-        "text": " girl,"
-      },
-      {
-        "end": 73.02,
-        "start": 72.72,
-        "text": " she"
-      },
-      {
-        "end": 73.32,
-        "start": 73.02,
-        "text": " said,"
-      },
-      {
-        "end": 73.68,
-        "start": 73.32,
-        "text": " but"
-      },
-      {
-        "end": 73.98,
-        "start": 73.68,
-        "text": " I"
-      },
-      {
-        "end": 74.46,
-        "start": 73.98,
-        "text": " won't"
-      },
-      {
-        "end": 74.7,
-        "start": 74.46,
-        "text": " marry"
-      },
-      {
-        "end": 75.12,
-        "start": 74.7,
-        "text": " you."
-      },
-      {
-        "end": 75.72,
-        "start": 75.18,
-        "text": " Do"
-      },
-      {
-        "end": 75.96,
-        "start": 75.72,
-        "text": " you"
-      },
-      {
-        "end": 77.34,
-        "start": 75.96,
-        "text": " like"
-      },
-      {
-        "end": 77.76,
-        "start": 77.34,
-        "text": " me"
-      },
-      {
-        "end": 78.84,
-        "start": 77.76,
-        "text": " asked"
-      },
-      {
-        "end": 79.8,
-        "start": 78.84,
-        "text": " Prince"
-      },
-      {
-        "end": 80.76,
-        "start": 79.8,
-        "text": " Darling"
-      },
-      {
-        "end": 81.42,
-        "start": 80.76,
-        "text": " annoyed"
-      },
-      {
-        "end": 82.62,
-        "start": 81.42,
-        "text": " at"
-      },
-      {
-        "end": 82.98,
-        "start": 82.62,
-        "text": " this"
-      },
-      {
-        "end": 83.52,
-        "start": 82.98,
-        "text": " answer?"
-      },
-      {
-        "end": 86.34,
-        "start": 83.58,
-        "text": " No,"
-      },
-      {
-        "end": 86.52,
-        "start": 86.34,
-        "text": " my"
-      },
-      {
-        "end": 87.12,
-        "start": 86.52,
-        "text": " prince."
-      },
-      {
-        "end": 90.72,
-        "start": 87.18,
-        "text": " Replied,"
-      },
-      {
-        "end": 92.22,
-        "start": 90.72,
-        "text": " Syria,"
-      },
-      {
-        "end": 92.7,
-        "start": 92.22,
-        "text": " um."
-      },
-      {
-        "end": 96.12,
-        "start": 92.82,
-        "text": " And"
-      },
-      {
-        "end": 97.14,
-        "start": 96.12,
-        "text": " notice"
-      },
-      {
-        "end": 97.5,
-        "start": 97.14,
-        "text": " you"
-      },
-      {
-        "end": 97.8,
-        "start": 97.5,
-        "text": " are"
-      },
-      {
-        "end": 98.04,
-        "start": 97.8,
-        "text": " very"
-      },
-      {
-        "end": 98.7,
-        "start": 98.04,
-        "text": " rich,"
-      },
-      {
-        "end": 99.3,
-        "start": 98.7,
-        "text": " but"
-      },
-      {
-        "end": 100.26,
-        "start": 99.3,
-        "text": " what's"
-      },
-      {
-        "end": 100.98,
-        "start": 100.26,
-        "text": " good"
+      {
+        "end" : 47.76,
+        "start" : 46.62,
+        "texts" : [
+          "of of",
+          "of, of"
+        ]
       },
-      {
-        "end": 101.82,
-        "start": 100.98,
-        "text": " would."
-      },
-      {
-        "end": 106.92,
-        "start": 101.82,
-        "text": " Reach"
-      },
-      {
-        "end": 107.7,
-        "start": 106.92,
-        "text": " needs"
-      },
-      {
-        "end": 109.32,
-        "start": 107.7,
-        "text": " to,"
-      },
-      {
-        "end": 109.44,
-        "start": 109.32,
-        "text": " which"
-      },
-      {
-        "end": 109.92,
-        "start": 109.44,
-        "text": " needs"
-      },
-      {
-        "end": 110.22,
-        "start": 109.92,
-        "text": " to"
-      },
-      {
-        "end": 110.34,
-        "start": 110.22,
-        "text": " be"
-      },
-      {
-        "end": 110.58,
-        "start": 110.34,
-        "text": " to"
-      },
-      {
-        "end": 111.42,
-        "start": 110.58,
-        "text": " me."
-      },
-      {
-        "end": 111.6,
-        "start": 111.42,
-        "text": " If"
-      },
-      {
-        "end": 111.9,
-        "start": 111.6,
-        "text": " I"
-      },
-      {
-        "end": 112.68,
-        "start": 111.9,
-        "text": " see,"
-      },
-      {
-        "end": 114.24,
-        "start": 112.68,
-        "text": " you,"
-      },
-      {
-        "end": 114.78,
-        "start": 114.24,
-        "text": " you"
-      },
-      {
-        "end": 116.04,
-        "start": 114.78,
-        "text": " commit"
-      },
-      {
-        "end": 117.9,
-        "start": 116.04,
-        "text": " wrongdoings"
-      },
-      {
-        "end": 118.56,
-        "start": 117.9,
-        "text": " every"
-      },
-      {
-        "end": 119.22,
-        "start": 118.56,
-        "text": " day,"
-      },
-      {
-        "end": 119.76,
-        "start": 119.22,
-        "text": " I"
-      },
-      {
-        "end": 120.24,
-        "start": 119.76,
-        "text": " will"
-      },
-      {
-        "end": 121.5,
-        "start": 120.24,
-        "text": " dislike"
-      },
-      {
-        "end": 121.8,
-        "start": 121.5,
-        "text": " you"
-      },
-      {
-        "end": 122.34,
-        "start": 121.8,
-        "text": " and"
-      },
-      {
-        "end": 123,
-        "start": 122.34,
-        "text": " even"
-      },
-      {
-        "end": 123.24,
-        "start": 123,
-        "text": " hit"
-      },
-      {
-        "end": 123.48,
-        "start": 123.24,
-        "text": " you."
-      },
-      {
-        "end": 124.8,
-        "start": 123.54,
-        "text": " What"
-      },
-      {
-        "end": 125.94,
-        "start": 124.8,
-        "text": " will"
+      {
+        "end" : 52.3799375,
+        "start" : 47.76,
+        "texts" : [
+          "its teasing pricks.",
+          "it's teasing pricks.",
+          "its teasing pricks, hit.",
+          "it's teasing, pricks."
+        ]
+      },
+      {
+        "end" : 54.48,
+        "start" : 52.38,
+        "texts" : [
+          "Okay.",
+          "Hey,"
+        ]
+      },
+      {
+        "end" : 58.98,
+        "start" : 54.48,
+        "texts" : [
+          "Do, do",
+          "do, do",
+          "Do",
+          "Do. Do"
+        ]
+      },
+      {
+        "end" : 67.38,
+        "start" : 58.98,
+        "texts" : [
+          "you dislike me? Asked, sir, I'm only a chef for"
+        ]
+      },
+      {
+        "end" : 67.92,
+        "start" : 67.38,
+        "texts" : [
+          "this.",
+          "that."
+        ]
+      },
+      {
+        "end" : 69.18,
+        "start" : 67.92,
+        "texts" : [
+          "And"
+        ]
+      },
+      {
+        "end" : 71.46,
+        "start" : 69.18,
+        "texts" : [
+          "I, uh,",
+          "I Uh,"
+        ]
+      },
+      {
+        "end" : 71.64,
+        "start" : 71.46,
+        "texts" : [
+          "and"
+        ]
+      },
+      {
+        "end" : 71.88,
+        "start" : 71.64,
+        "texts" : [
+          "a",
+          "the",
+          "that"
+        ]
+      },
+      {
+        "end" : 75.18,
+        "start" : 71.88,
+        "texts" : [
+          "poor girl, she said, but I won't marry you."
+        ]
+      },
+      {
+        "end" : 77.34,
+        "start" : 75.18,
+        "texts" : [
+          "Do you like"
+        ]
       },
-      {
-        "end": 126.96,
-        "start": 125.94,
-        "text": " or"
-      },
-      {
-        "end": 128.1,
-        "start": 126.96,
-        "text": " you."
-      },
-      {
-        "end": 129.72,
-        "start": 128.22,
-        "text": " Oh,"
-      },
-      {
-        "end": 130.68,
-        "start": 129.72,
-        "text": " or"
-      },
-      {
-        "end": 131.22,
-        "start": 130.68,
-        "text": " marriage"
-      },
-      {
-        "end": 132.06,
-        "start": 131.22,
-        "text": " be"
-      },
-      {
-        "end": 132.54,
-        "start": 132.06,
-        "text": " like"
-      },
-      {
-        "end": 133.02,
-        "start": 132.54,
-        "text": " if"
+      {
+        "end" : 78.84,
+        "start" : 77.34,
+        "texts" : [
+          "me asked",
+          "me, asked",
+          "me? asked"
+        ]
+      },
+      {
+        "end" : 82.98,
+        "start" : 78.84,
+        "texts" : [
+          "Prince Darling annoyed at this"
+        ]
       },
-      {
-        "end": 133.38,
-        "start": 133.02,
-        "text": " I"
-      },
-      {
-        "end": 133.68,
-        "start": 133.38,
-        "text": " am"
+      {
+        "end" : 83.58,
+        "start" : 82.98,
+        "texts" : [
+          "answer?",
+          "answer."
+        ]
       },
-      {
-        "end": 135,
-        "start": 133.68,
-        "text": " a"
+      {
+        "end" : 86.52,
+        "start" : 83.58,
+        "texts" : [
+          "No, my",
+          "No my"
+        ]
       },
-      {
-        "end": 138.54,
-        "start": 135,
-        "text": " witness."
+      {
+        "end" : 87.1799375,
+        "start" : 86.52,
+        "texts" : [
+          "prince.",
+          "Prince.",
+          "friends."
+        ]
+      },
+      {
+        "end" : 92.22,
+        "start" : 87.18,
+        "texts" : [
+          "Replied, Syria,",
+          "Replied, Cydia,",
+          "Replied,"
+        ]
+      },
+      {
+        "end" : 92.82,
+        "start" : 92.22,
+        "texts" : [
+          "um.",
+          "um,"
+        ]
+      },
+      {
+        "end" : 110.58,
+        "start" : 92.82,
+        "texts" : [
+          "And notice you are very rich, but what's good would. Reach needs to, which needs to be to"
+        ]
+      },
+      {
+        "end" : 111.6,
+        "start" : 110.58,
+        "texts" : [
+          "me. If",
+          "me, if"
+        ]
+      },
+      {
+        "end" : 116.04,
+        "start" : 111.6,
+        "texts" : [
+          "I see, you, you commit"
+        ]
+      },
+      {
+        "end" : 118.56,
+        "start" : 116.04,
+        "texts" : [
+          "wrongdoings every",
+          "wrongdoings, every"
+        ]
+      },
+      {
+        "end" : 121.5,
+        "start" : 118.56,
+        "texts" : [
+          "day, I will dislike"
+        ]
+      },
+      {
+        "end" : 122.34,
+        "start" : 121.5,
+        "texts" : [
+          "you and",
+          "you, and"
+        ]
+      },
+      {
+        "end" : 123,
+        "start" : 122.34,
+        "texts" : [
+          "even"
+        ]
+      },
+      {
+        "end" : 123.24,
+        "start" : 123,
+        "texts" : [
+          "hit",
+          "hate"
+        ]
+      },
+      {
+        "end" : 123.5399375,
+        "start" : 123.24,
+        "texts" : [
+          "you.",
+          "you,"
+        ]
+      },
+      {
+        "end" : 128.22,
+        "start" : 123.54,
+        "texts" : [
+          "What will or you.",
+          "What will or you?",
+          "What? Will or.",
+          "What? Will, or.",
+          "What will or."
+        ]
+      },
+      {
+        "end" : 129.72,
+        "start" : 128.22,
+        "texts" : [
+          "Oh,",
+          "Or,"
+        ]
+      },
+      {
+        "end" : 133.38,
+        "start" : 129.72,
+        "texts" : [
+          "or marriage be like if I"
+        ]
+      },
+      {
+        "end" : 138.6,
+        "start" : 133.38,
+        "texts" : [
+          "am a witness.",
+          "am, uh, witnesses.",
+          "am, uh, witness.",
+          "am, a witness.",
+          "am, uh, we witness."
+        ]
       }
     ],
-    "source": "点读超8.mp4 [0.00-138.70]"
+    "contextPrimed" : true,
+    "locale" : "en-US",
+    "runs" : [
+      {
+        "confidence" : 0.913,
+        "end" : 1.32,
+        "start" : 0,
+        "text" : "They"
+      },
+      {
+        "confidence" : 0.979,
+        "end" : 1.8,
+        "start" : 1.32,
+        "text" : " would"
+      },
+      {
+        "confidence" : 0.895,
+        "end" : 2.34,
+        "start" : 1.8,
+        "text" : " not"
+      },
+      {
+        "confidence" : 0.977,
+        "end" : 2.88,
+        "start" : 2.34,
+        "text" : " be"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 3.24,
+        "start" : 2.88,
+        "text" : " such"
+      },
+      {
+        "confidence" : 0.979,
+        "end" : 3.66,
+        "start" : 3.24,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.95,
+        "end" : 4.02,
+        "start" : 3.66,
+        "text" : " trouble"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 4.38,
+        "start" : 4.02,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 4.56,
+        "start" : 4.38,
+        "text" : " me"
+      },
+      {
+        "confidence" : 0.575,
+        "end" : 5.22,
+        "start" : 4.56,
+        "text" : " now,"
+      },
+      {
+        "confidence" : 0.433,
+        "end" : 5.76,
+        "start" : 5.22,
+        "text" : " at"
+      },
+      {
+        "confidence" : 0.65,
+        "end" : 6.84,
+        "start" : 5.76,
+        "text" : " last."
+      },
+      {
+        "confidence" : 0.537,
+        "end" : 7.74,
+        "start" : 6.9,
+        "text" : " The"
+      },
+      {
+        "confidence" : 0.809,
+        "end" : 7.98,
+        "start" : 7.74,
+        "text" : " prince"
+      },
+      {
+        "confidence" : 0.933,
+        "end" : 8.34,
+        "start" : 7.98,
+        "text" : " got"
+      },
+      {
+        "confidence" : 0.161,
+        "end" : 8.88,
+        "start" : 8.34,
+        "text" : " tired"
+      },
+      {
+        "confidence" : 0.883,
+        "end" : 9.84,
+        "start" : 8.88,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.986,
+        "end" : 10.26,
+        "start" : 9.84,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.098,
+        "end" : 11.94,
+        "start" : 10.26,
+        "text" : " constant."
+      },
+      {
+        "confidence" : 0.396,
+        "end" : 13.74,
+        "start" : 11.94,
+        "text" : " Constant."
+      },
+      {
+        "confidence" : 0.451,
+        "end" : 16.38,
+        "start" : 13.74,
+        "text" : " Reminders"
+      },
+      {
+        "confidence" : 0.964,
+        "end" : 16.86,
+        "start" : 16.38,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.83,
+        "end" : 17.52,
+        "start" : 16.86,
+        "text" : " his"
+      },
+      {
+        "confidence" : 0.141,
+        "end" : 18.36,
+        "start" : 17.52,
+        "text" : " bed,"
+      },
+      {
+        "confidence" : 0.169,
+        "end" : 18.66,
+        "start" : 18.36,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.748,
+        "end" : 19.44,
+        "start" : 18.66,
+        "text" : " bad"
+      },
+      {
+        "confidence" : 0.293,
+        "end" : 20.1,
+        "start" : 19.44,
+        "text" : " be,"
+      },
+      {
+        "confidence" : 0.512,
+        "end" : 21.66,
+        "start" : 20.1,
+        "text" : " heavier."
+      },
+      {
+        "confidence" : 0.932,
+        "end" : 23.82,
+        "start" : 21.72,
+        "text" : " He"
+      },
+      {
+        "confidence" : 0.979,
+        "end" : 24.24,
+        "start" : 23.82,
+        "text" : " wanted"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 24.9,
+        "start" : 24.24,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 25.32,
+        "start" : 24.9,
+        "text" : " be"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 25.74,
+        "start" : 25.32,
+        "text" : " able"
+      },
+      {
+        "confidence" : 0.977,
+        "end" : 26.16,
+        "start" : 25.74,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.962,
+        "end" : 27,
+        "start" : 26.16,
+        "text" : " do"
+      },
+      {
+        "confidence" : 0.844,
+        "end" : 27.72,
+        "start" : 27,
+        "text" : " as"
+      },
+      {
+        "confidence" : 0.846,
+        "end" : 28.26,
+        "start" : 27.72,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.274,
+        "end" : 28.98,
+        "start" : 28.26,
+        "text" : " liked."
+      },
+      {
+        "confidence" : 0.358,
+        "end" : 30,
+        "start" : 29.04,
+        "text" : " So"
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 30.84,
+        "start" : 30,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.907,
+        "end" : 31.32,
+        "start" : 30.84,
+        "text" : " threw"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 31.56,
+        "start" : 31.32,
+        "text" : " his"
+      },
+      {
+        "confidence" : 0.919,
+        "end" : 31.98,
+        "start" : 31.56,
+        "text" : " ring"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 32.58,
+        "start" : 31.98,
+        "text" : " aside"
+      },
+      {
+        "confidence" : 0.563,
+        "end" : 33.96,
+        "start" : 32.58,
+        "text" : " and."
+      },
+      {
+        "confidence" : 0.51,
+        "end" : 35.64,
+        "start" : 33.96,
+        "text" : " And"
+      },
+      {
+        "confidence" : 0.582,
+        "end" : 36.9,
+        "start" : 35.64,
+        "text" : " so."
+      },
+      {
+        "confidence" : 0.616,
+        "end" : 39.42,
+        "start" : 37.02,
+        "text" : " Himself."
+      },
+      {
+        "confidence" : 0.866,
+        "end" : 41.64,
+        "start" : 39.48,
+        "text" : " The"
+      },
+      {
+        "confidence" : 0.965,
+        "end" : 42.54,
+        "start" : 41.64,
+        "text" : " happiest"
+      },
+      {
+        "confidence" : 0.907,
+        "end" : 43.5,
+        "start" : 42.54,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.416,
+        "end" : 43.98,
+        "start" : 43.5,
+        "text" : " men"
+      },
+      {
+        "confidence" : 0.941,
+        "end" : 44.82,
+        "start" : 43.98,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 45.24,
+        "start" : 44.82,
+        "text" : " have"
+      },
+      {
+        "confidence" : 0.868,
+        "end" : 46.2,
+        "start" : 45.24,
+        "text" : " got"
+      },
+      {
+        "confidence" : 0.445,
+        "end" : 46.62,
+        "start" : 46.2,
+        "text" : " rid"
+      },
+      {
+        "confidence" : 0.575,
+        "end" : 47.04,
+        "start" : 46.62,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.846,
+        "end" : 47.76,
+        "start" : 47.04,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.49,
+        "end" : 48.72,
+        "start" : 47.76,
+        "text" : " its"
+      },
+      {
+        "confidence" : 0.927,
+        "end" : 49.86,
+        "start" : 48.72,
+        "text" : " teasing"
+      },
+      {
+        "confidence" : 0.548,
+        "end" : 51.36,
+        "start" : 49.86,
+        "text" : " pricks."
+      },
+      {
+        "confidence" : 0.223,
+        "end" : 54.48,
+        "start" : 52.38,
+        "text" : " Okay."
+      },
+      {
+        "confidence" : 0.213,
+        "end" : 57.06,
+        "start" : 54.48,
+        "text" : " Do,"
+      },
+      {
+        "confidence" : 0.26,
+        "end" : 58.98,
+        "start" : 57.06,
+        "text" : " do"
+      },
+      {
+        "confidence" : 0.947,
+        "end" : 59.34,
+        "start" : 58.98,
+        "text" : " you"
+      },
+      {
+        "confidence" : 0.33,
+        "end" : 60.24,
+        "start" : 59.34,
+        "text" : " dislike"
+      },
+      {
+        "confidence" : 0.318,
+        "end" : 61.56,
+        "start" : 60.24,
+        "text" : " me?"
+      },
+      {
+        "confidence" : 0.195,
+        "end" : 64.74,
+        "start" : 61.56,
+        "text" : " Asked,"
+      },
+      {
+        "confidence" : 0.425,
+        "end" : 65.46,
+        "start" : 64.74,
+        "text" : " sir,"
+      },
+      {
+        "confidence" : 0.829,
+        "end" : 65.7,
+        "start" : 65.46,
+        "text" : " I'm"
+      },
+      {
+        "confidence" : 0.944,
+        "end" : 66.3,
+        "start" : 65.7,
+        "text" : " only"
+      },
+      {
+        "confidence" : 0.773,
+        "end" : 66.72,
+        "start" : 66.3,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.613,
+        "end" : 67.14,
+        "start" : 66.72,
+        "text" : " chef"
+      },
+      {
+        "confidence" : 0.553,
+        "end" : 67.38,
+        "start" : 67.14,
+        "text" : " for"
+      },
+      {
+        "confidence" : 0.423,
+        "end" : 67.86,
+        "start" : 67.38,
+        "text" : " this."
+      },
+      {
+        "confidence" : 0.397,
+        "end" : 69.18,
+        "start" : 67.92,
+        "text" : " And"
+      },
+      {
+        "confidence" : 0.506,
+        "end" : 69.78,
+        "start" : 69.18,
+        "text" : " I,"
+      },
+      {
+        "confidence" : 0.198,
+        "end" : 71.46,
+        "start" : 69.78,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.752,
+        "end" : 71.64,
+        "start" : 71.46,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.492,
+        "end" : 71.88,
+        "start" : 71.64,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.934,
+        "end" : 72.12,
+        "start" : 71.88,
+        "text" : " poor"
+      },
+      {
+        "confidence" : 0.642,
+        "end" : 72.72,
+        "start" : 72.12,
+        "text" : " girl,"
+      },
+      {
+        "confidence" : 0.981,
+        "end" : 73.02,
+        "start" : 72.72,
+        "text" : " she"
+      },
+      {
+        "confidence" : 0.86,
+        "end" : 73.32,
+        "start" : 73.02,
+        "text" : " said,"
+      },
+      {
+        "confidence" : 0.957,
+        "end" : 73.68,
+        "start" : 73.32,
+        "text" : " but"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 73.98,
+        "start" : 73.68,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.986,
+        "end" : 74.46,
+        "start" : 73.98,
+        "text" : " won't"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 74.7,
+        "start" : 74.46,
+        "text" : " marry"
+      },
+      {
+        "confidence" : 0.628,
+        "end" : 75.12,
+        "start" : 74.7,
+        "text" : " you."
+      },
+      {
+        "confidence" : 0.389,
+        "end" : 75.72,
+        "start" : 75.18,
+        "text" : " Do"
+      },
+      {
+        "confidence" : 0.974,
+        "end" : 75.96,
+        "start" : 75.72,
+        "text" : " you"
+      },
+      {
+        "confidence" : 0.839,
+        "end" : 77.34,
+        "start" : 75.96,
+        "text" : " like"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 77.76,
+        "start" : 77.34,
+        "text" : " me"
+      },
+      {
+        "confidence" : 0.669,
+        "end" : 78.84,
+        "start" : 77.76,
+        "text" : " asked"
+      },
+      {
+        "confidence" : 0.774,
+        "end" : 79.8,
+        "start" : 78.84,
+        "text" : " Prince"
+      },
+      {
+        "confidence" : 0.225,
+        "end" : 80.76,
+        "start" : 79.8,
+        "text" : " Darling"
+      },
+      {
+        "confidence" : 0.977,
+        "end" : 81.42,
+        "start" : 80.76,
+        "text" : " annoyed"
+      },
+      {
+        "confidence" : 0.892,
+        "end" : 82.62,
+        "start" : 81.42,
+        "text" : " at"
+      },
+      {
+        "confidence" : 0.988,
+        "end" : 82.98,
+        "start" : 82.62,
+        "text" : " this"
+      },
+      {
+        "confidence" : 0.915,
+        "end" : 83.52,
+        "start" : 82.98,
+        "text" : " answer?"
+      },
+      {
+        "confidence" : 0.725,
+        "end" : 86.34,
+        "start" : 83.58,
+        "text" : " No,"
+      },
+      {
+        "confidence" : 0.982,
+        "end" : 86.52,
+        "start" : 86.34,
+        "text" : " my"
+      },
+      {
+        "confidence" : 0.534,
+        "end" : 87.12,
+        "start" : 86.52,
+        "text" : " prince."
+      },
+      {
+        "confidence" : 0.475,
+        "end" : 90.72,
+        "start" : 87.18,
+        "text" : " Replied,"
+      },
+      {
+        "confidence" : 0.103,
+        "end" : 92.22,
+        "start" : 90.72,
+        "text" : " Syria,"
+      },
+      {
+        "confidence" : 0.487,
+        "end" : 92.7,
+        "start" : 92.22,
+        "text" : " um."
+      },
+      {
+        "confidence" : 0.474,
+        "end" : 96.12,
+        "start" : 92.82,
+        "text" : " And"
+      },
+      {
+        "confidence" : 0.946,
+        "end" : 97.14,
+        "start" : 96.12,
+        "text" : " notice"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 97.5,
+        "start" : 97.14,
+        "text" : " you"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 97.8,
+        "start" : 97.5,
+        "text" : " are"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 98.04,
+        "start" : 97.8,
+        "text" : " very"
+      },
+      {
+        "confidence" : 0.751,
+        "end" : 98.7,
+        "start" : 98.04,
+        "text" : " rich,"
+      },
+      {
+        "confidence" : 0.773,
+        "end" : 99.3,
+        "start" : 98.7,
+        "text" : " but"
+      },
+      {
+        "confidence" : 0.917,
+        "end" : 100.26,
+        "start" : 99.3,
+        "text" : " what's"
+      },
+      {
+        "confidence" : 0.921,
+        "end" : 100.98,
+        "start" : 100.26,
+        "text" : " good"
+      },
+      {
+        "confidence" : 0.414,
+        "end" : 101.82,
+        "start" : 100.98,
+        "text" : " would."
+      },
+      {
+        "confidence" : 0.395,
+        "end" : 106.92,
+        "start" : 101.82,
+        "text" : " Reach"
+      },
+      {
+        "confidence" : 0.896,
+        "end" : 107.7,
+        "start" : 106.92,
+        "text" : " needs"
+      },
+      {
+        "confidence" : 0.462,
+        "end" : 109.32,
+        "start" : 107.7,
+        "text" : " to,"
+      },
+      {
+        "confidence" : 0.363,
+        "end" : 109.44,
+        "start" : 109.32,
+        "text" : " which"
+      },
+      {
+        "confidence" : 0.949,
+        "end" : 109.92,
+        "start" : 109.44,
+        "text" : " needs"
+      },
+      {
+        "confidence" : 0.08,
+        "end" : 110.22,
+        "start" : 109.92,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.639,
+        "end" : 110.34,
+        "start" : 110.22,
+        "text" : " be"
+      },
+      {
+        "confidence" : 0.834,
+        "end" : 110.58,
+        "start" : 110.34,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.541,
+        "end" : 111.42,
+        "start" : 110.58,
+        "text" : " me."
+      },
+      {
+        "confidence" : 0.247,
+        "end" : 111.6,
+        "start" : 111.42,
+        "text" : " If"
+      },
+      {
+        "confidence" : 0.98,
+        "end" : 111.9,
+        "start" : 111.6,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.496,
+        "end" : 112.68,
+        "start" : 111.9,
+        "text" : " see,"
+      },
+      {
+        "confidence" : 0.224,
+        "end" : 114.24,
+        "start" : 112.68,
+        "text" : " you,"
+      },
+      {
+        "confidence" : 0.7,
+        "end" : 114.78,
+        "start" : 114.24,
+        "text" : " you"
+      },
+      {
+        "confidence" : 0.878,
+        "end" : 116.04,
+        "start" : 114.78,
+        "text" : " commit"
+      },
+      {
+        "confidence" : 0.752,
+        "end" : 117.9,
+        "start" : 116.04,
+        "text" : " wrongdoings"
+      },
+      {
+        "confidence" : 0.966,
+        "end" : 118.56,
+        "start" : 117.9,
+        "text" : " every"
+      },
+      {
+        "confidence" : 0.458,
+        "end" : 119.22,
+        "start" : 118.56,
+        "text" : " day,"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 119.76,
+        "start" : 119.22,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.986,
+        "end" : 120.24,
+        "start" : 119.76,
+        "text" : " will"
+      },
+      {
+        "confidence" : 0.81,
+        "end" : 121.5,
+        "start" : 120.24,
+        "text" : " dislike"
+      },
+      {
+        "confidence" : 0.98,
+        "end" : 121.8,
+        "start" : 121.5,
+        "text" : " you"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 122.34,
+        "start" : 121.8,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 123,
+        "start" : 122.34,
+        "text" : " even"
+      },
+      {
+        "confidence" : 0.843,
+        "end" : 123.24,
+        "start" : 123,
+        "text" : " hit"
+      },
+      {
+        "confidence" : 0.333,
+        "end" : 123.48,
+        "start" : 123.24,
+        "text" : " you."
+      },
+      {
+        "confidence" : 0.478,
+        "end" : 124.8,
+        "start" : 123.54,
+        "text" : " What"
+      },
+      {
+        "confidence" : 0.847,
+        "end" : 125.94,
+        "start" : 124.8,
+        "text" : " will"
+      },
+      {
+        "confidence" : 0.767,
+        "end" : 126.96,
+        "start" : 125.94,
+        "text" : " or"
+      },
+      {
+        "confidence" : 0.327,
+        "end" : 128.1,
+        "start" : 126.96,
+        "text" : " you."
+      },
+      {
+        "confidence" : 0.095,
+        "end" : 129.72,
+        "start" : 128.22,
+        "text" : " Oh,"
+      },
+      {
+        "confidence" : 0.388,
+        "end" : 130.68,
+        "start" : 129.72,
+        "text" : " or"
+      },
+      {
+        "confidence" : 0.96,
+        "end" : 131.22,
+        "start" : 130.68,
+        "text" : " marriage"
+      },
+      {
+        "confidence" : 0.93,
+        "end" : 132.06,
+        "start" : 131.22,
+        "text" : " be"
+      },
+      {
+        "confidence" : 0.959,
+        "end" : 132.54,
+        "start" : 132.06,
+        "text" : " like"
+      },
+      {
+        "confidence" : 0.988,
+        "end" : 133.02,
+        "start" : 132.54,
+        "text" : " if"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 133.38,
+        "start" : 133.02,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.976,
+        "end" : 133.68,
+        "start" : 133.38,
+        "text" : " am"
+      },
+      {
+        "confidence" : 0.267,
+        "end" : 135,
+        "start" : 133.68,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.783,
+        "end" : 138.54,
+        "start" : 135,
+        "text" : " witness."
+      }
+    ],
+    "source" : "super8-L3-p68-clip-BC0CDE5B-BCB3-4060-8A82-172C653EE9D8.m4a"
   },
-  "words": [
+  "words" : [
     "they",
     "would",
     "not",
@@ -1522,7 +2395,6 @@
     "its",
     "teasing",
     "pricks",
-    "hey",
     "okay",
     "do",
     "do",
