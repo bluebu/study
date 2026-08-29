@@ -1,0 +1,165 @@
+# 超8 · Lesson 3
+# 第 73–74 页，一段录音一口气读完两页（4 分 50 秒）。
+# 录音里还有两段**没划线**的朗读：46–71 秒（两段划线之间那段叙述）和 231 秒之后
+# （读到下一页去了）。它们算进时长、不算进正确词数，所以 WCPM 偏保守，见 [怎么来的]。
+# 停顿阈值 −32.6 dB，和 65–67 页（−21.8 / −26.4 / −27.5）、68–69 页（−40）都不同，
+# **停顿类的数不能跨录音比**。
+# 8 月 28 日那次（p70-72）只有测量数据、还没定稿，所以 prev 直接接 p69。
+date: 2026-08-29
+cat: 超8
+order: 73
+page: 73–74
+book: Prince Darling
+part: 划线部分
+grade: 三年级
+words: 228
+errors: 13
+score: 53
+naep: 2
+prev: p69
+
+[评分] 准确度=21/30 流利度=12/30 断句语调=12/25 发音=8/15
+
+[总评] 篇幅翻了一倍，错的还是那几类小词。
+    228 个词一口气读完，是前几次的两倍还多，准确率反而从 89.0% 回到了 94.3%。
+    13 处计错里 8 处是**小词和词尾**（a→the、into→in、as→a、to→in、off→of、
+    hunters 和 beasts 少了 -s、upon 变成了一声「um」），实词只错了 5 处。
+    另有 10 处机器判的「读错」这次没算（比对里 5 条，标的是「识别成」）：dead 两次、
+    三个专有名词（Suliman 两次、Darling）、98–100 秒那一串 5 个词 —— 都是转写自己乱了。
+    还有两处是**课本印错** ——
+    thunderboll 和 “wanting to cat him up”，她读的是 thunderbolt 和 eat，那是读对了。
+
+[卡壳] 19.6-26.6 = 卡 7.0 秒, 46.0-71.3 = 读了没划线的一段 25.3 秒, 72.1-83.2 = 卡 11.1 秒, 119.6-125.8 = 翻页 6.2 秒, 204.1-209.8 = 卡 5.7 秒
+    46.0–71.3 那 25 秒**不是卡住** —— 转写里是一整句英文（“just as this man finished
+    their story, the sound of trumpets…”），那是两段划线中间没划线的叙述，她一起读了。
+    119.6–125.8 的 6 秒是从第 73 页翻到第 74 页。
+    真正停住的是 19.6–26.6（thunderboll 那个句号之后接 “They then”）和
+    204.1–209.8（“who saw what was going on” 那一句，saw 也是在这儿读成了 was）。
+
+[分页] 这次读了 2 页
+第 73 页 = 5.3–119.6 秒 · 98 词 · 计错 3 处
+第 74 页 = 125.8–230.9 秒 · 130 词 · 计错 10 处
+    第 73 页那 3 处全是小词；这一页的难词（thunderboll、Suliman、Prince Darling）
+    都读出来了，只是机器听不准。第 74 页词多一半、错也多一半，其中 4 处是词尾和介词。
+
+[对比] 和上一页比
+准确率 = 回升了
+正确词/分 = 数字变小了
+几个词一停 = 阈值不同，别比
+停顿占时长 = 阈值不同，别比
+    89.0% → 94.3%，回到 67 页那一档附近。不过两次的分母差很多：p69 只有 91 个词，
+    一处错就是 1.1 个百分点，这次 228 个词、一处只占 0.44 —— 篇幅长本身就摊薄了错误率。
+    下面两行**不能直接比**：p69 的停顿阈值是 −40 dB，这次是 −32.6 dB，
+    阈值越高越容易把一个小气口算成一次停顿。
+
+[比对]
+原文 people was found *dead* in his room
+识别成 people was found *that* in his room
+    9.8 秒。dead 被听成 that，后面 97.3 秒同一个词又被听成同样的 that ——
+    两次都拿不准，先不计错。这个词值得亲耳听一遍
+原文 struck down by *a* thunderboll
+实读 struck down by *the* thunderboll
+    a 读成 the
+原文 down by a *thunderboll* They then
+实读 down by a *thunderbolt* They then
+    **课本印的是 thunderboll**（少了一个 t），她读的是 thunderbolt —— 读对了，不计错
+原文 the crown to *Suliman* the tutor
+识别成 the crown to *solomon* the tutor
+    31.3 秒。专有名词，机器只会往认识的词上靠，不计错
+原文 prince had put *into* prison
+实读 prince had put *in* prison
+    into 读成 in
+原文 a single day *Suliman* went from being
+识别成 a single day *salmon* went from being
+    40.7 秒。同一个名字第二次，被听成另一个词，同样不计错
+原文 safe for Prince *Darling* He is not
+识别成 safe for Prince *danny* He is not
+    94.9 秒。Prince 读对了，名字这次没听准
+原文 as *rumors say The Fairy has* told me
+识别成 as *（rumor says sarah 一串）* told me
+    98–100 秒这 2 秒里转写整个乱了，5 个词全对不上。这一串一起标存疑，一处都没计错 ——
+    回去听这两秒，真读错了再加进 errors
+原文 him return becoming *as* good a king
+实读 him return becoming *a* good a king
+    as 读成 a
+原文 once was The *hunters* who had caught
+实读 once was The *hunter* who had caught
+    复数的 -s 没读出来
+原文 hunters who had *caught* him took him
+实读 hunters who had *called* him took him
+    caught 读成了 called
+原文 him took him *to* a place where
+实读 him took him *in* a place where
+    to 读成 in
+原文 all the other *wild* beasts
+实读 all the other *（漏读）* beasts
+    wild 整个跳过去了
+原文 the other wild *beasts* The prince
+实读 the other wild *beast* The prince
+    又一处复数的 -s。这一页两个复数都栽在词尾
+原文 the caretaker was *asleep* a tiger
+实读 the caretaker was *sleep* a tiger
+    asleep 读成 sleep，开头的 a- 丢了
+原文 a tiger broke *off* its chain
+实读 a tiger broke *of* its chain
+    off 读成 of
+原文 him wanting to *cat* him up
+实读 him wanting to *eat* him up
+    **课本这儿印的是 cat**（应该是 eat），她读的是 eat —— 读对了，不计错
+原文 Prince Darling who *saw* what was going
+实读 Prince Darling who *was* what was going
+    saw 读成 was。这一句前面正好停了 5.7 秒
+原文 think that the *mean* caretaker deserved
+实读 think that the *main* caretaker deserved
+    mean 读成了 main，元音换了
+原文 deserved this but *upon* reflection
+实读 deserved this but *um* reflection
+    upon 没读出来，出来的是一声「um」
+
+[磕巴] 机器候选 13 处（不计错）
+*torting*, torturing his people was
+    开头第一个词就读了两遍：先出来一个 torting，马上自己改成 torturing。**自己改对的**
+*struck*, struck down by a
+    这个词读了两遍才接上
+*the*, the caretaker often hit
+    173.9 秒，同样是读了两遍
+*quite*, quite pleased to think
+    213.9 秒，也是重复一次就接上了
+*the king just as this man finished their story…* 一整句
+    46.0 秒起那 25 秒，读的是没划线的那段叙述 —— 不是磕巴
+*just a wicked … hermit* 一长串
+    249 秒之后，划线部分已经读完了，她接着往下读了一分钟
+
+[亮点]
+**“The prince decided to show his sorrow for his past bad behavior by being gentle with the man tasked to care for him.”** —— 21 个词一路读到底，behavior、gentle、tasked 都一次到位。
+**“Even though the poor beast did what he was told, the caretaker often hit him for no reason just because he was in a bad mood.”** —— 136 秒到 190 秒这 54 秒里一处没错，是整段最稳的一截。
+课本把 thunderbolt 印成了 **thunderboll**、把 eat 印成了 **cat**，两处她都按正确的词读了出来。
+
+[三件事]
+🔤 词尾的 -s 先读足：hunter**s** / beast**s**
+    这一页两个复数都少了 -s。开读之前先扫一眼，看到 s 结尾的词，心里先把那个音挂上。
+🔍 小词别扫过去：a / the / into / to / off
+    13 处错里 8 处是这类词 —— 它们短、眼睛容易跳过去。手指点到哪读到哪，别让眼睛跑在前面。
+🎙 划线的和没划线的分开录
+    46–71 秒和最后一分钟读的都是没划线的部分。混在一段录音里，那些时间算进了时长、
+    词却不算进比对，「每分钟正确词数」看着就比实际慢。先把划线的读完，停一下再往下读。
+
+[斜线]
+One day when the caretaker was asleep,
+a tiger broke off its chain and flew him,
+wanting to eat him up.
+
+[尺子]
+    94.3% 落在「偏难」这一档的最上沿 —— 再多读对两个词就进「教学」档了。
+        228 个词错 13 处，比上一份（89.0%）回升了一大截，篇幅还翻了一倍。
+    44 个正确词/分钟：这个数偏低是因为录音里有两段**没划线**的朗读（46–71 秒、231 秒之后），
+        它们算进了时长、不算进正确词数。只按读划线那段的时间算，大约是 57 词/分。
+        母语常模只当参照系，不是及格线。
+    平均 1.7 个词一停。这次的停顿阈值是 −32.6 dB，比 68–69 页（−40 dB）更容易
+        把一个小气口算成停顿，所以这个数和前几次**不能直接比**。
+
+[怎么来的]
+**准确率 94.3%**（读对 215 / 划线部分共 228 词）。替换、漏读、读错音计错；插入的词和退回去重读只算不流利、不计错。上面的比对列了 20 条、**计错 13 处** —— 5 条是转写自己听不准（三个专有名词和 98–100 秒那一串，标的是「识别成」），2 条是课本印错（thunderboll / cat），她反而读对了。
+**每分钟正确词数 44**（WCPM）= 读对的 215 词 ÷ 290.2 秒 × 60。这段录音里有两段没划线的朗读（46–71 秒、231–290 秒），时长算了、词不算，所以这个数偏保守；只算划线那部分（5.3–230.9 秒）约 57 词/分。
+**断句**取 138 次停顿，平均 1.7 个词一组。停顿阈值 −32.6 dB，和 65–67 页、68–69 页都不同，所以停顿类的数不能跨录音比。
+这次是 8 月 29 日的一段 4 分 50 秒录音，一口气读完第 73–74 页的划线部分。离线转写 + 逐词时间戳，停顿按能量包络取 ≥0.25 秒的段；比对基准是课本第 73、74 页红线划出的段落（`p73.ref.txt` + `p74.ref.txt` 按朗读顺序拼起来）。**发音一项是从转写结果推断的**，不如亲耳听准 —— 三个专有名词和 98–100 秒那 5 个词尤其，那两秒转写整个乱了。

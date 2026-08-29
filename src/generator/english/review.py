@@ -382,13 +382,39 @@ def timeline(r: Report) -> dict:
             "note": rich(note) if note else ""}
 
 
+def ref_text(slug: str) -> str:
+    """这次朗读的比对基准 —— 原文按**朗读顺序**拼起来。
+
+    两种落法都认，和喂数据台的 `Output/Reference.swift` 同一套口径：
+
+        <slug>.ref.txt              一段朗读跨两页、当初两张图合成一份扫的
+        <书>/<课>/pNN.ref.txt       一叠截图一次扫的（一页一份），按名字里的页码拼
+
+    **后一种是常态** —— 教材截图一次扫十几页、录音当天晚上才录，
+    所以 `p73-74` 这个名字下根本没有 `p73-74.ref.txt`，只有 `p73.ref.txt`
+    和 `p74.ref.txt`。只认合起来那一份的话，`auto_bounds()` 会静默返回空，
+    报告里「句末停顿」就成了 0 次（踩过：8/29 那份第一次构建就是 0）。
+    """
+    whole = DATA / f"{slug}.ref.txt"
+    if whole.exists():
+        return whole.read_text(encoding="utf-8")
+    last = slug.rsplit("/", 1)[-1]
+    m = re.fullmatch(r"[pP](\d+)(?:-(\d+))?", last)
+    if not m:
+        return ""
+    lo, hi = int(m[1]), int(m[2] or m[1])
+    folder = DATA / slug.rsplit("/", 1)[0] if "/" in slug else DATA
+    pages = [folder / f"p{n}.ref.txt" for n in range(lo, hi + 1)]
+    return "\n\n".join(p.read_text(encoding="utf-8") for p in pages if p.exists())
+
+
 def auto_bounds(r: Report) -> list[float]:
     """从原文的句末标点推句末时刻。spec 没写 [句末] 时的兜底。"""
-    ref = DATA / f"{r.slug}.ref.txt"
-    if not (r.reading and ref.exists()):
+    text = ref_text(r.slug)
+    if not (r.reading and text):
         return []
     times = r.reading.get("alignment", {}).get("refTimes") or []
-    words = re.findall(r"[A-Za-z0-9''\-]+[^\sA-Za-z0-9]*", ref.read_text(encoding="utf-8"))
+    words = re.findall(r"[A-Za-z0-9''\-]+[^\sA-Za-z0-9]*", text)
     return [times[i] for i, w in enumerate(words)
             if i < len(times) and times[i] is not None and re.search(r"[.!?][\"']?$", w)]
 

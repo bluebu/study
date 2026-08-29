@@ -1,0 +1,3453 @@
+{
+  "acoustics" : {
+    "duration" : 290.25,
+    "pause_count" : 138,
+    "pause_ratio" : 0.322,
+    "pause_total" : 93.43,
+    "pauses" : [
+      {
+        "dur" : 0.83,
+        "end" : 0.83,
+        "start" : 0
+      },
+      {
+        "dur" : 0.7,
+        "end" : 3.51,
+        "start" : 2.81
+      },
+      {
+        "dur" : 0.6,
+        "end" : 4.48,
+        "start" : 3.88
+      },
+      {
+        "dur" : 1.82,
+        "end" : 8.88,
+        "start" : 7.06
+      },
+      {
+        "dur" : 0.42,
+        "end" : 11.06,
+        "start" : 10.64
+      },
+      {
+        "dur" : 1.42,
+        "end" : 13.55,
+        "start" : 12.13
+      },
+      {
+        "dur" : 0.25,
+        "end" : 13.82,
+        "start" : 13.57
+      },
+      {
+        "dur" : 0.49,
+        "end" : 15.67,
+        "start" : 15.18
+      },
+      {
+        "dur" : 0.79,
+        "end" : 17.32,
+        "start" : 16.53
+      },
+      {
+        "dur" : 0.6,
+        "end" : 19.85,
+        "start" : 19.25
+      },
+      {
+        "dur" : 1.05,
+        "end" : 20.99,
+        "start" : 19.94
+      },
+      {
+        "dur" : 0.28,
+        "end" : 21.3,
+        "start" : 21.02
+      },
+      {
+        "dur" : 2.88,
+        "end" : 24.27,
+        "start" : 21.39
+      },
+      {
+        "dur" : 1.09,
+        "end" : 26.23,
+        "start" : 25.14
+      },
+      {
+        "dur" : 0.34,
+        "end" : 27.59,
+        "start" : 27.25
+      },
+      {
+        "dur" : 0.37,
+        "end" : 28.31,
+        "start" : 27.94
+      },
+      {
+        "dur" : 0.3,
+        "end" : 29.24,
+        "start" : 28.94
+      },
+      {
+        "dur" : 1.32,
+        "end" : 34.43,
+        "start" : 33.11
+      },
+      {
+        "dur" : 0.31,
+        "end" : 36.15,
+        "start" : 35.84
+      },
+      {
+        "dur" : 0.39,
+        "end" : 40.99,
+        "start" : 40.6
+      },
+      {
+        "dur" : 0.26,
+        "end" : 45.11,
+        "start" : 44.85
+      },
+      {
+        "dur" : 2.08,
+        "end" : 48.2,
+        "start" : 46.12
+      },
+      {
+        "dur" : 0.37,
+        "end" : 49.36,
+        "start" : 48.99
+      },
+      {
+        "dur" : 0.31,
+        "end" : 53.38,
+        "start" : 53.07
+      },
+      {
+        "dur" : 1.79,
+        "end" : 58.6,
+        "start" : 56.81
+      },
+      {
+        "dur" : 0.45,
+        "end" : 60.59,
+        "start" : 60.14
+      },
+      {
+        "dur" : 0.68,
+        "end" : 63.18,
+        "start" : 62.5
+      },
+      {
+        "dur" : 0.28,
+        "end" : 63.74,
+        "start" : 63.46
+      },
+      {
+        "dur" : 0.43,
+        "end" : 64.36,
+        "start" : 63.93
+      },
+      {
+        "dur" : 0.83,
+        "end" : 65.33,
+        "start" : 64.5
+      },
+      {
+        "dur" : 0.63,
+        "end" : 66.59,
+        "start" : 65.96
+      },
+      {
+        "dur" : 1.08,
+        "end" : 67.84,
+        "start" : 66.76
+      },
+      {
+        "dur" : 0.66,
+        "end" : 70.49,
+        "start" : 69.83
+      },
+      {
+        "dur" : 0.25,
+        "end" : 71.14,
+        "start" : 70.89
+      },
+      {
+        "dur" : 0.57,
+        "end" : 73.47,
+        "start" : 72.9
+      },
+      {
+        "dur" : 0.41,
+        "end" : 75.89,
+        "start" : 75.48
+      },
+      {
+        "dur" : 0.99,
+        "end" : 76.93,
+        "start" : 75.94
+      },
+      {
+        "dur" : 0.46,
+        "end" : 77.4,
+        "start" : 76.94
+      },
+      {
+        "dur" : 0.58,
+        "end" : 78,
+        "start" : 77.42
+      },
+      {
+        "dur" : 2.92,
+        "end" : 80.97,
+        "start" : 78.05
+      },
+      {
+        "dur" : 1.12,
+        "end" : 82.79,
+        "start" : 81.67
+      },
+      {
+        "dur" : 1.31,
+        "end" : 87.84,
+        "start" : 86.53
+      },
+      {
+        "dur" : 0.3,
+        "end" : 88.22,
+        "start" : 87.92
+      },
+      {
+        "dur" : 0.31,
+        "end" : 88.58,
+        "start" : 88.27
+      },
+      {
+        "dur" : 0.36,
+        "end" : 89.77,
+        "start" : 89.41
+      },
+      {
+        "dur" : 0.35,
+        "end" : 96.2,
+        "start" : 95.85
+      },
+      {
+        "dur" : 1.72,
+        "end" : 101.57,
+        "start" : 99.85
+      },
+      {
+        "dur" : 0.32,
+        "end" : 102.61,
+        "start" : 102.29
+      },
+      {
+        "dur" : 0.39,
+        "end" : 105.09,
+        "start" : 104.7
+      },
+      {
+        "dur" : 0.53,
+        "end" : 105.85,
+        "start" : 105.32
+      },
+      {
+        "dur" : 0.45,
+        "end" : 106.35,
+        "start" : 105.9
+      },
+      {
+        "dur" : 0.78,
+        "end" : 107.18,
+        "start" : 106.4
+      },
+      {
+        "dur" : 0.37,
+        "end" : 114.93,
+        "start" : 114.56
+      },
+      {
+        "dur" : 0.45,
+        "end" : 115.79,
+        "start" : 115.34
+      },
+      {
+        "dur" : 0.38,
+        "end" : 119.01,
+        "start" : 118.63
+      },
+      {
+        "dur" : 0.36,
+        "end" : 121.74,
+        "start" : 121.38
+      },
+      {
+        "dur" : 0.33,
+        "end" : 123.48,
+        "start" : 123.15
+      },
+      {
+        "dur" : 0.7,
+        "end" : 124.89,
+        "start" : 124.19
+      },
+      {
+        "dur" : 0.27,
+        "end" : 131.65,
+        "start" : 131.38
+      },
+      {
+        "dur" : 0.25,
+        "end" : 132.35,
+        "start" : 132.1
+      },
+      {
+        "dur" : 0.25,
+        "end" : 132.87,
+        "start" : 132.62
+      },
+      {
+        "dur" : 0.63,
+        "end" : 134.34,
+        "start" : 133.71
+      },
+      {
+        "dur" : 0.56,
+        "end" : 138.06,
+        "start" : 137.5
+      },
+      {
+        "dur" : 1.14,
+        "end" : 139.69,
+        "start" : 138.55
+      },
+      {
+        "dur" : 0.7,
+        "end" : 141.09,
+        "start" : 140.39
+      },
+      {
+        "dur" : 0.3,
+        "end" : 146.83,
+        "start" : 146.53
+      },
+      {
+        "dur" : 1.24,
+        "end" : 151.61,
+        "start" : 150.37
+      },
+      {
+        "dur" : 0.35,
+        "end" : 152.69,
+        "start" : 152.34
+      },
+      {
+        "dur" : 0.27,
+        "end" : 154.9,
+        "start" : 154.63
+      },
+      {
+        "dur" : 0.63,
+        "end" : 156.63,
+        "start" : 156
+      },
+      {
+        "dur" : 0.49,
+        "end" : 158.18,
+        "start" : 157.69
+      },
+      {
+        "dur" : 0.99,
+        "end" : 159.56,
+        "start" : 158.57
+      },
+      {
+        "dur" : 0.28,
+        "end" : 160.74,
+        "start" : 160.46
+      },
+      {
+        "dur" : 0.68,
+        "end" : 161.89,
+        "start" : 161.21
+      },
+      {
+        "dur" : 0.59,
+        "end" : 165.12,
+        "start" : 164.53
+      },
+      {
+        "dur" : 1.1,
+        "end" : 166.74,
+        "start" : 165.64
+      },
+      {
+        "dur" : 0.28,
+        "end" : 168.77,
+        "start" : 168.49
+      },
+      {
+        "dur" : 0.4,
+        "end" : 174.38,
+        "start" : 173.98
+      },
+      {
+        "dur" : 0.53,
+        "end" : 175.63,
+        "start" : 175.1
+      },
+      {
+        "dur" : 0.93,
+        "end" : 183.34,
+        "start" : 182.41
+      },
+      {
+        "dur" : 0.5,
+        "end" : 184.42,
+        "start" : 183.92
+      },
+      {
+        "dur" : 1.41,
+        "end" : 186.92,
+        "start" : 185.51
+      },
+      {
+        "dur" : 0.66,
+        "end" : 189.1,
+        "start" : 188.44
+      },
+      {
+        "dur" : 0.31,
+        "end" : 191.16,
+        "start" : 190.85
+      },
+      {
+        "dur" : 0.6,
+        "end" : 193.51,
+        "start" : 192.91
+      },
+      {
+        "dur" : 0.8,
+        "end" : 203.12,
+        "start" : 202.32
+      },
+      {
+        "dur" : 0.34,
+        "end" : 203.92,
+        "start" : 203.58
+      },
+      {
+        "dur" : 1.32,
+        "end" : 206.18,
+        "start" : 204.86
+      },
+      {
+        "dur" : 1.05,
+        "end" : 207.64,
+        "start" : 206.59
+      },
+      {
+        "dur" : 1.23,
+        "end" : 212.58,
+        "start" : 211.35
+      },
+      {
+        "dur" : 0.3,
+        "end" : 213.7,
+        "start" : 213.4
+      },
+      {
+        "dur" : 0.53,
+        "end" : 215.4,
+        "start" : 214.87
+      },
+      {
+        "dur" : 0.43,
+        "end" : 216.26,
+        "start" : 215.83
+      },
+      {
+        "dur" : 0.27,
+        "end" : 217.82,
+        "start" : 217.55
+      },
+      {
+        "dur" : 0.28,
+        "end" : 221.78,
+        "start" : 221.5
+      },
+      {
+        "dur" : 0.61,
+        "end" : 224.59,
+        "start" : 223.98
+      },
+      {
+        "dur" : 1.14,
+        "end" : 226.51,
+        "start" : 225.37
+      },
+      {
+        "dur" : 0.28,
+        "end" : 227.22,
+        "start" : 226.94
+      },
+      {
+        "dur" : 0.26,
+        "end" : 229.36,
+        "start" : 229.1
+      },
+      {
+        "dur" : 0.59,
+        "end" : 232.09,
+        "start" : 231.5
+      },
+      {
+        "dur" : 0.3,
+        "end" : 233.44,
+        "start" : 233.14
+      },
+      {
+        "dur" : 0.34,
+        "end" : 234.25,
+        "start" : 233.91
+      },
+      {
+        "dur" : 0.34,
+        "end" : 234.87,
+        "start" : 234.53
+      },
+      {
+        "dur" : 0.5,
+        "end" : 239.11,
+        "start" : 238.61
+      },
+      {
+        "dur" : 0.42,
+        "end" : 240.28,
+        "start" : 239.86
+      },
+      {
+        "dur" : 0.48,
+        "end" : 240.78,
+        "start" : 240.3
+      },
+      {
+        "dur" : 0.37,
+        "end" : 241.18,
+        "start" : 240.81
+      },
+      {
+        "dur" : 0.88,
+        "end" : 242.09,
+        "start" : 241.21
+      },
+      {
+        "dur" : 0.52,
+        "end" : 243.19,
+        "start" : 242.67
+      },
+      {
+        "dur" : 0.26,
+        "end" : 243.51,
+        "start" : 243.25
+      },
+      {
+        "dur" : 0.3,
+        "end" : 243.88,
+        "start" : 243.58
+      },
+      {
+        "dur" : 0.52,
+        "end" : 244.46,
+        "start" : 243.94
+      },
+      {
+        "dur" : 0.46,
+        "end" : 247.15,
+        "start" : 246.69
+      },
+      {
+        "dur" : 0.27,
+        "end" : 247.69,
+        "start" : 247.42
+      },
+      {
+        "dur" : 1.68,
+        "end" : 251.99,
+        "start" : 250.31
+      },
+      {
+        "dur" : 0.74,
+        "end" : 260.05,
+        "start" : 259.31
+      },
+      {
+        "dur" : 1.37,
+        "end" : 262.1,
+        "start" : 260.73
+      },
+      {
+        "dur" : 1.02,
+        "end" : 263.5,
+        "start" : 262.48
+      },
+      {
+        "dur" : 0.34,
+        "end" : 264.48,
+        "start" : 264.14
+      },
+      {
+        "dur" : 2.09,
+        "end" : 267.07,
+        "start" : 264.98
+      },
+      {
+        "dur" : 0.47,
+        "end" : 267.56,
+        "start" : 267.09
+      },
+      {
+        "dur" : 1.1,
+        "end" : 268.69,
+        "start" : 267.59
+      },
+      {
+        "dur" : 0.26,
+        "end" : 269.63,
+        "start" : 269.37
+      },
+      {
+        "dur" : 0.8,
+        "end" : 271.9,
+        "start" : 271.1
+      },
+      {
+        "dur" : 0.56,
+        "end" : 272.6,
+        "start" : 272.04
+      },
+      {
+        "dur" : 0.38,
+        "end" : 273.69,
+        "start" : 273.31
+      },
+      {
+        "dur" : 0.79,
+        "end" : 274.51,
+        "start" : 273.72
+      },
+      {
+        "dur" : 0.74,
+        "end" : 276.08,
+        "start" : 275.34
+      },
+      {
+        "dur" : 0.44,
+        "end" : 277.54,
+        "start" : 277.1
+      },
+      {
+        "dur" : 1.66,
+        "end" : 279.61,
+        "start" : 277.95
+      },
+      {
+        "dur" : 0.49,
+        "end" : 282.03,
+        "start" : 281.54
+      },
+      {
+        "dur" : 0.25,
+        "end" : 282.57,
+        "start" : 282.32
+      },
+      {
+        "dur" : 0.6,
+        "end" : 283.34,
+        "start" : 282.74
+      },
+      {
+        "dur" : 0.26,
+        "end" : 283.72,
+        "start" : 283.46
+      },
+      {
+        "dur" : 0.48,
+        "end" : 284.59,
+        "start" : 284.11
+      },
+      {
+        "dur" : 1.12,
+        "end" : 286.22,
+        "start" : 285.1
+      },
+      {
+        "dur" : 0.62,
+        "end" : 289.57,
+        "start" : 288.95
+      },
+      {
+        "dur" : 0.63,
+        "end" : 290.23,
+        "start" : 289.6
+      }
+    ],
+    "source" : "071af21ccc493ed863a5630c5a562ee3.mp4",
+    "speech_time" : 196.82,
+    "threshold_db" : -32.6
+  },
+  "alignment" : {
+    "accuracy" : 88.6,
+    "correctWordCount" : 202,
+    "diffs" : [
+      {
+        "context" : "torturing his people was",
+        "end" : 2.64,
+        "kind" : "insert",
+        "read" : "torting",
+        "refIndex" : 0,
+        "start" : 0
+      },
+      {
+        "context" : "torturing his people was",
+        "end" : 5.28,
+        "kind" : "substitute",
+        "read" : "torting",
+        "ref" : "torturing",
+        "refIndex" : 0,
+        "start" : 2.64
+      },
+      {
+        "context" : "torturing his people was found dead in",
+        "end" : 7.86,
+        "kind" : "insert",
+        "read" : "he",
+        "refIndex" : 3,
+        "start" : 6.6
+      },
+      {
+        "context" : "people was found dead in his room",
+        "end" : 10.2,
+        "kind" : "substitute",
+        "read" : "that",
+        "ref" : "dead",
+        "refIndex" : 5,
+        "start" : 9.78
+      },
+      {
+        "context" : "in his room struck down by a",
+        "end" : 15.12,
+        "kind" : "insert",
+        "read" : "struck",
+        "refIndex" : 9,
+        "start" : 12.12
+      },
+      {
+        "context" : "struck down by a thunderboll they then",
+        "end" : 18.18,
+        "kind" : "substitute",
+        "read" : "the",
+        "ref" : "a",
+        "refIndex" : 12,
+        "start" : 18
+      },
+      {
+        "context" : "down by a thunderboll they then offered",
+        "end" : 19.62,
+        "kind" : "substitute",
+        "read" : "thunderbolt",
+        "ref" : "thunderboll",
+        "refIndex" : 13,
+        "start" : 18.18
+      },
+      {
+        "context" : "the crown to suliman the tutor who",
+        "end" : 32.1,
+        "kind" : "substitute",
+        "read" : "solomon",
+        "ref" : "suliman",
+        "refIndex" : 20,
+        "start" : 31.32
+      },
+      {
+        "context" : "prince had put into prison so in",
+        "end" : 37.5599375,
+        "kind" : "substitute",
+        "read" : "in",
+        "ref" : "into",
+        "refIndex" : 28,
+        "start" : 37.1999375
+      },
+      {
+        "context" : "a single day suliman went from being",
+        "end" : 41.9999375,
+        "kind" : "substitute",
+        "read" : "salmon",
+        "ref" : "suliman",
+        "refIndex" : 35,
+        "start" : 40.7399375
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 48.2999375,
+        "kind" : "insert",
+        "read" : "the",
+        "refIndex" : 43,
+        "start" : 45.9599375
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 48.8999375,
+        "kind" : "insert",
+        "read" : "king",
+        "refIndex" : 43,
+        "start" : 48.2999375
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 49.6199375,
+        "kind" : "insert",
+        "read" : "just",
+        "refIndex" : 43,
+        "start" : 48.8999375
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 50.1599375,
+        "kind" : "insert",
+        "read" : "as",
+        "refIndex" : 43,
+        "start" : 49.6199375
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 51.0599375,
+        "kind" : "insert",
+        "read" : "this",
+        "refIndex" : 43,
+        "start" : 50.1599375
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 51.5999375,
+        "kind" : "insert",
+        "read" : "man",
+        "refIndex" : 43,
+        "start" : 51.0599375
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 52.5599375,
+        "kind" : "insert",
+        "read" : "finished",
+        "refIndex" : 43,
+        "start" : 51.5999375
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 53.8199375,
+        "kind" : "insert",
+        "read" : "their",
+        "refIndex" : 43,
+        "start" : 52.5599375
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 54.7799375,
+        "kind" : "insert",
+        "read" : "story",
+        "refIndex" : 43,
+        "start" : 53.8199375
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 55.2599375,
+        "kind" : "insert",
+        "read" : "the",
+        "refIndex" : 43,
+        "start" : 54.7799375
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 55.6199375,
+        "kind" : "insert",
+        "read" : "sound",
+        "refIndex" : 43,
+        "start" : 55.2599375
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 56.0399375,
+        "kind" : "insert",
+        "read" : "of",
+        "refIndex" : 43,
+        "start" : 55.6199375
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 56.9399375,
+        "kind" : "insert",
+        "read" : "time",
+        "refIndex" : 43,
+        "start" : 56.0399375
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 60.42,
+        "kind" : "insert",
+        "read" : "trumpet",
+        "refIndex" : 43,
+        "start" : 58.5
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 61.02,
+        "kind" : "insert",
+        "read" : "and",
+        "refIndex" : 43,
+        "start" : 60.42
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 61.62,
+        "kind" : "insert",
+        "read" : "the",
+        "refIndex" : 43,
+        "start" : 61.02
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 62.22,
+        "kind" : "insert",
+        "read" : "shot",
+        "refIndex" : 43,
+        "start" : 61.62
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 63.36,
+        "kind" : "insert",
+        "read" : "of",
+        "refIndex" : 43,
+        "start" : 62.22
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 63.66,
+        "kind" : "insert",
+        "read" : "the",
+        "refIndex" : 43,
+        "start" : 63.36
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 66.18,
+        "kind" : "insert",
+        "read" : "crowd",
+        "refIndex" : 43,
+        "start" : 63.66
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 68.16,
+        "kind" : "insert",
+        "read" : "and",
+        "refIndex" : 43,
+        "start" : 66.18
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 69.48,
+        "kind" : "insert",
+        "read" : "announced",
+        "refIndex" : 43,
+        "start" : 68.16
+      },
+      {
+        "context" : "prisoner to being the king i have",
+        "end" : 70.8,
+        "kind" : "insert",
+        "read" : "that",
+        "refIndex" : 43,
+        "start" : 69.48
+      },
+      {
+        "context" : "to being the king i have taken",
+        "end" : 71.64,
+        "kind" : "insert",
+        "read" : "new",
+        "refIndex" : 44,
+        "start" : 71.28
+      },
+      {
+        "context" : "being the king i have taken the",
+        "end" : 72.48,
+        "kind" : "insert",
+        "read" : "was",
+        "refIndex" : 45,
+        "start" : 72.12
+      },
+      {
+        "context" : "being the king i have taken the",
+        "end" : 73.02,
+        "kind" : "insert",
+        "read" : "a",
+        "refIndex" : 45,
+        "start" : 72.48
+      },
+      {
+        "context" : "being the king i have taken the",
+        "end" : 74.82,
+        "kind" : "insert",
+        "read" : "approach",
+        "refIndex" : 45,
+        "start" : 73.02
+      },
+      {
+        "context" : "being the king i have taken the",
+        "end" : 75.54,
+        "kind" : "insert",
+        "read" : "train",
+        "refIndex" : 45,
+        "start" : 74.82
+      },
+      {
+        "context" : "safe for prince darling he is not",
+        "end" : 96.06,
+        "kind" : "substitute",
+        "read" : "danny",
+        "ref" : "darling",
+        "refIndex" : 63,
+        "start" : 94.92
+      },
+      {
+        "context" : "he is not dead as rumors say",
+        "end" : 97.74,
+        "kind" : "substitute",
+        "read" : "that",
+        "ref" : "dead",
+        "refIndex" : 67,
+        "start" : 97.32
+      },
+      {
+        "context" : "not dead as rumors say the fairy",
+        "kind" : "omit",
+        "ref" : "rumors",
+        "refIndex" : 69
+      },
+      {
+        "context" : "dead as rumors say the fairy has",
+        "end" : 98.52,
+        "kind" : "substitute",
+        "read" : "a",
+        "ref" : "say",
+        "refIndex" : 70,
+        "start" : 98.28
+      },
+      {
+        "context" : "as rumors say the fairy has told",
+        "end" : 99.06,
+        "kind" : "substitute",
+        "read" : "rumor",
+        "ref" : "the",
+        "refIndex" : 71,
+        "start" : 98.52
+      },
+      {
+        "context" : "rumors say the fairy has told me",
+        "end" : 99.96,
+        "kind" : "substitute",
+        "read" : "says",
+        "ref" : "fairy",
+        "refIndex" : 72,
+        "start" : 99.06
+      },
+      {
+        "context" : "say the fairy has told me that",
+        "end" : 101.88,
+        "kind" : "substitute",
+        "read" : "sarah",
+        "ref" : "has",
+        "refIndex" : 73,
+        "start" : 99.96
+      },
+      {
+        "context" : "may see him return becoming as good",
+        "end" : 112.08,
+        "kind" : "insert",
+        "read" : "in",
+        "refIndex" : 87,
+        "start" : 111.84
+      },
+      {
+        "context" : "him return becoming as good a king",
+        "end" : 114.06,
+        "kind" : "substitute",
+        "read" : "a",
+        "ref" : "as",
+        "refIndex" : 89,
+        "start" : 113.82
+      },
+      {
+        "context" : "once was the hunters who had caught",
+        "end" : 126.54,
+        "kind" : "substitute",
+        "read" : "hunter",
+        "ref" : "hunters",
+        "refIndex" : 99,
+        "start" : 125.82
+      },
+      {
+        "context" : "hunters who had caught him took him",
+        "end" : 127.68,
+        "kind" : "substitute",
+        "read" : "called",
+        "ref" : "caught",
+        "refIndex" : 102,
+        "start" : 127.2
+      },
+      {
+        "context" : "him took him to a place where",
+        "end" : 129.96,
+        "kind" : "substitute",
+        "read" : "in",
+        "ref" : "to",
+        "refIndex" : 106,
+        "start" : 129.24
+      },
+      {
+        "context" : "all the other wild beasts the prince",
+        "kind" : "omit",
+        "ref" : "wild",
+        "refIndex" : 118
+      },
+      {
+        "context" : "the other wild beasts the prince decided",
+        "end" : 138.6,
+        "kind" : "substitute",
+        "read" : "beast",
+        "ref" : "beasts",
+        "refIndex" : 119,
+        "start" : 136.38
+      },
+      {
+        "context" : "he was told the caretaker often hit",
+        "end" : 175.26,
+        "kind" : "insert",
+        "read" : "the",
+        "refIndex" : 163,
+        "start" : 173.88
+      },
+      {
+        "context" : "the caretaker was asleep a tiger broke",
+        "end" : 190.98,
+        "kind" : "substitute",
+        "read" : "sleep",
+        "ref" : "asleep",
+        "refIndex" : 185,
+        "start" : 190.32
+      },
+      {
+        "context" : "a tiger broke off its chain and",
+        "end" : 193.86,
+        "kind" : "insert",
+        "read" : "kind",
+        "refIndex" : 189,
+        "start" : 192.84
+      },
+      {
+        "context" : "a tiger broke off its chain and",
+        "end" : 194.28,
+        "kind" : "substitute",
+        "read" : "of",
+        "ref" : "off",
+        "refIndex" : 189,
+        "start" : 193.86
+      },
+      {
+        "context" : "chain and flew him wanting to cat",
+        "end" : 196.8,
+        "kind" : "insert",
+        "read" : "at",
+        "refIndex" : 194,
+        "start" : 196.26
+      },
+      {
+        "context" : "him wanting to cat him up prince",
+        "end" : 198.9,
+        "kind" : "substitute",
+        "read" : "eat",
+        "ref" : "cat",
+        "refIndex" : 197,
+        "start" : 198.6
+      },
+      {
+        "context" : "prince darling who saw what was going",
+        "end" : 202.08,
+        "kind" : "substitute",
+        "read" : "was",
+        "ref" : "saw",
+        "refIndex" : 203,
+        "start" : 201.6
+      },
+      {
+        "context" : "saw what was going on at first",
+        "end" : 204.42,
+        "kind" : "insert",
+        "read" : "going",
+        "refIndex" : 206,
+        "start" : 204.12
+      },
+      {
+        "context" : "saw what was going on at first",
+        "end" : 206.52,
+        "kind" : "insert",
+        "read" : "on",
+        "refIndex" : 206,
+        "start" : 204.42
+      },
+      {
+        "context" : "saw what was going on at first",
+        "end" : 208.56,
+        "kind" : "insert",
+        "read" : "who",
+        "refIndex" : 206,
+        "start" : 206.58
+      },
+      {
+        "context" : "saw what was going on at first",
+        "end" : 208.74,
+        "kind" : "insert",
+        "read" : "so",
+        "refIndex" : 206,
+        "start" : 208.56
+      },
+      {
+        "context" : "saw what was going on at first",
+        "end" : 209.4,
+        "kind" : "insert",
+        "read" : "what's",
+        "refIndex" : 206,
+        "start" : 208.74
+      },
+      {
+        "context" : "saw what was going on at first",
+        "end" : 209.7,
+        "kind" : "insert",
+        "read" : "what's",
+        "refIndex" : 206,
+        "start" : 209.4
+      },
+      {
+        "context" : "at first felt quite pleased to think",
+        "end" : 215.16,
+        "kind" : "insert",
+        "read" : "quite",
+        "refIndex" : 211,
+        "start" : 213.9
+      },
+      {
+        "context" : "think that the mean caretaker deserved this",
+        "end" : 219.9,
+        "kind" : "substitute",
+        "read" : "main",
+        "ref" : "mean",
+        "refIndex" : 217,
+        "start" : 219.48
+      },
+      {
+        "context" : "deserved this but upon reflection he changed",
+        "end" : 225.3,
+        "kind" : "substitute",
+        "read" : "um",
+        "ref" : "upon",
+        "refIndex" : 222,
+        "start" : 224.16
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 252.3,
+        "kind" : "insert",
+        "read" : "just",
+        "refIndex" : 228,
+        "start" : 249.06
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 252.78,
+        "kind" : "insert",
+        "read" : "a",
+        "refIndex" : 228,
+        "start" : 252.3
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 253.62,
+        "kind" : "insert",
+        "read" : "wicked",
+        "refIndex" : 228,
+        "start" : 252.78
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 254.58,
+        "kind" : "insert",
+        "read" : "otherwise",
+        "refIndex" : 228,
+        "start" : 253.62
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 255.54,
+        "kind" : "insert",
+        "read" : "prick",
+        "refIndex" : 228,
+        "start" : 254.58
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 256.26,
+        "kind" : "insert",
+        "read" : "cross",
+        "refIndex" : 228,
+        "start" : 255.54
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 258.18,
+        "kind" : "insert",
+        "read" : "habit",
+        "refIndex" : 228,
+        "start" : 256.32
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 259.5,
+        "kind" : "insert",
+        "read" : "companion",
+        "refIndex" : 228,
+        "start" : 258.18
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 260.58,
+        "kind" : "insert",
+        "read" : "please",
+        "refIndex" : 228,
+        "start" : 259.5
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 264.06,
+        "kind" : "insert",
+        "read" : "please",
+        "refIndex" : 228,
+        "start" : 260.58
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 265.14,
+        "kind" : "insert",
+        "read" : "name",
+        "refIndex" : 228,
+        "start" : 264.06
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 273.6,
+        "kind" : "insert",
+        "read" : "tutor",
+        "refIndex" : 228,
+        "start" : 271.2
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 275.46,
+        "kind" : "insert",
+        "read" : "greatness",
+        "refIndex" : 228,
+        "start" : 273.6
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 277.2,
+        "kind" : "insert",
+        "read" : "ungratefully",
+        "refIndex" : 228,
+        "start" : 275.46
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 278.1,
+        "kind" : "insert",
+        "read" : "picked",
+        "refIndex" : 228,
+        "start" : 277.2
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 280.32,
+        "kind" : "insert",
+        "read" : "thrown",
+        "refIndex" : 228,
+        "start" : 278.22
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 280.62,
+        "kind" : "insert",
+        "read" : "and",
+        "refIndex" : 228,
+        "start" : 280.32
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 281.34,
+        "kind" : "insert",
+        "read" : "recording",
+        "refIndex" : 228,
+        "start" : 280.62
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 284.52,
+        "kind" : "insert",
+        "read" : "star",
+        "refIndex" : 228,
+        "start" : 281.4
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 285.18,
+        "kind" : "insert",
+        "read" : "brook",
+        "refIndex" : 228,
+        "start" : 284.52
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 287.7,
+        "kind" : "insert",
+        "read" : "star",
+        "refIndex" : 228,
+        "start" : 285.18
+      },
+      {
+        "context" : "he changed his mind",
+        "end" : 288.72,
+        "kind" : "insert",
+        "read" : "hermit",
+        "refIndex" : 228,
+        "start" : 287.82
+      }
+    ],
+    "readWordCount" : 290,
+    "refTimes" : [
+      5.28,
+      5.7,
+      6.6,
+      9.24,
+      9.78,
+      10.2,
+      11.58,
+      11.7,
+      12,
+      16.32,
+      17.58,
+      18,
+      18.18,
+      19.62,
+      26.58,
+      27.3,
+      29.94,
+      30.24,
+      30.96,
+      31.32,
+      32.1,
+      32.16,
+      32.64,
+      34.9799375,
+      35.3999375,
+      35.9399375,
+      36.3599375,
+      37.1999375,
+      37.5599375,
+      38.2799375,
+      38.8199375,
+      39.3599375,
+      39.6599375,
+      40.0199375,
+      40.7399375,
+      41.9999375,
+      42.4199375,
+      42.9599375,
+      43.3199375,
+      43.7399375,
+      44.4599375,
+      45.2999375,
+      45.9599375,
+      71.28,
+      72.12,
+      83.22,
+      83.52,
+      83.94,
+      84.6,
+      85.38,
+      85.74,
+      86.58,
+      89.04,
+      90.48,
+      90.72,
+      91.2,
+      91.74,
+      92.64,
+      93.48,
+      93.78,
+      94.14,
+      94.56,
+      94.92,
+      96.06,
+      96.48,
+      96.9,
+      97.32,
+      97.74,
+      98.28,
+      null,
+      98.52,
+      99.06,
+      99.96,
+      101.88,
+      102.78,
+      103.08,
+      103.92,
+      104.4,
+      107.64,
+      108.12,
+      108.6,
+      108.9,
+      109.32,
+      110.16,
+      111.42,
+      111.6,
+      111.84,
+      112.62,
+      113.82,
+      114.06,
+      115.32,
+      116.1,
+      116.4,
+      117,
+      117.6,
+      117.96,
+      118.5,
+      119.64,
+      125.82,
+      126.54,
+      126.96,
+      127.2,
+      127.68,
+      128.16,
+      128.88,
+      129.24,
+      129.96,
+      130.32,
+      130.68,
+      131.1,
+      131.88,
+      132.6,
+      133.38,
+      134.7,
+      135.42,
+      135.84,
+      136.14,
+      136.38,
+      null,
+      138.6,
+      139.92,
+      140.4,
+      141.42,
+      142.02,
+      142.38,
+      142.74,
+      143.22,
+      143.7,
+      143.94,
+      144.54,
+      145.08,
+      146.04,
+      147.18,
+      147.78,
+      148.86,
+      149.16,
+      149.82,
+      150,
+      152.28,
+      152.88,
+      153.66,
+      153.9,
+      154.14,
+      157.86,
+      158.4,
+      161.52,
+      162.06,
+      162.9,
+      163.8,
+      165.9,
+      167.1,
+      167.58,
+      168.24,
+      169.14,
+      169.44,
+      169.8,
+      170.1,
+      170.5799375,
+      171.18,
+      172.38,
+      172.98,
+      173.16,
+      173.88,
+      175.8,
+      176.76,
+      177.24,
+      177.96,
+      178.38,
+      178.98,
+      179.28,
+      180.54,
+      180.66,
+      181.02,
+      181.86,
+      182.4,
+      183.54,
+      184.38,
+      184.68,
+      185.16,
+      187.32,
+      187.62,
+      188.22,
+      188.4,
+      189.9,
+      190.32,
+      190.98,
+      192.06,
+      192.54,
+      192.84,
+      194.28,
+      194.64,
+      195.18,
+      195.66,
+      196.26,
+      197.28,
+      198.3,
+      198.6,
+      198.9,
+      199.26,
+      199.8,
+      200.52,
+      201.48,
+      201.6,
+      202.08,
+      203.64,
+      204.12,
+      209.82,
+      210.06,
+      211.38,
+      213.06,
+      213.9,
+      215.52,
+      216.54,
+      217.26,
+      217.8,
+      219,
+      219.48,
+      219.9,
+      221.1,
+      222.18,
+      223.02,
+      224.16,
+      225.3,
+      228.72,
+      229.62,
+      229.98,
+      230.58,
+      230.94
+    ],
+    "refWordCount" : 228,
+    "wcpm" : 42
+  },
+  "pages" : [
+    {
+      "end" : 119.64,
+      "errors" : 15,
+      "extras" : 32,
+      "matched" : 97,
+      "page" : 73,
+      "start" : 5.28,
+      "words" : 98
+    },
+    {
+      "end" : 230.94,
+      "errors" : 11,
+      "extras" : 10,
+      "matched" : 129,
+      "page" : 74,
+      "start" : 125.82,
+      "words" : 130
+    }
+  ],
+  "reference" : "torturing his people, was found dead in his room, struck down by a thunderboll.\"\nThey then\noffered the crown to Suliman, the tutor, who the prince had put into prison, so\nin a single day, Suliman went from being a prisoner to being the king.\n\"I have taken the crown you have given me, but I am only holding it safe for\nPrince Darling. He is not dead as rumors say. The Fairy has told me that there\nis still a chance that you may see him return, becoming as good a king as his\nfather once was.\nThe hunters who had caught him took him to a place, where he was chained\nup among all the other wild beasts. The prince decided to show his sorrow for\nhis past bad behavior by being gentle with the man tasked to care for him.\nUnfortunately, this man, the caretaker, was very tough and mean. Even though\nthe poor beast did what he was told, the caretaker often hit him for no reason\njust because he was in a bad mood.\nOne day when the caretaker was asleep, a tiger broke off its chain and flew\nhim, wanting to cat him up. Prince Darling, who saw what was going on, at\nfirst felt quite pleased to think that the mean caretaker deserved this, but upon\nreflection, he changed his mind.",
+  "slug" : "super8/L3/p73-74",
+  "transcript" : {
+    "contextPrimed" : true,
+    "locale" : "en-US",
+    "runs" : [
+      {
+        "end" : 2.64,
+        "start" : 0,
+        "text" : "Torting,"
+      },
+      {
+        "end" : 5.28,
+        "start" : 2.64,
+        "text" : " torting,"
+      },
+      {
+        "end" : 5.7,
+        "start" : 5.28,
+        "text" : " his"
+      },
+      {
+        "end" : 6.6,
+        "start" : 5.7,
+        "text" : " people,"
+      },
+      {
+        "end" : 7.86,
+        "start" : 6.6,
+        "text" : " he,"
+      },
+      {
+        "end" : 9.24,
+        "start" : 7.86,
+        "text" : " was"
+      },
+      {
+        "end" : 9.78,
+        "start" : 9.24,
+        "text" : " found"
+      },
+      {
+        "end" : 10.2,
+        "start" : 9.78,
+        "text" : " that"
+      },
+      {
+        "end" : 11.58,
+        "start" : 10.2,
+        "text" : " in"
+      },
+      {
+        "end" : 11.7,
+        "start" : 11.58,
+        "text" : " his"
+      },
+      {
+        "end" : 12,
+        "start" : 11.7,
+        "text" : " room."
+      },
+      {
+        "end" : 15.12,
+        "start" : 12.12,
+        "text" : " Struck."
+      },
+      {
+        "end" : 16.32,
+        "start" : 15.36,
+        "text" : " Struck"
+      },
+      {
+        "end" : 17.58,
+        "start" : 16.32,
+        "text" : " down"
+      },
+      {
+        "end" : 18,
+        "start" : 17.58,
+        "text" : " by"
+      },
+      {
+        "end" : 18.18,
+        "start" : 18,
+        "text" : " the"
+      },
+      {
+        "end" : 19.62,
+        "start" : 18.18,
+        "text" : " thunderbolt."
+      },
+      {
+        "end" : 26.58,
+        "start" : 19.8,
+        "text" : " They"
+      },
+      {
+        "end" : 27.3,
+        "start" : 26.58,
+        "text" : " then,"
+      },
+      {
+        "end" : 29.94,
+        "start" : 27.3,
+        "text" : " Offered"
+      },
+      {
+        "end" : 30.24,
+        "start" : 29.94,
+        "text" : " the"
+      },
+      {
+        "end" : 30.96,
+        "start" : 30.24,
+        "text" : " crown"
+      },
+      {
+        "end" : 31.32,
+        "start" : 30.96,
+        "text" : " to"
+      },
+      {
+        "end" : 32.1,
+        "start" : 31.32,
+        "text" : " Solomon,"
+      },
+      {
+        "end" : 32.16,
+        "start" : 32.1,
+        "text" : " the"
+      },
+      {
+        "end" : 32.64,
+        "start" : 32.16,
+        "text" : " tutor."
+      },
+      {
+        "end" : 34.9799375,
+        "start" : 32.7599375,
+        "text" : " Who"
+      },
+      {
+        "end" : 35.3999375,
+        "start" : 34.9799375,
+        "text" : " the"
+      },
+      {
+        "end" : 35.9399375,
+        "start" : 35.3999375,
+        "text" : " prince"
+      },
+      {
+        "end" : 36.3599375,
+        "start" : 35.9399375,
+        "text" : " had"
+      },
+      {
+        "end" : 37.1999375,
+        "start" : 36.3599375,
+        "text" : " put"
+      },
+      {
+        "end" : 37.5599375,
+        "start" : 37.1999375,
+        "text" : " in"
+      },
+      {
+        "end" : 38.2799375,
+        "start" : 37.5599375,
+        "text" : " prison,"
+      },
+      {
+        "end" : 38.8199375,
+        "start" : 38.2799375,
+        "text" : " so"
+      },
+      {
+        "end" : 39.3599375,
+        "start" : 38.8199375,
+        "text" : " in"
+      },
+      {
+        "end" : 39.6599375,
+        "start" : 39.3599375,
+        "text" : " a"
+      },
+      {
+        "end" : 40.0199375,
+        "start" : 39.6599375,
+        "text" : " single"
+      },
+      {
+        "end" : 40.7399375,
+        "start" : 40.0199375,
+        "text" : " day,"
+      },
+      {
+        "end" : 41.9999375,
+        "start" : 40.7399375,
+        "text" : " Salmon"
+      },
+      {
+        "end" : 42.4199375,
+        "start" : 41.9999375,
+        "text" : " went"
+      },
+      {
+        "end" : 42.9599375,
+        "start" : 42.4199375,
+        "text" : " from"
+      },
+      {
+        "end" : 43.3199375,
+        "start" : 42.9599375,
+        "text" : " being"
+      },
+      {
+        "end" : 43.7399375,
+        "start" : 43.3199375,
+        "text" : " a"
+      },
+      {
+        "end" : 44.4599375,
+        "start" : 43.7399375,
+        "text" : " prisoner"
+      },
+      {
+        "end" : 45.2999375,
+        "start" : 44.4599375,
+        "text" : " to"
+      },
+      {
+        "end" : 45.9599375,
+        "start" : 45.2999375,
+        "text" : " being,"
+      },
+      {
+        "end" : 48.2999375,
+        "start" : 45.9599375,
+        "text" : " The"
+      },
+      {
+        "end" : 48.8999375,
+        "start" : 48.2999375,
+        "text" : " king,"
+      },
+      {
+        "end" : 49.6199375,
+        "start" : 48.8999375,
+        "text" : " just"
+      },
+      {
+        "end" : 50.1599375,
+        "start" : 49.6199375,
+        "text" : " as"
+      },
+      {
+        "end" : 51.0599375,
+        "start" : 50.1599375,
+        "text" : " this"
+      },
+      {
+        "end" : 51.5999375,
+        "start" : 51.0599375,
+        "text" : " man"
+      },
+      {
+        "end" : 52.5599375,
+        "start" : 51.5999375,
+        "text" : " finished,"
+      },
+      {
+        "end" : 53.8199375,
+        "start" : 52.5599375,
+        "text" : " their"
+      },
+      {
+        "end" : 54.7799375,
+        "start" : 53.8199375,
+        "text" : " story,"
+      },
+      {
+        "end" : 55.2599375,
+        "start" : 54.7799375,
+        "text" : " the"
+      },
+      {
+        "end" : 55.6199375,
+        "start" : 55.2599375,
+        "text" : " sound"
+      },
+      {
+        "end" : 56.0399375,
+        "start" : 55.6199375,
+        "text" : " of"
+      },
+      {
+        "end" : 56.9399375,
+        "start" : 56.0399375,
+        "text" : " time."
+      },
+      {
+        "end" : 60.42,
+        "start" : 58.5,
+        "text" : " Trumpet,"
+      },
+      {
+        "end" : 61.02,
+        "start" : 60.42,
+        "text" : " and"
+      },
+      {
+        "end" : 61.62,
+        "start" : 61.02,
+        "text" : " the"
+      },
+      {
+        "end" : 62.22,
+        "start" : 61.62,
+        "text" : " shot"
+      },
+      {
+        "end" : 63.36,
+        "start" : 62.22,
+        "text" : " of"
+      },
+      {
+        "end" : 63.66,
+        "start" : 63.36,
+        "text" : " the"
+      },
+      {
+        "end" : 66.18,
+        "start" : 63.66,
+        "text" : " crowd,"
+      },
+      {
+        "end" : 68.16,
+        "start" : 66.18,
+        "text" : " and"
+      },
+      {
+        "end" : 69.48,
+        "start" : 68.16,
+        "text" : " announced,"
+      },
+      {
+        "end" : 70.8,
+        "start" : 69.48,
+        "text" : " that"
+      },
+      {
+        "end" : 71.28,
+        "start" : 70.8,
+        "text" : " the"
+      },
+      {
+        "end" : 71.64,
+        "start" : 71.28,
+        "text" : " new"
+      },
+      {
+        "end" : 72.12,
+        "start" : 71.64,
+        "text" : " king"
+      },
+      {
+        "end" : 72.48,
+        "start" : 72.12,
+        "text" : " was"
+      },
+      {
+        "end" : 73.02,
+        "start" : 72.48,
+        "text" : " a"
+      },
+      {
+        "end" : 74.82,
+        "start" : 73.02,
+        "text" : " approach,"
+      },
+      {
+        "end" : 75.54,
+        "start" : 74.82,
+        "text" : " train."
+      },
+      {
+        "end" : 83.22,
+        "start" : 81.66,
+        "text" : " I"
+      },
+      {
+        "end" : 83.52,
+        "start" : 83.22,
+        "text" : " have"
+      },
+      {
+        "end" : 83.94,
+        "start" : 83.52,
+        "text" : " taken"
+      },
+      {
+        "end" : 84.6,
+        "start" : 83.94,
+        "text" : " the"
+      },
+      {
+        "end" : 85.38,
+        "start" : 84.6,
+        "text" : " crown,"
+      },
+      {
+        "end" : 85.74,
+        "start" : 85.38,
+        "text" : " you"
+      },
+      {
+        "end" : 86.58,
+        "start" : 85.74,
+        "text" : " have."
+      },
+      {
+        "end" : 89.04,
+        "start" : 88.26,
+        "text" : " Given"
+      },
+      {
+        "end" : 90.48,
+        "start" : 89.04,
+        "text" : " me,"
+      },
+      {
+        "end" : 90.72,
+        "start" : 90.48,
+        "text" : " but"
+      },
+      {
+        "end" : 91.2,
+        "start" : 90.72,
+        "text" : " I"
+      },
+      {
+        "end" : 91.74,
+        "start" : 91.2,
+        "text" : " am"
+      },
+      {
+        "end" : 92.64,
+        "start" : 91.74,
+        "text" : " only"
+      },
+      {
+        "end" : 93.48,
+        "start" : 92.64,
+        "text" : " holding"
+      },
+      {
+        "end" : 93.78,
+        "start" : 93.48,
+        "text" : " it"
+      },
+      {
+        "end" : 94.14,
+        "start" : 93.78,
+        "text" : " safe"
+      },
+      {
+        "end" : 94.56,
+        "start" : 94.14,
+        "text" : " for"
+      },
+      {
+        "end" : 94.92,
+        "start" : 94.56,
+        "text" : " Prince"
+      },
+      {
+        "end" : 96.06,
+        "start" : 94.92,
+        "text" : " Danny."
+      },
+      {
+        "end" : 96.48,
+        "start" : 96.12,
+        "text" : " He"
+      },
+      {
+        "end" : 96.9,
+        "start" : 96.48,
+        "text" : " is"
+      },
+      {
+        "end" : 97.32,
+        "start" : 96.9,
+        "text" : " not"
+      },
+      {
+        "end" : 97.74,
+        "start" : 97.32,
+        "text" : " that"
+      },
+      {
+        "end" : 98.28,
+        "start" : 97.74,
+        "text" : " as"
+      },
+      {
+        "end" : 98.52,
+        "start" : 98.28,
+        "text" : " a"
+      },
+      {
+        "end" : 99.06,
+        "start" : 98.52,
+        "text" : " rumor"
+      },
+      {
+        "end" : 99.96,
+        "start" : 99.06,
+        "text" : " says,"
+      },
+      {
+        "end" : 101.88,
+        "start" : 99.96,
+        "text" : " Sarah"
+      },
+      {
+        "end" : 102.78,
+        "start" : 101.88,
+        "text" : " told"
+      },
+      {
+        "end" : 103.08,
+        "start" : 102.78,
+        "text" : " me"
+      },
+      {
+        "end" : 103.92,
+        "start" : 103.08,
+        "text" : " that"
+      },
+      {
+        "end" : 104.4,
+        "start" : 103.92,
+        "text" : " there"
+      },
+      {
+        "end" : 107.64,
+        "start" : 104.4,
+        "text" : " is"
+      },
+      {
+        "end" : 108.12,
+        "start" : 107.64,
+        "text" : " still"
+      },
+      {
+        "end" : 108.6,
+        "start" : 108.12,
+        "text" : " a"
+      },
+      {
+        "end" : 108.9,
+        "start" : 108.6,
+        "text" : " chance"
+      },
+      {
+        "end" : 109.32,
+        "start" : 108.9,
+        "text" : " that"
+      },
+      {
+        "end" : 110.16,
+        "start" : 109.32,
+        "text" : " you"
+      },
+      {
+        "end" : 111.42,
+        "start" : 110.16,
+        "text" : " may"
+      },
+      {
+        "end" : 111.6,
+        "start" : 111.42,
+        "text" : " see"
+      },
+      {
+        "end" : 111.84,
+        "start" : 111.6,
+        "text" : " him"
+      },
+      {
+        "end" : 112.08,
+        "start" : 111.84,
+        "text" : " in"
+      },
+      {
+        "end" : 112.62,
+        "start" : 112.08,
+        "text" : " return,"
+      },
+      {
+        "end" : 113.82,
+        "start" : 112.62,
+        "text" : " becoming"
+      },
+      {
+        "end" : 114.06,
+        "start" : 113.82,
+        "text" : " a"
+      },
+      {
+        "end" : 115.32,
+        "start" : 114.06,
+        "text" : " good,"
+      },
+      {
+        "end" : 116.1,
+        "start" : 115.32,
+        "text" : " a"
+      },
+      {
+        "end" : 116.4,
+        "start" : 116.1,
+        "text" : " king"
+      },
+      {
+        "end" : 117,
+        "start" : 116.4,
+        "text" : " as"
+      },
+      {
+        "end" : 117.6,
+        "start" : 117,
+        "text" : " his"
+      },
+      {
+        "end" : 117.96,
+        "start" : 117.6,
+        "text" : " father"
+      },
+      {
+        "end" : 118.5,
+        "start" : 117.96,
+        "text" : " once"
+      },
+      {
+        "end" : 119.64,
+        "start" : 118.5,
+        "text" : " was."
+      },
+      {
+        "end" : 125.82,
+        "start" : 119.7,
+        "text" : " The"
+      },
+      {
+        "end" : 126.54,
+        "start" : 125.82,
+        "text" : " hunter"
+      },
+      {
+        "end" : 126.96,
+        "start" : 126.54,
+        "text" : " who"
+      },
+      {
+        "end" : 127.2,
+        "start" : 126.96,
+        "text" : " had"
+      },
+      {
+        "end" : 127.68,
+        "start" : 127.2,
+        "text" : " called"
+      },
+      {
+        "end" : 128.16,
+        "start" : 127.68,
+        "text" : " him"
+      },
+      {
+        "end" : 128.88,
+        "start" : 128.16,
+        "text" : " took"
+      },
+      {
+        "end" : 129.24,
+        "start" : 128.88,
+        "text" : " him"
+      },
+      {
+        "end" : 129.96,
+        "start" : 129.24,
+        "text" : " in"
+      },
+      {
+        "end" : 130.32,
+        "start" : 129.96,
+        "text" : " a"
+      },
+      {
+        "end" : 130.68,
+        "start" : 130.32,
+        "text" : " place"
+      },
+      {
+        "end" : 131.1,
+        "start" : 130.68,
+        "text" : " where"
+      },
+      {
+        "end" : 131.88,
+        "start" : 131.1,
+        "text" : " he"
+      },
+      {
+        "end" : 132.6,
+        "start" : 131.88,
+        "text" : " was"
+      },
+      {
+        "end" : 133.38,
+        "start" : 132.6,
+        "text" : " chained"
+      },
+      {
+        "end" : 134.7,
+        "start" : 133.38,
+        "text" : " up"
+      },
+      {
+        "end" : 135.42,
+        "start" : 134.7,
+        "text" : " among"
+      },
+      {
+        "end" : 135.84,
+        "start" : 135.42,
+        "text" : " all"
+      },
+      {
+        "end" : 136.14,
+        "start" : 135.84,
+        "text" : " the"
+      },
+      {
+        "end" : 136.38,
+        "start" : 136.14,
+        "text" : " other"
+      },
+      {
+        "end" : 138.6,
+        "start" : 136.38,
+        "text" : " beast."
+      },
+      {
+        "end" : 139.92,
+        "start" : 138.66,
+        "text" : " The"
+      },
+      {
+        "end" : 140.4,
+        "start" : 139.92,
+        "text" : " prince"
+      },
+      {
+        "end" : 141.42,
+        "start" : 140.4,
+        "text" : " decided"
+      },
+      {
+        "end" : 142.02,
+        "start" : 141.42,
+        "text" : " to"
+      },
+      {
+        "end" : 142.38,
+        "start" : 142.02,
+        "text" : " show"
+      },
+      {
+        "end" : 142.74,
+        "start" : 142.38,
+        "text" : " his"
+      },
+      {
+        "end" : 143.22,
+        "start" : 142.74,
+        "text" : " sorrow"
+      },
+      {
+        "end" : 143.7,
+        "start" : 143.22,
+        "text" : " for"
+      },
+      {
+        "end" : 143.94,
+        "start" : 143.7,
+        "text" : " his"
+      },
+      {
+        "end" : 144.54,
+        "start" : 143.94,
+        "text" : " past"
+      },
+      {
+        "end" : 145.08,
+        "start" : 144.54,
+        "text" : " bad"
+      },
+      {
+        "end" : 146.04,
+        "start" : 145.08,
+        "text" : " behavior"
+      },
+      {
+        "end" : 147.18,
+        "start" : 146.04,
+        "text" : " by"
+      },
+      {
+        "end" : 147.78,
+        "start" : 147.18,
+        "text" : " being"
+      },
+      {
+        "end" : 148.86,
+        "start" : 147.78,
+        "text" : " gentle"
+      },
+      {
+        "end" : 149.16,
+        "start" : 148.86,
+        "text" : " with"
+      },
+      {
+        "end" : 149.82,
+        "start" : 149.16,
+        "text" : " the"
+      },
+      {
+        "end" : 150,
+        "start" : 149.82,
+        "text" : " man."
+      },
+      {
+        "end" : 152.28,
+        "start" : 150.12,
+        "text" : " Tasked"
+      },
+      {
+        "end" : 152.88,
+        "start" : 152.28,
+        "text" : " to"
+      },
+      {
+        "end" : 153.66,
+        "start" : 152.88,
+        "text" : " care"
+      },
+      {
+        "end" : 153.9,
+        "start" : 153.66,
+        "text" : " for"
+      },
+      {
+        "end" : 154.14,
+        "start" : 153.9,
+        "text" : " him."
+      },
+      {
+        "end" : 157.86,
+        "start" : 154.2,
+        "text" : " Unfortunately,"
+      },
+      {
+        "end" : 158.4,
+        "start" : 157.86,
+        "text" : " this"
+      },
+      {
+        "end" : 161.52,
+        "start" : 158.4,
+        "text" : " man,"
+      },
+      {
+        "end" : 162.06,
+        "start" : 161.52,
+        "text" : " the"
+      },
+      {
+        "end" : 162.9,
+        "start" : 162.06,
+        "text" : " caretaker"
+      },
+      {
+        "end" : 163.8,
+        "start" : 162.9,
+        "text" : " was"
+      },
+      {
+        "end" : 165.9,
+        "start" : 163.8,
+        "text" : " very,"
+      },
+      {
+        "end" : 167.1,
+        "start" : 165.9,
+        "text" : " tough"
+      },
+      {
+        "end" : 167.58,
+        "start" : 167.1,
+        "text" : " and"
+      },
+      {
+        "end" : 168.24,
+        "start" : 167.58,
+        "text" : " mean,"
+      },
+      {
+        "end" : 169.14,
+        "start" : 168.24,
+        "text" : " even"
+      },
+      {
+        "end" : 169.44,
+        "start" : 169.14,
+        "text" : " though"
+      },
+      {
+        "end" : 169.8,
+        "start" : 169.44,
+        "text" : " the"
+      },
+      {
+        "end" : 170.1,
+        "start" : 169.8,
+        "text" : " poor"
+      },
+      {
+        "end" : 170.5799375,
+        "start" : 170.1,
+        "text" : " beast"
+      },
+      {
+        "end" : 171.18,
+        "start" : 170.5799375,
+        "text" : " did,"
+      },
+      {
+        "end" : 172.38,
+        "start" : 171.18,
+        "text" : " what"
+      },
+      {
+        "end" : 172.98,
+        "start" : 172.38,
+        "text" : " he"
+      },
+      {
+        "end" : 173.16,
+        "start" : 172.98,
+        "text" : " was"
+      },
+      {
+        "end" : 173.88,
+        "start" : 173.16,
+        "text" : " told,"
+      },
+      {
+        "end" : 175.26,
+        "start" : 173.88,
+        "text" : " the,"
+      },
+      {
+        "end" : 175.8,
+        "start" : 175.26,
+        "text" : " the"
+      },
+      {
+        "end" : 176.76,
+        "start" : 175.8,
+        "text" : " caretaker"
+      },
+      {
+        "end" : 177.24,
+        "start" : 176.76,
+        "text" : " often"
+      },
+      {
+        "end" : 177.96,
+        "start" : 177.24,
+        "text" : " hit"
+      },
+      {
+        "end" : 178.38,
+        "start" : 177.96,
+        "text" : " him"
+      },
+      {
+        "end" : 178.98,
+        "start" : 178.38,
+        "text" : " for"
+      },
+      {
+        "end" : 179.28,
+        "start" : 178.98,
+        "text" : " no"
+      },
+      {
+        "end" : 180.54,
+        "start" : 179.28,
+        "text" : " reason,"
+      },
+      {
+        "end" : 180.66,
+        "start" : 180.54,
+        "text" : " just"
+      },
+      {
+        "end" : 181.02,
+        "start" : 180.66,
+        "text" : " because"
+      },
+      {
+        "end" : 181.86,
+        "start" : 181.02,
+        "text" : " he"
+      },
+      {
+        "end" : 182.4,
+        "start" : 181.86,
+        "text" : " was."
+      },
+      {
+        "end" : 183.54,
+        "start" : 183,
+        "text" : " In"
+      },
+      {
+        "end" : 184.38,
+        "start" : 183.54,
+        "text" : " a"
+      },
+      {
+        "end" : 184.68,
+        "start" : 184.38,
+        "text" : " bad"
+      },
+      {
+        "end" : 185.16,
+        "start" : 184.68,
+        "text" : " mood."
+      },
+      {
+        "end" : 187.32,
+        "start" : 185.22,
+        "text" : " One"
+      },
+      {
+        "end" : 187.62,
+        "start" : 187.32,
+        "text" : " day"
+      },
+      {
+        "end" : 188.22,
+        "start" : 187.62,
+        "text" : " when"
+      },
+      {
+        "end" : 188.4,
+        "start" : 188.22,
+        "text" : " the"
+      },
+      {
+        "end" : 189.9,
+        "start" : 188.4,
+        "text" : " caretaker"
+      },
+      {
+        "end" : 190.32,
+        "start" : 189.9,
+        "text" : " was"
+      },
+      {
+        "end" : 190.98,
+        "start" : 190.32,
+        "text" : " sleep,"
+      },
+      {
+        "end" : 192.06,
+        "start" : 190.98,
+        "text" : " a"
+      },
+      {
+        "end" : 192.54,
+        "start" : 192.06,
+        "text" : " tiger"
+      },
+      {
+        "end" : 192.84,
+        "start" : 192.54,
+        "text" : " broke"
+      },
+      {
+        "end" : 193.86,
+        "start" : 192.84,
+        "text" : " kind"
+      },
+      {
+        "end" : 194.28,
+        "start" : 193.86,
+        "text" : " of"
+      },
+      {
+        "end" : 194.64,
+        "start" : 194.28,
+        "text" : " its"
+      },
+      {
+        "end" : 195.18,
+        "start" : 194.64,
+        "text" : " chain"
+      },
+      {
+        "end" : 195.66,
+        "start" : 195.18,
+        "text" : " and"
+      },
+      {
+        "end" : 196.26,
+        "start" : 195.66,
+        "text" : " flew"
+      },
+      {
+        "end" : 196.8,
+        "start" : 196.26,
+        "text" : " at"
+      },
+      {
+        "end" : 197.28,
+        "start" : 196.8,
+        "text" : " him,"
+      },
+      {
+        "end" : 198.3,
+        "start" : 197.28,
+        "text" : " wanting"
+      },
+      {
+        "end" : 198.6,
+        "start" : 198.3,
+        "text" : " to"
+      },
+      {
+        "end" : 198.9,
+        "start" : 198.6,
+        "text" : " eat"
+      },
+      {
+        "end" : 199.26,
+        "start" : 198.9,
+        "text" : " him"
+      },
+      {
+        "end" : 199.8,
+        "start" : 199.26,
+        "text" : " up."
+      },
+      {
+        "end" : 200.52,
+        "start" : 199.86,
+        "text" : " Prince"
+      },
+      {
+        "end" : 201.48,
+        "start" : 200.52,
+        "text" : " Darling,"
+      },
+      {
+        "end" : 201.6,
+        "start" : 201.48,
+        "text" : " who"
+      },
+      {
+        "end" : 202.08,
+        "start" : 201.6,
+        "text" : " was,"
+      },
+      {
+        "end" : 203.64,
+        "start" : 202.08,
+        "text" : " What"
+      },
+      {
+        "end" : 204.12,
+        "start" : 203.64,
+        "text" : " was"
+      },
+      {
+        "end" : 204.42,
+        "start" : 204.12,
+        "text" : " going"
+      },
+      {
+        "end" : 206.52,
+        "start" : 204.42,
+        "text" : " on?"
+      },
+      {
+        "end" : 208.56,
+        "start" : 206.58,
+        "text" : " Who,"
+      },
+      {
+        "end" : 208.74,
+        "start" : 208.56,
+        "text" : " so"
+      },
+      {
+        "end" : 209.4,
+        "start" : 208.74,
+        "text" : " what's,"
+      },
+      {
+        "end" : 209.7,
+        "start" : 209.4,
+        "text" : " what's"
+      },
+      {
+        "end" : 209.82,
+        "start" : 209.7,
+        "text" : " going"
+      },
+      {
+        "end" : 210.06,
+        "start" : 209.82,
+        "text" : " on"
+      },
+      {
+        "end" : 211.38,
+        "start" : 210.06,
+        "text" : " at,"
+      },
+      {
+        "end" : 213.06,
+        "start" : 211.38,
+        "text" : " 1st"
+      },
+      {
+        "end" : 213.9,
+        "start" : 213.06,
+        "text" : " felt"
+      },
+      {
+        "end" : 215.16,
+        "start" : 213.9,
+        "text" : " quite,"
+      },
+      {
+        "end" : 215.52,
+        "start" : 215.16,
+        "text" : " quite"
+      },
+      {
+        "end" : 216.54,
+        "start" : 215.52,
+        "text" : " pleased"
+      },
+      {
+        "end" : 217.26,
+        "start" : 216.54,
+        "text" : " to"
+      },
+      {
+        "end" : 217.8,
+        "start" : 217.26,
+        "text" : " think"
+      },
+      {
+        "end" : 219,
+        "start" : 217.8,
+        "text" : " that"
+      },
+      {
+        "end" : 219.48,
+        "start" : 219,
+        "text" : " the"
+      },
+      {
+        "end" : 219.9,
+        "start" : 219.48,
+        "text" : " main"
+      },
+      {
+        "end" : 221.1,
+        "start" : 219.9,
+        "text" : " caretaker"
+      },
+      {
+        "end" : 222.18,
+        "start" : 221.1,
+        "text" : " deserved"
+      },
+      {
+        "end" : 223.02,
+        "start" : 222.18,
+        "text" : " this,"
+      },
+      {
+        "end" : 224.16,
+        "start" : 223.02,
+        "text" : " but,"
+      },
+      {
+        "end" : 225.3,
+        "start" : 224.16,
+        "text" : " um,"
+      },
+      {
+        "end" : 228.72,
+        "start" : 225.3,
+        "text" : " Reflection."
+      },
+      {
+        "end" : 229.62,
+        "start" : 228.78,
+        "text" : " He"
+      },
+      {
+        "end" : 229.98,
+        "start" : 229.62,
+        "text" : " changed"
+      },
+      {
+        "end" : 230.58,
+        "start" : 229.98,
+        "text" : " his"
+      },
+      {
+        "end" : 230.94,
+        "start" : 230.58,
+        "text" : " mind."
+      },
+      {
+        "end" : 252.3,
+        "start" : 249.06,
+        "text" : " Just"
+      },
+      {
+        "end" : 252.78,
+        "start" : 252.3,
+        "text" : " a"
+      },
+      {
+        "end" : 253.62,
+        "start" : 252.78,
+        "text" : " wicked,"
+      },
+      {
+        "end" : 254.58,
+        "start" : 253.62,
+        "text" : " otherwise,"
+      },
+      {
+        "end" : 255.54,
+        "start" : 254.58,
+        "text" : " prick,"
+      },
+      {
+        "end" : 256.26,
+        "start" : 255.54,
+        "text" : " cross."
+      },
+      {
+        "end" : 258.18,
+        "start" : 256.32,
+        "text" : " Habit,"
+      },
+      {
+        "end" : 259.5,
+        "start" : 258.18,
+        "text" : " companion,"
+      },
+      {
+        "end" : 260.58,
+        "start" : 259.5,
+        "text" : " please,"
+      },
+      {
+        "end" : 264.06,
+        "start" : 260.58,
+        "text" : " please,"
+      },
+      {
+        "end" : 265.14,
+        "start" : 264.06,
+        "text" : " name."
+      },
+      {
+        "end" : 273.6,
+        "start" : 271.2,
+        "text" : " Tutor,"
+      },
+      {
+        "end" : 275.46,
+        "start" : 273.6,
+        "text" : " greatness,"
+      },
+      {
+        "end" : 277.2,
+        "start" : 275.46,
+        "text" : " ungratefully,"
+      },
+      {
+        "end" : 278.1,
+        "start" : 277.2,
+        "text" : " picked."
+      },
+      {
+        "end" : 280.32,
+        "start" : 278.22,
+        "text" : " Thrown"
+      },
+      {
+        "end" : 280.62,
+        "start" : 280.32,
+        "text" : " and"
+      },
+      {
+        "end" : 281.34,
+        "start" : 280.62,
+        "text" : " recording."
+      },
+      {
+        "end" : 284.52,
+        "start" : 281.4,
+        "text" : " Star,"
+      },
+      {
+        "end" : 285.18,
+        "start" : 284.52,
+        "text" : " brook,"
+      },
+      {
+        "end" : 287.7,
+        "start" : 285.18,
+        "text" : " star..."
+      },
+      {
+        "end" : 288.72,
+        "start" : 287.82,
+        "text" : " Hermit."
+      }
+    ],
+    "source" : "super8-L3-p73-74-0D3CD2D4-24F3-431C-A0BB-ED5C8DE120E5.m4a"
+  },
+  "words" : [
+    "torting",
+    "torting",
+    "his",
+    "people",
+    "he",
+    "was",
+    "found",
+    "that",
+    "in",
+    "his",
+    "room",
+    "struck",
+    "struck",
+    "down",
+    "by",
+    "the",
+    "thunderbolt",
+    "they",
+    "then",
+    "offered",
+    "the",
+    "crown",
+    "to",
+    "solomon",
+    "the",
+    "tutor",
+    "who",
+    "the",
+    "prince",
+    "had",
+    "put",
+    "in",
+    "prison",
+    "so",
+    "in",
+    "a",
+    "single",
+    "day",
+    "salmon",
+    "went",
+    "from",
+    "being",
+    "a",
+    "prisoner",
+    "to",
+    "being",
+    "the",
+    "king",
+    "just",
+    "as",
+    "this",
+    "man",
+    "finished",
+    "their",
+    "story",
+    "the",
+    "sound",
+    "of",
+    "time",
+    "trumpet",
+    "and",
+    "the",
+    "shot",
+    "of",
+    "the",
+    "crowd",
+    "and",
+    "announced",
+    "that",
+    "the",
+    "new",
+    "king",
+    "was",
+    "a",
+    "approach",
+    "train",
+    "i",
+    "have",
+    "taken",
+    "the",
+    "crown",
+    "you",
+    "have",
+    "given",
+    "me",
+    "but",
+    "i",
+    "am",
+    "only",
+    "holding",
+    "it",
+    "safe",
+    "for",
+    "prince",
+    "danny",
+    "he",
+    "is",
+    "not",
+    "that",
+    "as",
+    "a",
+    "rumor",
+    "says",
+    "sarah",
+    "told",
+    "me",
+    "that",
+    "there",
+    "is",
+    "still",
+    "a",
+    "chance",
+    "that",
+    "you",
+    "may",
+    "see",
+    "him",
+    "in",
+    "return",
+    "becoming",
+    "a",
+    "good",
+    "a",
+    "king",
+    "as",
+    "his",
+    "father",
+    "once",
+    "was",
+    "the",
+    "hunter",
+    "who",
+    "had",
+    "called",
+    "him",
+    "took",
+    "him",
+    "in",
+    "a",
+    "place",
+    "where",
+    "he",
+    "was",
+    "chained",
+    "up",
+    "among",
+    "all",
+    "the",
+    "other",
+    "beast",
+    "the",
+    "prince",
+    "decided",
+    "to",
+    "show",
+    "his",
+    "sorrow",
+    "for",
+    "his",
+    "past",
+    "bad",
+    "behavior",
+    "by",
+    "being",
+    "gentle",
+    "with",
+    "the",
+    "man",
+    "tasked",
+    "to",
+    "care",
+    "for",
+    "him",
+    "unfortunately",
+    "this",
+    "man",
+    "the",
+    "caretaker",
+    "was",
+    "very",
+    "tough",
+    "and",
+    "mean",
+    "even",
+    "though",
+    "the",
+    "poor",
+    "beast",
+    "did",
+    "what",
+    "he",
+    "was",
+    "told",
+    "the",
+    "the",
+    "caretaker",
+    "often",
+    "hit",
+    "him",
+    "for",
+    "no",
+    "reason",
+    "just",
+    "because",
+    "he",
+    "was",
+    "in",
+    "a",
+    "bad",
+    "mood",
+    "one",
+    "day",
+    "when",
+    "the",
+    "caretaker",
+    "was",
+    "sleep",
+    "a",
+    "tiger",
+    "broke",
+    "kind",
+    "of",
+    "its",
+    "chain",
+    "and",
+    "flew",
+    "at",
+    "him",
+    "wanting",
+    "to",
+    "eat",
+    "him",
+    "up",
+    "prince",
+    "darling",
+    "who",
+    "was",
+    "what",
+    "was",
+    "going",
+    "on",
+    "who",
+    "so",
+    "what's",
+    "what's",
+    "going",
+    "on",
+    "at",
+    "1st",
+    "felt",
+    "quite",
+    "quite",
+    "pleased",
+    "to",
+    "think",
+    "that",
+    "the",
+    "main",
+    "caretaker",
+    "deserved",
+    "this",
+    "but",
+    "um",
+    "reflection",
+    "he",
+    "changed",
+    "his",
+    "mind",
+    "just",
+    "a",
+    "wicked",
+    "otherwise",
+    "prick",
+    "cross",
+    "habit",
+    "companion",
+    "please",
+    "please",
+    "name",
+    "tutor",
+    "greatness",
+    "ungratefully",
+    "picked",
+    "thrown",
+    "and",
+    "recording",
+    "star",
+    "brook",
+    "star",
+    "hermit"
+  ]
+}
