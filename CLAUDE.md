@@ -243,12 +243,20 @@ noindex 的页面（孩子的成绩单）     → 只出备案号，不挂统计
   media query 读的是视口宽度，不是 html 的宽度，注入了也不会触发。
   `review-index.css` 和 `review.css` 现在都有 media query，所以量它们必须用真实视口：
 
+  工具在 **`tools/shot.mjs`**（一次 `npm i playwright-core`，浏览器本体用系统里
+  已有的 Chromium 缓存）：
+
   ```bash
-  npm i playwright-core          # 浏览器缓存 ~/Library/Caches/ms-playwright 里已经有了
-  node shot.mjs <url> <out.png> 390     # newPage({ viewport:{width:390}, isMobile:true })
+  make shot URL=dist/english/review/2026-08-28.html PROBE=1        # 只报尺寸，不出图
+  make shot URL=… OUT=/tmp/a.png                                   # 整页
+  make shot URL=… OUT=/tmp/a.png EL=".box.scales"                  # 只截一个元素
   ```
 
-  跑完打一行 `innerWidth` 确认没被静默改掉 —— 拿不到 390 就是没模拟上，量出来的白量
+  跑完一定打 `innerWidth` / `scrollWidth` 两行：拿不到要的宽度就是视口没模拟上、
+  量出来的全是白量；`scrollWidth` 比它大就是横向溢出。
+
+  ⚠️ **别把它接进 `| head -N`** —— head 读够行数就关管道，node 会在写 PNG 的半路
+  被掐死，落一个截断的坏图，而它看着像是页面出了问题。要过滤就先 `> log 2>&1`。
 - 探针 HTML **必须放在 `dist/` 里对应的目录下**，否则 CSS 的相对路径会 404，
   量到的是一个没有样式的布局 —— 看着像 bug，其实是探针自己坏了
 - **打印单在手机上要量一次横向溢出**：`.sheet` 有 `max-width:100%`，元素本身

@@ -127,6 +127,52 @@ class Report:
         self.prevs = [s if "/" in s or not folder else folder + s
                       for s in (x.strip() for x in (sp.get("prev") or "").split(",")) if s]
 
+        self._check()
+
+    def _check(self) -> None:
+        """spec 自身的一致性。**以前一条都没有，全靠人肉加一遍。**
+
+        这三条各自都踩过：四维之和和 score 对不上（分数条和大数字互相打架）、
+        `[比对]` 里标了不计错却写成「实读」（编号顺延，多出来的编号看着像还有一处错）、
+        `[卡壳]` 的标签里混进中文逗号（`could not convert string to float`，
+        报错里看不出是哪一条）。都是**静默**或**看不出位置**的错，所以在这儿拦住。
+        """
+        name = self.spec.path.name
+
+        # ① 四维之和 == score
+        got = dict(parse_pairs(self.blocks["评分"].head)) if "评分" in self.blocks else {}
+        if got:
+            total = 0
+            for dim, full in DIMENSIONS:
+                raw = got.get(dim)
+                if raw is None:
+                    spec_lib.die(f"{name}: [评分] 少了「{dim}」—— 维度名写错会静默丢掉那一条，"
+                                 f"四个都要有：" + " ".join(f"{d}=?/{f}" for d, f in DIMENSIONS))
+                total += int(str(raw).split("/")[0])
+            if total != self.score:
+                spec_lib.die(f"{name}: [评分] 四维之和是 {total}，score 写的是 {self.score} —— "
+                             f"对不上。报告上大数字印 score、分数条印四维，两处会互相打架")
+
+        # 想过再加一条「[比对] 的条数 == errors」，**撤了**：这两个数本来就不相等，
+        # 口径允许两个方向都差（一条含两处错 → errors 多；回读或课本印错写「实读」
+        # 但不计错 → errors 少）。实测 7 份 spec 里 5 份都会响 —— 在多数情况下都响的
+        # 检查没有信号，只是噪音。报告里编号是顺着「实读」排的，编号最大值不等于
+        # errors 属正常，这条写进了 skill 的自检清单。
+
+        # ③ [卡壳] / [句末] 抬头行的每一段，起止都要能转成浮点
+        for blk, how in (("卡壳", "起-止 = 标签"), ("句末", "时刻")):
+            if blk not in self.blocks:
+                continue
+            for item, label in spec_lib.Block(name="", lines=[self.blocks[blk].head]).items():
+                bad = [x for x in (item.split("-") if blk == "卡壳" else [item])
+                       if not _is_number(x)]
+                if bad:
+                    spec_lib.die(
+                        f"{name}: [{blk}] 这一条读不成数字：{item!r}"
+                        + (f"（标签「{label}」）" if label else "")
+                        + f" —— 格式是「{how}」，而且**标签里不能有 , ， 、**："
+                        + "那三个都是条目分隔符，后半截会被当成新的一条")
+
     # ── 供目录页和当日小结用的元信息
     @property
     def title(self) -> str:
@@ -297,6 +343,14 @@ def score_box(r: Report) -> dict:
         bars.append({"name": name, "pct": round(n / full * 100), "val": f"{n}/{full}"})
 
     return {"num": r.score, "lead": lead, "tip": rich(tip) if tip else "", "bars": bars}
+
+
+def _is_number(text: str) -> bool:
+    try:
+        float(text.strip())
+        return True
+    except ValueError:
+        return False
 
 
 def parse_pairs(text: str) -> list[tuple[str, str]]:

@@ -67,10 +67,10 @@ super8/L3/p68   →   storage/data/english/review/super8/L3/p68.ref.txt
 
 | 链路 | 名字填到哪 | 产出 | 落到 | 去向 |
 |---|---|---|---|---|
-| `read` 朗读录音 | `<书>/<课>/pNN`；一次读了几页写区间 `pNN-MM` | `.read.json` 主产物（声学 + 转写 + 逐字对齐）<br>`.json` 停顿声学（老站字段）<br>`.words.tsv` 逐词时间戳<br>`.read.json` 里的 `pages`：这次读了哪几页、每页多少词错几处（**从同一份对齐派生，不是分开测的**） | `storage/data/english/review/` | **进 repo** |
+| `read` 朗读录音 | `<书>/<课>/pNN`；一次读了几页写区间 `pNN-MM` | `.read.json` 主产物（声学 + 转写 + 逐字对齐）<br>`.json` 停顿声学（老站字段）<br>`.words.tsv` 逐词时间戳<br>`.read.json` 里的 `pages`：这次读了哪几页、每页多少词错几处（**从同一份对齐派生，不是分开测的**）<br>`.read.json` 里的 `refSuspects`：原文里 OCR 认得可疑的词，从 `page.json` 取回 —— `page.json` 是临时的、会被清掉，这份进 repo 的才是长期凭据 | `storage/data/english/review/` | **进 repo** |
 | `read --draft` | 同上 | `.draft.txt` spec 候选（`[比对]`/`[卡壳]`/`[磕巴]` 和文件头填好，判断留 `⟨⟩`） | `storage/spec/english/review/` | **候选** → 另存 `pNN.txt` |
 | `scan` 教材截图 | `<书>/<课>`，**页码机器认** | `.ref.txt` 红线划中的课文原文 | `storage/data/english/review/` | **进 repo** |
-| | | `.page.json` 整页 OCR + 坐标<br>`.marked.png` 核对图<br>`.full.txt` 整页全文（`--full`） | 同上 | **临时** |
+| | | `.page.json` 整页 OCR + 坐标 + `spellFlags`（OCR 认得可疑的词）<br>`.marked.png` 核对图<br>`.suspect-<词>.png` 可疑词裁出来放大 6 倍，一个词一张<br>`.full.txt` 整页全文（`--full`） | 同上 | **临时** |
 | `cards` 单词卡 | `<NN>_<主题>` | `.draft.csv`（带 BOM 给 Excel） | `storage/spec/english/ket/words/` | **候选** → 另存 `<NN>_<主题>.csv` |
 | | | `.cards.json` `.cards.marked.png` | 同上 | **临时** |
 | `board` 白板 | `<故事slug>` | `.draft.txt` | `storage/spec/english/retell/` | **候选** → 另存 `<故事slug>.txt` |
@@ -142,7 +142,7 @@ spec 里人给的 `words` `errors` `score` `naep`。**不新增任何计算** �
           .txt（各栏目）  .csv（ket/words/）        ← storage/spec/：人写的判断
 派生      .csv（storage/result/）                   ← 算出来的指标，全量覆盖
 候选      .draft.csv  .draft.txt                      ← 核完另存，别直接 push
-临时      .marked.png  .page.json  .cards.json
+临时      .marked.png  .page.json  .suspect-*.png  .cards.json
           .board.json  .full.txt                      ← 看完就扔
 素材      .mov .mp4 .m4a .jpg .heic                   ← 留本机，永不进仓库
 ```
