@@ -103,6 +103,15 @@ super8/L3/p68   →   storage/data/english/review/super8/L3/p68.ref.txt
 | 数学秘籍 | `storage/spec/math/miji/` | `<错因slug>.txt` | `src/generator/math/build.py` |
 
 **只有打卡评价读 spec 之外的数据文件**，其余六个栏目都是 spec 单一输入。
+`.read.json` 里每条逐字比对差异都带着**规则分出来的类**：`category`（词尾 / 小词 /
+原文印错 / 专名 / 转写乱段 / 自己改对 / 实词 / 漏读 / 多读）、`label`（中文标签）、
+`suggest`（建议计错 / 存疑 / 不计错）、`why`（一句话理由）。
+
+⚠️ **口径只在喂数据台那一份**（`../feeder` 的 `Output/DiffTriage.swift`）。
+这边要用就**读字段、原样印**：不许在 Python 里再写一遍规则，也不许再翻一遍标签 ——
+同一个口径两份实现早晚会漂。老的 `.read.json` 没有这四个字段（音频不在仓库里、
+重跑不出来），所以读的时候一律「有就用、没有就跳过」，别拿它当必填。
+
 打卡评价的三份数据里 `.json` 是必需的（缺了直接报错），`.read.json` 和 `.ref.txt` 可选；
 `.words.tsv` **目前没有生成器读它**，留着是给人核对时间戳用的。
 
