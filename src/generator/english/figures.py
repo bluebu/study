@@ -133,18 +133,39 @@ def timeline_svg(data, bounds, stalls):
     step = 10 if D <= 120 else 20 if D <= 300 else 60   # 长录音刻度放宽，否则末尾两个标签会叠在一起
     tk = list(range(0, int(D) + 1, step))
 
+    # 卡壳标签排成一行，挤不下的往上错一行 —— 长录音里两处卡壳常常挨得很近
+    # （p70-72 的 47.3-52.7 和 52.7-58.4 只隔 0 秒），标签叠在一起就是一团看不清的字。
+    # 只有真挤到了才多开一行，单行时 viewBox 和原来逐字节一致。
+    y_label = TOP - 20
+    rows, marks = [], []
+    for a, b, label in sorted(stalls):
+        x1, x2 = x(a), x(b)
+        mid = (x1 + x2) / 2
+        # font-size 16 的粗体：中文一个字约 16 个单位，数字和拉丁字母约 8.5
+        half = sum(16.0 if ord(c) > 0x2E80 else 8.5 for c in label) / 2
+        r = 0
+        while r < len(rows) and rows[r] > mid - half - 8:
+            r += 1
+        (rows.append(mid + half) if r == len(rows) else rows.__setitem__(r, mid + half))
+        # 文字居中在括号上，但两头夹住不许伸出 viewBox —— 伸出去会被 SVG 裁掉半行字
+        # （p70-72 末尾那处卡壳一直到 376 秒，标签中心几乎贴着右边）
+        tx = mid if half * 2 + 4 > W else min(max(mid, half + 2), W - half - 2)
+        marks.append({"x1": x1, "x2": x2, "mid": round(tx, 2), "label": label,
+                      "y": y_label - r * 20})
+    extra = max(len(rows) - 1, 0) * 20
+
     svg = tmpl.render(
         "figures/timeline.svg",
-        W=f"{W:.0f}", H=f"{H:.0f}", TOP=TOP, view_h=f"{TOP + H + 28:.0f}",
+        W=f"{W:.0f}", H=f"{H:.0f}", TOP=TOP,
+        vb_top=f"{-4 - extra:.0f}", vb_h=f"{TOP + H + 28 + extra:.0f}",
         seconds=int(D),
         pauses=pauses,
         base=TOP + H, base5=TOP + H + 5, base20=TOP + H + 20,
         ticks=[{"x": x(t), "v": t,
                 "anchor": "start" if t == tk[0] else "end" if t == tk[-1] else "middle"}
                for t in tk],
-        stalls=[{"x1": x(a), "x2": x(b), "mid": (x(a) + x(b)) / 2, "label": label}
-                for a, b, label in stalls],
-        y_bracket_lo=TOP - 8, y_bracket_hi=TOP - 14, y_label=TOP - 20,
+        stalls=marks,
+        y_bracket_lo=TOP - 8, y_bracket_hi=TOP - 14,
     ).rstrip("\n")
     return svg, counts
 

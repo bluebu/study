@@ -4,8 +4,9 @@
 
   这张图每行前面有 2 格缩进（原来是 `''.join(f'  {s}\n')` 拼的），保持不变。
   刻度间距随时长放宽（step 在 Python 里算），否则长录音末尾两个标签会叠在一起。
+  卡壳标签同理：挨太近的往上错一行（y 在 Python 里算），行数决定 viewBox 顶部留多少。
 -#}
-<svg viewBox="0 -4 {{ W }} {{ view_h }}" role="img" aria-label="{{ seconds }} 秒朗读的停顿分布：绿色是发声，蓝色是句末停顿，橙色和灰色是句中停顿">
+<svg viewBox="0 {{ vb_top }} {{ W }} {{ vb_h }}" role="img" aria-label="{{ seconds }} 秒朗读的停顿分布：绿色是发声，蓝色是句末停顿，橙色和灰色是句中停顿">
   <rect x="0" y="{{ TOP }}" width="{{ W }}" height="{{ H }}" rx="8" fill="var(--tl-speech)"/>
 {% for p in pauses %}
   <rect x="{{ p.x }}" y="{{ TOP }}" width="{{ p.w }}" height="{{ H }}" fill="var(--tl-{{ p.kind }})"/>
@@ -17,6 +18,6 @@
 {% endfor %}
 {% for s in stalls %}
   <path d="M{{ s.x1 }} {{ y_bracket_lo }} L{{ s.x1 }} {{ y_bracket_hi }} L{{ s.x2 }} {{ y_bracket_hi }} L{{ s.x2 }} {{ y_bracket_lo }}" fill="none" stroke="var(--tl-long)" stroke-width="2"/>
-  <text x="{{ s.mid }}" y="{{ y_label }}" font-size="16" font-weight="700" fill="var(--tl-long)" text-anchor="middle">{{ s.label }}</text>
+  <text x="{{ s.mid }}" y="{{ s.y }}" font-size="16" font-weight="700" fill="var(--tl-long)" text-anchor="middle">{{ s.label }}</text>
 {% endfor %}
 </svg>

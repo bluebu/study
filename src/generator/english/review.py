@@ -713,8 +713,12 @@ def build_trend(out_dir: Path) -> bool:
         print("    · 趋势：不足两次朗读，跳过")
         return False
 
-    acc = [(f'第 {r["page"] or r["order"]} 页', float(r["accuracy"])) for r in rows]
-    wcpm = [(f'第 {r["page"] or r["order"]} 页', int(r["wcpm"])) for r in rows]
+    # x 轴标签只写页码，不写「第 … 页」—— 一次录音跨几页时标签是「70–72」这种区间，
+    # 两个区间标签挨在一起就重叠了（7 个点、390px 宽，实测叠了 7.8px）。
+    # 哪一轴是什么，图的标题和轴末的单位已经说清楚了。
+    label = lambda r: str(r["page"] or r["order"])
+    acc = [(label(r), float(r["accuracy"])) for r in rows]
+    wcpm = [(label(r), int(r["wcpm"])) for r in rows]
 
     def short_date(iso: str) -> str:
         """趋势表里日期只留月/日 —— 390px 宽放不下「2026 年 8 月 25 日」。"""
