@@ -1,0 +1,250 @@
+# 超8 · Lesson 3
+# 第 70–72 页，一段录音（s8.mp4）一口气读完三页，6 分 18 秒 —— 到目前为止最长的一次。
+# 录音末尾 40 秒**不是课文**：336.5 秒读完最后一个词，停了 12 秒，348.6–376.7 秒
+# 念的是一串孤立的单词（wicked / crows / habit / companion / tutor / greediness /
+# gratefully / rewarded / brook / starve / desert / hermit）—— 那是后面几页（p76、p78）
+# 的生词，一个词一个词地念，不是句子。对齐算法把最后两个词 desert / hermit 拉去顶了
+# 原文结尾的 only / in，[比对] 末两条要照这个读。这 40 秒算进时长、不算进正确词数，
+# 所以 WCPM 偏保守，见 [怎么来的]。
+# 停顿阈值 −40 dB，和 p68 / p69 同为撞下限的那一档，**停顿类的数可以和这两页直接比**
+#（65–67 页是 −21.8 / −26.4 / −27.5，不能比）。
+# ⚠️ .ref.txt 里两个不是英文的词是**扫描认错**，不是课本印错 —— 都在 marked.png 上
+#    放大核过：aum 课本印的是 aim、Theretore 印的是 Therefore。她读的是正确的词，不计错。
+date: 2026-08-28
+cat: 超8
+order: 70
+page: 70–72
+book: Prince Darling
+part: 划线部分
+words: 349
+errors: 27
+score: 52
+naep: 2
+prev: p69
+
+[评分] 准确度=19/30 流利度=13/30 断句语调=12/25 发音=8/15
+
+[总评] 三页一口气读下来，越往后越赶。
+    349 个词、6 分 18 秒，篇幅是上一次（p69，91 词）的近四倍，准确率反而从 89.0%
+    回到 92.3%。但按页拆开是一路往下的：94.5% → 92.8% → 88.7%，而第 72 页的语速
+    比前两页还快了两成 —— 不是读慢了读错，是读到第三页开始赶。
+    27 处计错分四类：**12 处是长实词没读出来**（vowed / cruel / other / trial /
+    criminal / lion / greediness / rudeness / Thinking / gotten / chains / prince），
+    6 处整词漏读（However / continued / all / away / back / only），
+    6 处是形近词和小词读串（form 读成 from、fell 读成 felt、lake 读成 like、
+    were 读成 are、a 读成 the、vow 读成 wow），3 处是词尾（escape 多了 -d、
+    advisers 和 faults 少了 -s）。
+    另有 26 处机器判的「读错」这次没算：专有名词 5 次（Celia、Suliman 三次、
+    Darling's 的撇号），76–87 秒和 238–249 秒那两串转写整段乱了，
+    还有 aim / Therefore 两处是扫描认错、她读对了。
+
+[卡壳] 47.3-52.7 = 卡 5.3 秒, 52.7-58.4 = 卡 5.8 秒, 238.4-244.1 = 卡 5.7 秒, 328.0-332.3 = 卡 4.3 秒, 335.1-376.4 = 课文读完后念生词表 41.3 秒
+    47.3–58.4 那 11 秒是两件事接在一起：escaped 读了两遍（都多了 -d），
+    然后是段落切换 —— 原文这儿从叙述跳到 “When they heard Prince Darling's vow”。
+    238.4–244.1 卡在 bull 上，244 秒之后那一串转写整个乱了。
+    328.0–332.3 是引号开头的新段（“Our prince, who took pleasure only in）。
+    **最后那 41 秒不是卡壳** —— 336.5 秒课文就读完了，停 12 秒之后念的是生词表。
+
+[分页] 这次读了 3 页
+第 70 页 = 0.9-127.7 秒 · 127 词 · 计错 7 处 · 每分钟 60 词
+第 71 页 = 131.0-254.8 秒 · 125 词 · 计错 9 处 · 每分钟 61 词
+第 72 页 = 257.8-336.5 秒 · 97 词 · 计错 11 处 · 每分钟 74 词
+    第 72 页最吃力：词最少、错最多，语速却比前两页快了两成（这一页的秒数已经去掉
+    末尾念生词表那 40 秒）。前两页每分钟都是 60 个词，很稳；到第三页快起来，
+    形近词和漏读就都出来了 —— away、back、only 三处漏读全在这一页。
+
+[对比] 和上一页比
+准确率 = 回升了
+正确词/分 = 基本持平
+几个词一停 = 更碎了
+停顿占时长 = 歇气更多了
+    89.0% → 92.3%，回到 p68 那一档附近。两次的分母差很多：p69 只有 91 个词，
+    一处错就是 1.1 个百分点，这次 349 个词、一处只占 0.29 —— 篇幅长本身就摊薄了错误率。
+    下面两行这次**能直接比**：p68 / p69 和这次的停顿阈值同为 −40 dB。
+    2.6 个词一停（上次 3.2）、停顿占 24%（上次 20.4%），歇气确实比上一次密。
+
+[比对]
+原文 *However* when he reached the room
+实读 *（漏读）* when he reached the room
+    开头第一个词整个跳过去了，转写从 when 起
+原文 room in which *Celia* had been locked
+识别成 room in which *syria* had been locked
+    4.9 秒。专有名词，机器只会往认识的词上靠，不计错
+原文 extreme and he *vowed* that he would
+实读 extreme and he *bold* that he would
+    37.5 秒。vowed 读成 bold，开头的 v 和整个元音都没对上
+原文 had helped her *escape* When they heard
+实读 had helped her *escaped* When they heard
+    48.8 秒。多了词尾 -d，**紧接着又读了一遍还是 escaped** —— 两遍都一样，
+    不是自己改对，计错
+原文 heard Prince Darling's *vow* the cruel advisers
+实读 heard Prince Darling's *wow* the cruel advisers
+    62.5 秒。v 读成了 w
+原文 Darling's vow the *cruel* advisers his foster-brother
+实读 Darling's vow the *cool* advisers his foster-brother
+    64.2 秒。cruel 两个音节压成了一个 cool
+原文 vow the cruel *advisers* his foster-brother and
+实读 vow the cruel *advisor* his foster-brother and
+    64.6 秒。复数的 -s 没读出来
+原文 three wicked men *resolved to aim his strong anger at* an old nobleman
+识别成 three wicked men *we solved to his stronger that* an old nobleman
+    76–87 秒这 11 秒转写整段乱了：resolved 被拆成「we solved」，strong anger 连读
+    被听成一个 stronger。**.ref.txt 里的 aum 是扫描认错，课本印的是 aim** ——
+    这一串一处都没计错，回去听这十几秒再定
+原文 at an old *nobleman Suliman* who had been
+识别成 at an old *noble* who had been
+    90.4 秒。名字和前面的 nobleman 被合成一个 noble，专有名词不计错
+原文 had been Prince *Darling's* childhood tutor
+识别成 had been Prince *darlings* childhood tutor
+    94.7 秒。Darling's 和 Darlings 读出来一模一样，是转写不带撇号，不计错
+原文 correct Prince Darling's *faults* His foster-brother told
+实读 correct Prince Darling's *fault* His foster-brother told
+    127.3 秒。又一处复数的 -s
+原文 told Prince Darling that *Suliman* the tutor had boasted
+识别成 told Prince Darling that *solomon* the tutor had boasted
+    136.9 / 158.6 / 173.6 秒，同一个名字三次都被听成 solomon，都不计错
+原文 even paid some *other* men to lie
+实读 even paid some *their* men to lie
+    151.6 秒。前面还有一声「uh」，other 读成了 their
+原文 make him stand *trial* like a criminal
+实读 make him stand *true* like a criminal
+    192.5 秒。trial 读成 true
+原文 stand trial like a *criminal* things You've become
+实读 stand trial like a *creamy* things You've become
+    194.3 秒。criminal 三个音节压成了两个
+原文 like a criminal *things You've* become a monster
+识别成 like a criminal *no you* become a monster
+    196 秒。划线部分在这儿跨过了一段没划线的文字，转写也跟着乱，两个词一起存疑
+原文 become a monster *continued* You have made
+实读 become a monster *（漏读）* You have made
+    引号外的那个叙述词整个跳过去了
+原文 yourself like the *lion* in your anger
+实读 yourself like the *lying* in your anger
+    205.3 秒。lion 读成 lying，尾音换了
+原文 the wolf in your *greediness* and like a snake
+实读 the wolf in your *witness* and like a snake
+    213.1 秒。greediness 没读出来
+原文 to you Your *rudeness* has made you like a bull
+实读 to you Your *goodness → roses →（跳过）* has made you like a bull
+    225.5–232.7 秒。这个词试了三遍：先读成 goodness，再读成 roses，
+    第三遍直接跳过去接了 has made。计一处
+原文 made you like a *bull Therefore in your new* form take the
+识别成 made you like a *they're from therefore your you're* form take the
+    238.5–248.6 秒，前面卡了 5.7 秒。**.ref.txt 里的 Theretore 是扫描认错，
+    课本印的是 Therefore** —— 转写里出来的正是 therefore，那个词她读对了。
+    这一串一起存疑
+原文 in your new *form* take the appearance
+实读 in your new *from* take the appearance
+    248.6 秒。form 读成 from，两个词长得太像
+原文 take the appearance of *all* these animals at once
+实读 take the appearance of *（漏读）* these animals at once
+    all 跳过去了
+原文 at once The *prince thought that* the best thing
+识别成 at once The *princess that's* the best thing
+    257.8 秒。prince 和 thought 连读被听成一个 princess，that the 听成 that's ——
+    是转写合并，不计错
+原文 to get as far *away* from the clear lake
+实读 to get as far *（漏读）* from the clear lake
+    away 跳过去了
+原文 from the clear *lake* as he could
+实读 from the clear *like* as he could
+    267.8 秒。lake 读成 like，元音换了
+原文 scary reflection anymore *Thinking* of this he
+实读 scary reflection anymore *thing king* of this he
+    280.8 秒。Thinking 拆成了两个词读：thing + king
+原文 before he had *gotten* far he fell
+实读 before he had *go → then* far he fell
+    293.2 秒。先读了个 go，停一下改成 then，两遍都不是 gotten
+原文 gotten far he *fell* into a deep pit
+实读 gotten far he *felt* into a deep pit
+    297.8 秒。fell 后面多带了一个 -t
+原文 The hunters who *were* hiding in a tree
+实读 The hunters who *are* hiding in a tree
+    311.2 秒。were 读成 are
+原文 who were hiding in *a* tree quickly jumped
+实读 who were hiding in *the* tree quickly jumped
+    312.2 秒。a 读成 the
+原文 jumped down put *him in* heavy chains
+识别成 jumped down put *the* heavy chains
+    315 秒。him in 连读被听成一个 the，这两个小词一起存疑
+原文 put him in heavy *chains* and led him
+实读 put him in heavy *trees* and led him
+    315.9 秒。chains 读成 trees
+原文 and led him *back* to the main city
+实读 and led him *（漏读）* to the main city
+    back 跳过去了
+原文 own kingdom Our *prince* who took pleasure
+实读 own kingdom Our *friends* who took pleasure
+    332.3 秒。前面停了 4.3 秒（引号开头的新段），prince 读成了 friends
+原文 who took pleasure *only* in
+实读 who took pleasure *（漏读）* in
+    335.1 秒。这一句最后只读出了 in —— **in 是读对的**，only 没出来。
+    机器给这两个位置标的时间戳（375.5 / 376.4 秒）是**生词表**里的 desert / hermit
+    被对齐算法拉过来顶上的，那两个词不是课文，见头注
+
+[磕巴] 机器候选 13 处（不计错）
+*he had*, he had had the key
+    16.1 秒。原文这儿本来就是 “although he had had the key”，她把 he had 读了三遍才接上 key
+*the he*, had the key in his
+    19.6 秒，同一处
+*the*, the key in his own
+    21.8 秒，同一处
+*escaped*, escape When they heard
+    47.3 秒。读了两遍，**两遍都多了 -d** —— 不是自己改对，计错的那一处在比对里
+*darlings*, Darling's vow the cruel
+    60.4 秒。Prince Darlings 读了两遍，第二遍接上了
+*uh*, escape He even paid
+    144.7 秒
+*uh*, other men to lie
+    150.6 秒
+*uh*, to chain him up
+    184.6 秒。这三声「uh」都出现在一个长词或一个名字前面 —— 卡住时的填充音
+*your goodness*, Your rudeness has made
+    225.5 秒
+*roses*, rudeness has made you
+    228.9 秒。rudeness 这个词试了三遍，见比对
+*thing king*, Thinking of this he
+    280.8 秒。Thinking 拆成了两个词，见比对
+*go*, gotten far he fell
+    293.2 秒。gotten 试了两次
+*wicked crows habit companion tutor greediness gratefully rewarded brook starve desert hermit* 一长串
+    335.1 秒起。**不是磕巴**：336.5 秒课文就读完了，停 12 秒之后念的是后面几页的生词表
+
+[亮点]
+**“He loved the prince as if he had been his own son and wished that he would always take the path of goodness.”** —— 96 到 118 秒，27 个词一路读到底，一处没错，是三页里最长的一段干净朗读。
+**“You ungratefully turned upon your tutor, who was like a second father to you.”** —— ungratefully 这个五音节的词一次到位，整句 14 个词全对。
+**“The prince, in great anger, ordered his foster-brother to bring Suliman back with a troop of soldiers.”** —— 160 到 180 秒，除了名字全对，troop 和 soldiers 都读出来了。
+课本这三页里，扫描认错的两个词（aim、Therefore）她都按正确的词读了出来。
+
+[三件事]
+🔤 长词先拆音节：cruel / criminal / greediness / rudeness / Thinking
+    27 处里 12 处栽在这类词上 —— 音节多、读到跟前才发现不会。开读之前先把划线里
+    超过两个音节的词圈出来，拆开念一遍（cru-el、cri-mi-nal、gree-di-ness）。
+👀 形近的词看清楚再读：form / from、fell / felt、lake / like、were / are
+    这四对都只差一两个字母，眼睛扫过去很容易认成另一个。手指点到哪读到哪，别让眼睛跑在前面。
+⏱ 第三页别赶
+    第 70、71 页都是每分钟 60 个词，很稳；第 72 页快到了 74 个 —— 快了两成，
+    错也从 7 处涨到 11 处，三处漏读全在这一页。三页连着读，读完第二页停一下再开始。
+
+[斜线]
+You have made yourself like the lion in your anger,
+like the wolf in your greediness,
+and like a snake.
+
+[尺子]
+    92.3% 落在「偏难」这一档 —— 比上一次（p69，89.0%）往右挪了一截，
+        离「教学」档的 95% 还差 9 个词。349 个词错 27 处，篇幅是上一次的近四倍，
+        一处错只占 0.29 个百分点。
+    51 个正确词/分钟，和上一次（50）基本持平。这个数偏保守 —— 录音末尾 40 秒
+        不是读课文（12 秒停顿 + 28 秒念生词表），算进了时长、词不算进比对；
+        只按读课文那段（0.9–336.5 秒）算，大约是 58 词/分。
+        母语常模只当参照系，不是及格线。
+    平均 2.6 个词一组，比上一次（3.2）更碎，按 NAEP 四级量表仍是第 2 级。
+        这次和 p68 / p69 的停顿阈值同为 −40 dB，**这一项可以直接比** ——
+        歇气的次数确实变密了。
+
+[怎么来的]
+**准确率 92.3%**（读对 322 / 划线部分共 349 词）。替换、漏读、读错音计错；插入的词和退回去重读只算不流利、不计错。上面的比对列了 36 条、**计错 27 处**；另外 9 条标的是「识别成」—— 转写自己听不准的专有名词（Celia、Suliman 三次、Darling's 的撇号），76–87 秒和 238–249 秒那两串整段乱了的转写，还有 things / You've、prince / thought、him / in 这几处连读被合并听错的。那两串里的 aim 和 Therefore 是 `.ref.txt` 扫描认错，课本印的就是这两个词，她读对了。
+**每分钟正确词数 51**（WCPM）= 读对的 322 词 ÷ 378.6 秒 × 60。录音末尾 40 秒不是读课文（336.5 秒读完最后一个词，停 12 秒，348.6–376.7 秒念的是后面几页的生词），时长算了、词不算，所以这个数偏保守；只算读课文那段（0.9–336.5 秒）约 58 词/分。
+**断句**取 133 次停顿，平均 2.6 个词一组。停顿阈值 −40 dB，和 p68 / p69 同为撞下限的那一档，所以这三次的停顿类数字可以直接比（65–67 页不能比）。
+这次是 8 月 28 日的一段 6 分 18 秒录音（`s8.mp4`），一口气读完第 70、71、72 三页的划线部分。离线转写 + 逐词时间戳，停顿按能量包络取 ≥0.25 秒的段；比对基准是课本这三页红线划出的段落（`p70.ref.txt` + `p71.ref.txt` + `p72.ref.txt` 按朗读顺序拼起来）。**发音一项是从转写结果推断的**，不如亲耳听准 —— 76–87 秒和 238–249 秒那两串尤其，转写在那儿整段乱了。
