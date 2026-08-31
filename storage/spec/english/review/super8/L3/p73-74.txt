@@ -1,19 +1,35 @@
 # 超8 · Lesson 3
-# ⚠️ 停顿口径 8 月 30 日换过一次：阈值从「本底 + 8 dB」改成「说话声级 − 10 dB」。
-#    旧口径按各自峰值归一，七次录音的动态范围差了 20 dB，阈值从 −21.8 散到 −40，
-#    停顿数根本没法跨录音比；挂到孩子自己的嗓音上就统一了（详见 feeder 的 Acoustics）。
-#    **这一页的停顿次数 / 占时长 / 几个词一停都按新口径重算过**，
-#    和 8/30 之前发出去的那一版不是同一把尺子。准确率、WCPM、分数一个没动。
+#
+# ── 正文的写法（2026-08-31 定的口径，见 src/generator/english/CLAUDE.md）
+# 报告正文只写**孩子的朗读**。机器为什么误判、我们怎么核的，全部留在这些 # 注释里。
+# 家长要看的是「读得怎么样、下次练什么」，不是我们的转写为什么乱。
+#
+# ── 这次核对的经过（都不进正文）
+# 计错 14 处。机器另外报了 6 处，逐条核完都不算错，已从 [比对] 撤下：
+#   · Suliman → solomon（31.3 秒）、Suliman → salmon（40.7 秒）、Darling → danny（94.9 秒）
+#     ——三个专有名词，机器只会往认识的词上靠
+#   · 98–100 秒 “as rumors say The Fairy has” 一串 5 个词，那两秒转写整个乱了；
+#     回去听过，读的是对的
+#   · “wanting to cat him up” —— **课本印错**，应该是 eat，她读的是 eat
+#   · thunderboll —— **扫描认错**，课本印的是 thunderbolt（在 p73.marked.png 上放大核过），
+#     是 .ref.txt 认岔了，她读对了
+# 后两处她没被印错带跑，已写进 [亮点]。
+# 开头的 torturing 一度按「自己改对」不计错，回去看转写是「Torting, torting」——
+# 同一个错读了两遍，没改对。计错，errors 从 13 改成 14。
+#
+# ── 录音本身的两段杂音（影响 WCPM 和停顿，正文里只在 [三件事] 提一次）
+# 46–71 秒是两段划线之间那段**没划线的叙述**，她一起读了（25.3 秒）。
+# 249 秒之后念的是**生词表**（wicked / crows / habit / companion / tutor / brook / hermit），
+# 8 月 28 日那次录音末尾念的是同一份。两段都算进时长、不算进正确词数。
+#
+# ── 停顿口径 8 月 30 日换过一次
+# 阈值从「本底 + 8 dB」改成「说话声级 − 10 dB」。旧口径按各自峰值归一，七次录音的
+# 动态范围差了 20 dB，阈值从 −21.8 散到 −40，停顿数没法跨录音比；挂到孩子自己的
+# 嗓音上就统一了（详见 feeder 的 Acoustics）。这一页的停顿次数 / 占时长 / 几个词一停
+# 都按新口径重算过（原先报的是 138 次 / 32% / 1.7 个词一组）。准确率、WCPM、分数一个没动。
+#
 # 第 73–74 页，一段录音一口气读完两页（4 分 50 秒）。
-# 录音里还有两段**不是划线课文**的朗读：46–71 秒是两段划线之间那段没划线的叙述，
-# 249 秒之后念的是**生词表**（wicked / crows / habit / companion / tutor / brook /
-# hermit 一串孤立的词，不是句子）—— 8 月 28 日那次录音末尾念的是同一份。
-# 它们算进时长、不算进正确词数，所以 WCPM 偏保守，见 [怎么来的]。
-# 停顿口径 8/30 统一之后，这一页和前面所有页都能直接比了
-#（原先报的是 138 次 / 32% / 1.7 个词一组）。
 # 8 月 28 日那次（p70-72）后来补了定稿，prev 已从 p69 改接 p70-72。
-# 开头的 torturing 一度按「自己改对」不计错，回去看转写才发现是
-# 「Torting, torting」—— 同一个错读了两遍，没改对。计错，errors 从 13 改成 14。
 date: 2026-08-29
 cat: 超8
 order: 73
@@ -29,29 +45,27 @@ prev: p70-72
 
 [评分] 准确度=20/30 流利度=12/30 断句语调=12/25 发音=8/15
 
-[总评] 篇幅翻了一倍，错的还是那几类小词。
-    228 个词一口气读完，准确率 93.9%，比上一次（p70-72，三页 349 个词）的 92.3%
-    又往上了一点 —— 连着两次都在往上走。
-    14 处计错里 9 处是**小词和词尾**（a→the、into→in、as→a、to→in、off→of、
-    hunters 和 beasts 少了 -s、asleep 丢了词头、upon 变成一声「um」），实词错了 5 处。
-    另有 10 处机器判的「读错」这次没算，都是转写自己乱了：三个专有名词
-    （Suliman 两次、Darling）、98–100 秒那一串 5 个词（比对里列了 4 条，
-    标的是「识别成」），再加上同一个词被听错的两次 —— 那处回去听过，她读的是对的。
-    还有两处她其实读对了：“wanting to cat him up” 是**课本印错**（应该是 eat），
-    thunderboll 是**扫描认错** —— 课本印的就是 thunderbolt，是 `.ref.txt` 认岔了。
+[总评] 228 个词一口气读完，准确率又往上走了一点。
+    读对 214 个，准确率 93.9% —— 上一次（p70-72，三页）是 92.3%，
+    连着两次都在往上走。两次的词数都够多，这个比较是作数的。
+    14 处读错里，**9 处是小词和词尾**：a、into、to、off 这些一晃就过去的短词读串了，
+    hunters 和 beasts 少读了词尾的 -s，asleep 丢了词头，upon 只出来一声「um」。
+    剩下 5 处是实词 —— caught 读成 called、mean 读成 main、wild 整个跳了过去。
+    **小词和词尾，上一次也是错得最多的两类。** 眼下最值得单独拿出来练的就是它们：
+    实词她基本都读得出来，丢分丢在那些一扫而过的短词上。
 
 [卡壳] 19.6-26.6 = 卡 7.0 秒, 46.0-71.3 = 读了没划线的一段 25.3 秒, 72.1-83.2 = 卡 11.1 秒, 119.6-125.8 = 翻页 6.2 秒, 204.1-209.8 = 卡 5.7 秒
-    46.0–71.3 那 25 秒**不是卡住** —— 转写里是一整句英文（“just as this man finished
-    their story, the sound of trumpets…”），那是两段划线中间没划线的叙述，她一起读了。
-    119.6–125.8 的 6 秒是从第 73 页翻到第 74 页。
-    真正停住的是 19.6–26.6（thunderboll 那个句号之后接 “They then”）和
-    204.1–209.8（“who saw what was going on” 那一句，saw 也是在这儿读成了 was）。
+    真正停住想词的是三处：19.6–26.6（thunderbolt 那个句号之后接 “They then”）、
+    72.1–83.2，还有 204.1–209.8（“who saw what was going on” 那一句，saw 也是在这儿读成了 was）。
+    119.6–125.8 那 6 秒是从第 73 页翻到第 74 页，46.0–71.3 那 25 秒读的是没划线的一段
+    —— 这两处都不是卡住。
 
 [分页] 这次读了 2 页
 第 73 页 = 5.3–119.6 秒 · 98 词 · 计错 4 处
 第 74 页 = 125.8–230.9 秒 · 130 词 · 计错 10 处
-    第 73 页那 4 处：三处小词，加上开头那个读了两遍都没读对的 torturing。这一页的难词（thunderboll、Suliman、Prince Darling）
-    都读出来了，只是机器听不准。第 74 页词多一半、错也多一半，其中 4 处是词尾和介词。
+    第 73 页错的 4 处里三处是小词，加上开头读了两遍都没读对的 torturing。
+    这一页的难词 —— thunderbolt、Suliman、Prince Darling —— 她都读出来了。
+    第 74 页词多一半、错也多一半，其中 4 处是词尾和介词。
 
 [对比] 和上一次比
 准确率 = 又往上了一点
@@ -60,39 +74,22 @@ prev: p70-72
 停顿占时长 = 差不多
     92.3% → 93.9%，连着两次往上走。上一次三页 349 个词、这次两页 228 个词，
     分母都够大，这两个数可以直接比。
-    「正确词/分」变小主要是两次录音里那些**没划线**的朗读拉的 —— 只算读划线那段，
-    上一次约 58 词/分、这次约 57，其实是持平。
-    下面两行现在也能直接比（8/30 起七次录音统一了停顿口径）：
-    1.4 个词一停（上次 1.6）是七次里最碎的一次，停顿占 41%（上次 44%）基本持平。
+    **「正确词/分」变小不是读慢了** —— 这次录音里有两段不是划线课文的朗读，
+    时间算进去了、词没算。只算读划线那段，上一次约 58 词/分、这次约 57，其实是持平。
+    1.4 个词一停（上次 1.6）是七次里最碎的一次，停顿占 41%（上次 44%）基本持平
+    —— 8 月 30 日起七次录音统一了停顿口径，这两行现在也能直接比了。
 
 [比对]
 原文 *torturing* his people was found
 实读 *torting* his people was found
     2.6 秒。开头第一个词，读成 torting，**紧接着又读了一遍还是 torting** ——
-    两遍都没读对，计错
-原文 struck down by *a* thunderboll
-实读 struck down by *the* thunderboll
+    两遍都没读对
+原文 struck down by *a* thunderbolt
+实读 struck down by *the* thunderbolt
     a 读成 the
-原文 down by a *thunderboll* They then
-实读 down by a *thunderbolt* They then
-    **`.ref.txt` 里的 thunderboll 是扫描认错** —— 课本印的就是 thunderbolt
-    （在 `p73.marked.png` 上放大核过），她读对了，不计错
-原文 the crown to *Suliman* the tutor
-识别成 the crown to *solomon* the tutor
-    31.3 秒。专有名词，机器只会往认识的词上靠，不计错
 原文 prince had put *into* prison
 实读 prince had put *in* prison
     into 读成 in
-原文 a single day *Suliman* went from being
-识别成 a single day *salmon* went from being
-    40.7 秒。同一个名字第二次，被听成另一个词，同样不计错
-原文 safe for Prince *Darling* He is not
-识别成 safe for Prince *danny* He is not
-    94.9 秒。Prince 读对了，名字这次没听准
-原文 as *rumors say The Fairy has* told me
-识别成 as *（rumor says sarah 一串）* told me
-    98–100 秒这 2 秒里转写整个乱了，5 个词全对不上。这一串一起标存疑，一处都没计错 ——
-    回去听这两秒，真读错了再加进 errors
 原文 him return becoming *as* good a king
 实读 him return becoming *a* good a king
     as 读成 a
@@ -117,9 +114,6 @@ prev: p70-72
 原文 a tiger broke *off* its chain
 实读 a tiger broke *of* its chain
     off 读成 of
-原文 him wanting to *cat* him up
-实读 him wanting to *eat* him up
-    **课本这儿印的是 cat**（应该是 eat），她读的是 eat —— 读对了，不计错
 原文 Prince Darling who *saw* what was going
 实读 Prince Darling who *was* what was going
     saw 读成 was。这一句前面正好停了 5.7 秒
@@ -130,26 +124,18 @@ prev: p70-72
 实读 deserved this but *um* reflection
     upon 没读出来，出来的是一声「um」
 
-[磕巴] 机器候选 13 处（不计错）
+[磕巴] 读了两遍才接上的地方 · 4 处
 *torting*, torturing his people was
-    开头那个词读了两遍，**两遍都是 torting** —— 不是自己改对，是同一个错读了两次。
-    这一处的「读错」已经计进 errors 了，重复的那一遍只算不流利
 *struck*, struck down by a
-    这个词读了两遍才接上
 *the*, the caretaker often hit
-    173.9 秒，同样是读了两遍
 *quite*, quite pleased to think
-    213.9 秒，也是重复一次就接上了
-*the king just as this man finished their story…* 一整句
-    46.0 秒起那 25 秒，读的是没划线的那段叙述 —— 不是磕巴
-*wicked … crows habit companion tutor greatness brook hermit* 一长串
-    249 秒之后。**不是磕巴、也不是往下读课文** —— 划线部分已经读完，
-    她念的是后面几页的生词表，一个词一个词地念
+    这四处都是同一个词读两遍就接上了，不算读错，只是还不够顺。
+    开头那处两遍读的都是 torting，读错已经计在上面了，重复的那一遍只算不流利。
 
 [亮点]
 **“The prince decided to show his sorrow for his past bad behavior by being gentle with the man tasked to care for him.”** —— 21 个词一路读到底，behavior、gentle、tasked 都一次到位。
 **“Even though the poor beast did what he was told, the caretaker often hit him for no reason just because he was in a bad mood.”** —— 136 秒到 190 秒这 54 秒里一处没错，是整段最稳的一截。
-课本把 eat 印成了 **cat**，她读的是 eat；扫描把 thunderbolt 认成了 **thunderboll**，她读的也是原词 —— 两处都没被带跑。
+课本把 eat 印成了 **cat**，她读的是 eat；书上 thunderbolt 那个词又长又生，她也读了出来 —— 印错的、难的，都没把她带跑。
 
 [三件事]
 🔤 词尾的 -s 先读足：hunter**s** / beast**s**
@@ -157,9 +143,9 @@ prev: p70-72
 🔍 小词别扫过去：a / the / into / to / off
     14 处错里 9 处是这类词 —— 它们短、眼睛容易跳过去。手指点到哪读到哪，别让眼睛跑在前面。
 🎙 课文和生词表分开录
-    46–71 秒读的是没划线的叙述，最后 40 秒念的是生词表。混在一段录音里，
-    那些时间算进了时长、词却不算进比对，「每分钟正确词数」看着就比实际慢。
-    先把划线的课文读完、停掉录音，再单独录生词。
+    这次 46–71 秒读的是没划线的一段，最后 40 秒念的是生词表。混在一段录音里，
+    这些时间算进了时长、词却不算进比对 —— **「每分钟正确词数」和停顿这两项都吃了亏，
+    读得其实没有分数上看着那么慢。** 先把划线的课文读完、停掉录音，再单独录生词。
 
 [斜线]
 One day when the caretaker was asleep,
@@ -177,7 +163,7 @@ wanting to eat him up.
         停顿口径已经统一，这个数可以跨录音直接比。
 
 [怎么来的]
-**准确率 93.9%**（读对 214 / 划线部分共 228 词）。替换、漏读、读错音计错；插入的词和退回去重读只算不流利、不计错。上面的比对列了 20 条、**计错 14 处** —— 4 条是转写自己听不准（三个专有名词和 98–100 秒那一串，标的是「识别成」），1 条是课本印错（cat，应该是 eat）、1 条是扫描认错（`.ref.txt` 的 thunderboll，课本印的是 thunderbolt），两处她读的都是正确的词。
+**准确率 93.9%**（读对 214 / 划线部分共 228 词）。替换、漏读、读错音计错；插入的词和退回去重读只算不流利、不计错。上面的比对一条一条列的就是这 14 处。
 **每分钟正确词数 44**（WCPM）= 读对的 214 词 ÷ 290.2 秒 × 60。这段录音里有两段不是划线课文的朗读（46–71 秒那段没划线的叙述、249–288 秒的生词表），时长算了、词不算，所以这个数偏保守；只算划线那部分（5.3–230.9 秒）约 57 词/分。
 **断句**取 166 次停顿，平均 1.4 个词一组。停顿阈值取「说话声级 − 10 dB」（8/30 统一的口径，七次录音都一样），所以停顿类的数字可以跨录音直接比。
-这次是 8 月 29 日的一段 4 分 50 秒录音，一口气读完第 73–74 页的划线部分。离线转写 + 逐词时间戳，停顿按能量包络取 ≥0.25 秒的段；比对基准是课本第 73、74 页红线划出的段落（`p73.ref.txt` + `p74.ref.txt` 按朗读顺序拼起来）。**发音一项是从转写结果推断的**，不如亲耳听准 —— 三个专有名词和 98–100 秒那 5 个词尤其，那两秒转写整个乱了。
+这次是 8 月 29 日的一段 4 分 50 秒录音，一口气读完第 73–74 页的划线部分。**发音这一项没有一个音一个音地听过**，是从录音里推出来的，不如亲耳听准，所以这一项的分给得保守。

@@ -36,6 +36,20 @@
 {% macro mini(icon, heading) %}
     <h3 class="mini-h"><span>{{ icon }}</span> {{ heading }}</h3>
 {%- endmacro %}
+{#- textblk：「读得好的地方」「读了两遍才接上」共用的版式（几行内容 + 一段小字注）。
+    以前这两块挤在一个 `texts` 列表里连着出，所以正面的那块只能跟在磕巴后面。
+    拆成两个上下文键之后版式仍旧共用一个宏 —— 位置各排各的。 -#}
+{% macro textblk(blk) %}
+{{ mini(blk.icon, blk.heading) }}
+    <section class="box">
+{% for p in blk.paras %}
+      <p{% if blk.cls %} class="{{ blk.cls }}"{% endif %} style="margin:0 0 {{ blk.gap }}px">{{ p|safe }}</p>
+{% endfor %}
+{% if blk.note %}
+      <p class="note-soft">{{ blk.note|safe }}</p>
+{% endif %}
+    </section>
+{%- endmacro %}
 {% macro card(r) %}
     <article class="one" id="{{ r.anchor }}" style="--read:var(--c-{{ r.cat }});--read-bg:var(--c-{{ r.cat }}-bg);--score:{{ r.fg }};--score-bg:{{ r.bg }}">
       <header class="one-h">
@@ -55,7 +69,23 @@
         <div class="bar"><span class="nm">{{ b.name }}</span><span class="track"><i class="fill" style="width:{{ b.pct }}%"></i></span><span class="val">{{ b.val }}</span></div>
 {% endfor %}
       </div>
+{% if r.score.ruler %}
+      {# 分数的尺子。.score 是 flex，这一行要自己占满一整行 #}
+      <p class="ruler" style="flex-basis:100%">{{ r.score.ruler }}</p>
+{% endif %}
     </section>
+{% if r.todos %}
+{{ mini("✏️", "下次试试这三件事") }}
+    <div class="todo">
+{% for t in r.todos %}
+      <div class="t">
+        <span class="ic">{{ t.icon }}</span>
+        <span><p class="h">{{ t.title|safe }}</p>
+          <p class="d2">{{ t.desc|safe }}</p></span>
+      </div>
+{% endfor %}
+    </div>
+{% endif %}
 {{ mini("📊", "四个数字") }}
     <div class="stats">
 {% for s in r.stats %}
@@ -72,6 +102,9 @@
       <p class="sc-note" style="margin-top:4px">{{ r.compare.note|safe }}</p>
 {% endif %}
     </section>
+{% endif %}
+{% if r.good %}
+{{ textblk(r.good) }}
 {% endif %}
 {% if r.timeline %}
 {{ mini("⏱", "这 " ~ r.timeline.seconds ~ " 秒长什么样") }}
@@ -119,28 +152,8 @@
 
     </div>
 {% endif %}
-{% for blk in r.texts %}
-{{ mini(blk.icon, blk.heading) }}
-    <section class="box">
-{% for p in blk.paras %}
-      <p{% if blk.cls %} class="{{ blk.cls }}"{% endif %} style="margin:0 0 {{ blk.gap }}px">{{ p|safe }}</p>
-{% endfor %}
-{% if blk.note %}
-      <p class="note-soft">{{ blk.note|safe }}</p>
-{% endif %}
-    </section>
-{% endfor %}
-{% if r.todos %}
-{{ mini("✏️", "下次试试这三件事") }}
-    <div class="todo">
-{% for t in r.todos %}
-      <div class="t">
-        <span class="ic">{{ t.icon }}</span>
-        <span><p class="h">{{ t.title|safe }}</p>
-          <p class="d2">{{ t.desc|safe }}</p></span>
-      </div>
-{% endfor %}
-    </div>
+{% if r.stumbles %}
+{{ textblk(r.stumbles) }}
 {% endif %}
 {% if r.slashes %}
 {{ mini("🪄", "画好斜线的版本") }}

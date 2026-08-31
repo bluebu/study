@@ -328,7 +328,7 @@ def pretty_date(iso: str) -> str:
     return f"{m.group(1)} 年 {int(m.group(2))} 月 {int(m.group(3))} 日" if m else (iso or "")
 
 
-def score_box(r: Report) -> dict:
+def score_box(r: Report, others: dict[str, Report], *, first: bool = True) -> dict:
     b = r.blocks.get("总评")
     lead = b.head if b else ""
     tip = joined(b.notes()) if b else ""
@@ -342,7 +342,32 @@ def score_box(r: Report) -> dict:
         n = int(raw.split("/")[0])
         bars.append({"name": name, "pct": round(n / full * 100), "val": f"{n}/{full}"})
 
-    return {"num": r.score, "lead": lead, "tip": rich(tip) if tip else "", "bars": bars}
+    return {"num": r.score, "lead": lead, "tip": rich(tip) if tip else "",
+            "bars": bars, "ruler": score_ruler(r, others, first)}
+
+
+def score_ruler(r: Report, others: dict[str, Report], first: bool) -> str:
+    """分数底下那行小字 —— **给这个分一把尺子**。
+
+    「换书就换了一把尺子，分数是给『这个孩子 + 这本书』的，不是给孩子的」是
+    英语科准则的第一条不可违反项，原话就写着「报告里要把这句话写出来」。
+    以前只写在准则里、报告上一个字没有：页面最大的那个数字孤零零摆着，
+    没有任何限定语，家长和孩子只能把它读成「这次考了 52 分」。
+
+    同一本书里上一次的分附在后面 —— 分数持平而准确率在涨的时候（p70-72 → p73-74
+    正是这样），这一行就是唯一能解释「为什么涨了分却没动」的地方。
+    """
+    book = r.spec.get("book", "")
+    if not book:
+        return ""
+    parts = []
+    if first:                       # 一天读了三次就出现三遍，那句话只在头一节说
+        parts.append(f"这个分是给《{book}》这本书的 —— 换一本书就换了一把尺子，"
+                     f"只在同一本书里跨天比才作数")
+    prev = others.get(r.prevs[-1]) if r.prevs else None
+    if prev is not None and prev.score and prev.spec.get("book", "") == book:
+        parts.append(f"上一次 {prev.score} 分")
+    return "。".join(parts) + "。" if parts else ""
 
 
 def _is_number(text: str) -> bool:
@@ -637,7 +662,7 @@ def anchor(slug: str) -> str:
 
 
 def card_ctx(r: Report, others: dict[str, Report], *,
-             lesson: bool = False, book: bool = False) -> dict:
+             lesson: bool = False, book: bool = False, first: bool = True) -> dict:
     """日页里**一次录音**那一节的上下文。版式在 review/one.html 的 card 宏。
 
     两套色（分类色 / 分数色）作为 fg / bg / cat 传出去，由模板注在这一节的
@@ -648,15 +673,17 @@ def card_ctx(r: Report, others: dict[str, Report], *,
         "anchor": anchor(r.slug),
         "cat": r.color_var, "fg": fg, "bg": bg,
         "hero": hero(r, lesson=lesson, book=book),
-        "score": score_box(r),
+        "score": score_box(r, others, first=first),
         "stats": stats(r),
         "compare": compare(r, others),
         "timeline": timeline(r),
         "pages": pages(r),
         "diffs": diffs(r),
-        # 「磕巴」和「亮点」是同一种版式（几行内容 + 一段小字注），排在一个列表里
-        "texts": [x for x in (lines_block(r, "磕巴", "🌀", "磕巴（不计错，但能看出在想）"),
-                              highlight(r)) if x],
+        # 「亮点」和「磕巴」版式相同（几行内容 + 一段小字注），共用模板里的 textblk 宏，
+        # 但**位置各排各的**：正面的那块跟在「和上一次比」后面，磕巴排到逐字比对之后。
+        # 原先两块挤在一个 texts 列表里连着出，读得好的地方只能跟在磕巴屁股后面
+        "good": highlight(r),
+        "stumbles": lines_block(r, "磕巴", "🌀", "读了两遍才接上的地方"),
         "todos": todos(r),
         "slashes": slashes(r),
         "scales": scales(r),
@@ -687,8 +714,9 @@ def render_day(date: str, rows: list[Report], others: dict[str, Report],
         day={"label": pretty_date(date),
              "sub": dot_join(pieces),
              "sum": summary},
-        reports=[card_ctx(r, others, lesson=len(lessons) > 1, book=len(books) > 1)
-                 for r in rows],
+        reports=[card_ctx(r, others, lesson=len(lessons) > 1, book=len(books) > 1,
+                          first=(i == 0))
+                 for i, r in enumerate(rows)],
     )
 
     total = summary["words"]
