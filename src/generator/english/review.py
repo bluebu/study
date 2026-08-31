@@ -212,6 +212,10 @@ def rich(text: str) -> str:
         /           → 意群斜线（只在「斜线版」里）
     """
     out = html.escape(text)
+    # 破折号两侧留空格 —— 全站中文一个写法（「基本持平 —— 8 月 30 日起」）。
+    # 收在这一处：spec 里一行内手写的「改口——说明」，和续行拼接时空格丢在
+    # 换行处的「基本持平—— 8 月」，都归这条管，不必两边各写一套规则
+    out = re.sub(r"\s*(—+)\s*", r" \1 ", out).strip()
     out = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", out)
     return out
 
@@ -266,6 +270,7 @@ def _join(a: str, b: str) -> str:
     """
     if not a or not b:
         return a + b
+    # 破折号两侧的空格不在这儿管 —— 换行处和一行内手写的要一个口径，收在 rich()
     return a + " " + b if a[-1].isascii() and b[0].isascii() else a + b
 
 

@@ -141,21 +141,26 @@ h1{ font-family:var(--font-display); font-size:clamp(1.7rem,6.4vw,2.4rem);
 
 /* 逐字比对 */
 .diff{ display:flex; flex-direction:column; gap:12px; }
-.d{
+/* ⚠️ 这几条**必须带 .diff 前缀**。`.d` 是「比对里的一条」，但同名的类
+   在「和上一次比」里也有一个（`<span class="d up">` 那几个趋势标签）——
+   裸的 `.d{ display:grid; grid-template-columns:34px 1fr }` 会把标签的文字
+   锁进 34px 的第一列，「又往上了一点」要 89px 只给到 66px，字直接漏到胶囊
+   外面去；连带 border 和 box-shadow 也糊到标签上。别再把前缀去掉 */
+.diff .d{
   background:var(--card); border:1.5px solid var(--line); border-radius:16px;
   box-shadow:0 2px 0 var(--line); padding:14px 16px;
   display:grid; grid-template-columns:34px 1fr; gap:4px 12px; align-items:start;
 }
-.d .n{
+.diff .d .n{
   grid-row:1 / span 3; width:34px; height:34px; border-radius:12px;
   display:grid; place-items:center; background:var(--chinese-bg); color:var(--chinese);
   font-family:var(--font-display); font-weight:800; font-size:.92rem;
 }
 /* 存疑的一处：编号出 ?，别让它长得像已经定案的 */
-.d.doubt .n{ background:var(--warn-bg); color:var(--warn); }
-.d .en{ font-family:var(--font-display); font-size:.98rem; overflow-wrap:break-word; }
-.d .en .lbl{ color:var(--ink-soft); font-size:.76rem; margin-right:6px; font-family:var(--font-cn); }
-.d .why{ font-size:.85rem; color:var(--ink-soft); }
+.diff .d.doubt .n{ background:var(--warn-bg); color:var(--warn); }
+.diff .d .en{ font-family:var(--font-display); font-size:.98rem; overflow-wrap:break-word; }
+.diff .d .en .lbl{ color:var(--ink-soft); font-size:.76rem; margin-right:6px; font-family:var(--font-cn); }
+.diff .d .why{ font-size:.85rem; color:var(--ink-soft); }
 ins{ background:var(--chinese-bg); color:#B4442A; text-decoration:none;
      border-radius:5px; padding:0 3px; font-weight:700; }
 mark{ background:var(--math-bg); color:#1F7A55; border-radius:5px; padding:0 3px; }
@@ -192,10 +197,15 @@ mark{ background:var(--math-bg); color:#1F7A55; border-radius:5px; padding:0 3px
 
 @media (max-width:520px){
   .stats{ grid-template-columns:repeat(2,1fr); }
+  /* 窄屏放不下一整行时，让**标签**换到下一行右侧，别去压「92.3% → 93.9%」——
+     压它会把一个数字劈成两行。`min-width:max-content` 就是不许压的意思 */
+  .cmp .r{ flex-wrap:wrap; row-gap:4px; }
+  .cmp .r .v{ min-width:max-content; }
+  .cmp .r .d{ margin-left:auto; }
 }
 @media print{
   body{ background:#fff; }
-  .box,.stat,.d,.todo .t{ box-shadow:none; }
+  .box,.stat,.diff .d,.todo .t{ box-shadow:none; }
   .back{ display:none; }
 }
 
