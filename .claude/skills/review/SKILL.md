@@ -167,11 +167,11 @@ WCPM 常模 Hasbrouck & Tindal 2017 Table 4，是**母语儿童**常模。
   另一个词置信度还很高。所以它只是「值得回去听一遍」的线索，**别拿它定性**。
 - **`.ref.txt` 里冒出不是英文的词，先怀疑扫描认错，别急着写「课本印错」。**
   **根因是图太小**：这批教材图是微信压过的照片，828px 宽、正文字高才 17–19px，
-  红线还压在字上，Vision 在这个分辨率上**丢细横笔画和 i 上那个点** ——
+  线还压在字上，Vision 在这个分辨率上**丢细横笔画和 i 上那个点** ——
   `favor→lavor`（f 的横）、`Therefore→Theretore`（f 的上钩）、
   `thunderbolt→thunderboll`（t 的横）、`wisely→wiscly`（e 的横）、
   `aim→aum`（i 的点，i+m 粘成 um）、`little→hitle`。
-  六处**全落在红线划中的范围里**，也就是全都进了比对基准。
+  六处**全落在划中的范围里**，也就是全都进了比对基准。
 
   现在不用手工找了：`feeder scan` 把可疑词存进 `page.json` 的 `spellFlags`，
   还给每个词裁一张 `p<页>.suspect-<词>.png`（放大 6 倍、带上下文）；

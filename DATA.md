@@ -43,7 +43,7 @@ dist/  单页报告、练习单     dist/  趋势页、汇总列表
 算得出来的一律不留 —— `storage/result/` 是唯一的例外，理由在下面那节。
 
 - 测量数据算不出来了 —— 录音和教材照片不进仓库，声学数字、逐词时间戳、
-  红线划中的原文，源没了就永远没了。所以必须 push。
+  划线划中的原文，源没了就永远没了。所以必须 push。
 - 临时产物随时能从素材再算一遍，留着只是噪音（`.page.json` 一份 85 KB）。
 - 候选是**机器的猜测不是结论**，没核过的东西不许混进仓库。
 
@@ -59,6 +59,13 @@ super8/L3/p68   →   storage/data/english/review/super8/L3/p68.ref.txt
 
 - **一叠截图一次进来时，名字只填到「书 / 课」**（`super8/L3`），页码机器从页角
   那枚绿圆盘认。图片名（微信编号）和拖进来的顺序都不可靠。
+  奇偶也是判据：**对开页左页偶数、右页奇数**，读数对不上就当没读出来
+  （6 和 9 只差一个方向，Vision 在 35px 的圆盘上真会读反）。
+- **划线红笔黑笔都认**（第一册橙红马克笔，第二册直接在数字教材上画黑线），
+  按「哪支笔划中的词多」自己挑。整页 OCR 之前先把线擦掉 ——
+  线画在字上，不擦那一行会整行读坏。口径在 `PageScanner.Pen`。
+- **换书不换目录**：第二册的课次接着数（L3 → L4），页码重新从 1 起，
+  和第一册的 p63–79 不会撞，所以书名仍旧是 `super8`，只是多一层 `L4`。
 - `review.py` 找数据全靠 `data/<slug>.<ext>` 拼路径，spec 里没有任何字段指向数据文件。
   **名字错了，spec 和数据就配不上对** —— 所以 feeder 在写盘前就校验名字，
   形状不对的名字根本跑不起来，不留到磁盘上再来收拾。
@@ -69,7 +76,7 @@ super8/L3/p68   →   storage/data/english/review/super8/L3/p68.ref.txt
 |---|---|---|---|---|
 | `read` 朗读录音 | `<书>/<课>/pNN`；一次读了几页写区间 `pNN-MM` | `.read.json` 主产物（声学 + 转写 + 逐字对齐）<br>`.json` 停顿声学（老站字段）<br>`.words.tsv` 逐词时间戳<br>`.read.json` 里的 `pages`：这次读了哪几页、每页多少词错几处（**从同一份对齐派生，不是分开测的**）<br>`.read.json` 里的 `refSuspects`：原文里 OCR 认得可疑的词，从 `page.json` 取回 —— `page.json` 是临时的、会被清掉，这份进 repo 的才是长期凭据 | `storage/data/english/review/` | **进 repo** |
 | `read --draft` | 同上 | `.draft.txt` spec 候选（`[比对]`/`[卡壳]`/`[磕巴]` 和文件头填好，判断留 `⟨⟩`） | `storage/spec/english/review/` | **候选** → 另存 `pNN.txt` |
-| `scan` 教材截图 | `<书>/<课>`，**页码机器认** | `.ref.txt` 红线划中的课文原文 | `storage/data/english/review/` | **进 repo** |
+| `scan` 教材截图 | `<书>/<课>`，**页码机器认** | `.ref.txt` 手画线划中的课文原文（红笔黑笔都认，见下） | `storage/data/english/review/` | **进 repo** |
 | | | `.page.json` 整页 OCR + 坐标 + `spellFlags`（OCR 认得可疑的词）<br>`.marked.png` 核对图<br>`.suspect-<词>.png` 可疑词裁出来放大 6 倍，一个词一张<br>`.full.txt` 整页全文（`--full`） | 同上 | **临时** |
 | `ref` 原文朗读 | `<书>/<课>`，**页码切完段人填** | `.ref.txt` 整本原文，按朗读自己的停顿切成段（段间空行）<br>`.ref.json` 段表（起止时刻 / 词数 / 段前停多久）+ 要人核的词（把握低或拼不出，带识别器候选） | `storage/data/english/review/` | **进 repo** |
 | `ref --pages` | 同上 | 直接落成 `pNN.ref.txt` 一页一份（`+` 并进上一段、`-` 丢掉）<br>`book.ref.json` 放进那一课的目录，记的是「这些 pNN 是怎么切出来的」 | 同上 | **进 repo** |
