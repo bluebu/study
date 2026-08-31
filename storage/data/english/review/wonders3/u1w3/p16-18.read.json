@@ -1,0 +1,3247 @@
+{
+  "acoustics" : {
+    "duration" : 212.86,
+    "pause_count" : 128,
+    "pause_ratio" : 0.517,
+    "pause_total" : 109.98,
+    "pauses" : [
+      {
+        "dur" : 0.3,
+        "end" : 0.3,
+        "start" : 0
+      },
+      {
+        "dur" : 0.27,
+        "end" : 0.78,
+        "start" : 0.51
+      },
+      {
+        "dur" : 0.36,
+        "end" : 4.33,
+        "start" : 3.97
+      },
+      {
+        "dur" : 0.37,
+        "end" : 5.56,
+        "start" : 5.19
+      },
+      {
+        "dur" : 0.71,
+        "end" : 7.83,
+        "start" : 7.12
+      },
+      {
+        "dur" : 2.12,
+        "end" : 10.13,
+        "start" : 8.01
+      },
+      {
+        "dur" : 0.33,
+        "end" : 11.8,
+        "start" : 11.47
+      },
+      {
+        "dur" : 1.22,
+        "end" : 13.43,
+        "start" : 12.21
+      },
+      {
+        "dur" : 0.27,
+        "end" : 15.58,
+        "start" : 15.31
+      },
+      {
+        "dur" : 0.79,
+        "end" : 16.89,
+        "start" : 16.1
+      },
+      {
+        "dur" : 0.83,
+        "end" : 18.07,
+        "start" : 17.24
+      },
+      {
+        "dur" : 0.29,
+        "end" : 18.67,
+        "start" : 18.38
+      },
+      {
+        "dur" : 0.31,
+        "end" : 20.98,
+        "start" : 20.67
+      },
+      {
+        "dur" : 1.93,
+        "end" : 23.09,
+        "start" : 21.16
+      },
+      {
+        "dur" : 0.32,
+        "end" : 25.21,
+        "start" : 24.89
+      },
+      {
+        "dur" : 0.64,
+        "end" : 27.17,
+        "start" : 26.53
+      },
+      {
+        "dur" : 0.49,
+        "end" : 28.44,
+        "start" : 27.95
+      },
+      {
+        "dur" : 3.44,
+        "end" : 32.77,
+        "start" : 29.33
+      },
+      {
+        "dur" : 3.12,
+        "end" : 37.1,
+        "start" : 33.98
+      },
+      {
+        "dur" : 1.13,
+        "end" : 38.91,
+        "start" : 37.78
+      },
+      {
+        "dur" : 0.63,
+        "end" : 40.4,
+        "start" : 39.77
+      },
+      {
+        "dur" : 2.15,
+        "end" : 42.57,
+        "start" : 40.42
+      },
+      {
+        "dur" : 0.28,
+        "end" : 43.73,
+        "start" : 43.45
+      },
+      {
+        "dur" : 0.33,
+        "end" : 45.03,
+        "start" : 44.7
+      },
+      {
+        "dur" : 0.27,
+        "end" : 46.05,
+        "start" : 45.78
+      },
+      {
+        "dur" : 0.43,
+        "end" : 48.11,
+        "start" : 47.68
+      },
+      {
+        "dur" : 0.43,
+        "end" : 49.27,
+        "start" : 48.84
+      },
+      {
+        "dur" : 0.81,
+        "end" : 50.31,
+        "start" : 49.5
+      },
+      {
+        "dur" : 0.42,
+        "end" : 51.2,
+        "start" : 50.78
+      },
+      {
+        "dur" : 0.4,
+        "end" : 52.29,
+        "start" : 51.89
+      },
+      {
+        "dur" : 0.44,
+        "end" : 54.35,
+        "start" : 53.91
+      },
+      {
+        "dur" : 0.29,
+        "end" : 54.84,
+        "start" : 54.55
+      },
+      {
+        "dur" : 0.31,
+        "end" : 56.05,
+        "start" : 55.74
+      },
+      {
+        "dur" : 0.38,
+        "end" : 56.96,
+        "start" : 56.58
+      },
+      {
+        "dur" : 0.4,
+        "end" : 57.73,
+        "start" : 57.33
+      },
+      {
+        "dur" : 0.29,
+        "end" : 58.71,
+        "start" : 58.42
+      },
+      {
+        "dur" : 0.46,
+        "end" : 61.11,
+        "start" : 60.65
+      },
+      {
+        "dur" : 1.5,
+        "end" : 62.82,
+        "start" : 61.32
+      },
+      {
+        "dur" : 0.56,
+        "end" : 64.19,
+        "start" : 63.63
+      },
+      {
+        "dur" : 0.54,
+        "end" : 64.97,
+        "start" : 64.43
+      },
+      {
+        "dur" : 0.94,
+        "end" : 66.6,
+        "start" : 65.66
+      },
+      {
+        "dur" : 0.96,
+        "end" : 68.01,
+        "start" : 67.05
+      },
+      {
+        "dur" : 0.28,
+        "end" : 70.23,
+        "start" : 69.95
+      },
+      {
+        "dur" : 0.74,
+        "end" : 74.27,
+        "start" : 73.53
+      },
+      {
+        "dur" : 1.68,
+        "end" : 76.95,
+        "start" : 75.27
+      },
+      {
+        "dur" : 0.56,
+        "end" : 77.63,
+        "start" : 77.07
+      },
+      {
+        "dur" : 1.89,
+        "end" : 79.55,
+        "start" : 77.66
+      },
+      {
+        "dur" : 2.57,
+        "end" : 83.02,
+        "start" : 80.45
+      },
+      {
+        "dur" : 1.16,
+        "end" : 85.83,
+        "start" : 84.67
+      },
+      {
+        "dur" : 0.53,
+        "end" : 87.53,
+        "start" : 87
+      },
+      {
+        "dur" : 0.99,
+        "end" : 92.34,
+        "start" : 91.35
+      },
+      {
+        "dur" : 0.28,
+        "end" : 92.98,
+        "start" : 92.7
+      },
+      {
+        "dur" : 0.46,
+        "end" : 93.96,
+        "start" : 93.5
+      },
+      {
+        "dur" : 0.27,
+        "end" : 94.31,
+        "start" : 94.04
+      },
+      {
+        "dur" : 0.53,
+        "end" : 94.99,
+        "start" : 94.46
+      },
+      {
+        "dur" : 0.62,
+        "end" : 96.28,
+        "start" : 95.66
+      },
+      {
+        "dur" : 1.16,
+        "end" : 98.01,
+        "start" : 96.85
+      },
+      {
+        "dur" : 0.46,
+        "end" : 101.07,
+        "start" : 100.61
+      },
+      {
+        "dur" : 0.27,
+        "end" : 101.51,
+        "start" : 101.24
+      },
+      {
+        "dur" : 0.35,
+        "end" : 102.64,
+        "start" : 102.29
+      },
+      {
+        "dur" : 1.29,
+        "end" : 104.76,
+        "start" : 103.47
+      },
+      {
+        "dur" : 0.35,
+        "end" : 105.25,
+        "start" : 104.9
+      },
+      {
+        "dur" : 0.61,
+        "end" : 106.42,
+        "start" : 105.81
+      },
+      {
+        "dur" : 0.98,
+        "end" : 107.88,
+        "start" : 106.9
+      },
+      {
+        "dur" : 0.39,
+        "end" : 109.15,
+        "start" : 108.76
+      },
+      {
+        "dur" : 0.93,
+        "end" : 110.11,
+        "start" : 109.18
+      },
+      {
+        "dur" : 0.4,
+        "end" : 111.17,
+        "start" : 110.77
+      },
+      {
+        "dur" : 0.29,
+        "end" : 111.58,
+        "start" : 111.29
+      },
+      {
+        "dur" : 0.45,
+        "end" : 112.28,
+        "start" : 111.83
+      },
+      {
+        "dur" : 0.83,
+        "end" : 113.8,
+        "start" : 112.97
+      },
+      {
+        "dur" : 0.73,
+        "end" : 115.66,
+        "start" : 114.93
+      },
+      {
+        "dur" : 0.48,
+        "end" : 116.33,
+        "start" : 115.85
+      },
+      {
+        "dur" : 0.32,
+        "end" : 117.27,
+        "start" : 116.95
+      },
+      {
+        "dur" : 0.47,
+        "end" : 118.11,
+        "start" : 117.64
+      },
+      {
+        "dur" : 0.92,
+        "end" : 119.05,
+        "start" : 118.13
+      },
+      {
+        "dur" : 0.85,
+        "end" : 120.98,
+        "start" : 120.13
+      },
+      {
+        "dur" : 2.21,
+        "end" : 123.26,
+        "start" : 121.05
+      },
+      {
+        "dur" : 3.15,
+        "end" : 126.67,
+        "start" : 123.52
+      },
+      {
+        "dur" : 1.42,
+        "end" : 128.63,
+        "start" : 127.21
+      },
+      {
+        "dur" : 0.5,
+        "end" : 129.32,
+        "start" : 128.82
+      },
+      {
+        "dur" : 0.39,
+        "end" : 130.96,
+        "start" : 130.57
+      },
+      {
+        "dur" : 1.36,
+        "end" : 132.66,
+        "start" : 131.3
+      },
+      {
+        "dur" : 2.18,
+        "end" : 136.06,
+        "start" : 133.88
+      },
+      {
+        "dur" : 0.64,
+        "end" : 136.73,
+        "start" : 136.09
+      },
+      {
+        "dur" : 1.54,
+        "end" : 139.69,
+        "start" : 138.15
+      },
+      {
+        "dur" : 0.75,
+        "end" : 141.08,
+        "start" : 140.33
+      },
+      {
+        "dur" : 0.31,
+        "end" : 141.96,
+        "start" : 141.65
+      },
+      {
+        "dur" : 0.35,
+        "end" : 142.43,
+        "start" : 142.08
+      },
+      {
+        "dur" : 0.56,
+        "end" : 143.99,
+        "start" : 143.43
+      },
+      {
+        "dur" : 0.39,
+        "end" : 144.4,
+        "start" : 144.01
+      },
+      {
+        "dur" : 0.61,
+        "end" : 149.9,
+        "start" : 149.29
+      },
+      {
+        "dur" : 0.41,
+        "end" : 151.51,
+        "start" : 151.1
+      },
+      {
+        "dur" : 0.37,
+        "end" : 151.97,
+        "start" : 151.6
+      },
+      {
+        "dur" : 0.33,
+        "end" : 153.06,
+        "start" : 152.73
+      },
+      {
+        "dur" : 0.44,
+        "end" : 153.52,
+        "start" : 153.08
+      },
+      {
+        "dur" : 0.68,
+        "end" : 154.46,
+        "start" : 153.78
+      },
+      {
+        "dur" : 0.39,
+        "end" : 155.51,
+        "start" : 155.12
+      },
+      {
+        "dur" : 0.53,
+        "end" : 156.07,
+        "start" : 155.54
+      },
+      {
+        "dur" : 0.38,
+        "end" : 157.58,
+        "start" : 157.2
+      },
+      {
+        "dur" : 0.38,
+        "end" : 160.08,
+        "start" : 159.7
+      },
+      {
+        "dur" : 2.2,
+        "end" : 163.22,
+        "start" : 161.02
+      },
+      {
+        "dur" : 0.49,
+        "end" : 164.34,
+        "start" : 163.85
+      },
+      {
+        "dur" : 0.27,
+        "end" : 164.65,
+        "start" : 164.38
+      },
+      {
+        "dur" : 3.2,
+        "end" : 168.54,
+        "start" : 165.34
+      },
+      {
+        "dur" : 0.57,
+        "end" : 169.99,
+        "start" : 169.42
+      },
+      {
+        "dur" : 0.42,
+        "end" : 171.44,
+        "start" : 171.02
+      },
+      {
+        "dur" : 0.46,
+        "end" : 172,
+        "start" : 171.54
+      },
+      {
+        "dur" : 0.76,
+        "end" : 175.39,
+        "start" : 174.63
+      },
+      {
+        "dur" : 3.6,
+        "end" : 179.67,
+        "start" : 176.07
+      },
+      {
+        "dur" : 0.37,
+        "end" : 181.21,
+        "start" : 180.84
+      },
+      {
+        "dur" : 0.81,
+        "end" : 183.7,
+        "start" : 182.89
+      },
+      {
+        "dur" : 2.36,
+        "end" : 186.67,
+        "start" : 184.31
+      },
+      {
+        "dur" : 0.53,
+        "end" : 187.92,
+        "start" : 187.39
+      },
+      {
+        "dur" : 2.89,
+        "end" : 191.34,
+        "start" : 188.45
+      },
+      {
+        "dur" : 0.66,
+        "end" : 193.45,
+        "start" : 192.79
+      },
+      {
+        "dur" : 1.29,
+        "end" : 195.2,
+        "start" : 193.91
+      },
+      {
+        "dur" : 0.28,
+        "end" : 195.73,
+        "start" : 195.45
+      },
+      {
+        "dur" : 0.33,
+        "end" : 196.93,
+        "start" : 196.6
+      },
+      {
+        "dur" : 1.33,
+        "end" : 198.96,
+        "start" : 197.63
+      },
+      {
+        "dur" : 0.54,
+        "end" : 199.87,
+        "start" : 199.33
+      },
+      {
+        "dur" : 2.24,
+        "end" : 202.53,
+        "start" : 200.29
+      },
+      {
+        "dur" : 1.11,
+        "end" : 203.68,
+        "start" : 202.57
+      },
+      {
+        "dur" : 0.7,
+        "end" : 204.67,
+        "start" : 203.97
+      },
+      {
+        "dur" : 0.55,
+        "end" : 206.05,
+        "start" : 205.5
+      },
+      {
+        "dur" : 0.79,
+        "end" : 207.66,
+        "start" : 206.87
+      },
+      {
+        "dur" : 0.6,
+        "end" : 208.29,
+        "start" : 207.69
+      },
+      {
+        "dur" : 1.45,
+        "end" : 210.31,
+        "start" : 208.86
+      },
+      {
+        "dur" : 1.36,
+        "end" : 212.73,
+        "start" : 211.37
+      }
+    ],
+    "source" : "G3.mp4",
+    "speech_time" : 102.88,
+    "threshold_db" : -30.5
+  },
+  "alignment" : {
+    "accuracy" : 68.9,
+    "correctWordCount" : 82,
+    "diffs" : [
+      {
+        "category" : "omitted",
+        "context" : "learn about some fun communities in los",
+        "kind" : "omit",
+        "label" : "漏读",
+        "ref" : "fun",
+        "refIndex" : 4,
+        "suggest" : "count",
+        "why" : "整个词跳过去了"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.136,
+        "context" : "in los angeles leimert park many artists",
+        "end" : 10.8,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "lay",
+        "refIndex" : 9,
+        "start" : 7.8,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.14 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.144,
+        "context" : "in los angeles leimert park many artists",
+        "end" : 11.76,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "mart",
+        "ref" : "leimert",
+        "refIndex" : 9,
+        "start" : 10.8,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑。识别器对这处只有 0.14 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.19,
+        "context" : "many artists and musicians live in leimert",
+        "end" : 16.26,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "male",
+        "refIndex" : 14,
+        "start" : 15,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.19 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.396,
+        "context" : "many artists and musicians live in leimert",
+        "end" : 17.04,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "the",
+        "refIndex" : 14,
+        "start" : 16.26,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.174,
+        "context" : "many artists and musicians live in leimert",
+        "end" : 19.44,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "conscience",
+        "ref" : "musicians",
+        "refIndex" : 14,
+        "start" : 17.04,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.17 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.128,
+        "context" : "musicians live in leimert park famous singers",
+        "end" : 24.3,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "lemart",
+        "ref" : "leimert",
+        "refIndex" : 17,
+        "start" : 21.18,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.13 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.329,
+        "context" : "park famous singers ray charles and ella",
+        "end" : 28.2,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "run",
+        "refIndex" : 21,
+        "start" : 26.94,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.33 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.778,
+        "context" : "park famous singers ray charles and ella",
+        "end" : 28.8,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "red",
+        "refIndex" : 21,
+        "start" : 28.2,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.586,
+        "context" : "park famous singers ray charles and ella",
+        "end" : 29.58,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "charts",
+        "ref" : "ray",
+        "refIndex" : 21,
+        "start" : 28.8,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.474,
+        "context" : "famous singers ray charles and ella fitzgerald",
+        "end" : 33.84,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "recharged",
+        "ref" : "charles",
+        "refIndex" : 22,
+        "start" : 29.64,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.916,
+        "context" : "ray charles and ella fitzgerald lived there",
+        "end" : 44.1,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "i",
+        "refIndex" : 24,
+        "start" : 39.84,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.916,
+        "context" : "ray charles and ella fitzgerald lived there",
+        "end" : 44.34,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "love",
+        "ref" : "ella",
+        "refIndex" : 24,
+        "start" : 44.1,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "function",
+        "confidence" : 0.993,
+        "context" : "ella fitzgerald lived there today leimert park",
+        "end" : 46.86,
+        "kind" : "substitute",
+        "label" : "小词",
+        "read" : "here",
+        "ref" : "there",
+        "refIndex" : 27,
+        "start" : 46.38,
+        "suggest" : "count",
+        "why" : "两个都是小词，读串了。这类错扎堆出现就是眼睛跑在手指前面"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.35,
+        "context" : "lived there today leimert park has many",
+        "end" : 51.84,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "limart",
+        "ref" : "leimert",
+        "refIndex" : 29,
+        "start" : 47.64,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.132,
+        "context" : "park has many places to hear jazz",
+        "end" : 55.02,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "plays",
+        "ref" : "places",
+        "refIndex" : 33,
+        "start" : 53.82,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.13 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.672,
+        "context" : "has a famous hip hop show anyone",
+        "end" : 61.74,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "hip",
+        "refIndex" : 42,
+        "start" : 60.36,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.182,
+        "context" : "a famous hip hop show anyone from",
+        "end" : 65.76,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "hip",
+        "ref" : "hop",
+        "refIndex" : 43,
+        "start" : 64.74,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.18 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.479,
+        "context" : "hop show anyone from the audience can",
+        "end" : 69.84,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "one",
+        "refIndex" : 46,
+        "start" : 69.6,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.416,
+        "context" : "audience can perform boyle heights many hispanic",
+        "end" : 80.64,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "many",
+        "ref" : "boyle",
+        "refIndex" : 51,
+        "start" : 75.06,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.08,
+        "context" : "can perform boyle heights many hispanic people",
+        "end" : 84.42,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "money",
+        "ref" : "heights",
+        "refIndex" : 52,
+        "start" : 80.7,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.08 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.396,
+        "context" : "perform boyle heights many hispanic people live",
+        "end" : 84.84,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "his",
+        "ref" : "many",
+        "refIndex" : 53,
+        "start" : 84.42,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.18,
+        "context" : "people live in boyle heights a street",
+        "end" : 91.62,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "both",
+        "refIndex" : 58,
+        "start" : 90.36,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.18 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.062,
+        "context" : "people live in boyle heights a street",
+        "end" : 93.06,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "boy",
+        "ref" : "boyle",
+        "refIndex" : 58,
+        "start" : 91.62,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.06 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.063,
+        "context" : "live in boyle heights a street corner",
+        "end" : 93.6,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "uh",
+        "ref" : "heights",
+        "refIndex" : 59,
+        "start" : 93.06,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.06 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.475,
+        "context" : "in boyle heights a street corner named",
+        "end" : 95.7,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "height",
+        "ref" : "a",
+        "refIndex" : 60,
+        "start" : 93.6,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.066,
+        "context" : "street corner named mariachi plaza is popular",
+        "end" : 103.8,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "mar",
+        "refIndex" : 64,
+        "start" : 100.26,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.07 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.082,
+        "context" : "street corner named mariachi plaza is popular",
+        "end" : 106.08,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "mar",
+        "refIndex" : 64,
+        "start" : 103.8,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.08 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.053,
+        "context" : "street corner named mariachi plaza is popular",
+        "end" : 106.92,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "r",
+        "refIndex" : 64,
+        "start" : 106.08,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.05 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.453,
+        "context" : "street corner named mariachi plaza is popular",
+        "end" : 108.78,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "archie",
+        "refIndex" : 64,
+        "start" : 106.92,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.664,
+        "context" : "street corner named mariachi plaza is popular",
+        "end" : 111,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "archie",
+        "refIndex" : 64,
+        "start" : 108.84,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.195,
+        "context" : "street corner named mariachi plaza is popular",
+        "end" : 114.24,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "the",
+        "refIndex" : 64,
+        "start" : 111,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.20 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.562,
+        "context" : "street corner named mariachi plaza is popular",
+        "end" : 114.96,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "uh",
+        "ref" : "mariachi",
+        "refIndex" : 64,
+        "start" : 114.24,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.399,
+        "context" : "plaza is popular mariachi bands play music",
+        "end" : 123.66,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "hmm",
+        "refIndex" : 68,
+        "start" : 120.18,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.194,
+        "context" : "plaza is popular mariachi bands play music",
+        "end" : 127.5,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "mar",
+        "refIndex" : 68,
+        "start" : 123.72,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.19 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.166,
+        "context" : "plaza is popular mariachi bands play music",
+        "end" : 129.12,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "mar",
+        "refIndex" : 68,
+        "start" : 127.5,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.17 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.525,
+        "context" : "plaza is popular mariachi bands play music",
+        "end" : 131.46,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "marriage",
+        "refIndex" : 68,
+        "start" : 129.12,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.301,
+        "context" : "plaza is popular mariachi bands play music",
+        "end" : 133.44,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "marriage",
+        "refIndex" : 68,
+        "start" : 131.52,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.30 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.293,
+        "context" : "plaza is popular mariachi bands play music",
+        "end" : 133.8,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "she",
+        "refIndex" : 68,
+        "start" : 133.44,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.522,
+        "context" : "plaza is popular mariachi bands play music",
+        "end" : 137.46,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "mary",
+        "refIndex" : 68,
+        "start" : 133.86,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.713,
+        "context" : "plaza is popular mariachi bands play music",
+        "end" : 140.28,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "archie",
+        "ref" : "mariachi",
+        "refIndex" : 68,
+        "start" : 137.46,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.412,
+        "context" : "is popular mariachi bands play music together",
+        "end" : 141.3,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "band",
+        "ref" : "bands",
+        "refIndex" : 69,
+        "start" : 140.28,
+        "suggest" : "count",
+        "why" : "原文是「bands」，读出来少了词尾 -s"
+      },
+      {
+        "category" : "garbled",
+        "context" : "to the music venice beach venice beach",
+        "kind" : "omit",
+        "label" : "转写乱段",
+        "ref" : "venice",
+        "refIndex" : 83,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "context" : "the music venice beach venice beach has",
+        "kind" : "omit",
+        "label" : "转写乱段",
+        "ref" : "beach",
+        "refIndex" : 84,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.028,
+        "context" : "music venice beach venice beach has many",
+        "end" : 155.1,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "vance",
+        "ref" : "venice",
+        "refIndex" : 85,
+        "start" : 150.72,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.03 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "context" : "venice beach has many street performers venice",
+        "kind" : "omit",
+        "label" : "转写乱段",
+        "ref" : "many",
+        "refIndex" : 88,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.31,
+        "context" : "beach has many street performers venice beach",
+        "end" : 159.24,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "manuscript",
+        "ref" : "street",
+        "refIndex" : 89,
+        "start" : 157.98,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.31 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.687,
+        "context" : "has many street performers venice beach also",
+        "end" : 160.68,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "performs",
+        "ref" : "performers",
+        "refIndex" : 90,
+        "start" : 159.24,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.073,
+        "context" : "many street performers venice beach also attracts",
+        "end" : 164.16,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "vance",
+        "ref" : "venice",
+        "refIndex" : 91,
+        "start" : 160.68,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.07 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.578,
+        "context" : "venice beach also attracts people who aren't",
+        "end" : 170.88,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "attract",
+        "ref" : "attracts",
+        "refIndex" : 94,
+        "start" : 169.38,
+        "suggest" : "count",
+        "why" : "原文是「attracts」，读出来少了词尾 -s"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.176,
+        "context" : "scared to take a tumble it has",
+        "end" : 176.7,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "uh",
+        "ref" : "a",
+        "refIndex" : 101,
+        "start" : 175.56,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.18 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.27,
+        "context" : "tumble it has places for rope climbers",
+        "end" : 182.64,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "plays",
+        "ref" : "places",
+        "refIndex" : 105,
+        "start" : 182.04,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.27 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.333,
+        "context" : "places for rope climbers and acrobats basketball",
+        "end" : 187.38,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "cameras",
+        "ref" : "climbers",
+        "refIndex" : 108,
+        "start" : 184.62,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.33 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.364,
+        "context" : "rope climbers and acrobats basketball players practice",
+        "end" : 191.94,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "uh",
+        "refIndex" : 110,
+        "start" : 188.22,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.39,
+        "context" : "rope climbers and acrobats basketball players practice",
+        "end" : 192.9,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "crow",
+        "refIndex" : 110,
+        "start" : 191.94,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.358,
+        "context" : "rope climbers and acrobats basketball players practice",
+        "end" : 193.98,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "bad",
+        "ref" : "acrobats",
+        "refIndex" : 110,
+        "start" : 192.9,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.094,
+        "context" : "acrobats basketball players practice on the ball",
+        "end" : 200.4,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "per",
+        "refIndex" : 113,
+        "start" : 197.64,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.09 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.008,
+        "context" : "acrobats basketball players practice on the ball",
+        "end" : 204.6,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "per",
+        "refIndex" : 113,
+        "start" : 200.4,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.01 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.121,
+        "context" : "acrobats basketball players practice on the ball",
+        "end" : 204.9,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "rec",
+        "ref" : "practice",
+        "refIndex" : 113,
+        "start" : 204.6,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.12 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.229,
+        "context" : "basketball players practice on the ball courts",
+        "end" : 205.74,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "taste",
+        "ref" : "on",
+        "refIndex" : 114,
+        "start" : 204.9,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.23 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.145,
+        "context" : "players practice on the ball courts too",
+        "end" : 206.52,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "um",
+        "ref" : "the",
+        "refIndex" : 115,
+        "start" : 205.74,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.14 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.248,
+        "context" : "practice on the ball courts too",
+        "end" : 208.92,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "the",
+        "ref" : "ball",
+        "refIndex" : 116,
+        "start" : 206.52,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.25 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.197,
+        "context" : "on the ball courts too",
+        "end" : 210.9,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "carts",
+        "ref" : "courts",
+        "refIndex" : 117,
+        "start" : 208.92,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.20 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      }
+    ],
+    "readWordCount" : 141,
+    "refTimes" : [
+      0.78,
+      1.02,
+      1.5,
+      2.28,
+      null,
+      4.62,
+      5.82,
+      6.36,
+      7.56,
+      11.76,
+      12.12,
+      13.8,
+      14.52,
+      15,
+      19.44,
+      19.98,
+      21.18,
+      24.3,
+      25.14,
+      25.56,
+      26.94,
+      29.58,
+      33.84,
+      39.78,
+      44.34,
+      45.6,
+      46.38,
+      46.86,
+      47.52,
+      51.84,
+      52.56,
+      53.1,
+      53.82,
+      55.02,
+      55.56,
+      56.28,
+      57.18,
+      58.26,
+      58.98,
+      59.52,
+      59.94,
+      60.36,
+      64.74,
+      65.76,
+      66.96,
+      69.6,
+      70.44,
+      70.68,
+      71.94,
+      73.02,
+      75,
+      80.64,
+      84.42,
+      84.84,
+      87.36,
+      88.5,
+      89.64,
+      90.36,
+      93.06,
+      93.6,
+      95.7,
+      98.4,
+      99.24,
+      100.26,
+      114.96,
+      116.94,
+      117.36,
+      120.12,
+      140.28,
+      141.3,
+      142.68,
+      144.96,
+      145.74,
+      146.4,
+      146.64,
+      147.48,
+      147.9,
+      148.32,
+      148.68,
+      149.22,
+      150.06,
+      150.3,
+      150.6,
+      null,
+      null,
+      155.1,
+      156.6,
+      157.98,
+      null,
+      159.24,
+      160.68,
+      164.16,
+      165.24,
+      169.38,
+      170.88,
+      172.26,
+      172.92,
+      173.58,
+      173.94,
+      174.42,
+      175.56,
+      176.7,
+      181.08,
+      181.56,
+      182.04,
+      182.64,
+      183.84,
+      184.5,
+      187.38,
+      188.22,
+      193.98,
+      196.02,
+      197.58,
+      204.9,
+      205.74,
+      206.52,
+      208.92,
+      210.9,
+      211.38
+    ],
+    "refWordCount" : 119,
+    "wcpm" : 23
+  },
+  "pages" : [
+    {
+      "end" : 75,
+      "errors" : 11,
+      "extras" : 8,
+      "matched" : 50,
+      "page" : 16,
+      "start" : 0.78,
+      "words" : 51
+    },
+    {
+      "end" : 150.6,
+      "errors" : 9,
+      "extras" : 14,
+      "matched" : 32,
+      "page" : 17,
+      "start" : 80.64,
+      "words" : 32
+    },
+    {
+      "end" : 211.38,
+      "errors" : 17,
+      "extras" : 4,
+      "matched" : 33,
+      "page" : 18,
+      "start" : 155.1,
+      "words" : 36
+    }
+  ],
+  "refSuspects" : [
+
+  ],
+  "reference" : "Let's learn about some fun communities in Los Angeles. Leimert Park. Many artists and musicians live in Leimert Park, famous singers Ray Charles and Ella Fitzgerald lived there. Today, Leimert Park has many places to hear jazz music. It has a famous hip hop show. Anyone from the audience can perform.\n\nBoyle Heights. Many Hispanic people live in Boyle Heights. A street corner named Mariachi Plaza is popular. Mariachi bands play music together in the evenings. People come to listen to the music.\n\nVenice Beach. Venice Beach has many street performers. Venice Beach also attracts people who aren't scared to take a tumble. It has places for rope climbers and acrobats. Basketball players practice on the ball courts too.\n",
+  "slug" : "wonders3/u1w3/p16-18",
+  "transcript" : {
+    "alternatives" : [
+      {
+        "end" : 2.28,
+        "start" : 0,
+        "texts" : [
+          "Let's learn about some"
+        ]
+      },
+      {
+        "end" : 5.82,
+        "start" : 2.28,
+        "texts" : [
+          "communities in",
+          "fun communities in",
+          "communities. In",
+          "fun, communities in"
+        ]
+      },
+      {
+        "end" : 6.36,
+        "start" : 5.82,
+        "texts" : [
+          "Los"
+        ]
+      },
+      {
+        "end" : 7.8,
+        "start" : 6.36,
+        "texts" : [
+          "Angeles.",
+          "Angeles,"
+        ]
+      },
+      {
+        "end" : 12.18,
+        "start" : 7.8,
+        "texts" : [
+          "Lay Mart, Park.",
+          "They Mart Park.",
+          "Lay Mart Park.",
+          "They, Mart, Park."
+        ]
+      },
+      {
+        "end" : 24.3,
+        "start" : 12.18,
+        "texts" : [
+          "Many artists and male, the conscience, live in, Lemart,"
+        ]
+      },
+      {
+        "end" : 25.14,
+        "start" : 24.3,
+        "texts" : [
+          "Park,",
+          "park,"
+        ]
+      },
+      {
+        "end" : 26.94,
+        "start" : 25.14,
+        "texts" : [
+          "famous singers,"
+        ]
+      },
+      {
+        "end" : 28.8,
+        "start" : 26.94,
+        "texts" : [
+          "run, red",
+          "run red"
+        ]
+      },
+      {
+        "end" : 29.64,
+        "start" : 28.8,
+        "texts" : [
+          "charts."
+        ]
+      },
+      {
+        "end" : 33.9,
+        "start" : 29.64,
+        "texts" : [
+          "Recharged.",
+          "Recharge.",
+          "Re-charged.",
+          "Re-charged,",
+          "Recharged..."
+        ]
+      },
+      {
+        "end" : 39.8399375,
+        "start" : 33.9,
+        "texts" : [
+          "And...",
+          "And Ila.",
+          "And... Ila.",
+          "And, Ila.",
+          "And."
+        ]
+      },
+      {
+        "end" : 44.1,
+        "start" : 39.84,
+        "texts" : [
+          "I",
+          "I love I",
+          "I love Fitzgerald. I"
+        ]
+      },
+      {
+        "end" : 44.34,
+        "start" : 44.1,
+        "texts" : [
+          "love"
+        ]
+      },
+      {
+        "end" : 47.64,
+        "start" : 44.34,
+        "texts" : [
+          "Fitzgerald lived here today.",
+          "Fitzgerald, lived here today.",
+          "Fitzgerald.",
+          "Fitzgerald lived here today"
+        ]
+      },
+      {
+        "end" : 51.84,
+        "start" : 47.64,
+        "texts" : [
+          "Limart",
+          "Lemort"
+        ]
+      },
+      {
+        "end" : 53.82,
+        "start" : 51.84,
+        "texts" : [
+          "Park has many"
+        ]
+      },
+      {
+        "end" : 55.02,
+        "start" : 53.82,
+        "texts" : [
+          "plays",
+          "place"
+        ]
+      },
+      {
+        "end" : 55.56,
+        "start" : 55.02,
+        "texts" : [
+          "to"
+        ]
+      },
+      {
+        "end" : 58.32,
+        "start" : 55.56,
+        "texts" : [
+          "hear jazz music.",
+          "hair, jazz music.",
+          "hair, jazz, music"
+        ]
+      },
+      {
+        "end" : 59.94,
+        "start" : 58.32,
+        "texts" : [
+          "It has a"
+        ]
+      },
+      {
+        "end" : 61.74,
+        "start" : 59.94,
+        "texts" : [
+          "famous hip,",
+          "famous, hip,"
+        ]
+      },
+      {
+        "end" : 64.74,
+        "start" : 61.74,
+        "texts" : [
+          "hip,",
+          "hip, hip,"
+        ]
+      },
+      {
+        "end" : 67.02,
+        "start" : 64.74,
+        "texts" : [
+          "hip, show.",
+          "hip. Show.",
+          "hip."
+        ]
+      },
+      {
+        "end" : 70.44,
+        "start" : 67.02,
+        "texts" : [
+          "Anyone, one from",
+          "Anyone from",
+          "Anyone one from",
+          "Anyone, from"
+        ]
+      },
+      {
+        "end" : 71.94,
+        "start" : 70.44,
+        "texts" : [
+          "the audience"
+        ]
+      },
+      {
+        "end" : 75.06,
+        "start" : 71.94,
+        "texts" : [
+          "can perform.",
+          "can."
+        ]
+      },
+      {
+        "end" : 80.7,
+        "start" : 75.06,
+        "texts" : [
+          "Many.",
+          "Money.",
+          "Many,",
+          "Many"
+        ]
+      },
+      {
+        "end" : 87.36,
+        "start" : 80.7,
+        "texts" : [
+          "Money, his, Hispanic,"
+        ]
+      },
+      {
+        "end" : 89.64,
+        "start" : 87.36,
+        "texts" : [
+          "people live",
+          "people, live"
+        ]
+      },
+      {
+        "end" : 93.06,
+        "start" : 89.64,
+        "texts" : [
+          "in both, boy,"
+        ]
+      },
+      {
+        "end" : 93.6,
+        "start" : 93.06,
+        "texts" : [
+          "uh,",
+          "oh,"
+        ]
+      },
+      {
+        "end" : 95.76,
+        "start" : 93.6,
+        "texts" : [
+          "height.",
+          "Height.",
+          "height,"
+        ]
+      },
+      {
+        "end" : 98.4,
+        "start" : 95.76,
+        "texts" : [
+          "Street",
+          "Oh, street"
+        ]
+      },
+      {
+        "end" : 100.26,
+        "start" : 98.4,
+        "texts" : [
+          "corner named..."
+        ]
+      },
+      {
+        "end" : 103.8,
+        "start" : 100.26,
+        "texts" : [
+          "Mar...",
+          "Marri..."
+        ]
+      },
+      {
+        "end" : 108.84,
+        "start" : 103.8,
+        "texts" : [
+          "Mar... R. Archie.",
+          "Mar...",
+          "Marri...",
+          "Mar... R..."
+        ]
+      },
+      {
+        "end" : 115.2,
+        "start" : 108.84,
+        "texts" : [
+          "Archie. The, uh,",
+          "Archie. The, uh.",
+          "Archie. The...",
+          "Archie... The, uh",
+          "Archie..."
+        ]
+      },
+      {
+        "end" : 116.94,
+        "start" : 115.2,
+        "texts" : [
+          "Plaza"
+        ]
+      },
+      {
+        "end" : 120.18,
+        "start" : 116.94,
+        "texts" : [
+          "is Popular.",
+          "is, Popular.",
+          "is popular.",
+          "is... popular.",
+          "is, Popular,"
+        ]
+      },
+      {
+        "end" : 123.72,
+        "start" : 120.18,
+        "texts" : [
+          "Hmm.",
+          "Mm.",
+          "Mmm.",
+          "Um.",
+          "Um.."
+        ]
+      },
+      {
+        "end" : 129.12,
+        "start" : 123.72,
+        "texts" : [
+          "Mar. Mar.",
+          "My..."
+        ]
+      },
+      {
+        "end" : 131.52,
+        "start" : 129.12,
+        "texts" : [
+          "Marriage.",
+          "Marriage...",
+          "Mar...",
+          "Marriage. Ch."
+        ]
+      },
+      {
+        "end" : 133.86,
+        "start" : 131.52,
+        "texts" : [
+          "Marriage, she.",
+          "Marriage she.",
+          "Married, she.",
+          "Marriage, she,",
+          "Marriage."
+        ]
+      },
+      {
+        "end" : 141.3,
+        "start" : 133.86,
+        "texts" : [
+          "Mary Archie band"
+        ]
+      },
+      {
+        "end" : 144.96,
+        "start" : 141.3,
+        "texts" : [
+          "play music",
+          "play, music"
+        ]
+      },
+      {
+        "end" : 146.64,
+        "start" : 144.96,
+        "texts" : [
+          "together in the"
+        ]
+      },
+      {
+        "end" : 147.54,
+        "start" : 146.64,
+        "texts" : [
+          "evenings.",
+          "evenings,",
+          "evenings"
+        ]
+      },
+      {
+        "end" : 147.9,
+        "start" : 147.54,
+        "texts" : [
+          "People",
+          "people"
+        ]
+      },
+      {
+        "end" : 148.68,
+        "start" : 147.9,
+        "texts" : [
+          "come to"
+        ]
+      },
+      {
+        "end" : 149.28,
+        "start" : 148.68,
+        "texts" : [
+          "listen.",
+          "listen",
+          "listen,"
+        ]
+      },
+      {
+        "end" : 150.06,
+        "start" : 149.28,
+        "texts" : [
+          "To",
+          "to"
+        ]
+      },
+      {
+        "end" : 150.3,
+        "start" : 150.06,
+        "texts" : [
+          "the"
+        ]
+      },
+      {
+        "end" : 150.72,
+        "start" : 150.3,
+        "texts" : [
+          "music.",
+          "music"
+        ]
+      },
+      {
+        "end" : 156.6,
+        "start" : 150.72,
+        "texts" : [
+          "Vance Beach,",
+          "One's beach,"
+        ]
+      },
+      {
+        "end" : 160.68,
+        "start" : 156.6,
+        "texts" : [
+          "has manuscript performs,"
+        ]
+      },
+      {
+        "end" : 165.3,
+        "start" : 160.68,
+        "texts" : [
+          "Vance, beach.",
+          "Vance, Beach.",
+          "Vance, B.",
+          "B.",
+          "Vance."
+        ]
+      },
+      {
+        "end" : 176.7,
+        "start" : 165.3,
+        "texts" : [
+          "Also, attract people who aren't scared to take uh,"
+        ]
+      },
+      {
+        "end" : 181.08,
+        "start" : 176.7,
+        "texts" : [
+          "tumble,",
+          "Tumbo,"
+        ]
+      },
+      {
+        "end" : 182.04,
+        "start" : 181.08,
+        "texts" : [
+          "it has"
+        ]
+      },
+      {
+        "end" : 183.84,
+        "start" : 182.04,
+        "texts" : [
+          "plays for",
+          "place for",
+          "place, for"
+        ]
+      },
+      {
+        "end" : 184.62,
+        "start" : 183.84,
+        "texts" : [
+          "rope."
+        ]
+      },
+      {
+        "end" : 187.38,
+        "start" : 184.62,
+        "texts" : [
+          "Cameras"
+        ]
+      },
+      {
+        "end" : 191.94,
+        "start" : 187.38,
+        "texts" : [
+          "and Uh,",
+          "and. Uh,"
+        ]
+      },
+      {
+        "end" : 192.9,
+        "start" : 191.94,
+        "texts" : [
+          "crow,",
+          "crawl,"
+        ]
+      },
+      {
+        "end" : 194.04,
+        "start" : 192.9,
+        "texts" : [
+          "bad.",
+          "but."
+        ]
+      },
+      {
+        "end" : 197.64,
+        "start" : 194.04,
+        "texts" : [
+          "Basketball players.",
+          "Basketball, players.",
+          "Basketball players,",
+          "Basketball players",
+          "basketball players."
+        ]
+      },
+      {
+        "end" : 200.4,
+        "start" : 197.64,
+        "texts" : [
+          "Per...",
+          "For..."
+        ]
+      },
+      {
+        "end" : 206.52,
+        "start" : 200.4,
+        "texts" : [
+          "Per... Rec taste. Um,",
+          "Per... Rec taste, um,",
+          "For... um,"
+        ]
+      },
+      {
+        "end" : 208.92,
+        "start" : 206.52,
+        "texts" : [
+          "the..."
+        ]
+      },
+      {
+        "end" : 211.44,
+        "start" : 208.92,
+        "texts" : [
+          "Carts too.",
+          "Carts, too.",
+          "Quarts too.",
+          "cards too."
+        ]
+      }
+    ],
+    "contextPrimed" : true,
+    "locale" : "en-US",
+    "runs" : [
+      {
+        "confidence" : 0.991,
+        "end" : 0.78,
+        "start" : 0,
+        "text" : "Let's"
+      },
+      {
+        "confidence" : 0.985,
+        "end" : 1.02,
+        "start" : 0.78,
+        "text" : " learn"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 1.5,
+        "start" : 1.02,
+        "text" : " about"
+      },
+      {
+        "confidence" : 0.968,
+        "end" : 2.28,
+        "start" : 1.5,
+        "text" : " some"
+      },
+      {
+        "confidence" : 0.578,
+        "end" : 4.62,
+        "start" : 2.28,
+        "text" : " communities"
+      },
+      {
+        "confidence" : 0.882,
+        "end" : 5.82,
+        "start" : 4.62,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.978,
+        "end" : 6.36,
+        "start" : 5.82,
+        "text" : " Los"
+      },
+      {
+        "confidence" : 0.652,
+        "end" : 7.56,
+        "start" : 6.36,
+        "text" : " Angeles."
+      },
+      {
+        "confidence" : 0.136,
+        "end" : 10.8,
+        "start" : 7.8,
+        "text" : " Lay"
+      },
+      {
+        "confidence" : 0.144,
+        "end" : 11.76,
+        "start" : 10.8,
+        "text" : " Mart,"
+      },
+      {
+        "confidence" : 0.71,
+        "end" : 12.12,
+        "start" : 11.76,
+        "text" : " Park."
+      },
+      {
+        "confidence" : 0.638,
+        "end" : 13.8,
+        "start" : 12.18,
+        "text" : " Many"
+      },
+      {
+        "confidence" : 0.7,
+        "end" : 14.52,
+        "start" : 13.8,
+        "text" : " artists"
+      },
+      {
+        "confidence" : 0.985,
+        "end" : 15,
+        "start" : 14.52,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.19,
+        "end" : 16.26,
+        "start" : 15,
+        "text" : " male,"
+      },
+      {
+        "confidence" : 0.396,
+        "end" : 17.04,
+        "start" : 16.26,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.174,
+        "end" : 19.44,
+        "start" : 17.04,
+        "text" : " conscience,"
+      },
+      {
+        "confidence" : 0.875,
+        "end" : 19.98,
+        "start" : 19.44,
+        "text" : " live"
+      },
+      {
+        "confidence" : 0.513,
+        "end" : 21.18,
+        "start" : 19.98,
+        "text" : " in,"
+      },
+      {
+        "confidence" : 0.128,
+        "end" : 24.3,
+        "start" : 21.18,
+        "text" : " Lemart,"
+      },
+      {
+        "confidence" : 0.423,
+        "end" : 25.14,
+        "start" : 24.3,
+        "text" : " Park,"
+      },
+      {
+        "confidence" : 0.65,
+        "end" : 25.56,
+        "start" : 25.14,
+        "text" : " famous"
+      },
+      {
+        "confidence" : 0.611,
+        "end" : 26.94,
+        "start" : 25.56,
+        "text" : " singers,"
+      },
+      {
+        "confidence" : 0.329,
+        "end" : 28.2,
+        "start" : 26.94,
+        "text" : " run,"
+      },
+      {
+        "confidence" : 0.778,
+        "end" : 28.8,
+        "start" : 28.2,
+        "text" : " red"
+      },
+      {
+        "confidence" : 0.586,
+        "end" : 29.58,
+        "start" : 28.8,
+        "text" : " charts."
+      },
+      {
+        "confidence" : 0.474,
+        "end" : 33.84,
+        "start" : 29.64,
+        "text" : " Recharged."
+      },
+      {
+        "confidence" : 0.344,
+        "end" : 39.78,
+        "start" : 33.9,
+        "text" : " And..."
+      },
+      {
+        "confidence" : 0.916,
+        "end" : 44.1,
+        "start" : 39.84,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.916,
+        "end" : 44.34,
+        "start" : 44.1,
+        "text" : " love"
+      },
+      {
+        "confidence" : 0.866,
+        "end" : 45.6,
+        "start" : 44.34,
+        "text" : " Fitzgerald"
+      },
+      {
+        "confidence" : 0.897,
+        "end" : 46.38,
+        "start" : 45.6,
+        "text" : " lived"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 46.86,
+        "start" : 46.38,
+        "text" : " here"
+      },
+      {
+        "confidence" : 0.832,
+        "end" : 47.52,
+        "start" : 46.86,
+        "text" : " today."
+      },
+      {
+        "confidence" : 0.35,
+        "end" : 51.84,
+        "start" : 47.64,
+        "text" : " Limart"
+      },
+      {
+        "confidence" : 0.744,
+        "end" : 52.56,
+        "start" : 51.84,
+        "text" : " Park"
+      },
+      {
+        "confidence" : 0.968,
+        "end" : 53.1,
+        "start" : 52.56,
+        "text" : " has"
+      },
+      {
+        "confidence" : 0.971,
+        "end" : 53.82,
+        "start" : 53.1,
+        "text" : " many"
+      },
+      {
+        "confidence" : 0.132,
+        "end" : 55.02,
+        "start" : 53.82,
+        "text" : " plays"
+      },
+      {
+        "confidence" : 0.839,
+        "end" : 55.56,
+        "start" : 55.02,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.304,
+        "end" : 56.28,
+        "start" : 55.56,
+        "text" : " hear"
+      },
+      {
+        "confidence" : 0.681,
+        "end" : 57.18,
+        "start" : 56.28,
+        "text" : " jazz"
+      },
+      {
+        "confidence" : 0.76,
+        "end" : 58.26,
+        "start" : 57.18,
+        "text" : " music."
+      },
+      {
+        "confidence" : 0.57,
+        "end" : 58.98,
+        "start" : 58.32,
+        "text" : " It"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 59.52,
+        "start" : 58.98,
+        "text" : " has"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 59.94,
+        "start" : 59.52,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 60.36,
+        "start" : 59.94,
+        "text" : " famous"
+      },
+      {
+        "confidence" : 0.672,
+        "end" : 61.74,
+        "start" : 60.36,
+        "text" : " hip,"
+      },
+      {
+        "confidence" : 0.46,
+        "end" : 64.74,
+        "start" : 61.74,
+        "text" : " hip,"
+      },
+      {
+        "confidence" : 0.182,
+        "end" : 65.76,
+        "start" : 64.74,
+        "text" : " hip,"
+      },
+      {
+        "confidence" : 0.547,
+        "end" : 66.96,
+        "start" : 65.76,
+        "text" : " show."
+      },
+      {
+        "confidence" : 0.213,
+        "end" : 69.6,
+        "start" : 67.02,
+        "text" : " Anyone,"
+      },
+      {
+        "confidence" : 0.479,
+        "end" : 69.84,
+        "start" : 69.6,
+        "text" : " one"
+      },
+      {
+        "confidence" : 0.977,
+        "end" : 70.44,
+        "start" : 69.84,
+        "text" : " from"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 70.68,
+        "start" : 70.44,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.977,
+        "end" : 71.94,
+        "start" : 70.68,
+        "text" : " audience"
+      },
+      {
+        "confidence" : 0.946,
+        "end" : 73.02,
+        "start" : 71.94,
+        "text" : " can"
+      },
+      {
+        "confidence" : 0.807,
+        "end" : 75,
+        "start" : 73.02,
+        "text" : " perform."
+      },
+      {
+        "confidence" : 0.416,
+        "end" : 80.64,
+        "start" : 75.06,
+        "text" : " Many."
+      },
+      {
+        "confidence" : 0.08,
+        "end" : 84.42,
+        "start" : 80.7,
+        "text" : " Money,"
+      },
+      {
+        "confidence" : 0.396,
+        "end" : 84.84,
+        "start" : 84.42,
+        "text" : " his,"
+      },
+      {
+        "confidence" : 0.614,
+        "end" : 87.36,
+        "start" : 84.84,
+        "text" : " Hispanic,"
+      },
+      {
+        "confidence" : 0.715,
+        "end" : 88.5,
+        "start" : 87.36,
+        "text" : " people"
+      },
+      {
+        "confidence" : 0.947,
+        "end" : 89.64,
+        "start" : 88.5,
+        "text" : " live"
+      },
+      {
+        "confidence" : 0.953,
+        "end" : 90.36,
+        "start" : 89.64,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.18,
+        "end" : 91.62,
+        "start" : 90.36,
+        "text" : " both,"
+      },
+      {
+        "confidence" : 0.062,
+        "end" : 93.06,
+        "start" : 91.62,
+        "text" : " boy,"
+      },
+      {
+        "confidence" : 0.063,
+        "end" : 93.6,
+        "start" : 93.06,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.475,
+        "end" : 95.7,
+        "start" : 93.6,
+        "text" : " height."
+      },
+      {
+        "confidence" : 0.297,
+        "end" : 98.4,
+        "start" : 95.76,
+        "text" : " Street"
+      },
+      {
+        "confidence" : 0.795,
+        "end" : 99.24,
+        "start" : 98.4,
+        "text" : " corner"
+      },
+      {
+        "confidence" : 0.256,
+        "end" : 100.26,
+        "start" : 99.24,
+        "text" : " named..."
+      },
+      {
+        "confidence" : 0.066,
+        "end" : 103.8,
+        "start" : 100.26,
+        "text" : " Mar..."
+      },
+      {
+        "confidence" : 0.082,
+        "end" : 106.08,
+        "start" : 103.8,
+        "text" : " Mar..."
+      },
+      {
+        "confidence" : 0.053,
+        "end" : 106.92,
+        "start" : 106.08,
+        "text" : " R."
+      },
+      {
+        "confidence" : 0.453,
+        "end" : 108.78,
+        "start" : 106.92,
+        "text" : " Archie."
+      },
+      {
+        "confidence" : 0.664,
+        "end" : 111,
+        "start" : 108.84,
+        "text" : " Archie."
+      },
+      {
+        "confidence" : 0.195,
+        "end" : 114.24,
+        "start" : 111,
+        "text" : " The,"
+      },
+      {
+        "confidence" : 0.562,
+        "end" : 114.96,
+        "start" : 114.24,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.811,
+        "end" : 116.94,
+        "start" : 115.2,
+        "text" : " Plaza"
+      },
+      {
+        "confidence" : 0.953,
+        "end" : 117.36,
+        "start" : 116.94,
+        "text" : " is"
+      },
+      {
+        "confidence" : 0.411,
+        "end" : 120.12,
+        "start" : 117.36,
+        "text" : " Popular."
+      },
+      {
+        "confidence" : 0.399,
+        "end" : 123.66,
+        "start" : 120.18,
+        "text" : " Hmm."
+      },
+      {
+        "confidence" : 0.194,
+        "end" : 127.5,
+        "start" : 123.72,
+        "text" : " Mar."
+      },
+      {
+        "confidence" : 0.166,
+        "end" : 129.12,
+        "start" : 127.5,
+        "text" : " Mar."
+      },
+      {
+        "confidence" : 0.525,
+        "end" : 131.46,
+        "start" : 129.12,
+        "text" : " Marriage."
+      },
+      {
+        "confidence" : 0.301,
+        "end" : 133.44,
+        "start" : 131.52,
+        "text" : " Marriage,"
+      },
+      {
+        "confidence" : 0.293,
+        "end" : 133.8,
+        "start" : 133.44,
+        "text" : " she."
+      },
+      {
+        "confidence" : 0.522,
+        "end" : 137.46,
+        "start" : 133.86,
+        "text" : " Mary"
+      },
+      {
+        "confidence" : 0.713,
+        "end" : 140.28,
+        "start" : 137.46,
+        "text" : " Archie"
+      },
+      {
+        "confidence" : 0.412,
+        "end" : 141.3,
+        "start" : 140.28,
+        "text" : " band"
+      },
+      {
+        "confidence" : 0.738,
+        "end" : 142.68,
+        "start" : 141.3,
+        "text" : " play"
+      },
+      {
+        "confidence" : 0.724,
+        "end" : 144.96,
+        "start" : 142.68,
+        "text" : " music"
+      },
+      {
+        "confidence" : 0.977,
+        "end" : 145.74,
+        "start" : 144.96,
+        "text" : " together"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 146.4,
+        "start" : 145.74,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 146.64,
+        "start" : 146.4,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.762,
+        "end" : 147.48,
+        "start" : 146.64,
+        "text" : " evenings."
+      },
+      {
+        "confidence" : 0.413,
+        "end" : 147.9,
+        "start" : 147.54,
+        "text" : " People"
+      },
+      {
+        "confidence" : 0.925,
+        "end" : 148.32,
+        "start" : 147.9,
+        "text" : " come"
+      },
+      {
+        "confidence" : 0.93,
+        "end" : 148.68,
+        "start" : 148.32,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.633,
+        "end" : 149.22,
+        "start" : 148.68,
+        "text" : " listen."
+      },
+      {
+        "confidence" : 0.128,
+        "end" : 150.06,
+        "start" : 149.28,
+        "text" : " To"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 150.3,
+        "start" : 150.06,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.934,
+        "end" : 150.6,
+        "start" : 150.3,
+        "text" : " music."
+      },
+      {
+        "confidence" : 0.028,
+        "end" : 155.1,
+        "start" : 150.72,
+        "text" : " Vance"
+      },
+      {
+        "confidence" : 0.139,
+        "end" : 156.6,
+        "start" : 155.1,
+        "text" : " Beach,"
+      },
+      {
+        "confidence" : 0.795,
+        "end" : 157.98,
+        "start" : 156.6,
+        "text" : " has"
+      },
+      {
+        "confidence" : 0.31,
+        "end" : 159.24,
+        "start" : 157.98,
+        "text" : " manuscript"
+      },
+      {
+        "confidence" : 0.687,
+        "end" : 160.68,
+        "start" : 159.24,
+        "text" : " performs,"
+      },
+      {
+        "confidence" : 0.073,
+        "end" : 164.16,
+        "start" : 160.68,
+        "text" : " Vance,"
+      },
+      {
+        "confidence" : 0.534,
+        "end" : 165.24,
+        "start" : 164.16,
+        "text" : " beach."
+      },
+      {
+        "confidence" : 0.479,
+        "end" : 169.38,
+        "start" : 165.3,
+        "text" : " Also,"
+      },
+      {
+        "confidence" : 0.578,
+        "end" : 170.88,
+        "start" : 169.38,
+        "text" : " attract"
+      },
+      {
+        "confidence" : 0.758,
+        "end" : 172.26,
+        "start" : 170.88,
+        "text" : " people"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 172.92,
+        "start" : 172.26,
+        "text" : " who"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 173.58,
+        "start" : 172.92,
+        "text" : " aren't"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 173.94,
+        "start" : 173.58,
+        "text" : " scared"
+      },
+      {
+        "confidence" : 0.971,
+        "end" : 174.42,
+        "start" : 173.94,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.773,
+        "end" : 175.56,
+        "start" : 174.42,
+        "text" : " take"
+      },
+      {
+        "confidence" : 0.176,
+        "end" : 176.7,
+        "start" : 175.56,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.23,
+        "end" : 181.08,
+        "start" : 176.7,
+        "text" : " tumble,"
+      },
+      {
+        "confidence" : 0.845,
+        "end" : 181.56,
+        "start" : 181.08,
+        "text" : " it"
+      },
+      {
+        "confidence" : 0.956,
+        "end" : 182.04,
+        "start" : 181.56,
+        "text" : " has"
+      },
+      {
+        "confidence" : 0.27,
+        "end" : 182.64,
+        "start" : 182.04,
+        "text" : " plays"
+      },
+      {
+        "confidence" : 0.785,
+        "end" : 183.84,
+        "start" : 182.64,
+        "text" : " for"
+      },
+      {
+        "confidence" : 0.84,
+        "end" : 184.5,
+        "start" : 183.84,
+        "text" : " rope."
+      },
+      {
+        "confidence" : 0.333,
+        "end" : 187.38,
+        "start" : 184.62,
+        "text" : " Cameras"
+      },
+      {
+        "confidence" : 0.929,
+        "end" : 188.22,
+        "start" : 187.38,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.364,
+        "end" : 191.94,
+        "start" : 188.22,
+        "text" : " Uh,"
+      },
+      {
+        "confidence" : 0.39,
+        "end" : 192.9,
+        "start" : 191.94,
+        "text" : " crow,"
+      },
+      {
+        "confidence" : 0.358,
+        "end" : 193.98,
+        "start" : 192.9,
+        "text" : " bad."
+      },
+      {
+        "confidence" : 0.636,
+        "end" : 196.02,
+        "start" : 194.04,
+        "text" : " Basketball"
+      },
+      {
+        "confidence" : 0.634,
+        "end" : 197.58,
+        "start" : 196.02,
+        "text" : " players."
+      },
+      {
+        "confidence" : 0.094,
+        "end" : 200.4,
+        "start" : 197.64,
+        "text" : " Per..."
+      },
+      {
+        "confidence" : 0.008,
+        "end" : 204.6,
+        "start" : 200.4,
+        "text" : " Per..."
+      },
+      {
+        "confidence" : 0.121,
+        "end" : 204.9,
+        "start" : 204.6,
+        "text" : " Rec"
+      },
+      {
+        "confidence" : 0.229,
+        "end" : 205.74,
+        "start" : 204.9,
+        "text" : " taste."
+      },
+      {
+        "confidence" : 0.145,
+        "end" : 206.52,
+        "start" : 205.74,
+        "text" : " Um,"
+      },
+      {
+        "confidence" : 0.248,
+        "end" : 208.92,
+        "start" : 206.52,
+        "text" : " the..."
+      },
+      {
+        "confidence" : 0.197,
+        "end" : 210.9,
+        "start" : 208.92,
+        "text" : " Carts"
+      },
+      {
+        "confidence" : 0.614,
+        "end" : 211.38,
+        "start" : 210.9,
+        "text" : " too."
+      }
+    ],
+    "source" : "wonders3-u1w3-p16-18-4E3D0803-C454-4188-8AD8-EE925FA3EA21.m4a"
+  },
+  "words" : [
+    "let's",
+    "learn",
+    "about",
+    "some",
+    "communities",
+    "in",
+    "los",
+    "angeles",
+    "lay",
+    "mart",
+    "park",
+    "many",
+    "artists",
+    "and",
+    "male",
+    "the",
+    "conscience",
+    "live",
+    "in",
+    "lemart",
+    "park",
+    "famous",
+    "singers",
+    "run",
+    "red",
+    "charts",
+    "recharged",
+    "and",
+    "i",
+    "love",
+    "fitzgerald",
+    "lived",
+    "here",
+    "today",
+    "limart",
+    "park",
+    "has",
+    "many",
+    "plays",
+    "to",
+    "hear",
+    "jazz",
+    "music",
+    "it",
+    "has",
+    "a",
+    "famous",
+    "hip",
+    "hip",
+    "hip",
+    "show",
+    "anyone",
+    "one",
+    "from",
+    "the",
+    "audience",
+    "can",
+    "perform",
+    "many",
+    "money",
+    "his",
+    "hispanic",
+    "people",
+    "live",
+    "in",
+    "both",
+    "boy",
+    "uh",
+    "height",
+    "street",
+    "corner",
+    "named",
+    "mar",
+    "mar",
+    "r",
+    "archie",
+    "archie",
+    "the",
+    "uh",
+    "plaza",
+    "is",
+    "popular",
+    "hmm",
+    "mar",
+    "mar",
+    "marriage",
+    "marriage",
+    "she",
+    "mary",
+    "archie",
+    "band",
+    "play",
+    "music",
+    "together",
+    "in",
+    "the",
+    "evenings",
+    "people",
+    "come",
+    "to",
+    "listen",
+    "to",
+    "the",
+    "music",
+    "vance",
+    "beach",
+    "has",
+    "manuscript",
+    "performs",
+    "vance",
+    "beach",
+    "also",
+    "attract",
+    "people",
+    "who",
+    "aren't",
+    "scared",
+    "to",
+    "take",
+    "uh",
+    "tumble",
+    "it",
+    "has",
+    "plays",
+    "for",
+    "rope",
+    "cameras",
+    "and",
+    "uh",
+    "crow",
+    "bad",
+    "basketball",
+    "players",
+    "per",
+    "per",
+    "rec",
+    "taste",
+    "um",
+    "the",
+    "carts",
+    "too"
+  ]
+}

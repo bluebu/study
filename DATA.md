@@ -71,6 +71,8 @@ super8/L3/p68   →   storage/data/english/review/super8/L3/p68.ref.txt
 | `read --draft` | 同上 | `.draft.txt` spec 候选（`[比对]`/`[卡壳]`/`[磕巴]` 和文件头填好，判断留 `⟨⟩`） | `storage/spec/english/review/` | **候选** → 另存 `pNN.txt` |
 | `scan` 教材截图 | `<书>/<课>`，**页码机器认** | `.ref.txt` 红线划中的课文原文 | `storage/data/english/review/` | **进 repo** |
 | | | `.page.json` 整页 OCR + 坐标 + `spellFlags`（OCR 认得可疑的词）<br>`.marked.png` 核对图<br>`.suspect-<词>.png` 可疑词裁出来放大 6 倍，一个词一张<br>`.full.txt` 整页全文（`--full`） | 同上 | **临时** |
+| `ref` 原文朗读 | `<书>/<课>`，**页码切完段人填** | `.ref.txt` 整本原文，按朗读自己的停顿切成段（段间空行）<br>`.ref.json` 段表（起止时刻 / 词数 / 段前停多久）+ 要人核的词（把握低或拼不出，带识别器候选） | `storage/data/english/review/` | **进 repo** |
+| `ref --pages` | 同上 | 直接落成 `pNN.ref.txt` 一页一份（`+` 并进上一段、`-` 丢掉）<br>`book.ref.json` 放进那一课的目录，记的是「这些 pNN 是怎么切出来的」 | 同上 | **进 repo** |
 | `cards` 单词卡 | `<NN>_<主题>` | `.draft.csv`（带 BOM 给 Excel） | `storage/spec/english/ket/words/` | **候选** → 另存 `<NN>_<主题>.csv` |
 | | | `.cards.json` `.cards.marked.png` | 同上 | **临时** |
 | `board` 白板 | `<故事slug>` | `.draft.txt` | `storage/spec/english/retell/` | **候选** → 另存 `<故事slug>.txt` |
@@ -78,6 +80,17 @@ super8/L3/p68   →   storage/data/english/review/super8/L3/p68.ref.txt
 | `pinyin` 生字词 | `<YYYYMMDD>` | `.draft.txt` | `storage/spec/chinese/practice/` | **候选** → 另存 `<YYYYMMDD>.txt` |
 | `sheet` 口算卷 | 不需要名字 | `full.jpg` `block_N.png` `zoom_x_y.png` | 本机临时目录，**不落 `storage/`** | **临时** |
 | `check` 判对错 | 不需要名字 | 只打 stdout，不落文件 | — | — |
+
+**原文有两条来路，产出同一样东西**：`scan` 从教材截图 OCR，`ref` 从配套的官方朗读
+音频转写，落的都是 `.ref.txt`，下游 `read --ref` 认不出区别也不需要认出。
+挑哪条看素材：书有电子版或拍得清楚 → `scan`（自带页边界，最省事）；
+只有朗读音频、或者拿不准手上的电子版是不是孩子那一档 → `ref`（**念的就是她那一版**）。
+
+`ref` 的代价是音频没有页边界，所以按朗读自己的停顿切段 —— 念的人翻页换节都会停。
+实测 Wonders G3 那本 158 次停顿里 ≥1.5 秒的 19 次**每一次都是真的页/节边界**
+（1.2–1.5 秒之间一次都没有），切出来的三页词数和老站那份人工核过的原文**逐个精确相等**。
+⚠️ 切段**必须用声学停顿，不能用转写词之间的时间差** —— 识别器的时间戳是连着的，
+静音被前后两个词的区间抻满了，同一份音频里词间隔 >1.2 秒的**一次都没有**。
 
 **为什么 `read` / `scan` 的**测量数据**不带 `.draft.`**：那是机器算的最终值，
 没有「候选」一说 —— 停顿就是那么多次，逐词时间戳就是那个时刻。

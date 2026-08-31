@@ -1,0 +1,7123 @@
+{
+  "acoustics" : {
+    "duration" : 365.88,
+    "pause_count" : 202,
+    "pause_ratio" : 0.366,
+    "pause_total" : 133.89,
+    "pauses" : [
+      {
+        "dur" : 0.34,
+        "end" : 0.34,
+        "start" : 0
+      },
+      {
+        "dur" : 0.37,
+        "end" : 4.86,
+        "start" : 4.49
+      },
+      {
+        "dur" : 0.31,
+        "end" : 5.36,
+        "start" : 5.05
+      },
+      {
+        "dur" : 0.74,
+        "end" : 8.75,
+        "start" : 8.01
+      },
+      {
+        "dur" : 1.74,
+        "end" : 13.16,
+        "start" : 11.42
+      },
+      {
+        "dur" : 0.66,
+        "end" : 16.06,
+        "start" : 15.4
+      },
+      {
+        "dur" : 0.97,
+        "end" : 17.57,
+        "start" : 16.6
+      },
+      {
+        "dur" : 0.35,
+        "end" : 18.3,
+        "start" : 17.95
+      },
+      {
+        "dur" : 0.25,
+        "end" : 18.57,
+        "start" : 18.32
+      },
+      {
+        "dur" : 0.28,
+        "end" : 19.23,
+        "start" : 18.95
+      },
+      {
+        "dur" : 0.37,
+        "end" : 20.19,
+        "start" : 19.82
+      },
+      {
+        "dur" : 0.95,
+        "end" : 21.7,
+        "start" : 20.75
+      },
+      {
+        "dur" : 0.37,
+        "end" : 22.75,
+        "start" : 22.38
+      },
+      {
+        "dur" : 0.33,
+        "end" : 24.09,
+        "start" : 23.76
+      },
+      {
+        "dur" : 1.44,
+        "end" : 27.46,
+        "start" : 26.02
+      },
+      {
+        "dur" : 0.44,
+        "end" : 29.03,
+        "start" : 28.59
+      },
+      {
+        "dur" : 0.43,
+        "end" : 29.97,
+        "start" : 29.54
+      },
+      {
+        "dur" : 0.28,
+        "end" : 31.51,
+        "start" : 31.23
+      },
+      {
+        "dur" : 0.27,
+        "end" : 34.62,
+        "start" : 34.35
+      },
+      {
+        "dur" : 0.32,
+        "end" : 35.25,
+        "start" : 34.93
+      },
+      {
+        "dur" : 1.96,
+        "end" : 38.05,
+        "start" : 36.09
+      },
+      {
+        "dur" : 0.29,
+        "end" : 39.97,
+        "start" : 39.68
+      },
+      {
+        "dur" : 0.73,
+        "end" : 41.89,
+        "start" : 41.16
+      },
+      {
+        "dur" : 0.4,
+        "end" : 43.2,
+        "start" : 42.8
+      },
+      {
+        "dur" : 1.03,
+        "end" : 47.61,
+        "start" : 46.58
+      },
+      {
+        "dur" : 0.35,
+        "end" : 48.93,
+        "start" : 48.58
+      },
+      {
+        "dur" : 1.45,
+        "end" : 52.48,
+        "start" : 51.03
+      },
+      {
+        "dur" : 1.53,
+        "end" : 56.45,
+        "start" : 54.92
+      },
+      {
+        "dur" : 0.46,
+        "end" : 57.65,
+        "start" : 57.19
+      },
+      {
+        "dur" : 0.28,
+        "end" : 58.69,
+        "start" : 58.41
+      },
+      {
+        "dur" : 0.37,
+        "end" : 60.55,
+        "start" : 60.18
+      },
+      {
+        "dur" : 0.93,
+        "end" : 62.58,
+        "start" : 61.65
+      },
+      {
+        "dur" : 0.54,
+        "end" : 63.17,
+        "start" : 62.63
+      },
+      {
+        "dur" : 0.93,
+        "end" : 66.33,
+        "start" : 65.4
+      },
+      {
+        "dur" : 0.31,
+        "end" : 67.25,
+        "start" : 66.94
+      },
+      {
+        "dur" : 0.39,
+        "end" : 68.66,
+        "start" : 68.27
+      },
+      {
+        "dur" : 0.38,
+        "end" : 69.8,
+        "start" : 69.42
+      },
+      {
+        "dur" : 0.32,
+        "end" : 70.72,
+        "start" : 70.4
+      },
+      {
+        "dur" : 0.26,
+        "end" : 71.45,
+        "start" : 71.19
+      },
+      {
+        "dur" : 0.39,
+        "end" : 72.88,
+        "start" : 72.49
+      },
+      {
+        "dur" : 0.29,
+        "end" : 74.14,
+        "start" : 73.85
+      },
+      {
+        "dur" : 0.46,
+        "end" : 78.25,
+        "start" : 77.79
+      },
+      {
+        "dur" : 0.38,
+        "end" : 80.46,
+        "start" : 80.08
+      },
+      {
+        "dur" : 0.7,
+        "end" : 82.4,
+        "start" : 81.7
+      },
+      {
+        "dur" : 0.72,
+        "end" : 83.8,
+        "start" : 83.08
+      },
+      {
+        "dur" : 0.72,
+        "end" : 87.09,
+        "start" : 86.37
+      },
+      {
+        "dur" : 0.39,
+        "end" : 89.58,
+        "start" : 89.19
+      },
+      {
+        "dur" : 0.39,
+        "end" : 90.54,
+        "start" : 90.15
+      },
+      {
+        "dur" : 0.36,
+        "end" : 90.94,
+        "start" : 90.58
+      },
+      {
+        "dur" : 0.81,
+        "end" : 92,
+        "start" : 91.19
+      },
+      {
+        "dur" : 1.08,
+        "end" : 94.22,
+        "start" : 93.14
+      },
+      {
+        "dur" : 0.31,
+        "end" : 96.16,
+        "start" : 95.85
+      },
+      {
+        "dur" : 0.31,
+        "end" : 96.94,
+        "start" : 96.63
+      },
+      {
+        "dur" : 0.35,
+        "end" : 99.06,
+        "start" : 98.71
+      },
+      {
+        "dur" : 0.72,
+        "end" : 99.8,
+        "start" : 99.08
+      },
+      {
+        "dur" : 0.6,
+        "end" : 101.65,
+        "start" : 101.05
+      },
+      {
+        "dur" : 1.48,
+        "end" : 103.3,
+        "start" : 101.82
+      },
+      {
+        "dur" : 0.4,
+        "end" : 104.94,
+        "start" : 104.54
+      },
+      {
+        "dur" : 0.53,
+        "end" : 107.24,
+        "start" : 106.71
+      },
+      {
+        "dur" : 2.73,
+        "end" : 110,
+        "start" : 107.27
+      },
+      {
+        "dur" : 0.25,
+        "end" : 111.46,
+        "start" : 111.21
+      },
+      {
+        "dur" : 0.76,
+        "end" : 113.31,
+        "start" : 112.55
+      },
+      {
+        "dur" : 0.51,
+        "end" : 114.64,
+        "start" : 114.13
+      },
+      {
+        "dur" : 0.54,
+        "end" : 116.25,
+        "start" : 115.71
+      },
+      {
+        "dur" : 0.34,
+        "end" : 118.15,
+        "start" : 117.81
+      },
+      {
+        "dur" : 0.93,
+        "end" : 119.71,
+        "start" : 118.78
+      },
+      {
+        "dur" : 1.48,
+        "end" : 122.38,
+        "start" : 120.9
+      },
+      {
+        "dur" : 0.95,
+        "end" : 124.03,
+        "start" : 123.08
+      },
+      {
+        "dur" : 0.89,
+        "end" : 124.94,
+        "start" : 124.05
+      },
+      {
+        "dur" : 0.89,
+        "end" : 127.93,
+        "start" : 127.04
+      },
+      {
+        "dur" : 0.86,
+        "end" : 129.52,
+        "start" : 128.66
+      },
+      {
+        "dur" : 0.85,
+        "end" : 130.66,
+        "start" : 129.81
+      },
+      {
+        "dur" : 1.44,
+        "end" : 132.6,
+        "start" : 131.16
+      },
+      {
+        "dur" : 0.28,
+        "end" : 134.97,
+        "start" : 134.69
+      },
+      {
+        "dur" : 0.33,
+        "end" : 135.54,
+        "start" : 135.21
+      },
+      {
+        "dur" : 0.47,
+        "end" : 136.22,
+        "start" : 135.75
+      },
+      {
+        "dur" : 0.44,
+        "end" : 137.48,
+        "start" : 137.04
+      },
+      {
+        "dur" : 1.96,
+        "end" : 140.54,
+        "start" : 138.58
+      },
+      {
+        "dur" : 0.49,
+        "end" : 143.17,
+        "start" : 142.68
+      },
+      {
+        "dur" : 0.34,
+        "end" : 144.9,
+        "start" : 144.56
+      },
+      {
+        "dur" : 0.78,
+        "end" : 147.48,
+        "start" : 146.7
+      },
+      {
+        "dur" : 0.9,
+        "end" : 150.05,
+        "start" : 149.15
+      },
+      {
+        "dur" : 0.65,
+        "end" : 151.35,
+        "start" : 150.7
+      },
+      {
+        "dur" : 2.36,
+        "end" : 157.56,
+        "start" : 155.2
+      },
+      {
+        "dur" : 0.78,
+        "end" : 158.46,
+        "start" : 157.68
+      },
+      {
+        "dur" : 0.55,
+        "end" : 164.37,
+        "start" : 163.82
+      },
+      {
+        "dur" : 0.53,
+        "end" : 165.93,
+        "start" : 165.4
+      },
+      {
+        "dur" : 0.5,
+        "end" : 170.36,
+        "start" : 169.86
+      },
+      {
+        "dur" : 0.38,
+        "end" : 171,
+        "start" : 170.62
+      },
+      {
+        "dur" : 0.27,
+        "end" : 171.73,
+        "start" : 171.46
+      },
+      {
+        "dur" : 0.86,
+        "end" : 173.37,
+        "start" : 172.51
+      },
+      {
+        "dur" : 0.59,
+        "end" : 175.88,
+        "start" : 175.29
+      },
+      {
+        "dur" : 0.27,
+        "end" : 178.84,
+        "start" : 178.57
+      },
+      {
+        "dur" : 0.42,
+        "end" : 180.78,
+        "start" : 180.36
+      },
+      {
+        "dur" : 0.37,
+        "end" : 182.04,
+        "start" : 181.67
+      },
+      {
+        "dur" : 0.37,
+        "end" : 182.48,
+        "start" : 182.11
+      },
+      {
+        "dur" : 0.61,
+        "end" : 184.35,
+        "start" : 183.74
+      },
+      {
+        "dur" : 1.13,
+        "end" : 185.66,
+        "start" : 184.53
+      },
+      {
+        "dur" : 0.25,
+        "end" : 185.99,
+        "start" : 185.74
+      },
+      {
+        "dur" : 0.34,
+        "end" : 187.64,
+        "start" : 187.3
+      },
+      {
+        "dur" : 0.41,
+        "end" : 188.56,
+        "start" : 188.15
+      },
+      {
+        "dur" : 0.29,
+        "end" : 190.33,
+        "start" : 190.04
+      },
+      {
+        "dur" : 0.58,
+        "end" : 191.42,
+        "start" : 190.84
+      },
+      {
+        "dur" : 0.5,
+        "end" : 193.09,
+        "start" : 192.59
+      },
+      {
+        "dur" : 0.3,
+        "end" : 195.35,
+        "start" : 195.05
+      },
+      {
+        "dur" : 0.77,
+        "end" : 196.92,
+        "start" : 196.15
+      },
+      {
+        "dur" : 0.4,
+        "end" : 197.52,
+        "start" : 197.12
+      },
+      {
+        "dur" : 0.69,
+        "end" : 198.67,
+        "start" : 197.98
+      },
+      {
+        "dur" : 0.28,
+        "end" : 200.37,
+        "start" : 200.09
+      },
+      {
+        "dur" : 0.9,
+        "end" : 201.6,
+        "start" : 200.7
+      },
+      {
+        "dur" : 0.41,
+        "end" : 203.6,
+        "start" : 203.19
+      },
+      {
+        "dur" : 0.66,
+        "end" : 204.77,
+        "start" : 204.11
+      },
+      {
+        "dur" : 0.32,
+        "end" : 205.41,
+        "start" : 205.09
+      },
+      {
+        "dur" : 0.72,
+        "end" : 206.34,
+        "start" : 205.62
+      },
+      {
+        "dur" : 0.3,
+        "end" : 206.99,
+        "start" : 206.69
+      },
+      {
+        "dur" : 0.48,
+        "end" : 209.11,
+        "start" : 208.63
+      },
+      {
+        "dur" : 0.33,
+        "end" : 212.04,
+        "start" : 211.71
+      },
+      {
+        "dur" : 1.27,
+        "end" : 213.73,
+        "start" : 212.46
+      },
+      {
+        "dur" : 0.43,
+        "end" : 215.07,
+        "start" : 214.64
+      },
+      {
+        "dur" : 2.48,
+        "end" : 217.8,
+        "start" : 215.32
+      },
+      {
+        "dur" : 0.99,
+        "end" : 220.25,
+        "start" : 219.26
+      },
+      {
+        "dur" : 0.52,
+        "end" : 222.86,
+        "start" : 222.34
+      },
+      {
+        "dur" : 0.38,
+        "end" : 223.29,
+        "start" : 222.91
+      },
+      {
+        "dur" : 0.3,
+        "end" : 223.85,
+        "start" : 223.55
+      },
+      {
+        "dur" : 0.55,
+        "end" : 224.42,
+        "start" : 223.87
+      },
+      {
+        "dur" : 0.37,
+        "end" : 225.66,
+        "start" : 225.29
+      },
+      {
+        "dur" : 0.43,
+        "end" : 229.67,
+        "start" : 229.24
+      },
+      {
+        "dur" : 0.65,
+        "end" : 231.17,
+        "start" : 230.52
+      },
+      {
+        "dur" : 1.15,
+        "end" : 233.85,
+        "start" : 232.7
+      },
+      {
+        "dur" : 0.68,
+        "end" : 234.94,
+        "start" : 234.26
+      },
+      {
+        "dur" : 0.43,
+        "end" : 236.65,
+        "start" : 236.22
+      },
+      {
+        "dur" : 0.46,
+        "end" : 237.71,
+        "start" : 237.25
+      },
+      {
+        "dur" : 0.27,
+        "end" : 239.96,
+        "start" : 239.69
+      },
+      {
+        "dur" : 0.32,
+        "end" : 240.65,
+        "start" : 240.33
+      },
+      {
+        "dur" : 0.39,
+        "end" : 241.54,
+        "start" : 241.15
+      },
+      {
+        "dur" : 0.39,
+        "end" : 241.94,
+        "start" : 241.55
+      },
+      {
+        "dur" : 0.28,
+        "end" : 244.33,
+        "start" : 244.05
+      },
+      {
+        "dur" : 0.47,
+        "end" : 247.61,
+        "start" : 247.14
+      },
+      {
+        "dur" : 0.97,
+        "end" : 249.69,
+        "start" : 248.72
+      },
+      {
+        "dur" : 0.51,
+        "end" : 250.69,
+        "start" : 250.18
+      },
+      {
+        "dur" : 0.44,
+        "end" : 251.33,
+        "start" : 250.89
+      },
+      {
+        "dur" : 0.37,
+        "end" : 252.73,
+        "start" : 252.36
+      },
+      {
+        "dur" : 0.3,
+        "end" : 254.55,
+        "start" : 254.25
+      },
+      {
+        "dur" : 0.84,
+        "end" : 258.3,
+        "start" : 257.46
+      },
+      {
+        "dur" : 0.92,
+        "end" : 259.88,
+        "start" : 258.96
+      },
+      {
+        "dur" : 0.86,
+        "end" : 261.43,
+        "start" : 260.57
+      },
+      {
+        "dur" : 0.81,
+        "end" : 262.88,
+        "start" : 262.07
+      },
+      {
+        "dur" : 0.28,
+        "end" : 264.08,
+        "start" : 263.8
+      },
+      {
+        "dur" : 0.82,
+        "end" : 265.3,
+        "start" : 264.48
+      },
+      {
+        "dur" : 1.25,
+        "end" : 266.76,
+        "start" : 265.51
+      },
+      {
+        "dur" : 0.29,
+        "end" : 267.94,
+        "start" : 267.65
+      },
+      {
+        "dur" : 0.99,
+        "end" : 269.42,
+        "start" : 268.43
+      },
+      {
+        "dur" : 0.62,
+        "end" : 270.33,
+        "start" : 269.71
+      },
+      {
+        "dur" : 1.97,
+        "end" : 272.95,
+        "start" : 270.98
+      },
+      {
+        "dur" : 0.34,
+        "end" : 275.12,
+        "start" : 274.78
+      },
+      {
+        "dur" : 0.46,
+        "end" : 275.86,
+        "start" : 275.4
+      },
+      {
+        "dur" : 0.47,
+        "end" : 276.63,
+        "start" : 276.16
+      },
+      {
+        "dur" : 1.34,
+        "end" : 278.48,
+        "start" : 277.14
+      },
+      {
+        "dur" : 0.35,
+        "end" : 282.09,
+        "start" : 281.74
+      },
+      {
+        "dur" : 2.9,
+        "end" : 287.68,
+        "start" : 284.78
+      },
+      {
+        "dur" : 0.39,
+        "end" : 289.61,
+        "start" : 289.22
+      },
+      {
+        "dur" : 0.85,
+        "end" : 290.62,
+        "start" : 289.77
+      },
+      {
+        "dur" : 0.34,
+        "end" : 292.74,
+        "start" : 292.4
+      },
+      {
+        "dur" : 0.67,
+        "end" : 294.08,
+        "start" : 293.41
+      },
+      {
+        "dur" : 0.93,
+        "end" : 295.89,
+        "start" : 294.96
+      },
+      {
+        "dur" : 2.21,
+        "end" : 299.6,
+        "start" : 297.39
+      },
+      {
+        "dur" : 2.04,
+        "end" : 303.69,
+        "start" : 301.65
+      },
+      {
+        "dur" : 0.77,
+        "end" : 304.99,
+        "start" : 304.22
+      },
+      {
+        "dur" : 0.36,
+        "end" : 306.36,
+        "start" : 306
+      },
+      {
+        "dur" : 1.99,
+        "end" : 308.37,
+        "start" : 306.38
+      },
+      {
+        "dur" : 0.53,
+        "end" : 310.73,
+        "start" : 310.2
+      },
+      {
+        "dur" : 0.98,
+        "end" : 314.65,
+        "start" : 313.67
+      },
+      {
+        "dur" : 0.51,
+        "end" : 317.03,
+        "start" : 316.52
+      },
+      {
+        "dur" : 0.73,
+        "end" : 317.82,
+        "start" : 317.09
+      },
+      {
+        "dur" : 0.31,
+        "end" : 318.6,
+        "start" : 318.29
+      },
+      {
+        "dur" : 0.28,
+        "end" : 320.65,
+        "start" : 320.37
+      },
+      {
+        "dur" : 0.3,
+        "end" : 324.72,
+        "start" : 324.42
+      },
+      {
+        "dur" : 0.28,
+        "end" : 325.67,
+        "start" : 325.39
+      },
+      {
+        "dur" : 0.42,
+        "end" : 326.49,
+        "start" : 326.07
+      },
+      {
+        "dur" : 0.81,
+        "end" : 327.81,
+        "start" : 327
+      },
+      {
+        "dur" : 0.81,
+        "end" : 330.94,
+        "start" : 330.13
+      },
+      {
+        "dur" : 0.27,
+        "end" : 331.75,
+        "start" : 331.48
+      },
+      {
+        "dur" : 0.26,
+        "end" : 332.37,
+        "start" : 332.11
+      },
+      {
+        "dur" : 0.41,
+        "end" : 332.84,
+        "start" : 332.43
+      },
+      {
+        "dur" : 0.35,
+        "end" : 333.94,
+        "start" : 333.59
+      },
+      {
+        "dur" : 0.25,
+        "end" : 334.79,
+        "start" : 334.54
+      },
+      {
+        "dur" : 0.33,
+        "end" : 335.65,
+        "start" : 335.32
+      },
+      {
+        "dur" : 0.5,
+        "end" : 337.85,
+        "start" : 337.35
+      },
+      {
+        "dur" : 0.34,
+        "end" : 341.7,
+        "start" : 341.36
+      },
+      {
+        "dur" : 0.88,
+        "end" : 344.32,
+        "start" : 343.44
+      },
+      {
+        "dur" : 0.5,
+        "end" : 344.87,
+        "start" : 344.37
+      },
+      {
+        "dur" : 0.37,
+        "end" : 345.98,
+        "start" : 345.61
+      },
+      {
+        "dur" : 0.62,
+        "end" : 348.03,
+        "start" : 347.41
+      },
+      {
+        "dur" : 0.31,
+        "end" : 348.36,
+        "start" : 348.05
+      },
+      {
+        "dur" : 0.33,
+        "end" : 348.76,
+        "start" : 348.43
+      },
+      {
+        "dur" : 0.36,
+        "end" : 349.14,
+        "start" : 348.78
+      },
+      {
+        "dur" : 0.64,
+        "end" : 350.22,
+        "start" : 349.58
+      },
+      {
+        "dur" : 0.65,
+        "end" : 351.98,
+        "start" : 351.33
+      },
+      {
+        "dur" : 2.54,
+        "end" : 357.75,
+        "start" : 355.21
+      },
+      {
+        "dur" : 0.49,
+        "end" : 361.01,
+        "start" : 360.52
+      },
+      {
+        "dur" : 0.43,
+        "end" : 362.58,
+        "start" : 362.15
+      },
+      {
+        "dur" : 0.75,
+        "end" : 365.77,
+        "start" : 365.02
+      }
+    ],
+    "source" : "23f35ffb4683a89c75ed3182a62f0ee5.mp4",
+    "speech_time" : 231.99,
+    "threshold_db" : -29.3
+  },
+  "alignment" : {
+    "accuracy" : 78,
+    "correctWordCount" : 266,
+    "diffs" : [
+      {
+        "category" : "extra",
+        "confidence" : 0.984,
+        "context" : "judy baca is an",
+        "end" : 0.96,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "chapter",
+        "refIndex" : 0,
+        "start" : 0,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.586,
+        "context" : "judy baca is an",
+        "end" : 1.5,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "one",
+        "refIndex" : 0,
+        "start" : 0.96,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.76,
+        "context" : "judy baca is an",
+        "end" : 1.68,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "young",
+        "refIndex" : 0,
+        "start" : 1.5,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.95,
+        "context" : "judy baca is an",
+        "end" : 2.22,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "judy",
+        "refIndex" : 0,
+        "start" : 1.68,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.513,
+        "context" : "judy baca is an",
+        "end" : 2.94,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "barker",
+        "refIndex" : 0,
+        "start" : 2.22,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.388,
+        "context" : "judy baca is an artist",
+        "end" : 3.72,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "barker",
+        "ref" : "baca",
+        "refIndex" : 1,
+        "start" : 3.18,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.512,
+        "context" : "she paints murals murals are paintings on",
+        "end" : 9.3,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "mirals",
+        "ref" : "murals",
+        "refIndex" : 11,
+        "start" : 8.4,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.675,
+        "context" : "was born in one thousand nine hundred forty-six her family is",
+        "end" : 17.64,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "one thousand nine hundred sixty-six",
+        "refIndex" : 21,
+        "start" : 14.46,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.564,
+        "context" : "was born in one thousand nine hundred forty-six her family is",
+        "end" : 20.58,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "one thousand nine hundred sixty-six",
+        "refIndex" : 21,
+        "start" : 17.64,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.427,
+        "context" : "was born in one thousand nine hundred forty-six her family is",
+        "end" : 22.26,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "forty-six",
+        "ref" : "one thousand nine hundred forty-six",
+        "refIndex" : 21,
+        "start" : 20.58,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.486,
+        "context" : "her mother two aunts and a grandmother",
+        "end" : 34.2,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "aunt",
+        "ref" : "aunts",
+        "refIndex" : 37,
+        "start" : 33.54,
+        "suggest" : "count",
+        "why" : "原文是「aunts」，读出来少了词尾 -s"
+      },
+      {
+        "category" : "function",
+        "confidence" : 0.412,
+        "context" : "talked in spanish at the new school",
+        "end" : 53.04,
+        "kind" : "substitute",
+        "label" : "小词",
+        "read" : "as",
+        "ref" : "at",
+        "refIndex" : 62,
+        "start" : 50.76,
+        "suggest" : "count",
+        "why" : "两个都是小词，读串了。这类错扎堆出现就是眼睛跑在手指前面"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.942,
+        "context" : "the new school she wasn't allowed to",
+        "end" : 54.42,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "she",
+        "refIndex" : 66,
+        "start" : 54.24,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.407,
+        "context" : "the new school she wasn't allowed to",
+        "end" : 55.02,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "uh",
+        "refIndex" : 66,
+        "start" : 54.42,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "refTypo",
+        "confidence" : 0.385,
+        "context" : "talk in spanish judy had few mexican-american",
+        "end" : 63.84,
+        "kind" : "substitute",
+        "label" : "原文可疑",
+        "read" : "duty",
+        "ref" : "judy",
+        "refIndex" : 73,
+        "start" : 61.62,
+        "suggest" : "skip",
+        "why" : "`.ref.txt` 里是「judy」（查不出这个词），她读的是「duty」—— 读对了。**先怀疑扫描认错**，去 marked.png 上核；真是课本印错也不计错，但归因不一样"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.398,
+        "context" : "judy had few mexican-american classmates at first",
+        "end" : 65.58,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "mexi",
+        "refIndex" : 76,
+        "start" : 64.68,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.081,
+        "context" : "judy had few mexican-american classmates at first",
+        "end" : 66.54,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "she",
+        "refIndex" : 76,
+        "start" : 65.64,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.08 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.08,
+        "context" : "judy had few mexican-american classmates at first",
+        "end" : 66.96,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "can",
+        "refIndex" : 76,
+        "start" : 66.54,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.08 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.822,
+        "context" : "judy had few mexican-american classmates at first",
+        "end" : 67.68,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "american",
+        "ref" : "mexican-american",
+        "refIndex" : 76,
+        "start" : 66.96,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.831,
+        "context" : "had few mexican-american classmates at first it",
+        "end" : 69.48,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "classmate",
+        "ref" : "classmates",
+        "refIndex" : 77,
+        "start" : 67.68,
+        "suggest" : "count",
+        "why" : "原文是「classmates」，读出来少了词尾 -s"
+      },
+      {
+        "category" : "function",
+        "confidence" : 0.86,
+        "context" : "it was difficult for judy to pronounce",
+        "end" : 72.12,
+        "kind" : "substitute",
+        "label" : "小词",
+        "read" : "to",
+        "ref" : "for",
+        "refIndex" : 83,
+        "start" : 71.58,
+        "suggest" : "count",
+        "why" : "两个都是小词，读串了。这类错扎堆出现就是眼睛跑在手指前面"
+      },
+      {
+        "category" : "refTypo",
+        "confidence" : 0.641,
+        "context" : "was difficult for judy to pronounce and",
+        "end" : 73.38,
+        "kind" : "substitute",
+        "label" : "原文可疑",
+        "read" : "duty",
+        "ref" : "judy",
+        "refIndex" : 84,
+        "start" : 72.12,
+        "suggest" : "skip",
+        "why" : "`.ref.txt` 里是「judy」（查不出这个词），她读的是「duty」—— 读对了。**先怀疑扫描认错**，去 marked.png 上核；真是课本印错也不计错，但归因不一样"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.123,
+        "context" : "words her teacher let judy draw and",
+        "end" : 79.26,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "liked",
+        "ref" : "let",
+        "refIndex" : 93,
+        "start" : 78.72,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.12 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.788,
+        "context" : "couldn't understand the lessons judy began to",
+        "end" : 86.16,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "class",
+        "ref" : "lessons",
+        "refIndex" : 103,
+        "start" : 85.74,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.834,
+        "context" : "to love painting later she studied modern",
+        "end" : 89.94,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "later",
+        "refIndex" : 109,
+        "start" : 88.92,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.892,
+        "context" : "to love painting later she studied modern",
+        "end" : 92.34,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "she",
+        "refIndex" : 109,
+        "start" : 90,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.297,
+        "context" : "to love painting later she studied modern",
+        "end" : 93.18,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "be",
+        "refIndex" : 109,
+        "start" : 92.34,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.30 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.78,
+        "context" : "later she studied modern art in college",
+        "end" : 97.32,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "mother",
+        "ref" : "modern",
+        "refIndex" : 112,
+        "start" : 95.76,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.538,
+        "context" : "judy worked for the city of los",
+        "end" : 106.56,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "the",
+        "refIndex" : 121,
+        "start" : 106.08,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.305,
+        "context" : "a neighborhood called boyle heights she taught",
+        "end" : 119.22,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "boil",
+        "refIndex" : 132,
+        "start" : 117.54,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.30 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.286,
+        "context" : "a neighborhood called boyle heights she taught",
+        "end" : 120.12,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "boil",
+        "ref" : "boyle",
+        "refIndex" : 132,
+        "start" : 119.22,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.64,
+        "context" : "neighborhood called boyle heights she taught art",
+        "end" : 120.72,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "height",
+        "ref" : "heights",
+        "refIndex" : 133,
+        "start" : 120.12,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.326,
+        "context" : "boyle heights she taught art classes in",
+        "end" : 125.16,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "thought",
+        "ref" : "taught",
+        "refIndex" : 135,
+        "start" : 122.94,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.33 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.902,
+        "context" : "she taught art classes in the parks",
+        "end" : 126.48,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "class",
+        "refIndex" : 137,
+        "start" : 126,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.921,
+        "context" : "she taught art classes in the parks",
+        "end" : 126.96,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "is",
+        "ref" : "classes",
+        "refIndex" : 137,
+        "start" : 126.48,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.424,
+        "context" : "classes in the parks groups of teenagers",
+        "end" : 129.72,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "part",
+        "refIndex" : 140,
+        "start" : 128.4,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.627,
+        "context" : "in the parks groups of teenagers hung",
+        "end" : 132.96,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "group",
+        "ref" : "groups",
+        "refIndex" : 141,
+        "start" : 131.22,
+        "suggest" : "count",
+        "why" : "原文是「groups」，读出来少了词尾 -s"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.767,
+        "context" : "out in the parks the groups did",
+        "end" : 138.36,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "park",
+        "ref" : "parks",
+        "refIndex" : 148,
+        "start" : 137.94,
+        "suggest" : "count",
+        "why" : "原文是「parks」，读出来少了词尾 -s"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.995,
+        "context" : "the parks the groups did not get",
+        "end" : 141,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "group",
+        "ref" : "groups",
+        "refIndex" : 150,
+        "start" : 140.7,
+        "suggest" : "count",
+        "why" : "原文是「groups」，读出来少了词尾 -s"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.748,
+        "context" : "judy asked the teenagers to help her",
+        "end" : 145.68,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "teenager",
+        "ref" : "teenagers",
+        "refIndex" : 158,
+        "start" : 145.02,
+        "suggest" : "count",
+        "why" : "原文是「teenagers」，读出来少了词尾 -s"
+      },
+      {
+        "category" : "function",
+        "confidence" : 0.923,
+        "context" : "help her paint a mural she wanted",
+        "end" : 148.62,
+        "kind" : "substitute",
+        "label" : "小词",
+        "read" : "the",
+        "ref" : "a",
+        "refIndex" : 163,
+        "start" : 148.2,
+        "suggest" : "count",
+        "why" : "两个都是小词，读串了。这类错扎堆出现就是眼睛跑在手指前面"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.784,
+        "context" : "her paint a mural she wanted the",
+        "end" : 149.04,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "mirror",
+        "ref" : "mural",
+        "refIndex" : 164,
+        "start" : 148.62,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.983,
+        "context" : "she wanted the teenagers to get along",
+        "end" : 153.96,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "teenager",
+        "ref" : "teenagers",
+        "refIndex" : 168,
+        "start" : 152.64,
+        "suggest" : "count",
+        "why" : "原文是「teenagers」，读出来少了词尾 -s"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.958,
+        "context" : "along when the mural was finished people",
+        "end" : 159.42,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "mirror",
+        "ref" : "mural",
+        "refIndex" : 174,
+        "start" : 159,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.519,
+        "context" : "loved it the mural was called mi",
+        "end" : 166.62,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "mirror",
+        "ref" : "mural",
+        "refIndex" : 184,
+        "start" : 166.14,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.94,
+        "context" : "mural was called mi abuelita it showed",
+        "end" : 167.94,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "me",
+        "refIndex" : 187,
+        "start" : 167.22,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.885,
+        "context" : "mural was called mi abuelita it showed",
+        "end" : 169.02,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "up",
+        "ref" : "mi",
+        "refIndex" : 187,
+        "start" : 167.94,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.528,
+        "context" : "was called mi abuelita it showed a",
+        "end" : 169.68,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "late",
+        "ref" : "abuelita",
+        "refIndex" : 188,
+        "start" : 169.02,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.407,
+        "context" : "abuelita it showed a mexican american grandmother",
+        "end" : 174,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "um",
+        "ref" : "a",
+        "refIndex" : 191,
+        "start" : 172.38,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "omitted",
+        "context" : "showed a mexican american grandmother she looked",
+        "kind" : "omit",
+        "label" : "漏读",
+        "ref" : "american",
+        "refIndex" : 193,
+        "suggest" : "count",
+        "why" : "整个词跳过去了"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.92,
+        "context" : "if she was giving a hug many",
+        "end" : 182.64,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "getting",
+        "ref" : "giving",
+        "refIndex" : 201,
+        "start" : 181.32,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.419,
+        "context" : "giving a hug many mexican americans lived",
+        "end" : 186.66,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "manny",
+        "refIndex" : 204,
+        "start" : 183.66,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.447,
+        "context" : "giving a hug many mexican americans lived",
+        "end" : 187.26,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "maxi",
+        "ref" : "many",
+        "refIndex" : 204,
+        "start" : 186.66,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.333,
+        "context" : "a hug many mexican americans lived in",
+        "end" : 188.28,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "can",
+        "ref" : "mexican",
+        "refIndex" : 205,
+        "start" : 187.26,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.33 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.754,
+        "context" : "hug many mexican americans lived in boyle",
+        "end" : 189.06,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "american",
+        "ref" : "americans",
+        "refIndex" : 206,
+        "start" : 188.28,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "refTypo",
+        "confidence" : 0.398,
+        "context" : "americans lived in boyle heights the mural",
+        "end" : 192.12,
+        "kind" : "substitute",
+        "label" : "原文可疑",
+        "read" : "boiled",
+        "ref" : "boyle",
+        "refIndex" : 209,
+        "start" : 190.98,
+        "suggest" : "skip",
+        "why" : "`.ref.txt` 里是「boyle」（查不出这个词），她读的是「boiled」—— 读对了。**先怀疑扫描认错**，去 marked.png 上核；真是课本印错也不计错，但归因不一样"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.451,
+        "context" : "lived in boyle heights the mural appealed",
+        "end" : 192.54,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "hot",
+        "ref" : "heights",
+        "refIndex" : 210,
+        "start" : 192.12,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.134,
+        "context" : "heights the mural appealed to the people's",
+        "end" : 196.44,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "have",
+        "refIndex" : 213,
+        "start" : 195.9,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.13 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.127,
+        "context" : "heights the mural appealed to the people's",
+        "end" : 198,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "have",
+        "ref" : "appealed",
+        "refIndex" : 213,
+        "start" : 196.44,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.13 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.312,
+        "context" : "the people's mexican heritage or traditions the",
+        "end" : 204.36,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "her",
+        "refIndex" : 218,
+        "start" : 203.58,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.31 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.369,
+        "context" : "the people's mexican heritage or traditions the",
+        "end" : 206.82,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "heart",
+        "ref" : "heritage",
+        "refIndex" : 218,
+        "start" : 204.36,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.971,
+        "context" : "traditions the mural became a symbol of",
+        "end" : 210.24,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "become",
+        "ref" : "became",
+        "refIndex" : 223,
+        "start" : 209.88,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.552,
+        "context" : "a symbol of unity after the success",
+        "end" : 215.28,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "unnatty",
+        "ref" : "unity",
+        "refIndex" : 227,
+        "start" : 212.1,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.316,
+        "context" : "unity after the success of mi abuelita",
+        "end" : 220.86,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "stuckus",
+        "ref" : "success",
+        "refIndex" : 230,
+        "start" : 219.3,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.32 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.43,
+        "context" : "the success of mi abuelita judy started",
+        "end" : 222.6,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "me",
+        "refIndex" : 232,
+        "start" : 221.22,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.229,
+        "context" : "the success of mi abuelita judy started",
+        "end" : 223.92,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "up",
+        "refIndex" : 232,
+        "start" : 222.6,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.23 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.347,
+        "context" : "the success of mi abuelita judy started",
+        "end" : 224.7,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "build",
+        "ref" : "mi",
+        "refIndex" : 232,
+        "start" : 223.92,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.35 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.393,
+        "context" : "success of mi abuelita judy started a",
+        "end" : 226.2,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "later",
+        "ref" : "abuelita",
+        "refIndex" : 233,
+        "start" : 224.7,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.978,
+        "context" : "abuelita judy started a citywide mural program",
+        "end" : 228.42,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "the",
+        "refIndex" : 236,
+        "start" : 227.7,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.519,
+        "context" : "abuelita judy started a citywide mural program",
+        "end" : 229.32,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "city",
+        "ref" : "a",
+        "refIndex" : 236,
+        "start" : 228.42,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.081,
+        "context" : "judy started a citywide mural program she",
+        "end" : 230.76,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "where",
+        "ref" : "citywide",
+        "refIndex" : 237,
+        "start" : 229.32,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.08 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.321,
+        "context" : "started a citywide mural program she hired",
+        "end" : 232.98,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "photo",
+        "ref" : "mural",
+        "refIndex" : 238,
+        "start" : 230.76,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.32 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.453,
+        "context" : "a citywide mural program she hired many",
+        "end" : 235.74,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "photograph",
+        "ref" : "program",
+        "refIndex" : 239,
+        "start" : 232.98,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.247,
+        "context" : "mural program she hired many young people",
+        "end" : 237.66,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "hard",
+        "ref" : "hired",
+        "refIndex" : 241,
+        "start" : 236.28,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.25 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.881,
+        "context" : "paint murals they created about five hundred murals",
+        "end" : 242.58,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "create",
+        "ref" : "created",
+        "refIndex" : 249,
+        "start" : 242.16,
+        "suggest" : "count",
+        "why" : "原文是「created」，读出来少了词尾 -d"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.588,
+        "context" : "created about five hundred murals in los angeles",
+        "end" : 245.82,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "mirror",
+        "ref" : "murals",
+        "refIndex" : 252,
+        "start" : 244.08,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.446,
+        "context" : "los angeles in one thousand nine hundred seventy-six judy helped start",
+        "end" : 248.82,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "nineteen",
+        "refIndex" : 257,
+        "start" : 247.8,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.478,
+        "context" : "los angeles in one thousand nine hundred seventy-six judy helped start",
+        "end" : 252.48,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "nine thousand eight hundred seventy-six",
+        "ref" : "one thousand nine hundred seventy-six",
+        "refIndex" : 257,
+        "start" : 248.82,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.474,
+        "context" : "group called the social and public art",
+        "end" : 257.4,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "so",
+        "refIndex" : 266,
+        "start" : 256.8,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.428,
+        "context" : "group called the social and public art",
+        "end" : 258.6,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "called",
+        "refIndex" : 266,
+        "start" : 257.4,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.166,
+        "context" : "group called the social and public art",
+        "end" : 259.26,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "the",
+        "ref" : "social",
+        "refIndex" : 266,
+        "start" : 258.6,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.17 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.106,
+        "context" : "the social and public art resource center",
+        "end" : 260.94,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "pap",
+        "refIndex" : 268,
+        "start" : 260.1,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.11 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.1,
+        "context" : "the social and public art resource center",
+        "end" : 262.14,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "blake",
+        "refIndex" : 268,
+        "start" : 260.94,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.10 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.293,
+        "context" : "the social and public art resource center",
+        "end" : 263.7,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "archery",
+        "ref" : "public",
+        "refIndex" : 268,
+        "start" : 262.14,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.456,
+        "context" : "social and public art resource center or",
+        "end" : 264.6,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "source",
+        "ref" : "art",
+        "refIndex" : 269,
+        "start" : 263.7,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.148,
+        "context" : "and public art resource center or sparc",
+        "end" : 265.74,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "send",
+        "ref" : "resource",
+        "refIndex" : 270,
+        "start" : 264.6,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.15 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.622,
+        "context" : "resource center or sparc this group makes",
+        "end" : 273.24,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "s",
+        "refIndex" : 273,
+        "start" : 271.02,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.45,
+        "context" : "resource center or sparc this group makes",
+        "end" : 273.72,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "p",
+        "refIndex" : 273,
+        "start" : 273.24,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.532,
+        "context" : "resource center or sparc this group makes",
+        "end" : 274.08,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "a",
+        "refIndex" : 273,
+        "start" : 273.72,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.548,
+        "context" : "resource center or sparc this group makes",
+        "end" : 274.38,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "r",
+        "refIndex" : 273,
+        "start" : 274.08,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.361,
+        "context" : "resource center or sparc this group makes",
+        "end" : 274.98,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "say",
+        "refIndex" : 273,
+        "start" : 274.38,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.458,
+        "context" : "resource center or sparc this group makes",
+        "end" : 275.4,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "this",
+        "refIndex" : 273,
+        "start" : 275.04,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.824,
+        "context" : "resource center or sparc this group makes",
+        "end" : 275.94,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "group",
+        "refIndex" : 273,
+        "start" : 275.4,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.459,
+        "context" : "resource center or sparc this group makes",
+        "end" : 277.2,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "may",
+        "ref" : "sparc",
+        "refIndex" : 273,
+        "start" : 275.94,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑"
+      },
+      {
+        "category" : "function",
+        "confidence" : 0.992,
+        "context" : "art for people of many different cultures",
+        "end" : 282.12,
+        "kind" : "substitute",
+        "label" : "小词",
+        "read" : "for",
+        "ref" : "of",
+        "refIndex" : 280,
+        "start" : 281.22,
+        "suggest" : "count",
+        "why" : "两个都是小词，读串了。这类错扎堆出现就是眼睛跑在手指前面"
+      },
+      {
+        "category" : "omitted",
+        "context" : "many different cultures the murals of mexico",
+        "kind" : "omit",
+        "label" : "漏读",
+        "ref" : "the",
+        "refIndex" : 284,
+        "suggest" : "count",
+        "why" : "整个词跳过去了"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.569,
+        "context" : "different cultures the murals of mexico murals",
+        "end" : 288.36,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "mural",
+        "ref" : "murals",
+        "refIndex" : 285,
+        "start" : 284.7,
+        "suggest" : "count",
+        "why" : "原文是「murals」，读出来少了词尾 -s"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.669,
+        "context" : "murals of mexico murals have been an",
+        "end" : 291.3,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "mirals",
+        "ref" : "murals",
+        "refIndex" : 288,
+        "start" : 289.62,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.267,
+        "context" : "murals have been an art form in",
+        "end" : 293.1,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "uh",
+        "ref" : "an",
+        "refIndex" : 291,
+        "start" : 292.38,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.27 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.338,
+        "context" : "been an art form in mexico for",
+        "end" : 294.96,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "formed",
+        "ref" : "form",
+        "refIndex" : 293,
+        "start" : 294.3,
+        "suggest" : "count",
+        "why" : "原文是「form」，读出来多了个词尾 -ed。识别器对这处只有 0.34 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.315,
+        "context" : "long time the ancient maya painted pictures",
+        "end" : 306,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "the",
+        "ref" : "ancient",
+        "refIndex" : 301,
+        "start" : 301.74,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.32 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.266,
+        "context" : "the ancient maya painted pictures on temple",
+        "end" : 310.5,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "paint",
+        "ref" : "painted",
+        "refIndex" : 303,
+        "start" : 309.66,
+        "suggest" : "count",
+        "why" : "原文是「painted」，读出来少了词尾 -ed。识别器对这处只有 0.27 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.377,
+        "context" : "walls in the 1900s artist diego rivera",
+        "end" : 316.8,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "nineteen",
+        "refIndex" : 310,
+        "start" : 315.6,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.773,
+        "context" : "in the 1900s artist diego rivera jose",
+        "end" : 321.84,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "art",
+        "refIndex" : 311,
+        "start" : 321.48,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.32,
+        "context" : "in the 1900s artist diego rivera jose",
+        "end" : 322.8,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "taste",
+        "refIndex" : 311,
+        "start" : 321.84,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.32 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.241,
+        "context" : "in the 1900s artist diego rivera jose",
+        "end" : 323.16,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "and",
+        "refIndex" : 311,
+        "start" : 322.8,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.24 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.366,
+        "context" : "in the 1900s artist diego rivera jose",
+        "end" : 324.36,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "dry",
+        "refIndex" : 311,
+        "start" : 323.16,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.314,
+        "context" : "in the 1900s artist diego rivera jose",
+        "end" : 327.3,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "gold",
+        "refIndex" : 311,
+        "start" : 324.36,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.31 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.43,
+        "context" : "in the 1900s artist diego rivera jose",
+        "end" : 328.86,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "river",
+        "refIndex" : 311,
+        "start" : 327.3,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.277,
+        "context" : "in the 1900s artist diego rivera jose",
+        "end" : 330.48,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "just",
+        "ref" : "artist",
+        "refIndex" : 311,
+        "start" : 328.86,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.28 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.111,
+        "context" : "the 1900s artist diego rivera jose orozco",
+        "end" : 331.8,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "or",
+        "ref" : "diego",
+        "refIndex" : 312,
+        "start" : 330.48,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.11 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.308,
+        "context" : "1900s artist diego rivera jose orozco and",
+        "end" : 332.88,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "arts",
+        "ref" : "rivera",
+        "refIndex" : 313,
+        "start" : 331.8,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.31 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.254,
+        "context" : "artist diego rivera jose orozco and david",
+        "end" : 333,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "the",
+        "ref" : "jose",
+        "refIndex" : 314,
+        "start" : 332.88,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.25 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.16,
+        "context" : "diego rivera jose orozco and david siqueiros",
+        "end" : 334.2,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "call",
+        "ref" : "orozco",
+        "refIndex" : 315,
+        "start" : 333,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.16 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.521,
+        "context" : "orozco and david siqueiros were famous they",
+        "end" : 338.7,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "quarrels",
+        "ref" : "siqueiros",
+        "refIndex" : 318,
+        "start" : 336.84,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.208,
+        "context" : "siqueiros were famous they were called los",
+        "end" : 341.82,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "they",
+        "refIndex" : 321,
+        "start" : 340.56,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.21 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.124,
+        "context" : "they were called los tres grandes they",
+        "end" : 344.28,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "uh",
+        "refIndex" : 324,
+        "start" : 342.9,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.12 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.704,
+        "context" : "they were called los tres grandes they",
+        "end" : 345.72,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "those",
+        "ref" : "los",
+        "refIndex" : 324,
+        "start" : 344.28,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.589,
+        "context" : "were called los tres grandes they painted",
+        "end" : 346.74,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "trees",
+        "ref" : "tres",
+        "refIndex" : 325,
+        "start" : 345.72,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.4,
+        "context" : "called los tres grandes they painted murals",
+        "end" : 349.86,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "grand",
+        "ref" : "grandes",
+        "refIndex" : 326,
+        "start" : 346.74,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.744,
+        "context" : "murals to show everyday people in mexico",
+        "end" : 354.96,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "everybody",
+        "refIndex" : 332,
+        "start" : 354.12,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.179,
+        "context" : "in mexico judy baca admired their work",
+        "end" : 362.52,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "baka",
+        "refIndex" : 337,
+        "start" : 361.5,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.18 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.099,
+        "context" : "in mexico judy baca admired their work",
+        "end" : 363.18,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "uh",
+        "ref" : "baca",
+        "refIndex" : 337,
+        "start" : 362.52,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑。识别器对这处只有 0.10 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.112,
+        "context" : "mexico judy baca admired their work",
+        "end" : 364.14,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "mad",
+        "ref" : "admired",
+        "refIndex" : 338,
+        "start" : 363.18,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.11 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      }
+    ],
+    "readWordCount" : 389,
+    "refTimes" : [
+      3.18,
+      3.72,
+      4.02,
+      4.2,
+      4.62,
+      4.98,
+      5.64,
+      6.48,
+      6.9,
+      7.5,
+      8.34,
+      9.3,
+      9.6,
+      10.2,
+      10.62,
+      10.92,
+      11.76,
+      13.68,
+      13.92,
+      14.1,
+      14.46,
+      22.26,
+      23.16,
+      23.34,
+      24.3,
+      24.6,
+      25.8,
+      27.96,
+      28.26,
+      28.44,
+      29.64,
+      30.78,
+      31.08,
+      31.74,
+      32.16,
+      33.42,
+      33.54,
+      34.2,
+      34.44,
+      34.8,
+      35.82,
+      38.46,
+      38.94,
+      39.36,
+      39.78,
+      40.44,
+      41.04,
+      42.36,
+      42.72,
+      43.32,
+      43.62,
+      43.98,
+      45.12,
+      45.54,
+      46.14,
+      46.62,
+      48.24,
+      48.6,
+      49.2,
+      49.98,
+      50.22,
+      50.7,
+      53.04,
+      53.4,
+      53.82,
+      54.24,
+      56.76,
+      58.14,
+      58.98,
+      59.4,
+      59.94,
+      60.66,
+      61.56,
+      63.84,
+      64.2,
+      64.68,
+      67.68,
+      69.48,
+      69.96,
+      70.32,
+      70.92,
+      71.16,
+      71.58,
+      72.12,
+      73.38,
+      73.68,
+      74.28,
+      75.36,
+      76.02,
+      76.92,
+      77.64,
+      78.42,
+      78.72,
+      79.26,
+      80.7,
+      81,
+      81.06,
+      81.48,
+      82.62,
+      83.16,
+      84.72,
+      85.2,
+      85.74,
+      86.16,
+      87.54,
+      87.84,
+      88.08,
+      88.44,
+      88.92,
+      94.86,
+      95.04,
+      95.76,
+      97.32,
+      97.98,
+      98.34,
+      100.62,
+      103.74,
+      104.52,
+      105.42,
+      105.78,
+      106.08,
+      110.22,
+      110.58,
+      111.42,
+      111.84,
+      112.62,
+      113.58,
+      113.94,
+      115.2,
+      115.56,
+      117,
+      117.54,
+      120.12,
+      120.72,
+      122.94,
+      125.16,
+      126,
+      126.96,
+      128.16,
+      128.4,
+      131.16,
+      132.96,
+      133.2,
+      134.1,
+      136.38,
+      136.74,
+      137.7,
+      137.94,
+      138.36,
+      140.7,
+      141,
+      141.48,
+      141.78,
+      142.2,
+      142.62,
+      143.7,
+      144.24,
+      145.02,
+      145.68,
+      146.16,
+      146.58,
+      147.78,
+      148.2,
+      148.62,
+      149.04,
+      150.36,
+      151.62,
+      152.64,
+      153.96,
+      154.32,
+      154.44,
+      154.86,
+      158.76,
+      159,
+      159.42,
+      159.66,
+      160.5,
+      160.8,
+      161.4,
+      161.82,
+      162.48,
+      164.76,
+      165.3,
+      166.14,
+      166.62,
+      166.92,
+      167.22,
+      169.02,
+      169.68,
+      171.6,
+      172.38,
+      174,
+      174.96,
+      null,
+      178.02,
+      178.32,
+      179.16,
+      179.82,
+      180.54,
+      180.96,
+      181.32,
+      182.64,
+      183.06,
+      183.6,
+      187.26,
+      188.28,
+      189.06,
+      189.72,
+      190.98,
+      192.12,
+      192.54,
+      193.74,
+      195.9,
+      198,
+      198.9,
+      199.2,
+      201.06,
+      203.58,
+      206.82,
+      207.42,
+      208.2,
+      209.28,
+      209.88,
+      210.24,
+      210.9,
+      211.5,
+      212.1,
+      215.28,
+      218.28,
+      219.3,
+      220.86,
+      221.22,
+      224.7,
+      226.2,
+      227.16,
+      227.7,
+      229.32,
+      230.76,
+      232.98,
+      235.74,
+      236.28,
+      237.66,
+      238.38,
+      238.8,
+      239.1,
+      239.52,
+      240.06,
+      241.2,
+      242.16,
+      242.58,
+      243.12,
+      244.08,
+      245.82,
+      246,
+      246.42,
+      247.02,
+      247.8,
+      252.48,
+      253.74,
+      254.22,
+      254.76,
+      255.12,
+      255.3,
+      255.66,
+      256.26,
+      256.8,
+      259.26,
+      260.1,
+      263.7,
+      264.6,
+      265.74,
+      267.78,
+      270.9,
+      277.2,
+      278.7,
+      279.06,
+      279.66,
+      280.56,
+      280.98,
+      281.22,
+      282.12,
+      282.96,
+      283.56,
+      284.58,
+      null,
+      288.36,
+      288.66,
+      289.56,
+      291.3,
+      291.9,
+      292.38,
+      293.1,
+      294.3,
+      294.96,
+      296.16,
+      297.24,
+      299.82,
+      300.12,
+      300.36,
+      300.96,
+      301.74,
+      306,
+      309.66,
+      310.5,
+      311.58,
+      312.3,
+      313.02,
+      313.62,
+      315.06,
+      315.6,
+      321.48,
+      330.48,
+      331.8,
+      332.88,
+      333,
+      334.2,
+      334.26,
+      336.54,
+      338.7,
+      339.54,
+      340.5,
+      342,
+      342.3,
+      342.9,
+      345.72,
+      346.74,
+      349.86,
+      350.76,
+      352.2,
+      353.22,
+      353.76,
+      354.12,
+      358.74,
+      358.92,
+      359.4,
+      360.24,
+      361.5,
+      363.18,
+      364.14,
+      364.5,
+      365.04
+    ],
+    "refWordCount" : 341,
+    "wcpm" : 44
+  },
+  "pages" : [
+    {
+      "end" : 35.82,
+      "errors" : 4,
+      "extras" : 7,
+      "matched" : 41,
+      "page" : 2,
+      "start" : 3.18,
+      "words" : 41
+    },
+    {
+      "end" : 100.62,
+      "errors" : 9,
+      "extras" : 8,
+      "matched" : 75,
+      "page" : 3,
+      "start" : 38.46,
+      "words" : 75
+    },
+    {
+      "end" : 215.28,
+      "errors" : 27,
+      "extras" : 8,
+      "matched" : 111,
+      "page" : 4,
+      "start" : 103.74,
+      "words" : 112
+    },
+    {
+      "end" : 284.58,
+      "errors" : 17,
+      "extras" : 15,
+      "matched" : 56,
+      "page" : 6,
+      "start" : 218.28,
+      "words" : 56
+    },
+    {
+      "end" : 365.04,
+      "errors" : 18,
+      "extras" : 11,
+      "matched" : 56,
+      "page" : 7,
+      "start" : 288.36,
+      "words" : 57
+    }
+  ],
+  "refSuspects" : [
+
+  ],
+  "reference" : "Judy Baca is an artist from Los Angeles. She paints murals. Murals are paintings on large walls. Judy was born in 1946. Her family is from Mexico. As a young girl, Judy lived with her mother, 2 aunts, and a grandmother.\n\nWhen Judy was 6 years old, she moved to a new neighborhood in Los Angeles. Judy had always talked in Spanish, at the new school, she wasn't allowed to talk in Spanish. Judy had few Mexican-American classmates. At first, it was difficult for Judy to pronounce and understand English words. Her teacher let Judy draw and paint when she couldn't understand the lessons. Judy began to love painting. Later, she studied modern art in college.\n\nAfter college, Judy worked for the city of Los Angeles. She worked in a neighborhood called Boyle Heights. She taught art classes in the parks. Groups of teenagers hung out in the parks. The groups did not get along. Judy asked the teenagers to help her paint a mural. She wanted the teenagers to get along. When the mural was finished, people in the community loved it. The mural was called Mi Abuelita. It showed a Mexican American grandmother. She looked as if she was giving a hug. Many Mexican Americans lived in Boyle Heights. The mural appealed to the people's Mexican heritage or traditions. The mural became a symbol of unity.\n\nAfter the success of Mi Abuelita, Judy started a citywide mural program. She hired many young people to paint murals. They created about 500 murals in Los Angeles. In 1976, Judy helped start a new group called the Social and Public Art Resource Center, or SPARC. This group makes art for people of many different cultures.\n\nThe murals of Mexico. Murals have been an art form in Mexico for a long time. The ancient Maya painted pictures on temple walls. In the 1900s, artist Diego Rivera, Jose Orozco, and David Siqueiros were famous. They were called Los Tres Grandes. They painted murals to show everyday people in Mexico. Judy Baca admired their work.\n",
+  "slug" : "wonders3/u1w3/p2-7",
+  "transcript" : {
+    "alternatives" : [
+      {
+        "end" : 0.96,
+        "start" : 0,
+        "texts" : [
+          "Chapter"
+        ]
+      },
+      {
+        "end" : 1.68,
+        "start" : 0.96,
+        "texts" : [
+          "one, young",
+          "one young"
+        ]
+      },
+      {
+        "end" : 2.22,
+        "start" : 1.68,
+        "texts" : [
+          "Judy"
+        ]
+      },
+      {
+        "end" : 3.18,
+        "start" : 2.22,
+        "texts" : [
+          "Barker, Judy",
+          "Barker Judy"
+        ]
+      },
+      {
+        "end" : 4.02,
+        "start" : 3.18,
+        "texts" : [
+          "Barker is",
+          "Barker, is"
+        ]
+      },
+      {
+        "end" : 5.64,
+        "start" : 4.02,
+        "texts" : [
+          "an artist from Los"
+        ]
+      },
+      {
+        "end" : 6.54,
+        "start" : 5.64,
+        "texts" : [
+          "Angeles.",
+          "Angeles,"
+        ]
+      },
+      {
+        "end" : 6.9,
+        "start" : 6.54,
+        "texts" : [
+          "She",
+          "she"
+        ]
+      },
+      {
+        "end" : 7.5,
+        "start" : 6.9,
+        "texts" : [
+          "paints",
+          "painted"
+        ]
+      },
+      {
+        "end" : 8.4,
+        "start" : 7.5,
+        "texts" : [
+          "murals.",
+          "murals",
+          "murals,"
+        ]
+      },
+      {
+        "end" : 9.3,
+        "start" : 8.4,
+        "texts" : [
+          "Mirals",
+          "Murals",
+          "Miros",
+          "Mirrors",
+          "Murrs"
+        ]
+      },
+      {
+        "end" : 11.82,
+        "start" : 9.3,
+        "texts" : [
+          "are paintings on large walls."
+        ]
+      },
+      {
+        "end" : 14.46,
+        "start" : 11.82,
+        "texts" : [
+          "Judy was born in"
+        ]
+      },
+      {
+        "end" : 20.58,
+        "start" : 14.46,
+        "texts" : [
+          "1966. 1966.",
+          "1966, 1966.",
+          "196-6, 1966."
+        ]
+      },
+      {
+        "end" : 22.56,
+        "start" : 20.58,
+        "texts" : [
+          "46.",
+          "46",
+          "46,"
+        ]
+      },
+      {
+        "end" : 23.16,
+        "start" : 22.56,
+        "texts" : [
+          "Her",
+          "her"
+        ]
+      },
+      {
+        "end" : 23.34,
+        "start" : 23.16,
+        "texts" : [
+          "family"
+        ]
+      },
+      {
+        "end" : 24.3,
+        "start" : 23.34,
+        "texts" : [
+          "is",
+          "Is"
+        ]
+      },
+      {
+        "end" : 24.6,
+        "start" : 24.3,
+        "texts" : [
+          "from"
+        ]
+      },
+      {
+        "end" : 25.86,
+        "start" : 24.6,
+        "texts" : [
+          "Mexico.",
+          "Mexico"
+        ]
+      },
+      {
+        "end" : 33.42,
+        "start" : 25.86,
+        "texts" : [
+          "As a young girl, Judy lived with her mother,"
+        ]
+      },
+      {
+        "end" : 33.54,
+        "start" : 33.42,
+        "texts" : [
+          "2",
+          "to"
+        ]
+      },
+      {
+        "end" : 34.44,
+        "start" : 33.54,
+        "texts" : [
+          "aunt, and",
+          "aunt and",
+          "aunts and",
+          "aunts, and"
+        ]
+      },
+      {
+        "end" : 35.8799375,
+        "start" : 34.44,
+        "texts" : [
+          "a grandmother."
+        ]
+      },
+      {
+        "end" : 40.44,
+        "start" : 35.88,
+        "texts" : [
+          "When Judy was 6 years"
+        ]
+      },
+      {
+        "end" : 42.36,
+        "start" : 40.44,
+        "texts" : [
+          "old, she",
+          "old, She",
+          "old She"
+        ]
+      },
+      {
+        "end" : 46.68,
+        "start" : 42.36,
+        "texts" : [
+          "moved to a new neighborhood in Los Angeles."
+        ]
+      },
+      {
+        "end" : 48.24,
+        "start" : 46.68,
+        "texts" : [
+          "Judy"
+        ]
+      },
+      {
+        "end" : 48.6,
+        "start" : 48.24,
+        "texts" : [
+          "had",
+          "has"
+        ]
+      },
+      {
+        "end" : 50.22,
+        "start" : 48.6,
+        "texts" : [
+          "always talked in",
+          "always talk in",
+          "always tug in",
+          "Always talk in"
+        ]
+      },
+      {
+        "end" : 50.76,
+        "start" : 50.22,
+        "texts" : [
+          "Spanish."
+        ]
+      },
+      {
+        "end" : 54.24,
+        "start" : 50.76,
+        "texts" : [
+          "As the new school,"
+        ]
+      },
+      {
+        "end" : 55.08,
+        "start" : 54.24,
+        "texts" : [
+          "she uh.",
+          "she uh,",
+          "she ah.",
+          "she, uh,"
+        ]
+      },
+      {
+        "end" : 58.98,
+        "start" : 55.08,
+        "texts" : [
+          "She wasn't allowed",
+          "She, wasn't allowed",
+          "She, wasn't, allowed"
+        ]
+      },
+      {
+        "end" : 59.4,
+        "start" : 58.98,
+        "texts" : [
+          "to"
+        ]
+      },
+      {
+        "end" : 60.66,
+        "start" : 59.4,
+        "texts" : [
+          "talk in",
+          "talk, in"
+        ]
+      },
+      {
+        "end" : 61.62,
+        "start" : 60.66,
+        "texts" : [
+          "Spanish.",
+          "Spanish?"
+        ]
+      },
+      {
+        "end" : 63.84,
+        "start" : 61.62,
+        "texts" : [
+          "Duty",
+          "Judy"
+        ]
+      },
+      {
+        "end" : 64.68,
+        "start" : 63.84,
+        "texts" : [
+          "had few"
+        ]
+      },
+      {
+        "end" : 65.64,
+        "start" : 64.68,
+        "texts" : [
+          "Mexi.",
+          "Mexic.",
+          "Mexi,",
+          "Mexic,"
+        ]
+      },
+      {
+        "end" : 67.68,
+        "start" : 65.64,
+        "texts" : [
+          "She can American",
+          "American"
+        ]
+      },
+      {
+        "end" : 69.48,
+        "start" : 67.68,
+        "texts" : [
+          "classmate",
+          "classmates"
+        ]
+      },
+      {
+        "end" : 76.02,
+        "start" : 69.48,
+        "texts" : [
+          "at 1st it was difficult to duty to pronounce and understand"
+        ]
+      },
+      {
+        "end" : 76.92,
+        "start" : 76.02,
+        "texts" : [
+          "English",
+          "the English"
+        ]
+      },
+      {
+        "end" : 77.7,
+        "start" : 76.92,
+        "texts" : [
+          "words."
+        ]
+      },
+      {
+        "end" : 78.72,
+        "start" : 77.7,
+        "texts" : [
+          "Her teacher"
+        ]
+      },
+      {
+        "end" : 80.7,
+        "start" : 78.72,
+        "texts" : [
+          "liked Judy,",
+          "likes Judy,",
+          "like Judy,"
+        ]
+      },
+      {
+        "end" : 81.06,
+        "start" : 80.7,
+        "texts" : [
+          "draw, and",
+          "draw and"
+        ]
+      },
+      {
+        "end" : 81.54,
+        "start" : 81.06,
+        "texts" : [
+          "paint."
+        ]
+      },
+      {
+        "end" : 82.62,
+        "start" : 81.54,
+        "texts" : [
+          "When"
+        ]
+      },
+      {
+        "end" : 84.72,
+        "start" : 82.62,
+        "texts" : [
+          "she, Couldn't",
+          "she couldn't",
+          "she Couldn't",
+          "she, couldn't"
+        ]
+      },
+      {
+        "end" : 85.74,
+        "start" : 84.72,
+        "texts" : [
+          "understand the"
+        ]
+      },
+      {
+        "end" : 86.22,
+        "start" : 85.74,
+        "texts" : [
+          "class.",
+          "class,"
+        ]
+      },
+      {
+        "end" : 88.44,
+        "start" : 86.22,
+        "texts" : [
+          "Judy began to love"
+        ]
+      },
+      {
+        "end" : 90,
+        "start" : 88.44,
+        "texts" : [
+          "painting later.",
+          "painting, later.",
+          "painting. Later.",
+          "painting Later.",
+          "painting. Later?"
+        ]
+      },
+      {
+        "end" : 93.24,
+        "start" : 90,
+        "texts" : [
+          "She be.",
+          "She bit.",
+          "She be,",
+          "She, be,"
+        ]
+      },
+      {
+        "end" : 95.04,
+        "start" : 93.24,
+        "texts" : [
+          "Later, she"
+        ]
+      },
+      {
+        "end" : 97.32,
+        "start" : 95.04,
+        "texts" : [
+          "studied mother",
+          "studied, mother"
+        ]
+      },
+      {
+        "end" : 100.6799375,
+        "start" : 97.32,
+        "texts" : [
+          "art in college.",
+          "art in. College.",
+          "art in, college.",
+          "art in. College?",
+          "arts in. College."
+        ]
+      },
+      {
+        "end" : 104.52,
+        "start" : 100.68,
+        "texts" : [
+          "After college,"
+        ]
+      },
+      {
+        "end" : 105.42,
+        "start" : 104.52,
+        "texts" : [
+          "Judy",
+          "duty"
+        ]
+      },
+      {
+        "end" : 106.08,
+        "start" : 105.42,
+        "texts" : [
+          "worked for"
+        ]
+      },
+      {
+        "end" : 110.22,
+        "start" : 106.08,
+        "texts" : [
+          "the, The",
+          "the The",
+          "the, the",
+          "the. The"
+        ]
+      },
+      {
+        "end" : 112.68,
+        "start" : 110.22,
+        "texts" : [
+          "city of Los Angeles."
+        ]
+      },
+      {
+        "end" : 113.58,
+        "start" : 112.68,
+        "texts" : [
+          "She"
+        ]
+      },
+      {
+        "end" : 113.94,
+        "start" : 113.58,
+        "texts" : [
+          "worked",
+          "work"
+        ]
+      },
+      {
+        "end" : 117.54,
+        "start" : 113.94,
+        "texts" : [
+          "in a neighborhood called"
+        ]
+      },
+      {
+        "end" : 120.84,
+        "start" : 117.54,
+        "texts" : [
+          "boil, boil height.",
+          "boil. Boil height.",
+          "boil, boil, height."
+        ]
+      },
+      {
+        "end" : 126,
+        "start" : 120.84,
+        "texts" : [
+          "She thought art",
+          "She, Thought art",
+          "She, thought art",
+          "She. Thought art"
+        ]
+      },
+      {
+        "end" : 126.48,
+        "start" : 126,
+        "texts" : [
+          "class"
+        ]
+      },
+      {
+        "end" : 128.16,
+        "start" : 126.48,
+        "texts" : [
+          "is in",
+          "is, in"
+        ]
+      },
+      {
+        "end" : 129.84,
+        "start" : 128.16,
+        "texts" : [
+          "the part.",
+          "the."
+        ]
+      },
+      {
+        "end" : 131.22,
+        "start" : 129.84,
+        "texts" : [
+          "Parks.",
+          "Park.",
+          "Parks,",
+          "Parks?",
+          "Parks. Park."
+        ]
+      },
+      {
+        "end" : 133.2,
+        "start" : 131.22,
+        "texts" : [
+          "Group of"
+        ]
+      },
+      {
+        "end" : 136.38,
+        "start" : 133.2,
+        "texts" : [
+          "teenagers hung",
+          "teenagers, hung out, hung",
+          "teenagers hung out, hung",
+          "teenagers hung all hung"
+        ]
+      },
+      {
+        "end" : 137.94,
+        "start" : 136.38,
+        "texts" : [
+          "out in the"
+        ]
+      },
+      {
+        "end" : 138.48,
+        "start" : 137.94,
+        "texts" : [
+          "park.",
+          "pack."
+        ]
+      },
+      {
+        "end" : 140.7,
+        "start" : 138.48,
+        "texts" : [
+          "The",
+          "the"
+        ]
+      },
+      {
+        "end" : 142.2,
+        "start" : 140.7,
+        "texts" : [
+          "group did not get"
+        ]
+      },
+      {
+        "end" : 142.6799375,
+        "start" : 142.2,
+        "texts" : [
+          "along.",
+          "along,",
+          "alone.",
+          "on."
+        ]
+      },
+      {
+        "end" : 143.7,
+        "start" : 142.68,
+        "texts" : [
+          "Judy"
+        ]
+      },
+      {
+        "end" : 145.02,
+        "start" : 143.7,
+        "texts" : [
+          "asked the",
+          "asked The",
+          "asked, the"
+        ]
+      },
+      {
+        "end" : 146.16,
+        "start" : 145.02,
+        "texts" : [
+          "teenager to"
+        ]
+      },
+      {
+        "end" : 146.76,
+        "start" : 146.16,
+        "texts" : [
+          "help.",
+          "help",
+          "help,"
+        ]
+      },
+      {
+        "end" : 147.78,
+        "start" : 146.76,
+        "texts" : [
+          "Her"
+        ]
+      },
+      {
+        "end" : 148.62,
+        "start" : 147.78,
+        "texts" : [
+          "paint the",
+          "paints the",
+          "painted the"
+        ]
+      },
+      {
+        "end" : 149.1,
+        "start" : 148.62,
+        "texts" : [
+          "mirror.",
+          "middle."
+        ]
+      },
+      {
+        "end" : 152.64,
+        "start" : 149.1,
+        "texts" : [
+          "She wanted the",
+          "She, wanted the",
+          "She wanted, the"
+        ]
+      },
+      {
+        "end" : 154.44,
+        "start" : 152.64,
+        "texts" : [
+          "teenager to get"
+        ]
+      },
+      {
+        "end" : 154.92,
+        "start" : 154.44,
+        "texts" : [
+          "along.",
+          "alone.",
+          "along,"
+        ]
+      },
+      {
+        "end" : 159.66,
+        "start" : 154.92,
+        "texts" : [
+          "When the mirror was"
+        ]
+      },
+      {
+        "end" : 160.8,
+        "start" : 159.66,
+        "texts" : [
+          "finished, people",
+          "finished people"
+        ]
+      },
+      {
+        "end" : 161.82,
+        "start" : 160.8,
+        "texts" : [
+          "in the"
+        ]
+      },
+      {
+        "end" : 164.76,
+        "start" : 161.82,
+        "texts" : [
+          "community loved",
+          "community, loved"
+        ]
+      },
+      {
+        "end" : 165.3599375,
+        "start" : 164.76,
+        "texts" : [
+          "it.",
+          "it,"
+        ]
+      },
+      {
+        "end" : 166.14,
+        "start" : 165.36,
+        "texts" : [
+          "The"
+        ]
+      },
+      {
+        "end" : 166.62,
+        "start" : 166.14,
+        "texts" : [
+          "mirror",
+          "mural"
+        ]
+      },
+      {
+        "end" : 167.94,
+        "start" : 166.62,
+        "texts" : [
+          "was called me"
+        ]
+      },
+      {
+        "end" : 169.74,
+        "start" : 167.94,
+        "texts" : [
+          "up late.",
+          "up."
+        ]
+      },
+      {
+        "end" : 171.6,
+        "start" : 169.74,
+        "texts" : [
+          "It"
+        ]
+      },
+      {
+        "end" : 174,
+        "start" : 171.6,
+        "texts" : [
+          "showed um,",
+          "showed, um,"
+        ]
+      },
+      {
+        "end" : 178.08,
+        "start" : 174,
+        "texts" : [
+          "Mexican grandmother.",
+          "Mexican grandmother,",
+          "Mexican, American grandmother,"
+        ]
+      },
+      {
+        "end" : 178.32,
+        "start" : 178.08,
+        "texts" : [
+          "She",
+          "she"
+        ]
+      },
+      {
+        "end" : 180.54,
+        "start" : 178.32,
+        "texts" : [
+          "looked as if"
+        ]
+      },
+      {
+        "end" : 180.96,
+        "start" : 180.54,
+        "texts" : [
+          "she",
+          "She"
+        ]
+      },
+      {
+        "end" : 182.64,
+        "start" : 180.96,
+        "texts" : [
+          "was getting",
+          "was, getting"
+        ]
+      },
+      {
+        "end" : 183.06,
+        "start" : 182.64,
+        "texts" : [
+          "a"
+        ]
+      },
+      {
+        "end" : 183.66,
+        "start" : 183.06,
+        "texts" : [
+          "hug.",
+          "hug,"
+        ]
+      },
+      {
+        "end" : 189.72,
+        "start" : 183.66,
+        "texts" : [
+          "Manny Maxi can, American lived"
+        ]
+      },
+      {
+        "end" : 192.12,
+        "start" : 189.72,
+        "texts" : [
+          "in, boiled",
+          "in boiled",
+          "in, boil",
+          "in boil"
+        ]
+      },
+      {
+        "end" : 192.66,
+        "start" : 192.12,
+        "texts" : [
+          "hot."
+        ]
+      },
+      {
+        "end" : 204.36,
+        "start" : 192.66,
+        "texts" : [
+          "The mural, have, have, to the people's, Mexican, her,"
+        ]
+      },
+      {
+        "end" : 206.82,
+        "start" : 204.36,
+        "texts" : [
+          "heart,",
+          "her,",
+          "heart rate,"
+        ]
+      },
+      {
+        "end" : 208.26,
+        "start" : 206.82,
+        "texts" : [
+          "or traditions.",
+          "traditions.",
+          "or traditions,"
+        ]
+      },
+      {
+        "end" : 211.5,
+        "start" : 208.26,
+        "texts" : [
+          "The mural become a symbol"
+        ]
+      },
+      {
+        "end" : 215.34,
+        "start" : 211.5,
+        "texts" : [
+          "of unnatty.",
+          "of unnat.",
+          "of unnate.",
+          "of Unnat.",
+          "of. Unnat."
+        ]
+      },
+      {
+        "end" : 229.32,
+        "start" : 215.34,
+        "texts" : [
+          "After the, Stuckus of me, up, build later, Judy started the city,"
+        ]
+      },
+      {
+        "end" : 236.28,
+        "start" : 229.32,
+        "texts" : [
+          "where, photo, photograph, she,",
+          "right? Photograph, she,",
+          "where, photo, photograph she,"
+        ]
+      },
+      {
+        "end" : 239.52,
+        "start" : 236.28,
+        "texts" : [
+          "hard, many young people to"
+        ]
+      },
+      {
+        "end" : 241.26,
+        "start" : 239.52,
+        "texts" : [
+          "paint murals.",
+          "paint, murals.",
+          "paint, murals,"
+        ]
+      },
+      {
+        "end" : 262.14,
+        "start" : 241.26,
+        "texts" : [
+          "They create about 500 mirror in Los Angeles in 19, 9876, Judy helped start a new group called the so called the, and pap, Blake,"
+        ]
+      },
+      {
+        "end" : 263.7,
+        "start" : 262.14,
+        "texts" : [
+          "Archery",
+          "archery"
+        ]
+      },
+      {
+        "end" : 266.76,
+        "start" : 263.7,
+        "texts" : [
+          "source, send,",
+          "source, sent,",
+          "source."
+        ]
+      },
+      {
+        "end" : 271.02,
+        "start" : 266.76,
+        "texts" : [
+          "Center, or...",
+          "Center, or, Sarah.",
+          "Center or...",
+          "Center, or, Sarah?",
+          "Center, or... Sarah."
+        ]
+      },
+      {
+        "end" : 275.0399375,
+        "start" : 271.02,
+        "texts" : [
+          "S P A R say.",
+          "S P A R C.",
+          "S-P-A-R-C.",
+          "S-P-A-R-C?",
+          "S-P-A-R, say."
+        ]
+      },
+      {
+        "end" : 275.94,
+        "start" : 275.04,
+        "texts" : [
+          "This group"
+        ]
+      },
+      {
+        "end" : 278.7,
+        "start" : 275.94,
+        "texts" : [
+          "may, This",
+          "may. This",
+          "may This",
+          "may, this"
+        ]
+      },
+      {
+        "end" : 284.7,
+        "start" : 278.7,
+        "texts" : [
+          "group makes art for people for many different cultures."
+        ]
+      },
+      {
+        "end" : 288.36,
+        "start" : 284.7,
+        "texts" : [
+          "Mural",
+          "Mirror",
+          "Miro",
+          "Miral"
+        ]
+      },
+      {
+        "end" : 288.66,
+        "start" : 288.36,
+        "texts" : [
+          "of"
+        ]
+      },
+      {
+        "end" : 289.62,
+        "start" : 288.66,
+        "texts" : [
+          "Mexico.",
+          "Mexico,"
+        ]
+      },
+      {
+        "end" : 291.3,
+        "start" : 289.62,
+        "texts" : [
+          "Mirals",
+          "Murals"
+        ]
+      },
+      {
+        "end" : 294.3,
+        "start" : 291.3,
+        "texts" : [
+          "have been, uh, art"
+        ]
+      },
+      {
+        "end" : 296.16,
+        "start" : 294.3,
+        "texts" : [
+          "formed, in",
+          "formed in",
+          "form, in"
+        ]
+      },
+      {
+        "end" : 297.3,
+        "start" : 296.16,
+        "texts" : [
+          "Mexico."
+        ]
+      },
+      {
+        "end" : 301.74,
+        "start" : 297.3,
+        "texts" : [
+          "For a long time, the..."
+        ]
+      },
+      {
+        "end" : 306.12,
+        "start" : 301.74,
+        "texts" : [
+          "The...",
+          "The... Arson.",
+          "The... arson."
+        ]
+      },
+      {
+        "end" : 332.88,
+        "start" : 306.12,
+        "texts" : [
+          "Maya, paint, pictures on temple walls, in the 19, 1900s, art taste, and dry, gold, river, just, or, arts,"
+        ]
+      },
+      {
+        "end" : 334.2,
+        "start" : 332.88,
+        "texts" : [
+          "the call,",
+          "the,"
+        ]
+      },
+      {
+        "end" : 334.26,
+        "start" : 334.2,
+        "texts" : [
+          "and"
+        ]
+      },
+      {
+        "end" : 336.84,
+        "start" : 334.26,
+        "texts" : [
+          "David,",
+          "David.",
+          "dive with,",
+          "that, did,"
+        ]
+      },
+      {
+        "end" : 339.54,
+        "start" : 336.84,
+        "texts" : [
+          "Quarrels were",
+          "C quarrels were",
+          "C Quarrels were",
+          "Quarrels, were"
+        ]
+      },
+      {
+        "end" : 340.56,
+        "start" : 339.54,
+        "texts" : [
+          "famous."
+        ]
+      },
+      {
+        "end" : 342.3,
+        "start" : 340.56,
+        "texts" : [
+          "They, they were"
+        ]
+      },
+      {
+        "end" : 342.9,
+        "start" : 342.3,
+        "texts" : [
+          "called,",
+          "called."
+        ]
+      },
+      {
+        "end" : 346.74,
+        "start" : 342.9,
+        "texts" : [
+          "uh, those trees,",
+          "Those trees,",
+          "those trees,"
+        ]
+      },
+      {
+        "end" : 349.92,
+        "start" : 346.74,
+        "texts" : [
+          "grand.",
+          "grand,"
+        ]
+      },
+      {
+        "end" : 350.76,
+        "start" : 349.92,
+        "texts" : [
+          "They",
+          "they"
+        ]
+      },
+      {
+        "end" : 353.22,
+        "start" : 350.76,
+        "texts" : [
+          "painted murals",
+          "painted, murals"
+        ]
+      },
+      {
+        "end" : 354.12,
+        "start" : 353.22,
+        "texts" : [
+          "to show"
+        ]
+      },
+      {
+        "end" : 355.02,
+        "start" : 354.12,
+        "texts" : [
+          "everybody.",
+          "everybody,"
+        ]
+      },
+      {
+        "end" : 358.92,
+        "start" : 355.02,
+        "texts" : [
+          "Every day, people",
+          "Every day people",
+          "Everyday, people",
+          "Everyday people"
+        ]
+      },
+      {
+        "end" : 359.4,
+        "start" : 358.92,
+        "texts" : [
+          "in"
+        ]
+      },
+      {
+        "end" : 360.2999375,
+        "start" : 359.4,
+        "texts" : [
+          "Mexico.",
+          "Mexico,"
+        ]
+      },
+      {
+        "end" : 361.5,
+        "start" : 360.3,
+        "texts" : [
+          "Judy"
+        ]
+      },
+      {
+        "end" : 362.52,
+        "start" : 361.5,
+        "texts" : [
+          "Baka,",
+          "Baka, uh,"
+        ]
+      },
+      {
+        "end" : 363.18,
+        "start" : 362.52,
+        "texts" : [
+          "uh,"
+        ]
+      },
+      {
+        "end" : 364.5,
+        "start" : 363.18,
+        "texts" : [
+          "mad, their",
+          "mad their",
+          "uh, the"
+        ]
+      },
+      {
+        "end" : 365.1,
+        "start" : 364.5,
+        "texts" : [
+          "work.",
+          "rock.",
+          "work"
+        ]
+      }
+    ],
+    "contextPrimed" : true,
+    "locale" : "en-US",
+    "runs" : [
+      {
+        "confidence" : 0.984,
+        "end" : 0.96,
+        "start" : 0,
+        "text" : "Chapter"
+      },
+      {
+        "confidence" : 0.586,
+        "end" : 1.5,
+        "start" : 0.96,
+        "text" : " one,"
+      },
+      {
+        "confidence" : 0.76,
+        "end" : 1.68,
+        "start" : 1.5,
+        "text" : " young"
+      },
+      {
+        "confidence" : 0.95,
+        "end" : 2.22,
+        "start" : 1.68,
+        "text" : " Judy"
+      },
+      {
+        "confidence" : 0.513,
+        "end" : 2.94,
+        "start" : 2.22,
+        "text" : " Barker,"
+      },
+      {
+        "confidence" : 0.95,
+        "end" : 3.18,
+        "start" : 2.94,
+        "text" : " Judy"
+      },
+      {
+        "confidence" : 0.388,
+        "end" : 3.72,
+        "start" : 3.18,
+        "text" : " Barker"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 4.02,
+        "start" : 3.72,
+        "text" : " is"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 4.2,
+        "start" : 4.02,
+        "text" : " an"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 4.62,
+        "start" : 4.2,
+        "text" : " artist"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 4.98,
+        "start" : 4.62,
+        "text" : " from"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 5.64,
+        "start" : 4.98,
+        "text" : " Los"
+      },
+      {
+        "confidence" : 0.819,
+        "end" : 6.48,
+        "start" : 5.64,
+        "text" : " Angeles."
+      },
+      {
+        "confidence" : 0.669,
+        "end" : 6.9,
+        "start" : 6.54,
+        "text" : " She"
+      },
+      {
+        "confidence" : 0.845,
+        "end" : 7.5,
+        "start" : 6.9,
+        "text" : " paints"
+      },
+      {
+        "confidence" : 0.816,
+        "end" : 8.34,
+        "start" : 7.5,
+        "text" : " murals."
+      },
+      {
+        "confidence" : 0.512,
+        "end" : 9.3,
+        "start" : 8.4,
+        "text" : " Mirals"
+      },
+      {
+        "confidence" : 0.988,
+        "end" : 9.6,
+        "start" : 9.3,
+        "text" : " are"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 10.2,
+        "start" : 9.6,
+        "text" : " paintings"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 10.62,
+        "start" : 10.2,
+        "text" : " on"
+      },
+      {
+        "confidence" : 0.986,
+        "end" : 10.92,
+        "start" : 10.62,
+        "text" : " large"
+      },
+      {
+        "confidence" : 0.878,
+        "end" : 11.76,
+        "start" : 10.92,
+        "text" : " walls."
+      },
+      {
+        "confidence" : 0.967,
+        "end" : 13.68,
+        "start" : 11.82,
+        "text" : " Judy"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 13.92,
+        "start" : 13.68,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 14.1,
+        "start" : 13.92,
+        "text" : " born"
+      },
+      {
+        "confidence" : 0.999,
+        "end" : 14.46,
+        "start" : 14.1,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.675,
+        "end" : 17.64,
+        "start" : 14.46,
+        "text" : " 1966."
+      },
+      {
+        "confidence" : 0.564,
+        "end" : 20.58,
+        "start" : 17.64,
+        "text" : " 1966."
+      },
+      {
+        "confidence" : 0.427,
+        "end" : 22.26,
+        "start" : 20.58,
+        "text" : " 46."
+      },
+      {
+        "confidence" : 0.731,
+        "end" : 23.16,
+        "start" : 22.56,
+        "text" : " Her"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 23.34,
+        "start" : 23.16,
+        "text" : " family"
+      },
+      {
+        "confidence" : 0.963,
+        "end" : 24.3,
+        "start" : 23.34,
+        "text" : " is"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 24.6,
+        "start" : 24.3,
+        "text" : " from"
+      },
+      {
+        "confidence" : 0.72,
+        "end" : 25.8,
+        "start" : 24.6,
+        "text" : " Mexico."
+      },
+      {
+        "confidence" : 0.843,
+        "end" : 27.96,
+        "start" : 25.86,
+        "text" : " As"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 28.26,
+        "start" : 27.96,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 28.44,
+        "start" : 28.26,
+        "text" : " young"
+      },
+      {
+        "confidence" : 0.431,
+        "end" : 29.64,
+        "start" : 28.44,
+        "text" : " girl,"
+      },
+      {
+        "confidence" : 0.157,
+        "end" : 30.78,
+        "start" : 29.64,
+        "text" : " Judy"
+      },
+      {
+        "confidence" : 0.973,
+        "end" : 31.08,
+        "start" : 30.78,
+        "text" : " lived"
+      },
+      {
+        "confidence" : 0.95,
+        "end" : 31.74,
+        "start" : 31.08,
+        "text" : " with"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 32.16,
+        "start" : 31.74,
+        "text" : " her"
+      },
+      {
+        "confidence" : 0.629,
+        "end" : 33.42,
+        "start" : 32.16,
+        "text" : " mother,"
+      },
+      {
+        "confidence" : 0.529,
+        "end" : 33.54,
+        "start" : 33.42,
+        "text" : " 2"
+      },
+      {
+        "confidence" : 0.486,
+        "end" : 34.2,
+        "start" : 33.54,
+        "text" : " aunt,"
+      },
+      {
+        "confidence" : 0.941,
+        "end" : 34.44,
+        "start" : 34.2,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.725,
+        "end" : 34.8,
+        "start" : 34.44,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.967,
+        "end" : 35.82,
+        "start" : 34.8,
+        "text" : " grandmother."
+      },
+      {
+        "confidence" : 0.935,
+        "end" : 38.46,
+        "start" : 35.88,
+        "text" : " When"
+      },
+      {
+        "confidence" : 0.8,
+        "end" : 38.94,
+        "start" : 38.46,
+        "text" : " Judy"
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 39.36,
+        "start" : 38.94,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.961,
+        "end" : 39.78,
+        "start" : 39.36,
+        "text" : " 6"
+      },
+      {
+        "confidence" : 0.947,
+        "end" : 40.44,
+        "start" : 39.78,
+        "text" : " years"
+      },
+      {
+        "confidence" : 0.678,
+        "end" : 41.04,
+        "start" : 40.44,
+        "text" : " old,"
+      },
+      {
+        "confidence" : 0.4,
+        "end" : 42.36,
+        "start" : 41.04,
+        "text" : " she"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 42.72,
+        "start" : 42.36,
+        "text" : " moved"
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 43.32,
+        "start" : 42.72,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 43.62,
+        "start" : 43.32,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 43.98,
+        "start" : 43.62,
+        "text" : " new"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 45.12,
+        "start" : 43.98,
+        "text" : " neighborhood"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 45.54,
+        "start" : 45.12,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 46.14,
+        "start" : 45.54,
+        "text" : " Los"
+      },
+      {
+        "confidence" : 0.803,
+        "end" : 46.62,
+        "start" : 46.14,
+        "text" : " Angeles."
+      },
+      {
+        "confidence" : 0.905,
+        "end" : 48.24,
+        "start" : 46.68,
+        "text" : " Judy"
+      },
+      {
+        "confidence" : 0.864,
+        "end" : 48.6,
+        "start" : 48.24,
+        "text" : " had"
+      },
+      {
+        "confidence" : 0.95,
+        "end" : 49.2,
+        "start" : 48.6,
+        "text" : " always"
+      },
+      {
+        "confidence" : 0.262,
+        "end" : 49.98,
+        "start" : 49.2,
+        "text" : " talked"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 50.22,
+        "start" : 49.98,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.948,
+        "end" : 50.7,
+        "start" : 50.22,
+        "text" : " Spanish."
+      },
+      {
+        "confidence" : 0.412,
+        "end" : 53.04,
+        "start" : 50.76,
+        "text" : " As"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 53.4,
+        "start" : 53.04,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 53.82,
+        "start" : 53.4,
+        "text" : " new"
+      },
+      {
+        "confidence" : 0.612,
+        "end" : 54.24,
+        "start" : 53.82,
+        "text" : " school,"
+      },
+      {
+        "confidence" : 0.942,
+        "end" : 54.42,
+        "start" : 54.24,
+        "text" : " she"
+      },
+      {
+        "confidence" : 0.407,
+        "end" : 55.02,
+        "start" : 54.42,
+        "text" : " uh."
+      },
+      {
+        "confidence" : 0.617,
+        "end" : 56.76,
+        "start" : 55.08,
+        "text" : " She"
+      },
+      {
+        "confidence" : 0.955,
+        "end" : 58.14,
+        "start" : 56.76,
+        "text" : " wasn't"
+      },
+      {
+        "confidence" : 0.975,
+        "end" : 58.98,
+        "start" : 58.14,
+        "text" : " allowed"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 59.4,
+        "start" : 58.98,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.977,
+        "end" : 59.94,
+        "start" : 59.4,
+        "text" : " talk"
+      },
+      {
+        "confidence" : 0.931,
+        "end" : 60.66,
+        "start" : 59.94,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.935,
+        "end" : 61.56,
+        "start" : 60.66,
+        "text" : " Spanish."
+      },
+      {
+        "confidence" : 0.385,
+        "end" : 63.84,
+        "start" : 61.62,
+        "text" : " Duty"
+      },
+      {
+        "confidence" : 0.98,
+        "end" : 64.2,
+        "start" : 63.84,
+        "text" : " had"
+      },
+      {
+        "confidence" : 0.829,
+        "end" : 64.68,
+        "start" : 64.2,
+        "text" : " few"
+      },
+      {
+        "confidence" : 0.398,
+        "end" : 65.58,
+        "start" : 64.68,
+        "text" : " Mexi."
+      },
+      {
+        "confidence" : 0.081,
+        "end" : 66.54,
+        "start" : 65.64,
+        "text" : " She"
+      },
+      {
+        "confidence" : 0.08,
+        "end" : 66.96,
+        "start" : 66.54,
+        "text" : " can"
+      },
+      {
+        "confidence" : 0.822,
+        "end" : 67.68,
+        "start" : 66.96,
+        "text" : " American"
+      },
+      {
+        "confidence" : 0.831,
+        "end" : 69.48,
+        "start" : 67.68,
+        "text" : " classmate"
+      },
+      {
+        "confidence" : 0.744,
+        "end" : 69.96,
+        "start" : 69.48,
+        "text" : " at"
+      },
+      {
+        "confidence" : 0.745,
+        "end" : 70.32,
+        "start" : 69.96,
+        "text" : " 1st"
+      },
+      {
+        "confidence" : 0.746,
+        "end" : 70.92,
+        "start" : 70.32,
+        "text" : " it"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 71.16,
+        "start" : 70.92,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 71.58,
+        "start" : 71.16,
+        "text" : " difficult"
+      },
+      {
+        "confidence" : 0.86,
+        "end" : 72.12,
+        "start" : 71.58,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.641,
+        "end" : 73.38,
+        "start" : 72.12,
+        "text" : " duty"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 73.68,
+        "start" : 73.38,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 74.28,
+        "start" : 73.68,
+        "text" : " pronounce"
+      },
+      {
+        "confidence" : 0.94,
+        "end" : 75.36,
+        "start" : 74.28,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 76.02,
+        "start" : 75.36,
+        "text" : " understand"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 76.92,
+        "start" : 76.02,
+        "text" : " English"
+      },
+      {
+        "confidence" : 0.852,
+        "end" : 77.64,
+        "start" : 76.92,
+        "text" : " words."
+      },
+      {
+        "confidence" : 0.677,
+        "end" : 78.42,
+        "start" : 77.7,
+        "text" : " Her"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 78.72,
+        "start" : 78.42,
+        "text" : " teacher"
+      },
+      {
+        "confidence" : 0.123,
+        "end" : 79.26,
+        "start" : 78.72,
+        "text" : " liked"
+      },
+      {
+        "confidence" : 0.726,
+        "end" : 80.7,
+        "start" : 79.26,
+        "text" : " Judy,"
+      },
+      {
+        "confidence" : 0.485,
+        "end" : 81,
+        "start" : 80.7,
+        "text" : " draw,"
+      },
+      {
+        "confidence" : 0.986,
+        "end" : 81.06,
+        "start" : 81,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.793,
+        "end" : 81.48,
+        "start" : 81.06,
+        "text" : " paint."
+      },
+      {
+        "confidence" : 0.542,
+        "end" : 82.62,
+        "start" : 81.54,
+        "text" : " When"
+      },
+      {
+        "confidence" : 0.486,
+        "end" : 83.16,
+        "start" : 82.62,
+        "text" : " she,"
+      },
+      {
+        "confidence" : 0.698,
+        "end" : 84.72,
+        "start" : 83.16,
+        "text" : " Couldn't"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 85.2,
+        "start" : 84.72,
+        "text" : " understand"
+      },
+      {
+        "confidence" : 0.965,
+        "end" : 85.74,
+        "start" : 85.2,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.788,
+        "end" : 86.16,
+        "start" : 85.74,
+        "text" : " class."
+      },
+      {
+        "confidence" : 0.924,
+        "end" : 87.54,
+        "start" : 86.22,
+        "text" : " Judy"
+      },
+      {
+        "confidence" : 0.941,
+        "end" : 87.84,
+        "start" : 87.54,
+        "text" : " began"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 88.08,
+        "start" : 87.84,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.981,
+        "end" : 88.44,
+        "start" : 88.08,
+        "text" : " love"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 88.92,
+        "start" : 88.44,
+        "text" : " painting"
+      },
+      {
+        "confidence" : 0.834,
+        "end" : 89.94,
+        "start" : 88.92,
+        "text" : " later."
+      },
+      {
+        "confidence" : 0.892,
+        "end" : 92.34,
+        "start" : 90,
+        "text" : " She"
+      },
+      {
+        "confidence" : 0.297,
+        "end" : 93.18,
+        "start" : 92.34,
+        "text" : " be."
+      },
+      {
+        "confidence" : 0.677,
+        "end" : 94.86,
+        "start" : 93.24,
+        "text" : " Later,"
+      },
+      {
+        "confidence" : 0.973,
+        "end" : 95.04,
+        "start" : 94.86,
+        "text" : " she"
+      },
+      {
+        "confidence" : 0.808,
+        "end" : 95.76,
+        "start" : 95.04,
+        "text" : " studied"
+      },
+      {
+        "confidence" : 0.78,
+        "end" : 97.32,
+        "start" : 95.76,
+        "text" : " mother"
+      },
+      {
+        "confidence" : 0.977,
+        "end" : 97.98,
+        "start" : 97.32,
+        "text" : " art"
+      },
+      {
+        "confidence" : 0.881,
+        "end" : 98.34,
+        "start" : 97.98,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.537,
+        "end" : 100.62,
+        "start" : 98.34,
+        "text" : " college."
+      },
+      {
+        "confidence" : 0.928,
+        "end" : 103.74,
+        "start" : 100.68,
+        "text" : " After"
+      },
+      {
+        "confidence" : 0.783,
+        "end" : 104.52,
+        "start" : 103.74,
+        "text" : " college,"
+      },
+      {
+        "confidence" : 0.607,
+        "end" : 105.42,
+        "start" : 104.52,
+        "text" : " Judy"
+      },
+      {
+        "confidence" : 0.959,
+        "end" : 105.78,
+        "start" : 105.42,
+        "text" : " worked"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 106.08,
+        "start" : 105.78,
+        "text" : " for"
+      },
+      {
+        "confidence" : 0.538,
+        "end" : 106.56,
+        "start" : 106.08,
+        "text" : " the,"
+      },
+      {
+        "confidence" : 0.916,
+        "end" : 110.22,
+        "start" : 106.56,
+        "text" : " The"
+      },
+      {
+        "confidence" : 0.941,
+        "end" : 110.58,
+        "start" : 110.22,
+        "text" : " city"
+      },
+      {
+        "confidence" : 0.966,
+        "end" : 111.42,
+        "start" : 110.58,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 111.84,
+        "start" : 111.42,
+        "text" : " Los"
+      },
+      {
+        "confidence" : 0.627,
+        "end" : 112.62,
+        "start" : 111.84,
+        "text" : " Angeles."
+      },
+      {
+        "confidence" : 0.373,
+        "end" : 113.58,
+        "start" : 112.68,
+        "text" : " She"
+      },
+      {
+        "confidence" : 0.183,
+        "end" : 113.94,
+        "start" : 113.58,
+        "text" : " worked"
+      },
+      {
+        "confidence" : 0.643,
+        "end" : 115.2,
+        "start" : 113.94,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.665,
+        "end" : 115.56,
+        "start" : 115.2,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.932,
+        "end" : 117,
+        "start" : 115.56,
+        "text" : " neighborhood"
+      },
+      {
+        "confidence" : 0.963,
+        "end" : 117.54,
+        "start" : 117,
+        "text" : " called"
+      },
+      {
+        "confidence" : 0.305,
+        "end" : 119.22,
+        "start" : 117.54,
+        "text" : " boil,"
+      },
+      {
+        "confidence" : 0.286,
+        "end" : 120.12,
+        "start" : 119.22,
+        "text" : " boil"
+      },
+      {
+        "confidence" : 0.64,
+        "end" : 120.72,
+        "start" : 120.12,
+        "text" : " height."
+      },
+      {
+        "confidence" : 0.604,
+        "end" : 122.94,
+        "start" : 120.84,
+        "text" : " She"
+      },
+      {
+        "confidence" : 0.326,
+        "end" : 125.16,
+        "start" : 122.94,
+        "text" : " thought"
+      },
+      {
+        "confidence" : 0.934,
+        "end" : 126,
+        "start" : 125.16,
+        "text" : " art"
+      },
+      {
+        "confidence" : 0.902,
+        "end" : 126.48,
+        "start" : 126,
+        "text" : " class"
+      },
+      {
+        "confidence" : 0.921,
+        "end" : 126.96,
+        "start" : 126.48,
+        "text" : " is"
+      },
+      {
+        "confidence" : 0.802,
+        "end" : 128.16,
+        "start" : 126.96,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.948,
+        "end" : 128.4,
+        "start" : 128.16,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.424,
+        "end" : 129.72,
+        "start" : 128.4,
+        "text" : " part."
+      },
+      {
+        "confidence" : 0.61,
+        "end" : 131.16,
+        "start" : 129.84,
+        "text" : " Parks."
+      },
+      {
+        "confidence" : 0.627,
+        "end" : 132.96,
+        "start" : 131.22,
+        "text" : " Group"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 133.2,
+        "start" : 132.96,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.9,
+        "end" : 134.1,
+        "start" : 133.2,
+        "text" : " teenagers"
+      },
+      {
+        "confidence" : 0.838,
+        "end" : 136.38,
+        "start" : 134.1,
+        "text" : " hung"
+      },
+      {
+        "confidence" : 0.914,
+        "end" : 136.74,
+        "start" : 136.38,
+        "text" : " out"
+      },
+      {
+        "confidence" : 0.9,
+        "end" : 137.7,
+        "start" : 136.74,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 137.94,
+        "start" : 137.7,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.767,
+        "end" : 138.36,
+        "start" : 137.94,
+        "text" : " park."
+      },
+      {
+        "confidence" : 0.939,
+        "end" : 140.7,
+        "start" : 138.48,
+        "text" : " The"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 141,
+        "start" : 140.7,
+        "text" : " group"
+      },
+      {
+        "confidence" : 0.963,
+        "end" : 141.48,
+        "start" : 141,
+        "text" : " did"
+      },
+      {
+        "confidence" : 0.986,
+        "end" : 141.78,
+        "start" : 141.48,
+        "text" : " not"
+      },
+      {
+        "confidence" : 0.955,
+        "end" : 142.2,
+        "start" : 141.78,
+        "text" : " get"
+      },
+      {
+        "confidence" : 0.756,
+        "end" : 142.62,
+        "start" : 142.2,
+        "text" : " along."
+      },
+      {
+        "confidence" : 0.951,
+        "end" : 143.7,
+        "start" : 142.68,
+        "text" : " Judy"
+      },
+      {
+        "confidence" : 0.98,
+        "end" : 144.24,
+        "start" : 143.7,
+        "text" : " asked"
+      },
+      {
+        "confidence" : 0.917,
+        "end" : 145.02,
+        "start" : 144.24,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.748,
+        "end" : 145.68,
+        "start" : 145.02,
+        "text" : " teenager"
+      },
+      {
+        "confidence" : 0.985,
+        "end" : 146.16,
+        "start" : 145.68,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.552,
+        "end" : 146.58,
+        "start" : 146.16,
+        "text" : " help."
+      },
+      {
+        "confidence" : 0.585,
+        "end" : 147.78,
+        "start" : 146.76,
+        "text" : " Her"
+      },
+      {
+        "confidence" : 0.96,
+        "end" : 148.2,
+        "start" : 147.78,
+        "text" : " paint"
+      },
+      {
+        "confidence" : 0.923,
+        "end" : 148.62,
+        "start" : 148.2,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.784,
+        "end" : 149.04,
+        "start" : 148.62,
+        "text" : " mirror."
+      },
+      {
+        "confidence" : 0.806,
+        "end" : 150.36,
+        "start" : 149.1,
+        "text" : " She"
+      },
+      {
+        "confidence" : 0.681,
+        "end" : 151.62,
+        "start" : 150.36,
+        "text" : " wanted"
+      },
+      {
+        "confidence" : 0.915,
+        "end" : 152.64,
+        "start" : 151.62,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 153.96,
+        "start" : 152.64,
+        "text" : " teenager"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 154.32,
+        "start" : 153.96,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 154.44,
+        "start" : 154.32,
+        "text" : " get"
+      },
+      {
+        "confidence" : 0.965,
+        "end" : 154.86,
+        "start" : 154.44,
+        "text" : " along."
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 158.76,
+        "start" : 154.92,
+        "text" : " When"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 159,
+        "start" : 158.76,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.958,
+        "end" : 159.42,
+        "start" : 159,
+        "text" : " mirror"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 159.66,
+        "start" : 159.42,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.614,
+        "end" : 160.5,
+        "start" : 159.66,
+        "text" : " finished,"
+      },
+      {
+        "confidence" : 0.788,
+        "end" : 160.8,
+        "start" : 160.5,
+        "text" : " people"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 161.4,
+        "start" : 160.8,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 161.82,
+        "start" : 161.4,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 162.48,
+        "start" : 161.82,
+        "text" : " community"
+      },
+      {
+        "confidence" : 0.916,
+        "end" : 164.76,
+        "start" : 162.48,
+        "text" : " loved"
+      },
+      {
+        "confidence" : 0.871,
+        "end" : 165.3,
+        "start" : 164.76,
+        "text" : " it."
+      },
+      {
+        "confidence" : 0.739,
+        "end" : 166.14,
+        "start" : 165.36,
+        "text" : " The"
+      },
+      {
+        "confidence" : 0.519,
+        "end" : 166.62,
+        "start" : 166.14,
+        "text" : " mirror"
+      },
+      {
+        "confidence" : 0.978,
+        "end" : 166.92,
+        "start" : 166.62,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.977,
+        "end" : 167.22,
+        "start" : 166.92,
+        "text" : " called"
+      },
+      {
+        "confidence" : 0.94,
+        "end" : 167.94,
+        "start" : 167.22,
+        "text" : " me"
+      },
+      {
+        "confidence" : 0.885,
+        "end" : 169.02,
+        "start" : 167.94,
+        "text" : " up"
+      },
+      {
+        "confidence" : 0.528,
+        "end" : 169.68,
+        "start" : 169.02,
+        "text" : " late."
+      },
+      {
+        "confidence" : 0.499,
+        "end" : 171.6,
+        "start" : 169.74,
+        "text" : " It"
+      },
+      {
+        "confidence" : 0.649,
+        "end" : 172.38,
+        "start" : 171.6,
+        "text" : " showed"
+      },
+      {
+        "confidence" : 0.407,
+        "end" : 174,
+        "start" : 172.38,
+        "text" : " um,"
+      },
+      {
+        "confidence" : 0.961,
+        "end" : 174.96,
+        "start" : 174,
+        "text" : " Mexican"
+      },
+      {
+        "confidence" : 0.694,
+        "end" : 178.02,
+        "start" : 174.96,
+        "text" : " grandmother."
+      },
+      {
+        "confidence" : 0.1,
+        "end" : 178.32,
+        "start" : 178.08,
+        "text" : " She"
+      },
+      {
+        "confidence" : 0.967,
+        "end" : 179.16,
+        "start" : 178.32,
+        "text" : " looked"
+      },
+      {
+        "confidence" : 0.97,
+        "end" : 179.82,
+        "start" : 179.16,
+        "text" : " as"
+      },
+      {
+        "confidence" : 0.979,
+        "end" : 180.54,
+        "start" : 179.82,
+        "text" : " if"
+      },
+      {
+        "confidence" : 0.93,
+        "end" : 180.96,
+        "start" : 180.54,
+        "text" : " she"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 181.32,
+        "start" : 180.96,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.92,
+        "end" : 182.64,
+        "start" : 181.32,
+        "text" : " getting"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 183.06,
+        "start" : 182.64,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.863,
+        "end" : 183.6,
+        "start" : 183.06,
+        "text" : " hug."
+      },
+      {
+        "confidence" : 0.419,
+        "end" : 186.66,
+        "start" : 183.66,
+        "text" : " Manny"
+      },
+      {
+        "confidence" : 0.447,
+        "end" : 187.26,
+        "start" : 186.66,
+        "text" : " Maxi"
+      },
+      {
+        "confidence" : 0.333,
+        "end" : 188.28,
+        "start" : 187.26,
+        "text" : " can,"
+      },
+      {
+        "confidence" : 0.754,
+        "end" : 189.06,
+        "start" : 188.28,
+        "text" : " American"
+      },
+      {
+        "confidence" : 0.947,
+        "end" : 189.72,
+        "start" : 189.06,
+        "text" : " lived"
+      },
+      {
+        "confidence" : 0.359,
+        "end" : 190.98,
+        "start" : 189.72,
+        "text" : " in,"
+      },
+      {
+        "confidence" : 0.398,
+        "end" : 192.12,
+        "start" : 190.98,
+        "text" : " boiled"
+      },
+      {
+        "confidence" : 0.451,
+        "end" : 192.54,
+        "start" : 192.12,
+        "text" : " hot."
+      },
+      {
+        "confidence" : 0.345,
+        "end" : 193.74,
+        "start" : 192.66,
+        "text" : " The"
+      },
+      {
+        "confidence" : 0.345,
+        "end" : 195.9,
+        "start" : 193.74,
+        "text" : " mural,"
+      },
+      {
+        "confidence" : 0.134,
+        "end" : 196.44,
+        "start" : 195.9,
+        "text" : " have,"
+      },
+      {
+        "confidence" : 0.127,
+        "end" : 198,
+        "start" : 196.44,
+        "text" : " have,"
+      },
+      {
+        "confidence" : 0.649,
+        "end" : 198.9,
+        "start" : 198,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 199.2,
+        "start" : 198.9,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.551,
+        "end" : 201.06,
+        "start" : 199.2,
+        "text" : " people's,"
+      },
+      {
+        "confidence" : 0.396,
+        "end" : 203.58,
+        "start" : 201.06,
+        "text" : " Mexican,"
+      },
+      {
+        "confidence" : 0.312,
+        "end" : 204.36,
+        "start" : 203.58,
+        "text" : " her,"
+      },
+      {
+        "confidence" : 0.369,
+        "end" : 206.82,
+        "start" : 204.36,
+        "text" : " heart,"
+      },
+      {
+        "confidence" : 0.886,
+        "end" : 207.42,
+        "start" : 206.82,
+        "text" : " or"
+      },
+      {
+        "confidence" : 0.802,
+        "end" : 208.2,
+        "start" : 207.42,
+        "text" : " traditions."
+      },
+      {
+        "confidence" : 0.467,
+        "end" : 209.28,
+        "start" : 208.26,
+        "text" : " The"
+      },
+      {
+        "confidence" : 0.721,
+        "end" : 209.88,
+        "start" : 209.28,
+        "text" : " mural"
+      },
+      {
+        "confidence" : 0.971,
+        "end" : 210.24,
+        "start" : 209.88,
+        "text" : " become"
+      },
+      {
+        "confidence" : 0.913,
+        "end" : 210.9,
+        "start" : 210.24,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.943,
+        "end" : 211.5,
+        "start" : 210.9,
+        "text" : " symbol"
+      },
+      {
+        "confidence" : 0.866,
+        "end" : 212.1,
+        "start" : 211.5,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.552,
+        "end" : 215.28,
+        "start" : 212.1,
+        "text" : " unnatty."
+      },
+      {
+        "confidence" : 0.816,
+        "end" : 218.28,
+        "start" : 215.34,
+        "text" : " After"
+      },
+      {
+        "confidence" : 0.488,
+        "end" : 219.3,
+        "start" : 218.28,
+        "text" : " the,"
+      },
+      {
+        "confidence" : 0.316,
+        "end" : 220.86,
+        "start" : 219.3,
+        "text" : " Stuckus"
+      },
+      {
+        "confidence" : 0.977,
+        "end" : 221.22,
+        "start" : 220.86,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.43,
+        "end" : 222.6,
+        "start" : 221.22,
+        "text" : " me,"
+      },
+      {
+        "confidence" : 0.229,
+        "end" : 223.92,
+        "start" : 222.6,
+        "text" : " up,"
+      },
+      {
+        "confidence" : 0.347,
+        "end" : 224.7,
+        "start" : 223.92,
+        "text" : " build"
+      },
+      {
+        "confidence" : 0.393,
+        "end" : 226.2,
+        "start" : 224.7,
+        "text" : " later,"
+      },
+      {
+        "confidence" : 0.942,
+        "end" : 227.16,
+        "start" : 226.2,
+        "text" : " Judy"
+      },
+      {
+        "confidence" : 0.948,
+        "end" : 227.7,
+        "start" : 227.16,
+        "text" : " started"
+      },
+      {
+        "confidence" : 0.978,
+        "end" : 228.42,
+        "start" : 227.7,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.519,
+        "end" : 229.32,
+        "start" : 228.42,
+        "text" : " city,"
+      },
+      {
+        "confidence" : 0.081,
+        "end" : 230.76,
+        "start" : 229.32,
+        "text" : " where,"
+      },
+      {
+        "confidence" : 0.321,
+        "end" : 232.98,
+        "start" : 230.76,
+        "text" : " photo,"
+      },
+      {
+        "confidence" : 0.453,
+        "end" : 235.74,
+        "start" : 232.98,
+        "text" : " photograph,"
+      },
+      {
+        "confidence" : 0.449,
+        "end" : 236.28,
+        "start" : 235.74,
+        "text" : " she,"
+      },
+      {
+        "confidence" : 0.247,
+        "end" : 237.66,
+        "start" : 236.28,
+        "text" : " hard,"
+      },
+      {
+        "confidence" : 0.894,
+        "end" : 238.38,
+        "start" : 237.66,
+        "text" : " many"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 238.8,
+        "start" : 238.38,
+        "text" : " young"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 239.1,
+        "start" : 238.8,
+        "text" : " people"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 239.52,
+        "start" : 239.1,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.98,
+        "end" : 240.06,
+        "start" : 239.52,
+        "text" : " paint"
+      },
+      {
+        "confidence" : 0.481,
+        "end" : 241.2,
+        "start" : 240.06,
+        "text" : " murals."
+      },
+      {
+        "confidence" : 0.545,
+        "end" : 242.16,
+        "start" : 241.26,
+        "text" : " They"
+      },
+      {
+        "confidence" : 0.881,
+        "end" : 242.58,
+        "start" : 242.16,
+        "text" : " create"
+      },
+      {
+        "confidence" : 0.984,
+        "end" : 243.12,
+        "start" : 242.58,
+        "text" : " about"
+      },
+      {
+        "confidence" : 0.95,
+        "end" : 244.08,
+        "start" : 243.12,
+        "text" : " 500"
+      },
+      {
+        "confidence" : 0.588,
+        "end" : 245.82,
+        "start" : 244.08,
+        "text" : " mirror"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 246,
+        "start" : 245.82,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 246.42,
+        "start" : 246,
+        "text" : " Los"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 247.02,
+        "start" : 246.42,
+        "text" : " Angeles"
+      },
+      {
+        "confidence" : 0.971,
+        "end" : 247.8,
+        "start" : 247.02,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.446,
+        "end" : 248.82,
+        "start" : 247.8,
+        "text" : " 19,"
+      },
+      {
+        "confidence" : 0.478,
+        "end" : 252.48,
+        "start" : 248.82,
+        "text" : " 9876,"
+      },
+      {
+        "confidence" : 0.909,
+        "end" : 253.74,
+        "start" : 252.48,
+        "text" : " Judy"
+      },
+      {
+        "confidence" : 0.94,
+        "end" : 254.22,
+        "start" : 253.74,
+        "text" : " helped"
+      },
+      {
+        "confidence" : 0.942,
+        "end" : 254.76,
+        "start" : 254.22,
+        "text" : " start"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 255.12,
+        "start" : 254.76,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 255.3,
+        "start" : 255.12,
+        "text" : " new"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 255.66,
+        "start" : 255.3,
+        "text" : " group"
+      },
+      {
+        "confidence" : 0.923,
+        "end" : 256.26,
+        "start" : 255.66,
+        "text" : " called"
+      },
+      {
+        "confidence" : 0.847,
+        "end" : 256.8,
+        "start" : 256.26,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.474,
+        "end" : 257.4,
+        "start" : 256.8,
+        "text" : " so"
+      },
+      {
+        "confidence" : 0.428,
+        "end" : 258.6,
+        "start" : 257.4,
+        "text" : " called"
+      },
+      {
+        "confidence" : 0.166,
+        "end" : 259.26,
+        "start" : 258.6,
+        "text" : " the,"
+      },
+      {
+        "confidence" : 0.5,
+        "end" : 260.1,
+        "start" : 259.26,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.106,
+        "end" : 260.94,
+        "start" : 260.1,
+        "text" : " pap,"
+      },
+      {
+        "confidence" : 0.1,
+        "end" : 262.14,
+        "start" : 260.94,
+        "text" : " Blake,"
+      },
+      {
+        "confidence" : 0.293,
+        "end" : 263.7,
+        "start" : 262.14,
+        "text" : " Archery"
+      },
+      {
+        "confidence" : 0.456,
+        "end" : 264.6,
+        "start" : 263.7,
+        "text" : " source,"
+      },
+      {
+        "confidence" : 0.148,
+        "end" : 265.74,
+        "start" : 264.6,
+        "text" : " send,"
+      },
+      {
+        "confidence" : 0.2,
+        "end" : 267.78,
+        "start" : 266.76,
+        "text" : " Center,"
+      },
+      {
+        "confidence" : 0.484,
+        "end" : 270.9,
+        "start" : 267.78,
+        "text" : " or..."
+      },
+      {
+        "confidence" : 0.622,
+        "end" : 273.24,
+        "start" : 271.02,
+        "text" : " S"
+      },
+      {
+        "confidence" : 0.45,
+        "end" : 273.72,
+        "start" : 273.24,
+        "text" : " P"
+      },
+      {
+        "confidence" : 0.532,
+        "end" : 274.08,
+        "start" : 273.72,
+        "text" : " A"
+      },
+      {
+        "confidence" : 0.548,
+        "end" : 274.38,
+        "start" : 274.08,
+        "text" : " R"
+      },
+      {
+        "confidence" : 0.361,
+        "end" : 274.98,
+        "start" : 274.38,
+        "text" : " say."
+      },
+      {
+        "confidence" : 0.458,
+        "end" : 275.4,
+        "start" : 275.04,
+        "text" : " This"
+      },
+      {
+        "confidence" : 0.824,
+        "end" : 275.94,
+        "start" : 275.4,
+        "text" : " group"
+      },
+      {
+        "confidence" : 0.459,
+        "end" : 277.2,
+        "start" : 275.94,
+        "text" : " may,"
+      },
+      {
+        "confidence" : 0.685,
+        "end" : 278.7,
+        "start" : 277.2,
+        "text" : " This"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 279.06,
+        "start" : 278.7,
+        "text" : " group"
+      },
+      {
+        "confidence" : 0.976,
+        "end" : 279.66,
+        "start" : 279.06,
+        "text" : " makes"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 280.56,
+        "start" : 279.66,
+        "text" : " art"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 280.98,
+        "start" : 280.56,
+        "text" : " for"
+      },
+      {
+        "confidence" : 0.999,
+        "end" : 281.22,
+        "start" : 280.98,
+        "text" : " people"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 282.12,
+        "start" : 281.22,
+        "text" : " for"
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 282.96,
+        "start" : 282.12,
+        "text" : " many"
+      },
+      {
+        "confidence" : 0.963,
+        "end" : 283.56,
+        "start" : 282.96,
+        "text" : " different"
+      },
+      {
+        "confidence" : 0.964,
+        "end" : 284.58,
+        "start" : 283.56,
+        "text" : " cultures."
+      },
+      {
+        "confidence" : 0.569,
+        "end" : 288.36,
+        "start" : 284.7,
+        "text" : " Mural"
+      },
+      {
+        "confidence" : 0.979,
+        "end" : 288.66,
+        "start" : 288.36,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.78,
+        "end" : 289.56,
+        "start" : 288.66,
+        "text" : " Mexico."
+      },
+      {
+        "confidence" : 0.669,
+        "end" : 291.3,
+        "start" : 289.62,
+        "text" : " Mirals"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 291.9,
+        "start" : 291.3,
+        "text" : " have"
+      },
+      {
+        "confidence" : 0.503,
+        "end" : 292.38,
+        "start" : 291.9,
+        "text" : " been,"
+      },
+      {
+        "confidence" : 0.267,
+        "end" : 293.1,
+        "start" : 292.38,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.741,
+        "end" : 294.3,
+        "start" : 293.1,
+        "text" : " art"
+      },
+      {
+        "confidence" : 0.338,
+        "end" : 294.96,
+        "start" : 294.3,
+        "text" : " formed,"
+      },
+      {
+        "confidence" : 0.606,
+        "end" : 296.16,
+        "start" : 294.96,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.704,
+        "end" : 297.24,
+        "start" : 296.16,
+        "text" : " Mexico."
+      },
+      {
+        "confidence" : 0.847,
+        "end" : 299.82,
+        "start" : 297.3,
+        "text" : " For"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 300.12,
+        "start" : 299.82,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 300.36,
+        "start" : 300.12,
+        "text" : " long"
+      },
+      {
+        "confidence" : 0.58,
+        "end" : 300.96,
+        "start" : 300.36,
+        "text" : " time,"
+      },
+      {
+        "confidence" : 0.189,
+        "end" : 301.74,
+        "start" : 300.96,
+        "text" : " the..."
+      },
+      {
+        "confidence" : 0.315,
+        "end" : 306,
+        "start" : 301.74,
+        "text" : " The..."
+      },
+      {
+        "confidence" : 0.119,
+        "end" : 309.66,
+        "start" : 306.12,
+        "text" : " Maya,"
+      },
+      {
+        "confidence" : 0.266,
+        "end" : 310.5,
+        "start" : 309.66,
+        "text" : " paint,"
+      },
+      {
+        "confidence" : 0.662,
+        "end" : 311.58,
+        "start" : 310.5,
+        "text" : " pictures"
+      },
+      {
+        "confidence" : 0.981,
+        "end" : 312.3,
+        "start" : 311.58,
+        "text" : " on"
+      },
+      {
+        "confidence" : 0.846,
+        "end" : 313.02,
+        "start" : 312.3,
+        "text" : " temple"
+      },
+      {
+        "confidence" : 0.632,
+        "end" : 313.62,
+        "start" : 313.02,
+        "text" : " walls,"
+      },
+      {
+        "confidence" : 0.405,
+        "end" : 315.06,
+        "start" : 313.62,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 315.6,
+        "start" : 315.06,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.377,
+        "end" : 316.8,
+        "start" : 315.6,
+        "text" : " 19,"
+      },
+      {
+        "confidence" : 0.522,
+        "end" : 321.48,
+        "start" : 316.8,
+        "text" : " 1900s,"
+      },
+      {
+        "confidence" : 0.773,
+        "end" : 321.84,
+        "start" : 321.48,
+        "text" : " art"
+      },
+      {
+        "confidence" : 0.32,
+        "end" : 322.8,
+        "start" : 321.84,
+        "text" : " taste,"
+      },
+      {
+        "confidence" : 0.241,
+        "end" : 323.16,
+        "start" : 322.8,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.366,
+        "end" : 324.36,
+        "start" : 323.16,
+        "text" : " dry,"
+      },
+      {
+        "confidence" : 0.314,
+        "end" : 327.3,
+        "start" : 324.36,
+        "text" : " gold,"
+      },
+      {
+        "confidence" : 0.43,
+        "end" : 328.86,
+        "start" : 327.3,
+        "text" : " river,"
+      },
+      {
+        "confidence" : 0.277,
+        "end" : 330.48,
+        "start" : 328.86,
+        "text" : " just,"
+      },
+      {
+        "confidence" : 0.111,
+        "end" : 331.8,
+        "start" : 330.48,
+        "text" : " or,"
+      },
+      {
+        "confidence" : 0.308,
+        "end" : 332.88,
+        "start" : 331.8,
+        "text" : " arts,"
+      },
+      {
+        "confidence" : 0.254,
+        "end" : 333,
+        "start" : 332.88,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.16,
+        "end" : 334.2,
+        "start" : 333,
+        "text" : " call,"
+      },
+      {
+        "confidence" : 0.847,
+        "end" : 334.26,
+        "start" : 334.2,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.064,
+        "end" : 336.54,
+        "start" : 334.26,
+        "text" : " David,"
+      },
+      {
+        "confidence" : 0.521,
+        "end" : 338.7,
+        "start" : 336.84,
+        "text" : " Quarrels"
+      },
+      {
+        "confidence" : 0.863,
+        "end" : 339.54,
+        "start" : 338.7,
+        "text" : " were"
+      },
+      {
+        "confidence" : 0.61,
+        "end" : 340.5,
+        "start" : 339.54,
+        "text" : " famous."
+      },
+      {
+        "confidence" : 0.208,
+        "end" : 341.82,
+        "start" : 340.56,
+        "text" : " They,"
+      },
+      {
+        "confidence" : 0.702,
+        "end" : 342,
+        "start" : 341.82,
+        "text" : " they"
+      },
+      {
+        "confidence" : 0.979,
+        "end" : 342.3,
+        "start" : 342,
+        "text" : " were"
+      },
+      {
+        "confidence" : 0.468,
+        "end" : 342.9,
+        "start" : 342.3,
+        "text" : " called,"
+      },
+      {
+        "confidence" : 0.124,
+        "end" : 344.28,
+        "start" : 342.9,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.704,
+        "end" : 345.72,
+        "start" : 344.28,
+        "text" : " those"
+      },
+      {
+        "confidence" : 0.589,
+        "end" : 346.74,
+        "start" : 345.72,
+        "text" : " trees,"
+      },
+      {
+        "confidence" : 0.4,
+        "end" : 349.86,
+        "start" : 346.74,
+        "text" : " grand."
+      },
+      {
+        "confidence" : 0.397,
+        "end" : 350.76,
+        "start" : 349.92,
+        "text" : " They"
+      },
+      {
+        "confidence" : 0.494,
+        "end" : 352.2,
+        "start" : 350.76,
+        "text" : " painted"
+      },
+      {
+        "confidence" : 0.713,
+        "end" : 353.22,
+        "start" : 352.2,
+        "text" : " murals"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 353.76,
+        "start" : 353.22,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 354.12,
+        "start" : 353.76,
+        "text" : " show"
+      },
+      {
+        "confidence" : 0.744,
+        "end" : 354.96,
+        "start" : 354.12,
+        "text" : " everybody."
+      },
+      {
+        "confidence" : 0.98,
+        "end" : 358.14,
+        "start" : 355.02,
+        "text" : " Every"
+      },
+      {
+        "confidence" : 0.473,
+        "end" : 358.74,
+        "start" : 358.14,
+        "text" : " day,"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 358.92,
+        "start" : 358.74,
+        "text" : " people"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 359.4,
+        "start" : 358.92,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.608,
+        "end" : 360.24,
+        "start" : 359.4,
+        "text" : " Mexico."
+      },
+      {
+        "confidence" : 0.76,
+        "end" : 361.5,
+        "start" : 360.3,
+        "text" : " Judy"
+      },
+      {
+        "confidence" : 0.179,
+        "end" : 362.52,
+        "start" : 361.5,
+        "text" : " Baka,"
+      },
+      {
+        "confidence" : 0.099,
+        "end" : 363.18,
+        "start" : 362.52,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.112,
+        "end" : 364.14,
+        "start" : 363.18,
+        "text" : " mad,"
+      },
+      {
+        "confidence" : 0.656,
+        "end" : 364.5,
+        "start" : 364.14,
+        "text" : " their"
+      },
+      {
+        "confidence" : 0.698,
+        "end" : 365.04,
+        "start" : 364.5,
+        "text" : " work."
+      }
+    ],
+    "source" : "wonders3-u1w3-p2-7-6BFC71D5-8359-4DD9-B61B-1C511E242125.m4a"
+  },
+  "words" : [
+    "chapter",
+    "one",
+    "young",
+    "judy",
+    "barker",
+    "judy",
+    "barker",
+    "is",
+    "an",
+    "artist",
+    "from",
+    "los",
+    "angeles",
+    "she",
+    "paints",
+    "murals",
+    "mirals",
+    "are",
+    "paintings",
+    "on",
+    "large",
+    "walls",
+    "judy",
+    "was",
+    "born",
+    "in",
+    "1966",
+    "1966",
+    "46",
+    "her",
+    "family",
+    "is",
+    "from",
+    "mexico",
+    "as",
+    "a",
+    "young",
+    "girl",
+    "judy",
+    "lived",
+    "with",
+    "her",
+    "mother",
+    "2",
+    "aunt",
+    "and",
+    "a",
+    "grandmother",
+    "when",
+    "judy",
+    "was",
+    "6",
+    "years",
+    "old",
+    "she",
+    "moved",
+    "to",
+    "a",
+    "new",
+    "neighborhood",
+    "in",
+    "los",
+    "angeles",
+    "judy",
+    "had",
+    "always",
+    "talked",
+    "in",
+    "spanish",
+    "as",
+    "the",
+    "new",
+    "school",
+    "she",
+    "uh",
+    "she",
+    "wasn't",
+    "allowed",
+    "to",
+    "talk",
+    "in",
+    "spanish",
+    "duty",
+    "had",
+    "few",
+    "mexi",
+    "she",
+    "can",
+    "american",
+    "classmate",
+    "at",
+    "1st",
+    "it",
+    "was",
+    "difficult",
+    "to",
+    "duty",
+    "to",
+    "pronounce",
+    "and",
+    "understand",
+    "english",
+    "words",
+    "her",
+    "teacher",
+    "liked",
+    "judy",
+    "draw",
+    "and",
+    "paint",
+    "when",
+    "she",
+    "couldn't",
+    "understand",
+    "the",
+    "class",
+    "judy",
+    "began",
+    "to",
+    "love",
+    "painting",
+    "later",
+    "she",
+    "be",
+    "later",
+    "she",
+    "studied",
+    "mother",
+    "art",
+    "in",
+    "college",
+    "after",
+    "college",
+    "judy",
+    "worked",
+    "for",
+    "the",
+    "the",
+    "city",
+    "of",
+    "los",
+    "angeles",
+    "she",
+    "worked",
+    "in",
+    "a",
+    "neighborhood",
+    "called",
+    "boil",
+    "boil",
+    "height",
+    "she",
+    "thought",
+    "art",
+    "class",
+    "is",
+    "in",
+    "the",
+    "part",
+    "parks",
+    "group",
+    "of",
+    "teenagers",
+    "hung",
+    "out",
+    "in",
+    "the",
+    "park",
+    "the",
+    "group",
+    "did",
+    "not",
+    "get",
+    "along",
+    "judy",
+    "asked",
+    "the",
+    "teenager",
+    "to",
+    "help",
+    "her",
+    "paint",
+    "the",
+    "mirror",
+    "she",
+    "wanted",
+    "the",
+    "teenager",
+    "to",
+    "get",
+    "along",
+    "when",
+    "the",
+    "mirror",
+    "was",
+    "finished",
+    "people",
+    "in",
+    "the",
+    "community",
+    "loved",
+    "it",
+    "the",
+    "mirror",
+    "was",
+    "called",
+    "me",
+    "up",
+    "late",
+    "it",
+    "showed",
+    "um",
+    "mexican",
+    "grandmother",
+    "she",
+    "looked",
+    "as",
+    "if",
+    "she",
+    "was",
+    "getting",
+    "a",
+    "hug",
+    "manny",
+    "maxi",
+    "can",
+    "american",
+    "lived",
+    "in",
+    "boiled",
+    "hot",
+    "the",
+    "mural",
+    "have",
+    "have",
+    "to",
+    "the",
+    "people's",
+    "mexican",
+    "her",
+    "heart",
+    "or",
+    "traditions",
+    "the",
+    "mural",
+    "become",
+    "a",
+    "symbol",
+    "of",
+    "unnatty",
+    "after",
+    "the",
+    "stuckus",
+    "of",
+    "me",
+    "up",
+    "build",
+    "later",
+    "judy",
+    "started",
+    "the",
+    "city",
+    "where",
+    "photo",
+    "photograph",
+    "she",
+    "hard",
+    "many",
+    "young",
+    "people",
+    "to",
+    "paint",
+    "murals",
+    "they",
+    "create",
+    "about",
+    "500",
+    "mirror",
+    "in",
+    "los",
+    "angeles",
+    "in",
+    "19",
+    "9876",
+    "judy",
+    "helped",
+    "start",
+    "a",
+    "new",
+    "group",
+    "called",
+    "the",
+    "so",
+    "called",
+    "the",
+    "and",
+    "pap",
+    "blake",
+    "archery",
+    "source",
+    "send",
+    "center",
+    "or",
+    "s",
+    "p",
+    "a",
+    "r",
+    "say",
+    "this",
+    "group",
+    "may",
+    "this",
+    "group",
+    "makes",
+    "art",
+    "for",
+    "people",
+    "for",
+    "many",
+    "different",
+    "cultures",
+    "mural",
+    "of",
+    "mexico",
+    "mirals",
+    "have",
+    "been",
+    "uh",
+    "art",
+    "formed",
+    "in",
+    "mexico",
+    "for",
+    "a",
+    "long",
+    "time",
+    "the",
+    "the",
+    "maya",
+    "paint",
+    "pictures",
+    "on",
+    "temple",
+    "walls",
+    "in",
+    "the",
+    "19",
+    "1900s",
+    "art",
+    "taste",
+    "and",
+    "dry",
+    "gold",
+    "river",
+    "just",
+    "or",
+    "arts",
+    "the",
+    "call",
+    "and",
+    "david",
+    "quarrels",
+    "were",
+    "famous",
+    "they",
+    "they",
+    "were",
+    "called",
+    "uh",
+    "those",
+    "trees",
+    "grand",
+    "they",
+    "painted",
+    "murals",
+    "to",
+    "show",
+    "everybody",
+    "every",
+    "day",
+    "people",
+    "in",
+    "mexico",
+    "judy",
+    "baka",
+    "uh",
+    "mad",
+    "their",
+    "work"
+  ]
+}
