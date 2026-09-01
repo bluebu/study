@@ -1,0 +1,4292 @@
+{
+  "acoustics" : {
+    "duration" : 246.36,
+    "pause_count" : 143,
+    "pause_ratio" : 0.394,
+    "pause_total" : 97,
+    "pauses" : [
+      {
+        "dur" : 0.99,
+        "end" : 0.99,
+        "start" : 0
+      },
+      {
+        "dur" : 0.43,
+        "end" : 7.53,
+        "start" : 7.1
+      },
+      {
+        "dur" : 0.62,
+        "end" : 8.84,
+        "start" : 8.22
+      },
+      {
+        "dur" : 0.51,
+        "end" : 9.49,
+        "start" : 8.98
+      },
+      {
+        "dur" : 0.34,
+        "end" : 10.88,
+        "start" : 10.54
+      },
+      {
+        "dur" : 0.54,
+        "end" : 11.69,
+        "start" : 11.15
+      },
+      {
+        "dur" : 0.46,
+        "end" : 14.77,
+        "start" : 14.31
+      },
+      {
+        "dur" : 0.26,
+        "end" : 15.27,
+        "start" : 15.01
+      },
+      {
+        "dur" : 0.3,
+        "end" : 15.98,
+        "start" : 15.68
+      },
+      {
+        "dur" : 0.47,
+        "end" : 18.03,
+        "start" : 17.56
+      },
+      {
+        "dur" : 0.36,
+        "end" : 18.42,
+        "start" : 18.06
+      },
+      {
+        "dur" : 0.27,
+        "end" : 20.55,
+        "start" : 20.28
+      },
+      {
+        "dur" : 0.35,
+        "end" : 21.64,
+        "start" : 21.29
+      },
+      {
+        "dur" : 0.6,
+        "end" : 24.91,
+        "start" : 24.31
+      },
+      {
+        "dur" : 0.36,
+        "end" : 25.3,
+        "start" : 24.94
+      },
+      {
+        "dur" : 0.25,
+        "end" : 25.7,
+        "start" : 25.45
+      },
+      {
+        "dur" : 0.48,
+        "end" : 26.42,
+        "start" : 25.94
+      },
+      {
+        "dur" : 0.51,
+        "end" : 27.87,
+        "start" : 27.36
+      },
+      {
+        "dur" : 0.39,
+        "end" : 29.73,
+        "start" : 29.34
+      },
+      {
+        "dur" : 2.37,
+        "end" : 33.77,
+        "start" : 31.4
+      },
+      {
+        "dur" : 0.82,
+        "end" : 36.72,
+        "start" : 35.9
+      },
+      {
+        "dur" : 1.35,
+        "end" : 39.33,
+        "start" : 37.98
+      },
+      {
+        "dur" : 0.4,
+        "end" : 41.08,
+        "start" : 40.68
+      },
+      {
+        "dur" : 0.75,
+        "end" : 42.46,
+        "start" : 41.71
+      },
+      {
+        "dur" : 0.43,
+        "end" : 44.32,
+        "start" : 43.89
+      },
+      {
+        "dur" : 0.37,
+        "end" : 46.55,
+        "start" : 46.18
+      },
+      {
+        "dur" : 0.29,
+        "end" : 47.62,
+        "start" : 47.33
+      },
+      {
+        "dur" : 0.66,
+        "end" : 49.21,
+        "start" : 48.55
+      },
+      {
+        "dur" : 0.27,
+        "end" : 49.7,
+        "start" : 49.43
+      },
+      {
+        "dur" : 0.73,
+        "end" : 56.32,
+        "start" : 55.59
+      },
+      {
+        "dur" : 0.5,
+        "end" : 57.31,
+        "start" : 56.81
+      },
+      {
+        "dur" : 2.03,
+        "end" : 60.48,
+        "start" : 58.45
+      },
+      {
+        "dur" : 0.65,
+        "end" : 61.35,
+        "start" : 60.7
+      },
+      {
+        "dur" : 1.64,
+        "end" : 65.14,
+        "start" : 63.5
+      },
+      {
+        "dur" : 1.33,
+        "end" : 67.84,
+        "start" : 66.51
+      },
+      {
+        "dur" : 0.3,
+        "end" : 69.25,
+        "start" : 68.95
+      },
+      {
+        "dur" : 0.49,
+        "end" : 71.55,
+        "start" : 71.06
+      },
+      {
+        "dur" : 0.33,
+        "end" : 72.3,
+        "start" : 71.97
+      },
+      {
+        "dur" : 0.42,
+        "end" : 76,
+        "start" : 75.58
+      },
+      {
+        "dur" : 0.48,
+        "end" : 77.14,
+        "start" : 76.66
+      },
+      {
+        "dur" : 0.34,
+        "end" : 77.53,
+        "start" : 77.19
+      },
+      {
+        "dur" : 0.56,
+        "end" : 78.64,
+        "start" : 78.08
+      },
+      {
+        "dur" : 0.59,
+        "end" : 81.45,
+        "start" : 80.86
+      },
+      {
+        "dur" : 0.65,
+        "end" : 83.58,
+        "start" : 82.93
+      },
+      {
+        "dur" : 0.26,
+        "end" : 85.16,
+        "start" : 84.9
+      },
+      {
+        "dur" : 0.54,
+        "end" : 86.78,
+        "start" : 86.24
+      },
+      {
+        "dur" : 0.38,
+        "end" : 88.78,
+        "start" : 88.4
+      },
+      {
+        "dur" : 1.11,
+        "end" : 90.16,
+        "start" : 89.05
+      },
+      {
+        "dur" : 0.61,
+        "end" : 91.55,
+        "start" : 90.94
+      },
+      {
+        "dur" : 1.47,
+        "end" : 93.3,
+        "start" : 91.83
+      },
+      {
+        "dur" : 0.72,
+        "end" : 94.94,
+        "start" : 94.22
+      },
+      {
+        "dur" : 0.48,
+        "end" : 95.44,
+        "start" : 94.96
+      },
+      {
+        "dur" : 0.44,
+        "end" : 96.71,
+        "start" : 96.27
+      },
+      {
+        "dur" : 1.13,
+        "end" : 99.03,
+        "start" : 97.9
+      },
+      {
+        "dur" : 0.35,
+        "end" : 101.16,
+        "start" : 100.81
+      },
+      {
+        "dur" : 0.64,
+        "end" : 102.8,
+        "start" : 102.16
+      },
+      {
+        "dur" : 0.38,
+        "end" : 103.47,
+        "start" : 103.09
+      },
+      {
+        "dur" : 0.6,
+        "end" : 104.4,
+        "start" : 103.8
+      },
+      {
+        "dur" : 1.2,
+        "end" : 106.04,
+        "start" : 104.84
+      },
+      {
+        "dur" : 1.03,
+        "end" : 108.39,
+        "start" : 107.36
+      },
+      {
+        "dur" : 0.73,
+        "end" : 109.65,
+        "start" : 108.92
+      },
+      {
+        "dur" : 1.34,
+        "end" : 111.65,
+        "start" : 110.31
+      },
+      {
+        "dur" : 0.76,
+        "end" : 112.65,
+        "start" : 111.89
+      },
+      {
+        "dur" : 0.71,
+        "end" : 114.2,
+        "start" : 113.49
+      },
+      {
+        "dur" : 0.4,
+        "end" : 115.08,
+        "start" : 114.68
+      },
+      {
+        "dur" : 0.86,
+        "end" : 116.96,
+        "start" : 116.1
+      },
+      {
+        "dur" : 1.23,
+        "end" : 118.2,
+        "start" : 116.97
+      },
+      {
+        "dur" : 0.34,
+        "end" : 118.99,
+        "start" : 118.65
+      },
+      {
+        "dur" : 0.48,
+        "end" : 119.76,
+        "start" : 119.28
+      },
+      {
+        "dur" : 0.28,
+        "end" : 120.41,
+        "start" : 120.13
+      },
+      {
+        "dur" : 0.45,
+        "end" : 121.51,
+        "start" : 121.06
+      },
+      {
+        "dur" : 1.87,
+        "end" : 124.77,
+        "start" : 122.9
+      },
+      {
+        "dur" : 0.3,
+        "end" : 125.18,
+        "start" : 124.88
+      },
+      {
+        "dur" : 1.89,
+        "end" : 127.3,
+        "start" : 125.41
+      },
+      {
+        "dur" : 0.76,
+        "end" : 128.13,
+        "start" : 127.37
+      },
+      {
+        "dur" : 0.36,
+        "end" : 129.9,
+        "start" : 129.54
+      },
+      {
+        "dur" : 0.67,
+        "end" : 131.41,
+        "start" : 130.74
+      },
+      {
+        "dur" : 0.36,
+        "end" : 132.59,
+        "start" : 132.23
+      },
+      {
+        "dur" : 0.28,
+        "end" : 133.05,
+        "start" : 132.77
+      },
+      {
+        "dur" : 0.57,
+        "end" : 133.86,
+        "start" : 133.29
+      },
+      {
+        "dur" : 0.73,
+        "end" : 134.91,
+        "start" : 134.18
+      },
+      {
+        "dur" : 0.62,
+        "end" : 135.55,
+        "start" : 134.93
+      },
+      {
+        "dur" : 0.26,
+        "end" : 137.34,
+        "start" : 137.08
+      },
+      {
+        "dur" : 1.17,
+        "end" : 139.27,
+        "start" : 138.1
+      },
+      {
+        "dur" : 0.54,
+        "end" : 140,
+        "start" : 139.46
+      },
+      {
+        "dur" : 0.32,
+        "end" : 140.35,
+        "start" : 140.03
+      },
+      {
+        "dur" : 0.7,
+        "end" : 141.31,
+        "start" : 140.61
+      },
+      {
+        "dur" : 0.27,
+        "end" : 144.82,
+        "start" : 144.55
+      },
+      {
+        "dur" : 0.76,
+        "end" : 145.68,
+        "start" : 144.92
+      },
+      {
+        "dur" : 0.33,
+        "end" : 146.68,
+        "start" : 146.35
+      },
+      {
+        "dur" : 0.92,
+        "end" : 148.62,
+        "start" : 147.7
+      },
+      {
+        "dur" : 0.31,
+        "end" : 149.78,
+        "start" : 149.47
+      },
+      {
+        "dur" : 0.54,
+        "end" : 150.81,
+        "start" : 150.27
+      },
+      {
+        "dur" : 1.34,
+        "end" : 155.19,
+        "start" : 153.85
+      },
+      {
+        "dur" : 1.9,
+        "end" : 158.29,
+        "start" : 156.39
+      },
+      {
+        "dur" : 0.59,
+        "end" : 159.97,
+        "start" : 159.38
+      },
+      {
+        "dur" : 0.46,
+        "end" : 161.85,
+        "start" : 161.39
+      },
+      {
+        "dur" : 0.34,
+        "end" : 163.64,
+        "start" : 163.3
+      },
+      {
+        "dur" : 2.43,
+        "end" : 166.62,
+        "start" : 164.19
+      },
+      {
+        "dur" : 2.87,
+        "end" : 169.98,
+        "start" : 167.11
+      },
+      {
+        "dur" : 1.27,
+        "end" : 171.46,
+        "start" : 170.19
+      },
+      {
+        "dur" : 0.48,
+        "end" : 172.45,
+        "start" : 171.97
+      },
+      {
+        "dur" : 0.91,
+        "end" : 176.49,
+        "start" : 175.58
+      },
+      {
+        "dur" : 0.28,
+        "end" : 177.56,
+        "start" : 177.28
+      },
+      {
+        "dur" : 1.06,
+        "end" : 180.29,
+        "start" : 179.23
+      },
+      {
+        "dur" : 0.3,
+        "end" : 181.1,
+        "start" : 180.8
+      },
+      {
+        "dur" : 0.72,
+        "end" : 181.99,
+        "start" : 181.27
+      },
+      {
+        "dur" : 0.25,
+        "end" : 183.29,
+        "start" : 183.04
+      },
+      {
+        "dur" : 0.74,
+        "end" : 184.6,
+        "start" : 183.86
+      },
+      {
+        "dur" : 0.39,
+        "end" : 186.82,
+        "start" : 186.43
+      },
+      {
+        "dur" : 0.36,
+        "end" : 187.41,
+        "start" : 187.05
+      },
+      {
+        "dur" : 1.59,
+        "end" : 189.4,
+        "start" : 187.81
+      },
+      {
+        "dur" : 0.45,
+        "end" : 190.59,
+        "start" : 190.14
+      },
+      {
+        "dur" : 0.26,
+        "end" : 191.07,
+        "start" : 190.81
+      },
+      {
+        "dur" : 0.67,
+        "end" : 191.91,
+        "start" : 191.24
+      },
+      {
+        "dur" : 0.43,
+        "end" : 195.14,
+        "start" : 194.71
+      },
+      {
+        "dur" : 0.62,
+        "end" : 196.12,
+        "start" : 195.5
+      },
+      {
+        "dur" : 0.49,
+        "end" : 197.37,
+        "start" : 196.88
+      },
+      {
+        "dur" : 0.53,
+        "end" : 198.76,
+        "start" : 198.23
+      },
+      {
+        "dur" : 0.25,
+        "end" : 200.55,
+        "start" : 200.3
+      },
+      {
+        "dur" : 0.81,
+        "end" : 202.01,
+        "start" : 201.2
+      },
+      {
+        "dur" : 0.61,
+        "end" : 204.21,
+        "start" : 203.6
+      },
+      {
+        "dur" : 0.28,
+        "end" : 206.74,
+        "start" : 206.46
+      },
+      {
+        "dur" : 0.3,
+        "end" : 210.89,
+        "start" : 210.59
+      },
+      {
+        "dur" : 0.59,
+        "end" : 212.06,
+        "start" : 211.47
+      },
+      {
+        "dur" : 0.3,
+        "end" : 213.94,
+        "start" : 213.64
+      },
+      {
+        "dur" : 0.54,
+        "end" : 214.81,
+        "start" : 214.27
+      },
+      {
+        "dur" : 1.21,
+        "end" : 216.04,
+        "start" : 214.83
+      },
+      {
+        "dur" : 0.37,
+        "end" : 218.21,
+        "start" : 217.84
+      },
+      {
+        "dur" : 1.1,
+        "end" : 219.7,
+        "start" : 218.6
+      },
+      {
+        "dur" : 0.54,
+        "end" : 221.01,
+        "start" : 220.47
+      },
+      {
+        "dur" : 0.26,
+        "end" : 223.6,
+        "start" : 223.34
+      },
+      {
+        "dur" : 0.32,
+        "end" : 224.27,
+        "start" : 223.95
+      },
+      {
+        "dur" : 1.79,
+        "end" : 227.52,
+        "start" : 225.73
+      },
+      {
+        "dur" : 0.31,
+        "end" : 228.94,
+        "start" : 228.63
+      },
+      {
+        "dur" : 0.37,
+        "end" : 230.09,
+        "start" : 229.72
+      },
+      {
+        "dur" : 0.29,
+        "end" : 235.45,
+        "start" : 235.16
+      },
+      {
+        "dur" : 0.49,
+        "end" : 236.3,
+        "start" : 235.81
+      },
+      {
+        "dur" : 0.42,
+        "end" : 239.02,
+        "start" : 238.6
+      },
+      {
+        "dur" : 0.4,
+        "end" : 240.11,
+        "start" : 239.71
+      },
+      {
+        "dur" : 0.29,
+        "end" : 241.5,
+        "start" : 241.21
+      },
+      {
+        "dur" : 1.81,
+        "end" : 244.65,
+        "start" : 242.84
+      },
+      {
+        "dur" : 0.93,
+        "end" : 245.85,
+        "start" : 244.92
+      }
+    ],
+    "source" : "9e432ae85111cfa7ab87bbe2c9a70b8c.mp4",
+    "speech_time" : 149.36,
+    "threshold_db" : -33.5
+  },
+  "alignment" : {
+    "accuracy" : 81.9,
+    "correctWordCount" : 177,
+    "diffs" : [
+      {
+        "category" : "refTypo",
+        "confidence" : 0.263,
+        "context" : "tall woman named detie along with detie",
+        "end" : 11.4,
+        "kind" : "substitute",
+        "label" : "原文可疑",
+        "read" : "uh",
+        "ref" : "detie",
+        "refIndex" : 13,
+        "start" : 10.8,
+        "suggest" : "skip",
+        "why" : "`.ref.txt` 里是「Detie」，扫图时就标了认得可疑 —— **多半是扫描认错**，去 marked.png 上核一眼。她读的是「uh」。识别器对这处只有 0.26 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.396,
+        "context" : "woman named detie along with detie was",
+        "end" : 12.48,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "alarmed",
+        "ref" : "along",
+        "refIndex" : 14,
+        "start" : 11.4,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "refTypo",
+        "confidence" : 0.334,
+        "context" : "detie along with detie was her five-year-old",
+        "end" : 13.98,
+        "kind" : "substitute",
+        "label" : "原文可疑",
+        "read" : "daddy",
+        "ref" : "detie",
+        "refIndex" : 16,
+        "start" : 12.72,
+        "suggest" : "skip",
+        "why" : "`.ref.txt` 里是「Detie」，扫图时就标了认得可疑 —— **多半是扫描认错**，去 marked.png 上核一眼。她读的是「daddy」。识别器对这处只有 0.33 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.297,
+        "context" : "with detie was her five-year-old niece a",
+        "end" : 15.42,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "for",
+        "refIndex" : 18,
+        "start" : 14.34,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.30 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.923,
+        "context" : "with detie was her five-year-old niece a",
+        "end" : 15.72,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "five",
+        "refIndex" : 18,
+        "start" : 15.42,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.996,
+        "context" : "with detie was her five-year-old niece a",
+        "end" : 16.2,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "years",
+        "ref" : "her",
+        "refIndex" : 18,
+        "start" : 15.72,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.544,
+        "context" : "detie was her five-year-old niece a girl",
+        "end" : 16.98,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "old",
+        "ref" : "five-year-old",
+        "refIndex" : 19,
+        "start" : 16.2,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.699,
+        "context" : "was her five-year-old niece a girl with",
+        "end" : 17.52,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "nice",
+        "ref" : "niece",
+        "refIndex" : 20,
+        "start" : 16.98,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.541,
+        "context" : "five-year-old niece a girl with black curly",
+        "end" : 19.62,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "grown",
+        "ref" : "girl",
+        "refIndex" : 22,
+        "start" : 18.78,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.384,
+        "context" : "girl with black curly hair named heidi",
+        "end" : 22.44,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "crowly",
+        "ref" : "curly",
+        "refIndex" : 25,
+        "start" : 20.82,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.617,
+        "context" : "the girl my late sister left behind",
+        "end" : 31.44,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "last",
+        "ref" : "late",
+        "refIndex" : 38,
+        "start" : 30.96,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.256,
+        "context" : "sister left behind detie answered i'm taking",
+        "end" : 36.9,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "that",
+        "refIndex" : 42,
+        "start" : 35.64,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.26 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "refTypo",
+        "confidence" : 0.914,
+        "context" : "sister left behind detie answered i'm taking",
+        "end" : 37.26,
+        "kind" : "substitute",
+        "label" : "原文可疑",
+        "read" : "he",
+        "ref" : "detie",
+        "refIndex" : 42,
+        "start" : 36.9,
+        "suggest" : "skip",
+        "why" : "`.ref.txt` 里是「Detie」，扫图时就标了认得可疑 —— **多半是扫描认错**，去 marked.png 上核一眼。她读的是「he」"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.545,
+        "context" : "taking her to uncle alp so he",
+        "end" : 41.76,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "um",
+        "refIndex" : 48,
+        "start" : 41.1,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.479,
+        "context" : "her to uncle alp so he can",
+        "end" : 43.26,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "help",
+        "ref" : "alp",
+        "refIndex" : 49,
+        "start" : 42.96,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.559,
+        "context" : "now on but detie had made up",
+        "end" : 50.1,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "that",
+        "refIndex" : 61,
+        "start" : 49.44,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "refTypo",
+        "confidence" : 0.562,
+        "context" : "now on but detie had made up",
+        "end" : 50.4,
+        "kind" : "substitute",
+        "label" : "原文可疑",
+        "read" : "he",
+        "ref" : "detie",
+        "refIndex" : 61,
+        "start" : 50.1,
+        "suggest" : "skip",
+        "why" : "`.ref.txt` 里是「Detie」，扫图时就标了认得可疑 —— **多半是扫描认错**，去 marked.png 上核一眼。她读的是「he」"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.46,
+        "context" : "is time for heidi's grandfather to take",
+        "end" : 55.68,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "hetty's",
+        "ref" : "heidi's",
+        "refIndex" : 71,
+        "start" : 54.42,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.557,
+        "context" : "the responsibility barbie had heard many tales",
+        "end" : 66.48,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "and",
+        "refIndex" : 79,
+        "start" : 65.52,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.717,
+        "context" : "heard many tales about uncle alp a",
+        "end" : 70.74,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "of",
+        "refIndex" : 83,
+        "start" : 70.32,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.175,
+        "context" : "heard many tales about uncle alp a",
+        "end" : 72.18,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "art",
+        "ref" : "about",
+        "refIndex" : 83,
+        "start" : 70.74,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.17 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.278,
+        "context" : "tales about uncle alp a grumpy old",
+        "end" : 73.5,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "help",
+        "ref" : "alp",
+        "refIndex" : 85,
+        "start" : 72.54,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.28 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.394,
+        "context" : "behaved with bad manners and scared people",
+        "end" : 84.96,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "meaners",
+        "ref" : "manners",
+        "refIndex" : 101,
+        "start" : 83.88,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "function",
+        "confidence" : 0.46,
+        "context" : "and scared people off with his horrifying",
+        "end" : 89.1,
+        "kind" : "substitute",
+        "label" : "小词",
+        "read" : "of",
+        "ref" : "off",
+        "refIndex" : 105,
+        "start" : 88.02,
+        "suggest" : "count",
+        "why" : "两个都是小词，读串了。这类错扎堆出现就是眼睛跑在手指前面"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.058,
+        "context" : "off with his horrifying expressions she was",
+        "end" : 96.24,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "fine",
+        "refIndex" : 108,
+        "start" : 94.68,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.06 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.175,
+        "context" : "off with his horrifying expressions she was",
+        "end" : 98.22,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "experi",
+        "ref" : "horrifying",
+        "refIndex" : 108,
+        "start" : 96.24,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.17 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.236,
+        "context" : "expressions she was anxious to find out",
+        "end" : 110.52,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "um",
+        "refIndex" : 112,
+        "start" : 107.34,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.24 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.106,
+        "context" : "expressions she was anxious to find out",
+        "end" : 112.26,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "a",
+        "refIndex" : 112,
+        "start" : 110.64,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.11 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.009,
+        "context" : "expressions she was anxious to find out",
+        "end" : 113.76,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "a",
+        "refIndex" : 112,
+        "start" : 112.26,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.01 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.006,
+        "context" : "expressions she was anxious to find out",
+        "end" : 114.96,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "a",
+        "ref" : "anxious",
+        "refIndex" : 112,
+        "start" : 113.76,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.01 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.972,
+        "context" : "find out what matter was with him",
+        "end" : 119.94,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "the",
+        "refIndex" : 117,
+        "start" : 119.34,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.413,
+        "context" : "was with him detie continued tobias married",
+        "end" : 128.34,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "that",
+        "refIndex" : 121,
+        "start" : 123,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "refTypo",
+        "confidence" : 0.904,
+        "context" : "was with him detie continued tobias married",
+        "end" : 128.7,
+        "kind" : "substitute",
+        "label" : "原文可疑",
+        "read" : "he",
+        "ref" : "detie",
+        "refIndex" : 121,
+        "start" : 128.34,
+        "suggest" : "skip",
+        "why" : "`.ref.txt` 里是「Detie」，扫图时就标了认得可疑 —— **多半是扫描认错**，去 marked.png 上核一眼。她读的是「he」"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.335,
+        "context" : "detie continued tobias married my sister adelheid",
+        "end" : 131.88,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "um",
+        "refIndex" : 124,
+        "start" : 131.1,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.34 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.177,
+        "context" : "detie continued tobias married my sister adelheid",
+        "end" : 137.58,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "to",
+        "refIndex" : 124,
+        "start" : 132,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.18 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.144,
+        "context" : "detie continued tobias married my sister adelheid",
+        "end" : 137.94,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "be",
+        "refIndex" : 124,
+        "start" : 137.58,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.14 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.302,
+        "context" : "detie continued tobias married my sister adelheid",
+        "end" : 138.36,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "us",
+        "refIndex" : 124,
+        "start" : 137.94,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.30 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.331,
+        "context" : "married my sister adelheid and heidi was",
+        "end" : 146.58,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "uh",
+        "refIndex" : 127,
+        "start" : 144.12,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.33 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.262,
+        "context" : "married my sister adelheid and heidi was",
+        "end" : 147,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "a",
+        "refIndex" : 127,
+        "start" : 146.58,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.26 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.246,
+        "context" : "married my sister adelheid and heidi was",
+        "end" : 147.6,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "best",
+        "refIndex" : 127,
+        "start" : 147,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.25 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.545,
+        "context" : "married my sister adelheid and heidi was",
+        "end" : 149.04,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "head",
+        "ref" : "adelheid",
+        "refIndex" : 127,
+        "start" : 147.6,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.228,
+        "context" : "but alas tobias died only after two",
+        "end" : 160.32,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "said",
+        "ref" : "died",
+        "refIndex" : 135,
+        "start" : 159.48,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.23 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "omitted",
+        "context" : "tobias died only after two years in",
+        "kind" : "omit",
+        "label" : "漏读",
+        "ref" : "after",
+        "refIndex" : 137,
+        "suggest" : "count",
+        "why" : "整个词跳过去了"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.409,
+        "context" : "after two years in a construction project",
+        "end" : 163.5,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "in",
+        "refIndex" : 140,
+        "start" : 162.48,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.363,
+        "context" : "after two years in a construction project",
+        "end" : 164.16,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "uh",
+        "refIndex" : 140,
+        "start" : 163.5,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.032,
+        "context" : "project and poor adelheid passed away not",
+        "end" : 179.52,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "uh",
+        "ref" : "adelheid",
+        "refIndex" : 146,
+        "start" : 178.92,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑。识别器对这处只有 0.03 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.325,
+        "context" : "passed away not long after out of",
+        "end" : 184.44,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "long",
+        "refIndex" : 150,
+        "start" : 182.94,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.33 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.622,
+        "context" : "after out of grief finally they reached",
+        "end" : 187.98,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "breath",
+        "ref" : "grief",
+        "refIndex" : 154,
+        "start" : 187.02,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.347,
+        "context" : "reached uncle alp's hut which overlooked the",
+        "end" : 194.82,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "heart",
+        "ref" : "hut",
+        "refIndex" : 160,
+        "start" : 194.22,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.35 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.383,
+        "context" : "which overlooked the valley uncle alp was",
+        "end" : 200.22,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "volley",
+        "refIndex" : 164,
+        "start" : 199.14,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.274,
+        "context" : "which overlooked the valley uncle alp was",
+        "end" : 201.24,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "blowed",
+        "ref" : "valley",
+        "refIndex" : 164,
+        "start" : 200.22,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.27 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.433,
+        "context" : "uncle alp was sitting outside on a",
+        "end" : 204.42,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "setting",
+        "ref" : "sitting",
+        "refIndex" : 168,
+        "start" : 203.58,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.82,
+        "context" : "on a wooden seat when heidi ran",
+        "end" : 207.48,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "set",
+        "ref" : "seat",
+        "refIndex" : 173,
+        "start" : 207.24,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.238,
+        "context" : "ran to him hi grandpa heidi shouted",
+        "end" : 210.78,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "high",
+        "ref" : "hi",
+        "refIndex" : 179,
+        "start" : 209.94,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.24 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "refTypo",
+        "confidence" : 0.392,
+        "context" : "was confused until detie explained everything to",
+        "end" : 221.28,
+        "kind" : "substitute",
+        "label" : "原文可疑",
+        "read" : "daddy",
+        "ref" : "detie",
+        "refIndex" : 189,
+        "start" : 219.96,
+        "suggest" : "skip",
+        "why" : "`.ref.txt` 里是「Detie」，扫图时就标了认得可疑 —— **多半是扫描认错**，去 marked.png 上核一眼。她读的是「daddy」"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.783,
+        "context" : "confused until detie explained everything to him",
+        "end" : 223.32,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "exclaimed",
+        "ref" : "explained",
+        "refIndex" : 190,
+        "start" : 221.28,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.64,
+        "context" : "and then without listening to any more",
+        "end" : 230.58,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "listen",
+        "ref" : "listening",
+        "refIndex" : 197,
+        "start" : 229.32,
+        "suggest" : "count",
+        "why" : "原文是「listening」，读出来少了词尾 -ing"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.758,
+        "context" : "of the old grumpy man's words detie",
+        "end" : 235.32,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "grandparent's",
+        "ref" : "grumpy",
+        "refIndex" : 204,
+        "start" : 233.76,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.366,
+        "context" : "the old grumpy man's words detie waved",
+        "end" : 235.92,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "words",
+        "ref" : "man's",
+        "refIndex" : 205,
+        "start" : 235.32,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.773,
+        "context" : "old grumpy man's words detie waved goodbye",
+        "end" : 236.52,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "that",
+        "ref" : "words",
+        "refIndex" : 206,
+        "start" : 235.92,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "refTypo",
+        "confidence" : 0.923,
+        "context" : "grumpy man's words detie waved goodbye to",
+        "end" : 236.94,
+        "kind" : "substitute",
+        "label" : "原文可疑",
+        "read" : "he",
+        "ref" : "detie",
+        "refIndex" : 207,
+        "start" : 236.52,
+        "suggest" : "skip",
+        "why" : "`.ref.txt` 里是「Detie」，扫图时就标了认得可疑 —— **多半是扫描认错**，去 marked.png 上核一眼。她读的是「he」"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.626,
+        "context" : "man's words detie waved goodbye to heidi",
+        "end" : 237.3,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "lived",
+        "ref" : "waved",
+        "refIndex" : 208,
+        "start" : 236.94,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.253,
+        "context" : "waved goodbye to heidi and quickly went",
+        "end" : 239.88,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "heavy",
+        "ref" : "heidi",
+        "refIndex" : 211,
+        "start" : 238.8,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑。识别器对这处只有 0.25 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      }
+    ],
+    "readWordCount" : 240,
+    "refTimes" : [
+      1.38,
+      1.74,
+      2.1,
+      3.06,
+      3.54,
+      4.26,
+      4.68,
+      4.92,
+      5.82,
+      5.94,
+      6.3,
+      7.74,
+      10.8,
+      11.4,
+      12.48,
+      12.72,
+      13.98,
+      14.34,
+      16.2,
+      16.98,
+      17.52,
+      18.78,
+      19.62,
+      20.16,
+      20.82,
+      22.44,
+      23.1,
+      23.34,
+      24.18,
+      26.94,
+      27.06,
+      27.42,
+      28.14,
+      28.44,
+      29.46,
+      30,
+      30.3,
+      30.96,
+      31.44,
+      34.08,
+      34.86,
+      35.58,
+      37.26,
+      37.92,
+      39.84,
+      40.02,
+      40.44,
+      41.1,
+      42.96,
+      43.26,
+      43.92,
+      44.46,
+      44.82,
+      45.42,
+      45.78,
+      46.14,
+      46.62,
+      46.98,
+      47.76,
+      48.24,
+      49.44,
+      50.4,
+      50.82,
+      51.24,
+      51.66,
+      52.02,
+      52.62,
+      53.28,
+      53.82,
+      54.12,
+      54.42,
+      55.68,
+      57.72,
+      58.08,
+      58.32,
+      60.66,
+      61.62,
+      63.18,
+      65.52,
+      68.16,
+      68.64,
+      69.6,
+      70.32,
+      72.18,
+      72.54,
+      73.5,
+      73.56,
+      74.22,
+      74.58,
+      75,
+      75.48,
+      76.56,
+      77.7,
+      78.84,
+      79.2,
+      79.74,
+      80.1,
+      81,
+      82.08,
+      82.5,
+      83.88,
+      84.96,
+      85.32,
+      87.24,
+      88.02,
+      89.1,
+      90.36,
+      91.02,
+      98.22,
+      104.7,
+      106.44,
+      107.34,
+      114.96,
+      115.26,
+      115.62,
+      118.5,
+      119.34,
+      120.66,
+      121.8,
+      122.22,
+      122.94,
+      128.7,
+      129.6,
+      131.1,
+      143.1,
+      143.28,
+      144.12,
+      149.04,
+      151.08,
+      152.22,
+      152.58,
+      153.36,
+      155.46,
+      156.36,
+      159.48,
+      160.32,
+      161.34,
+      null,
+      162.12,
+      162.48,
+      172.92,
+      173.22,
+      175.5,
+      177.3,
+      177.78,
+      178.92,
+      179.52,
+      181.32,
+      182.7,
+      182.94,
+      184.92,
+      186,
+      186.48,
+      187.02,
+      187.98,
+      190.2,
+      192.18,
+      192.72,
+      193.44,
+      194.22,
+      194.82,
+      195.3,
+      198.06,
+      199.14,
+      201.24,
+      202.56,
+      203.16,
+      203.58,
+      204.42,
+      205.26,
+      206.1,
+      206.46,
+      207.24,
+      207.48,
+      207.96,
+      209.22,
+      209.52,
+      209.76,
+      209.94,
+      210.78,
+      211.74,
+      212.7,
+      213.54,
+      214.2,
+      216.6,
+      217.14,
+      217.38,
+      218.46,
+      219.96,
+      221.28,
+      223.32,
+      224.52,
+      225,
+      225.24,
+      228,
+      228.66,
+      229.32,
+      230.58,
+      231.18,
+      231.6,
+      232.44,
+      232.86,
+      233.22,
+      233.76,
+      235.32,
+      235.92,
+      236.52,
+      236.94,
+      237.3,
+      238.38,
+      238.8,
+      239.88,
+      240.3,
+      240.78,
+      241.98,
+      242.82
+    ],
+    "refWordCount" : 216,
+    "wcpm" : 43
+  },
+  "pages" : [
+    {
+      "end" : 24.18,
+      "errors" : 8,
+      "extras" : 2,
+      "matched" : 29,
+      "page" : 6,
+      "start" : 1.38,
+      "words" : 29
+    },
+    {
+      "end" : 122.94,
+      "errors" : 11,
+      "extras" : 10,
+      "matched" : 92,
+      "page" : 7,
+      "start" : 26.94,
+      "words" : 92
+    },
+    {
+      "end" : 242.82,
+      "errors" : 20,
+      "extras" : 12,
+      "matched" : 94,
+      "page" : 8,
+      "start" : 128.7,
+      "words" : 95
+    }
+  ],
+  "refSuspects" : [
+    {
+      "page" : 6,
+      "suggestions" : [
+        "five-year-old",
+        "five-dear-old",
+        "five-vera-old"
+      ],
+      "word" : "five-vear-old"
+    },
+    {
+      "page" : 7,
+      "suggestions" : [
+        "grandfather",
+        "grand lather",
+        "grand-lather"
+      ],
+      "word" : "grandlather"
+    },
+    {
+      "page" : 7,
+      "suggestions" : [
+        "been",
+        "seen",
+        "teen"
+      ],
+      "word" : "heen"
+    },
+    {
+      "page" : 7,
+      "suggestions" : [
+
+      ],
+      "word" : "horrifvine"
+    },
+    {
+      "page" : 8,
+      "suggestions" : [
+        "Retie"
+      ],
+      "word" : "Detie"
+    },
+    {
+      "page" : 8,
+      "suggestions" : [
+        "tears",
+        "fears",
+        "vers"
+      ],
+      "word" : "vears"
+    },
+    {
+      "page" : 8,
+      "suggestions" : [
+        "protect",
+        "project"
+      ],
+      "word" : "proiect"
+    }
+  ],
+  "reference" : "One day in June, the mountain had a visitor—a tall woman named Detie.\nAlong with Detie was her five-year-old niece, a girl with black curly hair named\nHeidi.\n\"You are right. This is Heidi, the girl my late sister left behind,\" Detie\nanswered. \"I'm taking her to Uncle Alp so he can take care of her from now\non.\"\nBut Detie had made up her mind. \"It is time for Heidi's grandfather to take\nup the responsibility.\"\nBarbie had heard many tales about Uncle Alp, a grumpy old man who\nhadn't been to church for many years, behaved with bad manners and scared\npeople off with his horrifying expressions. She was anxious to find out what\nmatter was with him.\nDetie continued. \"Tobias married my sister Adelheid, and Heidi was born.\nBut alas, Tobias died only after two years in a construction project, and poor\nAdelheid passed away not long after, out of grief.\"\nFinally, they reached Uncle Alp's hut, which overlooked the valley\nUncle Alp was sitting outside on a wooden seat when Heidi ran to him.\n\"Hi, Grandpa!\" Heidi shouted out.\nUncle Alp was confused, until Detie explained everything to him.\nAnd then, without listening to any\nmore of the old grumpy man's words, Detie waved goodbye to Heidi and quickly\nwent downhill.",
+  "slug" : "super8/L4/p6-8",
+  "transcript" : {
+    "alternatives" : [
+      {
+        "end" : 6.3,
+        "start" : 0,
+        "texts" : [
+          "One day in June, the mountain had a visitor, a tall"
+        ]
+      },
+      {
+        "end" : 10.8,
+        "start" : 6.3,
+        "texts" : [
+          "woman, named,",
+          "woman named Deity,"
+        ]
+      },
+      {
+        "end" : 14.34,
+        "start" : 10.8,
+        "texts" : [
+          "uh, alarmed with daddy, was"
+        ]
+      },
+      {
+        "end" : 15.72,
+        "start" : 14.34,
+        "texts" : [
+          "for 5",
+          "per 5",
+          "5"
+        ]
+      },
+      {
+        "end" : 16.2,
+        "start" : 15.72,
+        "texts" : [
+          "years"
+        ]
+      },
+      {
+        "end" : 17.58,
+        "start" : 16.2,
+        "texts" : [
+          "old, nice.",
+          "old nice."
+        ]
+      },
+      {
+        "end" : 19.62,
+        "start" : 17.58,
+        "texts" : [
+          "A grown",
+          "Oh, grown"
+        ]
+      },
+      {
+        "end" : 20.82,
+        "start" : 19.62,
+        "texts" : [
+          "with black"
+        ]
+      },
+      {
+        "end" : 22.44,
+        "start" : 20.82,
+        "texts" : [
+          "crowly",
+          "curly",
+          "crawly"
+        ]
+      },
+      {
+        "end" : 23.34,
+        "start" : 22.44,
+        "texts" : [
+          "hair named",
+          "hare named"
+        ]
+      },
+      {
+        "end" : 24.24,
+        "start" : 23.34,
+        "texts" : [
+          "Heidi."
+        ]
+      },
+      {
+        "end" : 26.94,
+        "start" : 24.24,
+        "texts" : [
+          "You",
+          "you"
+        ]
+      },
+      {
+        "end" : 27.06,
+        "start" : 26.94,
+        "texts" : [
+          "are"
+        ]
+      },
+      {
+        "end" : 27.4799375,
+        "start" : 27.06,
+        "texts" : [
+          "right.",
+          "right,",
+          "right",
+          "right!"
+        ]
+      },
+      {
+        "end" : 28.44,
+        "start" : 27.48,
+        "texts" : [
+          "This is"
+        ]
+      },
+      {
+        "end" : 30,
+        "start" : 28.44,
+        "texts" : [
+          "Heidi, the",
+          "Heidi. The",
+          "Heidi the"
+        ]
+      },
+      {
+        "end" : 30.96,
+        "start" : 30,
+        "texts" : [
+          "girl my",
+          "girl, my"
+        ]
+      },
+      {
+        "end" : 31.56,
+        "start" : 30.96,
+        "texts" : [
+          "last.",
+          "last,"
+        ]
+      },
+      {
+        "end" : 34.08,
+        "start" : 31.56,
+        "texts" : [
+          "Sister",
+          "sister"
+        ]
+      },
+      {
+        "end" : 34.86,
+        "start" : 34.08,
+        "texts" : [
+          "left"
+        ]
+      },
+      {
+        "end" : 35.64,
+        "start" : 34.86,
+        "texts" : [
+          "behind.",
+          "behind,",
+          "behind"
+        ]
+      },
+      {
+        "end" : 37.26,
+        "start" : 35.64,
+        "texts" : [
+          "That he"
+        ]
+      },
+      {
+        "end" : 39.84,
+        "start" : 37.26,
+        "texts" : [
+          "answered. I'm",
+          "answered, I'm"
+        ]
+      },
+      {
+        "end" : 40.44,
+        "start" : 39.84,
+        "texts" : [
+          "taking her"
+        ]
+      },
+      {
+        "end" : 41.82,
+        "start" : 40.44,
+        "texts" : [
+          "to um.",
+          "to, um,",
+          "to, um."
+        ]
+      },
+      {
+        "end" : 42.96,
+        "start" : 41.82,
+        "texts" : [
+          "Uncle"
+        ]
+      },
+      {
+        "end" : 43.92,
+        "start" : 42.96,
+        "texts" : [
+          "help so",
+          "help, so",
+          "Elp so",
+          "Alp so",
+          "Elp, so"
+        ]
+      },
+      {
+        "end" : 48.3,
+        "start" : 43.92,
+        "texts" : [
+          "he can take care of her from now on."
+        ]
+      },
+      {
+        "end" : 52.02,
+        "start" : 48.3,
+        "texts" : [
+          "But that he had made up her"
+        ]
+      },
+      {
+        "end" : 53.28,
+        "start" : 52.02,
+        "texts" : [
+          "mind, it",
+          "mind. It"
+        ]
+      },
+      {
+        "end" : 54.42,
+        "start" : 53.28,
+        "texts" : [
+          "is time for"
+        ]
+      },
+      {
+        "end" : 56.64,
+        "start" : 54.42,
+        "texts" : [
+          "Hetty's grand",
+          "Hattie's grand",
+          "Hetty's, grand",
+          "Hetty's. Grand"
+        ]
+      },
+      {
+        "end" : 58.08,
+        "start" : 56.64,
+        "texts" : [
+          "father to"
+        ]
+      },
+      {
+        "end" : 58.3799375,
+        "start" : 58.08,
+        "texts" : [
+          "take.",
+          "take"
+        ]
+      },
+      {
+        "end" : 61.62,
+        "start" : 58.38,
+        "texts" : [
+          "Up the",
+          "Up, the",
+          "Up The",
+          "Up. The"
+        ]
+      },
+      {
+        "end" : 63.24,
+        "start" : 61.62,
+        "texts" : [
+          "responsibility."
+        ]
+      },
+      {
+        "end" : 83.88,
+        "start" : 63.24,
+        "texts" : [
+          "Barbie and. Had heard many tales of art, uncle help, a grumpy old man who hadn't been to church for many years, behaved with bad"
+        ]
+      },
+      {
+        "end" : 85.32,
+        "start" : 83.88,
+        "texts" : [
+          "meaners and",
+          "manners and",
+          "manners, and",
+          "meaners, and"
+        ]
+      },
+      {
+        "end" : 88.02,
+        "start" : 85.32,
+        "texts" : [
+          "scared people"
+        ]
+      },
+      {
+        "end" : 89.88,
+        "start" : 88.02,
+        "texts" : [
+          "of.",
+          "of,"
+        ]
+      },
+      {
+        "end" : 90.36,
+        "start" : 89.88,
+        "texts" : [
+          "With"
+        ]
+      },
+      {
+        "end" : 94.6799375,
+        "start" : 90.36,
+        "texts" : [
+          "his.",
+          "his. Heart rate.",
+          "his. Horror.",
+          "his. Heart rave.",
+          "his. Heart re."
+        ]
+      },
+      {
+        "end" : 98.22,
+        "start" : 94.68,
+        "texts" : [
+          "Fine, experi,"
+        ]
+      },
+      {
+        "end" : 104.76,
+        "start" : 98.22,
+        "texts" : [
+          "expressions.",
+          "expressions,",
+          "expressions, expressions",
+          "expressions, express.",
+          "expressions, expressions."
+        ]
+      },
+      {
+        "end" : 106.44,
+        "start" : 104.76,
+        "texts" : [
+          "She"
+        ]
+      },
+      {
+        "end" : 110.64,
+        "start" : 106.44,
+        "texts" : [
+          "was. Um.",
+          "was. Um...",
+          "was. And.",
+          "was, um.",
+          "was um."
+        ]
+      },
+      {
+        "end" : 112.26,
+        "start" : 110.64,
+        "texts" : [
+          "A,",
+          "A."
+        ]
+      },
+      {
+        "end" : 116.04,
+        "start" : 112.26,
+        "texts" : [
+          "A, A, To find",
+          "A, A.",
+          "A. A.",
+          "A."
+        ]
+      },
+      {
+        "end" : 119.94,
+        "start" : 116.04,
+        "texts" : [
+          "Out what the",
+          "Out what's the",
+          "Out, what's the",
+          "Out, what the"
+        ]
+      },
+      {
+        "end" : 122.22,
+        "start" : 119.94,
+        "texts" : [
+          "matter was with"
+        ]
+      },
+      {
+        "end" : 123,
+        "start" : 122.22,
+        "texts" : [
+          "him.",
+          "him?"
+        ]
+      },
+      {
+        "end" : 128.7,
+        "start" : 123,
+        "texts" : [
+          "That he"
+        ]
+      },
+      {
+        "end" : 132,
+        "start" : 128.7,
+        "texts" : [
+          "continued, Tobias, um.",
+          "continued, Tobias.",
+          "continued. Tobias.",
+          "continued Tobias.",
+          "continued to be us."
+        ]
+      },
+      {
+        "end" : 138.42,
+        "start" : 132,
+        "texts" : [
+          "To be us.",
+          "Tabas.",
+          "Taba.",
+          "To be us,",
+          "Tabas,"
+        ]
+      },
+      {
+        "end" : 143.28,
+        "start" : 138.42,
+        "texts" : [
+          "Married, my"
+        ]
+      },
+      {
+        "end" : 144.12,
+        "start" : 143.28,
+        "texts" : [
+          "sister.",
+          "sister,"
+        ]
+      },
+      {
+        "end" : 146.58,
+        "start" : 144.12,
+        "texts" : [
+          "Uh,",
+          "uh,"
+        ]
+      },
+      {
+        "end" : 149.1,
+        "start" : 146.58,
+        "texts" : [
+          "a best head.",
+          "a best.",
+          "uh, best.",
+          "uh."
+        ]
+      },
+      {
+        "end" : 152.58,
+        "start" : 149.1,
+        "texts" : [
+          "And Heidi was"
+        ]
+      },
+      {
+        "end" : 155.46,
+        "start" : 152.58,
+        "texts" : [
+          "born. But",
+          "born, but",
+          "born, But",
+          "born But"
+        ]
+      },
+      {
+        "end" : 156.42,
+        "start" : 155.46,
+        "texts" : [
+          "alas.",
+          "alas,"
+        ]
+      },
+      {
+        "end" : 160.32,
+        "start" : 156.42,
+        "texts" : [
+          "Tobias said",
+          "Tobias, that"
+        ]
+      },
+      {
+        "end" : 162.48,
+        "start" : 160.32,
+        "texts" : [
+          "only 2 years"
+        ]
+      },
+      {
+        "end" : 169.8599375,
+        "start" : 162.48,
+        "texts" : [
+          "in, uh,",
+          "in uh.",
+          "in uh,",
+          "in, uh."
+        ]
+      },
+      {
+        "end" : 177.78,
+        "start" : 169.86,
+        "texts" : [
+          "in a construction, project, and"
+        ]
+      },
+      {
+        "end" : 179.52,
+        "start" : 177.78,
+        "texts" : [
+          "poor, uh,",
+          "poor, odd,",
+          "poor odd,"
+        ]
+      },
+      {
+        "end" : 184.92,
+        "start" : 179.52,
+        "texts" : [
+          "passed away, not long, long"
+        ]
+      },
+      {
+        "end" : 186.48,
+        "start" : 184.92,
+        "texts" : [
+          "after, out",
+          "after out"
+        ]
+      },
+      {
+        "end" : 188.1,
+        "start" : 186.48,
+        "texts" : [
+          "of breath."
+        ]
+      },
+      {
+        "end" : 195.3,
+        "start" : 188.1,
+        "texts" : [
+          "Finally, they reached Uncle Alp's heart, which"
+        ]
+      },
+      {
+        "end" : 199.14,
+        "start" : 195.3,
+        "texts" : [
+          "overlooked, the",
+          "overlooked the"
+        ]
+      },
+      {
+        "end" : 203.58,
+        "start" : 199.14,
+        "texts" : [
+          "volley blowed, Uncle Alp was"
+        ]
+      },
+      {
+        "end" : 204.42,
+        "start" : 203.58,
+        "texts" : [
+          "setting",
+          "sitting"
+        ]
+      },
+      {
+        "end" : 210.78,
+        "start" : 204.42,
+        "texts" : [
+          "outside on a wooden set when Heidi ran to him high,"
+        ]
+      },
+      {
+        "end" : 212.7,
+        "start" : 210.78,
+        "texts" : [
+          "grandpa, Heidi",
+          "grandpa Heidi"
+        ]
+      },
+      {
+        "end" : 214.26,
+        "start" : 212.7,
+        "texts" : [
+          "shouted out."
+        ]
+      },
+      {
+        "end" : 217.38,
+        "start" : 214.26,
+        "texts" : [
+          "Uncle Alp was"
+        ]
+      },
+      {
+        "end" : 219.96,
+        "start" : 217.38,
+        "texts" : [
+          "confused until",
+          "confused, until"
+        ]
+      },
+      {
+        "end" : 221.28,
+        "start" : 219.96,
+        "texts" : [
+          "daddy",
+          "Daddy"
+        ]
+      },
+      {
+        "end" : 225.3599375,
+        "start" : 221.28,
+        "texts" : [
+          "exclaimed, everything to him."
+        ]
+      },
+      {
+        "end" : 229.32,
+        "start" : 225.36,
+        "texts" : [
+          "And then, without"
+        ]
+      },
+      {
+        "end" : 230.58,
+        "start" : 229.32,
+        "texts" : [
+          "listen",
+          "listening"
+        ]
+      },
+      {
+        "end" : 235.32,
+        "start" : 230.58,
+        "texts" : [
+          "to any more of the old grandparent's"
+        ]
+      },
+      {
+        "end" : 236.52,
+        "start" : 235.32,
+        "texts" : [
+          "words, that",
+          "words that"
+        ]
+      },
+      {
+        "end" : 240.3,
+        "start" : 236.52,
+        "texts" : [
+          "he lived goodbye to, heavy, and"
+        ]
+      },
+      {
+        "end" : 241.98,
+        "start" : 240.3,
+        "texts" : [
+          "quickly went",
+          "quickly, when",
+          "quickly, went"
+        ]
+      },
+      {
+        "end" : 242.88,
+        "start" : 241.98,
+        "texts" : [
+          "downhill.",
+          "somehow."
+        ]
+      }
+    ],
+    "contextPrimed" : true,
+    "locale" : "en-US",
+    "runs" : [
+      {
+        "confidence" : 0.998,
+        "end" : 1.38,
+        "start" : 0,
+        "text" : "One"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 1.74,
+        "start" : 1.38,
+        "text" : " day"
+      },
+      {
+        "confidence" : 0.999,
+        "end" : 2.1,
+        "start" : 1.74,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.743,
+        "end" : 3.06,
+        "start" : 2.1,
+        "text" : " June,"
+      },
+      {
+        "confidence" : 0.625,
+        "end" : 3.54,
+        "start" : 3.06,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.948,
+        "end" : 4.26,
+        "start" : 3.54,
+        "text" : " mountain"
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 4.68,
+        "start" : 4.26,
+        "text" : " had"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 4.92,
+        "start" : 4.68,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.854,
+        "end" : 5.82,
+        "start" : 4.92,
+        "text" : " visitor,"
+      },
+      {
+        "confidence" : 0.896,
+        "end" : 5.94,
+        "start" : 5.82,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.954,
+        "end" : 6.3,
+        "start" : 5.94,
+        "text" : " tall"
+      },
+      {
+        "confidence" : 0.498,
+        "end" : 7.74,
+        "start" : 6.3,
+        "text" : " woman,"
+      },
+      {
+        "confidence" : 0.454,
+        "end" : 10.8,
+        "start" : 7.74,
+        "text" : " named,"
+      },
+      {
+        "confidence" : 0.263,
+        "end" : 11.4,
+        "start" : 10.8,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.396,
+        "end" : 12.48,
+        "start" : 11.4,
+        "text" : " alarmed"
+      },
+      {
+        "confidence" : 0.986,
+        "end" : 12.72,
+        "start" : 12.48,
+        "text" : " with"
+      },
+      {
+        "confidence" : 0.334,
+        "end" : 13.98,
+        "start" : 12.72,
+        "text" : " daddy,"
+      },
+      {
+        "confidence" : 0.942,
+        "end" : 14.34,
+        "start" : 13.98,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.297,
+        "end" : 15.42,
+        "start" : 14.34,
+        "text" : " for"
+      },
+      {
+        "confidence" : 0.923,
+        "end" : 15.72,
+        "start" : 15.42,
+        "text" : " 5"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 16.2,
+        "start" : 15.72,
+        "text" : " years"
+      },
+      {
+        "confidence" : 0.544,
+        "end" : 16.98,
+        "start" : 16.2,
+        "text" : " old,"
+      },
+      {
+        "confidence" : 0.699,
+        "end" : 17.52,
+        "start" : 16.98,
+        "text" : " nice."
+      },
+      {
+        "confidence" : 0.194,
+        "end" : 18.78,
+        "start" : 17.58,
+        "text" : " A"
+      },
+      {
+        "confidence" : 0.541,
+        "end" : 19.62,
+        "start" : 18.78,
+        "text" : " grown"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 20.16,
+        "start" : 19.62,
+        "text" : " with"
+      },
+      {
+        "confidence" : 0.974,
+        "end" : 20.82,
+        "start" : 20.16,
+        "text" : " black"
+      },
+      {
+        "confidence" : 0.384,
+        "end" : 22.44,
+        "start" : 20.82,
+        "text" : " crowly"
+      },
+      {
+        "confidence" : 0.798,
+        "end" : 23.1,
+        "start" : 22.44,
+        "text" : " hair"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 23.34,
+        "start" : 23.1,
+        "text" : " named"
+      },
+      {
+        "confidence" : 0.844,
+        "end" : 24.18,
+        "start" : 23.34,
+        "text" : " Heidi."
+      },
+      {
+        "confidence" : 0.854,
+        "end" : 26.94,
+        "start" : 24.24,
+        "text" : " You"
+      },
+      {
+        "confidence" : 0.965,
+        "end" : 27.06,
+        "start" : 26.94,
+        "text" : " are"
+      },
+      {
+        "confidence" : 0.585,
+        "end" : 27.42,
+        "start" : 27.06,
+        "text" : " right."
+      },
+      {
+        "confidence" : 0.344,
+        "end" : 28.14,
+        "start" : 27.48,
+        "text" : " This"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 28.44,
+        "start" : 28.14,
+        "text" : " is"
+      },
+      {
+        "confidence" : 0.456,
+        "end" : 29.46,
+        "start" : 28.44,
+        "text" : " Heidi,"
+      },
+      {
+        "confidence" : 0.775,
+        "end" : 30,
+        "start" : 29.46,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.931,
+        "end" : 30.3,
+        "start" : 30,
+        "text" : " girl"
+      },
+      {
+        "confidence" : 0.966,
+        "end" : 30.96,
+        "start" : 30.3,
+        "text" : " my"
+      },
+      {
+        "confidence" : 0.617,
+        "end" : 31.44,
+        "start" : 30.96,
+        "text" : " last."
+      },
+      {
+        "confidence" : 0.55,
+        "end" : 34.08,
+        "start" : 31.56,
+        "text" : " Sister"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 34.86,
+        "start" : 34.08,
+        "text" : " left"
+      },
+      {
+        "confidence" : 0.694,
+        "end" : 35.58,
+        "start" : 34.86,
+        "text" : " behind."
+      },
+      {
+        "confidence" : 0.256,
+        "end" : 36.9,
+        "start" : 35.64,
+        "text" : " That"
+      },
+      {
+        "confidence" : 0.914,
+        "end" : 37.26,
+        "start" : 36.9,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.394,
+        "end" : 37.92,
+        "start" : 37.26,
+        "text" : " answered."
+      },
+      {
+        "confidence" : 0.669,
+        "end" : 39.84,
+        "start" : 37.92,
+        "text" : " I'm"
+      },
+      {
+        "confidence" : 0.975,
+        "end" : 40.02,
+        "start" : 39.84,
+        "text" : " taking"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 40.44,
+        "start" : 40.02,
+        "text" : " her"
+      },
+      {
+        "confidence" : 0.94,
+        "end" : 41.1,
+        "start" : 40.44,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.545,
+        "end" : 41.76,
+        "start" : 41.1,
+        "text" : " um."
+      },
+      {
+        "confidence" : 0.644,
+        "end" : 42.96,
+        "start" : 41.82,
+        "text" : " Uncle"
+      },
+      {
+        "confidence" : 0.479,
+        "end" : 43.26,
+        "start" : 42.96,
+        "text" : " help"
+      },
+      {
+        "confidence" : 0.969,
+        "end" : 43.92,
+        "start" : 43.26,
+        "text" : " so"
+      },
+      {
+        "confidence" : 0.942,
+        "end" : 44.46,
+        "start" : 43.92,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.981,
+        "end" : 44.82,
+        "start" : 44.46,
+        "text" : " can"
+      },
+      {
+        "confidence" : 0.978,
+        "end" : 45.42,
+        "start" : 44.82,
+        "text" : " take"
+      },
+      {
+        "confidence" : 0.982,
+        "end" : 45.78,
+        "start" : 45.42,
+        "text" : " care"
+      },
+      {
+        "confidence" : 0.534,
+        "end" : 46.14,
+        "start" : 45.78,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.986,
+        "end" : 46.62,
+        "start" : 46.14,
+        "text" : " her"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 46.98,
+        "start" : 46.62,
+        "text" : " from"
+      },
+      {
+        "confidence" : 0.984,
+        "end" : 47.76,
+        "start" : 46.98,
+        "text" : " now"
+      },
+      {
+        "confidence" : 0.727,
+        "end" : 48.24,
+        "start" : 47.76,
+        "text" : " on."
+      },
+      {
+        "confidence" : 0.494,
+        "end" : 49.44,
+        "start" : 48.3,
+        "text" : " But"
+      },
+      {
+        "confidence" : 0.559,
+        "end" : 50.1,
+        "start" : 49.44,
+        "text" : " that"
+      },
+      {
+        "confidence" : 0.562,
+        "end" : 50.4,
+        "start" : 50.1,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.98,
+        "end" : 50.82,
+        "start" : 50.4,
+        "text" : " had"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 51.24,
+        "start" : 50.82,
+        "text" : " made"
+      },
+      {
+        "confidence" : 0.999,
+        "end" : 51.66,
+        "start" : 51.24,
+        "text" : " up"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 52.02,
+        "start" : 51.66,
+        "text" : " her"
+      },
+      {
+        "confidence" : 0.595,
+        "end" : 52.62,
+        "start" : 52.02,
+        "text" : " mind,"
+      },
+      {
+        "confidence" : 0.839,
+        "end" : 53.28,
+        "start" : 52.62,
+        "text" : " it"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 53.82,
+        "start" : 53.28,
+        "text" : " is"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 54.12,
+        "start" : 53.82,
+        "text" : " time"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 54.42,
+        "start" : 54.12,
+        "text" : " for"
+      },
+      {
+        "confidence" : 0.46,
+        "end" : 55.68,
+        "start" : 54.42,
+        "text" : " Hetty's"
+      },
+      {
+        "confidence" : 0.787,
+        "end" : 56.64,
+        "start" : 55.68,
+        "text" : " grand"
+      },
+      {
+        "confidence" : 0.79,
+        "end" : 57.72,
+        "start" : 56.64,
+        "text" : " father"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 58.08,
+        "start" : 57.72,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.674,
+        "end" : 58.32,
+        "start" : 58.08,
+        "text" : " take."
+      },
+      {
+        "confidence" : 0.72,
+        "end" : 60.66,
+        "start" : 58.38,
+        "text" : " Up"
+      },
+      {
+        "confidence" : 0.748,
+        "end" : 61.62,
+        "start" : 60.66,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.901,
+        "end" : 63.18,
+        "start" : 61.62,
+        "text" : " responsibility."
+      },
+      {
+        "confidence" : 0.956,
+        "end" : 65.52,
+        "start" : 63.24,
+        "text" : " Barbie"
+      },
+      {
+        "confidence" : 0.557,
+        "end" : 66.48,
+        "start" : 65.52,
+        "text" : " and."
+      },
+      {
+        "confidence" : 0.418,
+        "end" : 68.16,
+        "start" : 66.48,
+        "text" : " Had"
+      },
+      {
+        "confidence" : 0.7,
+        "end" : 68.64,
+        "start" : 68.16,
+        "text" : " heard"
+      },
+      {
+        "confidence" : 0.957,
+        "end" : 69.6,
+        "start" : 68.64,
+        "text" : " many"
+      },
+      {
+        "confidence" : 0.929,
+        "end" : 70.32,
+        "start" : 69.6,
+        "text" : " tales"
+      },
+      {
+        "confidence" : 0.717,
+        "end" : 70.74,
+        "start" : 70.32,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.175,
+        "end" : 72.18,
+        "start" : 70.74,
+        "text" : " art,"
+      },
+      {
+        "confidence" : 0.586,
+        "end" : 72.54,
+        "start" : 72.18,
+        "text" : " uncle"
+      },
+      {
+        "confidence" : 0.278,
+        "end" : 73.5,
+        "start" : 72.54,
+        "text" : " help,"
+      },
+      {
+        "confidence" : 0.542,
+        "end" : 73.56,
+        "start" : 73.5,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.969,
+        "end" : 74.22,
+        "start" : 73.56,
+        "text" : " grumpy"
+      },
+      {
+        "confidence" : 0.98,
+        "end" : 74.58,
+        "start" : 74.22,
+        "text" : " old"
+      },
+      {
+        "confidence" : 0.871,
+        "end" : 75,
+        "start" : 74.58,
+        "text" : " man"
+      },
+      {
+        "confidence" : 0.981,
+        "end" : 75.48,
+        "start" : 75,
+        "text" : " who"
+      },
+      {
+        "confidence" : 0.782,
+        "end" : 76.56,
+        "start" : 75.48,
+        "text" : " hadn't"
+      },
+      {
+        "confidence" : 0.587,
+        "end" : 77.7,
+        "start" : 76.56,
+        "text" : " been"
+      },
+      {
+        "confidence" : 0.817,
+        "end" : 78.84,
+        "start" : 77.7,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.925,
+        "end" : 79.2,
+        "start" : 78.84,
+        "text" : " church"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 79.74,
+        "start" : 79.2,
+        "text" : " for"
+      },
+      {
+        "confidence" : 0.909,
+        "end" : 80.1,
+        "start" : 79.74,
+        "text" : " many"
+      },
+      {
+        "confidence" : 0.558,
+        "end" : 81,
+        "start" : 80.1,
+        "text" : " years,"
+      },
+      {
+        "confidence" : 0.898,
+        "end" : 82.08,
+        "start" : 81,
+        "text" : " behaved"
+      },
+      {
+        "confidence" : 0.918,
+        "end" : 82.5,
+        "start" : 82.08,
+        "text" : " with"
+      },
+      {
+        "confidence" : 0.365,
+        "end" : 83.88,
+        "start" : 82.5,
+        "text" : " bad"
+      },
+      {
+        "confidence" : 0.394,
+        "end" : 84.96,
+        "start" : 83.88,
+        "text" : " meaners"
+      },
+      {
+        "confidence" : 0.981,
+        "end" : 85.32,
+        "start" : 84.96,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.786,
+        "end" : 87.24,
+        "start" : 85.32,
+        "text" : " scared"
+      },
+      {
+        "confidence" : 0.979,
+        "end" : 88.02,
+        "start" : 87.24,
+        "text" : " people"
+      },
+      {
+        "confidence" : 0.46,
+        "end" : 89.1,
+        "start" : 88.02,
+        "text" : " of."
+      },
+      {
+        "confidence" : 0.212,
+        "end" : 90.36,
+        "start" : 89.88,
+        "text" : " With"
+      },
+      {
+        "confidence" : 0.504,
+        "end" : 91.02,
+        "start" : 90.36,
+        "text" : " his."
+      },
+      {
+        "confidence" : 0.058,
+        "end" : 96.24,
+        "start" : 94.68,
+        "text" : " Fine,"
+      },
+      {
+        "confidence" : 0.175,
+        "end" : 98.22,
+        "start" : 96.24,
+        "text" : " experi,"
+      },
+      {
+        "confidence" : 0.672,
+        "end" : 104.7,
+        "start" : 98.22,
+        "text" : " expressions."
+      },
+      {
+        "confidence" : 0.676,
+        "end" : 106.44,
+        "start" : 104.76,
+        "text" : " She"
+      },
+      {
+        "confidence" : 0.588,
+        "end" : 107.34,
+        "start" : 106.44,
+        "text" : " was."
+      },
+      {
+        "confidence" : 0.236,
+        "end" : 110.52,
+        "start" : 107.34,
+        "text" : " Um."
+      },
+      {
+        "confidence" : 0.106,
+        "end" : 112.26,
+        "start" : 110.64,
+        "text" : " A,"
+      },
+      {
+        "confidence" : 0.009,
+        "end" : 113.76,
+        "start" : 112.26,
+        "text" : " A,"
+      },
+      {
+        "confidence" : 0.006,
+        "end" : 114.96,
+        "start" : 113.76,
+        "text" : " A,"
+      },
+      {
+        "confidence" : 0.074,
+        "end" : 115.26,
+        "start" : 114.96,
+        "text" : " To"
+      },
+      {
+        "confidence" : 0.743,
+        "end" : 115.62,
+        "start" : 115.26,
+        "text" : " find"
+      },
+      {
+        "confidence" : 0.369,
+        "end" : 118.5,
+        "start" : 116.04,
+        "text" : " Out"
+      },
+      {
+        "confidence" : 0.897,
+        "end" : 119.34,
+        "start" : 118.5,
+        "text" : " what"
+      },
+      {
+        "confidence" : 0.972,
+        "end" : 119.94,
+        "start" : 119.34,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.913,
+        "end" : 120.66,
+        "start" : 119.94,
+        "text" : " matter"
+      },
+      {
+        "confidence" : 0.9,
+        "end" : 121.8,
+        "start" : 120.66,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 122.22,
+        "start" : 121.8,
+        "text" : " with"
+      },
+      {
+        "confidence" : 0.943,
+        "end" : 122.94,
+        "start" : 122.22,
+        "text" : " him."
+      },
+      {
+        "confidence" : 0.413,
+        "end" : 128.34,
+        "start" : 123,
+        "text" : " That"
+      },
+      {
+        "confidence" : 0.904,
+        "end" : 128.7,
+        "start" : 128.34,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.673,
+        "end" : 129.6,
+        "start" : 128.7,
+        "text" : " continued,"
+      },
+      {
+        "confidence" : 0.285,
+        "end" : 131.1,
+        "start" : 129.6,
+        "text" : " Tobias,"
+      },
+      {
+        "confidence" : 0.335,
+        "end" : 131.88,
+        "start" : 131.1,
+        "text" : " um."
+      },
+      {
+        "confidence" : 0.177,
+        "end" : 137.58,
+        "start" : 132,
+        "text" : " To"
+      },
+      {
+        "confidence" : 0.144,
+        "end" : 137.94,
+        "start" : 137.58,
+        "text" : " be"
+      },
+      {
+        "confidence" : 0.302,
+        "end" : 138.36,
+        "start" : 137.94,
+        "text" : " us."
+      },
+      {
+        "confidence" : 0.183,
+        "end" : 143.1,
+        "start" : 138.42,
+        "text" : " Married,"
+      },
+      {
+        "confidence" : 0.956,
+        "end" : 143.28,
+        "start" : 143.1,
+        "text" : " my"
+      },
+      {
+        "confidence" : 0.601,
+        "end" : 144.12,
+        "start" : 143.28,
+        "text" : " sister."
+      },
+      {
+        "confidence" : 0.331,
+        "end" : 146.58,
+        "start" : 144.12,
+        "text" : " Uh,"
+      },
+      {
+        "confidence" : 0.262,
+        "end" : 147,
+        "start" : 146.58,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.246,
+        "end" : 147.6,
+        "start" : 147,
+        "text" : " best"
+      },
+      {
+        "confidence" : 0.545,
+        "end" : 149.04,
+        "start" : 147.6,
+        "text" : " head."
+      },
+      {
+        "confidence" : 0.76,
+        "end" : 151.08,
+        "start" : 149.1,
+        "text" : " And"
+      },
+      {
+        "confidence" : 0.95,
+        "end" : 152.22,
+        "start" : 151.08,
+        "text" : " Heidi"
+      },
+      {
+        "confidence" : 0.982,
+        "end" : 152.58,
+        "start" : 152.22,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.585,
+        "end" : 153.36,
+        "start" : 152.58,
+        "text" : " born."
+      },
+      {
+        "confidence" : 0.466,
+        "end" : 155.46,
+        "start" : 153.36,
+        "text" : " But"
+      },
+      {
+        "confidence" : 0.672,
+        "end" : 156.36,
+        "start" : 155.46,
+        "text" : " alas."
+      },
+      {
+        "confidence" : 0.482,
+        "end" : 159.48,
+        "start" : 156.42,
+        "text" : " Tobias"
+      },
+      {
+        "confidence" : 0.228,
+        "end" : 160.32,
+        "start" : 159.48,
+        "text" : " said"
+      },
+      {
+        "confidence" : 0.949,
+        "end" : 161.34,
+        "start" : 160.32,
+        "text" : " only"
+      },
+      {
+        "confidence" : 0.963,
+        "end" : 162.12,
+        "start" : 161.34,
+        "text" : " 2"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 162.48,
+        "start" : 162.12,
+        "text" : " years"
+      },
+      {
+        "confidence" : 0.409,
+        "end" : 163.5,
+        "start" : 162.48,
+        "text" : " in,"
+      },
+      {
+        "confidence" : 0.363,
+        "end" : 164.16,
+        "start" : 163.5,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.512,
+        "end" : 172.92,
+        "start" : 169.86,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.271,
+        "end" : 173.22,
+        "start" : 172.92,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.24,
+        "end" : 175.5,
+        "start" : 173.22,
+        "text" : " construction,"
+      },
+      {
+        "confidence" : 0.48,
+        "end" : 177.3,
+        "start" : 175.5,
+        "text" : " project,"
+      },
+      {
+        "confidence" : 0.937,
+        "end" : 177.78,
+        "start" : 177.3,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.332,
+        "end" : 178.92,
+        "start" : 177.78,
+        "text" : " poor,"
+      },
+      {
+        "confidence" : 0.032,
+        "end" : 179.52,
+        "start" : 178.92,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.698,
+        "end" : 181.32,
+        "start" : 179.52,
+        "text" : " passed"
+      },
+      {
+        "confidence" : 0.48,
+        "end" : 182.7,
+        "start" : 181.32,
+        "text" : " away,"
+      },
+      {
+        "confidence" : 0.888,
+        "end" : 182.94,
+        "start" : 182.7,
+        "text" : " not"
+      },
+      {
+        "confidence" : 0.325,
+        "end" : 184.44,
+        "start" : 182.94,
+        "text" : " long,"
+      },
+      {
+        "confidence" : 0.691,
+        "end" : 184.92,
+        "start" : 184.44,
+        "text" : " long"
+      },
+      {
+        "confidence" : 0.51,
+        "end" : 186,
+        "start" : 184.92,
+        "text" : " after,"
+      },
+      {
+        "confidence" : 0.801,
+        "end" : 186.48,
+        "start" : 186,
+        "text" : " out"
+      },
+      {
+        "confidence" : 0.933,
+        "end" : 187.02,
+        "start" : 186.48,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.622,
+        "end" : 187.98,
+        "start" : 187.02,
+        "text" : " breath."
+      },
+      {
+        "confidence" : 0.32,
+        "end" : 190.2,
+        "start" : 188.1,
+        "text" : " Finally,"
+      },
+      {
+        "confidence" : 0.5,
+        "end" : 192.18,
+        "start" : 190.2,
+        "text" : " they"
+      },
+      {
+        "confidence" : 0.967,
+        "end" : 192.72,
+        "start" : 192.18,
+        "text" : " reached"
+      },
+      {
+        "confidence" : 0.497,
+        "end" : 193.44,
+        "start" : 192.72,
+        "text" : " Uncle"
+      },
+      {
+        "confidence" : 0.388,
+        "end" : 194.22,
+        "start" : 193.44,
+        "text" : " Alp's"
+      },
+      {
+        "confidence" : 0.347,
+        "end" : 194.82,
+        "start" : 194.22,
+        "text" : " heart,"
+      },
+      {
+        "confidence" : 0.784,
+        "end" : 195.3,
+        "start" : 194.82,
+        "text" : " which"
+      },
+      {
+        "confidence" : 0.487,
+        "end" : 198.06,
+        "start" : 195.3,
+        "text" : " overlooked,"
+      },
+      {
+        "confidence" : 0.724,
+        "end" : 199.14,
+        "start" : 198.06,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.383,
+        "end" : 200.22,
+        "start" : 199.14,
+        "text" : " volley"
+      },
+      {
+        "confidence" : 0.274,
+        "end" : 201.24,
+        "start" : 200.22,
+        "text" : " blowed,"
+      },
+      {
+        "confidence" : 0.37,
+        "end" : 202.56,
+        "start" : 201.24,
+        "text" : " Uncle"
+      },
+      {
+        "confidence" : 0.437,
+        "end" : 203.16,
+        "start" : 202.56,
+        "text" : " Alp"
+      },
+      {
+        "confidence" : 0.972,
+        "end" : 203.58,
+        "start" : 203.16,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.433,
+        "end" : 204.42,
+        "start" : 203.58,
+        "text" : " setting"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 205.26,
+        "start" : 204.42,
+        "text" : " outside"
+      },
+      {
+        "confidence" : 0.958,
+        "end" : 206.1,
+        "start" : 205.26,
+        "text" : " on"
+      },
+      {
+        "confidence" : 0.802,
+        "end" : 206.46,
+        "start" : 206.1,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.918,
+        "end" : 207.24,
+        "start" : 206.46,
+        "text" : " wooden"
+      },
+      {
+        "confidence" : 0.82,
+        "end" : 207.48,
+        "start" : 207.24,
+        "text" : " set"
+      },
+      {
+        "confidence" : 0.78,
+        "end" : 207.96,
+        "start" : 207.48,
+        "text" : " when"
+      },
+      {
+        "confidence" : 0.745,
+        "end" : 209.22,
+        "start" : 207.96,
+        "text" : " Heidi"
+      },
+      {
+        "confidence" : 0.411,
+        "end" : 209.52,
+        "start" : 209.22,
+        "text" : " ran"
+      },
+      {
+        "confidence" : 0.884,
+        "end" : 209.76,
+        "start" : 209.52,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.962,
+        "end" : 209.94,
+        "start" : 209.76,
+        "text" : " him"
+      },
+      {
+        "confidence" : 0.238,
+        "end" : 210.78,
+        "start" : 209.94,
+        "text" : " high,"
+      },
+      {
+        "confidence" : 0.542,
+        "end" : 211.74,
+        "start" : 210.78,
+        "text" : " grandpa,"
+      },
+      {
+        "confidence" : 0.278,
+        "end" : 212.7,
+        "start" : 211.74,
+        "text" : " Heidi"
+      },
+      {
+        "confidence" : 0.481,
+        "end" : 213.54,
+        "start" : 212.7,
+        "text" : " shouted"
+      },
+      {
+        "confidence" : 0.622,
+        "end" : 214.2,
+        "start" : 213.54,
+        "text" : " out."
+      },
+      {
+        "confidence" : 0.919,
+        "end" : 216.6,
+        "start" : 214.26,
+        "text" : " Uncle"
+      },
+      {
+        "confidence" : 0.283,
+        "end" : 217.14,
+        "start" : 216.6,
+        "text" : " Alp"
+      },
+      {
+        "confidence" : 0.744,
+        "end" : 217.38,
+        "start" : 217.14,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.735,
+        "end" : 218.46,
+        "start" : 217.38,
+        "text" : " confused"
+      },
+      {
+        "confidence" : 0.786,
+        "end" : 219.96,
+        "start" : 218.46,
+        "text" : " until"
+      },
+      {
+        "confidence" : 0.392,
+        "end" : 221.28,
+        "start" : 219.96,
+        "text" : " daddy"
+      },
+      {
+        "confidence" : 0.783,
+        "end" : 223.32,
+        "start" : 221.28,
+        "text" : " exclaimed,"
+      },
+      {
+        "confidence" : 0.077,
+        "end" : 224.52,
+        "start" : 223.32,
+        "text" : " everything"
+      },
+      {
+        "confidence" : 0.954,
+        "end" : 225,
+        "start" : 224.52,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.888,
+        "end" : 225.24,
+        "start" : 225,
+        "text" : " him."
+      },
+      {
+        "confidence" : 0.929,
+        "end" : 228,
+        "start" : 225.36,
+        "text" : " And"
+      },
+      {
+        "confidence" : 0.512,
+        "end" : 228.66,
+        "start" : 228,
+        "text" : " then,"
+      },
+      {
+        "confidence" : 0.795,
+        "end" : 229.32,
+        "start" : 228.66,
+        "text" : " without"
+      },
+      {
+        "confidence" : 0.64,
+        "end" : 230.58,
+        "start" : 229.32,
+        "text" : " listen"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 231.18,
+        "start" : 230.58,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 231.6,
+        "start" : 231.18,
+        "text" : " any"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 232.44,
+        "start" : 231.6,
+        "text" : " more"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 232.86,
+        "start" : 232.44,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 233.22,
+        "start" : 232.86,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.976,
+        "end" : 233.76,
+        "start" : 233.22,
+        "text" : " old"
+      },
+      {
+        "confidence" : 0.758,
+        "end" : 235.32,
+        "start" : 233.76,
+        "text" : " grandparent's"
+      },
+      {
+        "confidence" : 0.366,
+        "end" : 235.92,
+        "start" : 235.32,
+        "text" : " words,"
+      },
+      {
+        "confidence" : 0.773,
+        "end" : 236.52,
+        "start" : 235.92,
+        "text" : " that"
+      },
+      {
+        "confidence" : 0.923,
+        "end" : 236.94,
+        "start" : 236.52,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.626,
+        "end" : 237.3,
+        "start" : 236.94,
+        "text" : " lived"
+      },
+      {
+        "confidence" : 0.484,
+        "end" : 238.38,
+        "start" : 237.3,
+        "text" : " goodbye"
+      },
+      {
+        "confidence" : 0.105,
+        "end" : 238.8,
+        "start" : 238.38,
+        "text" : " to,"
+      },
+      {
+        "confidence" : 0.253,
+        "end" : 239.88,
+        "start" : 238.8,
+        "text" : " heavy,"
+      },
+      {
+        "confidence" : 0.951,
+        "end" : 240.3,
+        "start" : 239.88,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.975,
+        "end" : 240.78,
+        "start" : 240.3,
+        "text" : " quickly"
+      },
+      {
+        "confidence" : 0.235,
+        "end" : 241.98,
+        "start" : 240.78,
+        "text" : " went"
+      },
+      {
+        "confidence" : 0.458,
+        "end" : 242.82,
+        "start" : 241.98,
+        "text" : " downhill."
+      }
+    ],
+    "source" : "super8-L4-p6-8-A21E6068-5602-4D0D-89F9-95AE1D63C27F.m4a"
+  },
+  "words" : [
+    "one",
+    "day",
+    "in",
+    "june",
+    "the",
+    "mountain",
+    "had",
+    "a",
+    "visitor",
+    "a",
+    "tall",
+    "woman",
+    "named",
+    "uh",
+    "alarmed",
+    "with",
+    "daddy",
+    "was",
+    "for",
+    "5",
+    "years",
+    "old",
+    "nice",
+    "a",
+    "grown",
+    "with",
+    "black",
+    "crowly",
+    "hair",
+    "named",
+    "heidi",
+    "you",
+    "are",
+    "right",
+    "this",
+    "is",
+    "heidi",
+    "the",
+    "girl",
+    "my",
+    "last",
+    "sister",
+    "left",
+    "behind",
+    "that",
+    "he",
+    "answered",
+    "i'm",
+    "taking",
+    "her",
+    "to",
+    "um",
+    "uncle",
+    "help",
+    "so",
+    "he",
+    "can",
+    "take",
+    "care",
+    "of",
+    "her",
+    "from",
+    "now",
+    "on",
+    "but",
+    "that",
+    "he",
+    "had",
+    "made",
+    "up",
+    "her",
+    "mind",
+    "it",
+    "is",
+    "time",
+    "for",
+    "hetty's",
+    "grand",
+    "father",
+    "to",
+    "take",
+    "up",
+    "the",
+    "responsibility",
+    "barbie",
+    "and",
+    "had",
+    "heard",
+    "many",
+    "tales",
+    "of",
+    "art",
+    "uncle",
+    "help",
+    "a",
+    "grumpy",
+    "old",
+    "man",
+    "who",
+    "hadn't",
+    "been",
+    "to",
+    "church",
+    "for",
+    "many",
+    "years",
+    "behaved",
+    "with",
+    "bad",
+    "meaners",
+    "and",
+    "scared",
+    "people",
+    "of",
+    "with",
+    "his",
+    "fine",
+    "experi",
+    "expressions",
+    "she",
+    "was",
+    "um",
+    "a",
+    "a",
+    "a",
+    "to",
+    "find",
+    "out",
+    "what",
+    "the",
+    "matter",
+    "was",
+    "with",
+    "him",
+    "that",
+    "he",
+    "continued",
+    "tobias",
+    "um",
+    "to",
+    "be",
+    "us",
+    "married",
+    "my",
+    "sister",
+    "uh",
+    "a",
+    "best",
+    "head",
+    "and",
+    "heidi",
+    "was",
+    "born",
+    "but",
+    "alas",
+    "tobias",
+    "said",
+    "only",
+    "2",
+    "years",
+    "in",
+    "uh",
+    "in",
+    "a",
+    "construction",
+    "project",
+    "and",
+    "poor",
+    "uh",
+    "passed",
+    "away",
+    "not",
+    "long",
+    "long",
+    "after",
+    "out",
+    "of",
+    "breath",
+    "finally",
+    "they",
+    "reached",
+    "uncle",
+    "alp's",
+    "heart",
+    "which",
+    "overlooked",
+    "the",
+    "volley",
+    "blowed",
+    "uncle",
+    "alp",
+    "was",
+    "setting",
+    "outside",
+    "on",
+    "a",
+    "wooden",
+    "set",
+    "when",
+    "heidi",
+    "ran",
+    "to",
+    "him",
+    "high",
+    "grandpa",
+    "heidi",
+    "shouted",
+    "out",
+    "uncle",
+    "alp",
+    "was",
+    "confused",
+    "until",
+    "daddy",
+    "exclaimed",
+    "everything",
+    "to",
+    "him",
+    "and",
+    "then",
+    "without",
+    "listen",
+    "to",
+    "any",
+    "more",
+    "of",
+    "the",
+    "old",
+    "grandparent's",
+    "words",
+    "that",
+    "he",
+    "lived",
+    "goodbye",
+    "to",
+    "heavy",
+    "and",
+    "quickly",
+    "went",
+    "downhill"
+  ]
+}

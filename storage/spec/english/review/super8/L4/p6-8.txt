@@ -1,0 +1,202 @@
+# 超8 · Lesson 4
+#
+# ── 正文的写法（见 src/generator/english/CLAUDE.md）
+# 报告正文只写**孩子的朗读**。机器为什么误判、我们怎么核的，全部留在这些 # 注释里。
+#
+# ── 第二册的头一次
+# 超8 每 3 课一册，Lesson 4 起是第二册《Heidi》，页码从 1 重新起。
+# **不写 prev** —— 上一次是第一册的 p73-74（Prince Darling），换书就换了一把尺子，
+# 三把尺子上标一个跨本的「上一次」只会误导。目录页的日汇总也自动不给涨跌（books 不同）。
+#
+# ── 这次核对的经过（都不进正文）
+# 机器报了 39 处候选（换词 38 + 漏读 1），逐条核完计错 18 处。撤下的 21 处：
+#
+#   · **Detie 7 处（10.8 / 12.7 / 36.9 / 50.1 / 128.3 / 220.0 / 236.5 秒）——全部不计错。**
+#     `.ref.txt` 里的 Detie 被 scan 标成「可疑」，去 p8.suspect-Detie.png 上核过，
+#     **课本印的就是 Detie**，不是扫描认错，机器那句「建议不计错」的归因是错的。
+#     真正的原因是转写：这个德语名字识别器不认，**四次都被切成「that + he」**
+#     （35.6+36.9 / 49.4+50.1 / 123.0+128.3 / 235.9+236.5），另两次听成 daddy、一次 uh。
+#     四次一模一样的切法就是转写在把一个词拆成两个 —— 那 4 个 that 也不是回读，
+#     一并从 [磕巴] 撤下。
+#   · Adelheid 2 处（147.6 → head、178.9 → uh）：专有名词，不计错
+#
+# ── ⭐ 拿配套的外教朗读做过一次对照（2026-09-01），上面几条从推断变成了实证
+# 把「超强8级 外教朗读音频 Lesson 4.mp3」（整课 50 分钟的录音棚清读）过了一遍
+# `feeder ref`，**同一个识别器**听字正腔圆的朗读，结果是：
+#   · **Detie 一次都没认出来** —— 全篇听成 Daddy / Teddy / Dedi
+#     （“her aunt, Daddy”、“Aunt Teddy had to go”、“The 26 year old Dedi”）。
+#     念得再标准也认不出，所以孩子那 7 处判不计错是对的
+#   · **Uncle Alp 十处全部认出**，一处都没变成 help。
+#     所以她 43.0 / 72.5 秒那两处 help **是真读错**，计错站得住；
+#     第 8 页起三次都认成 Alp，「后面读对了」这句也是实的
+#   · Adelheid 两处，一处认成 Adelaide、一处认对 —— 半数失守，不计错
+#   · **niece / curly / late / manners / horrifying / anxious / grief / hut /
+#     sitting / wooden seat / explained / listening 在清读下全部认对** ——
+#     这几个词识别器本身没有问题，孩子那儿转写出别的词，是她读的确实不一样。
+#     计错的 18 处因此更站得住
+#   · “which overlooked the valley below” 清读里也是 below —— 和 marked.png 一致
+# 这份对照转写没有入库：它是**整课全文**，而 `data/` 里的 pNN.ref.txt 是**划线版**，
+# 两者不是一样东西，切页覆盖进去会把比对基准搞乱（DATA.md 那张表防的就是这个）。
+# 以后哪一课的教材截图拍不清，或者 scan 的 spellFlags 拿不准，可以照这个法子再跑一次。
+#
+# ── 一处新证据没有改判、但记在这儿
+# girl → grown（18.8）、Along → alarmed（11.4）、her → years（15.7）、
+# five-year-old → old（16.2）这四处原本判「转写乱段」。清读里这一整句认得干干净净，
+# 说明**乱的原因在朗读这边而不是识别器**。仍旧不计错：这几个是她最熟的词，
+# 那 12 秒里她一直在犹豫（um / for five），语音一含混识别器就会把相邻词粘连切错。
+# 但下次重看这几条时，别再拿「识别器搞不定这句」当理由 —— 那条已经被证伪了
+#   · Heidi's → hetty's（54.4）：Heidi 她别处四次都读对了（23.3 / 151.1 / 208.0 / 211.7），
+#     是所有格那个 -'s 让转写靠错了词
+#   · Hi → high（209.9）：**两个词完全同音**，书上是 “Hi, Grandpa!”，不是读错
+#   · Along → alarmed（11.4）、her → years（15.7）、five-year-old → old（16.2）、
+#     girl → grown（18.8）：9.4–21.6 秒这一串转写整个乱了。girl 这种词不可能读错
+#   · about → art（70.7，把握 0.17）：一个词被切成「of art」两个词，撤
+#   · grumpy → grandparent's（233.8）、man's → words（235.3）、words → that（235.9）、
+#     waved → lived（236.9）、Heidi → heavy（238.8）：233.8–239.3 秒同一串乱段。
+#     grumpy 她在 73.6 秒读对过（把握 0.97）
+#
+# ── 两处「课本上有、划线外」的词（她读了，机器当多读，都不计错）
+#   · 第 8 页 “which overlooked the valley **below**.” —— 黑线止于 valley，below 在线外。
+#     所以转写的「volley blowed」是 valley（读成 volley，计错）+ below（读对了，划线外）。
+#     机器把 blowed 当成替换 valley、把 volley 当成多读，两边都错位了。
+#   · 第 7 页 “to find out what **the** matter was with him.” —— 黑线止于 what。
+#     她把线外的 the 也读了，句子反而读完整了，写进 [亮点]
+#
+# ── 录音本身
+# 4 分 6 秒从头到尾都是划线课文，中间没混进生词表或没划线的段落（前两次都有）。
+# 所以 WCPM 和停顿这两项这次是干净的，不用像 p70-72 / p73-74 那样另给一个折算数。
+date: 2026-08-31
+cat: 超8
+order: 6
+page: 6–8
+book: Heidi
+part: 划线部分
+words: 216
+errors: 18
+score: 47
+naep: 2
+
+[评分] 准确度=18/30 流利度=11/30 断句语调=11/25 发音=7/15
+
+[总评] 第二册开篇，216 个词一口气读完，18 处读错里有一半栽在元音上。
+    读对 198 个，准确率 91.7%。**这是第二册《Heidi》的头一次** —— 新书、新故事，
+    人名地名全是没见过的，数字比第一册低一点是正常的，别当成退步看。
+    18 处里 **9 处是元音换了个音**：seat 读成 set、sitting 读成 setting、
+    hut 读成 heart、niece 读成 nice、valley 读成 volley、late 读成 last、
+    grief 读成 breath。这几个词她都认得，是元音没咬准。
+    剩下的是几个第一次见的长词：horrifying 和 anxious 各卡了 7 秒多没读出来，
+    construction 前停了 10 秒。**这两类要分开练** —— 元音那批靠开口多念几遍，
+    长词那批靠开读之前先拆音节。
+
+[卡壳] 91.0-98.2 = horrifying 卡 7.2 秒, 98.2-104.7 = 换句停 6.5 秒, 107.3-115.0 = anxious 卡 7.6 秒, 131.1-143.1 = married 一句卡 12.0 秒, 162.5-172.9 = construction 卡 10.4 秒
+    五处长停有四处是卡在词上：horrifying 试了两遍没出来、anxious 出来的是三声「a」、
+    “Tobias married my sister Adelheid” 那一句停了 12 秒才接上、
+    construction 前停了 10 秒。98.2–104.7 那 6.5 秒不是卡住，是一句读完换到下一句。
+
+[分页] 这次读了 3 页
+第 6 页 = 1.4-24.2 秒 · 29 词 · 计错 2 处
+第 7 页 = 26.9-122.9 秒 · 92 词 · 计错 7 处
+第 8 页 = 128.7-242.8 秒 · 95 词 · 计错 9 处
+    第 6 页只有三行，读得最快（76 词/分）。第 7 页和第 8 页词数差不多，
+    但第 7 页两处大卡壳都在这儿（horrifying、anxious），第 8 页错得最多、
+    九处里六处是元音 —— 越往后句子越长，眼睛越容易滑过去。
+
+[比对]
+原文 was her five-year-old *niece* a girl with
+实读 was her five-year-old *nice* a girl with
+    17.0 秒。niece 读成了 nice，元音换了
+原文 girl with black *curly* hair named Heidi
+实读 girl with black *crowly* hair named Heidi
+    20.8 秒。curly（卷发那个词）没读准
+原文 the girl my *late* sister left behind
+实读 the girl my *last* sister left behind
+    31.0 秒。late 读成 last
+原文 her to Uncle *Alp* so he can
+实读 her to Uncle *help* so he can
+    43.0 秒。Uncle Alp 的 Alp 读成了 help
+原文 tales about Uncle *Alp* a grumpy old
+实读 tales about Uncle *help* a grumpy old
+    72.5 秒。同一个名字第二次还是 help —— 不过从第 8 页起她就读对了，三次都对
+原文 behaved with bad *manners* and scared people
+实读 behaved with bad *meaners* and scared people
+    83.9 秒。manners 的元音读长了
+原文 and scared people *off* with his horrifying
+实读 and scared people *of* with his horrifying
+    88.0 秒。off 读成 of。**上一次也栽在这同一个词上**
+原文 people off with his *horrifying* expressions She
+实读 people off with his *（没读出来）* expressions She
+    96.2 秒。卡了 7 秒多，试了两遍都没出来，跳过去接着读了 expressions
+原文 expressions She was *anxious* to find out
+实读 expressions She was *（没读出来）* to find out
+    113.8 秒。又卡了 7 秒多，出来的是三声「a」，然后接着读 to find out
+原文 But alas Tobias *died* only after two
+实读 But alas Tobias *said* only after two
+    159.5 秒。died 读成 said
+原文 Tobias died only *after* two years in
+实读 Tobias died only *（漏读）* two years in
+    after 整个跳过去了
+原文 not long after out of *grief*
+实读 not long after out of *breath*
+    187.0 秒。out of grief 读成了 out of breath —— 后面那个短语常见得多，顺口就滑过去了
+原文 reached Uncle Alp's *hut* which overlooked the
+实读 reached Uncle Alp's *heart* which overlooked the
+    194.2 秒。hut 读成 heart
+原文 which overlooked the *valley* below
+实读 which overlooked the *volley* below
+    199.1 秒。valley 读成 volley。这一句的最后一个词 below 在黑线外面，她也读了
+原文 Uncle Alp was *sitting* outside on a
+实读 Uncle Alp was *setting* outside on a
+    203.6 秒。sitting 读成 setting
+原文 on a wooden *seat* when Heidi ran
+实读 on a wooden *set* when Heidi ran
+    207.2 秒。seat 读成 set。**和上一行是同一类** —— 都是把长元音读短了
+原文 confused until Detie *explained* everything to him
+实读 confused until Detie *exclaimed* everything to him
+    221.3 秒。explained 读成 exclaimed，两个词只差中间一小截
+原文 And then without *listening* to any more
+实读 And then without *listen* to any more
+    229.3 秒。词尾的 -ing 没读出来
+
+[磕巴] 读了两遍才接上的地方 · 1 处
+*long*, long after out of
+    182.9 秒。整段就这一处是真的读了两遍。其余那些停顿处的「um」「uh」
+    不算回读，是在想下一个词 —— 卡在哪几个词上，上面的时间轴里都标出来了。
+
+[亮点]
+**“a grumpy old man who hadn't been to church for many years”** —— 73 到 80 秒这 13 个词一口气读完，一处没错，hadn't、church 都干净利落。
+**“responsibility”** —— 六个音节的长词，一次读对，前面还不带停的。
+**“so he can take care of her from now on”** —— 九个词连成一串，是全篇最顺的一句。
+书上第 7 页那句 “to find out what **the** matter was with him”，黑线只划到 what；她把线外的 the 也读了下去，句子反倒读完整了。第 8 页的 valley **below** 也是一样。
+Heidi、Tobias、Barbie 这几个第一次见的名字，她都读了出来。
+
+[三件事]
+🔤 元音先念三遍：seat / sitting / hut / niece / valley
+    18 处错里 9 处是元音换了个音，全是她认得的词。开读之前把这几个词单独念三遍，
+    seat 和 set、sitting 和 setting 挨着念，听出那点长短的差别。
+📖 长词先拆音节：hor-ri-fy-ing / anx-ious / con-struc-tion
+    这次停最久的三处都卡在这类词上（7.2 秒、7.6 秒、10.4 秒）。
+    开读前先把这几个词拆开念熟，再放回句子里 —— 卡在一个词上，整句的语气就断了。
+🔁 同一段读两遍
+    第二册第一次读，准确率落在「偏难」这一档。这时候最管用的办法就是一段读两遍：
+    第一遍认词，第二遍连句子。下面那句划好斜线的正好可以拿来练。
+
+[斜线]
+Barbie had heard many tales about Uncle Alp,
+a grumpy old man
+who hadn't been to church for many years,
+behaved with bad manners
+and scared people off with his horrifying expressions.
+
+[尺子]
+    91.7% 落在「偏难」这一档 —— 216 个词错 18 处。
+        **这是第二册的头一次，和第一册那几页不是同一把尺子**，两边的数别直接减。
+    48 个正确词/分钟：压在**三年级秋季 10–25 百分位**之间。
+        这次录音从头到尾都是划线课文，中间没混别的，所以这个数不用打折。
+        母语常模只当参照系，不是及格线。
+    平均 1.5 个词一组。停顿口径和前面七次一样，这个数可以跨录音直接比。
+
+[怎么来的]
+**准确率 91.7%**（读对 198 / 划线部分共 216 词）。替换、漏读、读错音计错；插入的词和退回去重读只算不流利、不计错。上面的比对一条一条列的就是这 18 处。
+**每分钟正确词数 48**（WCPM）= 读对的 198 词 ÷ 246.4 秒 × 60。这段录音全程读的都是划线部分，没有需要另外扣掉的时间。
+**断句**取 143 次停顿，平均 1.5 个词一组。停顿阈值取「说话声级 − 10 dB」，和前面七次同一把尺子，所以停顿类的数字可以直接比。
+这次是 8 月 31 日的一段 4 分 6 秒录音，一口气读完第 6–8 页的划线部分，是第二册《Heidi》的头一次。**发音这一项没有一个音一个音地听过**，是从录音里推出来的，不如亲耳听准，所以这一项的分给得保守。
