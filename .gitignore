@@ -11,7 +11,10 @@ __pycache__/
 .idea
 
 # 本地素材（作业照片 / 录音，不上传）
-inbox/
+# **不带斜杠**：带斜杠只匹配目录，而素材堆在别处时这儿往往是一条软链
+#（`ln -s ~/Downloads/study inbox`）—— 软链在 git 眼里是文件，`inbox/` 挡不住它。
+# 挡不住的后果不是泄漏音频本身，是把一条别人机器上必然断掉的路径提交进仓库。
+inbox
 
 # 喂数据台（../feeder）的过程产物和候选，都不进 git：
 #   *.marked.png / *.page.json / *.suspect-*.png / *.cards.json / *.board.json / *.full.txt

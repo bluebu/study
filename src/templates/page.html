@@ -33,5 +33,10 @@
 <body>
 {{ body|safe }}
 {{ foot|safe }}
+{#- 脚本一律放 body 末尾、一律 defer：全站只有打卡评价用得上（点词听读音），
+    别让它挡住其它页面的首屏 -#}
+{% for s in scripts %}
+<script src="{{ root }}/assets/{{ s }}" defer></script>
+{% endfor %}
 </body>
 </html>

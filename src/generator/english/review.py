@@ -220,9 +220,49 @@ def rich(text: str) -> str:
     return out
 
 
-def marked(text: str, tag: str) -> str:
-    """把 *xxx* 换成 <mark>/<ins>。"""
-    return re.sub(r"\*(.+?)\*", rf"<{tag}>\1</{tag}>", rich(text))
+# rich() 先 escape 再插标签，所以到 marked() 手上的高亮词已经是实体形式了
+# （`Heidi's` → `Heidi&#x27;s`）。判断「这是不是一个能念的英文词」得先还原回去。
+_ENTITIES = {"&#x27;": "'", "&amp;": "&", "&quot;": '"', "&lt;": "<", "&gt;": ">"}
+_SAYABLE = re.compile(r"[A-Za-z][A-Za-z'\-]*")
+
+
+def _plain(s: str) -> str:
+    for k, v in _ENTITIES.items():
+        s = s.replace(k, v)
+    return s
+
+
+def picked(text: str) -> str:
+    """取出 `*xxx*` 里高亮的那个词（没有就空串）。作用在**原始 spec 文本**上。"""
+    m = re.search(r"\*(.+?)\*", text)
+    return m.group(1) if m else ""
+
+
+def marked(text: str, tag: str, *, say: bool = False,
+           clip: tuple[float, float] | None = None) -> str:
+    """把 *xxx* 换成 <mark>/<ins>。
+
+    `say=True` 时，高亮的那个词只要是个能念的英文词，就带上 `data-say` ——
+    点一下让浏览器念出来（`review-play.js`）。**看字是听不出元音差别的**：
+    seat / set、niece / nice 写在纸上一目了然，差在哪儿只有耳朵知道。
+
+    再给一段 `clip` 起止秒数，点的时候优先播**她自己**读的那一段；
+    本地没有音频就退回去念这个词 —— 线上永远没有音频（录音不进仓库），
+    所以线上点红词听到的是「这个错词标准读起来是什么样」，一样有用。
+
+    中文占位（`（没读出来）`）匹配不上 `_SAYABLE`，自然就不带属性 —— 优雅降级，
+    不需要在调用处特判。
+    """
+    def one(m: re.Match[str]) -> str:
+        w = m.group(1)
+        attrs = ""
+        if say and _SAYABLE.fullmatch(_plain(w)):
+            attrs = f' class="say" data-say="{w}"'
+            if clip:
+                attrs += f' data-clip="{clip[0]:.2f},{clip[1]:.2f}"'
+        return f"<{tag}{attrs}>{w}</{tag}>"
+
+    return re.sub(r"\*(.+?)\*", one, rich(text))
 
 
 def grouped(lines: list[str]) -> list[str]:
@@ -503,6 +543,36 @@ def auto_bounds(r: Report) -> list[float]:
             if i < len(times) and times[i] is not None and re.search(r"[.!?][\"']?$", w)]
 
 
+def clip_index(r: Report) -> dict[str, list[tuple[float, float]]]:
+    """原文词 → 它在录音里的起止秒数，按录音顺序排。
+
+    `read.json` 的每条差异本来就带 `start` / `end`，这儿只是按词归个类。
+    漏读那条没有时刻 —— **跳过去的词本来就没有声音**，跳过它。
+
+    spec 的 `[比对]` 是人从草稿里挑剩下的（撤掉了不计错的那些），但**顺序没变**，
+    所以同一个词出现多次按顺序配就对得上。配不上就不给点 —— 优雅降级，
+    宁可少一个按钮，也不要退回去解析说明文字里的「17.0 秒」：
+    那种匹配一旦写错是**静默**失败，点开听到的是别处的声音，比没有更糟。
+    """
+    out: dict[str, list[tuple[float, float]]] = {}
+    for d in ((r.reading or {}).get("alignment") or {}).get("diffs", []):
+        w, a, b = (d.get("ref") or "").lower(), d.get("start"), d.get("end")
+        if w and a is not None and b is not None:
+            out.setdefault(w, []).append((float(a), float(b)))
+    return out
+
+
+def audio_src(r: Report) -> str | None:
+    """这次录音的原始文件名 —— 本机素材堆里有才返回，没有给 None。
+
+    **录音永不进仓库**（DATA.md 的「素材」那一档）。所以这条链路天生只在本地成立：
+    CI 上 `inbox/` 不存在 → 这儿返回 None → 页面里一个 `<audio>` 都不出。
+    不需要额外的开关，也就没有「忘了关」把孩子的声音带上公网的可能。
+    """
+    name = (r.acoustics or {}).get("source") or ""
+    return name if paths.material(name) else None
+
+
 def diffs(r: Report) -> dict | None:
     """逐字比对。
 
@@ -531,6 +601,7 @@ def diffs(r: Report) -> dict | None:
         elif cur:                       # 没有前缀的行：当成上一条的续行
             cur["why"].append(stripped)
 
+    spots, taken = clip_index(r), {}
     out = []
     n = 0
     for it in items:
@@ -541,9 +612,16 @@ def diffs(r: Report) -> dict | None:
             n += 1
             num = str(n)
         why = joined(it["why"])
+        # 同一个词在一次录音里可能错好几回（`Alp` 在 p6-8 里两处），按出现顺序配
+        word = _plain(picked(it["ref"])).lower()
+        here = spots.get(word) or []
+        k = taken.get(word, 0)
+        clip = here[k] if k < len(here) else None
+        if clip:
+            taken[word] = k + 1
         out.append({"num": num, "doubt": doubt, "lbl": it["lbl"],
-                    "ref": marked(it["ref"], "mark"),
-                    "read": marked(it["read"], "ins"),
+                    "ref": marked(it["ref"], "mark", say=True),
+                    "read": marked(it["read"], "ins", say=True, clip=clip),
                     "why": rich(why) if why else ""})
     # 抬头不写就自己数。存疑那条也算一处 —— 它同样是对不上的地方，
     # 只是判不准该算谁的，所以编号出 ? 而不是从计数里拿掉
@@ -677,6 +755,8 @@ def card_ctx(r: Report, others: dict[str, Report], *,
     return {
         "anchor": anchor(r.slug),
         "cat": r.color_var, "fg": fg, "bg": bg,
+        # 本机有原始录音才出 <audio>（线上永远没有，见 audio_src）
+        "audio": audio_src(r),
         "hero": hero(r, lesson=lesson, book=book),
         "score": score_box(r, others, first=first),
         "stats": stats(r),
@@ -714,14 +794,26 @@ def render_day(date: str, rows: list[Report], others: dict[str, Report],
         pieces.append(f"《{next(iter(books))}》")
     pieces.append(f"{len(rows)} 次朗读")
 
+    cards = [card_ctx(r, others, lesson=len(lessons) > 1, book=len(books) > 1,
+                      first=(i == 0))
+             for i, r in enumerate(rows)]
+
+    # 本机有原始录音的，软链一条进 dist/ —— **软链不是拷贝**：源文件动辄几十兆，
+    # 拷一遍既慢又占地方，而 `make up` 起的 http.server 跟随软链毫无问题。
+    # dist/ 整个不进 git，所以这条链和它指向的录音都到不了线上。
+    for r, c in zip(rows, cards):
+        if c["audio"] and (src := paths.material(c["audio"])):
+            link = out_dir / c["audio"]
+            link.parent.mkdir(parents=True, exist_ok=True)
+            link.unlink(missing_ok=True)
+            link.symlink_to(src)
+
     body = tmpl.body(
         "review/day.html",
         day={"label": pretty_date(date),
              "sub": dot_join(pieces),
              "sum": summary},
-        reports=[card_ctx(r, others, lesson=len(lessons) > 1, book=len(books) > 1,
-                          first=(i == 0))
-                 for i, r in enumerate(rows)],
+        reports=cards,
     )
 
     total = summary["words"]
@@ -735,7 +827,8 @@ def render_day(date: str, rows: list[Report], others: dict[str, Report],
             description=desc,
             body=body,
             emoji="🎤",
-            css=("review.css", "daysum.css"),
+            css=("review.css", "daysum.css", "review-play.css"),
+            js=("review-play.js",),
             root="../..",           # dist/english/review/<date>.html，日页是平的
             noindex=True,           # 孩子的成绩单，不进搜索引擎
         ),

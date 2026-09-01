@@ -94,6 +94,8 @@ src/
     foot.css          页脚（备案号 + 统计），page.py 挂页脚时自动引上
     trend.css         趋势页（曲线卡片 + 指标总表）
     daysum.css        当天汇总条（目录页和日页共用，两边引的 CSS 谁也不包含谁）
+    review-play.css   比对里能点的词（绿=标准音 / 红=她读的那一段）
+    review-play.js    **全站唯一一个脚本**。点词听读音，逻辑和为什么见文件头
   generator/          **所有生成器 .py**，一科一层目录
     chinese/build.py  语文练习单
     english/          英语（CLAUDE.md 里有本科的教学准则和四个栏目的口径）

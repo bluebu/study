@@ -21,6 +21,7 @@ def render(
     emoji: str = "📚",
     theme: str = "#FBF6EB",
     css: tuple[str, ...] | list[str] = (),
+    js: tuple[str, ...] | list[str] = (),
     root: str = ".",
     noindex: bool = False,
     lang: str = "zh-CN",
@@ -32,6 +33,9 @@ def render(
     title/description  —— 同时用于 <title>/<meta> 和 og:*，别分开写
     css                —— assets/ 下要额外引的样式
                           （palette.css 色板 + base.css 全站基线总是引）
+    js                 —— assets/ 下要引的脚本，挂在 body 末尾、带 defer。
+                          **全站几乎用不上** —— 页面是静态的，只有打卡评价
+                          要点词听读音。别拿它做本来 CSS 就能做的事
     root               —— 本页到站点根的相对路径（根上是 "."，子目录是 ".."）
     noindex            —— 打印讲义这类不想被搜到的页面设 True，
                           用 meta 而不是 robots.txt Disallow
@@ -52,6 +56,7 @@ def render(
         emoji=emoji,
         theme=theme,
         sheets=["palette.css", "base.css", *css] + (["foot.css"] if foot else []),
+        scripts=list(js),
         root=root,
         noindex=noindex,
         lang=lang,

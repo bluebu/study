@@ -325,3 +325,10 @@ tutor, escape, capture, Fairy Truth, monster, lion · wolf · snake · bull
 - 录音和教材照片**不进仓库**，测量数据（`.read.json` / `.ref.txt` / `.json` /
   `.words.tsv`）**要进**：音频不在库里，那些数字再也算不出来。
   四档去向见根目录 [DATA.md](../../DATA.md)
+- **`[比对]` 里的词能点**（`review-play.js`）：绿的念标准音、红的播她读的那一段。
+  加这个是因为**看字分不出元音** —— seat / set、niece / nice 写在纸上一目了然，
+  差在哪儿只有耳朵知道，而那恰恰是她错得最多的一类。
+  时刻不是从说明文字里抠的，是拿高亮词回查 `read.json` 的 `diffs`（那儿本来就有
+  `start`/`end`）；同一个词错好几回按出现顺序配，配不上就不给点。
+  **录音只有本地预览有** —— CI 上 `inbox/` 不存在，页面里连 `<audio>` 都不出，
+  点红词退回去念那个词。线上那份报告永远是纯文字的，不需要任何开关保证这件事
