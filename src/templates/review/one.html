@@ -145,7 +145,7 @@
     {#- ⚠️ 这一行里 mark / ins 紧贴中文，**中间不许换行** —— 断开就多一个空格，
         「绿 是标准音」中间裂一道缝。同 .d .en 的「原文」标签那处。
         没有录音时（线上永远没有）后半截不出，别许诺一个点了没反应的功能 -#}
-    <p class="tap">点词听读音 · <mark>绿</mark>是标准音{% if r.audio %} · <ins>红</ins>是她读的那一段{% endif %}</p>
+    <p class="tap">点词听读音 · <mark>绿</mark>是这个词的标准音{% if r.audio %} · <ins>红</ins>是她读的那一句{% endif %}</p>
     <div class="diff">
 {% for d in r.diffs.rows %}
 

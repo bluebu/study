@@ -543,22 +543,73 @@ def auto_bounds(r: Report) -> list[float]:
             if i < len(times) and times[i] is not None and re.search(r"[.!?][\"']?$", w)]
 
 
-def clip_index(r: Report) -> dict[str, list[tuple[float, float]]]:
-    """原文词 → 它在录音里的起止秒数，按录音顺序排。
+# 点一次最多听这么久。她读得慢、卡壳多，一句能拖到 39 秒（p6-8 那句 32 个词），
+# 整句照播就成了「点一下等半分钟」。超过就以那个词为中心裁一段，两头不超出句子。
+LISTEN_MAX = 12.0
 
-    `read.json` 的每条差异本来就带 `start` / `end`，这儿只是按词归个类。
-    漏读那条没有时刻 —— **跳过去的词本来就没有声音**，跳过它。
+
+def sentence_spans(r: Report) -> list[tuple[float, float] | None] | None:
+    """原文每个词 → **它所在那一句**在录音里的起止秒数。
+
+    点红词听的是她读的**那一句**，不是那一个词 —— 半秒钟的一个音节听不出
+    所以然（`nice` 才 0.54 秒），得有上下文才判断得了她到底读成了什么样。
+
+    句子边界从原文的句末标点推，时刻用 `refTimes`（每个原文词一个）。
+    两者对不齐就返回 None，让调用方退回「只播那个词」—— **别猜**。
+    """
+    text = ref_text(r.slug)
+    times = ((r.reading or {}).get("alignment") or {}).get("refTimes") or []
+    words = re.findall(r"[A-Za-z0-9''\-]+[^\sA-Za-z0-9]*", text) if text else []
+    if not words or len(words) != len(times):
+        return None
+
+    def at(lo: int, hi: int, step: int = 1) -> float | None:
+        return next((times[k] for k in range(lo, hi, step) if times[k] is not None), None)
+
+    out: list[tuple[float, float] | None] = [None] * len(words)
+    head = 0
+    for i, w in enumerate(words):
+        if not (re.search(r"[.!?][\"']?$", w) or i == len(words) - 1):
+            continue
+        a, b = at(head, i + 1), at(i, head - 1 if head else -1, -1)
+        if a is not None and b is not None:
+            # 末词的结束时刻没有直接记 —— 用下一个词的开始，但别跨太远：
+            # 句子之间常有好几秒的停顿，整段拖进来就成了听静音
+            nxt = at(i + 1, len(times))
+            end = min(nxt, b + 1.5) if nxt is not None else b + 1.5
+            for k in range(head, i + 1):
+                out[k] = (a, end)
+        head = i + 1
+    return out
+
+
+def clip_index(r: Report) -> dict[str, list[tuple[float, float]]]:
+    """原文词 → 点它该播录音的哪一段，按录音顺序排。
+
+    默认给**整句**（见 sentence_spans）；句子对不齐或者太长，就退回以那个词
+    为中心的一段。`read.json` 的每条差异本来就带 `start` / `end` 和 `refIndex`，
+    这儿只是按词归个类。漏读那条没有时刻 —— **跳过去的词本来就没有声音**。
 
     spec 的 `[比对]` 是人从草稿里挑剩下的（撤掉了不计错的那些），但**顺序没变**，
     所以同一个词出现多次按顺序配就对得上。配不上就不给点 —— 优雅降级，
     宁可少一个按钮，也不要退回去解析说明文字里的「17.0 秒」：
     那种匹配一旦写错是**静默**失败，点开听到的是别处的声音，比没有更糟。
     """
+    spans = sentence_spans(r)
     out: dict[str, list[tuple[float, float]]] = {}
     for d in ((r.reading or {}).get("alignment") or {}).get("diffs", []):
         w, a, b = (d.get("ref") or "").lower(), d.get("start"), d.get("end")
-        if w and a is not None and b is not None:
-            out.setdefault(w, []).append((float(a), float(b)))
+        if not w or a is None or b is None:
+            continue
+        i = d.get("refIndex")
+        span = spans[i] if spans and isinstance(i, int) and 0 <= i < len(spans) else None
+        if span:
+            lo, hi = span
+            if hi - lo > LISTEN_MAX:        # 长句：以这个词为中心裁，不超出句界
+                lo, hi = max(lo, a - LISTEN_MAX / 2), min(hi, a + LISTEN_MAX / 2)
+        else:
+            lo, hi = float(a), float(b)     # 没有句子信息，退回只播这个词
+        out.setdefault(w, []).append((lo, hi))
     return out
 
 
