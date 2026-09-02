@@ -1,0 +1,229 @@
+# 超8 · Lesson 4
+#
+# ── 正文的写法（见 src/generator/english/CLAUDE.md）
+# 报告正文只写**孩子的朗读**。机器为什么误判、我们怎么核的，全部留在这些 # 注释里。
+#
+# ── 这段录音里有三样东西，只有一样是这次的评价对象
+#   0.0 –  90.7 秒   念生词表（打卡单上「第 3–5 页 Words and Expressions 的单词部分」，
+#                    responsibility … reward 那 22 个词）。一个词一停，64 次停顿全在这儿
+#  90.7 – 308.8 秒   第 9–11 页的划线部分 ← **这才是被评的那 197 个词**
+# 119.8 – 148.0 秒   夹在中间：她把第 9 页**没划线**的那一段也读了
+#                    （“Grandpa, can you tell me about our goats?” Heidi was eager to
+#                     know about these lovely creatures.）
+# 三样都算进 duration（310.5 秒）和 pause_count（191），只有中间那样算进正确词数，
+# 所以报告头上的 WCPM 35 和「1.0 个词一组」是**被前面 90 秒压出来的**，不是她读慢了。
+# 只算课文那一段：217.7 秒 − 28.2 秒 = 189.9 秒 → WCPM 57（上一次 48）；
+# 停顿 191 − 64（生词表）− 20（那一段）= 106 次 → 1.9 个词一组（上一次 1.5）。
+# **两项都是涨的。** [尺子] / [怎么来的] / [三件事] 各说一次，别在别的区块重复。
+#
+# ── 扫描认错，已回改重跑（不是课本印错，别归错因）
+# 第 10 页 `.ref.txt` 里的「compan」是 scan 把 company 的 y 压在黑线下漏掉了 ——
+# 去 p10.suspect-compan.png 上核过，**课本印的就是 company**。
+# 改了 ref.txt 重跑 read，候选从 32 降到 31，她那处本来就读对了。
+# 顺手把第 11 页被 OCR 吃掉的标点按课本补回（outside, / replied, / Not now, Heidi. /
+# little hut.）—— 不影响词数和比对，只是让句末推得准一点。
+#
+# ── 逐条核完：31 处候选 → 计错 17 处。撤下的 14 处如下
+#
+#   · **Heidi 4 处全部不计错**（95.3 hetty / 155.2 you / 174.7 he / 273.1 they）。
+#     同一段录音里 Heidi 被认对过 4 次（212.9 / 235.3 / 259.2 / 288.2），她会读这个名字。
+#     撤的理由是**识别器在把这个名字切成两个词**，和上一份 Detie → 「that + he」一模一样：
+#       155.2 前面多出来的「how do」＝ Heidi（Hei-di → how-do）
+#       174.7 前面多出来的「had」＋「he」＝ Heidi
+#       273.1 前后的「they … had … they」是「day, Heidi」整个糊掉
+#     那几个「多读」的词也跟着从 [磕巴] 撤下，它们不是回读。
+#   · **Alp's → lovely（146.9）、goats → creatures（148.0）不计错。**
+#     这两个词是她读的**那段没划线的话**的结尾（“these lovely creatures.”），
+#     被对齐算法拉去顶了课文结尾的「Alp's goats」—— SKILL 里写过的那个尾巴借位。
+#     她本人在 116.3 / 119.8 读的是「Uncle … Goat」，这一句读过了。
+#   · **Grannie → granny（279.9）、Grannie's → granny's（307.3）不计错：完全同音。**
+#     课本把「奶奶」拼成 Grannie，识别器只会往 granny 上写。和上一份的 Hi → high 同一类。
+#     292.7 的 Grannie → when 也撤：她在 291.9 就读出了 granny（把握 0.80），
+#     那个 when 是对齐多出来的一格。
+#   · about → robots（208.2，把握 0.23）：**同一段录音里 about 认对过两次**
+#     （124.8 / 169.3，把握都是 0.97）。206–212 秒整片把握极低（ghost 0.18、fall 0.11），
+#     是她读得含混、识别器跟着糊，不是不认识 about。含混算流利度，不算准确率。
+#   · day → had（272.3，把握 0.16）：前一个词 day 刚认对（270.5，0.99），
+#     后面 278.2 又认对（0.96）。同上，撤。
+#   · Grandfather → father（275.7）：251.3（0.82）和 283.7（0.98）两次都认对了，撤。
+#   · for → to（104.6）、to → her（110.0）：98.7–113.4 秒她把「a new chair tall enough
+#     for her to reach the table」退回去重读了一遍，头一遍「enough to her」、
+#     第二遍「enough for her」自己改对了。**自己改对的不计错**，进 [磕巴]。
+#
+# ── 计错的 17 处里有 3 处打了问号（正文里也写明了）
+#   tall（102.5）、reach（110.3）：98.7–113.4 那片转写整个是糊的，但这两个实词
+#     **两遍都没出来**（头遍 town、二遍 territory / bridge），所以按错了算。
+#   save（223.0）：转写在该出 save 的位置写的是「say」（0.47），像是丢了 /v/。
+#   三处都按错了算；要是其实读对了，准确率是 92.9%。这句话正文里给了家长。
+#
+# ── goat 为什么判成真错（这次的主线）
+# goat / goats 在这段录音里认对 2 次（126.1、188.5 把握 0.86），认岔 3 次
+# （gods 0.14 / god 0.07 / ghost 0.18）。同一个词 3:2 分裂 = 她读得不稳，
+# 不是识别器不认识。而且岔的方向全是**长音读成短音**（goat /oʊ/ → god /ɑ/），
+# 和上一份那 9 处（seat→set、sitting→setting、hut→heart、valley→volley）是同一个毛病。
+# sleds / slid 两个词都读成 slide，也是同一族：她按字母猜音，猜的是最常见的那个读法。
+#
+# ── 录音本身
+# 5 分 11 秒，比上一次长一分钟，但多出来的一分半是生词表和那段没划线的话。
+date: 2026-09-01
+cat: 超8
+order: 9
+page: 9–11
+prev: p6-8
+book: Heidi
+part: 划线部分
+words: 197
+errors: 17
+score: 50
+naep: 2
+
+[评分] 准确度=18/30 流利度=13/30 断句语调=12/25 发音=7/15
+
+[总评] 读得比上一次快、也更成串了，17 处错里有 5 处栽在同一个元音上。
+    197 个词读对 180 个，准确率 91.4%，和上一次的 91.7% 基本贴着。
+    **真正变了的是速度和断句** —— 课文那一段每分钟读对 57 个词（上一次 48），
+    平均 1.9 个词一组（上一次 1.5），句子成串了。
+    错的那 17 处里，**goat 一个词就占了 3 处**（读成 god / gods / ghost），
+    再加上 sleds 和 slid 都读成了 slide，5 处是同一个毛病：**长音读成了短音**。
+    这和上一次那 9 处（seat 读成 set、sitting 读成 setting）是同一族的错。
+    好消息是这个词她也读对过 —— 188 秒那句「the poor goat」就是干净的，
+    说明不是不认识，是快读的时候按最眼熟的读法滑过去了。
+
+[卡壳] 105.6-110.3 = 退回去重读 4.7 秒, 119.8-148.0 = 读了划线外的一段 28.2 秒, 159.7-164.4 = introduce 读了两遍 4.7 秒, 223.0-227.4 = Finch 卡 4.4 秒, 229.3-238.5 = 翻页 9.2 秒
+    五处长停只有一处是真卡在词上：223 秒的 Finch，头一遍没读出来，退回去重读了一遍。
+    105.6 和 159.7 那两处是退回去重来（tall enough for her to reach、introduce），
+    229.3 那 9.2 秒是从第 10 页翻到第 11 页。
+    中间 119.8–148.0 那 28.2 秒读的是第 9 页**没划线**的一段 —— 她多读了，不算错，
+    但这段时间算进了总时长，所以报告头上的速度是偏保守的。
+
+[分页] 这次读了 3 页
+第 9 页 = 90.7-165.9 秒 · 50 词 · 计错 5 处 · 语速 64 词/分（已扣掉划线外那 28.2 秒）
+第 10 页 = 169.0-229.3 秒 · 64 词 · 计错 7 处 · 语速 64 词/分
+第 11 页 = 238.5-308.8 秒 · 83 词 · 计错 5 处 · 语速 71 词/分
+    第 10 页最吃力：七处错里五处是 goat 那一族的音（gods、god、ghost、herding、
+    还有跳掉的 into）。第 11 页词最多、反而读得最快也最稳 —— 那一页句子短、对话多。
+
+[对比] 和上一页比
+    准确率 = 持平
+    正确词/分 = 课文段 57
+    几个词一停 = 课文段 1.9
+    停顿占时长 = 生词表拉高
+    这次的录音里除了课文，还有开头 90 秒的生词表和中间 28 秒划线外的一段，
+    上一次是从头到尾一段课文。所以**下面两行的原始数字不能直接和上一次比** ——
+    右边给的是只算课文那一段的数：57 个正确词/分、1.9 个词一组，两项都比上一次高。
+
+[比对]
+原文 comfortable for Heidi. *He* made a new
+实读 comfortable for Heidi. *She* made a new
+    96.5 秒。He 读成了 She。这是一句在讲 Uncle Alp，读成 She 整句的人就换了
+原文 a new chair *tall* enough for her
+识别成 a new chair *town* enough for her
+    102.5 秒。这个词她试了两遍都没出来（头一遍像 town，退回去重来那遍也不对），
+    到底读成了什么得你亲耳听 100–110 秒。计分时按错了 1 处算
+原文 for her to *reach* the table.
+识别成 for her to *bridge* the table.
+    110.3 秒。和上一处在同一次重读里，同样没出来。按错了 1 处算
+原文 In the afternoon, Peter *came* to return
+实读 In the afternoon, Peter *come* to return
+    114.8 秒。came 读成了 come —— 过去式读回了原形，这一段整段都是过去时
+原文 The next morning, Uncle *Alp* told Heidi,
+实读 The next morning, Uncle *up* told Heidi,
+    152.3 秒。Alp 读成了 up。上一次这个名字栽过两回（读成 help），后来读对了三次；
+    这次头一处（90.7 秒）读对了，第二处又滑了
+原文 They *chatted* about the goats
+实读 They *chat* about the goats
+    169.0 秒。词尾的 -ed 没读出来。**和上一次的 listening 读成 listen 是同一处毛病**
+原文 chatted about the *goats* Peter was herding.
+实读 chatted about the *gods* Peter was herding.
+    170.6 秒。goats 读成了 gods —— 长音的 oa 读成了短音的 o
+原文 the goats Peter was *herding.* When Heidi
+实读 the goats Peter was *hurting.* When Heidi
+    172.5 秒。herding 读成 hurting，元音换了，意思也换了（放羊变成弄疼）
+原文 found that the *goat* who had lost
+实读 found that the *god* who had lost
+    177.8 秒。**同一个词第二次读成 god**
+原文 the leg of a small *goat* that was
+实读 the leg of a small *ghost* that was
+    206.4 秒。**第三次**，这回读成了 ghost。三处是同一个词、同一个音
+原文 that was about to fall *into* the deep
+实读 that was about to fall *（漏读）* the deep
+    整个词跳过去了。这一句是全篇最长的一句，读到后半截就赶了
+原文 come and help me *save* Finch!" he barked.
+识别成 come and help me *say* Finch!" he barked.
+    223.0 秒。像是把 save 读成了 say，丢了中间那个 v；不过后半句她自己退回去
+    重读了一遍并且读对了。按错了 1 处算，具体读成什么值得你亲耳听 222–228 秒
+原文 When can I go outside, *Grandfather*?"
+实读 When can I go outside, *（漏读）* ?"
+    248 秒。句尾那声称呼跳过去了 —— 书上这句正好断在行末，下一行开头又是
+    Grandfather，眼睛容易从一个跳到另一个
+原文 and replied, "Not *now,* Heidi. The snow
+实读 and replied, "Not *snow,* Heidi. The snow
+    258.4 秒。now 读成了 snow —— 后面第四个词就是 snow，眼睛跑到前面去了
+原文 But you *can* go soon."
+实读 But you *can't* go soon."
+    265.6 秒。can 读成 can't，意思正好反过来：爷爷说的是「过些天就能去」，
+    读出来变成了「过些天也不能去」
+原文 they got on their *sleds* and slid down
+实读 they got on their *slide* and slid down
+    300.1 秒。sleds（雪橇）读成了 slide
+原文 on their sleds and *slid* down the mountain
+实读 on their sleds and *slide* down the mountain
+    303.5 秒。slid 也读成了 slide。**这两个词她读成了同一个音** ——
+    slide 是"滑"，slid 是它的过去式，sleds 是坐的那个雪橇，三个词长得像、读法不一样
+
+[磕巴] 读了两遍才接上的地方 · 4 处
+*new* chair tall enough for her
+    100.3 秒。「tall enough for her to reach」这一串卡住了，退回去从 new chair 重来一遍。
+    头一遍读的是「enough to her」，第二遍自己改成了「enough for her」—— 改对了，不计错。
+*introduce to* introduce you to this
+    159.7 秒。introduce 起了个头没接上，停了两秒重来，第二遍就顺了。
+*she* she hugged the poor
+    184.9 秒。同一个词读了两遍。
+*say French he* save Finch he barked
+    223.0 秒。Finch 是这一章新出现的小羊名字，头一遍没读出来，
+    她自己退回去把「Finch, he barked」重读了一遍并且读对了。
+
+[亮点]
+**“she hugged the poor goat and promised to keep her company.”** —— 185 到 193 秒这 11 个词一口气读完，一处没错。**goat** 在这儿读得干干净净，**company** 也一次读对。
+**“and he will introduce you to this area.”** —— introduce 重来一遍之后，后半句 8 个词连成一串，全对。
+**“The snow is too deep.”** —— 五个词读得又稳又清楚，是全篇把握最高的一句。
+**“down the mountain to Grannie's little hut.”** —— 最后一句收得很稳，读完整了才停。
+第 9 页那段**没划线**的话（“Grandpa, can you tell me about our goats?”）她也读了，而且读得比划线部分还顺 —— 没人要求，她自己往下读了一段。
+Heidi 这个名字这次一次都没读错。
+
+[三件事]
+🐐 goat 的长音：goat / coat / boat 连着念
+    17 处错里 goat 一个词占了 3 处，都读成了短音（god、gods、ghost）。
+    goat 和 got 挨着念、coat 和 cot 挨着念，听出中间那个音是"长"的。
+    她 188 秒那句「the poor goat」本来就读对了，把那句拿出来再念两遍找找感觉。
+🎿 sleds / slid / slide 三个词摆一排念
+    这三个词她读成了同一个音。slide 是"滑"，slid 是 slide 的过去式（读短音），
+    sleds 是坐着滑的那个雪橇。写在纸上一起念三遍，再回到那一句里读。
+🎬 录音从划线的第一句开起
+    这次的视频里，前 90 秒念的是生词表、中间 28 秒读的是没划线的一段，
+    加起来快两分钟。这两段算进总时长、不算进课文的正确词数，
+    所以报告头上的「每分钟 35 词」「1.0 个词一组」比她实际读的慢。
+    生词表和课文分成两段录，这两个数就能直接和下次比了。
+
+[斜线]
+Suddenly,
+Peter stood up
+and rushed to grab the leg
+of a small goat
+that was about to fall
+into the deep hole.
+
+[尺子]
+    91.4% 落在「偏难」这一档 —— 197 个词错 17 处，和上一次（91.7%）几乎贴着。
+        两次都是第二册，同一把尺子，可以直接比。
+    35 个正确词/分钟：这个数是被录音里的生词表拉下来的。
+        **只算课文那一段是 57 个正确词/分钟**，压在**三年级秋季 10–25 百分位**上，
+        比上一次的 48 快了一截。母语常模只当参照系，不是及格线。
+    平均 1.0 个词一组 —— 生词表是一个词一停，把这个数压低了。
+        只算课文那一段是 1.9 个词一组，比上一次的 1.5 读得更成串。
+
+[怎么来的]
+**准确率 91.4%**（读对 180 / 划线部分共 197 词）。替换、漏读、读错音计错；插入的词和退回去重读只算不流利、不计错。上面的比对列了 17 条、计错 17 处 —— 其中 3 条打了问号（tall、reach、save），是没听清具体读成了什么，计分时按错了算；如果这三处其实读对了，准确率是 92.9%。
+**每分钟正确词数 35**（WCPM）= 读对的 180 词 ÷ 310.5 秒 × 60。**这个数偏保守**：这段录音里只有 189.9 秒在读划线的课文，前面 90 秒念的是生词表、中间 28 秒读的是第 9 页没划线的一段，两段都算进了时长、不算进正确词数。只算课文那一段是 **180 ÷ 189.9 × 60 = 57**，这才是能和上一次的 48 比的数。
+**断句**取 191 次停顿，平均 1.0 个词一组；其中 64 次落在生词表那 90 秒里（一个词一停）、20 次落在划线外那一段里，只算课文那一段是 106 次、1.9 个词一组。停顿阈值取「说话声级 − 10 dB」，和前面八次同一把尺子。
+这次是 9 月 1 日的一段 5 分 11 秒录音，第 9–11 页的划线部分一口气读完，是第二册《Heidi》的第二次。**发音这一项没有一个音一个音地听过**，是从录音里推出来的，不如亲耳听准，所以这一项的分给得保守。
