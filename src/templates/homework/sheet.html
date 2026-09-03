@@ -7,10 +7,13 @@
   其余（.tip / .task / .words / .w 全是 flex 或 grid）空白文本节点不生成盒子，
   按正常缩进写就行。
 
+  squeeze 是 homework.py 挑出来的间距档（`--gap:7px;--pad:9px` 这样一串），
+  项数多到一页装不下才有值；空串的日子这个属性根本不出，HTML 和以前逐字节一样。
+
   `|safe` 的三处都是 inline() 出来的：它内部先 escape 再插标签，出来是可信 HTML。
   spec 里人写的纯文本（title / cheer / date）一律交给 autoescape。
 -#}
-<div class="sheet">
+<div class="sheet"{% if squeeze %} style="{{ squeeze }}"{% endif %}>
   <div class="head">
     <div class="t">
 {% if date %}

@@ -6,7 +6,10 @@
    这一份只管卡片本身，A4 尺寸和边距由 print.css 的 .sheet 管。 */
 
 body{ font-family:var(--font-cn); color:var(--ink); font-size:13px; line-height:1.5; }
-.sheet{ background:var(--card); padding:10mm 12mm; }
+/* --gap / --pad 是「一页装得下吗」的两个旋钮：项数多的那天 homework.py 会按
+   DENSITY 那张梯子往 .sheet 上注一档更紧的值（口径和估算表都在那边）。
+   这里的默认值就是原来的版式 —— 装得下的日子生成器一个字节都不注入。 */
+.sheet{ background:var(--card); padding:10mm 12mm; --gap:10px; --pad:11px; }
 
 /* 页头 */
 .head{
@@ -32,7 +35,7 @@ body{ font-family:var(--font-cn); color:var(--ink); font-size:13px; line-height:
   display:flex; align-items:stretch; gap:9px;
   border:1.5px solid var(--line); border-left:5px solid var(--c);
   border-radius:9px; background:var(--card);
-  padding:11px 12px; margin-bottom:10px;
+  padding:var(--pad) 12px; margin-bottom:var(--gap);
   break-inside:avoid;
 }
 .task .no{
