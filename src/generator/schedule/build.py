@@ -93,23 +93,36 @@ def columns(sp: spec_lib.Spec) -> list[tuple[str, list[dict]]]:
     return out
 
 
-def extras(sp: spec_lib.Spec) -> tuple[str, list[dict]]:
+def extras(sp: spec_lib.Spec, days: list[str], blanks: int) -> list[list[dict]]:
     """机动区：星期以外的区块，一行一条「星期 | 时间 | 名字」。
 
-    校外的课（课后班、兴趣班）不在学校的节次里，时间也不整齐 —— 硬塞进
-    上面那张 6×5 的格子只会把版式搞乱，所以单独一块列在表下面。
-    段数少写也认（只写名字就行），缺的留空。
+    校外的课（课后班、兴趣班）不在学校的节次里，但**它是星期几要和上面
+    的列对齐** —— 所以这儿不排成一张独立小表，而是按星期摊进和课表
+    一样的五列，接在表格下面当额外几行。周三那条就落在「周三」底下。
+
+    `blanks` 是再多留几行空的（每格都能手写）。空格子印一圈虚线框：
+    学期中间加了课直接往上写，不用重打一张。
     """
-    for block in sp.blocks:
-        if DAY.match(block.name):
-            continue
-        rows = []
-        for line in block.lines:
-            parts = [p.strip() for p in line.strip().split("|")]
-            parts += [""] * (3 - len(parts))
-            rows.append({"day": parts[0], "time": parts[1], "name": parts[2]})
-        return block.name, rows
-    return "", []
+    block = next((b for b in sp.blocks if not DAY.match(b.name)), None)
+    if block is None:
+        return []
+
+    by_day: dict[str, list[dict]] = {d: [] for d in days}
+    for line in block.lines:
+        parts = [p.strip() for p in line.strip().split("|")]
+        parts += [""] * (3 - len(parts))
+        day, time, name = parts[:3]
+        if day not in by_day:
+            spec_lib.die(f"{sp.path.name}：[{block.name}] 里的「{day}」不在课表的"
+                         f"{'/'.join(days)} 里 —— 星期写错了，条目就落不到列上")
+        by_day[day].append({"time": time, "name": name})
+
+    # 行数 = 最忙那天有几条 + 留白行
+    n = max((len(v) for v in by_day.values()), default=0) + max(blanks, 0)
+    rows = [[(by_day[d][i] if i < len(by_day[d]) else {"time": "", "name": ""})
+             for d in days]
+            for i in range(n)]
+    return rows
 
 
 def render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, int, int]:
@@ -130,19 +143,18 @@ def render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, int, int]
         f"每天 {periods} 节" if not am else f"上午 {am} 节 · 下午 {pm} 节",
         f"{len(subjects)} 门课") if x)
 
-    extra_title, extra_rows = extras(sp)
+    days = [name for name, _ in cols]
+    # 机动区留几行空的手写：课后班学期中间常换，印死了就得重打一张
+    extra_rows = extras(sp, days, sp.int_("blank", 0))
 
     # 纸上不出页头 —— 表格自己就说明是课表，抬头那一条只是占掉一行格子的高度。
     # heading / meta 仍旧算出来，给 <title> 和目录页用
     body = tmpl.body(
         "schedule/sheet.html",
-        days=[name for name, _ in cols],
+        days=days,
         rows=rows,
         am=am,
-        extra_title=extra_title,
         extras=extra_rows,
-        # 机动区留几行空的手写：课后班学期中间常换，印死了就得重打一张
-        blanks=sp.int_("blank", 0),
     )
 
     out = page.write(

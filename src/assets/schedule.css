@@ -16,7 +16,7 @@ body{ font-family:var(--font-cn); color:var(--ink); font-size:13px; line-height:
    **顺序有讲究**：page.render 里 css=("print.css","schedule.css")，
    这一份在后面才盖得住 —— 别把顺序调过来。 */
 @page{ size: A4 landscape; margin: 0; }
-.sheet{ width:297mm; padding:11mm 12mm; background:var(--card); }
+.sheet{ width:297mm; padding:11mm 12mm; background:#fff; }   /* 整张纸纯白 */
 @media print{
   html, body{ width:297mm; }
   .sheet{ width:297mm; }
@@ -28,7 +28,8 @@ body{ font-family:var(--font-cn); color:var(--ink); font-size:13px; line-height:
 /* ── 表格 ─────────────────────────────────────────────────
    节次列和课格在同一个 grid 里，行高天然对齐。 */
 .tt{
-  --h: 18mm;      /* 一节课一行：6 行 + 机动区正好填满横版一页 */
+  --h: 20mm;      /* 一节课一行：6 行 + 两行机动格正好填满横版一页 */
+  --hx: 14mm;     /* 机动格（课后班）矮一档，两行字够放 */
   --pn: 9mm;      /* 节次列宽 */
   display:grid;
   grid-template-columns: var(--pn) repeat(5, 1fr);
@@ -88,31 +89,23 @@ body{ font-family:var(--font-cn); color:var(--ink); font-size:13px; line-height:
   content:""; flex:1 1 auto; border-top:1.5px dashed var(--line);
 }
 
-/* ── 机动区 ────────────────────────────────────────────────
-   校外的课（课后班、兴趣班）不在学校的节次里，时间也不整齐 —— 硬塞进
-   上面那张 6×5 的格子只会把版式搞乱，所以单独列在表下面。
-   **每行都带一条虚线**：印好的两条和留白的几行长一个样，学期中间换了课
-   拿笔直接往上写，不用重打一张。 */
-.extra{ margin-top:4mm; padding-top:2.5mm; border-top:2px dashed var(--line); }
-.extra .lb{
-  font-family:var(--font-display); font-size:12px; font-weight:700;
-  letter-spacing:.12em; color:var(--ink-soft); margin-bottom:1.2mm;
+/* ── 机动格（课后班）──────────────────────────────────────
+   校外的课不在学校的节次里，可**它是星期几得和上面的列对齐** ——
+   所以不排成独立小表，而是接在同一个 grid 里当额外几行，
+   周三那条就落在「周三」底下。矮一档、虚线框，和上面的课格区分开；
+   空的那些留着手写（学期中间加了课直接往上写，不用重打一张）。 */
+.c.slot{
+  height:var(--hx);
+  /* 时间和名字左右排（纸上一格 52mm，横着放得下且一眼扫得顺）。
+     手机上一格只有 62px，那儿改回上下两行 —— 见文件末尾 */
+  flex-direction:row; align-items:baseline; gap:0 2mm;
+  border-style:dashed;
 }
-.extra .row{
-  display:grid; grid-template-columns:14mm 26mm 1fr;
-  align-items:end; gap:0 3mm;
-  height:7.5mm;
-  border-bottom:1.2px dashed var(--line);
+.c.slot small{
+  font-size:10.5px; color:var(--ink-soft);
+  font-variant-numeric:tabular-nums;   /* 时间要对齐 */
 }
-/* 留白行给手写，比印好的那两条高一截，笔尖才放得下 */
-.extra .row.blank{ height:10.5mm; }
-.extra .d{ font-size:12.5px; }
-.extra .t{
-  font-size:12.5px; color:var(--ink-soft);
-  /* 时间列要对齐，等宽数字 */
-  font-variant-numeric:tabular-nums;
-}
-.extra .n{ font-size:13.5px; font-weight:600; }
+.c.slot b{ font-size:15px; font-weight:600; }
 
 /* ── 手机 ─────────────────────────────────────────────────
    6 行一屏看完整周。只收行高、字号和纸边距，列数不变 ——
@@ -126,10 +119,10 @@ body{ font-family:var(--font-cn); color:var(--ink); font-size:13px; line-height:
   .c b{ font-size:14px; letter-spacing:0; }
   .c b.long{ font-size:10.5px; }   /* 「劳动（体）」5 个全角字，一列只有 62px */
   .c small{ font-size:9px; }
-  /* 机动区：列宽换成 em —— 16mm/32mm 在 390px 上要占掉半屏 */
-  .extra .row{ grid-template-columns:3.4em 6.6em 1fr; height:26px; }
-  .extra .row.blank{ height:32px; }
-  .extra .d, .extra .t{ font-size:11.5px; }
-  .extra .n{ font-size:12.5px; }
+  .tt{ --hx:42px; }
+  /* 一格 62px 横着放不下「18:00~19:40 耶鲁」，摞成两行 */
+  .c.slot{ flex-direction:column; align-items:center; gap:0; }
+  .c.slot small{ font-size:8.5px; }
+  .c.slot b{ font-size:11px; }
   .foot{ font-size:10px; }
 }

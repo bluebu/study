@@ -6,12 +6,12 @@
 
   ⚠️ 两处不许留空白：
      .c 里的 <b> 和 <small> —— .c 是 flex，空白文本节点不生成盒子，但这一格
-        的高度是算好的（--h），拆行以后 diff 里看不出版式动没动，写成一行
-     .extra .row 的三个 <span> —— 那是 grid 的三列（星期 / 时间 / 名字），
-        中间换行会多出空白文本节点，列宽算不准
+        的高度是算好的（--h / --hx），拆行以后 diff 里看不出版式动没动
+     .rest 里的那个 <span> —— 前后的横线是伪元素，中间多一个空白节点就偏心
 
-  节次列（.p）和课格（.c）在同一个 grid 里，所以行高天然对齐 ——
-  别改成「左边一列 + 右边一个表格」两个容器，那样两边行高得各自维护。
+  节次列（.p）、课格（.c）、机动格（.c.slot）**全在同一个 grid 里** ——
+  行高天然对齐，课后班那条也就自动落在它那天的列底下。
+  别把机动区拆成第二个容器：那样列宽得两边各维护一份，永远差一点。
 -#}
 <div class="sheet">
   <div class="tt">
@@ -32,18 +32,17 @@
     <div class="rest"><span>午 休</span></div>
 {% endif %}
 {% endfor %}
-  </div>
-
-{% if extras or blanks %}
-  {# 机动区：校外的课不在学校的节次里，单独列在表下面，还留几行空的手写 #}
-  <div class="extra">
-    <div class="lb">{{ extra_title or '机动' }}</div>
-{% for e in extras %}
-    <div class="row"><span class="d">{{ e.day }}</span><span class="t">{{ e.time }}</span><span class="n">{{ e.name }}</span></div>
-{% endfor %}
-{% for _ in range(blanks) %}
-    <div class="row blank"><span class="d"></span><span class="t"></span><span class="n"></span></div>
-{% endfor %}
-  </div>
+{# 机动行直接接在第 6 节下面 —— 不再插分隔条：格子本身是虚线框，
+   已经和上面的课格分得开，多一条线只是多占一行高度 #}
+{% for r in extras %}
+    <div class="p"></div>
+{% for c in r %}
+{% if c.name or c.time %}
+    <div class="c slot"><small>{{ c.time }}</small><b>{{ c.name }}</b></div>
+{% else %}
+    <div class="c slot"></div>
 {% endif %}
+{% endfor %}
+{% endfor %}
+  </div>
 </div>

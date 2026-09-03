@@ -607,6 +607,19 @@ def sentence_spans(text: str, times: list, ends: list | None = None
     return out
 
 
+def diff_slot(ref_word: str, read_word: str) -> str:
+    """一处差异的配对键：**原文那个词 + 实读那个词**。
+
+    spec 的 `[比对]` 是人从草稿里挑剩下的，没有任何字段指回 `read.json` 的第几条，
+    只能按内容配。光按原文词配不够 —— 同一个词既漏读过又读错过就分不开：
+    p70-72 的 `prince` 在第 253 个词那处漏了、第 343 个词那处读成了 `friends`，
+    而 spec 里只留了后一条。带上实读那个词，两处立刻分开。
+
+    漏读没有实读词，两边都归一成空串（spec 里那格写的是「（漏读）」这类中文占位）。
+    """
+    return f"{ref_word}→{read_word}"
+
+
 def ref_diffs(r: Report) -> list[dict]:
     """这次比对里**带原文词**的那些差异，顺序照原样。
 
@@ -635,7 +648,8 @@ def clip_index(r: Report) -> dict[str, list[tuple[float, float] | None]]:
                            ((r.reading or {}).get("alignment") or {}).get("refTimes") or [])
     out: dict[str, list[tuple[float, float] | None]] = {}
     for d in ref_diffs(r):
-        w, a, b = (d.get("ref") or "").lower(), d.get("start"), d.get("end")
+        w = diff_slot((d.get("ref") or "").lower(), (d.get("read") or "").lower())
+        a, b = d.get("start"), d.get("end")
         i = d.get("refIndex")
         span = spans[i] if spans and isinstance(i, int) and 0 <= i < len(spans) else None
         if a is None or b is None:
@@ -721,7 +735,8 @@ def std_index(r: Report) -> dict[str, list[tuple[float, float] | None]]:
     spans = sentence_spans(ref_text(r.slug), starts, ends)
     out: dict[str, list[tuple[float, float] | None]] = {}
     for d in ref_diffs(r):
-        w, i = (d.get("ref") or "").lower(), d.get("refIndex")
+        w = diff_slot((d.get("ref") or "").lower(), (d.get("read") or "").lower())
+        i = d.get("refIndex")
         span = spans[i] if spans and isinstance(i, int) and 0 <= i < len(spans) else None
         if span and span[1] - span[0] > LISTEN_MAX and starts[i] is not None:
             # 长句：以这个词为中心裁，不超出句界。念得比她快，超长的少见
@@ -781,10 +796,13 @@ def diffs(r: Report) -> dict | None:
             n += 1
             num = str(n)
         why = joined(it["why"])
-        # 同一个词在一次录音里可能错好几回（`Alp` 在 p6-8 里两处），按出现顺序配。
+        # 同一处差异在两份数据里怎么认出是同一处 —— 见 `diff_slot`。
+        # 键一样的还可能有好几处（`Alp` 在 p6-8 里两次都读成同一个词），按出现顺序配。
         # **一个计数走两边**：红词和绿词那两份索引建在同一批差异上（`ref_diffs`），
         # 第 k 项指的是同一处，所以计数不能各数一份
-        word = _plain(picked(it["ref"])).lower()
+        read_w = _plain(picked(it["read"])).lower()
+        word = diff_slot(_plain(picked(it["ref"])).lower(),
+                         read_w if _SAYABLE.fullmatch(read_w) else "")
         here, here_std = spots.get(word) or [], stds.get(word) or []
         k = taken.get(word, 0)
         clip = here[k] if k < len(here) else None
