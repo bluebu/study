@@ -22,8 +22,10 @@
     原样印，不展开成「综合实践」，也不把括号拆成一行小字备注。
     家长手里那张纸上写的就是这几个字，表上不一致就得两边核。
     括号是什么意思由 spec 的 `note:` 一句话说清（印在页脚）
-  · 上色只给语数英三门（`MAIN`），副科一律中性。这张表天天回答的是
-    「明天带哪几本书」—— 十四门课全上色就没有重点了
+  · 上色只给语数英，**颜色跟着上课的老师走**：科目自己是主科就用主科色
+    （`MAIN`），否则看括号（`BY_TEACHER`）—— 「书法（英）」站讲台的是
+    英语老师，就和英语一个颜色；「劳动（体）」的（体）不在三科里，中性。
+    这张表天天回答的是「明天带哪几本书」，十四门课全上色就没有重点了
 
 **纸上是 A4 横版**（`schedule.css` 覆盖 print.css 的竖版 `@page`）：
 竖版一列只有 37mm，「书法（英）」这种带括号的名字就得缩字号才放得下。
@@ -31,6 +33,7 @@
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 from lib import page, paths, sheet, spec as spec_lib, tmpl
@@ -39,6 +42,14 @@ SPECS = paths.spec("schedule", "week")
 
 # 科目 → 色板变量名。三科色沿用家族取值（palette.css 是单一真源）
 MAIN = {"语文": "chinese", "数学": "math", "英语": "english"}
+
+# 括号里的老师本科 → 同一套色。**颜色跟着上课的老师走**：
+# 「书法（英）」那节站在讲台上的是英语老师，就和英语一个颜色。
+# 「劳动（体）」的（体）不在三科里 → 没有色，照旧中性。
+BY_TEACHER = {"英": "english", "数": "math", "语": "chinese"}
+
+# 名字尾巴上的括号，全角半角都认
+PAREN = re.compile(r"[（(]\s*([^）)]+?)\s*[）)]\s*$")
 
 # 空节：spec 里写 - 或 — 都算
 BLANK = {"-", "—", "－"}
@@ -54,6 +65,9 @@ EMPTY = {"name": "", "who": "", "key": "", "long": False}
 def cell(text: str) -> dict:
     """一行 spec → 一格课。`科目 | 备注`（备注可省），`-` 是空节。
 
+`key` 是色板名：科目自己是主科就用主科色，否则看括号里的老师本科
+    （`BY_TEACHER`）—— 「书法（英）」和英语一个颜色。
+
     `long`：带括号的名字（「书法（英）」）比「语文」宽一倍，模板据此换小一档
     字号 —— 手机上一列只有 62px，不换档就顶出格子。**长度判断留在这儿，
     别写进 CSS**：CSS 量不到字数，只能靠类名。
@@ -62,7 +76,10 @@ def cell(text: str) -> dict:
     name = name.strip()
     if name in BLANK:
         return dict(EMPTY)
-    return {"name": name, "who": who.strip(), "key": MAIN.get(name, ""),
+    key = MAIN.get(name, "")
+    if not key and (m := PAREN.search(name)):
+        key = BY_TEACHER.get(m.group(1), "")
+    return {"name": name, "who": who.strip(), "key": key,
             "long": len(name) >= 4}
 
 
