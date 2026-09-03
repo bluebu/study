@@ -1,0 +1,42 @@
+{#-
+  课程表 —— 一周一张 A4，贴在书桌前，装书包照着带书。
+
+  ⚠️ 两处不许留空白：
+     .c 里的 <b> 和 <small> —— .c 是 grid，空白文本节点不生成盒子，但这一格
+        的高度是算好的（--h），拆行以后 diff 里看不出版式动没动，写成一行
+     .head .who —— 普通块 + nowrap，学期那几个字后面不许多出空格
+
+  节次列（.p）和课格（.c）在同一个 grid 里，所以行高天然对齐 ——
+  别改成「左边一列 + 右边一个表格」两个容器，那样两边行高得各自维护。
+-#}
+<div class="sheet">
+  <div class="head">
+    <div><h1>{{ heading }}</h1>
+      <p class="meta">{{ meta }}</p></div>
+    <div class="who">{{ term }}</div>
+  </div>
+
+  <div class="tt">
+    <div class="hd corner"></div>
+{% for d in days %}
+    <div class="hd">{{ d }}</div>
+{% endfor %}
+{% for row in rows %}
+    <div class="p">{{ row.no }}</div>
+{% for c in row.cells %}
+{% if c.name %}
+    <div class="c{% if c.key %} main{% endif %}"{% if c.key %} style="--c:var(--{{ c.key }});--c-bg:var(--{{ c.key }}-bg)"{% endif %}><b{% if c.long %} class="long"{% endif %}>{{ c.name }}</b>{% if c.who %}<small>{{ c.who }}</small>{% endif %}</div>
+{% else %}
+    <div class="c empty"></div>
+{% endif %}
+{% endfor %}
+{% if row.no == am %}
+    <div class="rest"><span>午 休</span></div>
+{% endif %}
+{% endfor %}
+  </div>
+
+{% if foot %}
+  <p class="foot">{{ foot }}</p>
+{% endif %}
+</div>

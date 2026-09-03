@@ -73,6 +73,8 @@ body{
 .subj[data-s="chinese"]{ --c: var(--chinese); --c-bg: var(--chinese-bg); }
 .subj[data-s="english"]{ --c: var(--english); --c-bg: var(--english-bg); }
 .subj[data-s="math"]   { --c: var(--math);    --c-bg: var(--math-bg); }
+/* 课程表不是学科，用「新分类先用这个」那支紫，别去挤三科色 */
+.subj[data-s="schedule"]{ --c: var(--c-drill); --c-bg: var(--c-drill-bg); }
 
 .subj h2{
   font-family: var(--font-display);

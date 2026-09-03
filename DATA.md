@@ -138,8 +138,9 @@ super8/L3/p68   →   storage/data/english/review/super8/L3/p68.ref.txt
 | 复述故事 | `storage/spec/english/retell/` | `<故事slug>.txt` | `src/generator/english/retell.py` |
 | 语文练习 | `storage/spec/chinese/practice/` | `<YYYYMMDD>.txt` | `src/generator/chinese/build.py` |
 | 数学秘籍 | `storage/spec/math/miji/` | `<错因slug>.txt` | `src/generator/math/build.py` |
+| 一周课表 | `storage/spec/schedule/week/` | `<YYYYMMDD>.txt` | `src/generator/schedule/build.py` |
 
-**只有打卡评价读 spec 之外的数据文件**，其余六个栏目都是 spec 单一输入。
+**只有打卡评价读 spec 之外的数据文件**，其余七个栏目都是 spec 单一输入。
 `.read.json` 里每条逐字比对差异都带着**规则分出来的类**：`category`（词尾 / 小词 /
 原文印错 / 专名 / 转写乱段 / 自己改对 / 实词 / 漏读 / 多读）、`label`（中文标签）、
 `suggest`（建议计错 / 存疑 / 不计错）、`why`（一句话理由）。

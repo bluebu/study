@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 # 学习小站 — 项目准则
 
-给自己孩子做的学习站：语文、英语、数学的练习单和讲义，一处收齐。
+给自己孩子做的学习站：语文、英语、数学的练习单和讲义，外加一张课程表，一处收齐。
 手机/iPad 上翻，A4 打印。域名 `s.hi-ruby.com`（GitHub Pages）。
 
 ## 一条铁律：数据和代码分开，代码只放输入
@@ -57,6 +57,7 @@ storage/
     english/retell/     一个区块一个阶段，区块内一行一段
     chinese/practice/   语文 spec，文件名是 YYYYMMDD
     math/miji/          秘籍 spec：错题按错因分组写，练习题只写题面、答案脚本算
+    schedule/week/      课表 spec：一个区块一天，区块内一行一节（YYYYMMDD 是学期起）
   result/             算出来的指标（可再生，push 当回归基准）
     english/review.csv  一行一次朗读的全部指标。趋势页读它
 ```
@@ -78,10 +79,11 @@ src/
   templates/          **所有 HTML / SVG 标记**。改版式改这儿，不动 .py
     page.html         全站页面骨架（head / og / 资产链接 / 页脚）
     foot.html         页脚（备案号 + 统计）
-    home.html         总入口页的三张学科卡
+    home.html         总入口页的卡片（三科 + 课程表）
     list.html         目录页，五个栏目共用
     sheet-info.html   打印单页眉「姓名 __ 日期 __ 得分 __」，三个栏目共用
     practice/ miji/ ket/ homework/ retell/   各栏目的打印单版式
+    schedule/sheet.html  课程表：节次列和课格在同一个 grid 里，行高天然对齐
     review/           day.html 一天一份成绩单（当天每次录音一节）
                       one.html 一节的版式（card 宏）· sum.html 当天汇总条
                       index.html 目录页 · trend.html 趋势页
@@ -93,6 +95,7 @@ src/
     site.css          站点页面（入口页、目录页）
     foot.css          页脚（备案号 + 统计），page.py 挂页脚时自动引上
     trend.css         趋势页（曲线卡片 + 指标总表）
+    schedule.css      课程表（行高 --h / 节次列宽 --pn 两个变量，手机上只改这两个）
     daysum.css        当天汇总条（目录页和日页共用，两边引的 CSS 谁也不包含谁）
     review-play.css   比对里能点的词（绿=标准音 / 红=她读的那一段）
     review-play.js    **全站唯一一个脚本**。点词听读音，逻辑和为什么见文件头
@@ -107,6 +110,7 @@ src/
       homework.py     每日打卡：群公告 → 一张 A4 作业清单
       retell.py       复述故事：关键词按情节五阶段分组，看着讲一遍
     math/build.py     计算秘籍：错题清单 + 口诀卡 + 重练题（两页 A4）
+    schedule/build.py 课程表：一周一张 A4，语数英上三科色、副科中性
 .github/workflows/pages.yml
 .claude/skills/
   kousuan/            口算卷照片 → 错题清单 + 秘籍单（图和判对错都走 ../feeder）

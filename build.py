@@ -67,6 +67,15 @@ SUBJECTS = [
             {"name": "易错字本", "desc": "写错的字描红重练", "href": "zi/",    "state": "soon"},
         ],
     },
+    {
+        "key": "schedule",
+        "name": "课程表",
+        "emoji": "🗓️",
+        "note": "一张纸看完一周，装书包照着带书",
+        "sections": [
+            {"name": "一周课表", "desc": "六节课 + 午休，A4 贴桌前", "href": "week/", "state": "ready"},
+        ],
+    },
 ]
 
 
@@ -88,7 +97,7 @@ def build_index() -> None:
         DIST / "index.html",
         page.render(
             title="学习小站",
-            description="语文、英语、数学的练习单和讲义，一处收齐。手机上翻，A4 打印。",
+            description="语文、英语、数学的练习单和讲义，外加一张课程表，一处收齐。手机上翻，A4 打印。",
             body=body,
             emoji="📚",
             css=("site.css",),
