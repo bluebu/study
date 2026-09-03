@@ -607,37 +607,12 @@ def sentence_spans(text: str, times: list, ends: list | None = None
     return out
 
 
-def diff_slot(ref_word: str, read_word: str) -> str:
-    """一处差异的配对键：**原文那个词 + 实读那个词**。
-
-    spec 的 `[比对]` 是人从草稿里挑剩下的，没有任何字段指回 `read.json` 的第几条，
-    只能按内容配。光按原文词配不够 —— 同一个词既漏读过又读错过就分不开：
-    p70-72 的 `prince` 在第 253 个词那处漏了、第 343 个词那处读成了 `friends`，
-    而 spec 里只留了后一条。带上实读那个词，两处立刻分开。
-
-    漏读没有实读词，两边都归一成空串（spec 里那格写的是「（漏读）」这类中文占位）。
-    """
-    return f"{ref_word}→{read_word}"
-
-
-def ref_diffs(r: Report) -> list[dict]:
-    """这次比对里**带原文词**的那些差异，顺序照原样。
-
-    红词那份索引（`clip_index`）和绿词那份（`std_index`）都建在这一份上，
-    所以同一个位置在两边指的是同一处差异 —— `diffs()` 拿一个计数去两边取第
-    k 项，取到的必须是一码事。多读出来的那条（`insert`）没有原文词，两边都不收。
-    """
-    return [d for d in (((r.reading or {}).get("alignment") or {}).get("diffs") or [])
-            if d.get("ref")]
-
-
-def clip_index(r: Report) -> dict[str, list[tuple[float, float] | None]]:
+def clip_index(r: Report) -> dict[str, list[tuple[float, float]]]:
     """原文词 → 点它该播录音的哪一段，按录音顺序排。
 
     默认给**整句**（见 sentence_spans）；句子对不齐或者太长，就退回以那个词
     为中心的一段。`read.json` 的每条差异本来就带 `start` / `end` 和 `refIndex`，
-    这儿只是按词归个类。**漏读那条记 None** —— 跳过去的词本来就没有声音，
-    但位子要留着，不然绿词那份索引就和这份错开了（见 `ref_diffs`）。
+    这儿只是按词归个类。漏读那条没有时刻 —— **跳过去的词本来就没有声音**。
 
     spec 的 `[比对]` 是人从草稿里挑剩下的（撤掉了不计错的那些），但**顺序没变**，
     所以同一个词出现多次按顺序配就对得上。配不上就不给点 —— 优雅降级，
@@ -646,15 +621,13 @@ def clip_index(r: Report) -> dict[str, list[tuple[float, float] | None]]:
     """
     spans = sentence_spans(ref_text(r.slug),
                            ((r.reading or {}).get("alignment") or {}).get("refTimes") or [])
-    out: dict[str, list[tuple[float, float] | None]] = {}
-    for d in ref_diffs(r):
-        w = diff_slot((d.get("ref") or "").lower(), (d.get("read") or "").lower())
-        a, b = d.get("start"), d.get("end")
+    out: dict[str, list[tuple[float, float]]] = {}
+    for d in ((r.reading or {}).get("alignment") or {}).get("diffs", []):
+        w, a, b = (d.get("ref") or "").lower(), d.get("start"), d.get("end")
+        if not w or a is None or b is None:
+            continue
         i = d.get("refIndex")
         span = spans[i] if spans and isinstance(i, int) and 0 <= i < len(spans) else None
-        if a is None or b is None:
-            out.setdefault(w, []).append(None)      # 漏读：位子留着，没声音
-            continue
         if span:
             lo, hi = span
             if hi - lo > LISTEN_MAX:        # 长句：以这个词为中心裁，不超出句界
@@ -721,28 +694,67 @@ def std_src(r: Report) -> str | None:
     return got[0] if got and got[0] and paths.material(got[0]) else None
 
 
-def std_index(r: Report) -> dict[str, list[tuple[float, float] | None]]:
-    """原文词 → 点它该播官方朗读的哪一段。和 `clip_index` 是一对。
+def _bare(w: str) -> str:
+    """一个词剥到只剩字母数字，小写 —— 比原文行和原文词流用这一把尺子。"""
+    return re.sub(r"^[^A-Za-z0-9]+|[^A-Za-z0-9']+$", "", w).lower()
 
-    那个给红词（她读的那一句），这个给绿词（录音棚里念的那一句）。
-    **漏读的词这儿有声音**：她跳过去了，红词那侧没得听，而「本该怎么念」
-    恰恰是漏读最该听的东西。
+
+def std_spots(r: Report, items: list[dict]) -> list[tuple[float, float] | None]:
+    """`[比对]` 每一条 → 点它的绿词该播官方朗读的哪一段。和条目一一对应。
+
+    **按原文那一行整段定位，不按「这个词第几次出现」配。** spec 里的「原文」
+    一行就是原文的一小段（草稿从 `diff.context` 起草，高亮词前后各三个词），
+    拿它当 n-gram 在原文词流里找，位置唯一就锚死了。
+
+    为什么不能像红词那样按词配（那份的时刻只存在于差异条目里，只能按词配）：
+    **spec 的条目和 `read.json` 的差异不是一一对应的** —— p68 那处机器判成
+    `insert(syria)` + `omit(celia)` 两条，人合写成一条「Celia 读成 Syria」。
+    按条目顺序或按词次序配都会错位，而错位在页面上只表现成
+    「点绿词听到别处的声音」，比不给点更糟。
+
+    同一行在 spec 里重复出现（同一句读错两次）就按出现次序取第几处匹配；
+    找不到、或匹配处数不够，就不给点 —— 优雅降级。
     """
+    blank: list[tuple[float, float] | None] = [None] * len(items)
     got = std_times(r.slug)
     if not got:
-        return {}
+        return blank
     _, starts, ends = got
-    spans = sentence_spans(ref_text(r.slug), starts, ends)
-    out: dict[str, list[tuple[float, float] | None]] = {}
-    for d in ref_diffs(r):
-        w = diff_slot((d.get("ref") or "").lower(), (d.get("read") or "").lower())
-        i = d.get("refIndex")
-        span = spans[i] if spans and isinstance(i, int) and 0 <= i < len(spans) else None
-        if span and span[1] - span[0] > LISTEN_MAX and starts[i] is not None:
+    text = ref_text(r.slug)
+    spans = sentence_spans(text, starts, ends)
+    flow = [_bare(w) for w in _WORDS.findall(text)]
+    if not flow:
+        return blank
+
+    out: list[tuple[float, float] | None] = []
+    seen: dict[str, int] = {}
+    for it in items:
+        raw = it["ref"]
+        # `*Celia*` 那个**收尾**的星号会被 _WORDS 吸进词里（开头那个不会）——
+        # 拿它认出高亮词是这一行的第几个。多词高亮认到末词，反正同一句
+        toks = _WORDS.findall(raw)
+        hl = next((k for k, w in enumerate(toks) if "*" in w), None)
+        bare = [_bare(w) for w in toks]
+        n = len(bare)
+        if hl is None or not n:
+            out.append(None)
+            continue
+        hits = [k for k in range(len(flow) - n + 1) if flow[k:k + n] == bare]
+        seq = seen.get(raw, 0)
+        seen[raw] = seq + 1
+        if seq >= len(hits):
+            out.append(None)
+            continue
+        i = hits[seq] + hl
+        span = spans[i] if spans and 0 <= i < len(spans) else None
+        a = starts[i] if 0 <= i < len(starts) else None
+        if span is None and a is not None:
+            # 句子划不出来（时刻缺了几个）：退回只播这一个词
+            span = (a, ends[i] if ends[i] is not None else a + 1.2)
+        if span and a is not None and span[1] - span[0] > LISTEN_MAX:
             # 长句：以这个词为中心裁，不超出句界。念得比她快，超长的少见
-            a = starts[i]
             span = (max(span[0], a - LISTEN_MAX / 2), min(span[1], a + LISTEN_MAX / 2))
-        out.setdefault(w, []).append(span)
+        out.append(span)
     return out
 
 
@@ -785,10 +797,11 @@ def diffs(r: Report) -> dict | None:
         elif cur:                       # 没有前缀的行：当成上一条的续行
             cur["why"].append(stripped)
 
-    spots, stds, taken = clip_index(r), std_index(r), {}
+    spots, taken = clip_index(r), {}
+    stds = std_spots(r, items)          # 绿词：和 items 一一对应
     out = []
     n = 0
-    for it in items:
+    for idx, it in enumerate(items):
         doubt = it["lbl"] == "识别成"
         if doubt:
             num = "?"
@@ -796,20 +809,15 @@ def diffs(r: Report) -> dict | None:
             n += 1
             num = str(n)
         why = joined(it["why"])
-        # 同一处差异在两份数据里怎么认出是同一处 —— 见 `diff_slot`。
-        # 键一样的还可能有好几处（`Alp` 在 p6-8 里两次都读成同一个词），按出现顺序配。
-        # **一个计数走两边**：红词和绿词那两份索引建在同一批差异上（`ref_diffs`），
-        # 第 k 项指的是同一处，所以计数不能各数一份
-        read_w = _plain(picked(it["read"])).lower()
-        word = diff_slot(_plain(picked(it["ref"])).lower(),
-                         read_w if _SAYABLE.fullmatch(read_w) else "")
-        here, here_std = spots.get(word) or [], stds.get(word) or []
+        # 同一个词在一次录音里可能错好几回（`Alp` 在 p6-8 里两处），按出现顺序配
+        word = _plain(picked(it["ref"])).lower()
+        here = spots.get(word) or []
         k = taken.get(word, 0)
         clip = here[k] if k < len(here) else None
-        std = here_std[k] if k < len(here_std) else None
-        taken[word] = k + 1
+        if clip:
+            taken[word] = k + 1
         out.append({"num": num, "doubt": doubt, "lbl": it["lbl"],
-                    "ref": marked(it["ref"], "mark", say=True, std=std),
+                    "ref": marked(it["ref"], "mark", say=True, std=stds[idx]),
                     "read": marked(it["read"], "ins", say=True, clip=clip),
                     "why": rich(why) if why else ""})
     # 抬头不写就自己数。存疑那条也算一处 —— 它同样是对不上的地方，

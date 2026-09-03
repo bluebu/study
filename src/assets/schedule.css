@@ -98,7 +98,9 @@ body{ font-family:var(--font-cn); color:var(--ink); font-size:13px; line-height:
   height:var(--hx);
   /* 时间和名字左右排（纸上一格 52mm，横着放得下且一眼扫得顺）。
      手机上一格只有 62px，那儿改回上下两行 —— 见文件末尾 */
-  flex-direction:row; align-items:baseline; gap:0 2mm;
+  flex-direction:row; align-items:center; gap:0 2mm;
+  /* center 不是 baseline：baseline 把两段字按基线钉在格子上沿，
+     整块就贴着顶了。中文没有下伸部，按中心对齐看着一样齐 */
   border-style:dashed;
 }
 .c.slot small{
