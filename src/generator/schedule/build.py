@@ -24,10 +24,10 @@
     括号是什么意思由 spec 的 `note:` 一句话说清（印在页脚）
   · **格子一律白底，颜色只落在字上**（`schedule.css`）。上了色也不铺底色，
     所以多几门带色的课也不会把表弄花 —— 底色一铺，四五种浅色摆在一起就糊了
-  · 上色的判据是**要带的东西跟哪门课一样**：科目自己在色表里就用它的色
-    （`MAIN`），否则看名字尾巴上的括号（`BY_TEACHER`）—— 「书法（英）」
-    写的是英文、「劳动（体）」在操场上，跟着英语 / 体育上色；而
-    「综实（数）」「地方（数）」只是数学老师兼着上，不用带数学书，不上色
+  · 上色只看**课本身是哪门**（`MAIN`：语文 · 数学 · 英语 · 体育），
+    括号里的老师**不参与**：「书法（英）」是书法课、「劳动（体）」是劳动课，
+    不因为英语 / 体育老师来上就换色。按老师上色试过一轮，一屋子彩格 ——
+    这张表要回答的是「明天带哪几本书」，答案只该是那四门
 
 **纸上是 A4 横版**（`schedule.css` 覆盖 print.css 的竖版 `@page`）：
 竖版一列只有 37mm，「书法（英）」这种带括号的名字就得缩字号才放得下。
@@ -48,14 +48,8 @@ SPECS = paths.spec("schedule", "week")
 # （palette.css 是单一真源，这儿只引用变量名，不写死颜色）
 MAIN = {"语文": "chinese", "数学": "math", "英语": "english", "体育": "c-drill"}
 
-# 括号里的老师本科 → 色。判据不是「谁来上」，是**要带的东西跟哪门课一样**：
-# 「书法（英）」写的是英文、「劳动（体）」在操场上，装书包穿衣服照英语 / 体育那节办，
-# 所以跟着上色。**（数）不在这儿**：「综实（数）」「地方（数）」只是数学老师兼着上，
-# 那两节不用带数学书 —— 上了色反而让「明天带哪几本书」多两个假答案。
-BY_TEACHER = {"英": "english", "体": "c-drill"}
-
-# 名字尾巴上的括号，全角半角都认
-PAREN = re.compile(r"[（(]\s*([^）)]+?)\s*[）)]\s*$")
+# 星期区块：区块名长这样的才是「一天」，其余区块归机动区
+DAY = re.compile(r"^周[一二三四五六日天]$")
 
 # 空节：spec 里写 - 或 — 都算
 BLANK = {"-", "—", "－"}
@@ -71,8 +65,8 @@ EMPTY = {"name": "", "who": "", "key": "", "long": False}
 def cell(text: str) -> dict:
     """一行 spec → 一格课。`科目 | 备注`（备注可省），`-` 是空节。
 
-`key` 是色板名：科目自己在色表里就用它的色，否则看括号
-    （`BY_TEACHER`，只认（英）（体））—— 「书法（英）」和英语一个颜色。
+`key` 是色板名，只认**课本身**（`MAIN`）：「书法（英）」是书法课，
+    不因为英语老师来上就变蓝。
 
     `long`：带括号的名字（「书法（英）」）比「语文」宽一倍，模板据此换小一档
     字号 —— 手机上一列只有 62px，不换档就顶出格子。**长度判断留在这儿，
@@ -82,10 +76,7 @@ def cell(text: str) -> dict:
     name = name.strip()
     if name in BLANK:
         return dict(EMPTY)
-    key = MAIN.get(name, "")
-    if not key and (m := PAREN.search(name)):
-        key = BY_TEACHER.get(m.group(1), "")
-    return {"name": name, "who": who.strip(), "key": key,
+    return {"name": name, "who": who.strip(), "key": MAIN.get(name, ""),
             "long": len(name) >= 4}
 
 
@@ -93,11 +84,32 @@ def columns(sp: spec_lib.Spec) -> list[tuple[str, list[dict]]]:
     """每个 [区块] 是一天，区块内一行一节。"""
     out = []
     for block in sp.blocks:
+        if not DAY.match(block.name):        # 机动区那样的区块不是一天
+            continue
         cells = [cell(ln.strip()) for ln in block.lines if ln.strip()]
         out.append((block.name, cells))
     if not out:
         spec_lib.die(f"{sp.path.name}：一天都没有（要有 [周一] 这样的区块）")
     return out
+
+
+def extras(sp: spec_lib.Spec) -> tuple[str, list[dict]]:
+    """机动区：星期以外的区块，一行一条「星期 | 时间 | 名字」。
+
+    校外的课（课后班、兴趣班）不在学校的节次里，时间也不整齐 —— 硬塞进
+    上面那张 6×5 的格子只会把版式搞乱，所以单独一块列在表下面。
+    段数少写也认（只写名字就行），缺的留空。
+    """
+    for block in sp.blocks:
+        if DAY.match(block.name):
+            continue
+        rows = []
+        for line in block.lines:
+            parts = [p.strip() for p in line.strip().split("|")]
+            parts += [""] * (3 - len(parts))
+            rows.append({"day": parts[0], "time": parts[1], "name": parts[2]})
+        return block.name, rows
+    return "", []
 
 
 def render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, int, int]:
@@ -118,15 +130,19 @@ def render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, int, int]
         f"每天 {periods} 节" if not am else f"上午 {am} 节 · 下午 {pm} 节",
         f"{len(subjects)} 门课") if x)
 
+    extra_title, extra_rows = extras(sp)
+
+    # 纸上不出页头 —— 表格自己就说明是课表，抬头那一条只是占掉一行格子的高度。
+    # heading / meta 仍旧算出来，给 <title> 和目录页用
     body = tmpl.body(
         "schedule/sheet.html",
-        heading=heading,
-        meta=meta,
-        term=sp.get("term", ""),
         days=[name for name, _ in cols],
         rows=rows,
         am=am,
-        foot=sp.get("note", ""),
+        extra_title=extra_title,
+        extras=extra_rows,
+        # 机动区留几行空的手写：课后班学期中间常换，印死了就得重打一张
+        blanks=sp.int_("blank", 0),
     )
 
     out = page.write(
@@ -134,7 +150,7 @@ def render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, int, int]
         page.render(
             title=f"{heading} · {sp.get('term', '')}".rstrip(" ·"),
             description=f"一周 {len(cols)} 天 {periods} 节的课程表，"
-                        f"{len(subjects)} 门课，语数英按三科色标出来。A4 打印。",
+                        f"{len(subjects)} 门课，语数英体四门标了色。A4 横版打印。",
             body=body,
             emoji="🗓️",
             css=("print.css", "schedule.css"),

@@ -1,14 +1,19 @@
 /* 打卡评价 · 点一下听读音
  *
- * 绿的（原文）→ 浏览器念标准音；红的（实读）→ 播她自己读的那一段。
+ * 绿的（原文）→ 课本配套朗读里那一句，没有就让浏览器念；
+ * 红的（实读）→ 播她自己读的那一段。
  *
  * 为什么要有这个：**看字是分不出元音的**。seat / set、niece / nice、
  * hut / heart 写在纸上一目了然，差在哪儿只有耳朵知道 —— 而这一类恰恰是
  * 她错得最多的（8/31 那份 18 处错里 9 处是元音）。
  *
- * 录音**只有本地预览才有**（录音不进仓库，见 DATA.md 的「素材」那一档）。
- * 线上没有 <audio>，点红词就退回去念那个词 —— 听「这个错词读起来是什么样」，
- * 照样能和绿词对比出差在哪。所以这个脚本两边都能跑，不需要判断环境。
+ * 音频**只有本地预览才有**（录音和版权音频都不进仓库，见 DATA.md 的「素材」那一档）。
+ * 线上没有 <audio>，点词就退回去念那个词 —— 听「这个词读起来是什么样」，
+ * 照样能和另一边对比出差在哪。所以这个脚本两边都能跑，不需要判断环境。
+ *
+ * 绿词的音源还有一半取决于原文是哪来的：从配套朗读转写的（feeder ref）才有
+ * 真人音，从教材截图 OCR 的（feeder scan，超8 走这条）只有合成音。
+ * 两种都退化得很自然，页面上不需要开关。
  */
 (() => {
   'use strict';
@@ -55,7 +60,8 @@
 
   const stopAll = () => {
     if (synth) synth.cancel();
-    document.querySelectorAll('audio.rec').forEach((a) => a.pause());
+    // 两种音源都停 —— 点绿词时红词那段还在响就成了两个人一起念
+    document.querySelectorAll('audio.rec, audio.std').forEach((a) => a.pause());
     clear();
   };
 
@@ -105,12 +111,19 @@
     e.preventDefault();
     stopAll();
 
-    const clip = el.dataset.clip;
-    const audio = clip && el.closest('article') &&
-                  el.closest('article').querySelector('audio.rec');
-    if (audio) {
-      const [from, to] = clip.split(',').map(Number);
-      play(el, audio, from, to);
+    /* 两种音源各有各的时间轴：`data-std` 是官方朗读里的那一句（绿词），
+       `data-clip` 是她自己那段录音（红词）。一个词只会带其中一个。
+       音频不在本机（线上、或者原文是从教材截图来的）→ 退回去念这个词。 */
+    const art = el.closest('article');
+    const source = (attr, sel) => {
+      const at = el.dataset[attr];
+      const audio = at && art && art.querySelector(sel);
+      return audio ? [audio, at] : null;
+    };
+    const hit = source('std', 'audio.std') || source('clip', 'audio.rec');
+    if (hit) {
+      const [from, to] = hit[1].split(',').map(Number);
+      play(el, hit[0], from, to);
     } else {
       say(el, el.dataset.say);
     }

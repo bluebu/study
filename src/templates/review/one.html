@@ -57,6 +57,11 @@
           点红词就退回去念那个词（review-play.js）。preload=none：别一开页就拉几十兆 -#}
       <audio class="rec" src="{{ r.audio }}" preload="none"></audio>
 {% endif %}
+{% if r.std %}
+      {#- 这本书的官方朗读（绿词点了听录音棚里念的那一句）。同样只有本地有 ——
+          版权音频和孩子的声音一样不进仓库。原文来自教材截图的那些页没有这一行 -#}
+      <audio class="std" src="{{ r.std }}" preload="none"></audio>
+{% endif %}
       <header class="one-h">
         <h2 class="one-t">{{ r.hero.title|safe }}</h2>
         <p class="sub">{{ r.hero.sub }}</p>
@@ -145,7 +150,7 @@
     {#- ⚠️ 这一行里 mark / ins 紧贴中文，**中间不许换行** —— 断开就多一个空格，
         「绿 是标准音」中间裂一道缝。同 .d .en 的「原文」标签那处。
         没有录音时（线上永远没有）后半截不出，别许诺一个点了没反应的功能 -#}
-    <p class="tap">点词听读音 · <mark>绿</mark>是这个词的标准音{% if r.audio %} · <ins>红</ins>是她读的那一句{% endif %}</p>
+    <p class="tap">点词听读音 · <mark>绿</mark>是{% if r.std %}课本录音里那一句{% else %}这个词的标准音{% endif %}{% if r.audio %} · <ins>红</ins>是她读的那一句{% endif %}</p>
     <div class="diff">
 {% for d in r.diffs.rows %}
 

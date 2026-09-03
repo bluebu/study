@@ -1,21 +1,19 @@
 {#-
-  课程表 —— 一周一张 A4，贴在书桌前，装书包照着带书。
+  课程表 —— 一周一张 A4 横版，贴在书桌前，装书包照着带书。
+
+  **纸上没有页头**：表格自己就说明这是课表，抬头那一条只会占掉一行格子的高度。
+  卷名和学期仍在 <title> 和目录页里（生成器算好，不进这张纸）。
 
   ⚠️ 两处不许留空白：
-     .c 里的 <b> 和 <small> —— .c 是 grid，空白文本节点不生成盒子，但这一格
+     .c 里的 <b> 和 <small> —— .c 是 flex，空白文本节点不生成盒子，但这一格
         的高度是算好的（--h），拆行以后 diff 里看不出版式动没动，写成一行
-     .head .who —— 普通块 + nowrap，学期那几个字后面不许多出空格
+     .extra .row 的三个 <span> —— 那是 grid 的三列（星期 / 时间 / 名字），
+        中间换行会多出空白文本节点，列宽算不准
 
   节次列（.p）和课格（.c）在同一个 grid 里，所以行高天然对齐 ——
   别改成「左边一列 + 右边一个表格」两个容器，那样两边行高得各自维护。
 -#}
 <div class="sheet">
-  <div class="head">
-    <div><h1>{{ heading }}</h1>
-      <p class="meta">{{ meta }}</p></div>
-    <div class="who">{{ term }}</div>
-  </div>
-
   <div class="tt">
     <div class="hd corner"></div>
 {% for d in days %}
@@ -36,7 +34,16 @@
 {% endfor %}
   </div>
 
-{% if foot %}
-  <p class="foot">{{ foot }}</p>
+{% if extras or blanks %}
+  {# 机动区：校外的课不在学校的节次里，单独列在表下面，还留几行空的手写 #}
+  <div class="extra">
+    <div class="lb">{{ extra_title or '机动' }}</div>
+{% for e in extras %}
+    <div class="row"><span class="d">{{ e.day }}</span><span class="t">{{ e.time }}</span><span class="n">{{ e.name }}</span></div>
+{% endfor %}
+{% for _ in range(blanks) %}
+    <div class="row blank"><span class="d"></span><span class="t"></span><span class="n"></span></div>
+{% endfor %}
+  </div>
 {% endif %}
 </div>

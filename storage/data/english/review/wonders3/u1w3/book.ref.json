@@ -144,6 +144,18 @@
     },
     {
       "alternatives" : [
+        "of Los Angeles is half a mile"
+      ],
+      "at" : 261.48,
+      "confidence" : 0.523,
+      "suggestions" : [
+
+      ],
+      "why" : "把握低",
+      "word" : "Angeles"
+    },
+    {
+      "alternatives" : [
         "Diego Rivera, Jose Arasco, and David",
         "Siquieros",
         "Sequieros",
@@ -167,9 +179,9 @@
       "at" : 43.56,
       "confidence" : 0.526,
       "suggestions" : [
-        "Spanish"
+
       ],
-      "why" : "拼不出这个词，把握也低",
+      "why" : "把握低",
       "word" : "Spanish,"
     },
     {
@@ -265,20 +277,6 @@
     },
     {
       "alternatives" : [
-        "Diego Rivera, Jose Arasco, and David"
-      ],
-      "at" : 183.6,
-      "confidence" : 0.712,
-      "suggestions" : [
-        "Jose",
-        "Joe",
-        "hose"
-      ],
-      "why" : "拼不出这个词",
-      "word" : "Jose"
-    },
-    {
-      "alternatives" : [
         "Mi Abuelita.",
         "me Abuelita.",
         "mi Abuelita.",
@@ -311,22 +309,6 @@
     },
     {
       "alternatives" : [
-        "family is from",
-        "Mexico.",
-        "Mexico,",
-        "Mexico"
-      ],
-      "at" : 24.66,
-      "confidence" : 0.831,
-      "suggestions" : [
-        "Mexico",
-        "medico"
-      ],
-      "why" : "拼不出这个词",
-      "word" : "Mexico."
-    },
-    {
-      "alternatives" : [
         "20,000",
         "20000",
         "BCE.",
@@ -341,211 +323,6 @@
       ],
       "why" : "拼不出这个词",
       "word" : "BCE."
-    },
-    {
-      "alternatives" : [
-        "Mexican Americans",
-        "Mexican-Americans",
-        "lived in"
-      ],
-      "at" : 119.88,
-      "confidence" : 0.928,
-      "suggestions" : [
-        "Americans",
-        "American's",
-        "americas"
-      ],
-      "why" : "拼不出这个词",
-      "word" : "Americans"
-    },
-    {
-      "alternatives" : [
-        "showed a Mexican American",
-        "grandmother.",
-        "grandmother,",
-        "Grandmother."
-      ],
-      "at" : 113.28,
-      "confidence" : 0.943,
-      "suggestions" : [
-        "American",
-        "America",
-        "Americans"
-      ],
-      "why" : "拼不出这个词",
-      "word" : "American"
-    },
-    {
-      "alternatives" : [
-        "Judy",
-        "Baka.",
-        "Baca.",
-        "Bacca."
-      ],
-      "at" : 0,
-      "confidence" : 0.975,
-      "suggestions" : [
-        "Judy",
-        "Rudy",
-        "jury"
-      ],
-      "why" : "拼不出这个词",
-      "word" : "Judy"
-    },
-    {
-      "alternatives" : [
-        "worked in a neighborhood called Boyle",
-        "Heights.",
-        "Heights,",
-        "heights."
-      ],
-      "at" : 83.16,
-      "confidence" : 0.981,
-      "suggestions" : [
-        "Boyle",
-        "Doyle",
-        "boil"
-      ],
-      "why" : "拼不出这个词",
-      "word" : "Boyle"
-    },
-    {
-      "alternatives" : [
-        "history of",
-        "History of",
-        "California.",
-        "California,"
-      ],
-      "at" : 234.54,
-      "confidence" : 0.983,
-      "suggestions" : [
-        "California",
-        "Californian"
-      ],
-      "why" : "拼不出这个词",
-      "word" : "California."
-    },
-    {
-      "alternatives" : [
-        "an artist from Los Angeles."
-      ],
-      "at" : 12.36,
-      "confidence" : 0.988,
-      "suggestions" : [
-        "Angeles",
-        "angels",
-        "angles"
-      ],
-      "why" : "拼不出这个词",
-      "word" : "Angeles."
-    },
-    {
-      "alternatives" : [
-        "Ella Fitzgerald lived there."
-      ],
-      "at" : 436.98,
-      "confidence" : 0.99,
-      "suggestions" : [
-        "Fitzgerald"
-      ],
-      "why" : "拼不出这个词",
-      "word" : "Fitzgerald"
-    },
-    {
-      "alternatives" : [
-        "music.",
-        "music,",
-        "music",
-        "Venice"
-      ],
-      "at" : 470.52,
-      "confidence" : 0.991,
-      "suggestions" : [
-        "Venice",
-        "Denice",
-        "venire"
-      ],
-      "why" : "拼不出这个词",
-      "word" : "Venice"
-    },
-    {
-      "alternatives" : [
-        "Ray Charles and",
-        "Ray, Charles and",
-        "Ray, Charles, and",
-        "Ella Fitzgerald lived there."
-      ],
-      "at" : 436.68,
-      "confidence" : 0.993,
-      "suggestions" : [
-        "Ella",
-        "Bella",
-        "hella"
-      ],
-      "why" : "拼不出这个词",
-      "word" : "Ella"
-    },
-    {
-      "alternatives" : [
-        "Diego Rivera, Jose Arasco, and David",
-        "Siquieros",
-        "Sequieros"
-      ],
-      "at" : 185.4,
-      "confidence" : 0.995,
-      "suggestions" : [
-        "David",
-        "Davis",
-        "avid"
-      ],
-      "why" : "拼不出这个词",
-      "word" : "David"
-    },
-    {
-      "alternatives" : [
-        "Ray Charles and",
-        "Ray, Charles and",
-        "Ray, Charles, and"
-      ],
-      "at" : 435.84,
-      "confidence" : 0.997,
-      "suggestions" : [
-        "Charles",
-        "Charley",
-        "charges"
-      ],
-      "why" : "拼不出这个词",
-      "word" : "Charles"
-    },
-    {
-      "alternatives" : [
-        "showed a Mexican American"
-      ],
-      "at" : 112.8,
-      "confidence" : 0.998,
-      "suggestions" : [
-        "Mexican",
-        "Mexicans",
-        "Mexicano"
-      ],
-      "why" : "拼不出这个词",
-      "word" : "Mexican"
-    },
-    {
-      "alternatives" : [
-        "artist",
-        "artists",
-        "Diego Rivera, Jose Arasco, and David"
-      ],
-      "at" : 182.1,
-      "confidence" : 0.998,
-      "suggestions" : [
-        "Diego",
-        "Diogo",
-        "dingo"
-      ],
-      "why" : "拼不出这个词",
-      "word" : "Diego"
     }
   ],
   "segments" : [
@@ -555,7 +332,9 @@
       "index" : 1,
       "start" : 0,
       "text" : "Judy Baka.",
-      "wordCount" : 2
+      "wordCount" : 2,
+      "wordFrom" : 0,
+      "wordTo" : 2
     },
     {
       "end" : 7.86,
@@ -563,7 +342,9 @@
       "index" : 2,
       "start" : 2.16,
       "text" : "Chapter one. Young Judy Baka.",
-      "wordCount" : 5
+      "wordCount" : 5,
+      "wordFrom" : 2,
+      "wordTo" : 7
     },
     {
       "end" : 32.22,
@@ -571,7 +352,9 @@
       "index" : 3,
       "start" : 7.92,
       "text" : "Judy Baka is an artist from Los Angeles. She paints murals. Murals are paintings on large walls. Judy was born in 1946. Her family is from Mexico. As a young girl, Judy lived with her mother, 2 aunts, and a grandmother.",
-      "wordCount" : 41
+      "wordCount" : 41,
+      "wordFrom" : 7,
+      "wordTo" : 48
     },
     {
       "end" : 73.38,
@@ -579,7 +362,9 @@
       "index" : 4,
       "start" : 32.28,
       "text" : "When Judy was 6 years old, she moved to a new neighborhood in Los Angeles. Judy had always talked in Spanish, at the new school, she wasn't allowed to talk in Spanish. Judy had few Mexican-American classmates. At first, it was difficult for Judy to pronounce and understand English words. Her teacher let Judy draw and paint when she couldn't understand the lessons. Judy began to love painting. Later, she studied modern art in college.",
-      "wordCount" : 75
+      "wordCount" : 75,
+      "wordFrom" : 48,
+      "wordTo" : 123
     },
     {
       "end" : 130.62,
@@ -587,7 +372,9 @@
       "index" : 5,
       "start" : 73.44,
       "text" : "After college, Judy worked for the city of Los Angeles. She worked in a neighborhood called Boyle Heights. She taught art classes in the parks. Groups of teenagers hung out in the parks. The groups did not get along. Judy asked the teenagers to help her paint a mural. She wanted the teenagers to get along. When the mural was finished, people in the community loved it. The mural was called Mi Abuelita. It showed a Mexican American grandmother. She looked as if she was giving a hug. Many Mexican Americans lived in Boyle Heights. The mural appealed to the people's Mexican heritage or traditions. The mural became a symbol of unity.",
-      "wordCount" : 112
+      "wordCount" : 112,
+      "wordFrom" : 123,
+      "wordTo" : 235
     },
     {
       "end" : 164.04,
@@ -595,7 +382,9 @@
       "index" : 6,
       "start" : 130.68,
       "text" : "After the success of Mi Abuelita, Judy started a citywide mural program. She hired many young people to paint murals. They created about 500 murals in Los Angeles. In 1976, Judy helped start a new group called the Social and Public Art Resource Center, or Spark. This group makes art for people of many different cultures.",
-      "wordCount" : 56
+      "wordCount" : 56,
+      "wordFrom" : 235,
+      "wordTo" : 291
     },
     {
       "end" : 199.44,
@@ -603,7 +392,9 @@
       "index" : 7,
       "start" : 164.16,
       "text" : "The murals of Mexico. Murals have been an art form in Mexico for a long time. The ancient Maya painted pictures on temple walls. In the 1900s, artist Diego Rivera, Jose Arasco, and David Siquieros were famous. They were called Los Tres Grandes. They painted murals to show everyday people in Mexico. Judy Baka admired their work.",
-      "wordCount" : 57
+      "wordCount" : 57,
+      "wordFrom" : 291,
+      "wordTo" : 348
     },
     {
       "end" : 205.74,
@@ -611,7 +402,9 @@
       "index" : 8,
       "start" : 199.5,
       "text" : "Chapter 2. The Great Wall of Los Angeles.",
-      "wordCount" : 8
+      "wordCount" : 8,
+      "wordFrom" : 348,
+      "wordTo" : 356
     },
     {
       "end" : 256.68,
@@ -619,7 +412,9 @@
       "index" : 9,
       "start" : 205.8,
       "text" : "In 1976, Judy was asked to paint a very long mural in Los Angeles. Judy wanted to show how the people have contributed to the city. She created a mural that shows famous men and women and ordinary people. The mural is named the Great Wall of Los Angeles. It shows the history of California. The mural begins at 20,000 BCE. It shows the Native American people who lived in California. It shows the Spanish who settled in California. It shows the immigrants that came later to California. It shows people fighting for equal rights.",
-      "wordCount" : 95
+      "wordCount" : 95,
+      "wordFrom" : 356,
+      "wordTo" : 452
     },
     {
       "end" : 290.82,
@@ -627,7 +422,9 @@
       "index" : 10,
       "start" : 256.74,
       "text" : "The Great Wall of Los Angeles is half a mile long. It is one of the longest murals in the world. Over 400 people worked on the mural from 1976 to 1983. Many teenagers worked on the mural. They came from many different cultures. The mural is not finished yet. Judy is planning to paint the events of the 1960s to now.",
-      "wordCount" : 62
+      "wordCount" : 62,
+      "wordFrom" : 452,
+      "wordTo" : 514
     },
     {
       "end" : 296.1,
@@ -635,7 +432,9 @@
       "index" : 11,
       "start" : 290.88,
       "text" : "Looking after the Great Wall.",
-      "wordCount" : 5
+      "wordCount" : 5,
+      "wordFrom" : 514,
+      "wordTo" : 519
     },
     {
       "end" : 319.98,
@@ -643,7 +442,9 @@
       "index" : 12,
       "start" : 296.22,
       "text" : "Some parts of the Great Wall are more than 40 years old. The mural has dealt with sun, rain, and pollution. Now it is getting fixed. A team of people is slowly cleaning every part of the mural. They are bringing back all the bright colors and images.",
-      "wordCount" : 48
+      "wordCount" : 48,
+      "wordFrom" : 519,
+      "wordTo" : 567
     },
     {
       "end" : 325.92,
@@ -651,7 +452,9 @@
       "index" : 13,
       "start" : 320.04,
       "text" : "Chapter 3. More recent work.",
-      "wordCount" : 5
+      "wordCount" : 5,
+      "wordFrom" : 567,
+      "wordTo" : 572
     },
     {
       "end" : 361.32,
@@ -659,7 +462,9 @@
       "index" : 14,
       "start" : 325.98,
       "text" : "In 1996. Judy started the digital mural lab. People use computers to make murals. One project is called Witnesses to LA History. Art students made 6 large digital images. Each image stood for a different cultural group. Judy wanted to show that all of the cultural groups contribute to the city. They are part of the multi-ethnic history of Los Angeles.",
-      "wordCount" : 61
+      "wordCount" : 61,
+      "wordFrom" : 572,
+      "wordTo" : 633
     },
     {
       "end" : 396.48,
@@ -667,7 +472,9 @@
       "index" : 15,
       "start" : 361.38,
       "text" : "In 1999, Judy began a project with 125 teenagers, the project was called shoulder to shoulder, each teenager had a partner. The teenagers were partners with someone very different from them. The pairs talked about how they were the same and how they were different than the teenagers painted banners to show what they had learned. The banners were hung all over Los Angeles.",
-      "wordCount" : 64
+      "wordCount" : 64,
+      "wordFrom" : 633,
+      "wordTo" : 697
     },
     {
       "end" : 414.06,
@@ -675,7 +482,9 @@
       "index" : 16,
       "start" : 396.54,
       "text" : "Judy has made Los Angeles a more colorful place. Judy Baka has helped fill Los Angeles with images. The images on her murals, show the hopes and dreams of the people of Los Angeles.",
-      "wordCount" : 34
+      "wordCount" : 34,
+      "wordFrom" : 697,
+      "wordTo" : 731
     },
     {
       "end" : 420.18,
@@ -683,7 +492,9 @@
       "index" : 17,
       "start" : 414.12,
       "text" : "Vibrant Los Angeles.",
-      "wordCount" : 3
+      "wordCount" : 3,
+      "wordFrom" : 731,
+      "wordTo" : 734
     },
     {
       "end" : 450.36,
@@ -691,7 +502,9 @@
       "index" : 18,
       "start" : 420.24,
       "text" : "Let's learn about some fun communities in Los Angeles. Lemert Park. Many artists and musicians live in Lee Mert Park, famous singers Ray Charles and Ella Fitzgerald lived there. Today, Le Mert Park has many places to hear jazz music. It has a famous hip hop show. Anyone from the audience can perform.",
-      "wordCount" : 53
+      "wordCount" : 53,
+      "wordFrom" : 734,
+      "wordTo" : 787
     },
     {
       "end" : 470.46,
@@ -699,7 +512,9 @@
       "index" : 19,
       "start" : 450.42,
       "text" : "Boyle Heights. Many Hispanic people live in Boyle Heights. A street corner named Mariachi Plaza is popular. Mariachi bands play music together in the evenings. People come to listen to the music.",
-      "wordCount" : 32
+      "wordCount" : 32,
+      "wordFrom" : 787,
+      "wordTo" : 819
     },
     {
       "end" : 492.12,
@@ -707,7 +522,9 @@
       "index" : 20,
       "start" : 470.52,
       "text" : "Venice Beach. Venice Beach has many street performers. Venice Beach also attracts people who aren't scared to take a tumble. It has places for rope climbers and acrobats. Basketball players practice on the ball courts too.",
-      "wordCount" : 36
+      "wordCount" : 36,
+      "wordFrom" : 819,
+      "wordTo" : 855
     }
   ],
   "slug" : "wonders3/u1w3",

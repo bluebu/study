@@ -239,16 +239,18 @@ def picked(text: str) -> str:
 
 
 def marked(text: str, tag: str, *, say: bool = False,
-           clip: tuple[float, float] | None = None) -> str:
+           clip: tuple[float, float] | None = None,
+           std: tuple[float, float] | None = None) -> str:
     """把 *xxx* 换成 <mark>/<ins>。
 
     `say=True` 时，高亮的那个词只要是个能念的英文词，就带上 `data-say` ——
     点一下让浏览器念出来（`review-play.js`）。**看字是听不出元音差别的**：
     seat / set、niece / nice 写在纸上一目了然，差在哪儿只有耳朵知道。
 
-    再给一段 `clip` 起止秒数，点的时候优先播**她自己**读的那一段；
-    本地没有音频就退回去念这个词 —— 线上永远没有音频（录音不进仓库），
-    所以线上点红词听到的是「这个错词标准读起来是什么样」，一样有用。
+    再给一段 `clip` 起止秒数，点的时候优先播**她自己**读的那一段（红词）；
+    `std` 是同一处在**官方朗读**里的起止（绿词），点了听录音棚里念的那一句。
+    本地没有对应的音频就退回去念这个词 —— 线上两种音频都没有
+    （录音和版权音频都不进仓库），所以线上点词听到的是合成音，一样能分元音。
 
     中文占位（`（没读出来）`）匹配不上 `_SAYABLE`，自然就不带属性 —— 优雅降级，
     不需要在调用处特判。
@@ -260,6 +262,8 @@ def marked(text: str, tag: str, *, say: bool = False,
             attrs = f' class="say" data-say="{w}"'
             if clip:
                 attrs += f' data-clip="{clip[0]:.2f},{clip[1]:.2f}"'
+            if std:
+                attrs += f' data-std="{std[0]:.2f},{std[1]:.2f}"'
         return f"<{tag}{attrs}>{w}</{tag}>"
 
     return re.sub(r"\*(.+?)\*", one, rich(text))
@@ -519,17 +523,34 @@ def ref_text(slug: str) -> str:
     和 `p74.ref.txt`。只认合起来那一份的话，`auto_bounds()` 会静默返回空，
     报告里「句末停顿」就成了 0 次（踩过：8/29 那份第一次构建就是 0）。
     """
+    return "\n\n".join(p.read_text(encoding="utf-8") for p in ref_parts(slug))
+
+
+def ref_parts(slug: str) -> list[Path]:
+    """拼这次原文用到的那几个文件，**按朗读顺序**。
+
+    `ref_text()` 拼文本、`std_times()` 拼时刻，两边都走这一份 —— 各拼一套
+    的话，「原文第 i 个词」在文本和时刻里就不是同一个词了。
+    """
     whole = DATA / f"{slug}.ref.txt"
     if whole.exists():
-        return whole.read_text(encoding="utf-8")
+        return [whole]
     last = slug.rsplit("/", 1)[-1]
     m = re.fullmatch(r"[pP](\d+)(?:-(\d+))?", last)
     if not m:
-        return ""
+        return []
     lo, hi = int(m[1]), int(m[2] or m[1])
     folder = DATA / slug.rsplit("/", 1)[0] if "/" in slug else DATA
-    pages = [folder / f"p{n}.ref.txt" for n in range(lo, hi + 1)]
-    return "\n\n".join(p.read_text(encoding="utf-8") for p in pages if p.exists())
+    return [f for n in range(lo, hi + 1)
+            if (f := folder / f"p{n}.ref.txt").exists()]
+
+
+# 原文分词。词的边界和喂数据台的 `Aligner.words` 是同一套（撇号、连字符留在
+# 词里），但**尾随标点保留** —— 句末那个点是划句子的唯一依据。
+# `refTimes` / `pNN.ref.json` 的时刻都按这个词序排，所以这个正则改一个字符，
+# 两份数据的下标就全错位了
+_WORDS = re.compile(r"[A-Za-z0-9''\-]+[^\sA-Za-z0-9]*")
+_SENT_END = re.compile(r"[.!?][\"']?$")
 
 
 def auto_bounds(r: Report) -> list[float]:
@@ -538,9 +559,9 @@ def auto_bounds(r: Report) -> list[float]:
     if not (r.reading and text):
         return []
     times = r.reading.get("alignment", {}).get("refTimes") or []
-    words = re.findall(r"[A-Za-z0-9''\-]+[^\sA-Za-z0-9]*", text)
+    words = _WORDS.findall(text)
     return [times[i] for i, w in enumerate(words)
-            if i < len(times) and times[i] is not None and re.search(r"[.!?][\"']?$", w)]
+            if i < len(times) and times[i] is not None and _SENT_END.search(w)]
 
 
 # 点一次最多听这么久。她读得慢、卡壳多，一句能拖到 39 秒（p6-8 那句 32 个词），
@@ -548,18 +569,20 @@ def auto_bounds(r: Report) -> list[float]:
 LISTEN_MAX = 12.0
 
 
-def sentence_spans(r: Report) -> list[tuple[float, float] | None] | None:
-    """原文每个词 → **它所在那一句**在录音里的起止秒数。
+def sentence_spans(text: str, times: list, ends: list | None = None
+                   ) -> list[tuple[float, float] | None] | None:
+    """原文每个词 → **它所在那一句**在音频里的起止秒数。
 
-    点红词听的是她读的**那一句**，不是那一个词 —— 半秒钟的一个音节听不出
-    所以然（`nice` 才 0.54 秒），得有上下文才判断得了她到底读成了什么样。
+    点词听的是**那一句**，不是那一个词 —— 半秒钟的一个音节听不出所以然
+    （`nice` 才 0.54 秒），得有上下文才判断得了读成了什么样。
 
-    句子边界从原文的句末标点推，时刻用 `refTimes`（每个原文词一个）。
-    两者对不齐就返回 None，让调用方退回「只播那个词」—— **别猜**。
+    句子边界从原文的句末标点推。两种音源都走这一份：
+    孩子的录音只记了一列 `refTimes`（每个原文词读到的时刻）；官方朗读记了
+    起止两列（`pNN.ref.json`），`ends` 给了就用它收尾，不给按「末词 + 1.5 秒」凑。
+
+    词数和时刻数对不齐就返回 None，让调用方退回「只播那个词」—— **别猜**。
     """
-    text = ref_text(r.slug)
-    times = ((r.reading or {}).get("alignment") or {}).get("refTimes") or []
-    words = re.findall(r"[A-Za-z0-9''\-]+[^\sA-Za-z0-9]*", text) if text else []
+    words = _WORDS.findall(text) if text else []
     if not words or len(words) != len(times):
         return None
 
@@ -569,40 +592,55 @@ def sentence_spans(r: Report) -> list[tuple[float, float] | None] | None:
     out: list[tuple[float, float] | None] = [None] * len(words)
     head = 0
     for i, w in enumerate(words):
-        if not (re.search(r"[.!?][\"']?$", w) or i == len(words) - 1):
+        if not (_SENT_END.search(w) or i == len(words) - 1):
             continue
         a, b = at(head, i + 1), at(i, head - 1 if head else -1, -1)
         if a is not None and b is not None:
-            # 末词的结束时刻没有直接记 —— 用下一个词的开始，但别跨太远：
-            # 句子之间常有好几秒的停顿，整段拖进来就成了听静音
+            # 末词的收尾：官方朗读那份直接有；孩子那份没记，用下一个词的开始，
+            # 但别跨太远 —— 句子之间常有好几秒的停顿，整段拖进来就成了听静音
+            tail = ends[i] if ends and i < len(ends) and ends[i] is not None else None
             nxt = at(i + 1, len(times))
-            end = min(nxt, b + 1.5) if nxt is not None else b + 1.5
+            end = tail if tail is not None else (min(nxt, b + 1.5) if nxt is not None else b + 1.5)
             for k in range(head, i + 1):
                 out[k] = (a, end)
         head = i + 1
     return out
 
 
-def clip_index(r: Report) -> dict[str, list[tuple[float, float]]]:
+def ref_diffs(r: Report) -> list[dict]:
+    """这次比对里**带原文词**的那些差异，顺序照原样。
+
+    红词那份索引（`clip_index`）和绿词那份（`std_index`）都建在这一份上，
+    所以同一个位置在两边指的是同一处差异 —— `diffs()` 拿一个计数去两边取第
+    k 项，取到的必须是一码事。多读出来的那条（`insert`）没有原文词，两边都不收。
+    """
+    return [d for d in (((r.reading or {}).get("alignment") or {}).get("diffs") or [])
+            if d.get("ref")]
+
+
+def clip_index(r: Report) -> dict[str, list[tuple[float, float] | None]]:
     """原文词 → 点它该播录音的哪一段，按录音顺序排。
 
     默认给**整句**（见 sentence_spans）；句子对不齐或者太长，就退回以那个词
     为中心的一段。`read.json` 的每条差异本来就带 `start` / `end` 和 `refIndex`，
-    这儿只是按词归个类。漏读那条没有时刻 —— **跳过去的词本来就没有声音**。
+    这儿只是按词归个类。**漏读那条记 None** —— 跳过去的词本来就没有声音，
+    但位子要留着，不然绿词那份索引就和这份错开了（见 `ref_diffs`）。
 
     spec 的 `[比对]` 是人从草稿里挑剩下的（撤掉了不计错的那些），但**顺序没变**，
     所以同一个词出现多次按顺序配就对得上。配不上就不给点 —— 优雅降级，
     宁可少一个按钮，也不要退回去解析说明文字里的「17.0 秒」：
     那种匹配一旦写错是**静默**失败，点开听到的是别处的声音，比没有更糟。
     """
-    spans = sentence_spans(r)
-    out: dict[str, list[tuple[float, float]]] = {}
-    for d in ((r.reading or {}).get("alignment") or {}).get("diffs", []):
+    spans = sentence_spans(ref_text(r.slug),
+                           ((r.reading or {}).get("alignment") or {}).get("refTimes") or [])
+    out: dict[str, list[tuple[float, float] | None]] = {}
+    for d in ref_diffs(r):
         w, a, b = (d.get("ref") or "").lower(), d.get("start"), d.get("end")
-        if not w or a is None or b is None:
-            continue
         i = d.get("refIndex")
         span = spans[i] if spans and isinstance(i, int) and 0 <= i < len(spans) else None
+        if a is None or b is None:
+            out.setdefault(w, []).append(None)      # 漏读：位子留着，没声音
+            continue
         if span:
             lo, hi = span
             if hi - lo > LISTEN_MAX:        # 长句：以这个词为中心裁，不超出句界
@@ -610,6 +648,86 @@ def clip_index(r: Report) -> dict[str, list[tuple[float, float]]]:
         else:
             lo, hi = float(a), float(b)     # 没有句子信息，退回只播这个词
         out.setdefault(w, []).append((lo, hi))
+    return out
+
+
+def std_times(slug: str) -> tuple[str, list, list] | None:
+    """原文每个词在**官方朗读**里的起止时刻 —— 绿词播的就是这一段。
+
+    数据是 `feeder ref` 落的 `pNN.ref.json`（原文的两条来路里，从配套朗读音频
+    转写那一条）。教材截图那条（`scan`）没有这份东西 → 返回 None，
+    绿词照旧退回浏览器念 —— **超8 现在走的就是那条**，所以这不是缺陷。
+
+    **逐页校验词数。** `.ref.txt` 是人核过的（转写把 Leimert 听成 Le Mert，
+    人改回来那一页就少两个词），词数一对不上就把那一页的时刻整页丢掉 ——
+    错一位在页面上只表现成「点绿词听到别处的声音」，比没有更糟。
+    实测 wonders3/u1w3 的十四页里 p16 正是这一种。
+    """
+    src = ""
+    starts: list[float | None] = []
+    ends: list[float | None] = []
+    got = False
+    for txt in ref_parts(slug):
+        n = len(_WORDS.findall(txt.read_text(encoding="utf-8")))
+        jf = txt.with_name(txt.name.removesuffix(".txt") + ".json")
+        words = None
+        if jf.exists():
+            d = json.loads(jf.read_text(encoding="utf-8"))
+            ws = d.get("words") or []
+            name = d.get("source") or ""
+            if len(ws) != n:
+                print(f"    · {jf.name}：{len(ws)} 个时刻对不上原文 {n} 个词"
+                      " —— 这一页的绿词退回浏览器念")
+            elif src and name != src:
+                # 一次朗读的几页来自不同音频。页面上只有一条 <audio class=std>，
+                # 混着放会拿这本书的时刻去另一本上找
+                print(f"    · {jf.name}：音源不是上一页那个文件 —— 这一页的绿词退回念")
+            elif not name:
+                pass                         # 老数据没记音源，找不到音频
+            else:
+                src, words = name, ws
+        if words:
+            starts += [w.get("start") for w in words]
+            ends += [w.get("end") for w in words]
+            got = True
+        else:
+            starts += [None] * n
+            ends += [None] * n
+    return (src, starts, ends) if got else None
+
+
+def std_src(r: Report) -> str | None:
+    """官方朗读的音频文件名 —— 本机素材堆里有才返回，没有给 None。
+
+    和孩子的录音同一条路（见 `audio_src`）：素材永不进仓库，CI 上 `inbox/`
+    不存在 → None → 页面里不出 `<audio class="std">`，点绿词退回浏览器念。
+    版权音频和孩子的声音一样，只在本机听得到。
+    """
+    got = std_times(r.slug)
+    return got[0] if got and got[0] and paths.material(got[0]) else None
+
+
+def std_index(r: Report) -> dict[str, list[tuple[float, float] | None]]:
+    """原文词 → 点它该播官方朗读的哪一段。和 `clip_index` 是一对。
+
+    那个给红词（她读的那一句），这个给绿词（录音棚里念的那一句）。
+    **漏读的词这儿有声音**：她跳过去了，红词那侧没得听，而「本该怎么念」
+    恰恰是漏读最该听的东西。
+    """
+    got = std_times(r.slug)
+    if not got:
+        return {}
+    _, starts, ends = got
+    spans = sentence_spans(ref_text(r.slug), starts, ends)
+    out: dict[str, list[tuple[float, float] | None]] = {}
+    for d in ref_diffs(r):
+        w, i = (d.get("ref") or "").lower(), d.get("refIndex")
+        span = spans[i] if spans and isinstance(i, int) and 0 <= i < len(spans) else None
+        if span and span[1] - span[0] > LISTEN_MAX and starts[i] is not None:
+            # 长句：以这个词为中心裁，不超出句界。念得比她快，超长的少见
+            a = starts[i]
+            span = (max(span[0], a - LISTEN_MAX / 2), min(span[1], a + LISTEN_MAX / 2))
+        out.setdefault(w, []).append(span)
     return out
 
 
@@ -652,7 +770,7 @@ def diffs(r: Report) -> dict | None:
         elif cur:                       # 没有前缀的行：当成上一条的续行
             cur["why"].append(stripped)
 
-    spots, taken = clip_index(r), {}
+    spots, stds, taken = clip_index(r), std_index(r), {}
     out = []
     n = 0
     for it in items:
@@ -663,15 +781,17 @@ def diffs(r: Report) -> dict | None:
             n += 1
             num = str(n)
         why = joined(it["why"])
-        # 同一个词在一次录音里可能错好几回（`Alp` 在 p6-8 里两处），按出现顺序配
+        # 同一个词在一次录音里可能错好几回（`Alp` 在 p6-8 里两处），按出现顺序配。
+        # **一个计数走两边**：红词和绿词那两份索引建在同一批差异上（`ref_diffs`），
+        # 第 k 项指的是同一处，所以计数不能各数一份
         word = _plain(picked(it["ref"])).lower()
-        here = spots.get(word) or []
+        here, here_std = spots.get(word) or [], stds.get(word) or []
         k = taken.get(word, 0)
         clip = here[k] if k < len(here) else None
-        if clip:
-            taken[word] = k + 1
+        std = here_std[k] if k < len(here_std) else None
+        taken[word] = k + 1
         out.append({"num": num, "doubt": doubt, "lbl": it["lbl"],
-                    "ref": marked(it["ref"], "mark", say=True),
+                    "ref": marked(it["ref"], "mark", say=True, std=std),
                     "read": marked(it["read"], "ins", say=True, clip=clip),
                     "why": rich(why) if why else ""})
     # 抬头不写就自己数。存疑那条也算一处 —— 它同样是对不上的地方，
@@ -808,6 +928,8 @@ def card_ctx(r: Report, others: dict[str, Report], *,
         "cat": r.color_var, "fg": fg, "bg": bg,
         # 本机有原始录音才出 <audio>（线上永远没有，见 audio_src）
         "audio": audio_src(r),
+        # 官方朗读那份（绿词的音源）。同样只在本机有，见 std_src
+        "std": std_src(r),
         "hero": hero(r, lesson=lesson, book=book),
         "score": score_box(r, others, first=first),
         "stats": stats(r),
@@ -852,9 +974,12 @@ def render_day(date: str, rows: list[Report], others: dict[str, Report],
     # 本机有原始录音的，软链一条进 dist/ —— **软链不是拷贝**：源文件动辄几十兆，
     # 拷一遍既慢又占地方，而 `make up` 起的 http.server 跟随软链毫无问题。
     # dist/ 整个不进 git，所以这条链和它指向的录音都到不了线上。
-    for r, c in zip(rows, cards):
-        if c["audio"] and (src := paths.material(c["audio"])):
-            link = out_dir / c["audio"]
+    for c in cards:
+        # 两种音源同一条路：她自己那段录音，和这本书的官方朗读
+        for name in (c["audio"], c["std"]):
+            if not name or not (src := paths.material(name)):
+                continue
+            link = out_dir / name
             link.parent.mkdir(parents=True, exist_ok=True)
             link.unlink(missing_ok=True)
             link.symlink_to(src)
