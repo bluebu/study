@@ -25,7 +25,7 @@
     <div class="p">{{ row.no }}</div>
 {% for c in row.cells %}
 {% if c.name %}
-    <div class="c{% if c.key %} main{% endif %}"{% if c.key %} style="--c:var(--{{ c.key }});--c-bg:var(--{{ c.key }}-bg)"{% endif %}><b{% if c.long %} class="long"{% endif %}>{{ c.name }}</b>{% if c.who %}<small>{{ c.who }}</small>{% endif %}</div>
+    <div class="c{% if c.key %} main{% endif %}"{% if c.key %} style="--c:var(--{{ c.key }})"{% endif %}><b{% if c.long %} class="long"{% endif %}>{{ c.name }}</b>{% if c.who %}<small>{{ c.who }}</small>{% endif %}</div>
 {% else %}
     <div class="c empty"></div>
 {% endif %}

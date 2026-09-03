@@ -61,12 +61,14 @@ body{ font-family:var(--font-cn); color:var(--ink); font-size:13px; line-height:
 }
 
 /* 一格课。副科是默认样式（中性），主科靠 .main 换成三科色 */
+/* 一格课。**底色一律白**：上了色的格子也只染字和边框 ——
+   四五种浅底色摆在一张表上就糊成一片，白底才看得清哪几格是彩的 */
 .c{
   height:var(--h);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   gap:.6mm;
   border:1px solid var(--line); border-radius:2mm;
-  background:var(--card);
+  background:#fff;
 }
 .c b{
   font-family:var(--font-display); font-size:22px; font-weight:700;
@@ -78,7 +80,7 @@ body{ font-family:var(--font-cn); color:var(--ink); font-size:13px; line-height:
 /* 任课老师的本科（书法是英语老师上的）。淡一档，别和科目名抢 */
 .c small{ font-size:9.5px; color:var(--ink-soft); line-height:1.2; }
 
-.c.main{ background:var(--c-bg); border-color:var(--c); }
+.c.main{ border-color:var(--c); }
 .c.main b{ color:var(--c); }
 
 .c.empty{ background:var(--grid); border-style:dashed; }
