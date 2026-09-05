@@ -1,0 +1,291 @@
+# 超8 · Lesson 4
+#
+# ── 正文的写法（见 src/generator/english/CLAUDE.md）
+# 报告正文只写**孩子的朗读**。机器为什么误判、我们怎么核的，全部留在这些 # 注释里。
+#
+# ── 这一次跳档了：96.1%，十一次里第一次离开「偏难」
+# 前十次全在 89–96 之间（Fountas & Pinnell 的「偏难」档 <95），这次 96.1% 进了
+# 「教学」档（95–97）。229 个词只错 9 处 —— 上一次是 472 个词错 49 处。
+# **但这两页比上一次短一半，句子也短、对话多**，正文里要把这句写上，
+# 别让家长以为一夜之间换了个孩子。真正扎实的是：错的 9 处里没有一处是「读不出来」，
+# 只有 aroused 一个词卡住了。
+#
+# ── 扫描认错，已回改重跑（不是课本印错，别归错因）
+# 还是黑线吃下降笔画那个毛病（第二册是黑线划的，和正文同色）：
+#     第 16 页  diflerent → different（f 的横）、stav → stay、wav → way、
+#               mv → my、von → you（y 的尾巴被吃 + u 认成 n）
+#     第 17 页  beoged → begged（两个 g 的下降笔画）、vou → you ×2、
+#               vourself → yourself、vou'll → you'll
+# 机器的 spellFlags 标出了 stav / diflerent / vou / voull / vourself / beoged，
+# **漏了 wav / mv / von 三个**（它们碰巧是别的真词或近似词）。
+# 两张 marked.png 是逐页看过的。顺手按课本补回被吃掉的标点
+# （stay," he / way, my / soon, so / bit," he / Heidi. When / rest, she / time," she）。
+#
+# ── 逐条核完：38 处候选 → 计错 9 处。撤下的 29 条里，一大半是转写切词
+#
+#   · **转写把一个词切成两个，9 条。** 这一份的证据特别齐 —— 多出来的那半个词
+#     全在 [磕巴] 里躺着：
+#       Rottenmeier's → 「rattemir's + angry」（多读里有 rattemir's）
+#       Clara insisted → 「Kara + is + assisted」（多读里有 kara）
+#       Heidi liked → 「how + do + you like」（多读里有 how / do / you，和前两份一样）
+#       my mother → 「Mama + there」
+#       you'll learn it → 「you learn it's」（那个 /l/ 挪到了下一个词上）
+#   · **识别器硬套地名一条**：「no time, she」→「North Hampshire」（把握 0.12 / 0.13）。
+#     三个词糊成一个地名，连着的 32/33/34 三条全撤。
+#   · **人名 11 条**：Rottenmeier ×3、Sesemann ×2、Grandmamma ×3（grandmama 几乎同音）、
+#     Heidi ×2、Miss/Ms。口径和前两份一样。
+#   · **自己改对的一条**：136.9 秒「so I will take」→ 退回去改成「so she will take」。
+#     退回去重读、并且第二遍读对了的，只算不流利、不计错（p9-11 立的口径）。
+#
+# ── 录音末尾那 74 秒念的是生词表
+#  225.5 – 299.2 秒   第 3–5 页 Words and Expressions 那 22 个词
+#                     （responsibility / grumpy / carpenter / familiar / pastor …
+#                      jealous / recovered / reward），和 9/1、9/3 同一份
+# **这次它落在最后一个原文词之后**，所以没有进 [卡壳] 那张表（表里只有原文词之间的
+# 间隔）—— 但它照样算进 duration（299.2 秒）和 pause_count（193）。
+# 只算课文那一段：225.5 秒 → WCPM 59（上一次课文段 48）；
+# 停顿 193 − 52（生词表）= 141 次 → 1.6 个词一组（上一次 1.5）。
+#
+# ── 这次的错分得很干净：9 处里 3 处是同一个词尾
+# observations → observation、books → book、goats → goat，**三处全是丢了 -s**。
+# 元音那一族只剩 came → come、burden → bottom 两处（上一次 12 处），
+# 剩下 led → let（词尾清化）、insisted、rest → dressed、visit → wait、aroused 卡住。
+# **hut / heart 那个老毛病这次没再犯**（这两页没有 hut）。
+#
+# ── 顺带发现：auto_bounds 把「Mr.」当成了句末
+# 停顿地图上「句末停顿 22 次」，可原文里真正的句末标点只有 20 个 ——
+# 多出来的两次是 “Mr. Sesemann” 里那个缩写点（review.py 的 auto_bounds 是
+# 逐词 _SENT_END.search，认不出缩写）。9/3 那份的 p14 也有两个 Mr.，同样多数了两次。
+# **这次没手写 [句末] 去修**：手写只会让这一份和前十份用两把尺子，反而不可比。
+# 要改就改 auto_bounds 里的缩写表，那会动到所有历史报告的停顿地图，另开一次做。
+#
+# ── 最长的一串：52 个词一口气，一处不错
+# 31.3–83.8 秒，59 词/分。上一次的纪录是 37 个词，这次又长了一截。
+# 后面 176.3–222.9 秒还有 47 个词连着不错，两段加起来占了全篇的 43%。
+date: 2026-09-04
+cat: 超8
+order: 16
+page: 16–17
+prev: p12-15
+book: Heidi
+part: 划线部分
+words: 229
+errors: 9
+score: 56
+naep: 2
+
+[评分] 准确度=22/30 流利度=14/30 断句语调=11/25 发音=9/15
+
+[总评] 229 个词只错 9 处，准确率 96.1% —— 十一次里第一次离开「偏难」这一档。
+    读对 220 个。上一次是 472 个词错 49 处（89.6%），这次一下往上跳了 6.5 个点。
+    **要老实说一句**：这两页比上一次短一半，而且大半是对话、句子短，本来就好读一些。
+    但有两件事是实打实的 —— 错的 9 处里**没有一处是「读不出来」**，
+    只有 aroused 一个词真卡住了（停了 6.9 秒，只出来两声「or」）；
+    还有 **31 到 84 秒那 52 个词一口气读完、一处没错**，上一次的纪录是 37 个。
+    9 处错里有 3 处是同一件事：**observations、books、goats 全丢了词尾的 -s**。
+    这三个词她都认得，是读到句尾松了口气 —— 是这份报告里最好改的一处。
+
+[卡壳] 23.3-30.2 = aroused 卡 6.9 秒, 70.1-76.0 = 退回去重读 5.9 秒, 97.6-103.0 = innocent 起了两次头 5.3 秒, 109.3-117.6 = 一句读了两遍 8.3 秒, 136.9-142.4 = 退回去改对 5.5 秒
+    五处长停只有第一处是真卡在词上：aroused 停了 6.9 秒，只读出两声「or」。
+    另外四处都是退回去重来 —— 97.6 秒 innocent 起了两次头，
+    109.3 秒 “Clara loves having her around” 整句读了两遍，
+    136.9 秒头一遍读的是 “so I will take”，退回去自己改成了 “so she will take”，**改对了**。
+    录音末尾还有 74 秒在念第 3–5 页的生词表，它落在最后一个原文词之后，
+    所以没进这张表 —— 但照样算进总时长，报告头上的速度因此偏保守。
+
+[分页] 这次读了 2 页
+第 16 页 = 1.9-147.2 秒 · 144 词 · 计错 6 处 · 语速 57 词/分
+第 17 页 = 152.5-225.5 秒 · 85 词 · 计错 3 处 · 语速 67 词/分
+    **第 17 页读得最好**：85 个词只错 3 处，其中两处还是同一件事（books、goats 的词尾 -s），
+    而且是全篇最快的一页（67 词/分）。那一页是 Grandmamma 教 Heidi 读书的对话，
+    句子短、语气足。第 16 页的 6 处错里有 3 处扎在**头 26 秒**里
+    （let、come、aroused 连着来）—— 开头没热起来，热起来之后就是那 52 个词。
+
+[对比] 和上一页比
+    准确率 = 跳档
+    正确词/分 = 课文段 59
+    几个词一停 = 课文段 1.6
+    停顿占时长 = 略升
+    两次录音里都有生词表，这次在末尾 74 秒（上一次 113 秒）。
+    只算课文那一段：59 个正确词/分（上一次 48）、1.6 个词一组（上一次 1.5），
+    **两项都比上一次快、比上一次成串**。这是三次里第一次三项一起往上走。
+
+[比对] 逐字比对 · 机器候选 38 处 · 逐条核完计错 9 处
+原文 *While* Sebastian led
+识别成 *well* Sebastian led
+    0.7 秒。录音开头她先说了声「well」，转写把紧接着的 While 也写成了 well —— 多读里那个 well 就是证据。不计错
+原文 While Sebastian *led* the boy
+实读 While Sebastian *let* the boy
+    2.9 秒。led 读成 let，词尾的 /d/ 清化成了 /t/
+原文 some coins and *came* back with
+实读 some coins and *come* back with
+    7.6 秒。came 读成 come，又是元音
+原文 animals, but Miss *Rottenmeier's* anger was
+识别成 animals, but Miss *angry* anger was
+    20.5 秒。转写切成了「rattemir's + angry」两个词 —— 多读里那个 rattemir's 就是她读对了的证据。不计错
+原文 but Miss Rottenmeier's *anger* was aroused
+识别成 but Miss Rottenmeier's *unger* was aroused
+    21.4 秒。同上，一处切词拆成了两条。不计错
+原文 Rottenmeier's anger was *aroused* again. She
+实读 Rottenmeier's anger was *or* again. She
+    25.4 秒。aroused 没读出来，只出来两声「or」，这处停了 6.9 秒
+原文 be punished. But *Clara* insisted they
+识别成 be punished. But *is* insisted they
+    39.1 秒。转写切成了「Kara + is + assisted」—— 多读里那个 kara 就是 Clara。不计错
+原文 punished. But Clara *insisted* they wait
+识别成 punished. But Clara *assisted* they wait
+    39.8 秒。同上：「is assisted」是 insisted 被切成了两个词。不计错
+原文 decision. When Mr. *Sesemann* returned, he
+识别成 decision. When Mr. *sessman* returned, he
+    53.9 秒。德语姓氏，识别器拼不出。不计错
+原文 asked for both *Miss* Rottenmeier and
+识别成 asked for both *ms* Rottenmeier and
+    58.9 秒。Miss 和 Ms 完全同音。不计错
+原文 for both Miss *Rottenmeier* and Clara's
+识别成 for both Miss *ratmer* and Clara's
+    60.4 秒。专名，ratmer 就是她读对了、识别器拼不出。不计错
+原文 and his own *observations,* Mr. Sesemann
+实读 and his own *observation* Mr. Sesemann
+    83.8 秒。observations 读成 observation，少了词尾 -s
+原文 own observations, Mr. *Sesemann* decided that
+识别成 own observations, Mr. *sessment* decided that
+    91.0 秒。专名。不计错
+原文 Sesemann decided that *Heidi* was a
+识别成 Sesemann decided that *haddy* was a
+    93.4 秒。专名。不计错
+原文 that Heidi was *a* different yet
+识别成 that Heidi was *uh* different yet
+    95.2 秒。一声「呃」，不是读错。不计错
+原文 he said to *Miss* Rottenmeier. "By
+识别成 he said to *mr* Rottenmeier. "By
+    125.0 秒。专名前缀，识别器在 Mr / Miss / Ms 之间摇摆。不计错
+原文 said to Miss *Rottenmeier.* "By the
+识别成 said to Miss *rutmer* "By the
+    125.9 秒。专名。不计错
+原文 "By the way, *my* mother will
+识别成 "By the way, *mama* mother will
+    128.8 秒。转写把「my mother」糊成了「Mama + there」两个词。不计错
+原文 the way, my *mother* will visit
+识别成 the way, my *there* will visit
+    130.7 秒。同上。不计错
+原文 my mother will *visit* soon, so
+实读 my mother will *wait* soon, so
+    131.2 秒。visit 读成 wait
+原文 visit soon, so *she* will take
+识别成 visit soon, so *i* will take
+    134.6 秒。她把这半句读了两遍：头一遍「so I will take」，第二遍自己改成了「so she will take」。**自己改对的不计错**
+原文 she will take *the* burden off
+识别成 she will take *take* burden off
+    141.4 秒。同上，回读那一遍多出来的 take 占了一格。不计错
+原文 will take the *burden* off you
+实读 will take the *bottom* off you
+    142.4 秒。burden 读成 bottom
+原文 bit," he continued. *Heidi* liked Grandmamma
+识别成 bit," he continued. *like* liked Grandmamma
+    152.2 秒。转写把 Heidi 切成了「how + do」—— 多读里那三个词（how / do / you）就是证据。和前两份一样。不计错
+原文 he continued. Heidi *liked* Grandmamma right
+识别成 he continued. Heidi *one* Grandmamma right
+    152.5 秒。同上。不计错
+原文 continued. Heidi liked *Grandmamma* right away.
+识别成 continued. Heidi liked *mama* right away.
+    153.7 秒。Grandmamma 被听成了「one + mama」。不计错
+原文 took her afternoon *rest,* she read
+实读 took her afternoon *dressed* she read
+    170.5 秒。rest 读成 dressed
+原文 rest, she read *books* to her.
+实读 rest, she read *book* to her.
+    174.9 秒。books 读成 book，少了词尾 -s
+原文 to read more, *Grandmamma* had an
+识别成 to read more, *grandmama* had an
+    181.9 秒。grandmama 和 Grandmamma 几乎同音。不计错
+原文 smart. I'm sure *you'll* learn it
+识别成 smart. I'm sure *you* learn it
+    198.8 秒。转写把 you'll 的那个 /l/ 挪到了下一个词上（写成「you learn it's」）。不计错
+原文 sure you'll learn *it* in no
+识别成 sure you'll learn *it's* in no
+    201.2 秒。同上，一处位移拆成了两条。不计错
+原文 learn it in *no* time," she
+识别成 learn it in *（漏读）* time," she
+    识别器把「no time, she」整个套成了地名 North Hampshire。不计错
+原文 it in no *time,"* she encouraged
+识别成 it in no *north* she encouraged
+    203.1 秒。同上。不计错
+原文 in no time," *she* encouraged Heidi.
+识别成 in no time," *hampshire* encouraged Heidi.
+    203.6 秒。同上。不计错
+原文 time," she encouraged *Heidi.* That evening,
+识别成 time," she encouraged *headache* That evening,
+    209.0 秒。专名。不计错
+原文 she encouraged Heidi. *That* evening, Grandmamma
+识别成 she encouraged Heidi. *that's* evening, Grandmamma
+    211.0 秒。转写把「Heidi. That」糊成了「headache that's」。不计错
+原文 Heidi. That evening, *Grandmamma* gave Heidi
+识别成 Heidi. That evening, *grandmama* gave Heidi
+    213.2 秒。几乎同音。不计错
+原文 green grass and *goats* as a
+实读 green grass and *goat* as a
+    222.9 秒。goats 读成 goat，少了词尾 -s
+
+[磕巴] 退回去重来、多读了词的地方 · 8 处
+*well* While Sebastian led the
+    0.0 秒。录音一开头她先说了声「well」才起读 —— 不是课文里的词。
+*rattemir's* Rottenmeier's anger was aroused
+    18.7 秒。Rottenmeier's 她是读出来了的，识别器拼不出这个德语姓，
+    把它写成了「rattemir's + angry」两个词。
+*kara* Clara insisted they wait
+    38.3 秒。同上，Clara 读出来了，被写成了 Kara。
+*but all the* But through all the
+    70.2 秒。“But through all the stories” 起了个头没接顺，退回去重来一遍。
+*in in* innocent girl. "I would
+    97.6 秒。innocent 起了两次头才读出来。
+*clara loves having her* Clara loves having her
+    109.3 秒。“Clara loves having her around” 整句读了两遍，第二遍才接上下一句。
+*soon so she will* the burden off you
+    136.9 秒。头一遍读的是 “so I will take”，她自己听出不对，
+    退回去改成了 “so she will take” —— **改对了，不计错**。
+*how do you* Heidi liked Grandmamma right
+    147.3 秒。Heidi 这个名字被识别器切成了「how + do」两个词，和前两份一样。
+
+[亮点]
+**“again. She said that Heidi must be punished. But Clara insisted they wait for her father to make the decision. When Mr. Sesemann returned, he asked for both Miss Rottenmeier and Clara's opinions of Heidi, which were totally different. But through all the stories Clara told him about Heidi and his own…”** —— 31 到 84 秒这 **52 个词一口气读完，一处没错**，59 词/分。上一次的纪录是 37 个词。Sesemann、Rottenmeier 这两个德语姓都在这一段里，一次读对。
+**“to her. When Heidi begged her to read more, Grandmamma had an idea. “Why don't you try reading it yourself? You are smart. I'm sure you'll learn it in no time,” she encouraged Heidi. That evening, Grandmamma gave Heidi the book with pictures of green grass and…”** —— 176 到 223 秒，又是 **47 个词一处没错**，60 词/分。这一整段是 Grandmamma 的话，读出了语气。
+**“off you a bit,” he continued. Heidi liked Grandmamma right away. The old lady was kind and she cared about Heidi.”** —— 144 到 170 秒，**83 词/分**，是全篇最快的一段。
+**aroused 之外，没有一个词是读不出来的。** 前十次每次都有两三个词卡住五秒以上（horrifying、anxious、construction、Finch、once-in-a-lifetime），这一次只有一个。
+
+[三件事]
+🔚 词尾那个 -s：observations / books / goats
+    9 处错里 3 处是同一件事 —— 三个复数全读成了单数。
+    这三个词她都认得，是读到句尾松了口气。**每句最后一个词多含半拍**再往下读。
+    上一次也丢了 7 处词尾（-ing / -ed / -s），这个毛病还在。
+🗣 aroused：这一页唯一卡住的词
+    “Miss Rottenmeier's anger was aroused again.” 这句停了 6.9 秒，
+    只读出两声「or」。a-rou-sed 三个音节拆开念几遍，
+    再回到整句里读一遍 —— 卡住的词单独练完一定要放回句子里。
+📖 一句读两遍的那四处：先看完整句再开口
+    “But through all the stories…”、“innocent”、“Clara loves having her around”、
+    “so she will take…” 四处都是起了个头发现不对、退回去重来。
+    最后一处她自己把 “so I will” 改成了 “so she will”，**改得对**。
+    开口之前先用眼睛把整句扫一遍，这四处停顿能省下 25 秒。
+
+[斜线]
+But through all the stories
+Clara told him about Heidi
+and his own observations,
+Mr. Sesemann decided
+that Heidi was a different yet innocent girl.
+
+[尺子]
+    96.1% 落在「教学」这一档 —— **十一次里第一次离开「偏难」**，
+        比上一次（89.6%）往右挪了一大截。229 个词只错 9 处；
+        不过这两页比上一次短一半、对话多，段落短本来就好读一些。
+    44 个正确词/分钟：这个数是被录音末尾那 74 秒生词表拉下来的。
+        **只算课文那一段是 59 个正确词/分钟**，正好压在**三年级秋季 25 百分位**线上，
+        比上一次的 48 快了一截。母语常模只当参照系，不是及格线。
+    平均 1.2 个词一组 —— 生词表是一个词一停，把这个数压低了。
+        只算课文那一段是 1.6 个词一组，比上一次的 1.5 略成串一点。
+
+[怎么来的]
+**准确率 96.1%**（读对 220 / 划线部分共 229 词）。替换、漏读、读错音计错；插入的词和退回去重读只算不流利、不计错。上面的比对列了 38 条候选、计错 9 处 —— 撤下的 29 条里，9 条是转写把一个词切成了两个（Rottenmeier's 切成 rattemir's + angry、Clara insisted 切成 Kara is assisted、Heidi 切成 how + do），多出来的那半个词就在磕巴里躺着；3 条是识别器把「no time, she」硬套成了地名 North Hampshire；11 条是人名（Rottenmeier、Sesemann、Grandmamma、Heidi、Miss/Ms）；还有 1 条是她退回去自己改对了的。
+**每分钟正确词数 44**（WCPM）= 读对的 220 词 ÷ 299.2 秒 × 60。**这个数偏保守**：这段录音里只有 225.5 秒在读划线的课文，末尾 74 秒念的是第 3–5 页的生词表，算进了时长、不算进正确词数。只算课文那一段是 **220 ÷ 225.5 × 60 = 59**，这才是能和上一次的 48 比的数。
+**断句**取 193 次停顿，平均 1.2 个词一组；其中 52 次落在生词表那 74 秒里（一个词一停），只算课文那一段是 141 次、1.6 个词一组。停顿阈值取「说话声级 − 10 dB」，和前面十次同一把尺子。
+这次是 9 月 4 日的一段 4 分 59 秒录音，第 16–17 页的划线部分一口气读完，是第二册《Heidi》的第四次。**发音这一项没有一个音一个音地听过**，是从录音里推出来的，不如亲耳听准，所以这一项的分给得保守。
