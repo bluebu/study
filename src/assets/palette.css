@@ -39,6 +39,9 @@
   --sc-band1:   #EAE0D0;  --sc-band2:   #CFE3F3;  --sc-mid:    #3E9BD6;
   --tl-speech:  #CDEBDD;  --tl-end:     #6FB6E2;
   --tl-long:    #EE7D5B;  --tl-mid:     #CBBCA9;
+  /* 不计进统计的那几段（念生词表、读划线外的段落）。图上仍画出来 —— 录音里确实
+     有这段时间 —— 但盖一层灰，跟「评的是哪一段」对得上 */
+  --tl-skip:    #9A9287;
 
   /* 字体栈：显示体走圆体，正文走系统中文。
      ⚠️ 每个栈都必须带 Linux 字体名 —— PDF 是 GitHub Actions 的 ubuntu

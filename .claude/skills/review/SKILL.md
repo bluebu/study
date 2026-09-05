@@ -74,6 +74,7 @@ F=../feeder/bin/feeder        # 没编过就先 cd ../feeder && make cli
 3. 十几秒出结果：三份测量数据落 `storage/data/…`，一份 `.draft.txt` 落
    `storage/spec/…`。**`--ref` 别省** —— 没有它就没有逐字比对，草稿也就空了大半。
 4. **核对草稿。** 机器填好的部分（文件头、`[比对]`、`[卡壳]`、`[磕巴]`）过一眼，
+   草稿里报「读了原文以外的 N 秒」的那几段，核完边界写进 `[跳过]`（见下面那节），
    `⟨⟩` 包着的是判断，见下一节。**带 `.draft.` 的文件 build 会跳过**，
    所以草稿放在那儿慢慢改，不会污染线上报告。
 5. **改名 → 构建**：`mv p70.draft.txt p70.txt && make build`（0.15 秒）。
@@ -89,6 +90,7 @@ F=../feeder/bin/feeder        # 没编过就先 cd ../feeder && make cli
 | `errors` | 逐条看 `[比对]`。**替换 / 漏读 / 读错音计错；多读的词和回读不计错**。所以条数不一定等于 errors —— 一条里含两处错、或判成「识别错不是读错」都会差 |
 | `[评分]` 四维 + `score` | 准确度 30 / 流利度 30 / 断句语调 25 / 发音 15。**维度名一个字都不能改**（写错会静默丢掉那一条），草稿的注释里给了逐字模板 |
 | `naep` | NAEP 2002 四级量表。**踩在门槛上算低的那一级** |
+| `[跳过]` | 录音里不属于这次朗读的段落。见下一节 |
 | 点评文字 | `[总评]` `[亮点]` `[三件事]` `[斜线]` `[尺子]` `[怎么来的]` |
 
 拿不准的**别硬判**：`[比对]` 里把「实读」改成「识别成」，编号会出 `?` 而不是数字 ——
@@ -98,6 +100,48 @@ F=../feeder/bin/feeder        # 没编过就先 cd ../feeder && make cli
 
 `[分页]` 那张小表机器填好了（跨页才有），数字别动 —— 它是从同一份对齐派生的。
 缩进那一句是判断：写「哪一页更吃力、为什么」。整块删掉也行，报告就不出这张表。
+
+## `[跳过]`：把不属于这次朗读的段落扣掉
+
+念生词表、读划线外的段落 —— 这些**时长里有、词数里没有**，留着就是把分母撑大。
+写进 `[跳过]`，`duration` / `pause_count` / `pause_ratio` 三个都扣掉它再算，
+报告上的数字**就是**课文段的数字：
+
+```
+[跳过] 540.4-657.3 = 念生词表
+    末尾念的是第 3–5 页那 22 个生词，不是这次要评的朗读。
+```
+
+**卡壳不跳。** 她卡在一个词上十秒，那是朗读的一部分，照算
+（p12-15 的 once-in-a-lifetime 那 10 秒就没跳）。
+
+**边界机器切不干净，必须自己核。** 对齐会把生词表末几个词拉去顶课文结尾的词
+（p70-72 的 `only`/`in` 顶到 376 秒、p12-15 的 `problems` 顶到 653 秒），
+照 `refTimes` 首尾切会把整段生词表算进课文。扫一遍再逐个看：
+
+```bash
+python3 - <<'EOF'   # 「原文词之间大跨度 + 中间一堆多读词」= 读了别的东西
+import json
+d=json.load(open('storage/data/english/review/<slug>.read.json'))
+rt=d['alignment']['refTimes']; ref=d['reference'].split()
+ts=[(i,rt[i]) for i in range(len(ref)) if rt[i] is not None]
+ins=[x for x in d['alignment']['diffs'] if x['kind']=='insert']
+for (i,a),(j,b) in zip(ts, ts[1:]):
+    mid=[x for x in ins if a<=x.get('start',0)<=b]
+    if b-a >= 8 and len(mid) >= 6:
+        print(f"{a:.1f}-{b:.1f}s  {len(mid)} 个多读词  夹在「{ref[i]}」「{ref[j]}」之间")
+        print('   ', ' '.join(x['read'] for x in mid))
+print('开头:', [x['read'] for x in ins if x.get('start',0) < ts[0][1]])
+print('末尾:', [x['read'] for x in ins if x.get('start',0) > ts[-1][1]])
+EOF
+```
+
+**扫出来的每一段都要看那串多读词是什么再决定**，不是扫出来就跳。踩过两次：
+
+- p68 的 51–65 秒：那 7 个词是 “Do you dislike me?” asked —— **原文里的句子**，
+  她跳行先读了下一句再回来。是读串行，不是读了别的材料。**不跳**
+- p69 的 43–59 秒：“could not bear the flesh uh city uh…” 是 `Celia's opinion`
+  那一句读岔了在重来。**不跳**
 
 ## `[尺子]` / `[怎么来的]` 的套话
 

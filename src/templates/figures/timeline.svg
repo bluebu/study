@@ -6,10 +6,19 @@
   刻度间距随时长放宽（step 在 Python 里算），否则长录音末尾两个标签会叠在一起。
   卡壳标签同理：挨太近的往上错一行（y 在 Python 里算），行数决定 viewBox 顶部留多少。
 -#}
-<svg viewBox="0 {{ vb_top }} {{ W }} {{ vb_h }}" role="img" aria-label="{{ seconds }} 秒朗读的停顿分布：绿色是发声，蓝色是句末停顿，橙色和灰色是句中停顿">
+<svg viewBox="0 {{ vb_top }} {{ W }} {{ vb_h }}" role="img" aria-label="{{ seconds }} 秒朗读的停顿分布：绿色是发声，蓝色是句末停顿，橙色和灰色是句中停顿，灰底的那几段不计进统计">
   <rect x="0" y="{{ TOP }}" width="{{ W }}" height="{{ H }}" rx="8" fill="var(--tl-speech)"/>
+{% for s in skips %}
+  <rect x="{{ s.x }}" y="{{ TOP }}" width="{{ s.w }}" height="{{ H }}" fill="var(--tl-skip)" opacity="0.4"/>
+{% endfor %}
 {% for p in pauses %}
   <rect x="{{ p.x }}" y="{{ TOP }}" width="{{ p.w }}" height="{{ H }}" fill="var(--tl-{{ p.kind }})"/>
+{% endfor %}
+{#- 跳过段的标签画在停顿条**之后** —— 画在前面会被那一片密集的停顿条整个盖住
+    （生词表那段一个词一停，条子挨得比字还密）。描边是为了压住底下的花色。 -#}
+{% for s in skips %}
+  <rect x="{{ s.x }}" y="{{ TOP }}" width="{{ s.w }}" height="{{ H }}" fill="var(--tl-skip)" opacity="0.55"/>
+  <text x="{{ s.mid }}" y="{{ s.ty }}" font-size="15" font-weight="700" text-anchor="middle" fill="#fff" stroke="var(--tl-skip)" stroke-width="3" paint-order="stroke">{{ s.label }}</text>
 {% endfor %}
   <rect x="0" y="{{ TOP }}" width="{{ W }}" height="{{ H }}" rx="8" fill="none" stroke="var(--line)" stroke-width="1.5"/>
 {% for t in ticks %}

@@ -39,7 +39,8 @@ spec 只写 words（核对过的原文词数）和 errors（认定的计错数�
     插入词和回读只算不流利、不计错
   · WCPM = 读对词数 ÷ 总时长 × 60
   · 分档 Fountas & Pinnell BAS 1 p.40，常模 Hasbrouck & Tindal 2017 Table 4
-  · **换书就换了一把尺子** —— 分数是给「这个孩子 + 这本书」的，不是给孩子的
+  · **不计进统计的段落**（念生词表、读划线外的段落）写进 spec 的 `[跳过]`，
+    duration / pause_count / pause_ratio 三个都扣掉它再算
 """
 
 from __future__ import annotations
@@ -107,10 +108,41 @@ class Report:
         if not self.words:
             spec_lib.die(f"{self.slug}：要写 words（核对过的原文词数）")
 
+        # ── [跳过]：录音里不属于这次朗读的那几段（念生词表、读划线外的段落）
+        #
+        # 这几段**时长里有、词数里没有**，留着就是把分母撑大 —— 9/1 那次录音
+        # 前 90 秒念的是生词表，报告头上的 WCPM 因此印成 35，只算课文那段是 57。
+        # 从前是在每份 spec 的 [怎么来的] 里人工补一句「只算课文那一段是 XX」，
+        # 一份一算、口径散在散文里，趋势页和 csv 拿到的还是被撑大的那个数。
+        # 现在统一在这儿扣掉：**duration / pause_count / pause_ratio 三个都按扣完的算**，
+        # WCPM 和「几个词一停」跟着就对了。
+        #
+        # 为什么是人写在 spec 里、不是机器自动认：feeder 的 draft 会把候选打出来
+        # （「读了原文以外的 113.2 秒」），但边界机器切不干净 —— 对齐会把生词表
+        # 末几个词拉去顶课文结尾的词（p70-72 的 only/in、p12-15 的 problems），
+        # 照 refTimes 首尾切会把整段生词表算进课文。所以机器给候选、人定边界。
+        self.skips: list[tuple[float, float, str]] = []
+        if "跳过" in self.blocks:
+            for span, label in spec_lib.Block(
+                    name="", lines=[self.blocks["跳过"].head]).items():
+                a, _, b = span.partition("-")
+                self.skips.append((float(a), float(b), label or "不计"))
+
         # ── 其余全部算出来
-        self.duration = float(self.acoustics["duration"])
-        self.pause_count = int(self.acoustics["pause_count"])
-        self.pause_ratio = float(self.acoustics["pause_ratio"])
+        self.raw_duration = float(self.acoustics["duration"])   # 录音本身多长（图上画的是它）
+        _pauses = self.acoustics.get("pauses") or []
+        if self.skips and _pauses:
+            _kept = [q for q in _pauses
+                     if not any(a <= q["start"] < b for a, b, _ in self.skips)]
+            self.duration = round(self.raw_duration
+                                  - sum(b - a for a, b, _ in self.skips), 2)
+            self.pause_count = len(_kept)
+            self.pause_ratio = (round(sum(q["dur"] for q in _kept) / self.duration, 3)
+                                if self.duration else 0.0)
+        else:
+            self.duration = self.raw_duration
+            self.pause_count = int(self.acoustics["pause_count"])
+            self.pause_ratio = float(self.acoustics["pause_ratio"])
         self.correct = self.words - self.errors
         self.accuracy = round(self.correct / self.words * 100, 1)
         self.wcpm = round(self.correct / self.duration * 60) if self.duration else 0
@@ -160,11 +192,11 @@ class Report:
         # errors 属正常，这条写进了 skill 的自检清单。
 
         # ③ [卡壳] / [句末] 抬头行的每一段，起止都要能转成浮点
-        for blk, how in (("卡壳", "起-止 = 标签"), ("句末", "时刻")):
+        for blk, how in (("卡壳", "起-止 = 标签"), ("跳过", "起-止 = 标签"), ("句末", "时刻")):
             if blk not in self.blocks:
                 continue
             for item, label in spec_lib.Block(name="", lines=[self.blocks[blk].head]).items():
-                bad = [x for x in (item.split("-") if blk == "卡壳" else [item])
+                bad = [x for x in (item.split("-") if blk in ("卡壳", "跳过") else [item])
                        if not _is_number(x)]
                 if bad:
                     spec_lib.die(
@@ -403,18 +435,18 @@ def score_ruler(r: Report, others: dict[str, Report], first: bool) -> str:
     以前只写在准则里、报告上一个字没有：页面最大的那个数字孤零零摆着，
     没有任何限定语，家长和孩子只能把它读成「这次考了 52 分」。
 
-    同一本书里上一次的分附在后面 —— 分数持平而准确率在涨的时候（p70-72 → p73-74
+    上一次的分附在后面 —— 分数持平而准确率在涨的时候（p70-72 → p73-74
     正是这样），这一行就是唯一能解释「为什么涨了分却没动」的地方。
+
+    **不写「换书就换了一把尺子」。** 超8 是第 8 级、里面 5 本书，难易在整套书里
+    是分散的、不按册次递进 —— 拿「换了本书」去解释分数变化就是替数字找理由。
+    难就是难、简单就是简单，按实测说；持平就是持平。
     """
-    book = r.spec.get("book", "")
-    if not book:
-        return ""
     parts = []
     if first:                       # 一天读了三次就出现三遍，那句话只在头一节说
-        parts.append(f"这个分是给《{book}》这本书的 —— 换一本书就换了一把尺子，"
-                     f"只在同一本书里跨天比才作数")
+        parts.append("四项加起来 100 分：准确度 30 · 流利度 30 · 断句语调 25 · 发音 15")
     prev = others.get(r.prevs[-1]) if r.prevs else None
-    if prev is not None and prev.score and prev.spec.get("book", "") == book:
+    if prev is not None and prev.score:
         parts.append(f"上一次 {prev.score} 分")
     return "。".join(parts) + "。" if parts else ""
 
@@ -504,9 +536,11 @@ def timeline(r: Report) -> dict:
             a, _, bnd = span.partition("-")
             stalls.append((float(a), float(bnd), label))
 
-    svg, counts = figures.timeline_svg(r.acoustics, bounds, stalls)
+    svg, counts = figures.timeline_svg(r.acoustics, bounds, stalls, r.skips)
     note = joined(r.blocks["卡壳"].notes()) if "卡壳" in r.blocks else ""
-    return {"seconds": round(r.duration), "svg": svg, "counts": counts,
+    # 图画的是**整段录音**（raw_duration），[跳过] 那几段涂灰；
+    # 上面「四个数字」里的秒数和 WCPM 用的是扣完的 r.duration。两个数不一样是对的。
+    return {"seconds": round(r.raw_duration), "svg": svg, "counts": counts,
             "note": rich(note) if note else ""}
 
 
@@ -1143,16 +1177,16 @@ def day_summary(rows: list[Report], prev: list[Report] | None) -> dict:
     报告的准确率取平均 —— 读了 30 个词的一次和读了 130 个词的一次，权重本来
     就不该一样。WCPM 同理，除的是当天的总时长。
 
-    **跨本不给涨跌。** 「换书就换了一把尺子」是这个栏目的铁律：分数是给
-    「这个孩子 + 这本书」的。当天读了两本书、或者和上一天读的不是同一本，
-    合计只当个流水，不标 +N / −N —— 标了就是在拿两把尺子量出来的数相减。
+    **涨跌照给，不看是不是同一本书。** 超8 是第 8 级、5 本书，难易分散不递进，
+    「换本书就不能比」这个前提本身不成立。数字就是数字：涨了标涨、跌了标跌、
+    持平就是持平，别替它找理由。文本这次难还是简单，按实测写进报告正文。
     """
     words = sum(r.words for r in rows)
     correct = sum(r.correct for r in rows)
     dur = sum(r.duration for r in rows)
     books = {r.spec.get("book", "") for r in rows}
 
-    out = {
+    out = {  # noqa: E126
         "times": len(rows),
         "pages": sum(r.page_count for r in rows),
         "words": words,
@@ -1163,13 +1197,8 @@ def day_summary(rows: list[Report], prev: list[Report] | None) -> dict:
         "deltas": [],
     }
 
-    # 涨跌只在「两天都只读了同一本书」时给
-    if not prev or len(books) != 1:
+    if not prev:
         return out
-    pb = {r.spec.get("book", "") for r in prev}
-    if pb != books:
-        return out
-
     pw = sum(r.words for r in prev)
     pc = sum(r.correct for r in prev)
     pd = sum(r.duration for r in prev)
@@ -1241,6 +1270,19 @@ def build_review(dist: Path, pdf: bool = False) -> None:
 
     reports = [Report(spec_lib.parse(p)) for p in specs]
     others = {r.slug: r for r in reports}
+
+    # prev 指向的 slug 必须真存在 —— 指错了是**静默**失败：分数底下的「上一次 N 分」
+    # 和整个「和上一次比」区块直接不出，页面看着完好，只是少了一块。
+    # 踩过：p6-8 写 `prev: p73-74`，同课补全成 `super8/L4/p73-74`，
+    # 而它在 L3 —— **跨课的 prev 必须写全名**。
+    for r in reports:
+        for s in r.prevs:
+            if s not in others:
+                near = [k for k in others if k.rsplit("/", 1)[-1] == s.rsplit("/", 1)[-1]]
+                spec_lib.die(
+                    f"{r.slug}: prev 指向的 {s} 不存在 —— 只写页码会补成本课的，"
+                    f"跨课要写全名"
+                    + (f"（是不是想写 {near[0]}？）" if near else ""))
 
     # 三把尺子上要标出上一页的位置，得先把彼此认全
     for r in reports:

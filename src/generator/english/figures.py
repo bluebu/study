@@ -106,16 +106,25 @@ def block(acc, wcpm, level, notes, prev_acc=None):
     )
 
 
-def timeline_svg(data, bounds, stalls):
+def timeline_svg(data, bounds, stalls, skips=()):
     """停顿地图：83~86 秒里每一次歇气。
 
     data   = analyze.py 的输出（dict）
     bounds = 原文真正的句末 / 段落切换时刻，用来区分「该停的」和「断在句子中间的」
     stalls = [(起, 止, 标注)] 想额外圈出来的大卡壳
+    skips  = [(起, 止, 标注)] 不计进统计的那几段（念生词表、读划线外的段落）
+
+    **图画整段录音，counts 只数 skips 之外的。** 两件事都得做到：录音里确实
+    有那几分钟，图上抹掉就成了假的；可它们不进 duration / WCPM，
+    所以停顿也不能进 counts —— 否则图下面那三个数和上面「四个数字」对不上。
+    灰底就是这个交代。
     """
     D, P = data['duration'], data['pauses']
     W, H, TOP = 1000.0, 40.0, 26.0
     x = lambda t: round(t / D * W, 2)
+
+    def skipped(p):
+        return any(a <= p['start'] < b for a, b, _ in skips)
 
     def kind(p):
         if any(p['start'] - .6 <= b <= p['end'] + .6 for b in bounds):
@@ -125,10 +134,16 @@ def timeline_svg(data, bounds, stalls):
     counts = {'end': 0, 'long': 0, 'mid': 0}
     pauses = []
     for p in P:
-        k = kind(p); counts[k] += 1
+        k = kind(p)
+        if not skipped(p):
+            counts[k] += 1
         pauses.append({"x": x(p["start"]), "kind": k,
                        # 最窄 1.4：再细就看不见了，一次歇气该在图上留下痕迹
                        "w": max(x(p["end"]) - x(p["start"]), 1.4)})
+
+    bands = [{"x": x(a), "w": max(x(b) - x(a), 1.4), "mid": round((x(a) + x(b)) / 2, 2),
+              "ty": TOP + H / 2 + 5, "label": label}
+             for a, b, label in skips]
 
     step = 10 if D <= 120 else 20 if D <= 300 else 60   # 长录音刻度放宽，否则末尾两个标签会叠在一起
     tk = list(range(0, int(D) + 1, step))
@@ -160,6 +175,7 @@ def timeline_svg(data, bounds, stalls):
         vb_top=f"{-4 - extra:.0f}", vb_h=f"{TOP + H + 28 + extra:.0f}",
         seconds=int(D),
         pauses=pauses,
+        skips=bands,
         base=TOP + H, base5=TOP + H + 5, base20=TOP + H + 20,
         ticks=[{"x": x(t), "v": t,
                 "anchor": "start" if t == tk[0] else "end" if t == tk[-1] else "middle"}
