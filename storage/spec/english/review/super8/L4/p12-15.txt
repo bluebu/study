@@ -128,49 +128,49 @@ naep: 2
     4.2 秒。课本把奶奶拼成 Grannie，识别器写 granny —— 完全同音，不计错
 原文 that Grannie was *blind* and noticed
 实读 that Grannie was *planned* and noticed
-    5.3 秒。blind 读成了 planned，开头那个 b 变成了 pl
+    〔辅音〕 5.3 秒。blind 读成了 planned，开头那个 b 变成了 pl
 原文 was blind and *noticed* how poorly
 识别成 was blind and *taste* how poorly
     7.0 秒。转写把 noticed 切成了「not + taste」两个词，多出来的那个 not 就是证据。不计错
 原文 noticed how poorly *built* their hut
 实读 noticed how poorly *builds* their hut
-    12.6 秒。built 读成 builds，多了个词尾 -s
+    〔词尾〕 12.6 秒。built 读成 builds，多了个词尾 -s
 原文 how poorly built *their* hut was.
 实读 how poorly built *the* hut was.
-    13.7 秒。their 读成了 the
+    〔小词〕 13.7 秒。their 读成了 the
 原文 poorly built their *hut* was. "I
 实读 poorly built their *heart* was. "I
-    13.9 秒。hut 读成 heart —— 这段录音里 hut 出现四次，有三次都读成了这个音
+    〔元音〕 13.9 秒。hut 读成 heart —— 这段录音里 hut 出现四次，有三次都读成了这个音
 原文 to fix the *hut,"* she promised.
 实读 to fix the *heart* she promised.
-    22.1 秒。hut 读成 heart，第二次
+    〔元音〕 22.1 秒。hut 读成 heart，第二次
 原文 fix the hut," *she* promised. The
 实读 fix the hut," *he* promised. The
-    23.0 秒。she 读成 he，一句在讲 Heidi，主语换了人
+    〔小词〕 23.0 秒。she 读成 he，一句在讲 Heidi，主语换了人
 原文 The next day, *Heidi* kept her
 识别成 The next day, *he* kept her
     32.8 秒。专名。Heidi 这个名字在这段录音里认对过 5 次，识别器是在把它切成两个词。不计错
 原文 her promise by *bringing* Grandfather to
 实读 her promise by *bring* Grandfather to
-    41.8 秒。少了词尾 -ing
+    〔词尾〕 41.8 秒。少了词尾 -ing
 原文 bringing Grandfather to *Grannie's* hut to
 识别成 bringing Grandfather to *granny's* hut to
     44.3 秒。同音，不计错
 原文 Grandfather to Grannie's *hut* to fix
 实读 Grandfather to Grannie's *heart* to fix
-    45.2 秒。hut 读成 heart，第三次。同一个词同一个音，三次都一样
+    〔元音〕 45.2 秒。hut 读成 heart，第三次。同一个词同一个音，三次都一样
 原文 hut to fix *things.* Heidi had
 实读 hut to fix *sing* Heidi had
-    47.2 秒。things 读成 sing —— th 读成了 s
+    〔辅音〕 47.2 秒。things 读成 sing —— th 读成了 s
 原文 fix things. Heidi *had* spent a
 实读 fix things. Heidi *has* spent a
-    57.2 秒。had 读成 has，时态读串了
+    〔词尾〕 57.2 秒。had 读成 has，时态读串了
 原文 spent a winter *and* a summer
 实读 spent a winter *on* a summer
-    59.9 秒。and 读成 on
+    〔小词〕 59.9 秒。and 读成 on
 原文 a winter and *a* summer with
 实读 a winter and *the* summer with
-    60.5 秒。a 读成 the
+    〔小词〕 60.5 秒。a 读成 the
 原文 summer with Uncle *Alp.* When her
 识别成 summer with Uncle *al* When her
     62.2 秒。专名，识别器拼不出 Alp。不计错
@@ -179,31 +179,31 @@ naep: 2
     和下一条是同一处（她读的是「the … in black」），只算一处
 原文 to end, a *man* in black
 实读 to end, a *the* in black
-    82.3 秒。a man 没读出来，只读了一个 the
+    〔漏读〕 82.3 秒。a man 没读出来，只读了一个 the
 原文 man in black *visited* them. It
 实读 man in black *visits* them. It
-    85.0 秒。visited 读成 visits，过去式读成了现在式
+    〔词尾〕 85.0 秒。visited 读成 visits，过去式读成了现在式
 原文 the pastor from *Dorfli.* Although surprised
 识别成 the pastor from *dorflay* Although surprised
     90.0 秒。地名，识别器拼不出 Dorfli。不计错
 原文 from Dorfli. Although *surprised* to see
 实读 from Dorfli. Although *pressed* to see
-    93.1 秒。surprised 前半个音节吞掉了，只出来 pressed
+    〔生词〕 93.1 秒。surprised 前半个音节吞掉了，只出来 pressed
 原文 seat." The pastor *refused* the offer;
 实读 seat." The pastor *refuse* the offer;
-    109.7 秒。少了词尾 -d
+    〔词尾〕 109.7 秒。少了词尾 -d
 原文 he told Uncle *Alp* straight away
 识别成 he told Uncle *elp* straight away
     117.9 秒。专名。不计错
 原文 told Uncle Alp *straight* away why
 实读 told Uncle Alp *street* away why
-    118.4 秒。straight 读成 street，双元音 /eɪ/ 读成了长音 /iː/
+    〔元音〕 118.4 秒。straight 读成 street，双元音 /eɪ/ 读成了长音 /iː/
 原文 was there to *convince* him to
 实读 was there to *convenience* him to
-    123.7 秒。convince 读成了 convenience，是另一个词
+    〔词形〕 123.7 秒。convince 读成了 convenience，是另一个词
 原文 convince him to *send* Heidi to
 实读 convince him to *spend* Heidi to
-    132.6 秒。send 读成 spend，中间多了个 /p/
+    〔辅音〕 132.6 秒。send 读成 spend，中间多了个 /p/
 原文 him to send *Heidi* to school.
 识别成 him to send *handy* to school.
     133.0 秒。专名。不计错
@@ -212,10 +212,10 @@ naep: 2
     141.2 秒。专名。不计错
 原文 school. Uncle Alp *shook* his head
 实读 school. Uncle Alp *shroke* his head
-    142.1 秒。shook 读成 shroke，中间多了个 r
+    〔辅音〕 142.1 秒。shook 读成 shroke，中间多了个 r
 原文 shook his head *on* the suggestion.
 实读 shook his head *and* the suggestion.
-    143.3 秒。on 读成 and
+    〔小词〕 143.3 秒。on 读成 and
 原文 his head on *the* suggestion. "Heidi
 识别成 his head on *suggestion* suggestion. "Heidi
     147.1 秒。对齐错位 —— suggestion 在下一条出现了，说明她读出来了。不计错
@@ -227,7 +227,7 @@ naep: 2
     153.1 秒。专名。不计错
 原文 He also expressed *worries* about the
 实读 He also expressed *varies* about the
-    178.0 秒。worries 读成 varies —— w 读成了 v
+    〔辅音〕 178.0 秒。worries 读成 varies —— w 读成了 v
 原文 the safety of *Heidi's* travel to
 识别成 the safety of *hiding* travel to
     182.8 秒。专名。不计错
@@ -239,7 +239,7 @@ naep: 2
     191.6 秒。同上。day 这个词在第 12 页认对过。不计错
 原文 to make the *already* angry Grandfather
 实读 to make the *alrighty* angry Grandfather
-    199.8 秒。already 读成 alrighty，重音后那个音节读岔了
+    〔元音〕 199.8 秒。already 读成 alrighty，重音后那个音节读岔了
 原文 even more so *Detie* was back
 识别成 even more so *he* was back
     205.7 秒。专名。和上一册一样，识别器把 Detie 切成两个词。不计错
@@ -248,7 +248,7 @@ naep: 2
     210.6 秒。专名。不计错
 原文 live in a *family* with a
 实读 live in a *friendly* with a
-    216.5 秒。family 读成 friendly，是另一个词
+    〔词形〕 216.5 秒。family 读成 friendly，是另一个词
 原文 disabled girl. "It's *a* once-in-a-lifetime opportunity!
 识别成 disabled girl. "It's *uh* once-in-a-lifetime opportunity!
     229.1 秒。那 10 秒卡顿里的一声「呃」，不是读错。不计错
@@ -269,19 +269,19 @@ naep: 2
     282.5 秒。同上。不计错
 原文 working, so he *hired* Miss Rottenmeier
 实读 working, so he *heard* Miss Rottenmeier
-    295.1 秒。hired 读成 heard，双元音 /aɪ/ 丢了
+    〔元音〕 295.1 秒。hired 读成 heard，双元音 /aɪ/ 丢了
 原文 he hired Miss *Rottenmeier* to look
 识别成 he hired Miss *mayor* to look
     298.6 秒。转写切成了「rotten + mayor」两个词 —— 多出来的 rotten 就是她读对了的证据。不计错
 原文 Rottenmeier to look *after* his wheelchair-bound
 实读 Rottenmeier to look *for* his wheelchair-bound
-    301.9 秒。after 读成 for
+    〔小词〕 301.9 秒。after 读成 for
 原文 look after his *wheelchair-bound* daughter Clara.
 实读 look after his *bond* daughter Clara.
-    303.9 秒。wheelchair 读对了（在多读里），bound 读成 bond —— 又是长音读成短音
+    〔元音〕 303.9 秒。wheelchair 读对了（在多读里），bound 读成 bond —— 又是长音读成短音
 原文 wheelchair-bound daughter Clara. *Since* the girl's
 实读 wheelchair-bound daughter Clara. *sends* the girl's
-    312.5 秒。Since 读成 sends，而且退回去重读的第二遍还是 sends
+    〔词形〕 312.5 秒。Since 读成 sends，而且退回去重读的第二遍还是 sends
 原文 Clara. Since the *girl's* mother died
 识别成 Clara. Since the *girl* mother died
     313.4 秒。那个 's 跑到了下一个词前面（识别成「girl smother」），一处错位拆成了两条。不计错
@@ -293,7 +293,7 @@ naep: 2
     323.9 秒。专名。不计错
 原文 ago, Mr. Sesemann *thought* Clara's happiness
 实读 ago, Mr. Sesemann *brought* Clara's happiness
-    325.3 秒。thought 读成 brought —— th 读成了 br
+    〔辅音〕 325.3 秒。thought 读成 brought —— th 读成了 br
 原文 Clara's happiness was *his* most important
 识别成 Clara's happiness was *almost* most important
     332.3 秒。转写把「his most」糊成了 almost，多出来的那个 he 就是 his。不计错
@@ -308,16 +308,16 @@ naep: 2
     341.3 秒。rottenmer 就是她读对了、识别器拼不出这个德语姓。不计错
 原文 thing. Miss Rottenmeier *liked* bossing servants
 实读 thing. Miss Rottenmeier *lacked* bossing servants
-    342.2 秒。liked 读成 lacked，元音又短了
+    〔元音〕 342.2 秒。liked 读成 lacked，元音又短了
 原文 Miss Rottenmeier liked *bossing* servants around
 实读 Miss Rottenmeier liked *both* servants around
-    342.9 秒。bossing 只读出前半，成了 both
+    〔生词〕 342.9 秒。bossing 只读出前半，成了 both
 原文 bossing servants around *in* the house.
 实读 bossing servants around *（漏读）* the house.
-    整个词跳过去了
+    〔漏读〕 整个词跳过去了
 原文 friendly. When she *saw* Heidi, she
 实读 friendly. When she *so* Heidi, she
-    361.1 秒。saw 读成 so
+    〔元音〕 361.1 秒。saw 读成 so
 原文 When she saw *Heidi,* she asked
 识别成 When she saw *hiding* she asked
     361.3 秒。专名。不计错
@@ -338,13 +338,13 @@ naep: 2
     406.1 秒。专名。不计错
 原文 couldn't read, she *became* very surprised.
 实读 couldn't read, she *become* very surprised.
-    408.5 秒。became 读成 become，过去式读成了原形
+    〔词尾〕 408.5 秒。became 读成 become，过去式读成了原形
 原文 read?" she said. *"Heidi,* you may
 识别成 read?" she said. *had* you may
     420.6 秒。专名。不计错
 原文 please as Clara *needs* to rest
 实读 please as Clara *need* to rest
-    432.5 秒。少了词尾 -s
+    〔词尾〕 432.5 秒。少了词尾 -s
 原文 in the afternoon," *said* Miss Rottenmeier.
 识别成 in the afternoon," *the* Miss Rottenmeier.
     435.6 秒。said 在这段录音里认对过三次。不计错
@@ -356,37 +356,37 @@ naep: 2
     440.9 秒。专名。不计错
 原文 was dying to *see* something green.
 实读 was dying to *say* something green.
-    447.4 秒。see 读成 say
+    〔元音〕 447.4 秒。see 读成 say
 原文 to climb up *to* the church
 实读 to climb up *（漏读）* the church
-    整个词跳过去了
+    〔漏读〕 整个词跳过去了
 原文 church tower bell *as* Sebastian suggested.
 实读 church tower bell *best* Sebastian suggested.
-    459.7 秒。as 读成 best
+    〔小词〕 459.7 秒。as 读成 best
 原文 tower bell as *Sebastian* suggested. Since
 识别成 tower bell as *gym* suggested. Since
     460.3 秒。专名，Sebastian 认对过一次。不计错
 原文 suggested. Since she *was* new to
 实读 suggested. Since she *（漏读）* new to
-    整个词跳过去了
+    〔漏读〕 整个词跳过去了
 原文 Since she was *new* to Frankfurt,
 识别成 Since she was *knew* to Frankfurt,
     465.5 秒。new 和 knew 完全同音。不计错
 原文 pay me if *I* lead you
 实读 pay me if *you* lead you
-    480.5 秒。这半句人称整个读反了：「if I lead you there」读成了「if you … me there」
+    〔小词〕 480.5 秒。这半句人称整个读反了：「if I lead you there」读成了「if you … me there」
 原文 me if I *lead* you there,"
 实读 me if I *like* you there,"
-    481.0 秒。lead 读成 like
+    〔词形〕 481.0 秒。lead 读成 like
 原文 if I lead *you* there," the
 实读 if I lead *me* there," the
-    481.5 秒。同 85，人称读反
+    〔小词〕 481.5 秒。同 85，人称读反
 原文 boy said. "Fine," *Heidi* answered. "Go
 识别成 boy said. "Fine," *the* answered. "Go
     487.9 秒。转写把 Heidi 切成了「had + the」。不计错
 原文 said. "Fine," Heidi *answered.* "Go ask
 实读 said. "Fine," Heidi *answer* "Go ask
-    488.2 秒。少了词尾 -ed
+    〔词尾〕 488.2 秒。少了词尾 -ed
 原文 from Clara tomorrow." *Miss* Rottenmeier into
 识别成 from Clara tomorrow." *ms* Rottenmeier into
     497.6 秒。同音。不计错
@@ -395,28 +395,28 @@ naep: 2
     499.7 秒。专名。不计错
 原文 afraid of cats. *"Get* rid of
 实读 afraid of cats. *got* rid of
-    508.4 秒。Get 读成 got
+    〔元音〕 508.4 秒。Get 读成 got
 原文 of the room *while* screaming the
 实读 of the room *well* screaming the
-    519.5 秒。while 读成 well
+    〔元音〕 519.5 秒。while 读成 well
 原文 while screaming the *order.* "Sebastian, please,
 实读 while screaming the *other* "Sebastian, please,
-    521.6 秒。order 读成 other，中间那个 d 丢了
+    〔辅音〕 521.6 秒。order 读成 other，中间那个 d 丢了
 原文 screaming the order. *"Sebastian,* please, help
 识别成 screaming the order. *spectrum* please, help
     522.7 秒。专名。不计错
 原文 please, help us *hide* the kittens,"
 实读 please, help us *have* the kittens,"
-    527.3 秒。hide 读成 have
+    〔元音〕 527.3 秒。hide 读成 have
 原文 hide the kittens," *pleaded* Clara. "Take
 实读 hide the kittens," *play* Clara. "Take
-    531.7 秒。pleaded 只读出前半，成了 play
+    〔生词〕 531.7 秒。pleaded 只读出前半，成了 play
 原文 the kittens," pleaded *Clara.* "Take it
 识别成 the kittens," pleaded *the* "Take it
     535.3 秒。专名，Clara 认对过三次。不计错
 原文 kittens," pleaded Clara. *"Take* it easy.
 实读 kittens," pleaded Clara. *heck* it easy.
-    538.2 秒。Take 没读出来
+    〔生词〕 538.2 秒。Take 没读出来
 原文 it easy. No *problems!"*
 识别成 it easy. No *reward*
     650.2 秒。录音末尾 113 秒念的是生词表，reward 是那 22 个词里的最后一个 —— 被对齐拉去顶了课文结尾的 problems。她读了 problems（转写里是 problem）。不计错

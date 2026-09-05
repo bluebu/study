@@ -113,87 +113,87 @@ prev: p69
 [比对]
 原文 *However* when he reached the room
 实读 *（漏读）* when he reached the room
-    开头第一个词整个跳过去了，直接从 when 读起
+    〔漏读〕 开头第一个词整个跳过去了，直接从 when 读起
 原文 extreme and he *vowed* that he would
 实读 extreme and he *bold* that he would
-    37.5 秒。vowed 读成 bold，开头的 v 和整个元音都没对上
+    〔辅音〕 37.5 秒。vowed 读成 bold，开头的 v 和整个元音都没对上
 原文 had helped her *escape* When they heard
 实读 had helped her *escaped* When they heard
-    48.8 秒。多了词尾 -d，**紧接着又读了一遍还是 escaped** —— 两遍都一样，
+    〔词尾〕 48.8 秒。多了词尾 -d，**紧接着又读了一遍还是 escaped** —— 两遍都一样，
     不是自己改对，计错
 原文 heard Prince Darling's *vow* the cruel advisers
 实读 heard Prince Darling's *wow* the cruel advisers
-    62.5 秒。v 读成了 w
+    〔辅音〕 62.5 秒。v 读成了 w
 原文 Darling's vow the *cruel* advisers his foster-brother
 实读 Darling's vow the *cool* advisers his foster-brother
-    64.2 秒。cruel 两个音节压成了一个 cool
+    〔元音〕 64.2 秒。cruel 两个音节压成了一个 cool
 原文 vow the cruel *advisers* his foster-brother and
 实读 vow the cruel *advisor* his foster-brother and
-    64.6 秒。复数的 -s 没读出来
+    〔词尾〕 64.6 秒。复数的 -s 没读出来
 原文 correct Prince Darling's *faults* His foster-brother told
 实读 correct Prince Darling's *fault* His foster-brother told
-    127.3 秒。又一处复数的 -s
+    〔词尾〕 127.3 秒。又一处复数的 -s
 原文 even paid some *other* men to lie
 实读 even paid some *their* men to lie
-    151.6 秒。前面还有一声「uh」，other 读成了 their
+    〔小词〕 151.6 秒。前面还有一声「uh」，other 读成了 their
 原文 make him stand *trial* like a criminal
 实读 make him stand *true* like a criminal
-    192.5 秒。trial 读成 true
+    〔词形〕 192.5 秒。trial 读成 true
 原文 stand trial like a *criminal* things You've become
 实读 stand trial like a *creamy* things You've become
-    194.3 秒。criminal 三个音节压成了两个
+    〔生词〕 194.3 秒。criminal 三个音节压成了两个
 原文 become a monster *continued* You have made
 实读 become a monster *（漏读）* You have made
-    引号外的那个叙述词整个跳过去了
+    〔漏读〕 引号外的那个叙述词整个跳过去了
 原文 yourself like the *lion* in your anger
 实读 yourself like the *lying* in your anger
-    205.3 秒。lion 读成 lying，尾音换了
+    〔元音〕 205.3 秒。lion 读成 lying，尾音换了
 原文 the wolf in your *greediness* and like a snake
 实读 the wolf in your *witness* and like a snake
-    213.1 秒。greediness 没读出来
+    〔生词〕 213.1 秒。greediness 没读出来
 原文 to you Your *rudeness* has made you like a bull
 实读 to you Your *goodness → roses →（跳过）* has made you like a bull
-    225.5–232.7 秒。这个词试了三遍：先读成 goodness，再读成 roses，
+    〔生词〕 225.5–232.7 秒。这个词试了三遍：先读成 goodness，再读成 roses，
     第三遍直接跳过去接了 has made。计一处
 原文 in your new *form* take the appearance
 实读 in your new *from* take the appearance
-    248.6 秒。form 读成 from，两个词长得太像
+    〔词形〕 248.6 秒。form 读成 from，两个词长得太像
 原文 take the appearance of *all* these animals at once
 实读 take the appearance of *（漏读）* these animals at once
-    all 跳过去了
+    〔漏读〕 all 跳过去了
 原文 to get as far *away* from the clear lake
 实读 to get as far *（漏读）* from the clear lake
-    away 跳过去了
+    〔漏读〕 away 跳过去了
 原文 from the clear *lake* as he could
 实读 from the clear *like* as he could
-    267.8 秒。lake 读成 like，元音换了
+    〔元音〕 267.8 秒。lake 读成 like，元音换了
 原文 scary reflection anymore *Thinking* of this he
 实读 scary reflection anymore *thing king* of this he
-    280.8 秒。Thinking 拆成了两个词读：thing + king
+    〔生词〕 280.8 秒。Thinking 拆成了两个词读：thing + king
 原文 before he had *gotten* far he fell
 实读 before he had *go → then* far he fell
-    293.2 秒。先读了个 go，停一下改成 then，两遍都不是 gotten
+    〔生词〕 293.2 秒。先读了个 go，停一下改成 then，两遍都不是 gotten
 原文 gotten far he *fell* into a deep pit
 实读 gotten far he *felt* into a deep pit
-    297.8 秒。fell 后面多带了一个 -t
+    〔词尾〕 297.8 秒。fell 后面多带了一个 -t
 原文 The hunters who *were* hiding in a tree
 实读 The hunters who *are* hiding in a tree
-    311.2 秒。were 读成 are
+    〔小词〕 311.2 秒。were 读成 are
 原文 who were hiding in *a* tree quickly jumped
 实读 who were hiding in *the* tree quickly jumped
-    312.2 秒。a 读成 the
+    〔小词〕 312.2 秒。a 读成 the
 原文 put him in heavy *chains* and led him
 实读 put him in heavy *trees* and led him
-    315.9 秒。chains 读成 trees
+    〔词形〕 315.9 秒。chains 读成 trees
 原文 and led him *back* to the main city
 实读 and led him *（漏读）* to the main city
-    back 跳过去了
+    〔漏读〕 back 跳过去了
 原文 own kingdom Our *prince* who took pleasure
 实读 own kingdom Our *friends* who took pleasure
-    332.3 秒。前面停了 4.3 秒（引号开头的新段），prince 读成了 friends
+    〔词形〕 332.3 秒。前面停了 4.3 秒（引号开头的新段），prince 读成了 friends
 原文 who took pleasure *only* in
 实读 who took pleasure *（漏读）* in
-    335.1 秒。这一句最后只读出了 in —— **in 是读对的**，only 没出来。
+    〔漏读〕 335.1 秒。这一句最后只读出了 in —— **in 是读对的**，only 没出来。
     机器给这两个位置标的时间戳（375.5 / 376.4 秒）是**生词表**里的 desert / hermit
     被对齐算法拉过来顶上的，那两个词不是课文，见头注
 

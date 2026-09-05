@@ -44,16 +44,16 @@ prev: p65
 [比对]
 原文 as though a *pin* stuck in his finger
 实读 as though a *pink* stuck his in his finger
-    pin 后面多带了个 k；这一整句前后停了 3.3 秒，是全篇最难的地方
+    〔词尾〕 pin 后面多带了个 k；这一整句前后停了 3.3 秒，是全篇最难的地方
 原文 your *hunting* goal
 实读 your *haunting* goal
-    上一页 hunting 读成了 honking，这一页读成 haunting — 同一个词第二次读岔
+    〔元音〕 上一页 hunting 读成了 honking，这一页读成 haunting — 同一个词第二次读岔
 原文 your hunting *goal* in the forest
 实读 your haunting *go* in the forest
-    goal 尾巴上的 l 没出来，读成了 go
+    〔词尾〕 goal 尾巴上的 l 没出来，读成了 go
 原文 did not in the *least* deserve
 实读 did not in the *list* deserve
-    least 的长音 /iː/ 读短了，变成 list
+    〔元音〕 least 的长音 /iː/ 读短了，变成 list
 
 [磕巴] 三次磕巴（不计错，但能看出在想）
 was *very* angry, *was angry*, …

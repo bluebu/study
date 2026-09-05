@@ -118,10 +118,10 @@ naep: 2
     0.7 秒。录音开头她先说了声「well」，转写把紧接着的 While 也写成了 well —— 多读里那个 well 就是证据。不计错
 原文 While Sebastian *led* the boy
 实读 While Sebastian *let* the boy
-    2.9 秒。led 读成 let，词尾的 /d/ 清化成了 /t/
+    〔词尾〕 2.9 秒。led 读成 let，词尾的 /d/ 清化成了 /t/
 原文 some coins and *came* back with
 实读 some coins and *come* back with
-    7.6 秒。came 读成 come，又是元音
+    〔词尾〕 7.6 秒。came 读成 come，又是元音
 原文 animals, but Miss *Rottenmeier's* anger was
 识别成 animals, but Miss *angry* anger was
     20.5 秒。转写切成了「rattemir's + angry」两个词 —— 多读里那个 rattemir's 就是她读对了的证据。不计错
@@ -130,7 +130,7 @@ naep: 2
     21.4 秒。同上，一处切词拆成了两条。不计错
 原文 Rottenmeier's anger was *aroused* again. She
 实读 Rottenmeier's anger was *or* again. She
-    25.4 秒。aroused 没读出来，只出来两声「or」，这处停了 6.9 秒
+    〔生词〕 25.4 秒。aroused 没读出来，只出来两声「or」，这处停了 6.9 秒
 原文 be punished. But *Clara* insisted they
 识别成 be punished. But *is* insisted they
     39.1 秒。转写切成了「Kara + is + assisted」—— 多读里那个 kara 就是 Clara。不计错
@@ -148,7 +148,7 @@ naep: 2
     60.4 秒。专名，ratmer 就是她读对了、识别器拼不出。不计错
 原文 and his own *observations,* Mr. Sesemann
 实读 and his own *observation* Mr. Sesemann
-    83.8 秒。observations 读成 observation，少了词尾 -s
+    〔词尾〕 83.8 秒。observations 读成 observation，少了词尾 -s
 原文 own observations, Mr. *Sesemann* decided that
 识别成 own observations, Mr. *sessment* decided that
     91.0 秒。专名。不计错
@@ -172,7 +172,7 @@ naep: 2
     130.7 秒。同上。不计错
 原文 my mother will *visit* soon, so
 实读 my mother will *wait* soon, so
-    131.2 秒。visit 读成 wait
+    〔词形〕 131.2 秒。visit 读成 wait
 原文 visit soon, so *she* will take
 识别成 visit soon, so *i* will take
     134.6 秒。她把这半句读了两遍：头一遍「so I will take」，第二遍自己改成了「so she will take」。**自己改对的不计错**
@@ -181,7 +181,7 @@ naep: 2
     141.4 秒。同上，回读那一遍多出来的 take 占了一格。不计错
 原文 will take the *burden* off you
 实读 will take the *bottom* off you
-    142.4 秒。burden 读成 bottom
+    〔元音〕 142.4 秒。burden 读成 bottom
 原文 bit," he continued. *Heidi* liked Grandmamma
 识别成 bit," he continued. *like* liked Grandmamma
     152.2 秒。转写把 Heidi 切成了「how + do」—— 多读里那三个词（how / do / you）就是证据。和前两份一样。不计错
@@ -193,10 +193,10 @@ naep: 2
     153.7 秒。Grandmamma 被听成了「one + mama」。不计错
 原文 took her afternoon *rest,* she read
 实读 took her afternoon *dressed* she read
-    170.5 秒。rest 读成 dressed
+    〔词形〕 170.5 秒。rest 读成 dressed
 原文 rest, she read *books* to her.
 实读 rest, she read *book* to her.
-    174.9 秒。books 读成 book，少了词尾 -s
+    〔词尾〕 174.9 秒。books 读成 book，少了词尾 -s
 原文 to read more, *Grandmamma* had an
 识别成 to read more, *grandmama* had an
     181.9 秒。grandmama 和 Grandmamma 几乎同音。不计错
@@ -226,7 +226,7 @@ naep: 2
     213.2 秒。几乎同音。不计错
 原文 green grass and *goats* as a
 实读 green grass and *goat* as a
-    222.9 秒。goats 读成 goat，少了词尾 -s
+    〔词尾〕 222.9 秒。goats 读成 goat，少了词尾 -s
 
 [磕巴] 退回去重来、多读了词的地方 · 8 处
 *well* While Sebastian led the

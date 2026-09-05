@@ -178,6 +178,7 @@ p16 正是这一种）。错一位在页面上只表现成「点绿词听到别�
 | 表 | 一行是什么 | 谁写 | 谁读 |
 |---|---|---|---|
 | `english/review.csv` | 一次朗读的全部指标 | `src/generator/english/review.py` 的 `write_result()` | 趋势页 `dist/english/review/trend.html`；别的工具直接读 CSV |
+| `english/review-errors.csv` | **一行一处错**：页 / 日期 / 书 / 原文词 / 类型（八类之一） | 同上 | 趋势页的「错在哪一类」和「先解决这三个」 |
 
 列就是 `review.py` 已经在算的那些：`accuracy` `wcpm` `per_group` `correct` +
 spec 里人给的 `words` `errors` `score` `naep`。**不新增任何计算** —— 这张表是

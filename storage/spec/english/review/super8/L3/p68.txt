@@ -53,33 +53,33 @@ prev: p65, p66, p67
 [比对]
 原文 reminders of his bad *behavior*
 实读 reminders of his bad *be heavier*
-    behavior 读成了两截「be + heavier」。前面 bad 先读成 bed、马上自己改回来了，那处不计错
+    〔生词〕 behavior 读成了两截「be + heavier」。前面 bad 先读成 bed、马上自己改回来了，那处不计错
 原文 threw his ring aside, and *thought* himself
 实读 threw his ring aside, and *so* himself
-    thought 读成了 so
+    〔词形〕 thought 读成了 so
 原文 only a *shepherdess* and a poor girl
 实读 only a *chef for this* and a poor girl
-    shepherdess 试了 2 秒，出来的是三个短音节
+    〔生词〕 shepherdess 试了 2 秒，出来的是三个短音节
 原文 “Do you *dislike* me?” asked Prince Darling
 实读 “Do you *like* me?” asked Prince Darling
-    dis- 掉了。有意思的是这个词她跳段那次先读过一遍，那一遍是对的
+    〔词形〕 dis- 掉了。有意思的是这个词她跳段那次先读过一遍，那一遍是对的
 原文 “No, my prince,” replied *Celia*
 实读 “No, my prince,” replied *Syria*
-    人名读成了国名 Syria
+    〔专名〕 人名读成了国名 Syria
 原文 replied Celia. “*I* notice you are very rich
 识别成 replied Syria, um, *and* notice you are very rich
-    **这处没听清**：她在 Celia 后面「呃」了一下才接着读，「呃 + I」很可能被连成了
+    〔小词〕 **这处没听清**：她在 Celia 后面「呃」了一下才接着读，「呃 + I」很可能被连成了
     and。计分时按错了 1 处算；如果 I 其实读对了，准确率是 93.8%
 原文 but what good would *richness* be to me?
 实读 but what good would *reach needs to, which needs to* be to me?
-    8.4 秒里试了两轮，两轮都不对。rich 她上一句「you are very rich」刚读对，
+    〔生词〕 8.4 秒里试了两轮，两轮都不对。rich 她上一句「you are very rich」刚读对，
     -ness 一加上就散了
 原文 dislike you and even *hate* you
 实读 dislike you and even *hit* you
-    hate 读成 hit
+    〔元音〕 hate 读成 hit
 原文 What will *our* marriage be like
 实读 What will *or you*, oh, *or* marriage be like
-    our 读成 or，中间「哦」了一声想改，改出来还是 or
+    〔小词〕 our 读成 or，中间「哦」了一声想改，改出来还是 or
 
 [磕巴] 五次退回去重来（不计错）
 the constant, *constant* reminders

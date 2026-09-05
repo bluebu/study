@@ -118,60 +118,60 @@ naep: 2
 [比对]
 原文 comfortable for Heidi. *He* made a new
 实读 comfortable for Heidi. *She* made a new
-    96.5 秒。He 读成了 She。这是一句在讲 Uncle Alp，读成 She 整句的人就换了
+    〔小词〕 96.5 秒。He 读成了 She。这是一句在讲 Uncle Alp，读成 She 整句的人就换了
 原文 a new chair *tall* enough for her
 识别成 a new chair *town* enough for her
-    102.5 秒。这个词她试了两遍都没出来（头一遍像 town，退回去重来那遍也不对），
+    〔生词〕 102.5 秒。这个词她试了两遍都没出来（头一遍像 town，退回去重来那遍也不对），
     到底读成了什么得你亲耳听 100–110 秒。计分时按错了 1 处算
 原文 for her to *reach* the table.
 识别成 for her to *bridge* the table.
-    110.3 秒。和上一处在同一次重读里，同样没出来。按错了 1 处算
+    〔生词〕 110.3 秒。和上一处在同一次重读里，同样没出来。按错了 1 处算
 原文 In the afternoon, Peter *came* to return
 实读 In the afternoon, Peter *come* to return
-    114.8 秒。came 读成了 come —— 过去式读回了原形，这一段整段都是过去时
+    〔词尾〕 114.8 秒。came 读成了 come —— 过去式读回了原形，这一段整段都是过去时
 原文 The next morning, Uncle *Alp* told Heidi,
 实读 The next morning, Uncle *up* told Heidi,
-    152.3 秒。Alp 读成了 up。上一次这个名字栽过两回（读成 help），后来读对了三次；
+    〔专名〕 152.3 秒。Alp 读成了 up。上一次这个名字栽过两回（读成 help），后来读对了三次；
     这次头一处（90.7 秒）读对了，第二处又滑了
 原文 They *chatted* about the goats
 实读 They *chat* about the goats
-    169.0 秒。词尾的 -ed 没读出来。**和上一次的 listening 读成 listen 是同一处毛病**
+    〔词尾〕 169.0 秒。词尾的 -ed 没读出来。**和上一次的 listening 读成 listen 是同一处毛病**
 原文 chatted about the *goats* Peter was herding.
 实读 chatted about the *gods* Peter was herding.
-    170.6 秒。goats 读成了 gods —— 长音的 oa 读成了短音的 o
+    〔元音〕 170.6 秒。goats 读成了 gods —— 长音的 oa 读成了短音的 o
 原文 the goats Peter was *herding.* When Heidi
 实读 the goats Peter was *hurting.* When Heidi
-    172.5 秒。herding 读成 hurting，元音换了，意思也换了（放羊变成弄疼）
+    〔元音〕 172.5 秒。herding 读成 hurting，元音换了，意思也换了（放羊变成弄疼）
 原文 found that the *goat* who had lost
 实读 found that the *god* who had lost
-    177.8 秒。**同一个词第二次读成 god**
+    〔元音〕 177.8 秒。**同一个词第二次读成 god**
 原文 the leg of a small *goat* that was
 实读 the leg of a small *ghost* that was
-    206.4 秒。**第三次**，这回读成了 ghost。三处是同一个词、同一个音
+    〔元音〕 206.4 秒。**第三次**，这回读成了 ghost。三处是同一个词、同一个音
 原文 that was about to fall *into* the deep
 实读 that was about to fall *（漏读）* the deep
-    整个词跳过去了。这一句是全篇最长的一句，读到后半截就赶了
+    〔漏读〕 整个词跳过去了。这一句是全篇最长的一句，读到后半截就赶了
 原文 come and help me *save* Finch!" he barked.
 识别成 come and help me *say* Finch!" he barked.
-    223.0 秒。像是把 save 读成了 say，丢了中间那个 v；不过后半句她自己退回去
+    〔辅音〕 223.0 秒。像是把 save 读成了 say，丢了中间那个 v；不过后半句她自己退回去
     重读了一遍并且读对了。按错了 1 处算，具体读成什么值得你亲耳听 222–228 秒
 原文 When can I go outside, *Grandfather*?"
 实读 When can I go outside, *（漏读）* ?"
-    248 秒。句尾那声称呼跳过去了 —— 书上这句正好断在行末，下一行开头又是
+    〔漏读〕 248 秒。句尾那声称呼跳过去了 —— 书上这句正好断在行末，下一行开头又是
     Grandfather，眼睛容易从一个跳到另一个
 原文 and replied, "Not *now,* Heidi. The snow
 实读 and replied, "Not *snow,* Heidi. The snow
-    258.4 秒。now 读成了 snow —— 后面第四个词就是 snow，眼睛跑到前面去了
+    〔词形〕 258.4 秒。now 读成了 snow —— 后面第四个词就是 snow，眼睛跑到前面去了
 原文 But you *can* go soon."
 实读 But you *can't* go soon."
-    265.6 秒。can 读成 can't，意思正好反过来：爷爷说的是「过些天就能去」，
+    〔小词〕 265.6 秒。can 读成 can't，意思正好反过来：爷爷说的是「过些天就能去」，
     读出来变成了「过些天也不能去」
 原文 they got on their *sleds* and slid down
 实读 they got on their *slide* and slid down
-    300.1 秒。sleds（雪橇）读成了 slide
+    〔词形〕 300.1 秒。sleds（雪橇）读成了 slide
 原文 on their sleds and *slid* down the mountain
 实读 on their sleds and *slide* down the mountain
-    303.5 秒。slid 也读成了 slide。**这两个词她读成了同一个音** ——
+    〔词形〕 303.5 秒。slid 也读成了 slide。**这两个词她读成了同一个音** ——
     slide 是"滑"，slid 是它的过去式，sleds 是坐的那个雪橇，三个词长得像、读法不一样
 
 [磕巴] 读了两遍才接上的地方 · 4 处

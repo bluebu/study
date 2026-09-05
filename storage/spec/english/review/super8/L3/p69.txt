@@ -47,25 +47,25 @@ prev: p68
 [比对]
 原文 “to your cruelty?” *she* added
 实读 “to your cruelty?” *he* added
-    she 读成 he。说话的是 Celia，这里是「她」
+    〔小词〕 she 读成 he。说话的是 Celia，这里是「她」
 原文 with a questioning *gaze*
 实读 with a questioning *（一个近似 is 的音）*
-    gaze 前面停了 6.4 秒，最后出来的音机器只听成 is。这个词值得亲耳听 12–14 秒那一段
+    〔生词〕 gaze 前面停了 6.4 秒，最后出来的音机器只听成 is。这个词值得亲耳听 12–14 秒那一段
 原文 He always gave Prince *Darling* *bad* advice
 实读 He always gave Prince *starling* *better* advice
-    Prince 读对了；Darling 少了开头的 D、bad 读成 better。计 2 处
+    〔专名〕〔元音〕 Prince 读对了；Darling 少了开头的 D、bad 读成 better。计 2 处
 原文 his *foster-brother* asked him
 实读 his *first brother, first brother* asked him
-    foster 读成 first，读了两遍都是 first
+    〔元音〕 foster 读成 first，读了两遍都是 first
 原文 was. *Prince Darling explained* that he could not bear
 实读 was. *press, starting, is, exclaimed* that he could not bear
-    这三个词整段散了。Prince Darling 这个名字同一页前面刚读对过一次。计 3 处
+    〔专名×2〕〔词形〕 这三个词整段散了。Prince Darling 这个名字同一页前面刚读对过一次。计 3 处
 原文 could not bear *Celia's* opinion of him
 实读 could not bear *the flesh* opinion of him
-    Celia's 读成了 the flesh。紧接着就是那 16 秒的回读
+    〔专名〕 Celia's 读成了 the flesh。紧接着就是那 16 秒的回读
 原文 if she still *refuses* to marry you
 实读 if she still *refused* to marry you
-    词尾的 -s 读成了 -d
+    〔词尾〕 词尾的 -s 读成了 -d
 
 [磕巴] 四次退回去重来（不计错）
 *To*, *to your* cruelty

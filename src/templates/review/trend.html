@@ -24,6 +24,37 @@
     {{ wcpm_svg|indent(4)|safe }}
   </section>
 
+{% if errs %}
+  <section class="chart">
+    <h2>先解决这三个</h2>
+    <p class="note">按<b>最近 {{ errs.days }} 次</b>还在犯的排，不按累计 ——
+      已经改掉的毛病不该再占位置。这三条加起来是近期 {{ errs.covered }}/{{ errs.rtotal }} 处错，
+      占 {{ errs.covered_pct }}%。</p>
+    <ol class="top3">
+{% for t in errs.top %}
+      <li>
+        <div class="t3h"><span class="t3k">{{ t.kind }}</span><span class="t3n">近 {{ errs.days }} 次 {{ t.rn }} 处</span>{% if t.trend == 'up' %}<span class="t3t up">还在涨</span>{% elif t.trend == 'down' %}<span class="t3t down">在收敛</span>{% endif %}</div>
+        <p class="t3how">{{ t.how }}</p>
+{% if t.repeat %}
+        <p class="t3w">反复栽的：{% for r in t.repeat %}<code>{{ r.w }}</code>×{{ r.n }}{% if not loop.last %} · {% endif %}{% endfor %}</p>
+{% endif %}
+      </li>
+{% endfor %}
+    </ol>
+  </section>
+
+  <section class="chart">
+    <h2>错在哪一类</h2>
+    <p class="note">全部 {{ errs.total }} 处错按类型分。灰条是累计，深色是最近 {{ errs.days }} 次 ——
+      深色比灰条长就是这一类还在涨。</p>
+    <ul class="kinds">
+{% for k in errs.kinds %}
+      <li><span class="kn">{{ k.kind }}</span><span class="kbar"><i style="width:{{ k.pct }}%"></i><b style="width:{{ (k.rshare / k.share * k.pct) | round | int if k.share else 0 }}%"></b></span><span class="kv">{{ k.n }} 处 · {{ k.share }}%</span></li>
+{% endfor %}
+    </ul>
+  </section>
+{% endif %}
+
   <section class="chart">
     <h2>全部数据</h2>
     <div class="scroll">

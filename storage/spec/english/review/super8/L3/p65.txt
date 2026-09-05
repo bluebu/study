@@ -33,22 +33,22 @@ naep: 2
 [比对]
 原文 for his *faults*
 实读 for his *fault*
-    词尾 -s 没出来
+    〔词尾〕 词尾 -s 没出来
 原文 a bad deed, *it will prick* your finger
 实读 a bad deed, *if* it will prick your finger
-    多冒出一个 if — 眼睛提前跳到了下一行行末的 If（25.2s 处连着三次半秒停顿）
+    〔词形〕 多冒出一个 if — 眼睛提前跳到了下一行行末的 If（25.2s 处连着三次半秒停顿）
 原文 in spite of its *pricking*
 实读 in spite of its *breaking*
-    前一句刚读对 prick，这里换了个词 — 大概率是看走眼或音没咬准
+    〔词形〕 前一句刚读对 prick，这里换了个词 — 大概率是看走眼或音没咬准
 原文 After *these words*
 实读 After *this word*
-    指示词和复数一起丢了，和第 1 处是同一个毛病
+    〔词尾〕 指示词和复数一起丢了，和第 1 处是同一个毛病
 原文 He had *gone back* to
 实读 He had gone *out*, gone*…* back to
-    全段最大一次卡壳：67.9–71.7 秒之间静了 3.4 秒，退回去重读了一遍
+    〔－〕 全段最大一次卡壳：67.9–71.7 秒之间静了 3.4 秒，退回去重读了一遍
 原文 the *hunting* ground
 实读 the *honking* ground
-    hunting 的 /ʌ/ 读成了 /ɒ/ — 同一句前面的 hunting 是读对的
+    〔元音〕 hunting 的 /ʌ/ 读成了 /ɒ/ — 同一句前面的 hunting 是读对的
 
 [亮点]
 第二句 **一字不差**：“Take great care of this ring,” she said. “It is more precious than diamonds.”

@@ -44,16 +44,16 @@ prev: p65, p66
 [比对]
 原文 who always *spoiled* him
 实读 who always *spelled* him
-    spoiled 读成了 spelled — 词形看岔了
+    〔词形〕 spoiled 读成了 spelled — 词形看岔了
 原文 unhappy to have *to* struggle
 实读 unhappy to have *the* struggle
-    连着两个 to，第二个读成了 the
+    〔小词〕 连着两个 to，第二个读成了 the
 原文 punished for *them* when I was little
 实读 punished for *（跳过）* when I was little
-    这里先卡了 2.2 秒，然后把 them 整个略过去了
+    〔漏读〕 这里先卡了 2.2 秒，然后把 them 整个略过去了
 原文 “…every day,” *he thought* to himself
 识别成 *Kiss out* to himself
-    **这处没听清**，thought 的开头音大概率没咬住，
+    〔生词〕 **这处没听清**，thought 的开头音大概率没咬住，
     但具体读成了什么，得你亲耳听 44–47 秒这一段。计分时按错了 1 处算；
     如果其实读对了，准确率是 96.1%。
 

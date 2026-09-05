@@ -61,6 +61,7 @@ import figures  # noqa: E402
 SPECS = paths.spec("english", "review")
 DATA = paths.data("english", "review")
 RESULT = paths.result("english", "review.csv")
+ERRORS_RESULT = paths.result("english", "review-errors.csv")
 
 # 内容分类 → 色板变量名。顺序就是目录页的分组顺序。
 # 和老站 CAT_ORDER / CAT_COLOR 一致，但那边在两个脚本里各存了一份、
@@ -75,6 +76,20 @@ CAT_FALLBACK = "drill"          # 没列到的新分类先用紫
 
 # 四个维度的满分。总分 100 = 30 + 30 + 25 + 15
 DIMENSIONS = [("准确度", 30), ("流利度", 30), ("断句语调", 25), ("发音", 15)]
+
+# 错误的八类 + 每类对应的练法。**分类是给「怎么练」用的，不是给归档用的** ——
+# 每一类都要能落到一句具体的练习话上，落不到的就不该单独成一类。
+# 这八类是从头 159 处错的定性文字里归纳出来的，不是先拍脑袋定表再往里塞。
+ERROR_KINDS: dict[str, str] = {
+    "元音":  "把这几个词摆成最小对立对，挨着念听中间那个音",
+    "辅音":  "对着镜子看口型，th / v / w 各念十遍",
+    "词尾":  "每句最后一个词多含半拍再往下读",
+    "小词":  "a / the / to 这类词慢下来看清再读",
+    "词形":  "开读之前先用眼睛把整句扫一遍",
+    "生词":  "开读之前先把长词拆成音节念两遍",
+    "专名":  "人名地名单独拎出来念熟，再放回句子里",
+    "漏读":  "手指指着词读，读到哪儿指到哪儿",
+}
 
 
 # ══════════════════════════════════════════════════════════════
@@ -149,6 +164,43 @@ class Report:
         # 几个词一停：全段词数 ÷ 停顿次数。老站三份报告都是这么算的
         self.per_group = round(self.words / self.pause_count, 1) if self.pause_count else 0
 
+        # ── [比对] 每条计错条目开头的类型标签：[元音] / [词尾] / [专名×2] / [－]
+        #
+        # 用〔〕不用 []：`lib/spec.py` 的区块头正则是 `\s*\[([^\]]+)\]`，**允许前导空白**，
+        # 缩进行写成 `    [元音] …` 会被当成一个新区块、整个 [比对] 从那儿断掉
+        # （踩过：p65 的 lines 只剩 2 行）。标签**不印进正文** —— 它是字段不是话。
+        # 八类是从头 159 条定性文字里归纳出来的，每一类对应一个明确的练法
+        # （元音→最小对立对、词尾→句尾多含半拍、词形→开读前扫一遍……）。
+        # 分类只有人做得了：「hut 读成 heart」是元音、「visit 读成 wait」是看岔词形，
+        # 机器的 category 分不出这一层（它只到「实词/小词/词尾」）。
+        # `[－]` = 这条列出来但不计错（读多了自己退回去重来那种）。
+        self.errors_by_kind: dict[str, int] = {}
+        self.error_words: list[tuple[str, str]] = []      # (原文词, 类型)
+        if "比对" in self.blocks:
+            ref_word = None
+            for line in self.blocks["比对"].lines:
+                if line.startswith("原文 "):
+                    m = re.search(r"\*(.+?)\*", line)
+                    ref_word = m.group(1) if m else None
+                elif line.startswith(("实读 ", "识别成 ")):
+                    pass
+                elif line.startswith("    "):
+                    for tag in re.findall(r"〔([^〔〕]+?)〕", line.strip()[:40]):
+                        if tag == "－":
+                            continue
+                        name, _, mult = tag.partition("×")
+                        if name not in ERROR_KINDS:
+                            continue
+                        n = int(mult) if mult.isdigit() else 1
+                        self.errors_by_kind[name] = self.errors_by_kind.get(name, 0) + n
+                        for _ in range(n):
+                            self.error_words.append(((ref_word or "?").strip("\"'“”.,!?;:"), name))
+                    ref_word = None
+            # 剥掉标签，报告正文只出「hut 读成 heart」，不出「〔元音〕」
+            self.blocks["比对"].lines = [
+                re.sub(r"^(\s+)(?:〔[^〔〕]+〕)+\s*", r"\1", ln)
+                for ln in self.blocks["比对"].lines]
+
         self.score = sp.int_("score", 0)
         self.naep = sp.int_("naep", 2)
         self.cat = sp.get("cat", "超8")
@@ -184,6 +236,18 @@ class Report:
             if total != self.score:
                 spec_lib.die(f"{name}: [评分] 四维之和是 {total}，score 写的是 {self.score} —— "
                              f"对不上。报告上大数字印 score、分数条印四维，两处会互相打架")
+
+        # ② 类型标签之和 == errors
+        # [比对] 的**条数**不等于 errors 是正常的（见下面那段），但**标签数**必须相等：
+        # 一条含两处错就写 [专名×2]，不计错的写 [－]。对不上就是漏标或标重了 ——
+        # 趋势页的分类统计和 Top3 全靠这些标签，漏一个就少算一处。
+        tagged = sum(self.errors_by_kind.values())
+        if "比对" in self.blocks and tagged != self.errors:
+            spec_lib.die(
+                f"{name}: [比对] 的类型标签加起来 {tagged} 处，errors 写的是 {self.errors} —— "
+                f"对不上。每条计错的说明行开头要有〔类型〕（八类：{'/'.join(ERROR_KINDS)}），"
+                f"一条含两处写〔类型×2〕，列出来但不计错的写〔－〕。"
+                f"**用〔〕不用 []** —— 方括号会被当成新区块，整个 [比对] 从那儿断掉")
 
         # 想过再加一条「[比对] 的条数 == errors」，**撤了**：这两个数本来就不相等，
         # 口径允许两个方向都差（一条含两处错 → errors 多；回读或课本印错写「实读」
@@ -1108,6 +1172,22 @@ def write_result(reports: list[Report]) -> None:
                         r.score, r.naep])
     print(f"    → result/english/review.csv  （{len(reports)} 行）")
 
+    # 错误明细：一行一处错。趋势页的分类统计和 Top3 从这儿读回来。
+    #
+    # **为什么另出一张表、不在 review.csv 上加八列**：Top3 要按「哪个词反复栽」排，
+    # 那是词级的，八个计数列装不下。一行一处错既能按类型汇总、也能按词汇总，
+    # 而且它和 review.csv 一样是**可再生**的 —— 全量重算覆盖。
+    ERRORS_RESULT.parent.mkdir(parents=True, exist_ok=True)
+    rows = 0
+    with ERRORS_RESULT.open("w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f, lineterminator="\n")
+        w.writerow(["slug", "date", "book", "word", "kind"])
+        for r in sorted(reports, key=lambda x: (x.date, x.order)):
+            for word, kind in r.error_words:
+                w.writerow([r.slug, r.date, r.spec.get("book", ""), word, kind])
+                rows += 1
+    print(f"    → result/english/review-errors.csv  （{rows} 处错）")
+
 
 def read_result() -> list[dict]:
     """读回 result 表。缺文件当空 —— 和 data 那几个可选文件一个口径。"""
@@ -1115,6 +1195,65 @@ def read_result() -> list[dict]:
         return []
     with RESULT.open(encoding="utf-8") as f:
         return list(csv.DictReader(f))
+
+
+def error_stats(limit_recent: int = 3) -> dict | None:
+    """错误按类型汇总 + Top3「练哪个最划算」。数据从 review-errors.csv 读回来。
+
+    **Top3 按「最近几次」排，不按全期。** 要治的是她现在还在犯的毛病 ——
+    专名那一类全期 8 处（4.8%），但最近三次只剩 1 处：Alp 早就读对了，
+    再把它排进 Top3 就是让人去练一个已经解决的问题。
+    近期和全期各自的占比都印出来，涨还是收敛一眼能看见。
+
+    每条 Top 还点名这一类里**反复栽的那几个词** —— 「元音 18 处」是问题的大小，
+    「hut 四次全读成 heart」才是下手的地方。
+    """
+    if not ERRORS_RESULT.exists():
+        return None
+    rows = list(csv.DictReader(ERRORS_RESULT.open(encoding="utf-8")))
+    if not rows:
+        return None
+
+    dates = sorted({r["date"] for r in rows})
+    recent = set(dates[-limit_recent:])
+    rec_rows = [r for r in rows if r["date"] in recent]
+
+    def tally(src: list[dict]) -> dict[str, int]:
+        out: dict[str, int] = {}
+        for r in src:
+            out[r["kind"]] = out.get(r["kind"], 0) + 1
+        return out
+
+    all_n, rec_n = tally(rows), tally(rec_rows)
+    total, rtotal = len(rows), max(len(rec_rows), 1)
+
+    kinds = []
+    for kind in sorted(all_n, key=lambda k: -all_n[k]):
+        share, rshare = all_n[kind] / total * 100, rec_n.get(kind, 0) / rtotal * 100
+        kinds.append({
+            "kind": kind, "n": all_n[kind], "share": round(share, 1),
+            "rn": rec_n.get(kind, 0), "rshare": round(rshare, 1),
+            # ±3 个百分点以内算持平：11 次朗读、166 处错，比这更小的差是噪音
+            "trend": "up" if rshare > share + 3 else "down" if rshare < share - 3 else "flat",
+            "pct": round(all_n[kind] / max(all_n.values()) * 100),
+        })
+
+    top = []
+    for k in sorted(kinds, key=lambda x: (-x["rn"], -x["n"]))[:3]:
+        # 这一类里反复栽的词：同一个词栽两次以上，那是最省力的下手处
+        words: dict[str, int] = {}
+        for r in rows:
+            if r["kind"] == k["kind"]:
+                w = r["word"].lower().rstrip(".,!?\"'")
+                words[w] = words.get(w, 0) + 1
+        repeat = sorted((w for w in words.items() if w[1] >= 2), key=lambda x: -x[1])[:4]
+        top.append({**k, "how": ERROR_KINDS.get(k["kind"], ""),
+                    "repeat": [{"w": w, "n": n} for w, n in repeat]})
+
+    return {"total": total, "rtotal": len(rec_rows), "days": len(recent),
+            "kinds": kinds, "top": top,
+            "covered": sum(x["rn"] for x in top),
+            "covered_pct": round(sum(x["rn"] for x in top) / rtotal * 100)}
 
 
 def build_trend(out_dir: Path) -> bool:
@@ -1146,6 +1285,7 @@ def build_trend(out_dir: Path) -> bool:
         n=len(rows),
         accuracy_svg=figures.trend_svg(acc, 86, 100, (90, 95, 98), "准确率 %"),
         wcpm_svg=figures.trend_svg(wcpm, 0, 100, (0, 50, 100), "WCPM", "var(--c-listen)"),
+        errs=error_stats(),
         rows=[{**r,
                "date": short_date(r["date"]),
                # 表里只留「课/页」，全 slug 在 390px 上放不下

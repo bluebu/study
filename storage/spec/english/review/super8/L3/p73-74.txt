@@ -85,47 +85,47 @@ prev: p70-72
 [比对]
 原文 *torturing* his people was found
 实读 *torting* his people was found
-    2.6 秒。开头第一个词，读成 torting，**紧接着又读了一遍还是 torting** ——
+    〔生词〕 2.6 秒。开头第一个词，读成 torting，**紧接着又读了一遍还是 torting** ——
     两遍都没读对
 原文 struck down by *a* thunderbolt
 实读 struck down by *the* thunderbolt
-    a 读成 the
+    〔小词〕 a 读成 the
 原文 prince had put *into* prison
 实读 prince had put *in* prison
-    into 读成 in
+    〔小词〕 into 读成 in
 原文 him return becoming *as* good a king
 实读 him return becoming *a* good a king
-    as 读成 a
+    〔小词〕 as 读成 a
 原文 once was The *hunters* who had caught
 实读 once was The *hunter* who had caught
-    复数的 -s 没读出来
+    〔词尾〕 复数的 -s 没读出来
 原文 hunters who had *caught* him took him
 实读 hunters who had *called* him took him
-    caught 读成了 called
+    〔词形〕 caught 读成了 called
 原文 him took him *to* a place where
 实读 him took him *in* a place where
-    to 读成 in
+    〔小词〕 to 读成 in
 原文 all the other *wild* beasts
 实读 all the other *（漏读）* beasts
-    wild 整个跳过去了
+    〔漏读〕 wild 整个跳过去了
 原文 the other wild *beasts* The prince
 实读 the other wild *beast* The prince
-    又一处复数的 -s。这一页两个复数都栽在词尾
+    〔词尾〕 又一处复数的 -s。这一页两个复数都栽在词尾
 原文 the caretaker was *asleep* a tiger
 实读 the caretaker was *sleep* a tiger
-    asleep 读成 sleep，开头的 a- 丢了
+    〔词形〕 asleep 读成 sleep，开头的 a- 丢了
 原文 a tiger broke *off* its chain
 实读 a tiger broke *of* its chain
-    off 读成 of
+    〔小词〕 off 读成 of
 原文 Prince Darling who *saw* what was going
 实读 Prince Darling who *was* what was going
-    saw 读成 was。这一句前面正好停了 5.7 秒
+    〔词形〕 saw 读成 was。这一句前面正好停了 5.7 秒
 原文 think that the *mean* caretaker deserved
 实读 think that the *main* caretaker deserved
-    mean 读成了 main，元音换了
+    〔元音〕 mean 读成了 main，元音换了
 原文 deserved this but *upon* reflection
 实读 deserved this but *um* reflection
-    upon 没读出来，出来的是一声「um」
+    〔生词〕 upon 没读出来，出来的是一声「um」
 
 [磕巴] 读了两遍才接上的地方 · 4 处
 *torting*, torturing his people was

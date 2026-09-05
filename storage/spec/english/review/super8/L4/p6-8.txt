@@ -112,58 +112,58 @@ naep: 2
 [比对]
 原文 was her five-year-old *niece* a girl with
 实读 was her five-year-old *nice* a girl with
-    17.0 秒。niece 读成了 nice，元音换了
+    〔元音〕 17.0 秒。niece 读成了 nice，元音换了
 原文 girl with black *curly* hair named Heidi
 实读 girl with black *crowly* hair named Heidi
-    20.8 秒。curly（卷发那个词）没读准
+    〔生词〕 20.8 秒。curly（卷发那个词）没读准
 原文 the girl my *late* sister left behind
 实读 the girl my *last* sister left behind
-    31.0 秒。late 读成 last
+    〔元音〕 31.0 秒。late 读成 last
 原文 her to Uncle *Alp* so he can
 实读 her to Uncle *help* so he can
-    43.0 秒。Uncle Alp 的 Alp 读成了 help
+    〔专名〕 43.0 秒。Uncle Alp 的 Alp 读成了 help
 原文 tales about Uncle *Alp* a grumpy old
 实读 tales about Uncle *help* a grumpy old
-    72.5 秒。同一个名字第二次还是 help —— 不过从第 8 页起她就读对了，三次都对
+    〔专名〕 72.5 秒。同一个名字第二次还是 help —— 不过从第 8 页起她就读对了，三次都对
 原文 behaved with bad *manners* and scared people
 实读 behaved with bad *meaners* and scared people
-    83.9 秒。manners 的元音读长了
+    〔元音〕 83.9 秒。manners 的元音读长了
 原文 and scared people *off* with his horrifying
 实读 and scared people *of* with his horrifying
-    88.0 秒。off 读成 of。**上一次也栽在这同一个词上**
+    〔小词〕 88.0 秒。off 读成 of。**上一次也栽在这同一个词上**
 原文 people off with his *horrifying* expressions She
 实读 people off with his *（没读出来）* expressions She
-    96.2 秒。卡了 7 秒多，试了两遍都没出来，跳过去接着读了 expressions
+    〔生词〕 96.2 秒。卡了 7 秒多，试了两遍都没出来，跳过去接着读了 expressions
 原文 expressions She was *anxious* to find out
 实读 expressions She was *（没读出来）* to find out
-    113.8 秒。又卡了 7 秒多，出来的是三声「a」，然后接着读 to find out
+    〔生词〕 113.8 秒。又卡了 7 秒多，出来的是三声「a」，然后接着读 to find out
 原文 But alas Tobias *died* only after two
 实读 But alas Tobias *said* only after two
-    159.5 秒。died 读成 said
+    〔词形〕 159.5 秒。died 读成 said
 原文 Tobias died only *after* two years in
 实读 Tobias died only *（漏读）* two years in
-    after 整个跳过去了
+    〔漏读〕 after 整个跳过去了
 原文 not long after out of *grief*
 实读 not long after out of *breath*
-    187.0 秒。out of grief 读成了 out of breath —— 后面那个短语常见得多，顺口就滑过去了
+    〔词形〕 187.0 秒。out of grief 读成了 out of breath —— 后面那个短语常见得多，顺口就滑过去了
 原文 reached Uncle Alp's *hut* which overlooked the
 实读 reached Uncle Alp's *heart* which overlooked the
-    194.2 秒。hut 读成 heart
+    〔元音〕 194.2 秒。hut 读成 heart
 原文 which overlooked the *valley* below
 实读 which overlooked the *volley* below
-    199.1 秒。valley 读成 volley。这一句的最后一个词 below 在黑线外面，她也读了
+    〔元音〕 199.1 秒。valley 读成 volley。这一句的最后一个词 below 在黑线外面，她也读了
 原文 Uncle Alp was *sitting* outside on a
 实读 Uncle Alp was *setting* outside on a
-    203.6 秒。sitting 读成 setting
+    〔元音〕 203.6 秒。sitting 读成 setting
 原文 on a wooden *seat* when Heidi ran
 实读 on a wooden *set* when Heidi ran
-    207.2 秒。seat 读成 set。**和上一行是同一类** —— 都是把长元音读短了
+    〔元音〕 207.2 秒。seat 读成 set。**和上一行是同一类** —— 都是把长元音读短了
 原文 confused until Detie *explained* everything to him
 实读 confused until Detie *exclaimed* everything to him
-    221.3 秒。explained 读成 exclaimed，两个词只差中间一小截
+    〔词形〕 221.3 秒。explained 读成 exclaimed，两个词只差中间一小截
 原文 And then without *listening* to any more
 实读 And then without *listen* to any more
-    229.3 秒。词尾的 -ing 没读出来
+    〔词尾〕 229.3 秒。词尾的 -ing 没读出来
 
 [磕巴] 读了两遍才接上的地方 · 1 处
 *long*, long after out of
