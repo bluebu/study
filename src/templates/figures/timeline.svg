@@ -18,7 +18,9 @@
     （生词表那段一个词一停，条子挨得比字还密）。描边是为了压住底下的花色。 -#}
 {% for s in skips %}
   <rect x="{{ s.x }}" y="{{ TOP }}" width="{{ s.w }}" height="{{ H }}" fill="var(--tl-skip)" opacity="0.55"/>
+{% if s.label %}
   <text x="{{ s.mid }}" y="{{ s.ty }}" font-size="15" font-weight="700" text-anchor="middle" fill="#fff" stroke="var(--tl-skip)" stroke-width="3" paint-order="stroke">{{ s.label }}</text>
+{% endif %}
 {% endfor %}
   <rect x="0" y="{{ TOP }}" width="{{ W }}" height="{{ H }}" rx="8" fill="none" stroke="var(--line)" stroke-width="1.5"/>
 {% for t in ticks %}

@@ -601,7 +601,12 @@ def timeline(r: Report) -> dict:
             stalls.append((float(a), float(bnd), label))
 
     svg, counts = figures.timeline_svg(r.acoustics, bounds, stalls, r.skips)
+    # 图下面那段话 = [卡壳] 的说明 + [跳过] 的说明。灰带只有宽的那几条印得下标签
+    # （见 figures.timeline_svg），窄的那几条全靠这段话交代 —— 以前 [跳过] 的
+    # 缩进行写了没人看得见，白写
     note = joined(r.blocks["卡壳"].notes()) if "卡壳" in r.blocks else ""
+    if "跳过" in r.blocks:
+        note = "\n".join(x for x in (note, joined(r.blocks["跳过"].notes())) if x)
     # 图画的是**整段录音**（raw_duration），[跳过] 那几段涂灰；
     # 上面「四个数字」里的秒数和 WCPM 用的是扣完的 r.duration。两个数不一样是对的。
     return {"seconds": round(r.raw_duration), "svg": svg, "counts": counts,

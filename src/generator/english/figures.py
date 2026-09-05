@@ -141,9 +141,23 @@ def timeline_svg(data, bounds, stalls, skips=()):
                        # 最窄 1.4：再细就看不见了，一次歇气该在图上留下痕迹
                        "w": max(x(p["end"]) - x(p["start"]), 1.4)})
 
-    bands = [{"x": x(a), "w": max(x(b) - x(a), 1.4), "mid": round((x(a) + x(b)) / 2, 2),
-              "ty": TOP + H / 2 + 5, "label": label}
-             for a, b, label in skips]
+    # 跳过段的标签画在灰带里面，**放不下就不画字**，灰带照画、说明留给图下面那段话。
+    # 两条判据都是量出来的：
+    #   · 标签比灰带宽是常态（8/29 那段 87 单位宽、标签 120），两边各溢出一点还看得出
+    #     是在说这一片；但 9/5 那段只有 29 单位、标签还是 120，字整个糊到两边正在读的
+    #     部分上去，看着像那一整片都不算数。界线取「标签不超过灰带的两倍宽」。
+    #   · 挨太近的后一个让位 —— 9/5 的 100.8-109.6 和 123.8-142.8 只隔 14 秒，
+    #     两个「读了没划线的一段」叠成了一团看不清的字。
+    bands, right = [], -1e9
+    for a, b, label in skips:
+        x1, x2 = x(a), x(b)
+        half = sum(15.0 if ord(c) > 0x2E80 else 8.0 for c in label) / 2
+        mid = (x1 + x2) / 2
+        fits = half <= x2 - x1 and mid - half > right
+        if fits:
+            right = mid + half
+        bands.append({"x": x1, "w": max(x2 - x1, 1.4), "mid": round(mid, 2),
+                      "ty": TOP + H / 2 + 5, "label": label if fits else ""})
 
     step = 10 if D <= 120 else 20 if D <= 300 else 60   # 长录音刻度放宽，否则末尾两个标签会叠在一起
     tk = list(range(0, int(D) + 1, step))

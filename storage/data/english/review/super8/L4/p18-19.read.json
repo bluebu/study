@@ -966,8 +966,8 @@
     "threshold_db" : -29.6
   },
   "alignment" : {
-    "accuracy" : 79.5,
-    "correctWordCount" : 140,
+    "accuracy" : 79.7,
+    "correctWordCount" : 145,
     "diffs" : [
       {
         "category" : "properNoun",
@@ -1258,82 +1258,18 @@
         "why" : "实词换了词，是这一页真正要练的地方"
       },
       {
-        "category" : "extra",
-        "confidence" : 0.937,
-        "context" : "and it did and waited and finally",
-        "end" : 87.54,
-        "kind" : "insert",
-        "label" : "多读",
-        "read" : "the",
-        "refIndex" : 108,
-        "start" : 82.86,
-        "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
-      },
-      {
-        "category" : "extra",
-        "confidence" : 0.961,
-        "context" : "and it did and waited and finally",
-        "end" : 87.9,
-        "kind" : "insert",
-        "label" : "多读",
-        "read" : "doctor",
-        "refIndex" : 108,
-        "start" : 87.54,
-        "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
-      },
-      {
-        "category" : "extra",
-        "confidence" : 0.964,
-        "context" : "and it did and waited and finally",
-        "end" : 88.5,
-        "kind" : "insert",
-        "label" : "多读",
-        "read" : "and",
-        "refIndex" : 108,
-        "start" : 87.9,
-        "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
-      },
-      {
-        "category" : "extra",
-        "confidence" : 0.798,
-        "context" : "and it did and waited and finally",
-        "end" : 90.3,
-        "kind" : "insert",
-        "label" : "多读",
-        "read" : "mr",
-        "refIndex" : 108,
-        "start" : 88.5,
-        "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
-      },
-      {
-        "category" : "extra",
+        "category" : "refTypo",
         "confidence" : 0.686,
-        "context" : "and it did and waited and finally",
+        "context" : "doctor and mr sesemann waited and waited",
         "end" : 91.08,
-        "kind" : "insert",
-        "label" : "多读",
+        "kind" : "substitute",
+        "label" : "原文可疑",
         "read" : "sessman",
-        "refIndex" : 108,
+        "ref" : "sesemann",
+        "refIndex" : 112,
         "start" : 90.3,
         "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
-      },
-      {
-        "category" : "extra",
-        "confidence" : 0.979,
-        "context" : "and it did and waited and finally",
-        "end" : 91.74,
-        "kind" : "insert",
-        "label" : "多读",
-        "read" : "waited",
-        "refIndex" : 108,
-        "start" : 91.08,
-        "suggest" : "skip",
-        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+        "why" : "`.ref.txt` 里是「Sesemann」，扫图时就标了认得可疑 —— **多半是扫描认错**，去 marked.png 上核一眼。她读的是「sessman」"
       },
       {
         "category" : "content",
@@ -1344,7 +1280,7 @@
         "label" : "实词",
         "read" : "found",
         "ref" : "finally",
-        "refIndex" : 111,
+        "refIndex" : 117,
         "start" : 93.48,
         "suggest" : "count",
         "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.12 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -1357,7 +1293,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "heavy",
-        "refIndex" : 117,
+        "refIndex" : 123,
         "start" : 100.08,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.17 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -1370,7 +1306,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "doctor",
-        "refIndex" : 117,
+        "refIndex" : 123,
         "start" : 100.8,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1383,7 +1319,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "plaster",
-        "refIndex" : 117,
+        "refIndex" : 123,
         "start" : 101.82,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.22 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -1396,7 +1332,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "called",
-        "refIndex" : 117,
+        "refIndex" : 123,
         "start" : 103.74,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1409,7 +1345,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "out",
-        "refIndex" : 117,
+        "refIndex" : 123,
         "start" : 104.34,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1422,7 +1358,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "to",
-        "refIndex" : 117,
+        "refIndex" : 123,
         "start" : 104.76,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1435,7 +1371,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "her",
-        "refIndex" : 117,
+        "refIndex" : 123,
         "start" : 105.18,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1448,7 +1384,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "but",
-        "refIndex" : 117,
+        "refIndex" : 123,
         "start" : 105.54,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1461,7 +1397,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "it's",
-        "refIndex" : 117,
+        "refIndex" : 123,
         "start" : 107.1,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1474,7 +1410,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "surprised",
-        "refIndex" : 117,
+        "refIndex" : 123,
         "start" : 107.82,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1488,7 +1424,7 @@
         "label" : "专名",
         "read" : "heavy",
         "ref" : "heidi",
-        "refIndex" : 117,
+        "refIndex" : 123,
         "start" : 108.66,
         "suggest" : "unsure",
         "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑"
@@ -1501,7 +1437,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "too",
-        "refIndex" : 128,
+        "refIndex" : 134,
         "start" : 120.54,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.34 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -1514,7 +1450,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "is",
-        "refIndex" : 128,
+        "refIndex" : 134,
         "start" : 120.96,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -1527,7 +1463,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "the",
-        "refIndex" : 128,
+        "refIndex" : 134,
         "start" : 121.62,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1540,7 +1476,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "sadness",
-        "refIndex" : 128,
+        "refIndex" : 134,
         "start" : 122.94,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1553,7 +1489,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "no",
-        "refIndex" : 128,
+        "refIndex" : 134,
         "start" : 123.84,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1566,7 +1502,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "i'm",
-        "refIndex" : 128,
+        "refIndex" : 134,
         "start" : 124.5,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1579,7 +1515,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "not",
-        "refIndex" : 128,
+        "refIndex" : 134,
         "start" : 124.8,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1592,7 +1528,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "allowed",
-        "refIndex" : 128,
+        "refIndex" : 134,
         "start" : 124.98,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1605,7 +1541,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "have",
-        "refIndex" : 129,
+        "refIndex" : 135,
         "start" : 126.18,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.24 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -1619,7 +1555,7 @@
         "label" : "转写乱段",
         "read" : "had",
         "ref" : "ease",
-        "refIndex" : 129,
+        "refIndex" : 135,
         "start" : 127.08,
         "suggest" : "unsure",
         "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.30 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -1632,7 +1568,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "exclaim",
-        "refIndex" : 131,
+        "refIndex" : 137,
         "start" : 128.22,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1645,7 +1581,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "if",
-        "refIndex" : 131,
+        "refIndex" : 137,
         "start" : 130.86,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1658,7 +1594,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "i",
-        "refIndex" : 131,
+        "refIndex" : 137,
         "start" : 133.38,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1671,7 +1607,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "ever",
-        "refIndex" : 131,
+        "refIndex" : 137,
         "start" : 133.68,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1684,7 +1620,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "cried",
-        "refIndex" : 131,
+        "refIndex" : 137,
         "start" : 134.58,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1697,7 +1633,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "miss",
-        "refIndex" : 131,
+        "refIndex" : 137,
         "start" : 135.6,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1710,7 +1646,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "rotten",
-        "refIndex" : 131,
+        "refIndex" : 137,
         "start" : 136.44,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -1723,7 +1659,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "mail",
-        "refIndex" : 131,
+        "refIndex" : 137,
         "start" : 138.48,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.07 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -1736,7 +1672,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "would",
-        "refIndex" : 131,
+        "refIndex" : 137,
         "start" : 138.96,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1749,7 +1685,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "take",
-        "refIndex" : 131,
+        "refIndex" : 137,
         "start" : 139.38,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1762,7 +1698,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "her",
-        "refIndex" : 131,
+        "refIndex" : 137,
         "start" : 139.68,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.27 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -1775,7 +1711,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "away",
-        "refIndex" : 131,
+        "refIndex" : 137,
         "start" : 140.52,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1788,7 +1724,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "my",
-        "refIndex" : 131,
+        "refIndex" : 137,
         "start" : 142.14,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1802,7 +1738,7 @@
         "label" : "转写乱段",
         "read" : "book",
         "ref" : "sadness",
-        "refIndex" : 131,
+        "refIndex" : 137,
         "start" : 142.32,
         "suggest" : "unsure",
         "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
@@ -1815,7 +1751,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "doctor's",
-        "refIndex" : 133,
+        "refIndex" : 139,
         "start" : 143.64,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -1828,7 +1764,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "sketchy",
-        "refIndex" : 133,
+        "refIndex" : 139,
         "start" : 144.66,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.20 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -1842,7 +1778,7 @@
         "label" : "转写乱段",
         "read" : "suggested",
         "ref" : "doctor",
-        "refIndex" : 133,
+        "refIndex" : 139,
         "start" : 146.34,
         "suggest" : "unsure",
         "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.27 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -1855,7 +1791,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "had",
-        "refIndex" : 135,
+        "refIndex" : 141,
         "start" : 148.56,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.31 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -1869,7 +1805,7 @@
         "label" : "转写乱段",
         "read" : "you",
         "ref" : "heidi",
-        "refIndex" : 135,
+        "refIndex" : 141,
         "start" : 149.34,
         "suggest" : "unsure",
         "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
@@ -1882,7 +1818,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "good",
-        "refIndex" : 138,
+        "refIndex" : 144,
         "start" : 150.3,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.18 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -1895,7 +1831,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "try",
-        "refIndex" : 139,
+        "refIndex" : 145,
         "start" : 151.08,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.20 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -1909,7 +1845,7 @@
         "label" : "转写乱段",
         "read" : "that's",
         "ref" : "that",
-        "refIndex" : 140,
+        "refIndex" : 146,
         "start" : 152.58,
         "suggest" : "unsure",
         "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
@@ -1923,7 +1859,7 @@
         "label" : "转写乱段",
         "read" : "grown",
         "ref" : "girl",
-        "refIndex" : 141,
+        "refIndex" : 147,
         "start" : 153.54,
         "suggest" : "unsure",
         "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
@@ -1937,7 +1873,7 @@
         "label" : "转写乱段",
         "read" : "need",
         "ref" : "needs",
-        "refIndex" : 142,
+        "refIndex" : 148,
         "start" : 153.96,
         "suggest" : "unsure",
         "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
@@ -1951,7 +1887,7 @@
         "label" : "实词",
         "read" : "curled",
         "ref" : "cured",
-        "refIndex" : 148,
+        "refIndex" : 154,
         "start" : 158.82,
         "suggest" : "count",
         "why" : "实词换了词，是这一页真正要练的地方"
@@ -1959,26 +1895,26 @@
       {
         "category" : "refTypo",
         "confidence" : 0.32,
-        "context" : "then told mr seemann after careful thought",
+        "context" : "then told mr sesemann after careful thought",
         "end" : 167.52,
         "kind" : "substitute",
         "label" : "原文可疑",
         "read" : "cessman",
-        "ref" : "seemann",
-        "refIndex" : 153,
+        "ref" : "sesemann",
+        "refIndex" : 159,
         "start" : 165.78,
         "suggest" : "skip",
-        "why" : "`.ref.txt` 里是「Seemann」，扫图时就标了认得可疑 —— **多半是扫描认错**，去 marked.png 上核一眼。她读的是「cessman」。识别器对这处只有 0.32 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+        "why" : "`.ref.txt` 里是「Sesemann」，扫图时就标了认得可疑 —— **多半是扫描认错**，去 marked.png 上核一眼。她读的是「cessman」。识别器对这处只有 0.32 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
       },
       {
         "category" : "extra",
         "confidence" : 0.274,
-        "context" : "seemann after careful thought mr sesemann decided",
+        "context" : "sesemann after careful thought mr sesemann decided",
         "end" : 170.58,
         "kind" : "insert",
         "label" : "多读",
         "read" : "salt",
-        "refIndex" : 156,
+        "refIndex" : 162,
         "start" : 169.62,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.27 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -1986,13 +1922,13 @@
       {
         "category" : "garbled",
         "confidence" : 0.53,
-        "context" : "seemann after careful thought mr sesemann decided",
+        "context" : "sesemann after careful thought mr sesemann decided",
         "end" : 172.92,
         "kind" : "substitute",
         "label" : "转写乱段",
         "read" : "saysman",
         "ref" : "thought",
-        "refIndex" : 156,
+        "refIndex" : 162,
         "start" : 170.58,
         "suggest" : "unsure",
         "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
@@ -2006,7 +1942,7 @@
         "label" : "转写乱段",
         "read" : "decided",
         "ref" : "mr",
-        "refIndex" : 157,
+        "refIndex" : 163,
         "start" : 172.92,
         "suggest" : "unsure",
         "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
@@ -2020,7 +1956,7 @@
         "label" : "原文可疑",
         "read" : "uh",
         "ref" : "sesemann",
-        "refIndex" : 158,
+        "refIndex" : 164,
         "start" : 173.82,
         "suggest" : "skip",
         "why" : "`.ref.txt` 里是「Sesemann」，扫图时就标了认得可疑 —— **多半是扫描认错**，去 marked.png 上核一眼。她读的是「uh」。识别器对这处只有 0.14 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -2034,7 +1970,7 @@
         "label" : "转写乱段",
         "read" : "and",
         "ref" : "decided",
-        "refIndex" : 159,
+        "refIndex" : 165,
         "start" : 175.62,
         "suggest" : "unsure",
         "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.20 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -2048,7 +1984,7 @@
         "label" : "实词",
         "read" : "some",
         "ref" : "send",
-        "refIndex" : 164,
+        "refIndex" : 170,
         "start" : 181.44,
         "suggest" : "count",
         "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.08 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -2062,7 +1998,7 @@
         "label" : "专名",
         "read" : "highly",
         "ref" : "heidi",
-        "refIndex" : 165,
+        "refIndex" : 171,
         "start" : 181.8,
         "suggest" : "unsure",
         "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑。识别器对这处只有 0.08 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -2076,7 +2012,7 @@
         "label" : "转写乱段",
         "read" : "one",
         "ref" : "grandfather's",
-        "refIndex" : 169,
+        "refIndex" : 175,
         "start" : 183.42,
         "suggest" : "unsure",
         "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
@@ -2090,7 +2026,7 @@
         "label" : "转写乱段",
         "read" : "grandfather's",
         "ref" : "he",
-        "refIndex" : 170,
+        "refIndex" : 176,
         "start" : 183.84,
         "suggest" : "unsure",
         "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
@@ -2104,7 +2040,7 @@
         "label" : "转写乱段",
         "read" : "hidden",
         "ref" : "then",
-        "refIndex" : 171,
+        "refIndex" : 177,
         "start" : 188.58,
         "suggest" : "unsure",
         "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
@@ -2118,7 +2054,7 @@
         "label" : "转写乱段",
         "read" : "talk",
         "ref" : "told",
-        "refIndex" : 172,
+        "refIndex" : 178,
         "start" : 189.36,
         "suggest" : "unsure",
         "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.11 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -2131,7 +2067,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "you",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 193.8,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2144,7 +2080,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "can",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 195.18,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2157,7 +2093,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "send",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 195.54,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2170,7 +2106,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "her",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 196.14,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2183,7 +2119,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "back",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 196.62,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2196,7 +2132,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "clara",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 197.34,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2209,7 +2145,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "cried",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 198.96,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.35 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -2222,7 +2158,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "oh",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 200.04,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.14 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -2235,7 +2171,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "upon",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 200.88,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2248,7 +2184,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "hearing",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 201.54,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2261,7 +2197,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "the",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 202.26,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2274,7 +2210,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "news",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 202.92,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2287,7 +2223,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "i",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 203.76,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2300,7 +2236,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "can",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 204.36,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2313,7 +2249,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "stand",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 204.66,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2326,7 +2262,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "the",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 205.5,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2339,7 +2275,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "thought",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 208.2,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2352,7 +2288,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "of",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 208.68,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2365,7 +2301,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "losing",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 209.1,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2378,7 +2314,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "my",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 210.42,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2391,7 +2327,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "best",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 210.72,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2404,7 +2340,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "friend",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 211.26,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2417,7 +2353,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "don't",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 211.74,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2430,7 +2366,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "cry",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 213.72,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2443,7 +2379,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "headache",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 214.32,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2456,7 +2392,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "and",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 215.16,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2469,7 +2405,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "we",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 215.76,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2482,7 +2418,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "would",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 216.3,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2495,7 +2431,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "with",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 216.78,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2508,7 +2444,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "it",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 217.32,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2521,7 +2457,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "you",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 217.98,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2534,7 +2470,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "next",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 218.4,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2547,7 +2483,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "ear",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 219.06,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2560,7 +2496,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "clara",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 220.62,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2573,7 +2509,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "handed",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 221.16,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2586,7 +2522,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "over",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 222,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2599,7 +2535,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "a",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 222.9,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2612,7 +2548,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "basket",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 223.32,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2625,7 +2561,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "to",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 224.58,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.35 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -2638,7 +2574,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "her",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 226.08,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2651,7 +2587,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "look",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 226.68,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2664,7 +2600,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "would",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 227.58,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -2677,7 +2613,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "i",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 228.66,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2690,7 +2626,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "have",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 229.38,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2703,7 +2639,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "a",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 230.04,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2716,7 +2652,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "i",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 231,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2729,7 +2665,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "have",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 233.7,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2742,7 +2678,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "prepared",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 234,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2755,7 +2691,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "for",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 234.78,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2768,7 +2704,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "you",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 235.14,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2781,7 +2717,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "it",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 235.5,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2794,7 +2730,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "was",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 236.94,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2807,7 +2743,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "full",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 237.3,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2820,7 +2756,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "of",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 237.72,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2833,7 +2769,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "fresh",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 238.14,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2846,7 +2782,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "those",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 239.4,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.33 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -2859,7 +2795,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "that",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 240.3,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2872,7 +2808,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "clara",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 241.5,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2885,7 +2821,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "was",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 242.46,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2898,7 +2834,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "sure",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 243.12,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2911,7 +2847,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "granny",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 243.66,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2924,7 +2860,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "would",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 244.38,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2937,7 +2873,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "lack",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 244.8,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2950,7 +2886,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "responsibility",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 251.4,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2963,7 +2899,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "grampy",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 254.34,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2976,7 +2912,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "carpenter",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 255.24,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -2989,7 +2925,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "familiar",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 258.06,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -3002,7 +2938,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "pastor",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 259.32,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.30 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -3015,7 +2951,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "stubborn",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 262.56,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -3028,7 +2964,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "awesome",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 263.94,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -3041,7 +2977,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "badger",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 266.88,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.26 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -3054,7 +2990,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "bad",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 268.2,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.01 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -3067,7 +3003,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "barrel",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 268.38,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -3080,7 +3016,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "album",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 269.4,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -3093,7 +3029,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "innocent",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 270.12,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -3106,7 +3042,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "homesick",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 272.76,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -3119,7 +3055,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "sob",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 275.28,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -3132,7 +3068,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "rumor",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 276.12,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -3145,7 +3081,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "prack",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 279.48,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
@@ -3158,7 +3094,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "trunk",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 280.38,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -3171,7 +3107,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "responsibility",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 281.58,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -3184,7 +3120,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "really",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 284.58,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -3197,7 +3133,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "nonsense",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 287.34,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -3210,7 +3146,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "jealous",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 290.88,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -3223,7 +3159,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "fold",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 292.32,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -3236,7 +3172,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "flood",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 299.46,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -3249,7 +3185,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "recovery",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 299.88,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -3262,7 +3198,7 @@
         "kind" : "insert",
         "label" : "多读",
         "read" : "reward",
-        "refIndex" : 176,
+        "refIndex" : 182,
         "start" : 303.36,
         "suggest" : "skip",
         "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
@@ -3378,6 +3314,12 @@
       81.72,
       82.14,
       82.8,
+      87.54,
+      87.9,
+      88.5,
+      90.3,
+      91.08,
+      91.74,
       92.4,
       93.06,
       93.48,
@@ -3447,8 +3389,8 @@
       192.6,
       193.74
     ],
-    "refWordCount" : 176,
-    "wcpm" : 27
+    "refWordCount" : 182,
+    "wcpm" : 28
   },
   "pages" : [
     {
@@ -3462,12 +3404,12 @@
     },
     {
       "end" : 193.74,
-      "errors" : 21,
-      "extras" : 44,
-      "matched" : 68,
+      "errors" : 22,
+      "extras" : 38,
+      "matched" : 74,
       "page" : 19,
-      "start" : 92.4,
-      "words" : 68
+      "start" : 87.54,
+      "words" : 74
     }
   ],
   "refSuspects" : [
@@ -3487,7 +3429,7 @@
       "word" : "Sesemann"
     }
   ],
-  "reference" : "But the book made Heidi even more unhappy as it told a story of a dying\nold woman. She thought of Grannie and feared she might have died.\nHeidi couldn't stop sobbing or hide her feelings. \"I'm afraid I won't be able\nto see Grannie. I miss my grandfather. I want to go back to the mountain.\"\nThe house was haunted by rumors about a ghost.\n\"I know this will scare Clara but I have no choice,\" she told herself while\nplanning her next move. So she told Clara and Heidi about the ghost. She\nhoped this would make Clara ask her father for help. And it did.\nand waited, and finally the \"ghost\"\nappeared.\nIt was Heidi.\n\"So, you are homesick,\" he said. \"But don't you cry to ease the sadness?\"\nThe doctor suggested Heidi have a good cry. \"That girl needs to go home to\nbe cured,\" he then told Mr. Seemann.\nAfter careful thought, Mr. Sesemann decided it was right to send Heidi back\nto her grandfather's. He then told Clara his decision.",
+  "reference" : "But the book made Heidi even more unhappy as it told a story of a dying\nold woman. She thought of Grannie and feared she might have died.\nHeidi couldn't stop sobbing or hide her feelings. \"I'm afraid I won't be able\nto see Grannie. I miss my grandfather. I want to go back to the mountain.\"\nThe house was haunted by rumors about a ghost.\n\"I know this will scare Clara but I have no choice,\" she told herself while\nplanning her next move. So she told Clara and Heidi about the ghost. She\nhoped this would make Clara ask her father for help. And it did.\nThe doctor and Mr. Sesemann waited\nand waited, and finally the \"ghost\"\nappeared.\nIt was Heidi.\n\"So, you are homesick,\" he said. \"But don't you cry to ease the sadness?\"\nThe doctor suggested Heidi have a good cry. \"That girl needs to go home to\nbe cured,\" he then told Mr. Sesemann.\nAfter careful thought, Mr. Sesemann decided it was right to send Heidi back\nto her grandfather's. He then told Clara his decision.",
   "slug" : "super8/L4/p18-19",
   "transcript" : {
     "alternatives" : [
@@ -6463,7 +6405,7 @@
         "text" : " reward."
       }
     ],
-    "source" : "super8-L4-p18-19-72568A42-2240-4C7F-B123-28A89FFED2C3.m4a"
+    "source" : "super8-L4-p18-19-631BB1F8-B62F-4027-8354-9C789D2AAD98.m4a"
   },
   "words" : [
     "but",

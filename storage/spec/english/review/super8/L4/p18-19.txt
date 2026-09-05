@@ -1,0 +1,272 @@
+# 超8 · Lesson 4
+#
+# ── 正文的写法（见 src/generator/english/CLAUDE.md）
+# 报告正文只写**孩子的朗读**。机器为什么误判、我们怎么核的，全部留在这些 # 注释里。
+#
+# ── 扫描漏了一整行，已回改重跑（不是课本印错，别归错因）
+# 第 19 页第一段划线是三行：
+#     The doctor and Mr. Sesemann waited / and waited, and finally the "ghost" / appeared.
+# 头一行「The doctor and Mr. Sesemann waited」底下那条黑线**没被框进划中范围** ——
+# 它比正文列宽长出一截，检测把它算给了下一行。marked.png 上看得很清楚：
+# 那一行只有灰色的文字框，没有蓝色的划中框。少这 6 个词，她读出来的部分就全变成「多读」。
+# 另外第 19 页最后一句的 Sesemann 被 OCR 认成了 Seemann（少一个 s），
+# 机器给的建议是「是不是 Sesame？」—— **两个都是错的**，图上核过是 Sesemann。
+# 改完 p19.ref.txt 重跑 read：原文 176 → 182 词，候选 36 → 37 处。
+#
+# ── 逐条核完：37 处候选 → 计错 13 处。撤下的 24 条分五类
+#
+#   · **人名 10 条**：Heidi ×6、Sesemann ×3、Mr. ×1。
+#     Heidi 这次 6 次全没认出来（hetty / had+he / heddy / heavy / had+you / highly），
+#     但**切成两个词的证据齐**：19.5 秒的「had + he」、148.6 秒的「had」都躺在多读里，
+#     和 9/1、9/3、9/4 三份同一个毛病、同一个口径。Sesemann 是德语姓，
+#     识别器拼不出（sessman / cessman / saysman），9/4 那份同一个词也是这么处理的。
+#   · **候选里就有原文那个词，8 条**：识别器自己排第二第三的听法里出现了原文的词，
+#     那基本能断定问题在转写这边（口径见 SKILL.md 的「已知坑」）：
+#       unhappy and → 候选「unhappy as」        and feared. → 候选「to fit and feared.」
+#       但 it → 候选「I know this will scared, but」
+#       Kara and → 候选「Clara and」            doctor's sketchy → 候选带「doctor's」
+#       That's grown → 候选「That's grown」（That 在里面）
+#       one / grandfather's → 候选「grandfather's, hidden talk」「grandfather's, he dental」
+#   · **拼写变体 1 条**：Grannie → granny，同一个音，课本拼 -ie、识别器拼 -y。
+#   · **她读出来了、后面才起头没接顺 1 条**：13.3 秒 Grannie（多读里那个 granny 就是证据）。
+#   · **对齐被中间那两段没划线的话挤错位 4 条**：sadness、decided、then、told。
+#     她 122.9 秒就把 sadness 读出来了，可对齐把它配到了 142.3 秒那段没划线的话上 ——
+#     和生词表「拉走课文结尾几个词」是同一个artifact，只是这次夹在中间。
+#
+# ── 这次录音 5 分 7 秒，只有 2 分 46 秒读的是划线的九段
+#  100.8 – 109.6 秒   第 19 页没划线的一段（“Dr. Classen called out to her, but it surprised Heidi.”）
+#  123.8 – 142.8 秒   第 19 页没划线的一段（“No, I'm not allowed to,” Heidi explained. …）
+#  193.7 – 245.3 秒   往下读到第 20 页（“You can send her back,” Clara cried …）
+#  245.3 – 307.0 秒   第 3–5 页 Words and Expressions 那 22 个生词，和 9/1、9/3、9/4 同一份
+# 四段都写进了 [跳过]，duration / pause_count / pause_ratio 三个都扣掉它们再算。
+# **卡壳没有写进去** —— 卡在一个词上几秒也是朗读的一部分，照算。
+#
+# ── 这次的错分得很集中：13 处里 6 处是「看岔成形近词」
+# while → well、finally → found、girl → grown、cured → curled、send → some、
+# father → grandfather。六个词单独拿出来她都认得，是眼睛扫过去认成了别的词。
+# 词尾还剩 3 处（hide → hiding、scare → scared、needs → need），上一次也是 3 处，
+# **这个毛病连着两次没改**。元音只剩 1 处（ease → is），辅音 1 处（thought → salt，th → s）。
+#
+# ── auto_bounds 还是把「Mr.」当成句末（第 19 页有三个 Mr. Sesemann）
+# 和 9/3、9/4 那两份一样，句末停顿会多数 3 次。**这次还是没手写 [句末] 去修** ——
+# 手写只会让这一份和前十一份用两把尺子。要改就改 auto_bounds 的缩写表，另开一次做。
+date: 2026-09-05
+cat: 超8
+order: 18
+page: 18–19
+prev: p16-17
+book: Heidi
+part: 划线九段
+words: 182
+errors: 13
+score: 54
+naep: 2
+
+[评分] 准确度=20/30 流利度=14/30 断句语调=12/25 发音=8/15
+
+[总评] 182 个词错 13 处，准确率 92.9% —— 比上一次掉了 3.2 个点，回到「偏难」这一档。
+    读对 169 个。13 处错里 **6 处是同一件事：把词看成了另一个长得像的词** ——
+    while 读成 well、finally 读成 found、girl 读成 grown、cured 读成 curled、
+    send 读成 some、father 读成 grandfather。这六个词单独拿出来她都认得，
+    不是读不出来，是眼睛扫过去认成了别的词，而且 4 处扎在第 19 页。
+    开头那 33 个词一口气读完一处没错，86 词/分，是十二次里开局最快的一段。
+
+[跳过] 100.8-109.6 = 读了没划线的一段, 123.8-142.8 = 读了没划线的一段, 193.7-245.3 = 往下读到第 20 页, 245.3-307.0 = 念生词表
+    这次录音 5 分 7 秒，只有 2 分 46 秒读的是这两页划线的九段。
+    第 19 页她是整页读下来的，没划线的两段也读了（一共 27.8 秒）；
+    读完第 19 页又往下读了第 20 页 51.6 秒；最后 61.7 秒念的是第 3–5 页那 22 个生词，
+    和 9/1、9/3、9/4 同一份。这四段**时长里有、词数里没有**，
+    四个数字都扣掉它们再算 —— 图上灰底的就是它们。
+
+[卡壳] 49.4-53.3 = 卡 4.0 秒, 82.8-87.5 = 翻页 4.7 秒, 109.6-115.4 = 停 5.8 秒
+    最长的一次在 109.6 秒：她刚把第 19 页没划线的那一段读完，说了声 “So” 就停住了，
+    整整 3.8 秒一声不出，才接上 “you are homesick”。**这是从没划线的段落回到划线段的接口。**
+    82.8 秒那次是翻页，从第 18 页最后一句 “And it did.” 到第 19 页第一句，4.7 秒。
+    49.4 秒那次是 “I know this will scare Clara but…” —— Clara 就是在这儿漏掉的。
+
+[分页] 这次读了 2 页
+第 18 页 = 0.7-82.8 秒 · 108 词 · 计错 6 处 · 语速 79 词/分
+第 19 页 = 87.5-193.7 秒 · 74 词 · 计错 7 处 · 语速 57 词/分（已扣掉没划线的 27.8 秒）
+    **两页差得很开。** 第 18 页 108 个词错 6 处、79 词/分；
+    第 19 页 74 个词错 7 处、57 词/分 —— 慢了三成，错的密度是第 18 页的一倍半。
+    第 18 页的四段划线是连着的，第 19 页的五段被没划线的段落隔开 ——
+    6 处「看岔」里有 4 处、三次长停里最长的那次，都在第 19 页。
+
+[对比] 和上一页比
+    准确率 = 掉了 3.2 个点
+    正确词/分 = 快了 2 个
+    几个词一停 = 略成串
+    停顿占时长 = 歇得少了
+    96.1% → 92.9%，回到「偏难」这一档；59 → 61 个正确词/分，
+    是十二次里第五快、《Heidi》这五次里最快的一次。
+    上一次 229 个词错 9 处，这一次 182 个词错 13 处。
+
+[比对] 逐字比对 · 机器候选 37 处 · 逐条核完计错 13 处
+原文 the book made *Heidi* even more unhappy
+识别成 the book made *hetty* even more unhappy
+    3.9 秒。Heidi。识别器拼不出这个名字，只会切成两个词或往认识的词上靠，和前三份同一个口径。不计错
+原文 even more unhappy *as* it told a
+识别成 even more unhappy *and* it told a
+    6.0 秒。识别器自己的另一种听法就是 “unhappy as” —— 原文那个词在候选里，问题在转写这边。不计错
+原文 She thought of *Grannie* and feared she
+识别成 She thought of *fit* and feared she
+    14.5 秒。Grannie 她读出来了（多读里那个 granny 就是证据），后面「to」起了个头没接顺。不计错
+原文 of Grannie and *feared* she might have
+识别成 of Grannie and *fear* she might have
+    16.1 秒。另一种听法是 “to fit and feared.” —— feared 在候选里。不计错
+原文 might have died *Heidi* couldn't stop sobbing
+识别成 might have died *don't* couldn't stop sobbing
+    20.6 秒。Heidi 被切成了「had + he」两个词，多读里那两个词就是证据。不计错
+原文 stop sobbing or *hide* her feelings I'm
+实读 stop sobbing or *hiding* her feelings I'm
+    〔词尾〕 23.6 秒。hide 读成 hiding，句子是 “or hide her feelings”，不该带 -ing
+原文 able to see *Grannie* I miss my
+识别成 able to see *granny* I miss my
+    29.3 秒。granny 和 Grannie 同一个音，课本拼 -ie、识别器拼 -y。不计错
+原文 haunted by rumors *about* a ghost I
+实读 haunted by rumors *of* a ghost I
+    〔小词〕 45.5 秒。about 读成 of
+原文 know this will *scare* Clara but I
+实读 know this will *scared* Clara but I
+    〔词尾〕 49.4 秒。scare 读成 scared，多了个 -d
+原文 this will scare *Clara* but I have
+实读 this will scare *（漏读）* but I have
+    〔漏读〕 53.3 秒。Clara 整个跳过去了 —— 这个名字她前后读对过两次，是这一处漏了
+原文 will scare Clara *but* I have no
+识别成 will scare Clara *it* I have no
+    53.5 秒。另一种听法是 “I know this will scared, but” —— but 在候选里，多出来的是一声「it」。不计错
+原文 she told herself *while* planning her next
+实读 she told herself *well* planning her next
+    〔词形〕 58.9 秒。while 读成 well
+原文 So she told *Clara* and Heidi about
+识别成 So she told *kara* and Heidi about
+    67.0 秒。另一种听法就是 “Clara and”。不计错
+原文 told Clara and *Heidi* about the ghost
+识别成 told Clara and *heddy* about the ghost
+    68.5 秒。同 3.9 秒那条。不计错
+原文 Clara ask her *father* for help And
+实读 Clara ask her *grandfather* for help And
+    〔词形〕 78.2 秒。father 读成 grandfather —— 前面几句里刚出现过 grandfather
+原文 doctor and Mr *Sesemann* waited and waited
+识别成 doctor and Mr *sessman* waited and waited
+    90.3 秒。德语姓氏，识别器拼不出。9/4 那份同一个词也是这么处理的。不计错
+原文 and waited and *finally* the ghost appeared
+实读 and waited and *found* the ghost appeared
+    〔词形〕 93.5 秒。finally 读成 found
+原文 appeared It was *Heidi* So you are
+识别成 appeared It was *heavy* So you are
+    108.7 秒。同 3.9 秒那条（候选里还有 Heading / headed / Heddy 三种拼法）。不计错
+原文 you cry to *ease* the sadness The
+实读 you cry to *is* the sadness The
+    〔元音〕 121.0 秒。ease 读成 is —— 长音 /iː/ 缩成了短音 /ɪ/
+原文 to ease the *sadness* The doctor suggested
+识别成 to ease the *book* The doctor suggested
+    142.3 秒。sadness 她 122.9 秒就读出来了，这条是对齐被中间那段没划线的话挤错了位。不计错
+原文 the sadness The *doctor* suggested Heidi have
+识别成 the sadness The *suggested* suggested Heidi have
+    146.3 秒。另一种听法是 “doctor's sketchy” —— doctor 在候选里。不计错
+原文 The doctor suggested *Heidi* have a good
+识别成 The doctor suggested *you* have a good
+    149.3 秒。又是切成两个词，这次是「had + you」。不计错
+原文 a good cry *That* girl needs to
+识别成 a good cry *that's* girl needs to
+    152.6 秒。候选里就是 “That's grown”。不计错
+原文 good cry That *girl* needs to go
+实读 good cry That *grown* needs to go
+    〔词形〕 153.5 秒。girl 读成 grown
+原文 cry That girl *needs* to go home
+实读 cry That girl *need* to go home
+    〔词尾〕 154.0 秒。needs 读成 need，丢了 -s
+原文 home to be *cured* he then told
+实读 home to be *curled* he then told
+    〔词形〕 158.8 秒。cured 读成 curled，中间多认了一个 l
+原文 then told Mr *Sesemann* After careful thought
+识别成 then told Mr *cessman* After careful thought
+    165.8 秒。同 90.3 秒那条。不计错
+原文 After careful *thought* Mr Sesemann decided
+实读 After careful *salt* Mr Sesemann decided
+    〔辅音〕 169.6 秒。thought 读成 salt —— th 的 /θ/ 换成了 /s/
+原文 careful thought *Mr* Sesemann decided it
+识别成 careful thought *（漏读）* Sesemann decided it
+    172.9 秒。Mr. 和后面那个德语姓糊在一起了，听不出读没读。不计错
+原文 thought Mr *Sesemann* decided it was
+识别成 thought Mr *saysman* decided it was
+    173.8 秒。同 90.3 秒那条，这一遍出来的是 saysman。不计错
+原文 Mr Sesemann *decided* it was right
+识别成 Mr Sesemann *and* it was right
+    175.6 秒。decided 她 172.9 秒读出来了，中间那两声「uh」「and」是犹豫。不计错
+原文 was right to *send* Heidi back to
+实读 was right to *some* Heidi back to
+    〔词形〕 181.4 秒。send 读成 some
+原文 right to send *Heidi* back to her
+识别成 right to send *highly* back to her
+    181.8 秒。同 3.9 秒那条。不计错
+原文 back to her *grandfather's* He then told
+识别成 back to her *one* He then told
+    183.4 秒。候选里就是 “grandfather's, hidden talk”。不计错
+原文 to her grandfather's *He* then told Clara
+识别成 to her grandfather's *grandfather's* then told Clara
+    183.8 秒。同上，对齐挤错了一位；另一种听法「grandfather's, he dental」里有 He。不计错
+原文 her grandfather's He *then* told Clara his
+识别成 her grandfather's He *hidden* told Clara his
+    188.6 秒。“He then told” 三个词连读成了一串，识别器写成「hidden talk」。不计错
+原文 grandfather's He then *told* Clara his decision
+识别成 grandfather's He then *talk* Clara his decision
+    189.4 秒。同上。后面 “Clara his decision” 读对了。不计错
+
+[磕巴] 退回去重来、多读了词的地方 · 7 处
+*granny to* Grannie and feared she
+    13.3 秒。Grannie 读出来了，接着「to」起了个头没接顺，退回去重读。
+*had he* Heidi couldn't stop sobbing
+    19.5 秒。Heidi 这个名字被识别器切成了「had + he」两个词，和前三份一样。
+*back up* back to the mountain
+    34.9 秒。“I want to go back…” 起了个头，退回去从 back 重读。
+*doctor's sketchy* doctor suggested Heidi have
+    143.6 秒。“The doctor suggested” 头一遍没出来（识别器写成 sketchy / Skested / Scasti），
+    退回去连读了两遍 “suggested” 才接上。
+*had* Heidi have a good
+    148.6 秒。同 19.5 秒，Heidi 被切成「had + you」。
+*good* good cry That girl
+    150.3 秒。“a good, good cry” —— good 读了两遍。
+*try* cry That girl needs
+    151.1 秒。头一遍读成了 try，自己听出不对，退回去改成 cry —— **改对了，不计错**。
+
+[亮点]
+**“But the book made Heidi even more unhappy as it told a story of a dying old woman. She thought of Grannie and feared she might have died. Heidi couldn't stop sobbing or”** —— 开头 **33 个词一口气读完、一处没错**，86 词/分，是十二次里开局最快的一段。
+**“her feelings. “I'm afraid I won't be able to see Grannie. I miss my grandfather. I want to go back to the mountain.” The house was haunted by rumors”** —— 紧接着又是 **29 个词没错**，79 词/分。头 45 秒 62 个词里只错了 hide 一处。
+**第 18 页整页 108 个词、79 词/分** —— 上一次两页是 57 和 67 词/分，这一页比它们都快。
+**cry 那处她自己改对了**：头一遍读成 try，听出不对，退回去改成 cry。这种「读出去了自己听出来」的，前四份每份都有。
+
+[三件事]
+🔍 六处「看岔了」：while / finally / girl / cured / send / father
+    13 处错里 6 处是把词看成了另一个长得像的词，不是读不出来 ——
+    while 读成 well、finally 读成 found、girl 读成 grown、cured 读成 curled、
+    send 读成 some、father 读成 grandfather。这六个词单独拿出来她都认得。
+    **开口之前先用眼睛把整句扫一遍**，尤其是第 19 页：6 处里有 4 处在那一页。
+📏 只读划线的那几段
+    第 19 页她是整页读下来的：没划线的两段读了 27.8 秒，读完又往下读了第 20 页 51.6 秒。
+    读得多不是坏事，但 109.6 秒那次停了 5.8 秒，就是从没划线的段落回到划线段时找不着地方。
+    **手指压在正在读的那条线上**，读完一段抬眼找下一条线。
+🔚 词尾还是丢：hide → hiding、scare → scared、needs → need
+    三处都是词尾多一个或少一个。上一次也是 3 处（observations / books / goats 全丢了 -s），
+    **这个毛病连着两次没改**。每句最后一个词多含半拍再往下读。
+
+[斜线]
+The doctor suggested Heidi
+have a good cry.
+“That girl needs to go home
+to be cured,”
+he then told Mr. Sesemann.
+
+[尺子]
+    92.9% 落在「偏难」这一档 —— 比上一次（96.1%）往左挪了一截，回到前十次那个区间。
+        182 个词错 13 处，其中 6 处是同一类：看岔成了形近词。
+    61 个正确词/分钟，比上一次（59）再快 2 个，压在**三年级秋季 25 百分位**（59）上面一点，
+        是十二次里第五快、《Heidi》这五次里最快的一次。母语常模只当参照系，不是及格线。
+    平均 1.8 个词一组，比上一次（1.6）成串了一点，仍按第 2 级放着。
+
+[怎么来的]
+**准确率 92.9%**（读对 169 / 划线九段共 182 词）。替换、漏读、读错音计错；插入的词和退回去重读只算不流利、不计错。上面的比对列了 37 条候选、计错 13 处 —— 撤下的 24 条分五类：10 条是人名（Heidi ×6、Sesemann ×3、Mr.），识别器拼不出、只会切成两个词或往认识的词上靠，口径和前四份一样；8 条是识别器自己的另一种听法里就有原文那个词（unhappy as / feared / but / Clara and / doctor's / That's / grandfather's / he）；4 条是对齐被中间那两段没划线的话挤错了位（sadness、decided、then、told）；1 条是拼写变体（Grannie / granny 同音）；还有 1 条是她读出来了、后面才起头没接顺。
+**每分钟正确词数 61**（WCPM）= 读对的 169 词 ÷ 165.9 秒 × 60。录音一共 5 分 7 秒，其中 2 分 21 秒读的不是这两页的划线段：第 19 页没划线的两段 27.8 秒、往下读的第 20 页 51.6 秒、末尾 22 个生词 61.7 秒。这三样不算进时长，图上灰底的就是它们。
+**断句**取 100 次停顿（灰底那几段的不算），平均 1.8 个词一组。停顿阈值取「说话声级 − 10 dB」，和前面十一次同一把尺子。
+这次是 9 月 5 日的录音，第 18–19 页的划线部分一口气读完，是第二本《Heidi》的第五次。**发音这一项没有一个音一个音地听过**，是从录音里推出来的，不如亲耳听准，所以这一项的分给得保守。
