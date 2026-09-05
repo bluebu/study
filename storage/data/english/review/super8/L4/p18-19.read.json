@@ -1,0 +1,6784 @@
+{
+  "acoustics" : {
+    "duration" : 307.04,
+    "pause_count" : 191,
+    "pause_ratio" : 0.395,
+    "pause_total" : 121.2,
+    "pauses" : [
+      {
+        "dur" : 0.26,
+        "end" : 0.81,
+        "start" : 0.55
+      },
+      {
+        "dur" : 0.7,
+        "end" : 2.78,
+        "start" : 2.08
+      },
+      {
+        "dur" : 0.3,
+        "end" : 3.27,
+        "start" : 2.97
+      },
+      {
+        "dur" : 0.61,
+        "end" : 3.95,
+        "start" : 3.34
+      },
+      {
+        "dur" : 0.35,
+        "end" : 6.9,
+        "start" : 6.55
+      },
+      {
+        "dur" : 0.78,
+        "end" : 8.01,
+        "start" : 7.23
+      },
+      {
+        "dur" : 0.44,
+        "end" : 13.12,
+        "start" : 12.68
+      },
+      {
+        "dur" : 0.25,
+        "end" : 15.02,
+        "start" : 14.77
+      },
+      {
+        "dur" : 0.62,
+        "end" : 15.85,
+        "start" : 15.23
+      },
+      {
+        "dur" : 0.35,
+        "end" : 17.56,
+        "start" : 17.21
+      },
+      {
+        "dur" : 0.3,
+        "end" : 19.02,
+        "start" : 18.72
+      },
+      {
+        "dur" : 0.39,
+        "end" : 19.8,
+        "start" : 19.41
+      },
+      {
+        "dur" : 0.29,
+        "end" : 20.12,
+        "start" : 19.83
+      },
+      {
+        "dur" : 0.61,
+        "end" : 21.58,
+        "start" : 20.97
+      },
+      {
+        "dur" : 1.14,
+        "end" : 25.62,
+        "start" : 24.48
+      },
+      {
+        "dur" : 0.32,
+        "end" : 32.88,
+        "start" : 32.56
+      },
+      {
+        "dur" : 0.94,
+        "end" : 34.39,
+        "start" : 33.45
+      },
+      {
+        "dur" : 0.29,
+        "end" : 35.81,
+        "start" : 35.52
+      },
+      {
+        "dur" : 1.11,
+        "end" : 37.39,
+        "start" : 36.28
+      },
+      {
+        "dur" : 1.22,
+        "end" : 40.27,
+        "start" : 39.05
+      },
+      {
+        "dur" : 2.04,
+        "end" : 42.34,
+        "start" : 40.3
+      },
+      {
+        "dur" : 0.52,
+        "end" : 44.67,
+        "start" : 44.15
+      },
+      {
+        "dur" : 1.42,
+        "end" : 47.82,
+        "start" : 46.4
+      },
+      {
+        "dur" : 0.88,
+        "end" : 50.53,
+        "start" : 49.65
+      },
+      {
+        "dur" : 1.04,
+        "end" : 52.08,
+        "start" : 51.04
+      },
+      {
+        "dur" : 0.45,
+        "end" : 54.03,
+        "start" : 53.58
+      },
+      {
+        "dur" : 0.59,
+        "end" : 54.83,
+        "start" : 54.24
+      },
+      {
+        "dur" : 0.45,
+        "end" : 56.97,
+        "start" : 56.52
+      },
+      {
+        "dur" : 0.28,
+        "end" : 57.61,
+        "start" : 57.33
+      },
+      {
+        "dur" : 0.43,
+        "end" : 58.26,
+        "start" : 57.83
+      },
+      {
+        "dur" : 1.08,
+        "end" : 60.06,
+        "start" : 58.98
+      },
+      {
+        "dur" : 0.27,
+        "end" : 61.02,
+        "start" : 60.75
+      },
+      {
+        "dur" : 0.72,
+        "end" : 63.49,
+        "start" : 62.77
+      },
+      {
+        "dur" : 0.28,
+        "end" : 65.87,
+        "start" : 65.59
+      },
+      {
+        "dur" : 0.32,
+        "end" : 66.7,
+        "start" : 66.38
+      },
+      {
+        "dur" : 0.32,
+        "end" : 67.59,
+        "start" : 67.27
+      },
+      {
+        "dur" : 0.25,
+        "end" : 69.66,
+        "start" : 69.41
+      },
+      {
+        "dur" : 0.39,
+        "end" : 70.54,
+        "start" : 70.15
+      },
+      {
+        "dur" : 0.3,
+        "end" : 70.86,
+        "start" : 70.56
+      },
+      {
+        "dur" : 0.42,
+        "end" : 71.89,
+        "start" : 71.47
+      },
+      {
+        "dur" : 0.38,
+        "end" : 72.86,
+        "start" : 72.48
+      },
+      {
+        "dur" : 0.67,
+        "end" : 73.62,
+        "start" : 72.95
+      },
+      {
+        "dur" : 0.25,
+        "end" : 74.17,
+        "start" : 73.92
+      },
+      {
+        "dur" : 0.68,
+        "end" : 75.22,
+        "start" : 74.54
+      },
+      {
+        "dur" : 0.44,
+        "end" : 76.99,
+        "start" : 76.55
+      },
+      {
+        "dur" : 0.86,
+        "end" : 78.09,
+        "start" : 77.23
+      },
+      {
+        "dur" : 0.36,
+        "end" : 78.88,
+        "start" : 78.52
+      },
+      {
+        "dur" : 0.25,
+        "end" : 80.39,
+        "start" : 80.14
+      },
+      {
+        "dur" : 0.31,
+        "end" : 81.33,
+        "start" : 81.02
+      },
+      {
+        "dur" : 0.28,
+        "end" : 82.11,
+        "start" : 81.83
+      },
+      {
+        "dur" : 0.32,
+        "end" : 82.6,
+        "start" : 82.28
+      },
+      {
+        "dur" : 0.58,
+        "end" : 83.56,
+        "start" : 82.98
+      },
+      {
+        "dur" : 0.28,
+        "end" : 84.08,
+        "start" : 83.8
+      },
+      {
+        "dur" : 0.4,
+        "end" : 84.65,
+        "start" : 84.25
+      },
+      {
+        "dur" : 0.28,
+        "end" : 85.35,
+        "start" : 85.07
+      },
+      {
+        "dur" : 0.4,
+        "end" : 86.02,
+        "start" : 85.62
+      },
+      {
+        "dur" : 1.26,
+        "end" : 87.33,
+        "start" : 86.07
+      },
+      {
+        "dur" : 0.67,
+        "end" : 89.73,
+        "start" : 89.06
+      },
+      {
+        "dur" : 0.29,
+        "end" : 92.2,
+        "start" : 91.91
+      },
+      {
+        "dur" : 0.78,
+        "end" : 94.7,
+        "start" : 93.92
+      },
+      {
+        "dur" : 1.45,
+        "end" : 96.75,
+        "start" : 95.3
+      },
+      {
+        "dur" : 0.84,
+        "end" : 99.36,
+        "start" : 98.52
+      },
+      {
+        "dur" : 0.45,
+        "end" : 101.36,
+        "start" : 100.91
+      },
+      {
+        "dur" : 0.56,
+        "end" : 102.14,
+        "start" : 101.58
+      },
+      {
+        "dur" : 0.49,
+        "end" : 102.74,
+        "start" : 102.25
+      },
+      {
+        "dur" : 0.26,
+        "end" : 103.04,
+        "start" : 102.78
+      },
+      {
+        "dur" : 0.33,
+        "end" : 104.07,
+        "start" : 103.74
+      },
+      {
+        "dur" : 1.28,
+        "end" : 106.86,
+        "start" : 105.58
+      },
+      {
+        "dur" : 0.36,
+        "end" : 108.05,
+        "start" : 107.69
+      },
+      {
+        "dur" : 0.66,
+        "end" : 109.02,
+        "start" : 108.36
+      },
+      {
+        "dur" : 0.29,
+        "end" : 110,
+        "start" : 109.71
+      },
+      {
+        "dur" : 0.5,
+        "end" : 110.53,
+        "start" : 110.03
+      },
+      {
+        "dur" : 0.79,
+        "end" : 111.38,
+        "start" : 110.59
+      },
+      {
+        "dur" : 3.77,
+        "end" : 115.17,
+        "start" : 111.4
+      },
+      {
+        "dur" : 0.39,
+        "end" : 117.32,
+        "start" : 116.93
+      },
+      {
+        "dur" : 0.74,
+        "end" : 118.77,
+        "start" : 118.03
+      },
+      {
+        "dur" : 0.29,
+        "end" : 120.27,
+        "start" : 119.98
+      },
+      {
+        "dur" : 1.24,
+        "end" : 122.72,
+        "start" : 121.48
+      },
+      {
+        "dur" : 0.37,
+        "end" : 123.98,
+        "start" : 123.61
+      },
+      {
+        "dur" : 0.32,
+        "end" : 125.33,
+        "start" : 125.01
+      },
+      {
+        "dur" : 0.44,
+        "end" : 126.91,
+        "start" : 126.47
+      },
+      {
+        "dur" : 0.41,
+        "end" : 127.61,
+        "start" : 127.2
+      },
+      {
+        "dur" : 0.99,
+        "end" : 130.23,
+        "start" : 129.24
+      },
+      {
+        "dur" : 2.44,
+        "end" : 133.08,
+        "start" : 130.64
+      },
+      {
+        "dur" : 0.3,
+        "end" : 134.32,
+        "start" : 134.02
+      },
+      {
+        "dur" : 0.31,
+        "end" : 135.87,
+        "start" : 135.56
+      },
+      {
+        "dur" : 1.05,
+        "end" : 137.23,
+        "start" : 136.18
+      },
+      {
+        "dur" : 0.42,
+        "end" : 137.93,
+        "start" : 137.51
+      },
+      {
+        "dur" : 0.26,
+        "end" : 139.2,
+        "start" : 138.94
+      },
+      {
+        "dur" : 0.52,
+        "end" : 140.39,
+        "start" : 139.87
+      },
+      {
+        "dur" : 0.77,
+        "end" : 141.3,
+        "start" : 140.53
+      },
+      {
+        "dur" : 0.66,
+        "end" : 143.46,
+        "start" : 142.8
+      },
+      {
+        "dur" : 0.74,
+        "end" : 145.19,
+        "start" : 144.45
+      },
+      {
+        "dur" : 0.35,
+        "end" : 150.94,
+        "start" : 150.59
+      },
+      {
+        "dur" : 0.45,
+        "end" : 152.08,
+        "start" : 151.63
+      },
+      {
+        "dur" : 0.29,
+        "end" : 153.03,
+        "start" : 152.74
+      },
+      {
+        "dur" : 0.86,
+        "end" : 155.11,
+        "start" : 154.25
+      },
+      {
+        "dur" : 0.34,
+        "end" : 156.12,
+        "start" : 155.78
+      },
+      {
+        "dur" : 0.46,
+        "end" : 157.01,
+        "start" : 156.55
+      },
+      {
+        "dur" : 0.66,
+        "end" : 158.29,
+        "start" : 157.63
+      },
+      {
+        "dur" : 0.29,
+        "end" : 159.08,
+        "start" : 158.79
+      },
+      {
+        "dur" : 0.26,
+        "end" : 159.94,
+        "start" : 159.68
+      },
+      {
+        "dur" : 0.67,
+        "end" : 160.62,
+        "start" : 159.95
+      },
+      {
+        "dur" : 0.31,
+        "end" : 160.99,
+        "start" : 160.68
+      },
+      {
+        "dur" : 0.99,
+        "end" : 164.01,
+        "start" : 163.02
+      },
+      {
+        "dur" : 0.46,
+        "end" : 165.64,
+        "start" : 165.18
+      },
+      {
+        "dur" : 0.26,
+        "end" : 167.51,
+        "start" : 167.25
+      },
+      {
+        "dur" : 0.26,
+        "end" : 168.28,
+        "start" : 168.02
+      },
+      {
+        "dur" : 0.33,
+        "end" : 171.79,
+        "start" : 171.46
+      },
+      {
+        "dur" : 0.65,
+        "end" : 174.97,
+        "start" : 174.32
+      },
+      {
+        "dur" : 0.57,
+        "end" : 177.2,
+        "start" : 176.63
+      },
+      {
+        "dur" : 0.41,
+        "end" : 178.26,
+        "start" : 177.85
+      },
+      {
+        "dur" : 0.25,
+        "end" : 182.95,
+        "start" : 182.7
+      },
+      {
+        "dur" : 0.38,
+        "end" : 184.4,
+        "start" : 184.02
+      },
+      {
+        "dur" : 0.79,
+        "end" : 186.1,
+        "start" : 185.31
+      },
+      {
+        "dur" : 0.46,
+        "end" : 188.75,
+        "start" : 188.29
+      },
+      {
+        "dur" : 0.43,
+        "end" : 190.1,
+        "start" : 189.67
+      },
+      {
+        "dur" : 0.65,
+        "end" : 190.83,
+        "start" : 190.18
+      },
+      {
+        "dur" : 0.6,
+        "end" : 191.58,
+        "start" : 190.98
+      },
+      {
+        "dur" : 0.54,
+        "end" : 193.05,
+        "start" : 192.51
+      },
+      {
+        "dur" : 0.36,
+        "end" : 194.41,
+        "start" : 194.05
+      },
+      {
+        "dur" : 0.44,
+        "end" : 194.87,
+        "start" : 194.43
+      },
+      {
+        "dur" : 1.07,
+        "end" : 198.49,
+        "start" : 197.42
+      },
+      {
+        "dur" : 0.41,
+        "end" : 201.12,
+        "start" : 200.71
+      },
+      {
+        "dur" : 0.27,
+        "end" : 204.1,
+        "start" : 203.83
+      },
+      {
+        "dur" : 0.8,
+        "end" : 206.58,
+        "start" : 205.78
+      },
+      {
+        "dur" : 0.67,
+        "end" : 207.34,
+        "start" : 206.67
+      },
+      {
+        "dur" : 0.41,
+        "end" : 207.9,
+        "start" : 207.49
+      },
+      {
+        "dur" : 0.57,
+        "end" : 209.73,
+        "start" : 209.16
+      },
+      {
+        "dur" : 0.48,
+        "end" : 211.48,
+        "start" : 211
+      },
+      {
+        "dur" : 0.73,
+        "end" : 212.67,
+        "start" : 211.94
+      },
+      {
+        "dur" : 0.38,
+        "end" : 213.3,
+        "start" : 212.92
+      },
+      {
+        "dur" : 0.27,
+        "end" : 215.48,
+        "start" : 215.21
+      },
+      {
+        "dur" : 1,
+        "end" : 219.96,
+        "start" : 218.96
+      },
+      {
+        "dur" : 0.45,
+        "end" : 224.3,
+        "start" : 223.85
+      },
+      {
+        "dur" : 0.93,
+        "end" : 225.52,
+        "start" : 224.59
+      },
+      {
+        "dur" : 0.39,
+        "end" : 225.97,
+        "start" : 225.58
+      },
+      {
+        "dur" : 0.27,
+        "end" : 226.81,
+        "start" : 226.54
+      },
+      {
+        "dur" : 0.88,
+        "end" : 228.41,
+        "start" : 227.53
+      },
+      {
+        "dur" : 0.37,
+        "end" : 229.08,
+        "start" : 228.71
+      },
+      {
+        "dur" : 2.64,
+        "end" : 233.44,
+        "start" : 230.8
+      },
+      {
+        "dur" : 0.34,
+        "end" : 236.34,
+        "start" : 236
+      },
+      {
+        "dur" : 1.07,
+        "end" : 239.13,
+        "start" : 238.06
+      },
+      {
+        "dur" : 0.64,
+        "end" : 241.2,
+        "start" : 240.56
+      },
+      {
+        "dur" : 0.41,
+        "end" : 245.97,
+        "start" : 245.56
+      },
+      {
+        "dur" : 0.48,
+        "end" : 246.49,
+        "start" : 246.01
+      },
+      {
+        "dur" : 0.83,
+        "end" : 247.65,
+        "start" : 246.82
+      },
+      {
+        "dur" : 0.65,
+        "end" : 248.31,
+        "start" : 247.66
+      },
+      {
+        "dur" : 0.49,
+        "end" : 248.86,
+        "start" : 248.37
+      },
+      {
+        "dur" : 0.39,
+        "end" : 249.46,
+        "start" : 249.07
+      },
+      {
+        "dur" : 0.42,
+        "end" : 249.97,
+        "start" : 249.55
+      },
+      {
+        "dur" : 0.44,
+        "end" : 251.61,
+        "start" : 251.17
+      },
+      {
+        "dur" : 0.26,
+        "end" : 252.14,
+        "start" : 251.88
+      },
+      {
+        "dur" : 0.25,
+        "end" : 252.97,
+        "start" : 252.72
+      },
+      {
+        "dur" : 0.29,
+        "end" : 254.13,
+        "start" : 253.84
+      },
+      {
+        "dur" : 0.93,
+        "end" : 256.01,
+        "start" : 255.08
+      },
+      {
+        "dur" : 0.43,
+        "end" : 256.75,
+        "start" : 256.32
+      },
+      {
+        "dur" : 0.38,
+        "end" : 257.6,
+        "start" : 257.22
+      },
+      {
+        "dur" : 0.68,
+        "end" : 258.37,
+        "start" : 257.69
+      },
+      {
+        "dur" : 1.66,
+        "end" : 261.16,
+        "start" : 259.5
+      },
+      {
+        "dur" : 0.31,
+        "end" : 261.7,
+        "start" : 261.39
+      },
+      {
+        "dur" : 0.26,
+        "end" : 262.13,
+        "start" : 261.87
+      },
+      {
+        "dur" : 0.73,
+        "end" : 263.08,
+        "start" : 262.35
+      },
+      {
+        "dur" : 2.11,
+        "end" : 265.98,
+        "start" : 263.87
+      },
+      {
+        "dur" : 0.39,
+        "end" : 267.21,
+        "start" : 266.82
+      },
+      {
+        "dur" : 0.35,
+        "end" : 268.88,
+        "start" : 268.53
+      },
+      {
+        "dur" : 1.4,
+        "end" : 271.77,
+        "start" : 270.37
+      },
+      {
+        "dur" : 0.77,
+        "end" : 273.4,
+        "start" : 272.63
+      },
+      {
+        "dur" : 0.7,
+        "end" : 274.36,
+        "start" : 273.66
+      },
+      {
+        "dur" : 0.47,
+        "end" : 275.61,
+        "start" : 275.14
+      },
+      {
+        "dur" : 2.47,
+        "end" : 278.4,
+        "start" : 275.93
+      },
+      {
+        "dur" : 0.43,
+        "end" : 279.81,
+        "start" : 279.38
+      },
+      {
+        "dur" : 0.54,
+        "end" : 280.75,
+        "start" : 280.21
+      },
+      {
+        "dur" : 0.3,
+        "end" : 281.08,
+        "start" : 280.78
+      },
+      {
+        "dur" : 0.74,
+        "end" : 282.31,
+        "start" : 281.57
+      },
+      {
+        "dur" : 0.92,
+        "end" : 285.64,
+        "start" : 284.72
+      },
+      {
+        "dur" : 0.72,
+        "end" : 286.43,
+        "start" : 285.71
+      },
+      {
+        "dur" : 0.29,
+        "end" : 287.99,
+        "start" : 287.7
+      },
+      {
+        "dur" : 1.81,
+        "end" : 289.9,
+        "start" : 288.09
+      },
+      {
+        "dur" : 0.4,
+        "end" : 291.45,
+        "start" : 291.05
+      },
+      {
+        "dur" : 0.92,
+        "end" : 292.92,
+        "start" : 292
+      },
+      {
+        "dur" : 1.51,
+        "end" : 294.72,
+        "start" : 293.21
+      },
+      {
+        "dur" : 0.55,
+        "end" : 295.35,
+        "start" : 294.8
+      },
+      {
+        "dur" : 0.31,
+        "end" : 295.93,
+        "start" : 295.62
+      },
+      {
+        "dur" : 2.13,
+        "end" : 298.41,
+        "start" : 296.28
+      },
+      {
+        "dur" : 0.55,
+        "end" : 299.11,
+        "start" : 298.56
+      },
+      {
+        "dur" : 0.28,
+        "end" : 299.96,
+        "start" : 299.68
+      },
+      {
+        "dur" : 1.12,
+        "end" : 301.49,
+        "start" : 300.37
+      },
+      {
+        "dur" : 0.31,
+        "end" : 303.57,
+        "start" : 303.26
+      },
+      {
+        "dur" : 0.38,
+        "end" : 305.2,
+        "start" : 304.82
+      },
+      {
+        "dur" : 1.08,
+        "end" : 306.95,
+        "start" : 305.87
+      }
+    ],
+    "source" : "cd82a569b5b50c32c5cb503116aeb0a3.mp4",
+    "speech_time" : 185.84,
+    "threshold_db" : -29.6
+  },
+  "alignment" : {
+    "accuracy" : 79.5,
+    "correctWordCount" : 140,
+    "diffs" : [
+      {
+        "category" : "properNoun",
+        "confidence" : 0.189,
+        "context" : "the book made heidi even more unhappy",
+        "end" : 4.56,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "hetty",
+        "ref" : "heidi",
+        "refIndex" : 4,
+        "start" : 3.9,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑。识别器对这处只有 0.19 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "function",
+        "confidence" : 0.642,
+        "context" : "even more unhappy as it told a",
+        "end" : 6.42,
+        "kind" : "substitute",
+        "label" : "小词",
+        "read" : "and",
+        "ref" : "as",
+        "refIndex" : 8,
+        "start" : 6,
+        "suggest" : "count",
+        "why" : "两个都是小词，读串了。这类错扎堆出现就是眼睛跑在手指前面"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.983,
+        "context" : "she thought of grannie and feared she",
+        "end" : 14.04,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "granny",
+        "refIndex" : 21,
+        "start" : 13.32,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.715,
+        "context" : "she thought of grannie and feared she",
+        "end" : 14.46,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "to",
+        "refIndex" : 21,
+        "start" : 14.04,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.069,
+        "context" : "she thought of grannie and feared she",
+        "end" : 15.42,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "fit",
+        "ref" : "grannie",
+        "refIndex" : 21,
+        "start" : 14.46,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑。识别器对这处只有 0.07 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.262,
+        "context" : "of grannie and feared she might have",
+        "end" : 17.1,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "fear",
+        "ref" : "feared",
+        "refIndex" : 23,
+        "start" : 16.14,
+        "suggest" : "count",
+        "why" : "原文是「feared」，读出来少了词尾 -ed。识别器对这处只有 0.26 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.445,
+        "context" : "might have died heidi couldn't stop sobbing",
+        "end" : 20.34,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "had",
+        "refIndex" : 28,
+        "start" : 19.5,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.262,
+        "context" : "might have died heidi couldn't stop sobbing",
+        "end" : 20.64,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "he",
+        "refIndex" : 28,
+        "start" : 20.34,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.26 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.218,
+        "context" : "might have died heidi couldn't stop sobbing",
+        "end" : 21.18,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "don't",
+        "ref" : "heidi",
+        "refIndex" : 28,
+        "start" : 20.64,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑。识别器对这处只有 0.22 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.988,
+        "context" : "stop sobbing or hide her feelings i'm",
+        "end" : 23.94,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "hiding",
+        "ref" : "hide",
+        "refIndex" : 33,
+        "start" : 23.58,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.658,
+        "context" : "able to see grannie i miss my",
+        "end" : 30.3,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "granny",
+        "ref" : "grannie",
+        "refIndex" : 44,
+        "start" : 29.28,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.994,
+        "context" : "want to go back to the mountain",
+        "end" : 35.16,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "back",
+        "refIndex" : 53,
+        "start" : 34.92,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.437,
+        "context" : "want to go back to the mountain",
+        "end" : 36.18,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "up",
+        "refIndex" : 53,
+        "start" : 35.16,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "function",
+        "confidence" : 0.93,
+        "context" : "haunted by rumors about a ghost i",
+        "end" : 46.14,
+        "kind" : "substitute",
+        "label" : "小词",
+        "read" : "of",
+        "ref" : "about",
+        "refIndex" : 63,
+        "start" : 45.54,
+        "suggest" : "count",
+        "why" : "两个都是小词，读串了。这类错扎堆出现就是眼睛跑在手指前面"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.57,
+        "context" : "know this will scare clara but i",
+        "end" : 53.34,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "scared",
+        "ref" : "scare",
+        "refIndex" : 70,
+        "start" : 49.38,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.926,
+        "context" : "this will scare clara but i have",
+        "end" : 53.52,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "but",
+        "ref" : "clara",
+        "refIndex" : 71,
+        "start" : 53.34,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.326,
+        "context" : "will scare clara but i have no",
+        "end" : 54.48,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "it",
+        "ref" : "but",
+        "refIndex" : 72,
+        "start" : 53.52,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.33 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.173,
+        "context" : "she told herself while planning her next",
+        "end" : 60.9,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "well",
+        "ref" : "while",
+        "refIndex" : 80,
+        "start" : 58.86,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.17 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "refTypo",
+        "confidence" : 0.252,
+        "context" : "so she told clara and heidi about",
+        "end" : 67.86,
+        "kind" : "substitute",
+        "label" : "原文可疑",
+        "read" : "kara",
+        "ref" : "clara",
+        "refIndex" : 88,
+        "start" : 66.96,
+        "suggest" : "skip",
+        "why" : "`.ref.txt` 里是「clara」（查不出这个词），她读的是「kara」—— 读对了。**先怀疑扫描认错**，去 marked.png 上核；真是课本印错也不计错，但归因不一样。识别器对这处只有 0.25 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.276,
+        "context" : "told clara and heidi about the ghost",
+        "end" : 69.3,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "heddy",
+        "ref" : "heidi",
+        "refIndex" : 90,
+        "start" : 68.52,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.28 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.99,
+        "context" : "clara ask her father for help and",
+        "end" : 79.62,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "grandfather",
+        "ref" : "father",
+        "refIndex" : 102,
+        "start" : 78.24,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.937,
+        "context" : "and it did and waited and finally",
+        "end" : 87.54,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "the",
+        "refIndex" : 108,
+        "start" : 82.86,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.961,
+        "context" : "and it did and waited and finally",
+        "end" : 87.9,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "doctor",
+        "refIndex" : 108,
+        "start" : 87.54,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.964,
+        "context" : "and it did and waited and finally",
+        "end" : 88.5,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "and",
+        "refIndex" : 108,
+        "start" : 87.9,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.798,
+        "context" : "and it did and waited and finally",
+        "end" : 90.3,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "mr",
+        "refIndex" : 108,
+        "start" : 88.5,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.686,
+        "context" : "and it did and waited and finally",
+        "end" : 91.08,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "sessman",
+        "refIndex" : 108,
+        "start" : 90.3,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.979,
+        "context" : "and it did and waited and finally",
+        "end" : 91.74,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "waited",
+        "refIndex" : 108,
+        "start" : 91.08,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.115,
+        "context" : "and waited and finally the ghost appeared",
+        "end" : 95.52,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "found",
+        "ref" : "finally",
+        "refIndex" : 111,
+        "start" : 93.48,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.12 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.175,
+        "context" : "appeared it was heidi so you are",
+        "end" : 100.8,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "heavy",
+        "refIndex" : 117,
+        "start" : 100.08,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.17 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.381,
+        "context" : "appeared it was heidi so you are",
+        "end" : 101.82,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "doctor",
+        "refIndex" : 117,
+        "start" : 100.8,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.222,
+        "context" : "appeared it was heidi so you are",
+        "end" : 103.74,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "plaster",
+        "refIndex" : 117,
+        "start" : 101.82,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.22 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.925,
+        "context" : "appeared it was heidi so you are",
+        "end" : 104.34,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "called",
+        "refIndex" : 117,
+        "start" : 103.74,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.794,
+        "context" : "appeared it was heidi so you are",
+        "end" : 104.76,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "out",
+        "refIndex" : 117,
+        "start" : 104.34,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.978,
+        "context" : "appeared it was heidi so you are",
+        "end" : 105.18,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "to",
+        "refIndex" : 117,
+        "start" : 104.76,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.674,
+        "context" : "appeared it was heidi so you are",
+        "end" : 105.42,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "her",
+        "refIndex" : 117,
+        "start" : 105.18,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.599,
+        "context" : "appeared it was heidi so you are",
+        "end" : 107.1,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "but",
+        "refIndex" : 117,
+        "start" : 105.54,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.428,
+        "context" : "appeared it was heidi so you are",
+        "end" : 107.82,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "it's",
+        "refIndex" : 117,
+        "start" : 107.1,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.479,
+        "context" : "appeared it was heidi so you are",
+        "end" : 108.66,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "surprised",
+        "refIndex" : 117,
+        "start" : 107.82,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.585,
+        "context" : "appeared it was heidi so you are",
+        "end" : 109.56,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "heavy",
+        "ref" : "heidi",
+        "refIndex" : 117,
+        "start" : 108.66,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.339,
+        "context" : "don't you cry to ease the sadness",
+        "end" : 120.96,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "too",
+        "refIndex" : 128,
+        "start" : 120.54,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.34 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.292,
+        "context" : "don't you cry to ease the sadness",
+        "end" : 121.62,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "is",
+        "refIndex" : 128,
+        "start" : 120.96,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.497,
+        "context" : "don't you cry to ease the sadness",
+        "end" : 122.94,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "the",
+        "refIndex" : 128,
+        "start" : 121.62,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.781,
+        "context" : "don't you cry to ease the sadness",
+        "end" : 123.78,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "sadness",
+        "refIndex" : 128,
+        "start" : 122.94,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.695,
+        "context" : "don't you cry to ease the sadness",
+        "end" : 124.5,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "no",
+        "refIndex" : 128,
+        "start" : 123.84,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.919,
+        "context" : "don't you cry to ease the sadness",
+        "end" : 124.8,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "i'm",
+        "refIndex" : 128,
+        "start" : 124.5,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.995,
+        "context" : "don't you cry to ease the sadness",
+        "end" : 124.98,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "not",
+        "refIndex" : 128,
+        "start" : 124.8,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.978,
+        "context" : "don't you cry to ease the sadness",
+        "end" : 125.7,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "allowed",
+        "refIndex" : 128,
+        "start" : 124.98,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.236,
+        "context" : "you cry to ease the sadness the",
+        "end" : 127.08,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "have",
+        "refIndex" : 129,
+        "start" : 126.18,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.24 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.303,
+        "context" : "you cry to ease the sadness the",
+        "end" : 127.86,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "had",
+        "ref" : "ease",
+        "refIndex" : 129,
+        "start" : 127.08,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.30 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.625,
+        "context" : "to ease the sadness the doctor suggested",
+        "end" : 130.74,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "exclaim",
+        "refIndex" : 131,
+        "start" : 128.22,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.934,
+        "context" : "to ease the sadness the doctor suggested",
+        "end" : 133.38,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "if",
+        "refIndex" : 131,
+        "start" : 130.86,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.958,
+        "context" : "to ease the sadness the doctor suggested",
+        "end" : 133.68,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "i",
+        "refIndex" : 131,
+        "start" : 133.38,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.974,
+        "context" : "to ease the sadness the doctor suggested",
+        "end" : 134.58,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "ever",
+        "refIndex" : 131,
+        "start" : 133.68,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.557,
+        "context" : "to ease the sadness the doctor suggested",
+        "end" : 135.6,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "cried",
+        "refIndex" : 131,
+        "start" : 134.58,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.45,
+        "context" : "to ease the sadness the doctor suggested",
+        "end" : 136.44,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "miss",
+        "refIndex" : 131,
+        "start" : 135.6,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.287,
+        "context" : "to ease the sadness the doctor suggested",
+        "end" : 138.48,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "rotten",
+        "refIndex" : 131,
+        "start" : 136.44,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.068,
+        "context" : "to ease the sadness the doctor suggested",
+        "end" : 138.96,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "mail",
+        "refIndex" : 131,
+        "start" : 138.48,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.07 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.781,
+        "context" : "to ease the sadness the doctor suggested",
+        "end" : 139.38,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "would",
+        "refIndex" : 131,
+        "start" : 138.96,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.959,
+        "context" : "to ease the sadness the doctor suggested",
+        "end" : 139.68,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "take",
+        "refIndex" : 131,
+        "start" : 139.38,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.273,
+        "context" : "to ease the sadness the doctor suggested",
+        "end" : 140.52,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "her",
+        "refIndex" : 131,
+        "start" : 139.68,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.27 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.517,
+        "context" : "to ease the sadness the doctor suggested",
+        "end" : 142.14,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "away",
+        "refIndex" : 131,
+        "start" : 140.52,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.82,
+        "context" : "to ease the sadness the doctor suggested",
+        "end" : 142.32,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "my",
+        "refIndex" : 131,
+        "start" : 142.14,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.682,
+        "context" : "to ease the sadness the doctor suggested",
+        "end" : 142.74,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "book",
+        "ref" : "sadness",
+        "refIndex" : 131,
+        "start" : 142.32,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.635,
+        "context" : "the sadness the doctor suggested heidi have",
+        "end" : 144.66,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "doctor's",
+        "refIndex" : 133,
+        "start" : 143.64,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.204,
+        "context" : "the sadness the doctor suggested heidi have",
+        "end" : 146.22,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "sketchy",
+        "refIndex" : 133,
+        "start" : 144.66,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.20 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.271,
+        "context" : "the sadness the doctor suggested heidi have",
+        "end" : 147.3,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "suggested",
+        "ref" : "doctor",
+        "refIndex" : 133,
+        "start" : 146.34,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.27 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.307,
+        "context" : "the doctor suggested heidi have a good",
+        "end" : 149.34,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "had",
+        "refIndex" : 135,
+        "start" : 148.56,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.31 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.808,
+        "context" : "the doctor suggested heidi have a good",
+        "end" : 149.94,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "you",
+        "ref" : "heidi",
+        "refIndex" : 135,
+        "start" : 149.34,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.177,
+        "context" : "heidi have a good cry that girl",
+        "end" : 150.9,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "good",
+        "refIndex" : 138,
+        "start" : 150.3,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.18 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.196,
+        "context" : "have a good cry that girl needs",
+        "end" : 151.8,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "try",
+        "refIndex" : 139,
+        "start" : 151.08,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.20 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.635,
+        "context" : "a good cry that girl needs to",
+        "end" : 153.54,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "that's",
+        "ref" : "that",
+        "refIndex" : 140,
+        "start" : 152.58,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.484,
+        "context" : "good cry that girl needs to go",
+        "end" : 153.96,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "grown",
+        "ref" : "girl",
+        "refIndex" : 141,
+        "start" : 153.54,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.525,
+        "context" : "cry that girl needs to go home",
+        "end" : 154.2,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "need",
+        "ref" : "needs",
+        "refIndex" : 142,
+        "start" : 153.96,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.477,
+        "context" : "home to be cured he then told",
+        "end" : 159.6,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "curled",
+        "ref" : "cured",
+        "refIndex" : 148,
+        "start" : 158.82,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "refTypo",
+        "confidence" : 0.32,
+        "context" : "then told mr seemann after careful thought",
+        "end" : 167.52,
+        "kind" : "substitute",
+        "label" : "原文可疑",
+        "read" : "cessman",
+        "ref" : "seemann",
+        "refIndex" : 153,
+        "start" : 165.78,
+        "suggest" : "skip",
+        "why" : "`.ref.txt` 里是「Seemann」，扫图时就标了认得可疑 —— **多半是扫描认错**，去 marked.png 上核一眼。她读的是「cessman」。识别器对这处只有 0.32 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.274,
+        "context" : "seemann after careful thought mr sesemann decided",
+        "end" : 170.58,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "salt",
+        "refIndex" : 156,
+        "start" : 169.62,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.27 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.53,
+        "context" : "seemann after careful thought mr sesemann decided",
+        "end" : 172.92,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "saysman",
+        "ref" : "thought",
+        "refIndex" : 156,
+        "start" : 170.58,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.578,
+        "context" : "after careful thought mr sesemann decided it",
+        "end" : 173.64,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "decided",
+        "ref" : "mr",
+        "refIndex" : 157,
+        "start" : 172.92,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "refTypo",
+        "confidence" : 0.135,
+        "context" : "careful thought mr sesemann decided it was",
+        "end" : 175.62,
+        "kind" : "substitute",
+        "label" : "原文可疑",
+        "read" : "uh",
+        "ref" : "sesemann",
+        "refIndex" : 158,
+        "start" : 173.82,
+        "suggest" : "skip",
+        "why" : "`.ref.txt` 里是「Sesemann」，扫图时就标了认得可疑 —— **多半是扫描认错**，去 marked.png 上核一眼。她读的是「uh」。识别器对这处只有 0.14 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.195,
+        "context" : "thought mr sesemann decided it was right",
+        "end" : 177.96,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "and",
+        "ref" : "decided",
+        "refIndex" : 159,
+        "start" : 175.62,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.20 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.079,
+        "context" : "was right to send heidi back to",
+        "end" : 181.8,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "some",
+        "ref" : "send",
+        "refIndex" : 164,
+        "start" : 181.44,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.08 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.08,
+        "context" : "right to send heidi back to her",
+        "end" : 182.52,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "highly",
+        "ref" : "heidi",
+        "refIndex" : 165,
+        "start" : 181.8,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑。识别器对这处只有 0.08 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.633,
+        "context" : "back to her grandfather's he then told",
+        "end" : 183.84,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "one",
+        "ref" : "grandfather's",
+        "refIndex" : 169,
+        "start" : 183.42,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.681,
+        "context" : "to her grandfather's he then told clara",
+        "end" : 188.58,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "grandfather's",
+        "ref" : "he",
+        "refIndex" : 170,
+        "start" : 183.84,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.377,
+        "context" : "her grandfather's he then told clara his",
+        "end" : 189.36,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "hidden",
+        "ref" : "then",
+        "refIndex" : 171,
+        "start" : 188.58,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.109,
+        "context" : "grandfather's he then told clara his decision",
+        "end" : 190.38,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "talk",
+        "ref" : "told",
+        "refIndex" : 172,
+        "start" : 189.36,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.11 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.671,
+        "context" : "told clara his decision",
+        "end" : 195.18,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "you",
+        "refIndex" : 176,
+        "start" : 193.8,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.991,
+        "context" : "told clara his decision",
+        "end" : 195.54,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "can",
+        "refIndex" : 176,
+        "start" : 195.18,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.963,
+        "context" : "told clara his decision",
+        "end" : 196.14,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "send",
+        "refIndex" : 176,
+        "start" : 195.54,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.732,
+        "context" : "told clara his decision",
+        "end" : 196.62,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "her",
+        "refIndex" : 176,
+        "start" : 196.14,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.469,
+        "context" : "told clara his decision",
+        "end" : 197.22,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "back",
+        "refIndex" : 176,
+        "start" : 196.62,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.765,
+        "context" : "told clara his decision",
+        "end" : 198.96,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "clara",
+        "refIndex" : 176,
+        "start" : 197.34,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.348,
+        "context" : "told clara his decision",
+        "end" : 200.04,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "cried",
+        "refIndex" : 176,
+        "start" : 198.96,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.35 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.138,
+        "context" : "told clara his decision",
+        "end" : 200.88,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "oh",
+        "refIndex" : 176,
+        "start" : 200.04,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.14 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.849,
+        "context" : "told clara his decision",
+        "end" : 201.54,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "upon",
+        "refIndex" : 176,
+        "start" : 200.88,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.967,
+        "context" : "told clara his decision",
+        "end" : 202.26,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "hearing",
+        "refIndex" : 176,
+        "start" : 201.54,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.928,
+        "context" : "told clara his decision",
+        "end" : 202.92,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "the",
+        "refIndex" : 176,
+        "start" : 202.26,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.697,
+        "context" : "told clara his decision",
+        "end" : 203.7,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "news",
+        "refIndex" : 176,
+        "start" : 202.92,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.989,
+        "context" : "told clara his decision",
+        "end" : 204.36,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "i",
+        "refIndex" : 176,
+        "start" : 203.76,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.98,
+        "context" : "told clara his decision",
+        "end" : 204.66,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "can",
+        "refIndex" : 176,
+        "start" : 204.36,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.678,
+        "context" : "told clara his decision",
+        "end" : 205.38,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "stand",
+        "refIndex" : 176,
+        "start" : 204.66,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.814,
+        "context" : "told clara his decision",
+        "end" : 208.2,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "the",
+        "refIndex" : 176,
+        "start" : 205.5,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.965,
+        "context" : "told clara his decision",
+        "end" : 208.68,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "thought",
+        "refIndex" : 176,
+        "start" : 208.2,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.97,
+        "context" : "told clara his decision",
+        "end" : 209.1,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "of",
+        "refIndex" : 176,
+        "start" : 208.68,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.819,
+        "context" : "told clara his decision",
+        "end" : 210.42,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "losing",
+        "refIndex" : 176,
+        "start" : 209.1,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.967,
+        "context" : "told clara his decision",
+        "end" : 210.72,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "my",
+        "refIndex" : 176,
+        "start" : 210.42,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.996,
+        "context" : "told clara his decision",
+        "end" : 211.26,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "best",
+        "refIndex" : 176,
+        "start" : 210.72,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.883,
+        "context" : "told clara his decision",
+        "end" : 211.68,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "friend",
+        "refIndex" : 176,
+        "start" : 211.26,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.91,
+        "context" : "told clara his decision",
+        "end" : 213.72,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "don't",
+        "refIndex" : 176,
+        "start" : 211.74,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.487,
+        "context" : "told clara his decision",
+        "end" : 214.32,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "cry",
+        "refIndex" : 176,
+        "start" : 213.72,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.507,
+        "context" : "told clara his decision",
+        "end" : 215.16,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "headache",
+        "refIndex" : 176,
+        "start" : 214.32,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.812,
+        "context" : "told clara his decision",
+        "end" : 215.76,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "and",
+        "refIndex" : 176,
+        "start" : 215.16,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.97,
+        "context" : "told clara his decision",
+        "end" : 216.3,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "we",
+        "refIndex" : 176,
+        "start" : 215.76,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.873,
+        "context" : "told clara his decision",
+        "end" : 216.78,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "would",
+        "refIndex" : 176,
+        "start" : 216.3,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.633,
+        "context" : "told clara his decision",
+        "end" : 217.32,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "with",
+        "refIndex" : 176,
+        "start" : 216.78,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.527,
+        "context" : "told clara his decision",
+        "end" : 217.98,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "it",
+        "refIndex" : 176,
+        "start" : 217.32,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.753,
+        "context" : "told clara his decision",
+        "end" : 218.4,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "you",
+        "refIndex" : 176,
+        "start" : 217.98,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.92,
+        "context" : "told clara his decision",
+        "end" : 219.06,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "next",
+        "refIndex" : 176,
+        "start" : 218.4,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.391,
+        "context" : "told clara his decision",
+        "end" : 220.56,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "ear",
+        "refIndex" : 176,
+        "start" : 219.06,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.948,
+        "context" : "told clara his decision",
+        "end" : 221.16,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "clara",
+        "refIndex" : 176,
+        "start" : 220.62,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.922,
+        "context" : "told clara his decision",
+        "end" : 222,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "handed",
+        "refIndex" : 176,
+        "start" : 221.16,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.975,
+        "context" : "told clara his decision",
+        "end" : 222.9,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "over",
+        "refIndex" : 176,
+        "start" : 222,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.968,
+        "context" : "told clara his decision",
+        "end" : 223.32,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "a",
+        "refIndex" : 176,
+        "start" : 222.9,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.667,
+        "context" : "told clara his decision",
+        "end" : 224.52,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "basket",
+        "refIndex" : 176,
+        "start" : 223.32,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.346,
+        "context" : "told clara his decision",
+        "end" : 226.08,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "to",
+        "refIndex" : 176,
+        "start" : 224.58,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.35 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.508,
+        "context" : "told clara his decision",
+        "end" : 226.68,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "her",
+        "refIndex" : 176,
+        "start" : 226.08,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.436,
+        "context" : "told clara his decision",
+        "end" : 227.58,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "look",
+        "refIndex" : 176,
+        "start" : 226.68,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.29,
+        "context" : "told clara his decision",
+        "end" : 228.66,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "would",
+        "refIndex" : 176,
+        "start" : 227.58,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.656,
+        "context" : "told clara his decision",
+        "end" : 229.38,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "i",
+        "refIndex" : 176,
+        "start" : 228.66,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.89,
+        "context" : "told clara his decision",
+        "end" : 230.04,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "have",
+        "refIndex" : 176,
+        "start" : 229.38,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.434,
+        "context" : "told clara his decision",
+        "end" : 230.88,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "a",
+        "refIndex" : 176,
+        "start" : 230.04,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.858,
+        "context" : "told clara his decision",
+        "end" : 233.7,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "i",
+        "refIndex" : 176,
+        "start" : 231,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.945,
+        "context" : "told clara his decision",
+        "end" : 234,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "have",
+        "refIndex" : 176,
+        "start" : 233.7,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.996,
+        "context" : "told clara his decision",
+        "end" : 234.78,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "prepared",
+        "refIndex" : 176,
+        "start" : 234,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.99,
+        "context" : "told clara his decision",
+        "end" : 235.14,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "for",
+        "refIndex" : 176,
+        "start" : 234.78,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.867,
+        "context" : "told clara his decision",
+        "end" : 235.44,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "you",
+        "refIndex" : 176,
+        "start" : 235.14,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.635,
+        "context" : "told clara his decision",
+        "end" : 236.94,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "it",
+        "refIndex" : 176,
+        "start" : 235.5,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.991,
+        "context" : "told clara his decision",
+        "end" : 237.3,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "was",
+        "refIndex" : 176,
+        "start" : 236.94,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.987,
+        "context" : "told clara his decision",
+        "end" : 237.72,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "full",
+        "refIndex" : 176,
+        "start" : 237.3,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.985,
+        "context" : "told clara his decision",
+        "end" : 238.14,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "of",
+        "refIndex" : 176,
+        "start" : 237.72,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.804,
+        "context" : "told clara his decision",
+        "end" : 239.4,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "fresh",
+        "refIndex" : 176,
+        "start" : 238.14,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.326,
+        "context" : "told clara his decision",
+        "end" : 240.3,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "those",
+        "refIndex" : 176,
+        "start" : 239.4,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.33 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.817,
+        "context" : "told clara his decision",
+        "end" : 241.5,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "that",
+        "refIndex" : 176,
+        "start" : 240.3,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.421,
+        "context" : "told clara his decision",
+        "end" : 242.46,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "clara",
+        "refIndex" : 176,
+        "start" : 241.5,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.97,
+        "context" : "told clara his decision",
+        "end" : 243.12,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "was",
+        "refIndex" : 176,
+        "start" : 242.46,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.598,
+        "context" : "told clara his decision",
+        "end" : 243.66,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "sure",
+        "refIndex" : 176,
+        "start" : 243.12,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.973,
+        "context" : "told clara his decision",
+        "end" : 244.38,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "granny",
+        "refIndex" : 176,
+        "start" : 243.66,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.981,
+        "context" : "told clara his decision",
+        "end" : 244.8,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "would",
+        "refIndex" : 176,
+        "start" : 244.38,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.798,
+        "context" : "told clara his decision",
+        "end" : 245.28,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "lack",
+        "refIndex" : 176,
+        "start" : 244.8,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.763,
+        "context" : "told clara his decision",
+        "end" : 254.34,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "responsibility",
+        "refIndex" : 176,
+        "start" : 251.4,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.394,
+        "context" : "told clara his decision",
+        "end" : 255.24,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "grampy",
+        "refIndex" : 176,
+        "start" : 254.34,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.588,
+        "context" : "told clara his decision",
+        "end" : 258.06,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "carpenter",
+        "refIndex" : 176,
+        "start" : 255.24,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.551,
+        "context" : "told clara his decision",
+        "end" : 259.26,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "familiar",
+        "refIndex" : 176,
+        "start" : 258.06,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.302,
+        "context" : "told clara his decision",
+        "end" : 262.56,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "pastor",
+        "refIndex" : 176,
+        "start" : 259.32,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.30 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.456,
+        "context" : "told clara his decision",
+        "end" : 263.88,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "stubborn",
+        "refIndex" : 176,
+        "start" : 262.56,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.638,
+        "context" : "told clara his decision",
+        "end" : 266.88,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "awesome",
+        "refIndex" : 176,
+        "start" : 263.94,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.255,
+        "context" : "told clara his decision",
+        "end" : 268.2,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "badger",
+        "refIndex" : 176,
+        "start" : 266.88,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.26 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.01,
+        "context" : "told clara his decision",
+        "end" : 268.38,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "bad",
+        "refIndex" : 176,
+        "start" : 268.2,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.01 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.684,
+        "context" : "told clara his decision",
+        "end" : 269.4,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "barrel",
+        "refIndex" : 176,
+        "start" : 268.38,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.458,
+        "context" : "told clara his decision",
+        "end" : 270.06,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "album",
+        "refIndex" : 176,
+        "start" : 269.4,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.606,
+        "context" : "told clara his decision",
+        "end" : 272.76,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "innocent",
+        "refIndex" : 176,
+        "start" : 270.12,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.589,
+        "context" : "told clara his decision",
+        "end" : 275.28,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "homesick",
+        "refIndex" : 176,
+        "start" : 272.76,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.514,
+        "context" : "told clara his decision",
+        "end" : 276.06,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "sob",
+        "refIndex" : 176,
+        "start" : 275.28,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.643,
+        "context" : "told clara his decision",
+        "end" : 279.48,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "rumor",
+        "refIndex" : 176,
+        "start" : 276.12,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.288,
+        "context" : "told clara his decision",
+        "end" : 280.38,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "prack",
+        "refIndex" : 176,
+        "start" : 279.48,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.655,
+        "context" : "told clara his decision",
+        "end" : 281.52,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "trunk",
+        "refIndex" : 176,
+        "start" : 280.38,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.75,
+        "context" : "told clara his decision",
+        "end" : 284.52,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "responsibility",
+        "refIndex" : 176,
+        "start" : 281.58,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.428,
+        "context" : "told clara his decision",
+        "end" : 287.34,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "really",
+        "refIndex" : 176,
+        "start" : 284.58,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.613,
+        "context" : "told clara his decision",
+        "end" : 290.82,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "nonsense",
+        "refIndex" : 176,
+        "start" : 287.34,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.417,
+        "context" : "told clara his decision",
+        "end" : 292.32,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "jealous",
+        "refIndex" : 176,
+        "start" : 290.88,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.443,
+        "context" : "told clara his decision",
+        "end" : 293.34,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "fold",
+        "refIndex" : 176,
+        "start" : 292.32,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.429,
+        "context" : "told clara his decision",
+        "end" : 299.88,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "flood",
+        "refIndex" : 176,
+        "start" : 299.46,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.604,
+        "context" : "told clara his decision",
+        "end" : 303.36,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "recovery",
+        "refIndex" : 176,
+        "start" : 299.88,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.856,
+        "context" : "told clara his decision",
+        "end" : 304.2,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "reward",
+        "refIndex" : 176,
+        "start" : 303.36,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      }
+    ],
+    "readWordCount" : 314,
+    "refTimes" : [
+      0.66,
+      1.14,
+      1.38,
+      3.9,
+      4.56,
+      4.92,
+      5.22,
+      6,
+      6.42,
+      7.74,
+      8.46,
+      8.76,
+      9.12,
+      9.9,
+      10.26,
+      10.74,
+      11.16,
+      12.06,
+      12.24,
+      12.6,
+      13.32,
+      15.42,
+      16.14,
+      17.1,
+      17.88,
+      18.24,
+      18.54,
+      19.44,
+      21.18,
+      22.14,
+      22.5,
+      23.4,
+      23.58,
+      23.94,
+      24.36,
+      26.4,
+      27.12,
+      27.36,
+      27.66,
+      28.08,
+      28.32,
+      28.56,
+      28.92,
+      29.28,
+      30.3,
+      30.78,
+      31.02,
+      31.44,
+      32.46,
+      33.06,
+      33.36,
+      34.68,
+      34.92,
+      37.74,
+      38.16,
+      38.46,
+      38.88,
+      42.66,
+      42.96,
+      43.44,
+      44.04,
+      44.88,
+      45.54,
+      46.14,
+      46.2,
+      46.5,
+      48.12,
+      48.48,
+      48.96,
+      49.38,
+      53.34,
+      53.52,
+      54.48,
+      55.08,
+      55.38,
+      55.74,
+      56.34,
+      57.12,
+      57.78,
+      58.74,
+      60.9,
+      61.56,
+      62.52,
+      64.08,
+      65.4,
+      65.52,
+      66.12,
+      66.96,
+      67.86,
+      68.52,
+      69.3,
+      69.48,
+      69.72,
+      70.08,
+      71.16,
+      72.3,
+      73.92,
+      74.34,
+      75.48,
+      76.32,
+      77.22,
+      78.24,
+      79.62,
+      80.7,
+      81.12,
+      81.72,
+      82.14,
+      82.8,
+      92.4,
+      93.06,
+      93.48,
+      95.52,
+      97.2,
+      97.5,
+      98.34,
+      99.9,
+      100.08,
+      109.56,
+      115.44,
+      115.8,
+      116.04,
+      116.94,
+      117.42,
+      118.02,
+      119.1,
+      119.64,
+      119.82,
+      120.54,
+      126.18,
+      127.86,
+      128.22,
+      142.74,
+      143.64,
+      147.3,
+      148.56,
+      149.94,
+      150.12,
+      150.3,
+      151.08,
+      152.52,
+      153.54,
+      153.96,
+      154.2,
+      155.4,
+      156.24,
+      157.5,
+      158.46,
+      158.82,
+      159.6,
+      161.52,
+      162.78,
+      164.58,
+      165.78,
+      167.52,
+      167.94,
+      169.62,
+      172.92,
+      173.64,
+      175.62,
+      177.96,
+      179.22,
+      180.6,
+      181.02,
+      181.44,
+      181.8,
+      182.52,
+      182.76,
+      183.12,
+      183.42,
+      183.84,
+      188.58,
+      189.36,
+      190.38,
+      192.48,
+      192.6,
+      193.74
+    ],
+    "refWordCount" : 176,
+    "wcpm" : 27
+  },
+  "pages" : [
+    {
+      "end" : 82.8,
+      "errors" : 15,
+      "extras" : 6,
+      "matched" : 108,
+      "page" : 18,
+      "start" : 0.66,
+      "words" : 108
+    },
+    {
+      "end" : 193.74,
+      "errors" : 21,
+      "extras" : 44,
+      "matched" : 68,
+      "page" : 19,
+      "start" : 92.4,
+      "words" : 68
+    }
+  ],
+  "refSuspects" : [
+    {
+      "page" : 19,
+      "suggestions" : [
+
+      ],
+      "word" : "Seemann"
+    },
+    {
+      "page" : 19,
+      "suggestions" : [
+        "Sesame",
+        "Sesames"
+      ],
+      "word" : "Sesemann"
+    }
+  ],
+  "reference" : "But the book made Heidi even more unhappy as it told a story of a dying\nold woman. She thought of Grannie and feared she might have died.\nHeidi couldn't stop sobbing or hide her feelings. \"I'm afraid I won't be able\nto see Grannie. I miss my grandfather. I want to go back to the mountain.\"\nThe house was haunted by rumors about a ghost.\n\"I know this will scare Clara but I have no choice,\" she told herself while\nplanning her next move. So she told Clara and Heidi about the ghost. She\nhoped this would make Clara ask her father for help. And it did.\nand waited, and finally the \"ghost\"\nappeared.\nIt was Heidi.\n\"So, you are homesick,\" he said. \"But don't you cry to ease the sadness?\"\nThe doctor suggested Heidi have a good cry. \"That girl needs to go home to\nbe cured,\" he then told Mr. Seemann.\nAfter careful thought, Mr. Sesemann decided it was right to send Heidi back\nto her grandfather's. He then told Clara his decision.",
+  "slug" : "super8/L4/p18-19",
+  "transcript" : {
+    "alternatives" : [
+      {
+        "end" : 1.38,
+        "start" : 0,
+        "texts" : [
+          "But the book"
+        ]
+      },
+      {
+        "end" : 3.9,
+        "start" : 1.38,
+        "texts" : [
+          "made.",
+          "made, made,"
+        ]
+      },
+      {
+        "end" : 4.92,
+        "start" : 3.9,
+        "texts" : [
+          "Hetty even",
+          "Hetty, even"
+        ]
+      },
+      {
+        "end" : 5.22,
+        "start" : 4.92,
+        "texts" : [
+          "more"
+        ]
+      },
+      {
+        "end" : 6.42,
+        "start" : 5.22,
+        "texts" : [
+          "unhappy and",
+          "unhappy as",
+          "unhappy, and"
+        ]
+      },
+      {
+        "end" : 7.74,
+        "start" : 6.42,
+        "texts" : [
+          "it.",
+          "it,"
+        ]
+      },
+      {
+        "end" : 11.16,
+        "start" : 7.74,
+        "texts" : [
+          "Told a story of a dying old"
+        ]
+      },
+      {
+        "end" : 12.12,
+        "start" : 11.16,
+        "texts" : [
+          "woman.",
+          "woman"
+        ]
+      },
+      {
+        "end" : 14.04,
+        "start" : 12.12,
+        "texts" : [
+          "She thought of granny"
+        ]
+      },
+      {
+        "end" : 17.16,
+        "start" : 14.04,
+        "texts" : [
+          "to fit and fear.",
+          "to fit and feared.",
+          "too. And fear.",
+          "too. And feared.",
+          "to fear."
+        ]
+      },
+      {
+        "end" : 17.88,
+        "start" : 17.16,
+        "texts" : [
+          "She",
+          "she"
+        ]
+      },
+      {
+        "end" : 18.24,
+        "start" : 17.88,
+        "texts" : [
+          "might",
+          "must"
+        ]
+      },
+      {
+        "end" : 18.54,
+        "start" : 18.24,
+        "texts" : [
+          "have"
+        ]
+      },
+      {
+        "end" : 19.5,
+        "start" : 18.54,
+        "texts" : [
+          "died.",
+          "died,",
+          "died"
+        ]
+      },
+      {
+        "end" : 29.28,
+        "start" : 19.5,
+        "texts" : [
+          "Had he don't, couldn't stop sobbing or hiding her. Feelings, I'm afraid I won't be able to see"
+        ]
+      },
+      {
+        "end" : 30.78,
+        "start" : 29.28,
+        "texts" : [
+          "granny, I",
+          "granny and",
+          "granny, and",
+          "granny. I"
+        ]
+      },
+      {
+        "end" : 32.5199375,
+        "start" : 30.78,
+        "texts" : [
+          "miss my grandfather."
+        ]
+      },
+      {
+        "end" : 34.92,
+        "start" : 32.52,
+        "texts" : [
+          "I want to go"
+        ]
+      },
+      {
+        "end" : 37.74,
+        "start" : 34.92,
+        "texts" : [
+          "back up. Back",
+          "back up back",
+          "back up, back",
+          "back. Back"
+        ]
+      },
+      {
+        "end" : 39,
+        "start" : 37.74,
+        "texts" : [
+          "to the mountain."
+        ]
+      },
+      {
+        "end" : 43.44,
+        "start" : 39,
+        "texts" : [
+          "The house was"
+        ]
+      },
+      {
+        "end" : 44.88,
+        "start" : 43.44,
+        "texts" : [
+          "haunted by",
+          "haunted, by",
+          "haunted By"
+        ]
+      },
+      {
+        "end" : 45.54,
+        "start" : 44.88,
+        "texts" : [
+          "rumors",
+          "rumours"
+        ]
+      },
+      {
+        "end" : 46.56,
+        "start" : 45.54,
+        "texts" : [
+          "of a ghost."
+        ]
+      },
+      {
+        "end" : 53.52,
+        "start" : 46.56,
+        "texts" : [
+          "I know this will scared, but"
+        ]
+      },
+      {
+        "end" : 55.08,
+        "start" : 53.52,
+        "texts" : [
+          "it, I",
+          "I",
+          "it I"
+        ]
+      },
+      {
+        "end" : 55.74,
+        "start" : 55.08,
+        "texts" : [
+          "have no"
+        ]
+      },
+      {
+        "end" : 56.46,
+        "start" : 55.74,
+        "texts" : [
+          "choice.",
+          "choice,"
+        ]
+      },
+      {
+        "end" : 57.12,
+        "start" : 56.46,
+        "texts" : [
+          "She",
+          "she"
+        ]
+      },
+      {
+        "end" : 57.78,
+        "start" : 57.12,
+        "texts" : [
+          "told"
+        ]
+      },
+      {
+        "end" : 58.86,
+        "start" : 57.78,
+        "texts" : [
+          "herself.",
+          "herself,",
+          "herself?",
+          "herself"
+        ]
+      },
+      {
+        "end" : 66.96,
+        "start" : 58.86,
+        "texts" : [
+          "Well, planning her. Next move, so she told"
+        ]
+      },
+      {
+        "end" : 68.52,
+        "start" : 66.96,
+        "texts" : [
+          "Kara and",
+          "Clara and",
+          "Cara and"
+        ]
+      },
+      {
+        "end" : 69.3,
+        "start" : 68.52,
+        "texts" : [
+          "Heddy",
+          "Heddie"
+        ]
+      },
+      {
+        "end" : 70.2,
+        "start" : 69.3,
+        "texts" : [
+          "about the ghost."
+        ]
+      },
+      {
+        "end" : 71.16,
+        "start" : 70.2,
+        "texts" : [
+          "She"
+        ]
+      },
+      {
+        "end" : 73.92,
+        "start" : 71.16,
+        "texts" : [
+          "hoped this",
+          "hoped, this"
+        ]
+      },
+      {
+        "end" : 80.7,
+        "start" : 73.92,
+        "texts" : [
+          "would make Clara ask her grandfather for"
+        ]
+      },
+      {
+        "end" : 81.72,
+        "start" : 80.7,
+        "texts" : [
+          "help, and",
+          "help and"
+        ]
+      },
+      {
+        "end" : 82.86,
+        "start" : 81.72,
+        "texts" : [
+          "it did.",
+          "it's dead.",
+          "it's did."
+        ]
+      },
+      {
+        "end" : 87.9,
+        "start" : 82.86,
+        "texts" : [
+          "The doctor"
+        ]
+      },
+      {
+        "end" : 90.3,
+        "start" : 87.9,
+        "texts" : [
+          "and Mr.",
+          "and, Mr."
+        ]
+      },
+      {
+        "end" : 93.48,
+        "start" : 90.3,
+        "texts" : [
+          "Sessman waited and waited and"
+        ]
+      },
+      {
+        "end" : 97.2,
+        "start" : 93.48,
+        "texts" : [
+          "found. The",
+          "found, the",
+          "found, and the",
+          "sent, and the"
+        ]
+      },
+      {
+        "end" : 98.46,
+        "start" : 97.2,
+        "texts" : [
+          "ghost appeared."
+        ]
+      },
+      {
+        "end" : 100.08,
+        "start" : 98.46,
+        "texts" : [
+          "It was"
+        ]
+      },
+      {
+        "end" : 101.82,
+        "start" : 100.08,
+        "texts" : [
+          "heavy, doctor.",
+          "had the doctor.",
+          "heady, doctor."
+        ]
+      },
+      {
+        "end" : 104.34,
+        "start" : 101.82,
+        "texts" : [
+          "Plaster called",
+          "Plus, called"
+        ]
+      },
+      {
+        "end" : 105.5399375,
+        "start" : 104.34,
+        "texts" : [
+          "out to her."
+        ]
+      },
+      {
+        "end" : 107.82,
+        "start" : 105.54,
+        "texts" : [
+          "But it's"
+        ]
+      },
+      {
+        "end" : 109.68,
+        "start" : 107.82,
+        "texts" : [
+          "surprised, heavy.",
+          "surprised. Heading.",
+          "surprised, headed.",
+          "surprised, Heddy."
+        ]
+      },
+      {
+        "end" : 120.54,
+        "start" : 109.68,
+        "texts" : [
+          "So you are homesick, he said, but don't you cry"
+        ]
+      },
+      {
+        "end" : 120.96,
+        "start" : 120.54,
+        "texts" : [
+          "too",
+          "to"
+        ]
+      },
+      {
+        "end" : 121.62,
+        "start" : 120.96,
+        "texts" : [
+          "is,"
+        ]
+      },
+      {
+        "end" : 122.94,
+        "start" : 121.62,
+        "texts" : [
+          "the",
+          "The"
+        ]
+      },
+      {
+        "end" : 123.84,
+        "start" : 122.94,
+        "texts" : [
+          "sadness?",
+          "sadness.",
+          "sadness,"
+        ]
+      },
+      {
+        "end" : 126.18,
+        "start" : 123.84,
+        "texts" : [
+          "No, I'm not allowed to"
+        ]
+      },
+      {
+        "end" : 127.86,
+        "start" : 126.18,
+        "texts" : [
+          "have had",
+          "have, had",
+          "ha- had"
+        ]
+      },
+      {
+        "end" : 128.22,
+        "start" : 127.86,
+        "texts" : [
+          "the"
+        ]
+      },
+      {
+        "end" : 130.86,
+        "start" : 128.22,
+        "texts" : [
+          "exclaim.",
+          "exclaim?",
+          "exclaim,"
+        ]
+      },
+      {
+        "end" : 138.48,
+        "start" : 130.86,
+        "texts" : [
+          "If I ever cried, miss, Rotten"
+        ]
+      },
+      {
+        "end" : 139.38,
+        "start" : 138.48,
+        "texts" : [
+          "Mail would",
+          "Mail, would"
+        ]
+      },
+      {
+        "end" : 139.68,
+        "start" : 139.38,
+        "texts" : [
+          "take"
+        ]
+      },
+      {
+        "end" : 142.14,
+        "start" : 139.68,
+        "texts" : [
+          "her away",
+          "away",
+          "her, away"
+        ]
+      },
+      {
+        "end" : 142.8,
+        "start" : 142.14,
+        "texts" : [
+          "my book."
+        ]
+      },
+      {
+        "end" : 143.64,
+        "start" : 142.8,
+        "texts" : [
+          "The"
+        ]
+      },
+      {
+        "end" : 146.34,
+        "start" : 143.64,
+        "texts" : [
+          "doctor's sketchy.",
+          "doctor's. Skested.",
+          "doctor's. Scasti.",
+          "doctor's...",
+          "doctor's."
+        ]
+      },
+      {
+        "end" : 149.34,
+        "start" : 146.34,
+        "texts" : [
+          "Suggested. Suggested, had",
+          "Suggested. Suggested. Had",
+          "Suggested. Suggested. How",
+          "Suggested, had"
+        ]
+      },
+      {
+        "end" : 149.94,
+        "start" : 149.34,
+        "texts" : [
+          "you",
+          "do you"
+        ]
+      },
+      {
+        "end" : 151.08,
+        "start" : 149.94,
+        "texts" : [
+          "have a good, good"
+        ]
+      },
+      {
+        "end" : 152.58,
+        "start" : 151.08,
+        "texts" : [
+          "try, cry.",
+          "try?"
+        ]
+      },
+      {
+        "end" : 153.96,
+        "start" : 152.58,
+        "texts" : [
+          "That's grown"
+        ]
+      },
+      {
+        "end" : 155.4,
+        "start" : 153.96,
+        "texts" : [
+          "need to",
+          "need. To"
+        ]
+      },
+      {
+        "end" : 156.24,
+        "start" : 155.4,
+        "texts" : [
+          "go"
+        ]
+      },
+      {
+        "end" : 158.46,
+        "start" : 156.24,
+        "texts" : [
+          "home to",
+          "home. To"
+        ]
+      },
+      {
+        "end" : 158.82,
+        "start" : 158.46,
+        "texts" : [
+          "be"
+        ]
+      },
+      {
+        "end" : 159.72,
+        "start" : 158.82,
+        "texts" : [
+          "curled.",
+          "curd.",
+          "heard."
+        ]
+      },
+      {
+        "end" : 165.78,
+        "start" : 159.72,
+        "texts" : [
+          "He then. Told Mr.",
+          "He, then, told Mr.",
+          "He then, Told Mr."
+        ]
+      },
+      {
+        "end" : 170.58,
+        "start" : 165.78,
+        "texts" : [
+          "Cessman, after careful salt,"
+        ]
+      },
+      {
+        "end" : 172.92,
+        "start" : 170.58,
+        "texts" : [
+          "saysman",
+          "says, when",
+          "says, man",
+          "Cessman"
+        ]
+      },
+      {
+        "end" : 173.82,
+        "start" : 172.92,
+        "texts" : [
+          "decided.",
+          "decided,"
+        ]
+      },
+      {
+        "end" : 183.84,
+        "start" : 173.82,
+        "texts" : [
+          "Uh... And... It was right to some highly back to her one"
+        ]
+      },
+      {
+        "end" : 190.38,
+        "start" : 183.84,
+        "texts" : [
+          "grandfather's, hidden talk,",
+          "grandfather's hidden talk.",
+          "grandfather's, he dental,",
+          "grandfather's, hidden talk."
+        ]
+      },
+      {
+        "end" : 192.6,
+        "start" : 190.38,
+        "texts" : [
+          "Clara, his",
+          "Clara has"
+        ]
+      },
+      {
+        "end" : 193.7999375,
+        "start" : 192.6,
+        "texts" : [
+          "decision.",
+          "decisions."
+        ]
+      },
+      {
+        "end" : 196.14,
+        "start" : 193.8,
+        "texts" : [
+          "You can send"
+        ]
+      },
+      {
+        "end" : 196.62,
+        "start" : 196.14,
+        "texts" : [
+          "her",
+          "for"
+        ]
+      },
+      {
+        "end" : 197.34,
+        "start" : 196.62,
+        "texts" : [
+          "back.",
+          "bag.",
+          "back,"
+        ]
+      },
+      {
+        "end" : 198.96,
+        "start" : 197.34,
+        "texts" : [
+          "Clara"
+        ]
+      },
+      {
+        "end" : 201.54,
+        "start" : 198.96,
+        "texts" : [
+          "cried, oh, upon",
+          "cried oh, upon",
+          "cried Oh, upon",
+          "cried oh upon"
+        ]
+      },
+      {
+        "end" : 202.92,
+        "start" : 201.54,
+        "texts" : [
+          "hearing the"
+        ]
+      },
+      {
+        "end" : 203.76,
+        "start" : 202.92,
+        "texts" : [
+          "news.",
+          "news,"
+        ]
+      },
+      {
+        "end" : 204.36,
+        "start" : 203.76,
+        "texts" : [
+          "I"
+        ]
+      },
+      {
+        "end" : 205.5,
+        "start" : 204.36,
+        "texts" : [
+          "can stand.",
+          "can't stand",
+          "can stand,",
+          "can stand",
+          "can stand?"
+        ]
+      },
+      {
+        "end" : 208.2,
+        "start" : 205.5,
+        "texts" : [
+          "The"
+        ]
+      },
+      {
+        "end" : 210.42,
+        "start" : 208.2,
+        "texts" : [
+          "thought of losing",
+          "thoughts of losing",
+          "thought of Losing",
+          "thought of, losing"
+        ]
+      },
+      {
+        "end" : 211.26,
+        "start" : 210.42,
+        "texts" : [
+          "my best"
+        ]
+      },
+      {
+        "end" : 211.74,
+        "start" : 211.26,
+        "texts" : [
+          "friend.",
+          "friend,"
+        ]
+      },
+      {
+        "end" : 216.3,
+        "start" : 211.74,
+        "texts" : [
+          "Don't cry, headache, and we"
+        ]
+      },
+      {
+        "end" : 217.32,
+        "start" : 216.3,
+        "texts" : [
+          "would with",
+          "would, with"
+        ]
+      },
+      {
+        "end" : 218.4,
+        "start" : 217.32,
+        "texts" : [
+          "it, you"
+        ]
+      },
+      {
+        "end" : 220.62,
+        "start" : 218.4,
+        "texts" : [
+          "next ear.",
+          "next.",
+          "next, ear.",
+          "next. Ear,"
+        ]
+      },
+      {
+        "end" : 222.9,
+        "start" : 220.62,
+        "texts" : [
+          "Clara handed over",
+          "Clara handed, over",
+          "Clara, handed over"
+        ]
+      },
+      {
+        "end" : 223.32,
+        "start" : 222.9,
+        "texts" : [
+          "a"
+        ]
+      },
+      {
+        "end" : 224.58,
+        "start" : 223.32,
+        "texts" : [
+          "basket.",
+          "basket hit.",
+          "basket"
+        ]
+      },
+      {
+        "end" : 226.08,
+        "start" : 224.58,
+        "texts" : [
+          "To"
+        ]
+      },
+      {
+        "end" : 227.58,
+        "start" : 226.08,
+        "texts" : [
+          "her, look,",
+          "her look,"
+        ]
+      },
+      {
+        "end" : 229.38,
+        "start" : 227.58,
+        "texts" : [
+          "would I",
+          "what I",
+          "would, I"
+        ]
+      },
+      {
+        "end" : 231,
+        "start" : 229.38,
+        "texts" : [
+          "have a.",
+          "have a,",
+          "have."
+        ]
+      },
+      {
+        "end" : 234,
+        "start" : 231,
+        "texts" : [
+          "I have",
+          "have"
+        ]
+      },
+      {
+        "end" : 235.14,
+        "start" : 234,
+        "texts" : [
+          "prepared for"
+        ]
+      },
+      {
+        "end" : 235.5,
+        "start" : 235.14,
+        "texts" : [
+          "you.",
+          "you",
+          "you,"
+        ]
+      },
+      {
+        "end" : 239.4,
+        "start" : 235.5,
+        "texts" : [
+          "It was full of fresh"
+        ]
+      },
+      {
+        "end" : 241.5,
+        "start" : 239.4,
+        "texts" : [
+          "those that",
+          "nose that"
+        ]
+      },
+      {
+        "end" : 243.12,
+        "start" : 241.5,
+        "texts" : [
+          "Clara was",
+          "Kara was"
+        ]
+      },
+      {
+        "end" : 244.8,
+        "start" : 243.12,
+        "texts" : [
+          "sure granny would"
+        ]
+      },
+      {
+        "end" : 245.4,
+        "start" : 244.8,
+        "texts" : [
+          "lack.",
+          "like."
+        ]
+      },
+      {
+        "end" : 254.34,
+        "start" : 251.4,
+        "texts" : [
+          "Responsibility,"
+        ]
+      },
+      {
+        "end" : 258.06,
+        "start" : 254.34,
+        "texts" : [
+          "grampy, carpenter,",
+          "grampy carpenter,",
+          "Grampy, Carpenter,"
+        ]
+      },
+      {
+        "end" : 259.32,
+        "start" : 258.06,
+        "texts" : [
+          "familiar.",
+          "familiar,"
+        ]
+      },
+      {
+        "end" : 263.94,
+        "start" : 259.32,
+        "texts" : [
+          "Pastor, stubborn.",
+          "Pastor stubborn.",
+          "Pastor, Stubborn.",
+          "Pastor, stopborn.",
+          "Pastor, stubborn,"
+        ]
+      },
+      {
+        "end" : 268.2,
+        "start" : 263.94,
+        "texts" : [
+          "Awesome, badger,"
+        ]
+      },
+      {
+        "end" : 270.12,
+        "start" : 268.2,
+        "texts" : [
+          "bad barrel album.",
+          "barrel album.",
+          "bad, barrel album.",
+          "barrel, album.",
+          "bad, barrel, album."
+        ]
+      },
+      {
+        "end" : 272.76,
+        "start" : 270.12,
+        "texts" : [
+          "Innocent,",
+          "Innocent."
+        ]
+      },
+      {
+        "end" : 276.12,
+        "start" : 272.76,
+        "texts" : [
+          "homesick, sob.",
+          "homesick, so.",
+          "homesick sob.",
+          "homesick, sob,",
+          "Homesick, sob."
+        ]
+      },
+      {
+        "end" : 279.48,
+        "start" : 276.12,
+        "texts" : [
+          "Rumor,"
+        ]
+      },
+      {
+        "end" : 280.38,
+        "start" : 279.48,
+        "texts" : [
+          "Prack,",
+          "Prag,",
+          "Pract,"
+        ]
+      },
+      {
+        "end" : 281.58,
+        "start" : 280.38,
+        "texts" : [
+          "Trunk.",
+          "Trunk,"
+        ]
+      },
+      {
+        "end" : 284.58,
+        "start" : 281.58,
+        "texts" : [
+          "Responsibility.",
+          "Responsibility,",
+          "responsibility.",
+          "Responsibility"
+        ]
+      },
+      {
+        "end" : 287.34,
+        "start" : 284.58,
+        "texts" : [
+          "Really.",
+          "Really,"
+        ]
+      },
+      {
+        "end" : 290.88,
+        "start" : 287.34,
+        "texts" : [
+          "Nonsense.",
+          "Nonsense,"
+        ]
+      },
+      {
+        "end" : 293.46,
+        "start" : 290.88,
+        "texts" : [
+          "Jealous, fold.",
+          "Jealous, bold.",
+          "Jealous."
+        ]
+      },
+      {
+        "end" : 299.88,
+        "start" : 299.46,
+        "texts" : [
+          "Flood,"
+        ]
+      },
+      {
+        "end" : 304.32,
+        "start" : 299.88,
+        "texts" : [
+          "recovery, reward.",
+          "recovery reward.",
+          "recovery, rewards.",
+          "recovery, reward,"
+        ]
+      }
+    ],
+    "contextPrimed" : true,
+    "locale" : "en-US",
+    "runs" : [
+      {
+        "confidence" : 0.839,
+        "end" : 0.66,
+        "start" : 0,
+        "text" : "But"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 1.14,
+        "start" : 0.66,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.984,
+        "end" : 1.38,
+        "start" : 1.14,
+        "text" : " book"
+      },
+      {
+        "confidence" : 0.421,
+        "end" : 3.9,
+        "start" : 1.38,
+        "text" : " made."
+      },
+      {
+        "confidence" : 0.189,
+        "end" : 4.56,
+        "start" : 3.9,
+        "text" : " Hetty"
+      },
+      {
+        "confidence" : 0.988,
+        "end" : 4.92,
+        "start" : 4.56,
+        "text" : " even"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 5.22,
+        "start" : 4.92,
+        "text" : " more"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 6,
+        "start" : 5.22,
+        "text" : " unhappy"
+      },
+      {
+        "confidence" : 0.642,
+        "end" : 6.42,
+        "start" : 6,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.506,
+        "end" : 7.74,
+        "start" : 6.42,
+        "text" : " it."
+      },
+      {
+        "confidence" : 0.361,
+        "end" : 8.46,
+        "start" : 7.74,
+        "text" : " Told"
+      },
+      {
+        "confidence" : 0.554,
+        "end" : 8.76,
+        "start" : 8.46,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.985,
+        "end" : 9.12,
+        "start" : 8.76,
+        "text" : " story"
+      },
+      {
+        "confidence" : 0.977,
+        "end" : 9.9,
+        "start" : 9.12,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.92,
+        "end" : 10.26,
+        "start" : 9.9,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 10.74,
+        "start" : 10.26,
+        "text" : " dying"
+      },
+      {
+        "confidence" : 0.966,
+        "end" : 11.16,
+        "start" : 10.74,
+        "text" : " old"
+      },
+      {
+        "confidence" : 0.547,
+        "end" : 12.06,
+        "start" : 11.16,
+        "text" : " woman."
+      },
+      {
+        "confidence" : 0.18,
+        "end" : 12.24,
+        "start" : 12.12,
+        "text" : " She"
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 12.6,
+        "start" : 12.24,
+        "text" : " thought"
+      },
+      {
+        "confidence" : 0.958,
+        "end" : 13.32,
+        "start" : 12.6,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 14.04,
+        "start" : 13.32,
+        "text" : " granny"
+      },
+      {
+        "confidence" : 0.715,
+        "end" : 14.46,
+        "start" : 14.04,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.069,
+        "end" : 15.42,
+        "start" : 14.46,
+        "text" : " fit"
+      },
+      {
+        "confidence" : 0.563,
+        "end" : 16.14,
+        "start" : 15.42,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.262,
+        "end" : 17.1,
+        "start" : 16.14,
+        "text" : " fear."
+      },
+      {
+        "confidence" : 0.236,
+        "end" : 17.88,
+        "start" : 17.16,
+        "text" : " She"
+      },
+      {
+        "confidence" : 0.976,
+        "end" : 18.24,
+        "start" : 17.88,
+        "text" : " might"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 18.54,
+        "start" : 18.24,
+        "text" : " have"
+      },
+      {
+        "confidence" : 0.72,
+        "end" : 19.44,
+        "start" : 18.54,
+        "text" : " died."
+      },
+      {
+        "confidence" : 0.445,
+        "end" : 20.34,
+        "start" : 19.5,
+        "text" : " Had"
+      },
+      {
+        "confidence" : 0.262,
+        "end" : 20.64,
+        "start" : 20.34,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.218,
+        "end" : 21.18,
+        "start" : 20.64,
+        "text" : " don't,"
+      },
+      {
+        "confidence" : 0.916,
+        "end" : 22.14,
+        "start" : 21.18,
+        "text" : " couldn't"
+      },
+      {
+        "confidence" : 0.787,
+        "end" : 22.5,
+        "start" : 22.14,
+        "text" : " stop"
+      },
+      {
+        "confidence" : 0.942,
+        "end" : 23.4,
+        "start" : 22.5,
+        "text" : " sobbing"
+      },
+      {
+        "confidence" : 0.854,
+        "end" : 23.58,
+        "start" : 23.4,
+        "text" : " or"
+      },
+      {
+        "confidence" : 0.988,
+        "end" : 23.94,
+        "start" : 23.58,
+        "text" : " hiding"
+      },
+      {
+        "confidence" : 0.633,
+        "end" : 24.36,
+        "start" : 23.94,
+        "text" : " her."
+      },
+      {
+        "confidence" : 0.433,
+        "end" : 26.4,
+        "start" : 24.36,
+        "text" : " Feelings,"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 27.12,
+        "start" : 26.4,
+        "text" : " I'm"
+      },
+      {
+        "confidence" : 0.944,
+        "end" : 27.36,
+        "start" : 27.12,
+        "text" : " afraid"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 27.66,
+        "start" : 27.36,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 28.08,
+        "start" : 27.66,
+        "text" : " won't"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 28.32,
+        "start" : 28.08,
+        "text" : " be"
+      },
+      {
+        "confidence" : 0.999,
+        "end" : 28.56,
+        "start" : 28.32,
+        "text" : " able"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 28.92,
+        "start" : 28.56,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 29.28,
+        "start" : 28.92,
+        "text" : " see"
+      },
+      {
+        "confidence" : 0.658,
+        "end" : 30.3,
+        "start" : 29.28,
+        "text" : " granny,"
+      },
+      {
+        "confidence" : 0.378,
+        "end" : 30.78,
+        "start" : 30.3,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.977,
+        "end" : 31.02,
+        "start" : 30.78,
+        "text" : " miss"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 31.44,
+        "start" : 31.02,
+        "text" : " my"
+      },
+      {
+        "confidence" : 0.861,
+        "end" : 32.46,
+        "start" : 31.44,
+        "text" : " grandfather."
+      },
+      {
+        "confidence" : 0.966,
+        "end" : 33.06,
+        "start" : 32.52,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.831,
+        "end" : 33.36,
+        "start" : 33.06,
+        "text" : " want"
+      },
+      {
+        "confidence" : 0.748,
+        "end" : 34.68,
+        "start" : 33.36,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 34.92,
+        "start" : 34.68,
+        "text" : " go"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 35.16,
+        "start" : 34.92,
+        "text" : " back"
+      },
+      {
+        "confidence" : 0.437,
+        "end" : 36.18,
+        "start" : 35.16,
+        "text" : " up."
+      },
+      {
+        "confidence" : 0.345,
+        "end" : 37.74,
+        "start" : 36.18,
+        "text" : " Back"
+      },
+      {
+        "confidence" : 0.982,
+        "end" : 38.16,
+        "start" : 37.74,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 38.46,
+        "start" : 38.16,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.913,
+        "end" : 38.88,
+        "start" : 38.46,
+        "text" : " mountain."
+      },
+      {
+        "confidence" : 0.905,
+        "end" : 42.66,
+        "start" : 39,
+        "text" : " The"
+      },
+      {
+        "confidence" : 0.986,
+        "end" : 42.96,
+        "start" : 42.66,
+        "text" : " house"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 43.44,
+        "start" : 42.96,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.978,
+        "end" : 44.04,
+        "start" : 43.44,
+        "text" : " haunted"
+      },
+      {
+        "confidence" : 0.706,
+        "end" : 44.88,
+        "start" : 44.04,
+        "text" : " by"
+      },
+      {
+        "confidence" : 0.908,
+        "end" : 45.54,
+        "start" : 44.88,
+        "text" : " rumors"
+      },
+      {
+        "confidence" : 0.93,
+        "end" : 46.14,
+        "start" : 45.54,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.876,
+        "end" : 46.2,
+        "start" : 46.14,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.806,
+        "end" : 46.5,
+        "start" : 46.2,
+        "text" : " ghost."
+      },
+      {
+        "confidence" : 0.478,
+        "end" : 48.12,
+        "start" : 46.56,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.677,
+        "end" : 48.48,
+        "start" : 48.12,
+        "text" : " know"
+      },
+      {
+        "confidence" : 0.833,
+        "end" : 48.96,
+        "start" : 48.48,
+        "text" : " this"
+      },
+      {
+        "confidence" : 0.546,
+        "end" : 49.38,
+        "start" : 48.96,
+        "text" : " will"
+      },
+      {
+        "confidence" : 0.57,
+        "end" : 53.34,
+        "start" : 49.38,
+        "text" : " scared,"
+      },
+      {
+        "confidence" : 0.926,
+        "end" : 53.52,
+        "start" : 53.34,
+        "text" : " but"
+      },
+      {
+        "confidence" : 0.326,
+        "end" : 54.48,
+        "start" : 53.52,
+        "text" : " it,"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 55.08,
+        "start" : 54.48,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 55.38,
+        "start" : 55.08,
+        "text" : " have"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 55.74,
+        "start" : 55.38,
+        "text" : " no"
+      },
+      {
+        "confidence" : 0.806,
+        "end" : 56.34,
+        "start" : 55.74,
+        "text" : " choice."
+      },
+      {
+        "confidence" : 0.489,
+        "end" : 57.12,
+        "start" : 56.46,
+        "text" : " She"
+      },
+      {
+        "confidence" : 0.947,
+        "end" : 57.78,
+        "start" : 57.12,
+        "text" : " told"
+      },
+      {
+        "confidence" : 0.745,
+        "end" : 58.74,
+        "start" : 57.78,
+        "text" : " herself."
+      },
+      {
+        "confidence" : 0.173,
+        "end" : 60.9,
+        "start" : 58.86,
+        "text" : " Well,"
+      },
+      {
+        "confidence" : 0.934,
+        "end" : 61.56,
+        "start" : 60.9,
+        "text" : " planning"
+      },
+      {
+        "confidence" : 0.606,
+        "end" : 62.52,
+        "start" : 61.56,
+        "text" : " her."
+      },
+      {
+        "confidence" : 0.391,
+        "end" : 64.08,
+        "start" : 62.52,
+        "text" : " Next"
+      },
+      {
+        "confidence" : 0.513,
+        "end" : 65.4,
+        "start" : 64.08,
+        "text" : " move,"
+      },
+      {
+        "confidence" : 0.671,
+        "end" : 65.52,
+        "start" : 65.4,
+        "text" : " so"
+      },
+      {
+        "confidence" : 0.977,
+        "end" : 66.12,
+        "start" : 65.52,
+        "text" : " she"
+      },
+      {
+        "confidence" : 0.976,
+        "end" : 66.96,
+        "start" : 66.12,
+        "text" : " told"
+      },
+      {
+        "confidence" : 0.252,
+        "end" : 67.86,
+        "start" : 66.96,
+        "text" : " Kara"
+      },
+      {
+        "confidence" : 0.982,
+        "end" : 68.52,
+        "start" : 67.86,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.276,
+        "end" : 69.3,
+        "start" : 68.52,
+        "text" : " Heddy"
+      },
+      {
+        "confidence" : 0.472,
+        "end" : 69.48,
+        "start" : 69.3,
+        "text" : " about"
+      },
+      {
+        "confidence" : 0.976,
+        "end" : 69.72,
+        "start" : 69.48,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.809,
+        "end" : 70.08,
+        "start" : 69.72,
+        "text" : " ghost."
+      },
+      {
+        "confidence" : 0.527,
+        "end" : 71.16,
+        "start" : 70.2,
+        "text" : " She"
+      },
+      {
+        "confidence" : 0.913,
+        "end" : 72.3,
+        "start" : 71.16,
+        "text" : " hoped"
+      },
+      {
+        "confidence" : 0.649,
+        "end" : 73.92,
+        "start" : 72.3,
+        "text" : " this"
+      },
+      {
+        "confidence" : 0.948,
+        "end" : 74.34,
+        "start" : 73.92,
+        "text" : " would"
+      },
+      {
+        "confidence" : 0.854,
+        "end" : 75.48,
+        "start" : 74.34,
+        "text" : " make"
+      },
+      {
+        "confidence" : 0.888,
+        "end" : 76.32,
+        "start" : 75.48,
+        "text" : " Clara"
+      },
+      {
+        "confidence" : 0.467,
+        "end" : 77.22,
+        "start" : 76.32,
+        "text" : " ask"
+      },
+      {
+        "confidence" : 0.859,
+        "end" : 78.24,
+        "start" : 77.22,
+        "text" : " her"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 79.62,
+        "start" : 78.24,
+        "text" : " grandfather"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 80.7,
+        "start" : 79.62,
+        "text" : " for"
+      },
+      {
+        "confidence" : 0.556,
+        "end" : 81.12,
+        "start" : 80.7,
+        "text" : " help,"
+      },
+      {
+        "confidence" : 0.916,
+        "end" : 81.72,
+        "start" : 81.12,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.93,
+        "end" : 82.14,
+        "start" : 81.72,
+        "text" : " it"
+      },
+      {
+        "confidence" : 0.66,
+        "end" : 82.8,
+        "start" : 82.14,
+        "text" : " did."
+      },
+      {
+        "confidence" : 0.937,
+        "end" : 87.54,
+        "start" : 82.86,
+        "text" : " The"
+      },
+      {
+        "confidence" : 0.961,
+        "end" : 87.9,
+        "start" : 87.54,
+        "text" : " doctor"
+      },
+      {
+        "confidence" : 0.964,
+        "end" : 88.5,
+        "start" : 87.9,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.798,
+        "end" : 90.3,
+        "start" : 88.5,
+        "text" : " Mr."
+      },
+      {
+        "confidence" : 0.686,
+        "end" : 91.08,
+        "start" : 90.3,
+        "text" : " Sessman"
+      },
+      {
+        "confidence" : 0.979,
+        "end" : 91.74,
+        "start" : 91.08,
+        "text" : " waited"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 92.4,
+        "start" : 91.74,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 93.06,
+        "start" : 92.4,
+        "text" : " waited"
+      },
+      {
+        "confidence" : 0.952,
+        "end" : 93.48,
+        "start" : 93.06,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.115,
+        "end" : 95.52,
+        "start" : 93.48,
+        "text" : " found."
+      },
+      {
+        "confidence" : 0.496,
+        "end" : 97.2,
+        "start" : 95.52,
+        "text" : " The"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 97.5,
+        "start" : 97.2,
+        "text" : " ghost"
+      },
+      {
+        "confidence" : 0.842,
+        "end" : 98.34,
+        "start" : 97.5,
+        "text" : " appeared."
+      },
+      {
+        "confidence" : 0.717,
+        "end" : 99.9,
+        "start" : 98.46,
+        "text" : " It"
+      },
+      {
+        "confidence" : 0.985,
+        "end" : 100.08,
+        "start" : 99.9,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.175,
+        "end" : 100.8,
+        "start" : 100.08,
+        "text" : " heavy,"
+      },
+      {
+        "confidence" : 0.381,
+        "end" : 101.82,
+        "start" : 100.8,
+        "text" : " doctor."
+      },
+      {
+        "confidence" : 0.222,
+        "end" : 103.74,
+        "start" : 101.82,
+        "text" : " Plaster"
+      },
+      {
+        "confidence" : 0.925,
+        "end" : 104.34,
+        "start" : 103.74,
+        "text" : " called"
+      },
+      {
+        "confidence" : 0.794,
+        "end" : 104.76,
+        "start" : 104.34,
+        "text" : " out"
+      },
+      {
+        "confidence" : 0.978,
+        "end" : 105.18,
+        "start" : 104.76,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.674,
+        "end" : 105.42,
+        "start" : 105.18,
+        "text" : " her."
+      },
+      {
+        "confidence" : 0.599,
+        "end" : 107.1,
+        "start" : 105.54,
+        "text" : " But"
+      },
+      {
+        "confidence" : 0.428,
+        "end" : 107.82,
+        "start" : 107.1,
+        "text" : " it's"
+      },
+      {
+        "confidence" : 0.479,
+        "end" : 108.66,
+        "start" : 107.82,
+        "text" : " surprised,"
+      },
+      {
+        "confidence" : 0.585,
+        "end" : 109.56,
+        "start" : 108.66,
+        "text" : " heavy."
+      },
+      {
+        "confidence" : 0.973,
+        "end" : 115.44,
+        "start" : 109.68,
+        "text" : " So"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 115.8,
+        "start" : 115.44,
+        "text" : " you"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 116.04,
+        "start" : 115.8,
+        "text" : " are"
+      },
+      {
+        "confidence" : 0.821,
+        "end" : 116.94,
+        "start" : 116.04,
+        "text" : " homesick,"
+      },
+      {
+        "confidence" : 0.853,
+        "end" : 117.42,
+        "start" : 116.94,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.662,
+        "end" : 118.02,
+        "start" : 117.42,
+        "text" : " said,"
+      },
+      {
+        "confidence" : 0.404,
+        "end" : 119.1,
+        "start" : 118.02,
+        "text" : " but"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 119.64,
+        "start" : 119.1,
+        "text" : " don't"
+      },
+      {
+        "confidence" : 0.97,
+        "end" : 119.82,
+        "start" : 119.64,
+        "text" : " you"
+      },
+      {
+        "confidence" : 0.965,
+        "end" : 120.54,
+        "start" : 119.82,
+        "text" : " cry"
+      },
+      {
+        "confidence" : 0.339,
+        "end" : 120.96,
+        "start" : 120.54,
+        "text" : " too"
+      },
+      {
+        "confidence" : 0.292,
+        "end" : 121.62,
+        "start" : 120.96,
+        "text" : " is,"
+      },
+      {
+        "confidence" : 0.497,
+        "end" : 122.94,
+        "start" : 121.62,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.781,
+        "end" : 123.78,
+        "start" : 122.94,
+        "text" : " sadness?"
+      },
+      {
+        "confidence" : 0.695,
+        "end" : 124.5,
+        "start" : 123.84,
+        "text" : " No,"
+      },
+      {
+        "confidence" : 0.919,
+        "end" : 124.8,
+        "start" : 124.5,
+        "text" : " I'm"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 124.98,
+        "start" : 124.8,
+        "text" : " not"
+      },
+      {
+        "confidence" : 0.978,
+        "end" : 125.7,
+        "start" : 124.98,
+        "text" : " allowed"
+      },
+      {
+        "confidence" : 0.975,
+        "end" : 126.18,
+        "start" : 125.7,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.236,
+        "end" : 127.08,
+        "start" : 126.18,
+        "text" : " have"
+      },
+      {
+        "confidence" : 0.303,
+        "end" : 127.86,
+        "start" : 127.08,
+        "text" : " had"
+      },
+      {
+        "confidence" : 0.238,
+        "end" : 128.22,
+        "start" : 127.86,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.625,
+        "end" : 130.74,
+        "start" : 128.22,
+        "text" : " exclaim."
+      },
+      {
+        "confidence" : 0.934,
+        "end" : 133.38,
+        "start" : 130.86,
+        "text" : " If"
+      },
+      {
+        "confidence" : 0.958,
+        "end" : 133.68,
+        "start" : 133.38,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.974,
+        "end" : 134.58,
+        "start" : 133.68,
+        "text" : " ever"
+      },
+      {
+        "confidence" : 0.557,
+        "end" : 135.6,
+        "start" : 134.58,
+        "text" : " cried,"
+      },
+      {
+        "confidence" : 0.45,
+        "end" : 136.44,
+        "start" : 135.6,
+        "text" : " miss,"
+      },
+      {
+        "confidence" : 0.287,
+        "end" : 138.48,
+        "start" : 136.44,
+        "text" : " Rotten"
+      },
+      {
+        "confidence" : 0.068,
+        "end" : 138.96,
+        "start" : 138.48,
+        "text" : " Mail"
+      },
+      {
+        "confidence" : 0.781,
+        "end" : 139.38,
+        "start" : 138.96,
+        "text" : " would"
+      },
+      {
+        "confidence" : 0.959,
+        "end" : 139.68,
+        "start" : 139.38,
+        "text" : " take"
+      },
+      {
+        "confidence" : 0.273,
+        "end" : 140.52,
+        "start" : 139.68,
+        "text" : " her"
+      },
+      {
+        "confidence" : 0.517,
+        "end" : 142.14,
+        "start" : 140.52,
+        "text" : " away"
+      },
+      {
+        "confidence" : 0.82,
+        "end" : 142.32,
+        "start" : 142.14,
+        "text" : " my"
+      },
+      {
+        "confidence" : 0.682,
+        "end" : 142.74,
+        "start" : 142.32,
+        "text" : " book."
+      },
+      {
+        "confidence" : 0.457,
+        "end" : 143.64,
+        "start" : 142.8,
+        "text" : " The"
+      },
+      {
+        "confidence" : 0.635,
+        "end" : 144.66,
+        "start" : 143.64,
+        "text" : " doctor's"
+      },
+      {
+        "confidence" : 0.204,
+        "end" : 146.22,
+        "start" : 144.66,
+        "text" : " sketchy."
+      },
+      {
+        "confidence" : 0.271,
+        "end" : 147.3,
+        "start" : 146.34,
+        "text" : " Suggested."
+      },
+      {
+        "confidence" : 0.421,
+        "end" : 148.56,
+        "start" : 147.3,
+        "text" : " Suggested,"
+      },
+      {
+        "confidence" : 0.307,
+        "end" : 149.34,
+        "start" : 148.56,
+        "text" : " had"
+      },
+      {
+        "confidence" : 0.808,
+        "end" : 149.94,
+        "start" : 149.34,
+        "text" : " you"
+      },
+      {
+        "confidence" : 0.967,
+        "end" : 150.12,
+        "start" : 149.94,
+        "text" : " have"
+      },
+      {
+        "confidence" : 0.933,
+        "end" : 150.3,
+        "start" : 150.12,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.177,
+        "end" : 150.9,
+        "start" : 150.3,
+        "text" : " good,"
+      },
+      {
+        "confidence" : 0.397,
+        "end" : 151.08,
+        "start" : 150.9,
+        "text" : " good"
+      },
+      {
+        "confidence" : 0.196,
+        "end" : 151.8,
+        "start" : 151.08,
+        "text" : " try,"
+      },
+      {
+        "confidence" : 0.639,
+        "end" : 152.52,
+        "start" : 151.8,
+        "text" : " cry."
+      },
+      {
+        "confidence" : 0.635,
+        "end" : 153.54,
+        "start" : 152.58,
+        "text" : " That's"
+      },
+      {
+        "confidence" : 0.484,
+        "end" : 153.96,
+        "start" : 153.54,
+        "text" : " grown"
+      },
+      {
+        "confidence" : 0.525,
+        "end" : 154.2,
+        "start" : 153.96,
+        "text" : " need"
+      },
+      {
+        "confidence" : 0.774,
+        "end" : 155.4,
+        "start" : 154.2,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.964,
+        "end" : 156.24,
+        "start" : 155.4,
+        "text" : " go"
+      },
+      {
+        "confidence" : 0.931,
+        "end" : 157.5,
+        "start" : 156.24,
+        "text" : " home"
+      },
+      {
+        "confidence" : 0.905,
+        "end" : 158.46,
+        "start" : 157.5,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.718,
+        "end" : 158.82,
+        "start" : 158.46,
+        "text" : " be"
+      },
+      {
+        "confidence" : 0.477,
+        "end" : 159.6,
+        "start" : 158.82,
+        "text" : " curled."
+      },
+      {
+        "confidence" : 0.497,
+        "end" : 161.52,
+        "start" : 159.72,
+        "text" : " He"
+      },
+      {
+        "confidence" : 0.359,
+        "end" : 162.78,
+        "start" : 161.52,
+        "text" : " then."
+      },
+      {
+        "confidence" : 0.408,
+        "end" : 164.58,
+        "start" : 162.78,
+        "text" : " Told"
+      },
+      {
+        "confidence" : 0.364,
+        "end" : 165.78,
+        "start" : 164.58,
+        "text" : " Mr."
+      },
+      {
+        "confidence" : 0.32,
+        "end" : 167.52,
+        "start" : 165.78,
+        "text" : " Cessman,"
+      },
+      {
+        "confidence" : 0.853,
+        "end" : 167.94,
+        "start" : 167.52,
+        "text" : " after"
+      },
+      {
+        "confidence" : 0.923,
+        "end" : 169.62,
+        "start" : 167.94,
+        "text" : " careful"
+      },
+      {
+        "confidence" : 0.274,
+        "end" : 170.58,
+        "start" : 169.62,
+        "text" : " salt,"
+      },
+      {
+        "confidence" : 0.53,
+        "end" : 172.92,
+        "start" : 170.58,
+        "text" : " saysman"
+      },
+      {
+        "confidence" : 0.578,
+        "end" : 173.64,
+        "start" : 172.92,
+        "text" : " decided."
+      },
+      {
+        "confidence" : 0.135,
+        "end" : 175.62,
+        "start" : 173.82,
+        "text" : " Uh..."
+      },
+      {
+        "confidence" : 0.195,
+        "end" : 177.96,
+        "start" : 175.62,
+        "text" : " And..."
+      },
+      {
+        "confidence" : 0.41,
+        "end" : 179.22,
+        "start" : 177.96,
+        "text" : " It"
+      },
+      {
+        "confidence" : 0.716,
+        "end" : 180.6,
+        "start" : 179.22,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.79,
+        "end" : 181.02,
+        "start" : 180.6,
+        "text" : " right"
+      },
+      {
+        "confidence" : 0.795,
+        "end" : 181.44,
+        "start" : 181.02,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.079,
+        "end" : 181.8,
+        "start" : 181.44,
+        "text" : " some"
+      },
+      {
+        "confidence" : 0.08,
+        "end" : 182.52,
+        "start" : 181.8,
+        "text" : " highly"
+      },
+      {
+        "confidence" : 0.952,
+        "end" : 182.76,
+        "start" : 182.52,
+        "text" : " back"
+      },
+      {
+        "confidence" : 0.963,
+        "end" : 183.12,
+        "start" : 182.76,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.88,
+        "end" : 183.42,
+        "start" : 183.12,
+        "text" : " her"
+      },
+      {
+        "confidence" : 0.633,
+        "end" : 183.84,
+        "start" : 183.42,
+        "text" : " one"
+      },
+      {
+        "confidence" : 0.681,
+        "end" : 188.58,
+        "start" : 183.84,
+        "text" : " grandfather's,"
+      },
+      {
+        "confidence" : 0.377,
+        "end" : 189.36,
+        "start" : 188.58,
+        "text" : " hidden"
+      },
+      {
+        "confidence" : 0.109,
+        "end" : 190.38,
+        "start" : 189.36,
+        "text" : " talk,"
+      },
+      {
+        "confidence" : 0.679,
+        "end" : 192.48,
+        "start" : 190.38,
+        "text" : " Clara,"
+      },
+      {
+        "confidence" : 0.665,
+        "end" : 192.6,
+        "start" : 192.48,
+        "text" : " his"
+      },
+      {
+        "confidence" : 0.748,
+        "end" : 193.74,
+        "start" : 192.6,
+        "text" : " decision."
+      },
+      {
+        "confidence" : 0.671,
+        "end" : 195.18,
+        "start" : 193.8,
+        "text" : " You"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 195.54,
+        "start" : 195.18,
+        "text" : " can"
+      },
+      {
+        "confidence" : 0.963,
+        "end" : 196.14,
+        "start" : 195.54,
+        "text" : " send"
+      },
+      {
+        "confidence" : 0.732,
+        "end" : 196.62,
+        "start" : 196.14,
+        "text" : " her"
+      },
+      {
+        "confidence" : 0.469,
+        "end" : 197.22,
+        "start" : 196.62,
+        "text" : " back."
+      },
+      {
+        "confidence" : 0.765,
+        "end" : 198.96,
+        "start" : 197.34,
+        "text" : " Clara"
+      },
+      {
+        "confidence" : 0.348,
+        "end" : 200.04,
+        "start" : 198.96,
+        "text" : " cried,"
+      },
+      {
+        "confidence" : 0.138,
+        "end" : 200.88,
+        "start" : 200.04,
+        "text" : " oh,"
+      },
+      {
+        "confidence" : 0.849,
+        "end" : 201.54,
+        "start" : 200.88,
+        "text" : " upon"
+      },
+      {
+        "confidence" : 0.967,
+        "end" : 202.26,
+        "start" : 201.54,
+        "text" : " hearing"
+      },
+      {
+        "confidence" : 0.928,
+        "end" : 202.92,
+        "start" : 202.26,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.697,
+        "end" : 203.7,
+        "start" : 202.92,
+        "text" : " news."
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 204.36,
+        "start" : 203.76,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.98,
+        "end" : 204.66,
+        "start" : 204.36,
+        "text" : " can"
+      },
+      {
+        "confidence" : 0.678,
+        "end" : 205.38,
+        "start" : 204.66,
+        "text" : " stand."
+      },
+      {
+        "confidence" : 0.814,
+        "end" : 208.2,
+        "start" : 205.5,
+        "text" : " The"
+      },
+      {
+        "confidence" : 0.965,
+        "end" : 208.68,
+        "start" : 208.2,
+        "text" : " thought"
+      },
+      {
+        "confidence" : 0.97,
+        "end" : 209.1,
+        "start" : 208.68,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.819,
+        "end" : 210.42,
+        "start" : 209.1,
+        "text" : " losing"
+      },
+      {
+        "confidence" : 0.967,
+        "end" : 210.72,
+        "start" : 210.42,
+        "text" : " my"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 211.26,
+        "start" : 210.72,
+        "text" : " best"
+      },
+      {
+        "confidence" : 0.883,
+        "end" : 211.68,
+        "start" : 211.26,
+        "text" : " friend."
+      },
+      {
+        "confidence" : 0.91,
+        "end" : 213.72,
+        "start" : 211.74,
+        "text" : " Don't"
+      },
+      {
+        "confidence" : 0.487,
+        "end" : 214.32,
+        "start" : 213.72,
+        "text" : " cry,"
+      },
+      {
+        "confidence" : 0.507,
+        "end" : 215.16,
+        "start" : 214.32,
+        "text" : " headache,"
+      },
+      {
+        "confidence" : 0.812,
+        "end" : 215.76,
+        "start" : 215.16,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.97,
+        "end" : 216.3,
+        "start" : 215.76,
+        "text" : " we"
+      },
+      {
+        "confidence" : 0.873,
+        "end" : 216.78,
+        "start" : 216.3,
+        "text" : " would"
+      },
+      {
+        "confidence" : 0.633,
+        "end" : 217.32,
+        "start" : 216.78,
+        "text" : " with"
+      },
+      {
+        "confidence" : 0.527,
+        "end" : 217.98,
+        "start" : 217.32,
+        "text" : " it,"
+      },
+      {
+        "confidence" : 0.753,
+        "end" : 218.4,
+        "start" : 217.98,
+        "text" : " you"
+      },
+      {
+        "confidence" : 0.92,
+        "end" : 219.06,
+        "start" : 218.4,
+        "text" : " next"
+      },
+      {
+        "confidence" : 0.391,
+        "end" : 220.56,
+        "start" : 219.06,
+        "text" : " ear."
+      },
+      {
+        "confidence" : 0.948,
+        "end" : 221.16,
+        "start" : 220.62,
+        "text" : " Clara"
+      },
+      {
+        "confidence" : 0.922,
+        "end" : 222,
+        "start" : 221.16,
+        "text" : " handed"
+      },
+      {
+        "confidence" : 0.975,
+        "end" : 222.9,
+        "start" : 222,
+        "text" : " over"
+      },
+      {
+        "confidence" : 0.968,
+        "end" : 223.32,
+        "start" : 222.9,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.667,
+        "end" : 224.52,
+        "start" : 223.32,
+        "text" : " basket."
+      },
+      {
+        "confidence" : 0.346,
+        "end" : 226.08,
+        "start" : 224.58,
+        "text" : " To"
+      },
+      {
+        "confidence" : 0.508,
+        "end" : 226.68,
+        "start" : 226.08,
+        "text" : " her,"
+      },
+      {
+        "confidence" : 0.436,
+        "end" : 227.58,
+        "start" : 226.68,
+        "text" : " look,"
+      },
+      {
+        "confidence" : 0.29,
+        "end" : 228.66,
+        "start" : 227.58,
+        "text" : " would"
+      },
+      {
+        "confidence" : 0.656,
+        "end" : 229.38,
+        "start" : 228.66,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.89,
+        "end" : 230.04,
+        "start" : 229.38,
+        "text" : " have"
+      },
+      {
+        "confidence" : 0.434,
+        "end" : 230.88,
+        "start" : 230.04,
+        "text" : " a."
+      },
+      {
+        "confidence" : 0.858,
+        "end" : 233.7,
+        "start" : 231,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.945,
+        "end" : 234,
+        "start" : 233.7,
+        "text" : " have"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 234.78,
+        "start" : 234,
+        "text" : " prepared"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 235.14,
+        "start" : 234.78,
+        "text" : " for"
+      },
+      {
+        "confidence" : 0.867,
+        "end" : 235.44,
+        "start" : 235.14,
+        "text" : " you."
+      },
+      {
+        "confidence" : 0.635,
+        "end" : 236.94,
+        "start" : 235.5,
+        "text" : " It"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 237.3,
+        "start" : 236.94,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 237.72,
+        "start" : 237.3,
+        "text" : " full"
+      },
+      {
+        "confidence" : 0.985,
+        "end" : 238.14,
+        "start" : 237.72,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.804,
+        "end" : 239.4,
+        "start" : 238.14,
+        "text" : " fresh"
+      },
+      {
+        "confidence" : 0.326,
+        "end" : 240.3,
+        "start" : 239.4,
+        "text" : " those"
+      },
+      {
+        "confidence" : 0.817,
+        "end" : 241.5,
+        "start" : 240.3,
+        "text" : " that"
+      },
+      {
+        "confidence" : 0.421,
+        "end" : 242.46,
+        "start" : 241.5,
+        "text" : " Clara"
+      },
+      {
+        "confidence" : 0.97,
+        "end" : 243.12,
+        "start" : 242.46,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.598,
+        "end" : 243.66,
+        "start" : 243.12,
+        "text" : " sure"
+      },
+      {
+        "confidence" : 0.973,
+        "end" : 244.38,
+        "start" : 243.66,
+        "text" : " granny"
+      },
+      {
+        "confidence" : 0.981,
+        "end" : 244.8,
+        "start" : 244.38,
+        "text" : " would"
+      },
+      {
+        "confidence" : 0.798,
+        "end" : 245.28,
+        "start" : 244.8,
+        "text" : " lack."
+      },
+      {
+        "confidence" : 0.763,
+        "end" : 254.34,
+        "start" : 251.4,
+        "text" : " Responsibility,"
+      },
+      {
+        "confidence" : 0.394,
+        "end" : 255.24,
+        "start" : 254.34,
+        "text" : " grampy,"
+      },
+      {
+        "confidence" : 0.588,
+        "end" : 258.06,
+        "start" : 255.24,
+        "text" : " carpenter,"
+      },
+      {
+        "confidence" : 0.551,
+        "end" : 259.26,
+        "start" : 258.06,
+        "text" : " familiar."
+      },
+      {
+        "confidence" : 0.302,
+        "end" : 262.56,
+        "start" : 259.32,
+        "text" : " Pastor,"
+      },
+      {
+        "confidence" : 0.456,
+        "end" : 263.88,
+        "start" : 262.56,
+        "text" : " stubborn."
+      },
+      {
+        "confidence" : 0.638,
+        "end" : 266.88,
+        "start" : 263.94,
+        "text" : " Awesome,"
+      },
+      {
+        "confidence" : 0.255,
+        "end" : 268.2,
+        "start" : 266.88,
+        "text" : " badger,"
+      },
+      {
+        "confidence" : 0.01,
+        "end" : 268.38,
+        "start" : 268.2,
+        "text" : " bad"
+      },
+      {
+        "confidence" : 0.684,
+        "end" : 269.4,
+        "start" : 268.38,
+        "text" : " barrel"
+      },
+      {
+        "confidence" : 0.458,
+        "end" : 270.06,
+        "start" : 269.4,
+        "text" : " album."
+      },
+      {
+        "confidence" : 0.606,
+        "end" : 272.76,
+        "start" : 270.12,
+        "text" : " Innocent,"
+      },
+      {
+        "confidence" : 0.589,
+        "end" : 275.28,
+        "start" : 272.76,
+        "text" : " homesick,"
+      },
+      {
+        "confidence" : 0.514,
+        "end" : 276.06,
+        "start" : 275.28,
+        "text" : " sob."
+      },
+      {
+        "confidence" : 0.643,
+        "end" : 279.48,
+        "start" : 276.12,
+        "text" : " Rumor,"
+      },
+      {
+        "confidence" : 0.288,
+        "end" : 280.38,
+        "start" : 279.48,
+        "text" : " Prack,"
+      },
+      {
+        "confidence" : 0.655,
+        "end" : 281.52,
+        "start" : 280.38,
+        "text" : " Trunk."
+      },
+      {
+        "confidence" : 0.75,
+        "end" : 284.52,
+        "start" : 281.58,
+        "text" : " Responsibility."
+      },
+      {
+        "confidence" : 0.428,
+        "end" : 287.34,
+        "start" : 284.58,
+        "text" : " Really."
+      },
+      {
+        "confidence" : 0.613,
+        "end" : 290.82,
+        "start" : 287.34,
+        "text" : " Nonsense."
+      },
+      {
+        "confidence" : 0.417,
+        "end" : 292.32,
+        "start" : 290.88,
+        "text" : " Jealous,"
+      },
+      {
+        "confidence" : 0.443,
+        "end" : 293.34,
+        "start" : 292.32,
+        "text" : " fold."
+      },
+      {
+        "confidence" : 0.429,
+        "end" : 299.88,
+        "start" : 299.46,
+        "text" : " Flood,"
+      },
+      {
+        "confidence" : 0.604,
+        "end" : 303.36,
+        "start" : 299.88,
+        "text" : " recovery,"
+      },
+      {
+        "confidence" : 0.856,
+        "end" : 304.2,
+        "start" : 303.36,
+        "text" : " reward."
+      }
+    ],
+    "source" : "super8-L4-p18-19-72568A42-2240-4C7F-B123-28A89FFED2C3.m4a"
+  },
+  "words" : [
+    "but",
+    "the",
+    "book",
+    "made",
+    "hetty",
+    "even",
+    "more",
+    "unhappy",
+    "and",
+    "it",
+    "told",
+    "a",
+    "story",
+    "of",
+    "a",
+    "dying",
+    "old",
+    "woman",
+    "she",
+    "thought",
+    "of",
+    "granny",
+    "to",
+    "fit",
+    "and",
+    "fear",
+    "she",
+    "might",
+    "have",
+    "died",
+    "had",
+    "he",
+    "don't",
+    "couldn't",
+    "stop",
+    "sobbing",
+    "or",
+    "hiding",
+    "her",
+    "feelings",
+    "i'm",
+    "afraid",
+    "i",
+    "won't",
+    "be",
+    "able",
+    "to",
+    "see",
+    "granny",
+    "i",
+    "miss",
+    "my",
+    "grandfather",
+    "i",
+    "want",
+    "to",
+    "go",
+    "back",
+    "up",
+    "back",
+    "to",
+    "the",
+    "mountain",
+    "the",
+    "house",
+    "was",
+    "haunted",
+    "by",
+    "rumors",
+    "of",
+    "a",
+    "ghost",
+    "i",
+    "know",
+    "this",
+    "will",
+    "scared",
+    "but",
+    "it",
+    "i",
+    "have",
+    "no",
+    "choice",
+    "she",
+    "told",
+    "herself",
+    "well",
+    "planning",
+    "her",
+    "next",
+    "move",
+    "so",
+    "she",
+    "told",
+    "kara",
+    "and",
+    "heddy",
+    "about",
+    "the",
+    "ghost",
+    "she",
+    "hoped",
+    "this",
+    "would",
+    "make",
+    "clara",
+    "ask",
+    "her",
+    "grandfather",
+    "for",
+    "help",
+    "and",
+    "it",
+    "did",
+    "the",
+    "doctor",
+    "and",
+    "mr",
+    "sessman",
+    "waited",
+    "and",
+    "waited",
+    "and",
+    "found",
+    "the",
+    "ghost",
+    "appeared",
+    "it",
+    "was",
+    "heavy",
+    "doctor",
+    "plaster",
+    "called",
+    "out",
+    "to",
+    "her",
+    "but",
+    "it's",
+    "surprised",
+    "heavy",
+    "so",
+    "you",
+    "are",
+    "homesick",
+    "he",
+    "said",
+    "but",
+    "don't",
+    "you",
+    "cry",
+    "too",
+    "is",
+    "the",
+    "sadness",
+    "no",
+    "i'm",
+    "not",
+    "allowed",
+    "to",
+    "have",
+    "had",
+    "the",
+    "exclaim",
+    "if",
+    "i",
+    "ever",
+    "cried",
+    "miss",
+    "rotten",
+    "mail",
+    "would",
+    "take",
+    "her",
+    "away",
+    "my",
+    "book",
+    "the",
+    "doctor's",
+    "sketchy",
+    "suggested",
+    "suggested",
+    "had",
+    "you",
+    "have",
+    "a",
+    "good",
+    "good",
+    "try",
+    "cry",
+    "that's",
+    "grown",
+    "need",
+    "to",
+    "go",
+    "home",
+    "to",
+    "be",
+    "curled",
+    "he",
+    "then",
+    "told",
+    "mr",
+    "cessman",
+    "after",
+    "careful",
+    "salt",
+    "saysman",
+    "decided",
+    "uh",
+    "and",
+    "it",
+    "was",
+    "right",
+    "to",
+    "some",
+    "highly",
+    "back",
+    "to",
+    "her",
+    "one",
+    "grandfather's",
+    "hidden",
+    "talk",
+    "clara",
+    "his",
+    "decision",
+    "you",
+    "can",
+    "send",
+    "her",
+    "back",
+    "clara",
+    "cried",
+    "oh",
+    "upon",
+    "hearing",
+    "the",
+    "news",
+    "i",
+    "can",
+    "stand",
+    "the",
+    "thought",
+    "of",
+    "losing",
+    "my",
+    "best",
+    "friend",
+    "don't",
+    "cry",
+    "headache",
+    "and",
+    "we",
+    "would",
+    "with",
+    "it",
+    "you",
+    "next",
+    "ear",
+    "clara",
+    "handed",
+    "over",
+    "a",
+    "basket",
+    "to",
+    "her",
+    "look",
+    "would",
+    "i",
+    "have",
+    "a",
+    "i",
+    "have",
+    "prepared",
+    "for",
+    "you",
+    "it",
+    "was",
+    "full",
+    "of",
+    "fresh",
+    "those",
+    "that",
+    "clara",
+    "was",
+    "sure",
+    "granny",
+    "would",
+    "lack",
+    "responsibility",
+    "grampy",
+    "carpenter",
+    "familiar",
+    "pastor",
+    "stubborn",
+    "awesome",
+    "badger",
+    "bad",
+    "barrel",
+    "album",
+    "innocent",
+    "homesick",
+    "sob",
+    "rumor",
+    "prack",
+    "trunk",
+    "responsibility",
+    "really",
+    "nonsense",
+    "jealous",
+    "fold",
+    "flood",
+    "recovery",
+    "reward"
+  ]
+}
