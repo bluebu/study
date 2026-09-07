@@ -1,12 +1,17 @@
 {#-
-  复述故事 —— 整个故事一张 A4，一段一行，按情节五阶段分组。
+  复述故事 —— 整个故事一张 A4。老师给的形状有两种，这儿也就两套排法：
+    · 一行一段（白板 Story Map）：编号圆圈 + 箭头串起来的关键词
+    · 一章几问 + 一批词（思维导图）：编号圆圈 + 问句，词摊在下面用 · 隔开
+  哪一套不看开关，看这个区块有没有 asks —— 口径在 retell.py 的文件头。
 
   ⚠️ 两处不许留空白：
      .head .who  —— 普通块 + nowrap，「姓名 」后面那个空格是有意的
      .unit 内部  —— `.unit{white-space:nowrap}` 本身不是 flex，「词 + 它后面的箭头」
                     必须紧贴。绑成一个 unit 就是为了折行时箭头不落到下一行行首
                     （「→ kinder people」读着像这行是从箭头开始的）
-  .acts / .act / .segs / .seg / .chain 全是 flex，空白文本节点不生成盒子，随便缩进。
+  .acts / .act / .segs / .seg / .chain / .pool 全是 flex，空白文本节点不生成盒子，
+  随便缩进。词库里的 · 和箭头一样是**真元素**（不是 ::after），也一样包在 .unit 里 ——
+  `deep hole`、`household chores` 这种词本身带空格，光靠间距分不出边界。
 -#}
 <div class="sheet">
   <div class="head">
@@ -17,17 +22,30 @@
 {% if task %}
   <p class="task">{{ task }}</p>
 {% endif %}
-  <div class="acts">
+  <div class="acts{{ ' asked' if asked }}">
 {% for st in stages %}
       <div class="act{{ ' climax' if st.is_climax }}">
-        <span class="tag">{{ st.name }}<small>{% if st.short %}{{ st.short }} · {% endif %}{{ st.segs|length }} 段</small></span>
+        <span class="tag">{{ st.name }}<small>{% if st.short %}{{ st.short }} · {% endif %}{% if st.asks %}{{ st.asks|length }} 问 · {{ st.pool|length }} 词{% else %}{{ st.segs|length }} 段{% endif %}</small></span>
         <span class="segs">
+{% if st.asks %}
+{% for q in st.asks %}
+        <span class="seg"><i>{{ loop.index }}</i><span class="q">{{ q }}</span></span>
+{% endfor %}
+{% if st.pool %}
+        <span class="pool">{% for n in st.pool %}<span class="unit"><span class="kw">{{ n }}</span>{% if not loop.last %}<b class="dot">·</b>{% endif %}</span>{% endfor %}</span>
+{% endif %}
+{% else %}
 {% for seg in st.segs %}
         <span class="seg"><i>{{ seg.no }}</i><span class="chain">{% for n in seg.nodes %}<span class="unit"><span class="kw">{{ n }}</span>{% if not loop.last %}<b class="arw">→</b>{% endif %}</span>{% endfor %}</span></span>
 {% endfor %}
+{% endif %}
         </span>
       </div>
 {% endfor %}
   </div>
+{% if asked %}
+  <p class="foot">先照着问题一个个答，再把整章连起来讲一遍 · 词库里用过的划掉，剩下的就是没讲到的</p>
+{% else %}
   <p class="foot">看着关键词讲，讲不出来的地方圈一下 · CLIMAX 只有一段，那是整本书的转折</p>
+{% endif %}
 </div>

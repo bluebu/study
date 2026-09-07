@@ -1,0 +1,96 @@
+# Heidi
+# 超8 第 2 册 L4 的复述。**老师这回给的形状和 L1 不一样** —— 不是白板上那种
+# 一段段的 Story Map，而是「思维导图（一章几个问题）+ 一章一批关键词」。
+# 所以这份 spec 里每章有两样东西：
+#   · `?` 行 = 导图上的问题，**号是老师编的，每章从 1 起**，一字不改照抄
+#     （`How did Heidi felt`、`In Winter time … why?` 都是导图上的写法）
+#   · 其余行 = 这一章的词，一行一个。**词没有先后**，纸上不给箭头 ——
+#     箭头是「先这个再那个」的断言，老师没给顺序，编一个出来就是替她想
+#
+# 分组照抄老师的 Chapter 1–3，**不改成五阶段** —— L1 那份的五阶段是我们的解读，
+# 因为白板上本来没分组；这回分组是老师给的，改了就是把给的东西换掉。
+#
+# 中文释义是老师连着给的，**照原样存在这儿，但不上纸**（口径见 retell.py 文件头：
+# 配了中文眼睛会先看中文，复述就变成翻译）。存着是为了不用回群里翻。
+# 释义照抄公告，包括「令人吓人的」这种别扭说法和「（山羊）」那样的括注。
+#
+# 11 个问句拿 `../feeder/bin/feeder board 复述故事.jpg` 过了一遍 OCR 对照，
+# 逐字都对上；两处它和公告不一致的，放大原图定的：
+#   · 「In Winter time**,**」那个逗号是真的（OCR 掉了行末逗号，公告里有）
+#   · 省略号照原图写成三个点 `...`，不写 `…` —— `…` 在展示字体里没有、
+#     会掉到中文字体去渲染成半高的「⋯」，纸上和导图上长得不一样
+#
+# 公告里另外三条不进这张纸：「👂扫码听第 6 页音频」「多听故事音频」是听的任务、
+# 「图片内容要丰富哦」是给家长的。指读 42–43 页 Summary 那条放进 task —— 
+# L1 那份的「指读 91–92 页 Summary 2–3 遍」也是这么放的，位置对得上。
+# 公告本身没写日期，date 记的是进来那天。
+date: 9月7日
+book: 超8 · 第 2 册
+pages: 6–31
+task: 指读 42–43 页 Summary 部分 2–3 遍，然后根据思维导图和关键词复述 Chapter 1–3
+
+[Chapter 1]
+? When Heidi's grandpa was young, he had some bad manners, tell me 2 of them.
+? What happened to Heidi's parents? Who did she live with?
+? When Heidi was 5 years old, What happened? (Tell me Aunt Detie and grandpa)
+? Where did Grandpa live?
+? Did Grandpa want to take care of Heidi? What did he say?
+Detie = 黛蒂
+Heidi = 海蒂
+Uncle Alp = 阿尔姆爷爷
+Barbie = 芭比
+Dorfli = 多夫利
+grandfather = 祖父
+responsibility = 责任
+grumpy = 脾气暴躁的
+manner = 举止
+horrifying = 令人吓人的
+fortune = 命运
+drinking = 酗酒
+gambling = 赌博
+Tobias = 托拜厄斯
+carpenter = 木匠
+goatherd = 牧羊少年
+Peter = 彼得
+mountain = 大山
+
+[Chapter 2]
+? How did Heidi felt in grandpa's hut? why?
+? Grandpa had two goats... Who worked for grandpa?
+grandfather's hut = 爷爷的小屋
+hayloft = 干草阁楼
+cheese = 奶酪
+milk = 牛奶
+comfortable = 舒适的
+chair = 椅子
+goat = 山羊
+Daisy = 黛西（山羊）
+Dusky = 达斯奇（山羊）
+guardian = 看护人
+deep hole = 深崖
+Finch = 芬奇（小羊）
+panic = 惊慌
+grass = 青草
+promise = 承诺
+flowers = 鲜花
+trees = 树木
+
+[Chapter 3]
+? In Winter time, can Heidi go out? why?
+? One day, Peter came to visit, he talked about... (1) (2)
+? How did Heidi and grandpa go to Peter's house?
+? What's wrong with Grannie?
+Grannie = 奶奶
+winter = 冬天
+strong wind = 大风
+snow = 积雪
+household chores = 家务
+sled = 雪橇
+blind = 失明的
+hut = 小屋
+fix = 修理
+Bridget = 布丽奇特
+visit = 拜访
+excitement = 兴奋
+dark = 天黑
+pleased = 高兴

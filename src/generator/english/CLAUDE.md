@@ -334,6 +334,42 @@ Fairy Truth, rabbit · rescue, test · kind, kinder people, friend · wish come 
 tutor, escape, capture, Fairy Truth, monster, lion · wolf · snake · bull
 ```
 
+### 老师给的形状有两种，纸上也就有两种
+
+上面那套是**白板 Story Map**（L1《Prince Darling》）。第 4 课《Heidi》换了：
+给的是**思维导图（一章几个带编号的问题）+ 一章一批关键词**，还连着中文释义。
+所以 spec 里多了一种行 —— `?` 开头的是导图上的问题：
+
+```
+[Chapter 1]
+? When Heidi's grandpa was young, he had some bad manners, tell me 2 of them.
+? What happened to Heidi's parents? Who did she live with?
+Detie = 黛蒂
+grumpy = 脾气暴躁的
+```
+
+**走哪一套不用配置，看这个区块有没有 `?` 行**（`retell.py` 的 `ASK`）。有问题就是
+导图那种：问题走编号圆圈、**每章从 1 起**（那是老师编的号，不像段号跨组连续），
+词行合成一片词库摊在问题下面。四条要记住的：
+
+- **词库不给箭头。** 箭头是「先这个再那个」的断言 —— 老师给的是一批词、
+  没给顺序，编一个顺序出来就是替她想。同理**词库里不描主色**
+  （箭头串那种每段第一个词是钩子，词库里描哪个都是瞎给重点）
+- **分组照抄 Chapter 1–3，不许改成五阶段。** L1 那份的五阶段是我们的解读，
+  因为白板上本来没分组；这回分组是老师给的，改了就是把给的东西换掉
+- **中文释义存进 spec、不上纸**（上面第 1 条：配了中文就变成翻译了）。
+  老师连着中文一起给的，扔了就得回群里翻，所以 `词 = 中文` 原样落在 spec，
+  `retell.py` 的 `nodes()` 渲染时丢掉。哪天想要中文，改模板就够
+- **导图也过一遍 OCR 再核**（`../feeder/bin/feeder board 导图.jpg --slug <故事>`
+  `--out /tmp/…`）。它是为手写白板做的，印刷体导图更认得准 ——
+  用途不是省事，是**别拿自己看图当唯一来源**：Heidi 那 11 个问句这么核出两处
+  要定的（OCR 掉了行末逗号；省略号照原图写三个点 `...`，写 `…` 会掉到中文字体
+  渲染成半高的「⋯」，和导图上长得不一样）。**候选别落进 spec 目录**，给 `--out`
+
+行距是**分形状调**的：`.acts.asked`（有问题那种）单独放宽，因为它行数少
+（11 问 + 3 片词库）；`.acts` / `.act .segs` 本身是 16 段那种试出来的数，
+动了 L1 那张就变样。
+
 一个 `[区块]` 是一个阶段（`[英文阶段名] 中文短名 | 这一段在干什么`），
 区块内一行一段，**逗号分隔节点**；节点内部并列的词用 `·` 连着写
 （`safe · hurt` 是一个节点，不是两个）。渲染时逗号变成箭头，段落编号跨阶段连续。
@@ -356,8 +392,12 @@ tutor, escape, capture, Fairy Truth, monster, lion · wolf · snake · bull
 
 ### 排版上的两个坑
 
-- 「词 + 它后面的箭头」要绑成一个不换行的 unit。不这么做，折行时箭头会落到
-  下一行的行首（「→ kinder people」），读着像这行是从箭头开始的
+- 「词 + 它后面的分隔符」要绑成一个不换行的 `.unit`（箭头、词库里的 · 都算）。
+  不这么做有两个后果：折行时分隔符落到下一行行首（「→ kinder people」，
+  读着像这行是从箭头开始的）；更狠的是 **`Uncle Alp`、`household chores`
+  这种自带空格的词能内部折行，于是能被 flex-shrink 压到 min-content** ——
+  Chrome 判定「18 个词一行放得下」，永远不折到第二个 flex 行，实际宽 317mm，
+  打印时整张纸被缩到 66%（踩过，PDF 上一眼就是「纸只占三分之二」）
 - 行距要试出来：16 段、关键词 16.5px、段间 2.6mm 正好一页（八成半）。
   **单独跑这个栏目试**（`from retell import build_retell`），
   别用 `build.py --pdf` —— 那要顺带出 31 份 ket 卷，一轮两分钟起
