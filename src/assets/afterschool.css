@@ -19,10 +19,14 @@ body{
 @media print{ body{ background: #fff; } }
 
 .sheet{
-  --col: 10mm;      /* 「今天留了」「已完成」两个格子的列宽，表头和格子共用 */
-  /* 项目名那一列：装得下最长那项「一课一练改签」六个字（6 × 13px ≈ 21mm）。
-     **换更长的项名要一起加宽** —— 不然名字折成两行，那一行的横线跟着塌下去 */
-  --name: 22mm;
+  /* 本栏目的强调色：--c-drill (#A97EC4) 打黑白是中灰，压深到灰度 90 ——
+     彩色打印还是同一支紫，黑白打印够黑。墨色三兄弟在 print.css */
+  --accent: #6B4A87;
+  --col: 10mm;      /* 「校内完成」「家中完成」两个格子的列宽，表头和格子共用 */
+  /* 项目名那一列：装得下最长那项「一课一练改签」六个字（6 × 15px ≈ 24mm）。
+     **项名字号或长度一动，这儿要一起动** —— 不然名字折成两行，
+     那一行的横线跟着塌下去 */
+  --name: 25mm;
   display: flex;
   flex-direction: column;
   min-height: 297mm;
@@ -57,22 +61,25 @@ body{
   flex: 0 0 auto;
   width: 5.5mm; height: 5.5mm;
   border-radius: 50%;
-  background: var(--c-drill);
+  background: var(--accent);
   color: #fff;
   font-size: 10px;
   font-weight: 700;
   display: grid; place-items: center;
   align-self: center;
 }
-.part h2 small{ font-weight: 400; color: #888; font-size: 11px; }
+.part h2 small{ font-weight: 400; color: #666; font-size: 11px; }
 
 /* 第一栏：作业抄下来了吗 —— 上底色，一眼看出先过这一栏 */
+/* 第一栏：浅底 + 实线边框 —— 底色 #F0E7F7 灰度 235，黑白打印几乎是白的，
+   光靠底色看不出这是一个框 */
 .part.first{
   background: var(--c-drill-bg);
+  border: 1.2px solid var(--accent);
   border-radius: 5px;
   padding: 2.5mm 4mm 3mm;
 }
-.part.first h2 .no{ background: #fff; color: var(--c-drill); }
+.part.first h2 .no{ background: #fff; color: var(--accent); }
 
 /* 说明行：每条前面一个圈，过一条画一个 */
 .note{
@@ -80,34 +87,34 @@ body{
   align-items: baseline;
   gap: 2mm;
   font-size: 12px;
-  color: #444;
+  color: #222;
   margin: 0 0 1.1mm;
   line-height: 1.45;
 }
 .note i{
   flex: 0 0 auto;
   width: 4mm; height: 4mm;
-  border: 1pt solid var(--c-drill);
+  border: 1.2pt solid var(--ink-box);
   border-radius: 50%;
   background: #fff;
 }
 
 /* 抄作业用的横线 */
 .lines{ margin-top: 2mm; }
-.lines .ln{ height: 8mm; border-bottom: 1px solid #999; }
+.lines .ln{ height: 8mm; border-bottom: 1px solid var(--ink-line); }
 
 /* ── 表头两个小字 + 逐项两个格子：共用 --col / --name 对齐 ── */
 .cols{
   display: flex;
   gap: 8mm;                /* 和 .rows 的 column-gap 一样，两组才对得上列 */
   font-size: 9.5px;
-  color: #999;
+  color: #555;
   margin-bottom: .8mm;
 }
 /* 一组标签对齐一列的格子。列数由模板按 cols 出几组，宽度走同一套变量 */
 .cols .half{ flex: 1 1 0; display: flex; align-items: baseline; min-width: 0; }
 .cols .half .pad{ flex: 1 1 auto; }
-/* nowrap：格子只有 10mm，「今天留了」四个字比它宽 —— 让标签溢出格子居中
+/* nowrap：格子只有 10mm，「校内完成」四个字比它宽 —— 让标签溢出格子居中
    排开，别折成两行（折了就压到下一行的项目名上） */
 .cols .half span:not(.pad){
   flex: 0 0 var(--col);
@@ -136,8 +143,9 @@ body{
 /* 项目序号：**顺序就是做的顺序**（spec 里项行的顺序，预习复习排末尾） */
 .row .i{
   flex: 0 0 5mm;
-  font-size: 12px;
-  color: var(--c-drill);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
   font-family: "Times New Roman", var(--font-cn), serif;
   text-align: center;
 }
@@ -153,14 +161,14 @@ body{
      19 行（14 项 + 5 条补充横线）是这张纸的全部预算 —— **再加项就得减
      GROUP，别往下调这个 padding**，2mm 已经是能写字的下限 */
   padding: 2mm 0;
-  border-bottom: 1px dotted var(--line);
+  border-bottom: 1px dotted var(--ink-rule);
 }
-.row .name{ flex: 0 0 var(--name); font-size: 13px; }
+.row .name{ flex: 0 0 var(--name); font-size: 15px; }
 /* 横线：写今天这一类具体是什么（「小卷 → 1 课看拼音写词，错改 3 遍」）*/
 .row .fill{
   flex: 1 1 auto;
   margin: 0 3mm;
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid var(--ink-line);
   align-self: stretch;
 }
 /* 预留的格子：**只有一条下划线 + 两个格子**（项目名也写在线上）——
@@ -173,10 +181,14 @@ body{
   display: grid;
   place-items: center;
 }
+/* 两个格子之间留一点距离：贴太近容易勾错格，表头那两个四字标签也会糊成
+   一片（「校内完成家中完成」）。**表头和格子用同一个间距**才对得齐 */
+.row .box + .box,
+.cols .half span:not(.pad) + span{ margin-left: 2.5mm; }
 .row .box::before{
   content: "";
   width: 5mm; height: 5mm;
-  border: 1pt solid var(--c-drill);
+  border: 1.2pt solid var(--ink-box);
   border-radius: 1mm;
   background: #fff;
 }
@@ -185,13 +197,13 @@ body{
 .tip{
   margin-top: auto;
   padding-top: 2.5mm;
-  border-top: 1.5px dashed #bbb;
+  border-top: 1.5px dashed #999;
   font-size: 11px;
-  color: #666;
+  color: #333;
   line-height: 1.6;
 }
 .tip b{ color: #111; }
-.foot{ margin-top: 1.5mm; text-align: right; color: #999; font-size: 10px; }
+.foot{ margin-top: 1.5mm; text-align: right; color: #777; font-size: 10px; }
 
 /* ── 屏幕（手机）：页头左右分列改成上下两行 ── */
 @media screen and (max-width: 760px){

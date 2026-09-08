@@ -92,7 +92,7 @@ src/
     sheet-info.html   打印单页眉「姓名 __ 日期 __ 得分 __」，四个栏目共用
                       （第三格给空串就只出前两格 —— 抽查单的得分在页底）
     practice/ recite/ check/ overview/ miji/ ket/ homework/ retell/
-    afterschool/      放学检查（两列勾选格：今天留了 ｜ 已完成）
+    afterschool/      放学检查（两列勾选格：校内完成 ｜ 家中完成）
     schedule/sheet.html  课程表：节次列和课格在同一个 grid 里，行高天然对齐
     review/           day.html 一天一份成绩单（当天每次录音一节）
                       one.html 一节的版式（card 宏）· sum.html 当天汇总条

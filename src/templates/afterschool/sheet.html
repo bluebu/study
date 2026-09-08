@@ -1,7 +1,7 @@
 {#-
   放学检查 —— 放学回来照着过一遍。一个区块 = 一栏，顺序就是检查顺序。
 
-  **每项两个格子：今天留了 ｜ 已完成。** 单列时表头那两个小字和格子**竖着对齐** ——
+  **每项两个格子：校内完成 ｜ 家中完成。** 表头那两个小字和格子**竖着对齐** ——
   `.cols` 和 `.row` 用同一套 flex 列宽（`--col`），改一个就得改另一个，
   否则纸上小字对不到格子上，家长就不知道哪个框是哪个。
   项排完，空下来的格子印成横线（`.row.blank`）—— 整行一条线，
@@ -35,7 +35,7 @@
     </div>
 {% endif %}
 {% if col.show_cols %}
-    <div class="cols">{% for _ in range(grid) %}<span class="half"><span class="pad"></span><span>今天留了</span><span>已完成</span></span>{% endfor %}</div>
+    <div class="cols">{% for _ in range(grid) %}<span class="half"><span class="pad"></span><span>校内完成</span><span>家中完成</span></span>{% endfor %}</div>
 {% endif %}
 {% if col.rows %}
     <div class="rows">
@@ -49,6 +49,6 @@
 {% endif %}
   </div>
 {% endfor %}
-  <p class="tip">每一项都要过一遍：<b>今天没留这一类，「今天留了」那格画一横</b> —— 空着分不出「没留」还是「没检查」。</p>
+  <p class="tip">每一项都要过一遍：<b>留了的用红笔打钩，没留的一道斜线划掉</b> —— 空着分不出「没留」还是「没检查」。</p>
   <div class="foot">{{ tally }}</div>
 </div>
