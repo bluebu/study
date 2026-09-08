@@ -87,9 +87,9 @@ td.write{ width: 12mm; text-align: center; font-size: 9.5px; color: #666; }
 .on i{ font-style: normal; margin-right: 2px; color: var(--chinese); }
 .off{ color: #C4C4C4; }
 .todo{ color: #999; }
-/* 语文园地行：底色略淡、课号课名转灰，和课文行分得开 */
-tr.yuan{ background: var(--grid); }
-tr.yuan td.no, tr.yuan td.name{ color: var(--ink-soft); }
+/* 不是课文的行（语文园地 / 快乐读书吧）：底色略淡、课号课名转灰 */
+tr.aside{ background: var(--grid); }
+tr.aside td.no, tr.aside td.name{ color: var(--ink-soft); }
 
 /* ── 底部小结 ── */
 .tail{
@@ -102,6 +102,10 @@ tr.yuan td.no, tr.yuan td.name{ color: var(--ink-soft); }
 .tail li::before{ content: "· "; color: var(--chinese); font-weight: 700; }
 
 .foot{ margin-top: 2mm; text-align: right; color: #999; font-size: 9px; }
+/* 没有小结的页（多页里的前几页）：页脚自己钉页底。
+   **别给 .tail 和 .foot 都写 margin-top:auto** —— 两个 auto 平分剩余空间，
+   小结会飘到页面中间去 */
+.foot.pin{ margin-top: auto; }
 
 /* ── 屏幕：同一份 HTML 当速查页用 ──────────────────────────
    宽表格自己横向滚动，别让整页横滚（.sheet 有 max-width:100%，

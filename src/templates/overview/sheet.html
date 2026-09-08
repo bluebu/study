@@ -3,6 +3,9 @@
   同一份 HTML 两用：A4 打印单（夹在语文书里）+ 屏幕速查页（手机上翻，
   表格在 .scroll 里自己横滚，见 overview.css 的 @media screen）。
 
+  **一页一个 .sheet**，换页点在 spec 里（`[分页]` 区块）—— 摘要框只上第一页，
+  小结钉最后一页页底，中间页的页脚（第 N / M 页）自己钉底（.foot.pin）。
+
   ⚠️ 三处行内元素之间不许留空白，换行会多出一个空格、版式就变了：
      `.sum li` 里的标题和详情（flex 一行两栏）
      格子里的圆点 `<i>●</i>` 和后面的文字
@@ -10,12 +13,13 @@
   ⚠️ 「有没有要求」「写几个字」的判断全在 overview.py 里算好了
      （`_mark()` / `_write()`），模板只管把 ● 摆上去、挑个 class。
 -#}
+{% for pg in pages %}
 <div class="sheet">
   <div class="head">
-    <h1>{{ heading }}{% if sub %}<small>　{{ sub }}</small>{% endif %}</h1>
-    <div class="info">共 <b>{{ n.lessons }}</b> 课　课文要背 <b>{{ n.recite }}</b> 处　日积月累 <b>{{ n.riji }}</b> 处　默写 <b>{{ n.dictation }}</b> 首</div>
+    <h1>{{ heading }}{% if pg.sub %}<small>　{{ pg.sub }}</small>{% endif %}</h1>
+    <div class="info">共 <b>{{ n.lessons }}</b> 课　课文要背 <b>{{ n.recite }}</b> 处　日积月累 <b>{{ n.riji }}</b> 处　默写 <b>{{ n.dictation }}</b> 处</div>
   </div>
-{% if summaries %}
+{% if pg.first and summaries %}
   <div class="sum">
     <ul>
 {% for s in summaries %}
@@ -24,7 +28,7 @@
     </ul>
   </div>
 {% endif %}
-{% if note %}
+{% if pg.first and note %}
   <p class="note">{{ note }}</p>
 {% endif %}
   <div class="scroll">
@@ -36,8 +40,8 @@
         </tr>
       </thead>
       <tbody>
-{% for r in rows %}
-        <tr{% if r.yuan %} class="yuan"{% endif %}>
+{% for r in pg.rows %}
+        <tr{% if r.aside %} class="aside"{% endif %}>
           <td class="no">{{ r.no }}</td>
           <td class="name">{{ r.name }}</td>
           <td class="recite {{ r.recite.cls }}">{% if r.recite.dot %}<i>●</i>{% endif %}{{ r.recite.val or "—" }}</td>
@@ -50,7 +54,7 @@
       </tbody>
     </table>
   </div>
-{% if tails %}
+{% if pg.last and tails %}
   <div class="tail">
     <ul>
 {% for t in tails %}
@@ -59,5 +63,6 @@
     </ul>
   </div>
 {% endif %}
-  <div class="foot">{{ tally }}</div>
+  <div class="foot{% if not pg.last %} pin{% endif %}">{{ pg.tally }}</div>
 </div>
+{% endfor %}
