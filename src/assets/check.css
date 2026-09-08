@@ -93,8 +93,9 @@ body{
 /* 勾选框：家长边问边打勾 */
 .tick{
   flex: 0 0 auto;
+  box-sizing: border-box;      /* 边框吃在尺寸里，加粗不改行高 */
   width: 5.4mm; height: 5.4mm;
-  border: 1pt solid var(--chinese);
+  border: var(--w-box) solid var(--ink-box);
   border-radius: 1mm;
   background: #fff;
 }
@@ -108,7 +109,7 @@ body{
   color: var(--chinese);
   font-family: "Times New Roman", var(--font-cn), serif;
 }
-.items .dots{ flex: 1 1 auto; border-bottom: 1px dotted #ccc; }
+.items .dots{ flex: 1 1 auto; border-bottom: 1px dotted var(--ink-rule); }
 
 /* ── 整行问答：题面长、答案长的用这个 ── */
 .ask{ display: flex; align-items: flex-start; gap: 2.5mm; margin-bottom: 2.5mm; }
@@ -119,7 +120,7 @@ body{
 .ask .a b{ color: var(--chinese); font-weight: 400; }
 
 /* ── 听写用的空白横线（家长版压到一行，够记错字就行）── */
-.lines .ln{ height: 11mm; border-bottom: 1px solid #999; }
+.lines .ln{ height: 11mm; border-bottom: var(--w-line) solid var(--ink-line); }
 .lines .ln:first-child{ margin-top: 1mm; }
 .answer{ font-size: 12.5px; color: #999; margin: 2mm 0 0; }
 .answer b{ color: var(--chinese); font-weight: 400; }

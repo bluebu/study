@@ -93,15 +93,16 @@ body{
 }
 .note i{
   flex: 0 0 auto;
+  box-sizing: border-box;
   width: 4mm; height: 4mm;
-  border: 1.2pt solid var(--ink-box);
+  border: var(--w-box) solid var(--ink-box);
   border-radius: 50%;
   background: #fff;
 }
 
 /* 抄作业用的横线 */
 .lines{ margin-top: 2mm; }
-.lines .ln{ height: 8mm; border-bottom: 1px solid var(--ink-line); }
+.lines .ln{ height: 8mm; border-bottom: var(--w-line) solid var(--ink-line); }
 
 /* ── 表头两个小字 + 逐项两个格子：共用 --col / --name 对齐 ── */
 .cols{
@@ -168,7 +169,7 @@ body{
 .row .fill{
   flex: 1 1 auto;
   margin: 0 3mm;
-  border-bottom: 1px solid var(--ink-line);
+  border-bottom: var(--w-line) solid var(--ink-line);
   align-self: stretch;
 }
 /* 预留的格子：**只有一条下划线 + 两个格子**（项目名也写在线上）——
@@ -187,8 +188,11 @@ body{
 .cols .half span:not(.pad) + span{ margin-left: 2.5mm; }
 .row .box::before{
   content: "";
+  /* border-box：2px 的边框吃在这 5mm 里 —— 不然边框一加粗，19 行各高 0.5mm，
+     整张纸就顶到第二页去了（改粗细前先想一下这条） */
+  box-sizing: border-box;
   width: 5mm; height: 5mm;
-  border: 1.2pt solid var(--ink-box);
+  border: var(--w-box) solid var(--ink-box);
   border-radius: 1mm;
   background: #fff;
 }

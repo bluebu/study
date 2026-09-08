@@ -115,8 +115,9 @@ body{
 /* 三轮勾选格：全文 → 只看首字 → 白纸 */
 .chunk .ticks{ flex: 0 0 auto; display: flex; gap: 1.6mm; margin-top: 1mm; }
 .chunk .ticks i{
+  box-sizing: border-box;      /* 边框吃在尺寸里，加粗不改行高 */
   width: 4.6mm; height: 4.6mm;
-  border: 1pt solid var(--chinese);
+  border: var(--w-box) solid var(--ink-box);
   border-radius: 1mm;
   background: #fff;
 }
@@ -135,8 +136,9 @@ body{
 .probe{ display: flex; align-items: baseline; gap: 2.5mm; margin-bottom: 1mm; }
 .probe .tick{
   flex: 0 0 auto;
+  box-sizing: border-box;
   width: 4.6mm; height: 4.6mm;
-  border: 1pt solid var(--warn);
+  border: var(--w-box) solid var(--ink-box);
   border-radius: 1mm;
   background: #fff;
 }
@@ -157,7 +159,7 @@ body{
   color: var(--ink-soft);
   background-image: repeating-linear-gradient(
     to bottom, transparent 0, transparent 11mm,
-    #ddd 11mm, #ddd calc(11mm + 1px));
+    var(--ink-rule) 11mm, var(--ink-rule) calc(11mm + 1px));
   background-position: 0 6mm;
 }
 
@@ -184,8 +186,9 @@ body{
 }
 .rules li i{
   flex: 0 0 auto;
+  box-sizing: border-box;
   width: 4.2mm; height: 4.2mm;
-  border: 1pt solid #888;
+  border: var(--w-box) solid var(--ink-box);
   border-radius: 50%;
   background: #fff;
 }
