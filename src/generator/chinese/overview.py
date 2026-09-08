@@ -16,7 +16,7 @@ spec 在 storage/spec/chinese/overview/<册>.txt，产物落在 dist/chinese/ove
                 缩进行 = 「其他要求」列。课号带 `*` 是略读课文（只认字、不写字），
                 `[园地N]` 和 `[读书吧]` 不是课文（课号和课文名换灰、底色略淡）
     [分页]      换页点，head 是这一页的副标题（印在页头标题后面）
-    [小结]      底部小结，一行一条
+    [小结]      底部小结，一行一条 `抬头 | 详情`（和 [摘要] 同一个格式）
 
 **一单元一页**：`[分页]` 落在每个单元第一课之前，head 是单元名 ——
 四上八个单元就是八页（第五单元是习作单元，只有 15、16 两课，那页最短）。
@@ -81,6 +81,22 @@ def _write(val: str, *, skim: bool) -> dict:
     return {"val": f"{val} 字", "cls": ""}
 
 
+def _split(lines: list[str]) -> list[dict]:
+    """`抬头 | 详情` 的行 → [{head, detail}]。摘要框和底部小结共用这一个格式。
+
+    没写 `|` 的行整条当详情（抬头空着）—— 模板里那一条就只出正文，
+    不会印一个空的粗体抬头。
+    """
+    out = []
+    for line in lines:
+        head, sep, detail = line.strip().partition("|")
+        if not sep:
+            head, detail = "", head
+        if head.strip() or detail.strip():
+            out.append({"head": head.strip(), "detail": detail.strip()})
+    return out
+
+
 def _pages(sp: spec_lib.Spec) -> tuple[list[dict], list[dict], list[str]]:
     """区块 → (页, 顶部摘要, 底部小结)。一页一个 `.sheet`，`[分页]` 就是换页点。
 
@@ -94,13 +110,12 @@ def _pages(sp: spec_lib.Spec) -> tuple[list[dict], list[dict], list[str]]:
 
     for b in sp.blocks:
         if b.name == SUMMARY:
-            for line in b.lines:
-                head, _, detail = line.strip().partition("|")
-                if head.strip():
-                    summaries.append({"head": head.strip(), "detail": detail.strip()})
+            summaries += _split(b.lines)
             continue
         if b.name == TAIL:
-            tails += [line.strip() for line in b.lines if line.strip()]
+            # 和摘要一个格式：`抬头 | 详情`。抬头是读这一条的锚点 ——
+            # 五条各是一整段话的时候，页底那块谁也读不下去
+            tails += _split(b.lines)
             continue
         if b.name == BREAK:
             # 本页还没有行 → 这个 [分页] 给的是**本页**的副标题（写在第一行就是首页的）

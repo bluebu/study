@@ -8,7 +8,8 @@
   行高保持自然、不拉伸：页 = 单元，八页的行高一致才对得上。
 
   ⚠️ 三处行内元素之间不许留空白，换行会多出一个空格、版式就变了：
-     `.sum li` 里的标题和详情（flex 一行两栏）
+     `.sum li` 里的标题和详情（flex 一行两栏）、`.tail li` 里的抬头和详情
+     （抬头的右边距靠 CSS 的 margin-right 给，不靠空格）
      格子里的圆点 `<i>●</i>` 和后面的文字
      `{{ heading }}<small>` —— 那个全角空格写在 small 里面
   ⚠️ 「有没有要求」「写几个字」的判断全在 overview.py 里算好了
@@ -65,7 +66,7 @@
   <div class="tail">
     <ul>
 {% for t in tails %}
-      <li>{{ t }}</li>
+      <li>{% if t.head %}<b>{{ t.head }}</b>{% endif %}{{ t.detail }}</li>
 {% endfor %}
     </ul>
   </div>

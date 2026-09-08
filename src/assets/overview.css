@@ -94,8 +94,7 @@ body{
    回到行首要横扫大半张纸；分两栏还把第一页 / 末页各省下 40~60px
    （末页原先 5 行加小结超出 52px，就是这么塞回去的） */
 .sum ul{ list-style: none; margin: 0; padding: 0; column-count: 2; column-gap: 9mm; }
-.sum li{ break-inside: avoid; }
-.sum li{ display: flex; gap: 9px; font-size: 13px; line-height: 1.8; }
+.sum li{ display: flex; gap: 9px; font-size: 13px; line-height: 1.8; break-inside: avoid; }
 .sum li b{ flex: 0 0 auto; color: var(--ov-blue); white-space: nowrap; }
 .sum li span{ color: #333; }
 
@@ -177,14 +176,42 @@ tr.aside td.no, tr.aside td.name{ color: var(--ov-green); }
   padding-top: 2mm;
   border-top: 1.5px dashed var(--ov-line);
 }
-/* 小结两栏。⚠️ **别指望分栏能压高度**：这一块的高度被最长那条（多音字清单
-   90 字）主宰，栏一窄它就多折几行，两栏三栏量出来都是 145px。分栏是为了
-   少横扫半张纸，不是为了省空间 —— 要省得从别处省（踩过：为了 20px 试到三栏，
-   高度一点没动） */
-.tail ul{ list-style: none; margin: 0; padding: 0; column-count: 2; column-gap: 9mm; }
-.tail li{ break-inside: avoid; }
-.tail li{ font-size: 13px; color: #444; line-height: 1.8; }
-.tail li::before{ content: "· "; color: var(--ov-blue); font-weight: 700; }
+/* 小结两栏，栏间一条淡线。
+   ⚠️ **别指望分栏能压高度**：这一块的高度被最长那条（多音字清单 90 字）主宰，
+   栏一窄它就多折几行，两栏三栏量出来都是 145px。分栏是为了少横扫半张纸，
+   不是为了省空间 —— 要省得从别处省（踩过：为了 20px 试到三栏，高度一点没动） */
+.tail ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  column-count: 2;
+  column-gap: 8mm;
+  column-rule: 1px solid var(--ov-line);
+}
+/* **每条必须有抬头**（spec 里的 `抬头 | 详情`）—— 五条各是一整段话、同一个
+   字色同一个粗细的时候，页底这一块谁也读不下去。抬头蓝色加粗当锚点，
+   详情压到 #333（原先 #444 的灰在 13px 上偏淡），条间留 1.6mm 喘气。
+   抬头左边那个小方块是条目的起点，比原先的「·」实、也不占一个字宽 */
+.tail li{
+  break-inside: avoid;
+  font-size: 13px;
+  color: #333;
+  line-height: 1.75;
+  margin-bottom: 1.6mm;
+  padding-left: 3.6mm;
+  text-indent: -3.6mm;          /* 折行对齐到抬头，不跑到方块底下 */
+}
+.tail li:last-child{ margin-bottom: 0; }
+.tail li::before{
+  content: "";
+  display: inline-block;
+  width: 1.4mm;
+  height: 1.4mm;
+  margin-right: 2.2mm;
+  vertical-align: 0.4mm;
+  background: var(--ov-blue);
+}
+.tail li b{ color: var(--ov-blue); margin-right: 2mm; font-weight: 700; }
 
 /* 页码钉在页底：表格不撑满了，页底那块留白归它顶着。
    **别把 margin-top:auto 同时给 .tail 和 .foot** —— 两个 auto 平分剩余空间，
