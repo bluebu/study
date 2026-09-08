@@ -5,13 +5,19 @@
   「怎么练」那三条和页底那几条判据是**方法的一部分，固定文案写在这儿**
   （跟 sheet-info 的「姓名 日期」同类），spec 只给原文、切块和关键词。
 
+  spec 给了 `copy:` 的（这一份还要默写）在页眉标题后面出一个**橙色徽章**
+  「✎ 要默写」—— 页底第五条判据只有翻到底才看得见，而「会背 ≠ 会写」得在
+  开始背之前就知道。图标是**内联 SVG，不是 emoji** —— PDF 在 CI 的 ubuntu 上
+  导出，那儿只装了中文字体、没有 emoji 字体，字体里的符号会印成豆腐块。
+
   ⚠️ 行内元素之间不许留空白，换行会多出一个空格、版式就变了：
-     `.head .info`、`.chunk` 里的块号 / 原文 / 提示 / 三个勾选格、
+     `.head .info`、`.head .copy` 里的图标和「要默写」三个字、
+     `.chunk` 里的块号 / 原文 / 提示 / 三个勾选格、
      `.probe` 里的报什么和接什么、`.rules li` 里的判据和圆圈
 -#}
 <div class="sheet" style="--text:{{ size }}px">
   <div class="head">
-    <h1>{{ heading }}{% if sub %}<small>　{{ sub }}</small>{% endif %}</h1>
+    <h1>{{ heading }}{% if sub %}<small>　{{ sub }}</small>{% endif %}{% if copy %}<span class="copy"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10.6 2.1l3.3 3.3-8 8-4.1.8.8-4.1z"/><path d="M9.5 3.2l3.3 3.3"/></svg>要默写</span>{% endif %}</h1>
     <div class="info">{{ info|safe }}</div>
   </div>
 {% if require %}

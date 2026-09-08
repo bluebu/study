@@ -21,7 +21,8 @@ spec 在 storage/spec/chinese/recite/<课号>.txt，产物落在 dist/chinese/re
 
 判定「掌握」的四条判据在页底，**缺一条都不算**：流利（卡壳 0 次）、
 准确（0 处错漏）、**中间切入**（随口报一块能接下一块）、保持（隔天再过）。
-spec 给了 `copy:` 就多出第五条「默写零错字」—— **会背 ≠ 会写**。
+spec 给了 `copy:` 就多出第五条「默写零错字」—— **会背 ≠ 会写**，
+页眉那个橙色「✎ 要默写」徽章和目录页那条小字也是它出的（一处开关三处显示）。
 四上**书上**要求默写的只有《题西林壁》《出塞》《夏日绝句》；
 园地一《赠刘景文》的 `copy:` 是家里加的要求（那份 spec 的注释里写着，
 教材总览里也标了同一条）—— 别拿「照课后题原话」把它删掉。
@@ -196,10 +197,13 @@ def build_recite(dist: Path, pdf: bool = False) -> None:
     for path in specs:
         sp = spec_lib.parse(path)
         pdf_ok, n = _render(sp, out_dir, pdf)
+        # 要默写的那几份在目录页也标一句：挑单子的时候就知道，
+        # 不用点进去翻到页底那条判据（纸上是页眉那个橙徽章）
         entries.append({
             "href": f"{path.stem}.html",
             "label": sp.get("range", path.stem),
-            "small": f"{n['sections']} 段 · {n['chunks']} 块 · 四天四轮",
+            "small": f"{n['sections']} 段 · {n['chunks']} 块 · 四天四轮"
+                     + ("　✎ 要默写" if sp.get("copy") else ""),
             "pdf": f"{path.stem}.pdf" if pdf_ok else None,
         })
 

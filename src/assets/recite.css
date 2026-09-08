@@ -37,6 +37,32 @@ body{
 }
 .head h1{ font-size: 18px; margin: 0; padding-right: 10px; }
 .head h1 small{ font-size: 13px; font-weight: 400; color: #666; }
+/* 「要默写」徽章（spec 给了 `copy:` 才出）—— 会背 ≠ 会写，这一份还得写下来。
+   页底第五条判据要翻到底才看得见，所以在页眉先说一次。
+   **填色橙**（不是 .require 那种淡橙底条）：一页上两处橙不能长一样，
+   这个是标记、那个是引文。红不能用 —— 红专属分数，总览那张查阅表是唯一的例外。
+   图标是内联 SVG 不是 emoji：PDF 在 CI 的 ubuntu 上导出，那儿没有 emoji 字体。 */
+.head .copy{
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: 8px;
+  padding: 1.5px 8px 2px;
+  border-radius: 999px;
+  background: var(--chinese);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.head .copy svg{
+  width: 11px; height: 11px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
 .head .info{ font-size: 12px; white-space: nowrap; }
 .head .info span{ margin-left: 10px; }
 .blank{ display: inline-block; border-bottom: 1px solid #111; width: 42px; }
