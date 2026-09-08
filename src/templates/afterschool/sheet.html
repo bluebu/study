@@ -16,7 +16,7 @@
   </div>
 {% for col in columns %}
   <div class="part{% if loop.first %} first{% endif %}">
-    <h2><span class="no">{{ loop.index }}</span>{{ col.name }}{% if col.head %}<small>{{ col.head }}</small>{% endif %}</h2>
+    <h2>{% if col.no %}<span class="no">{{ col.no }}</span>{% endif %}{{ col.name }}{% if col.head %}<small>{{ col.head }}</small>{% endif %}</h2>
 {% for note in col.notes %}
     <p class="note"><i></i>{{ note }}</p>
 {% endfor %}

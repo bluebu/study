@@ -109,7 +109,9 @@ body{
   display: flex;
   align-items: center;
   gap: 0;
-  padding: 1mm 0;
+  /* 横线是要写字的（「小卷 → 1 课看拼音写词，错改 3 遍」），
+     行高给足 —— 第一栏不再抄一遍作业，那 32mm 正好还给这 14 行 */
+  padding: 1.8mm 0;
   border-bottom: 1px dotted var(--line);
 }
 .row .name{ flex: 0 0 var(--name); font-size: 13px; }
