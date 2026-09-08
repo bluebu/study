@@ -9,10 +9,38 @@
    项目名 20mm 是按「一课一练改签」六个字定的（最长那项），
    换更长的项目名要一起加宽，不然横线会被挤没。 */
 
+/* ── 这张单子的色阶（一族，打印友好）──────────────────────────
+   原先纸上混着三家颜色：纯黑的线（#111）、中性灰的框和小字
+   （#3A3A3A / #555 / #666 / #777 / #999 / #333 / #222）、紫的圈和序号
+   —— 又重又杂，「有的过重、有的过轻」。现在全站这一张单子只有：
+   **四级中性灰 + 一支紫 + 一支红**，四级灰都掺了一点紫、和 --accent 同族，
+   彩打看着是一家的；黑白打印时紫掉成灰，只剩四级浓淡，层次照旧。
+
+   哪一级多重，按「孩子的眼睛该先落在哪儿」定：
+     t1  要读的字（栏名、项目名、说明）        灰度 45   最深
+     t2  要画的框（勾选框、说明行的小圈）      灰度 74   次深，比字轻才不抢眼
+     t3  要写字的横线、次要小字                灰度 108  铅笔字要压得住它
+     t4  最轻的提示（页脚、页底虚线）          灰度 140
+   紫是 112，正好落在 t3 / t4 之间 —— 它只是装饰，别比字重。
+   ⚠️ 墨色的**口径**（粗细一律 px 不用 pt、灰度上限）在 print.css；
+   这儿只把那几个变量取成本族的色调，角色一个都没换。 */
+:root{
+  --t1: #2E2A38;
+  --t2: #4C4658;
+  --t3: #6E6880;
+  --t4: #8E88A0;
+  --red: #C62828;          /* 唯一的红：页底示范的对勾和叉，「拿红笔」的意思 */
+
+  --ink-box:  var(--t2);   /* 勾选框、小圈的边框 */
+  --ink-line: var(--t3);   /* 写字的横线 */
+  --w-box: 1.6px;          /* 2px 太重：26 个框排下来比正文还抢眼 */
+  --w-dot: 1.4px;          /* 说明行那个小圈更小，再细一档才和大框一样轻重 */
+}
+
 body{
   margin: 0;
   font-family: var(--font-cn);
-  color: #111;
+  color: var(--t1);
   font-size: 13px;
   background: #888;             /* 屏幕上模拟纸外的桌面 */
 }
@@ -49,13 +77,14 @@ body{
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  border-bottom: 2px solid #111;
+  border-bottom: 1.5px solid var(--t1);   /* 2px 纯黑压得太狠 */
   padding-bottom: 6px;
   margin-bottom: 3mm;
 }
 .head h1{ font-size: 19px; margin: 0; padding-right: 10px; }
 .head .info{ font-size: 12.5px; white-space: nowrap; }
-.blank{ display: inline-block; border-bottom: 1px solid #111; width: 46px; }
+.blank{ display: inline-block; width: 46px;
+        border-bottom: var(--w-line) solid var(--ink-line); }   /* 也是写字的横线 */
 
 /* ── 一栏 ── */
 .part{ margin-bottom: 2.5mm; }
@@ -100,7 +129,7 @@ body{
   font-weight: 700;
   display: grid; place-items: center;
 }
-.part h2 small{ font-weight: 400; color: #666; font-size: 11px; }
+.part h2 small{ font-weight: 400; color: var(--t3); font-size: 11px; }
 
 /* 第一栏：作业抄下来了吗 —— 上底色，一眼看出先过这一栏 */
 /* 第一栏：浅底 + 实线边框 —— 底色 #F0E7F7 灰度 235，黑白打印几乎是白的，
@@ -124,7 +153,7 @@ body{
   align-items: flex-start;
   gap: var(--pad);
   font-size: 12px;
-  color: #222;
+  color: var(--t1);          /* 说明是要读的字，和项目名同一级 */
   margin: 0 0 1.1mm;
   line-height: var(--lh);
 }
@@ -138,7 +167,7 @@ body{
      项目序号同一条竖线），文字也就和栏名、项目名对齐 */
   margin-left: calc((var(--dia) - var(--dot)) / 2);
   margin-right: calc((var(--dia) - var(--dot)) / 2);
-  border: var(--w-box) solid var(--ink-box);
+  border: var(--w-dot) solid var(--ink-box);
   border-radius: 50%;
   background: #fff;
 }
@@ -152,7 +181,7 @@ body{
   display: flex;
   gap: 8mm;                /* 和 .rows 的 column-gap 一样，两组才对得上列 */
   font-size: 9.5px;
-  color: #555;
+  color: var(--t3);
 }
 /* 一组标签对齐一列的格子。列数由模板按 cols 出几组，宽度走同一套变量 */
 .cols .half{ flex: 1 1 0; display: flex; align-items: baseline; min-width: 0; }
@@ -247,15 +276,15 @@ body{
 .tip{
   margin-top: auto;
   padding-top: 2.5mm;
-  border-top: 1.5px dashed #999;
+  border-top: 1.2px dashed var(--t4);
   font-size: 11px;
-  color: #333;
+  color: var(--t2);
   line-height: 1.6;
 }
-.tip b{ color: #111; }
-/* 批改红：页底那条里直接画出来的对勾和叉。这支红是「拿红笔」的意思，
-   不是色板里的分类色（那儿刻意没有红）；灰度 75，黑白打印也够深，
-   形状本身也认得出。
+.tip b{ color: var(--t1); }
+/* 批改红（--red）：页底那条里直接画出来的对勾和叉。这支红是「拿红笔」的
+   意思，不是色板里的分类色（那儿刻意没有红）；灰度 75、和 t2 一档，
+   黑白打印也够深，形状本身也认得出。
 
    ⚠️ **两个符号都用 CSS 画，不用字体里的字符** —— 两条路都试过、都不行：
      · ✓ (U+2713) / ✗ (U+2717) 属于 Dingbats，**线上导 PDF 的 ubuntu runner
@@ -273,8 +302,8 @@ body{
 .tip .mark.ok{
   width: 3.4mm; height: 1.9mm;
   margin-bottom: .6mm;
-  border-left: 2px solid #C62828;
-  border-bottom: 2px solid #C62828;
+  border-left: 2px solid var(--red);
+  border-bottom: 2px solid var(--red);
   transform: rotate(-45deg);
 }
 /* 叉：两条横线，各转 ±45° */
@@ -284,11 +313,11 @@ body{
   content: "";
   position: absolute;
   left: 0; right: 0; top: 50%;
-  border-top: 2px solid #C62828;
+  border-top: 2px solid var(--red);
 }
 .tip .mark.no::before{ transform: rotate(45deg); }
 .tip .mark.no::after{ transform: rotate(-45deg); }
-.foot{ margin-top: 1.5mm; text-align: right; color: #777; font-size: 10px; }
+.foot{ margin-top: 1.5mm; text-align: right; color: var(--t4); font-size: 10px; }
 
 /* ── 屏幕（手机）：页头左右分列改成上下两行 ── */
 @media screen and (max-width: 760px){
