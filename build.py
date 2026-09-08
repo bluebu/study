@@ -74,6 +74,7 @@ SUBJECTS = [
         "note": "一张纸看完一周，装书包照着带书",
         "sections": [
             {"name": "一周课表", "desc": "六节课 + 午休，A4 贴桌前", "href": "week/", "state": "ready"},
+            {"name": "放学检查", "desc": "作业抄没抄，三科逐项过", "href": "afterschool/", "state": "ready"},
         ],
     },
 ]

@@ -1,0 +1,155 @@
+/* ── 放学检查（课程表）───────────────────────────────────────
+   一天一张，打印一叠放书桌上。顺序就是检查顺序：先看作业抄没抄下来，
+   再三科逐项过，最后收书包。依赖 palette.css + print.css。
+
+   **两个格子的列宽是 --col，表头小字和格子共用它** —— 表头 `.cols` 和
+   每行 `.row` 各自是 flex，靠同一个变量对齐。改宽度只改 --col 一处，
+   改别处就会出现「小字对不到格子上」，家长分不清哪个框是哪个。
+
+   项目名 20mm 是按「一课一练改签」六个字定的（最长那项），
+   换更长的项目名要一起加宽，不然横线会被挤没。 */
+
+body{
+  margin: 0;
+  font-family: var(--font-cn);
+  color: #111;
+  font-size: 13px;
+  background: #888;             /* 屏幕上模拟纸外的桌面 */
+}
+@media print{ body{ background: #fff; } }
+
+.sheet{
+  --col: 15mm;      /* 「今天留了」「已完成」两列的宽度，表头和格子共用 */
+  --name: 22mm;     /* 项目名那一列 */
+  display: flex;
+  flex-direction: column;
+  min-height: 297mm;
+}
+@media print{ .sheet{ height: 297mm; } }
+
+/* ── 页头 ── */
+.head{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 2px solid #111;
+  padding-bottom: 6px;
+  margin-bottom: 3mm;
+}
+.head h1{ font-size: 19px; margin: 0; padding-right: 10px; }
+.head .info{ font-size: 12.5px; white-space: nowrap; }
+.blank{ display: inline-block; border-bottom: 1px solid #111; width: 46px; }
+
+/* ── 一栏 ── */
+.part{ margin-bottom: 3mm; }
+.part h2{
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 2mm;
+  line-height: 1.2;
+}
+.part h2 .no{
+  flex: 0 0 auto;
+  width: 5.5mm; height: 5.5mm;
+  border-radius: 50%;
+  background: var(--c-drill);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  display: grid; place-items: center;
+  align-self: center;
+}
+.part h2 small{ font-weight: 400; color: #888; font-size: 11px; }
+
+/* 第一栏：作业抄下来了吗 —— 上底色，一眼看出先过这一栏 */
+.part.first{
+  background: var(--c-drill-bg);
+  border-radius: 5px;
+  padding: 3mm 4mm 3.5mm;
+}
+.part.first h2 .no{ background: #fff; color: var(--c-drill); }
+
+/* 说明行：每条前面一个圈，过一条画一个 */
+.note{
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+  font-size: 12px;
+  color: #444;
+  margin: 0 0 1.4mm;
+  line-height: 1.5;
+}
+.note i{
+  flex: 0 0 auto;
+  width: 4mm; height: 4mm;
+  border: 1pt solid var(--c-drill);
+  border-radius: 50%;
+  background: #fff;
+}
+
+/* 抄作业用的横线 */
+.lines{ margin-top: 2mm; }
+.lines .ln{ height: 8mm; border-bottom: 1px solid #999; }
+
+/* ── 表头两个小字 + 逐项两个格子：共用 --col / --name 对齐 ── */
+.cols{
+  display: flex;
+  align-items: baseline;
+  font-size: 9.5px;
+  color: #999;
+  margin-bottom: .8mm;
+}
+.cols .pad{ flex: 1 1 auto; }
+.cols span:not(.pad){ flex: 0 0 var(--col); text-align: center; }
+
+.row{
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 1mm 0;
+  border-bottom: 1px dotted var(--line);
+}
+.row .name{ flex: 0 0 var(--name); font-size: 13px; }
+/* 横线：写今天这一类具体是什么（「小卷 → 1 课看拼音写词，错改 3 遍」）*/
+.row .fill{
+  flex: 1 1 auto;
+  margin: 0 3mm;
+  border-bottom: 1px solid #bbb;
+  align-self: stretch;
+}
+.row .box{
+  flex: 0 0 var(--col);
+  display: grid;
+  place-items: center;
+}
+.row .box::before{
+  content: "";
+  width: 5mm; height: 5mm;
+  border: 1pt solid var(--c-drill);
+  border-radius: 1mm;
+  background: #fff;
+}
+
+/* ── 页底 ── */
+.tip{
+  margin-top: auto;
+  padding-top: 2.5mm;
+  border-top: 1.5px dashed #bbb;
+  font-size: 11px;
+  color: #666;
+  line-height: 1.6;
+}
+.tip b{ color: #111; }
+.foot{ margin-top: 1.5mm; text-align: right; color: #999; font-size: 10px; }
+
+/* ── 屏幕（手机）：页头左右分列改成上下两行 ── */
+@media screen and (max-width: 760px){
+  .head{ flex-direction: column; align-items: flex-start; gap: 3px; }
+  .head h1{ padding-right: 0; }
+  .head .info{ white-space: normal; }
+  /* 窄屏把两列格子收窄，横线才不至于被挤没 */
+  .sheet{ --col: 12mm; --name: 20mm; }
+}

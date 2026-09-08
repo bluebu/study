@@ -1,0 +1,42 @@
+{#-
+  放学检查 —— 放学回来照着过一遍。一个区块 = 一栏，顺序就是检查顺序。
+
+  **每项两个格子：今天留了 ｜ 已完成。** 表头那两个小字和格子必须**竖着对齐** ——
+  `.cols` 和 `.row` 用同一套 flex 列宽（`--col`），改一个就得改另一个，
+  否则纸上小字对不到格子上，家长就不知道哪个框是哪个。
+
+  ⚠️ 行内元素之间不许留空白，换行会多出一个空格、版式就变了：
+     `.row` 里的项目名 / 横线 / 两个格子、`.cols` 里的两个小字、
+     `.note` 里的圈和文字
+-#}
+<div class="sheet">
+  <div class="head">
+    <h1>{{ heading }}</h1>
+    <div class="info">{{ who }} <span class="blank"></span> 日期 <span class="blank"></span> 星期 <span class="blank"></span></div>
+  </div>
+{% for col in columns %}
+  <div class="part{% if loop.first %} first{% endif %}">
+    <h2><span class="no">{{ loop.index }}</span>{{ col.name }}{% if col.head %}<small>{{ col.head }}</small>{% endif %}</h2>
+{% for note in col.notes %}
+    <p class="note"><i></i>{{ note }}</p>
+{% endfor %}
+{% if col.lines %}
+    <div class="lines">
+{% for _ in range(col.lines) %}
+      <div class="ln"></div>
+{% endfor %}
+    </div>
+{% endif %}
+{% if col.show_cols %}
+    <div class="cols"><span class="pad"></span><span>今天留了</span><span>已完成</span></div>
+{% endif %}
+{% if col.rows %}
+{% for it in col.rows %}
+    <div class="row"><span class="name">{{ it }}</span><span class="fill"></span><i class="box"></i><i class="box"></i></div>
+{% endfor %}
+{% endif %}
+  </div>
+{% endfor %}
+  <p class="tip">每一项都要过一遍：<b>今天没留这一类，「今天留了」那格画一横</b> —— 空着分不出「没留」还是「没检查」。</p>
+  <div class="foot">{{ tally }}</div>
+</div>

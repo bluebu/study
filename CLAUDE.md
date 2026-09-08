@@ -63,6 +63,8 @@ storage/
     chinese/overview/   教材总览 spec：**一册一份、按册命名**（g4a = 四年级上册）
     math/miji/          秘籍 spec：错题按错因分组写，练习题只写题面、答案脚本算
     schedule/week/      课表 spec：一个区块一天，区块内一行一节（YYYYMMDD 是学期起）
+    schedule/afterschool/  放学检查 spec：一个区块一栏，项行是作业类型、
+                        缩进行是说明、`lines=N` 留几行横线抄作业
   result/             算出来的指标（可再生，push 当回归基准）
     english/review.csv  一行一次朗读的全部指标。趋势页读它
 ```
@@ -89,7 +91,8 @@ src/
                       alt「家长版」（描边，可选）+ pdf「打印单」（填色，最右）
     sheet-info.html   打印单页眉「姓名 __ 日期 __ 得分 __」，四个栏目共用
                       （第三格给空串就只出前两格 —— 抽查单的得分在页底）
-    practice/ recite/ check/ overview/ miji/ ket/ homework/ retell/   各栏目的打印单版式
+    practice/ recite/ check/ overview/ miji/ ket/ homework/ retell/
+    afterschool/      放学检查（两列勾选格：今天留了 ｜ 已完成）
     schedule/sheet.html  课程表：节次列和课格在同一个 grid 里，行高天然对齐
     review/           day.html 一天一份成绩单（当天每次录音一节）
                       one.html 一节的版式（card 宏）· sum.html 当天汇总条
@@ -106,6 +109,7 @@ src/
     foot.css          页脚（备案号 + 统计），page.py 挂页脚时自动引上
     trend.css         趋势页（曲线卡片 + 指标总表）
     schedule.css      课程表（行高 --h / 节次列宽 --pn 两个变量，手机上只改这两个）
+    afterschool.css   放学检查（两列格子的宽度是 --col，表头小字和格子共用它）
     daysum.css        当天汇总条（目录页和日页共用，两边引的 CSS 谁也不包含谁）
     review-play.css   比对里能点的词（绿=课本朗读那一句 / 红=她读的那一段）
     review-play.js    **全站唯一一个脚本**。点词听读音，逻辑和为什么见文件头
@@ -125,7 +129,9 @@ src/
       homework.py     每日打卡：群公告 → 一张 A4 作业清单
       retell.py       复述故事：关键词按情节五阶段分组，看着讲一遍
     math/build.py     计算秘籍：错题清单 + 口诀卡 + 重练题（两页 A4）
-    schedule/build.py 课程表：一周一张 A4，语数英上三科色、副科中性
+    schedule/         课程表（build.py 只做分发）
+      week.py         一周课表：一周一张 A4 横版
+      afterschool.py  放学检查：作业抄没抄下来，三科逐项过
 .github/workflows/pages.yml
 .claude/skills/
   kousuan/            口算卷照片 → 错题清单 + 秘籍单（图和判对错都走 ../feeder）
