@@ -165,7 +165,7 @@ p16 正是这一种）。错一位在页面上只表现成「点绿词听到别�
 | 教材总览 | `storage/spec/chinese/overview/` | `<册>.txt`（`g4a` = 四年级上册） | `src/generator/chinese/overview.py` |
 | 数学秘籍 | `storage/spec/math/miji/` | `<错因slug>.txt` | `src/generator/math/build.py` |
 | 一周课表 | `storage/spec/schedule/week/` | `<YYYYMMDD>.txt` | `src/generator/schedule/week.py` |
-| 放学检查 | `storage/spec/schedule/afterschool/` | `<YYYYMMDD>.txt`（学期起，两页：`[分页]` 后面的栏排到第二页） | `src/generator/schedule/afterschool.py` |
+| 放学检查 | `storage/spec/schedule/afterschool/` | `<YYYYMMDD>.txt`（学期起；`[分区]` 后面的栏在纸上框成下半区，不分页） | `src/generator/schedule/afterschool.py` |
 
 **只有打卡评价读 spec 之外的数据文件**，其余十个栏目都是 spec 单一输入。
 `.read.json` 里每条逐字比对差异都带着**规则分出来的类**：`category`（词尾 / 小词 /

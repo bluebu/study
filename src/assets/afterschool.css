@@ -37,10 +37,16 @@
   --w-dot: 1.4px;          /* 说明行那个小圈更小，再细一档才和大框一样轻重 */
 }
 
+/* ⚠️ **每一处文字都要写 line-height，而且写数字**（不写就是 `normal`，
+   由字体的度量决定）。这张纸是「刚好一页」的：本地 mac 是 PingFang、
+   线上导 PDF 的 ubuntu 是 Noto Sans CJK，`normal` 在两边差得出 2~3px/行 ——
+   15 行就是 40px，本地一页、线上多印一张白纸，而 HTML 里看不出来。
+   数字行高两边一样；格子和横线本来就是 mm，于是整页高度是**算得出来**的。 */
 body{
   margin: 0;
   font-family: var(--font-cn);
   color: var(--t1);
+  line-height: 1.3;
   font-size: 13px;
   background: #888;             /* 屏幕上模拟纸外的桌面 */
 }
@@ -69,6 +75,9 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 297mm;
+  /* 加了下半区（家庭作业 5 行）之后一页装不下了，纸边距从 14mm 收到 12mm。
+     **别再往下收** —— 家用喷墨最后几毫米印不到 */
+  padding: 12mm 12mm;
 }
 @media print{ .sheet{ height: 297mm; } }
 
@@ -81,13 +90,13 @@ body{
   padding-bottom: 6px;
   margin-bottom: 3mm;
 }
-.head h1{ font-size: 19px; margin: 0; padding-right: 10px; }
-.head .info{ font-size: 12.5px; white-space: nowrap; }
+.head h1{ font-size: 19px; line-height: 1.2; margin: 0; padding-right: 10px; }
+.head .info{ font-size: 12.5px; line-height: 1.3; white-space: nowrap; }
 .blank{ display: inline-block; width: 46px;
         border-bottom: var(--w-line) solid var(--ink-line); }   /* 也是写字的横线 */
 
 /* ── 一栏 ── */
-.part{ margin-bottom: 2.5mm; }
+.part{ margin-bottom: 2mm; }
 
 /* 栏抬头这一行：栏名和「校内完成 / 家中完成」**排在同一行**。
    两样东西放进**同一个 grid 格子**（都是 grid-area 1/1，叠着），于是：
@@ -99,7 +108,7 @@ body{
 .bar{
   display: grid;
   align-items: center;
-  margin: 0 0 2mm;
+  margin: 0 0 1.6mm;
 }
 .bar > *{ grid-area: 1 / 1; }
 
@@ -138,7 +147,7 @@ body{
   background: var(--c-drill-bg);
   border: 1.2px solid var(--accent);
   border-radius: 5px;
-  padding: 2.5mm 4mm 3mm;
+  padding: 2mm 4mm 2.5mm;
 }
 
 /* 说明行：每条前面一个圈，过一条画一个 */
@@ -154,7 +163,7 @@ body{
   gap: var(--pad);
   font-size: 12px;
   color: var(--t1);          /* 说明是要读的字，和项目名同一级 */
-  margin: 0 0 1.1mm;
+  margin: 0 0 0.9mm;
   line-height: var(--lh);
 }
 .note i{
@@ -181,6 +190,7 @@ body{
   display: flex;
   gap: 8mm;                /* 和 .rows 的 column-gap 一样，两组才对得上列 */
   font-size: 9.5px;
+  line-height: 1.2;
   color: var(--t3);
 }
 /* 一组标签对齐一列的格子。列数由模板按 cols 出几组，宽度走同一套变量 */
@@ -230,14 +240,17 @@ body{
      46px 宽 —— 横线塌成 0、格子挤到左边。量出来的，别删 */
   width: 100%;
   gap: 0;
-  /* 横线是要写字的（「小卷 → 1 课看拼音写词，错改 3 遍」），行高给足。
-     现在一栏只印真有的项（语文 5 行 + 数学 3 + 英语 2 = 10 行），预算宽松，
-     所以行高给到 2.8mm；**再加项之前先量一遍 PDF 页数** */
-  padding: 2.8mm 0;
+  /* 横线是要写字的（「小卷 → 1 课看拼音写词，错改 3 遍」），行高要够下笔。
+     纸上现在 15 行（语文 5 + 数学 3 + 英语 2 + 家庭作业 5），一页的预算全在
+     这一处：2mm 上下 padding + 5mm 的格子 = 9mm 行距，和作业本一格差不多。
+     **再加项之前先量一遍**（`node tools/shot.mjs … --probe` 看 .sheet 高度，
+     超过 1122.5px 就是超出 A4 了，PDF 会多出一张纸） */
+  padding: 2mm 0;
   /* **行与行之间不画分隔虚线** —— 每行本来就有一条写字的横线（.fill），
      再来一条通栏虚线就是笔记本横格那个样子，说过不要了。行距靠 padding 分开 */
 }
-.row .name{ flex: 0 0 var(--name); font-size: 15px; }
+/* line-height 1.2 = 18px < 格子 5mm(18.9px) —— **行高由格子定，不由字体定** */
+.row .name{ flex: 0 0 var(--name); font-size: 15px; line-height: 1.2; }
 /* 横线：写今天这一类具体是什么（「小卷 → 1 课看拼音写词，错改 3 遍」）*/
 .row .fill{
   flex: 1 1 auto;
@@ -272,6 +285,28 @@ body{
   background: #fff;
 }
 
+/* ── 下半区（spec 里 `[分区]` 之后的栏）────────────────────────
+   **不是分页，一天还是一张纸**：上半区是学校留的作业（照作业本核），
+   下半区是家里加的 —— 要一眼看出是两码事。
+
+   先试过「画一条分界线」：这张纸上到处都是横线，一条线分不出来是「边界」
+   还是「又一行」。所以整块框起来 —— **浅底 + 一圈线**，和第一栏那个框
+   同一套装饰（同一族的浅紫底、同一支紫的描边），纸上就读成「一个独立区块」。
+   光靠底色不行：#F0E7F7 灰度 235，黑白打印几乎是白的，那圈线才是凭据。
+
+   ⚠️ **左右用负边距铺到纸的边距里**：框往外长、内容不动，区域里的项目名、
+   横线、格子这才还落在上半区那几条竖线上。改成正常的 padding 会把这一区
+   整体缩进去，两个区的格子列当场错开。 */
+.zone.other{
+  margin: 4mm -4mm 0;
+  padding: 3mm 4mm 1.5mm;
+  background: var(--c-drill-bg);
+  border: 1.2px solid var(--accent);
+  border-radius: 5px;
+}
+/* 框里最后一栏的下边距归框的 padding 管，不然底下多出一条空白 */
+.zone.other .part:last-child{ margin-bottom: 0; }
+
 /* ── 页底 ── */
 .tip{
   margin-top: auto;
@@ -279,7 +314,7 @@ body{
   border-top: 1.2px dashed var(--t4);
   font-size: 11px;
   color: var(--t2);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 .tip b{ color: var(--t1); }
 /* 批改红（--red）：页底那条里直接画出来的对勾和叉。这支红是「拿红笔」的
@@ -317,7 +352,8 @@ body{
 }
 .tip .mark.no::before{ transform: rotate(45deg); }
 .tip .mark.no::after{ transform: rotate(-45deg); }
-.foot{ margin-top: 1.5mm; text-align: right; color: var(--t4); font-size: 10px; }
+.foot{ margin-top: 1.5mm; text-align: right; color: var(--t4);
+       font-size: 10px; line-height: 1.3; }
 
 /* ── 屏幕（手机）：页头左右分列改成上下两行 ── */
 @media screen and (max-width: 760px){

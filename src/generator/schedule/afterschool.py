@@ -22,8 +22,9 @@
    所以三科的格子落在同两条竖线上。**右列没排满的那几格补成空格子**
    （一条横线 + 两个格子，没序号没项目名）：老师临时加的作业写这儿
 3. **收拾书包** —— 照明天的课表装，家长签字
-4. **家庭作业**（第二页）—— 学校那套过完了才轮到家里加的。一栏一列、
-   编号位固定，只有第一项是每天都有的，剩下几行留白手填
+4. **家庭作业**（同一张纸，下半区）—— 上面是学校留的作业（照作业本核），
+   下面是家里加的，中间一条分界线**一眼看出是两码事**。一栏一列、编号位
+   固定，只有第一项是每天都有的，剩下几行留白手填
 
 spec 的形状：**一个区块 = 纸上一栏**，区块里两种行混着写都行 ——
 缩进行是说明（每条前面一个圈），项行是作业类型（`,` `，` `、` 分隔）。
@@ -34,10 +35,11 @@ spec 的形状：**一个区块 = 纸上一栏**，区块里两种行混着写�
     cols=N    排几列，默认 2；`cols=1` 排一列（横线长，够写具体内容）
     slots=N   **这一栏固定 N 个编号位**：写了名字的照抄，剩下的只出序号和
               横线、留着手填。家庭作业就靠它 —— 每天加什么不一定，位子先留好
-    [分页]    **不是一栏，是一页的分界**：后面的栏排到下一页去。
-              抬头写在方括号后面（`[分页] 家庭作业`），不写就沿用卷名。
-              **一页 = 一个 .sheet**，所以「HTML 里 .sheet 的个数 == PDF
-              页数」这条自检照样成立
+    [分区]    **不是一栏，也不是分页**：后面的栏整块框起来（浅底 + 描边），
+              纸上看着是另一个区域，**一天还是一张纸**。不带抬头 ——
+              区域的名字就是它下面那一栏的名字。
+              「校内完成 / 家中完成」那行小字**每个区域各出一遍**
+              （出在本区第一个有项的栏上）
 """
 
 from __future__ import annotations
@@ -58,7 +60,7 @@ DEFAULTS = {"title": "放学检查"}
 # 这两个数注入到每个 .rows 的 --rows / --gcols，CSS 只读变量，**一处定义**
 GROUP = 5
 GRID = 2
-BREAK = "分页"     # 这个名字的区块不是一栏，是一页的分界
+ZONE = "分区"      # 这个名字的区块不是一栏，是纸上的一条区域分界线
 
 
 def _num(sp: spec_lib.Spec, b, key: str, default: str) -> int:
@@ -71,13 +73,16 @@ def _num(sp: spec_lib.Spec, b, key: str, default: str) -> int:
 def _columns(sp: spec_lib.Spec) -> list[dict]:
     """区块 → 纸上一栏。说明行、项行、横线三样都是可选的。
 
-    `[分页]` 不是一栏 —— 它在返回的列表里留一个 `{"break": 抬头}`，
-    分页交给 `_pages()` 切，这儿只管把顺序保住。
+    `[分区]` 不是一栏 —— 它在返回的列表里留一个 `{"zone": 抬头}`，
+    切区域交给 `_zones()`，这儿只管把顺序保住。
     """
     out = []
     for b in sp.blocks:
-        if b.name == BREAK:
-            out.append({"break": b.head})
+        if b.name == ZONE:
+            if b.head:
+                spec_lib.die(f"{sp.path.name}：[{ZONE}] 不带抬头（现在写着"
+                             f" {b.head!r}）—— 区域的名字就是它下面那一栏的名字")
+            out.append({"zone": True})
             continue
 
         # 项行的左边就是项目名（`小卷, 书后习题, 背`），没有 `=` 右边
@@ -103,7 +108,7 @@ def _columns(sp: spec_lib.Spec) -> list[dict]:
         if col["notes"] or col["rows"] or col["lines"]:
             out.append(col)
 
-    cols = [c for c in out if "break" not in c]
+    cols = [c for c in out if "zone" not in c]
     if not cols:
         spec_lib.die(f"{sp.path.name} 里没有任何区块")
 
@@ -117,47 +122,47 @@ def _columns(sp: spec_lib.Spec) -> list[dict]:
     return out
 
 
-def _pages(rows: list[dict], heading: str) -> list[dict]:
-    """按 `[分页]` 切页。一页 = 一个 .sheet。
+def _zones(rows: list[dict]) -> list[list[dict]]:
+    """按 `[分区]` 切区域。**区域是纸上框一块，不是分页** —— 一天一张。
 
-    「校内完成 / 家中完成」那行小字**每页都要出一遍**（出在本页第一个有项的
-    栏上）—— 第二页要是不出，那两列格子就没了名字。
+    「校内完成 / 家中完成」那行小字**每个区域各出一遍**（出在本区第一个
+    有项的栏上）：下半区离上面那行小字隔了半张纸，不重出就认不出哪列是哪列。
     """
-    pages, cur = [], {"heading": heading, "columns": []}
+    zones, cur = [], []
     for row in rows:
-        if "break" in row:
-            if cur["columns"]:
-                pages.append(cur)
-            cur = {"heading": row["break"] or heading, "columns": []}
+        if "zone" in row:
+            if cur:
+                zones.append(cur)
+            cur = []
             continue
-        cur["columns"].append(row)
-    if cur["columns"]:
-        pages.append(cur)
+        cur.append(row)
+    if cur:
+        zones.append(cur)
 
-    for pg in pages:
-        for col in pg["columns"]:
+    for z in zones:
+        for col in z:
             col["show_cols"] = False
-        first = next((c for c in pg["columns"] if c["rows"]), None)
+        first = next((c for c in z if c["rows"]), None)
         if first:
             first["show_cols"] = True
-    return pages
+    return zones
 
 
 def _render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, dict]:
     heading = sp.get("title", DEFAULTS["title"])
     rows = _columns(sp)
-    pages = _pages(rows, heading)
-    cols = [c for c in rows if "break" not in c]
+    zones = _zones(rows)
+    cols = [c for c in rows if "zone" not in c]
     # **数的是写了名字的项**：slots= 留出来的空位子是给手填的，不算今天的活
     total = sum(1 for c in cols for it in c["rows"] if it)
 
     body = tmpl.body(
         "afterschool/sheet.html",
-        pages=pages,
+        heading=heading,
+        zones=zones,
         who=sp.get("who", "姓名"),
         total=total,
-        tally=f"{len(cols)} 栏 / {total} 项"
-              + (f" · {len(pages)} 页" if len(pages) > 1 else ""),
+        tally=f"{len(cols)} 栏 / {total} 项",
     )
 
     out = page.write(
@@ -174,7 +179,7 @@ def _render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, dict]:
         ),
     )
     print(f"    → afterschool/{out.name}  "
-          f"（{len(pages)} 页 / {len(cols)} 栏 / {total} 项）")
+          f"（{len(zones)} 区 / {len(cols)} 栏 / {total} 项）")
     ok = bool(pdf) and sheet.to_pdf(out, out.with_suffix(".pdf"))
     return ok, {"cols": len(cols), "items": total}
 

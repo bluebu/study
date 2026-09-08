@@ -66,8 +66,9 @@ storage/
     schedule/afterschool/  放学检查 spec：一个区块一栏，项行是作业类型、
                         缩进行是说明。区块属性 `lines=N` 留几行横线抄作业、
                         `cols=N` 排几列、`slots=N` 固定几个编号位（没写名字的
-                        只出序号和横线，手填）。**`[分页]` 不是一栏是一页的
-                        分界** —— 家庭作业在第二页
+                        只出序号和横线，手填）。**`[分区]` 不是一栏，是把后面
+                        的栏整块框起来** —— 上半区学校留的、下半区家里加的，
+                        **不分页**，一天还是一张纸
   result/             算出来的指标（可再生，push 当回归基准）
     english/review.csv  一行一次朗读的全部指标。趋势页读它
 ```
@@ -96,7 +97,7 @@ src/
                       （第三格给空串就只出前两格 —— 抽查单的得分在页底）
     practice/ recite/ check/ overview/ miji/ ket/ homework/ retell/
     afterschool/      放学检查（两列勾选格：校内完成 ｜ 家中完成）
-                      一页 = 一个 .sheet，`[分页]` 切的
+                      一天一张纸，`[分区]` 在纸上框出下半区
     schedule/sheet.html  课程表：节次列和课格在同一个 grid 里，行高天然对齐
     review/           day.html 一天一份成绩单（当天每次录音一节）
                       one.html 一节的版式（card 宏）· sum.html 当天汇总条

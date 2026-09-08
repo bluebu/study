@@ -1,14 +1,14 @@
 {#-
   放学检查 —— 放学回来照着过一遍。一个区块 = 一栏，顺序就是检查顺序。
-  **一页 = 一个 .sheet**（spec 里的 `[分页]` 切的），所以「HTML 里 .sheet
-  的个数 == PDF 页数」这条自检照样成立。
+  **一天一张纸（一个 .sheet）**。spec 里的 `[分区]` 把后面的栏整块框起来：
+  上半区是学校留的作业、下半区是家里加的，一眼看出是两码事，**不分页**。
 
   **每项两个格子：校内完成 ｜ 家中完成。** 表头那两个小字和格子**竖着对齐** ——
   `.cols` 和 `.row` 用同一套 flex 列宽（`--col`），改一个就得改另一个，
   否则纸上小字对不到格子上，家长就不知道哪个框是哪个。
   表头出 `col.ncols` 组，左右各对齐一列的格子 —— 行是 grid 按列填的，
-  表头不在那个流里，所以得自己摆几组。**每页都要出一遍**（出在本页第一个
-  有项的栏上），afterschool.py 的 `_pages()` 管这件事。
+  表头不在那个流里，所以得自己摆几组。**每个区域各出一遍**（出在本区第一个
+  有项的栏上），afterschool.py 的 `_zones()` 管这件事。
   **`--rows` / `--gcols` 挂在每个 `.rows` 上、按本栏的项数和列数来**
   （数学是 3 行不是 5 行，家庭作业是 1 列不是 2 列），不然补出来的空格子
   会流回左列去 —— 为什么，见 afterschool.py。
@@ -27,13 +27,14 @@
      `.row` 里的项目名 / 横线 / 两个格子、`.cols` 里的两个小字、
      `.note` 里的圈和文字
 -#}
-{% for pg in pages %}
 <div class="sheet">
   <div class="head">
-    <h1>{{ pg.heading }}</h1>
+    <h1>{{ heading }}</h1>
     <div class="info">{{ who }} <span class="blank"></span> 日期 <span class="blank"></span> 星期 <span class="blank"></span></div>
   </div>
-{% for col in pg.columns %}
+{% for z in zones %}
+  <div class="zone{% if not loop.first %} other{% endif %}">
+{% for col in z %}
   <div class="part{% if loop.first and not col.no %} first{% endif %}">
     <div class="bar">
       <h2>{% if col.no %}<span class="no">{{ col.no }}</span>{% endif %}{{ col.name }}{% if col.head %}<small>{{ col.head }}</small>{% endif %}</h2>
@@ -67,9 +68,8 @@
 {% endif %}
   </div>
 {% endfor %}
-  <p class="tip">每一项都要过一遍：<b>留了的画 <i class="mark ok"></i>，没留的画 <i class="mark no"></i></b> —— 空着分不出「没留」还是「没检查」。</p>
-{% if loop.last %}
-  <div class="foot">{{ tally }}</div>
-{% endif %}
-</div>
+  </div>
 {% endfor %}
+  <p class="tip">每一项都要过一遍：<b>留了的画 <i class="mark ok"></i>，没留的画 <i class="mark no"></i></b> —— 空着分不出「没留」还是「没检查」。</p>
+  <div class="foot">{{ tally }}</div>
+</div>
