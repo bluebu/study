@@ -154,14 +154,14 @@ body{
 .row{
   display: flex;
   align-items: center;
-  /* **显式 width:100%**：grid item 本该自己 stretch，可空行（只有横线和两个
-     格子）实测只有 46px 宽 —— 横线塌成 0、格子挤到左边。量出来的，别删 */
+  /* **显式 width:100%**：grid item 本该自己 stretch，实测内容少的行只有
+     46px 宽 —— 横线塌成 0、格子挤到左边。量出来的，别删 */
   width: 100%;
   gap: 0;
   /* 横线是要写字的（「小卷 → 1 课看拼音写词，错改 3 遍」），行高给足。
-     19 行（14 项 + 5 条补充横线）是这张纸的全部预算 —— **再加项就得减
-     GROUP，别往下调这个 padding**，2mm 已经是能写字的下限 */
-  padding: 2mm 0;
+     现在一栏只印真有的项（语文 5 行 + 数学 3 + 英语 2 = 10 行），预算宽松，
+     所以行高给到 2.8mm；**再加项之前先量一遍 PDF 页数** */
+  padding: 2.8mm 0;
   border-bottom: 1px dotted var(--ink-rule);
 }
 .row .name{ flex: 0 0 var(--name); font-size: 15px; }
@@ -172,11 +172,6 @@ body{
   border-bottom: var(--w-line) solid var(--ink-line);
   align-self: stretch;
 }
-/* 预留的格子：**只有一条下划线 + 两个格子**（项目名也写在线上）——
-   清单只列常见的那几类，老师临时加的、自愿的写这儿。
-   横线从名字列一直拉到格子前，所以 margin-left 归零 */
-.row.blank .fill{ margin-left: 0; }
-
 .row .box{
   flex: 0 0 var(--col);
   display: grid;
@@ -207,6 +202,10 @@ body{
   line-height: 1.6;
 }
 .tip b{ color: #111; }
+/* 批改红：页底那条里直接印出来的示范对号。这支红是「拿红笔」的意思，
+   不是色板里的分类色（那儿刻意没有红）；灰度 75，黑白打印也够深，
+   而且对号本身靠形状就认得出 */
+.tip .mark{ font-style: normal; font-weight: 700; color: #C62828; }
 .foot{ margin-top: 1.5mm; text-align: right; color: #777; font-size: 10px; }
 
 /* ── 屏幕（手机）：页头左右分列改成上下两行 ── */

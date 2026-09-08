@@ -4,13 +4,13 @@
   **每项两个格子：校内完成 ｜ 家中完成。** 表头那两个小字和格子**竖着对齐** ——
   `.cols` 和 `.row` 用同一套 flex 列宽（`--col`），改一个就得改另一个，
   否则纸上小字对不到格子上，家长就不知道哪个框是哪个。
-  项排完，空下来的格子印成横线（`.row.blank`）—— 整行一条线，
-  写清单里没有的那些作业，两个格子照旧。
-
   表头出 `grid` 组（这张纸是 2 组），左右各对齐一列的格子 —— 行是 grid
   按列填的，表头不在那个流里，所以得自己摆几组。
   **一组 5 项、排 2 列这两个数由 afterschool.py 注入到 `.sheet` 的
   `--rows` / `--gcols`**，CSS 只读变量、模板只读 `grid` —— 一处定义。
+
+  页底那条是给孩子的两个动作，**红对号直接印出来当示范**（`.tip .mark`）——
+  写「用红笔打钩」不如给个样子。
 
   ⚠️ 行内元素之间不许留空白，换行会多出一个空格、版式就变了：
      `.row` 里的项目名 / 横线 / 两个格子、`.cols` 里的两个小字、
@@ -42,13 +42,10 @@
 {% for it in col.rows %}
       <div class="row"><span class="i">{{ loop.index }}</span><span class="name">{{ it }}</span><span class="fill"></span><i class="box"></i><i class="box"></i></div>
 {% endfor %}
-{% for _ in range(col.blanks) %}
-      <div class="row blank"><span class="i"></span><span class="fill"></span><i class="box"></i><i class="box"></i></div>
-{% endfor %}
     </div>
 {% endif %}
   </div>
 {% endfor %}
-  <p class="tip">每一项都要过一遍：<b>留了的用红笔打钩，没留的一道斜线划掉</b> —— 空着分不出「没留」还是「没检查」。</p>
+  <p class="tip">每一项都要过一遍：<b>留了的画 <i class="mark">✓</i>，没留的一道斜线划掉</b> —— 空着分不出「没留」还是「没检查」。</p>
   <div class="foot">{{ tally }}</div>
 </div>
