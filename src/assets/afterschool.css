@@ -19,8 +19,10 @@ body{
 @media print{ body{ background: #fff; } }
 
 .sheet{
-  --col: 15mm;      /* 「今天留了」「已完成」两列的宽度，表头和格子共用 */
-  --name: 22mm;     /* 项目名那一列 */
+  --col: 10mm;      /* 「今天留了」「已完成」两个格子的列宽，表头和格子共用 */
+  /* 项目名那一列：装得下最长那项「一课一练改签」六个字（6 × 13px ≈ 21mm）。
+     **换更长的项名要一起加宽** —— 不然名字折成两行，那一行的横线跟着塌下去 */
+  --name: 22mm;
   display: flex;
   flex-direction: column;
   min-height: 297mm;
@@ -113,22 +115,23 @@ body{
   white-space: nowrap;
 }
 
-/* 两列：项多的栏（语文 9 项排一列要占 9 行）。CSS 多列自己按列填、
-   行数自动平衡，所以不用在 Python 里算每列几行 —— 但**必须给 .row 加
-   break-inside: avoid**，不然一行会被劈到两列去。
+/* 项怎么排：**5 个一组、2 列，按列填**（--rows / --gcols 由生成器注入）。
 
-   **三科都排两列，列宽就一致** —— 名字、横线、两个格子落在同两条竖线上，
-   看一眼语文上面那两个小字就知道每一科的格子是什么。
-   列宽变量挂在 `.part.two` 上，表头（`.cols`）和行（`.rows`）都继承它，
-   **一处定义** —— 分开写两份早晚漂。 */
-.part.two{
-  --col: 10mm;
-  /* 装得下最长那项「一课一练改签」六个字（6 × 13px ≈ 21mm，留 1mm 余量）。
-     **换更长的项名要一起加宽** —— 不然名字折成两行，那一行的横线跟着塌下去 */
-  --name: 22mm;
+   **不用 CSS 多列**：那东西会自动平衡行数，数学 3 项会被劈成左 2 右 1。
+   grid 固定行数 + auto-flow column 才是「一组 5 个，不足 5 个不换列」：
+   语文 9 项 → 5+4，数学 3 项、英语 2 项 → 整组留在左列，右列空着但**仍占位**
+   （列宽按 --gcols 固定），所以三科的名字、横线、格子落在同两条竖线上。
+
+   超过 --rows × --gcols 项会自己长出第三列（grid-auto-columns 兜着），
+   那时候一列就窄了 —— 真到那一步该拆栏，不是接着挤。 */
+.rows{
+  display: grid;
+  grid-template-columns: repeat(var(--gcols, 2), minmax(0, 1fr));
+  grid-template-rows: repeat(var(--rows, 5), auto);
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  column-gap: 8mm;
 }
-.part.two .rows{ column-count: 2; column-gap: 8mm; }
-.part.two .rows .row{ break-inside: avoid; }
 
 /* 项目序号：**顺序就是做的顺序**（spec 里项行的顺序，预习复习排末尾） */
 .row .i{
@@ -190,8 +193,8 @@ body{
   .sheet{ --col: 12mm; --name: 20mm; }
   /* 纸上排两列是为了省纸；手机一屏只有 390px，两列每列不到 180px、
      横线就没了 —— 窄屏一律退回一列（纵向不缺空间）。
-     表头那两组也收成一组，不然右边那组对着空气 */
-  .part.two{ --col: 12mm; --name: 20mm; }
-  .part.two .rows{ column-count: 1; }
+     表头那第二组也收掉，不然它对着空气 */
+  .sheet{ --col: 12mm; --name: 22mm; }
+  .rows{ grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; }
   .cols .half + .half{ display: none; }
 }

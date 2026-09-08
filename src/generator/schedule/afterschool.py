@@ -15,14 +15,15 @@
    作业是这些项目的组合（语文那天可能是「小卷 + 生字本 + 背诵」），
    所以**每一项都要过一遍**：今天没留这一类，「今天留了」那格画一横 ——
    空着分不出「没留」和「没检查」。
-   **项的顺序就是做的顺序**，纸上自动编号（预习、复习排在末尾）；
-   项多的栏在 spec 里写 `cols=2` 排两列 —— 语文 9 项排一列要占 9 行
+   **项的顺序就是做的顺序**，纸上自动编号（预习、复习排在末尾）。
+   项按 **5 个一组、2 列**排（`GROUP` / `GRID`）：语文 9 项排成 5+4，
+   数学 3 项、英语 2 项**整组留在左列不换列**，三科的格子落在同两条竖线上
 3. **收拾书包** —— 照明天的课表装，家长签字
 
 spec 的形状：**一个区块 = 纸上一栏**，区块里两种行混着写都行 ——
 缩进行是说明（每条前面一个圈），项行是作业类型（`,` `，` `、` 分隔）。
 区块属性 `lines=N` 给这一栏留 N 行横线。想加一栏（比如「明天要带的东西」）
-直接在 spec 里加区块，代码一行不用改。
+直接在 spec 里加区块，代码一行不用改 —— 排几列不用 spec 管，看项数。
 """
 
 from __future__ import annotations
@@ -34,6 +35,15 @@ from lib import page, paths, sheet, spec as spec_lib, tmpl
 SPECS = paths.spec("schedule", "afterschool")
 
 DEFAULTS = {"title": "放学检查"}
+
+# 项怎么排：**5 个一组、排 2 列，按列填**（左列 1~5、右列 6~10）。
+# 不足 5 个的栏（数学 3 项、英语 2 项）**整组留在左列、不换列** ——
+# 所以不能用 CSS 多列：那东西会自动平衡，3 项会被劈成 2+1。
+# 走 grid（固定行数 + auto-flow column），列宽按 2 列固定，
+# 项少的时候右列空着但仍占位 —— 三科的名字、横线、格子这才落在同两条竖线上。
+# 这两个数注入到 .sheet 的 --rows / --gcols，CSS 只读变量，**一处定义**
+GROUP = 5
+GRID = 2
 
 
 def _columns(sp: spec_lib.Spec) -> list[dict]:
@@ -49,12 +59,8 @@ def _columns(sp: spec_lib.Spec) -> list[dict]:
         # 键叫 `rows` 不叫 `items` —— Jinja 的 `a.b` 先找属性，`col.items`
         # 会拿到 dict 自带的那个方法，渲染时当场 TypeError（`lib/tmpl.py`
         # 的第三条，这儿是第三次踩）
-        cols = b.attr("cols", "1")
-        if cols not in ("1", "2"):
-            spec_lib.die(f"{sp.path.name}：[{b.name}] 的 cols= 只能是 1 或 2，"
-                         f"现在是 {cols!r}")
         col = {"name": b.name, "head": b.head, "notes": b.notes(),
-               "rows": items, "lines": int(lines), "cols": int(cols)}
+               "rows": items, "lines": int(lines)}
         if col["notes"] or col["rows"] or col["lines"]:
             out.append(col)
 
@@ -81,6 +87,8 @@ def _render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, dict]:
     heading = sp.get("title", DEFAULTS["title"])
     body = tmpl.body(
         "afterschool/sheet.html",
+        group=GROUP,
+        grid=GRID,
         heading=heading,
         who=sp.get("who", "姓名"),
         columns=cols,

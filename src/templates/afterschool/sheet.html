@@ -4,22 +4,22 @@
   **每项两个格子：今天留了 ｜ 已完成。** 单列时表头那两个小字和格子**竖着对齐** ——
   `.cols` 和 `.row` 用同一套 flex 列宽（`--col`），改一个就得改另一个，
   否则纸上小字对不到格子上，家长就不知道哪个框是哪个。
-  两列（`cols=2`）时表头出**两组**（`{% for _ in range(col.cols) %}`），
-  左右各对齐一列的格子 —— CSS 多列自己会把行按列填，表头不在那个流里，
-  所以得自己摆两组。列宽变量挂在 `.part.two` 上，`.cols` 和 `.rows` 都继承它，
-  **只有一处定义**。
+  表头出 `grid` 组（这张纸是 2 组），左右各对齐一列的格子 —— 行是 grid
+  按列填的，表头不在那个流里，所以得自己摆几组。
+  **一组 5 项、排 2 列这两个数由 afterschool.py 注入到 `.sheet` 的
+  `--rows` / `--gcols`**，CSS 只读变量、模板只读 `grid` —— 一处定义。
 
   ⚠️ 行内元素之间不许留空白，换行会多出一个空格、版式就变了：
      `.row` 里的项目名 / 横线 / 两个格子、`.cols` 里的两个小字、
      `.note` 里的圈和文字
 -#}
-<div class="sheet">
+<div class="sheet" style="--rows:{{ group }}; --gcols:{{ grid }}">
   <div class="head">
     <h1>{{ heading }}</h1>
     <div class="info">{{ who }} <span class="blank"></span> 日期 <span class="blank"></span> 星期 <span class="blank"></span></div>
   </div>
 {% for col in columns %}
-  <div class="part{% if loop.first %} first{% endif %}{% if col.cols == 2 %} two{% endif %}">
+  <div class="part{% if loop.first %} first{% endif %}">
     <h2>{% if col.no %}<span class="no">{{ col.no }}</span>{% endif %}{{ col.name }}{% if col.head %}<small>{{ col.head }}</small>{% endif %}</h2>
 {% for note in col.notes %}
     <p class="note"><i></i>{{ note }}</p>
@@ -32,10 +32,10 @@
     </div>
 {% endif %}
 {% if col.show_cols %}
-    <div class="cols">{% for _ in range(col.cols) %}<span class="half"><span class="pad"></span><span>今天留了</span><span>已完成</span></span>{% endfor %}</div>
+    <div class="cols">{% for _ in range(grid) %}<span class="half"><span class="pad"></span><span>今天留了</span><span>已完成</span></span>{% endfor %}</div>
 {% endif %}
 {% if col.rows %}
-    <div class="rows{% if col.cols == 2 %} two{% endif %}">
+    <div class="rows">
 {% for it in col.rows %}
       <div class="row"><span class="i">{{ loop.index }}</span><span class="name">{{ it }}</span><span class="fill"></span><i class="box"></i><i class="box"></i></div>
 {% endfor %}
