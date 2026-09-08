@@ -6,6 +6,7 @@ title: 抽查单
 range: 第 12 课　精卫填海（文言文）
 lesson: 精卫填海
 hint: 家长照着念。这一课全文只 35 字，书上要求背下来。
+pages: 50
 minutes: 10
 memo: 错在哪儿，记一笔——
 
