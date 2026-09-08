@@ -2,14 +2,14 @@
   语文背诵单 —— 要背的那段课文切成块，三轮提示递减 + 四天间隔打卡。
 
   纸上的顺序就是练的顺序：**书上要求 → 怎么练 → 块表 → 抽查点 → 打卡 → 判据**。
-  「怎么练」那三条和页底四条判据是**方法的一部分，固定文案写在这儿**
+  「怎么练」那三条和页底那几条判据是**方法的一部分，固定文案写在这儿**
   （跟 sheet-info 的「姓名 日期」同类），spec 只给原文、切块和关键词。
 
   ⚠️ 行内元素之间不许留空白，换行会多出一个空格、版式就变了：
      `.head .info`、`.chunk` 里的块号 / 原文 / 提示 / 三个勾选格、
      `.probe` 里的报什么和接什么、`.rules li` 里的判据和圆圈
 -#}
-<div class="sheet">
+<div class="sheet" style="--text:{{ size }}px">
   <div class="head">
     <h1>{{ heading }}{% if sub %}<small>　{{ sub }}</small>{% endif %}</h1>
     <div class="info">{{ info|safe }}</div>
@@ -26,7 +26,7 @@
   <div class="part">
     <h2>{{ sec.name }}<small>{{ sec.chunks|length }} 块</small></h2>
 {% for c in sec.chunks %}
-    <div class="chunk"><span class="no">{{ c.no }}</span><span class="body"><span class="text">{{ c.text }}</span><span class="cue">首字 <b>{{ c.first }}</b>{% if c.key %}　·　{{ c.key }}{% endif %}</span></span><span class="ticks">{% for _ in range(c.rounds) %}<i></i>{% endfor %}</span></div>
+    <div class="chunk"><span class="no">{{ c.no }}</span><span class="body{% if c.inline %} inline{% endif %}"><span class="text">{{ c.text }}</span><span class="cue">首字 <b>{{ c.first }}</b>{% if c.key %}　·　{{ c.key }}{% endif %}</span></span><span class="ticks">{% for _ in range(c.rounds) %}<i></i>{% endfor %}</span></div>
 {% endfor %}
   </div>
 {% endfor %}
@@ -34,9 +34,12 @@
   <div class="probe-box">
     <h2>中间切入<small>家长随口报一块，孩子接下一块 —— 真会背的人从任意一句都能接</small></h2>
 {% for p in probes %}
-    <div class="probe"><span class="tick"></span><span class="q">报 <b>{{ p.no }}</b>：{{ p.text }}</span><span class="a">→ 接 {{ p.next_no }}：{{ p.next_text[:8] }}……</span></div>
+    <div class="probe"><span class="tick"></span><span class="q">报 <b>{{ p.no }}</b>：{{ p.text }}</span><span class="a">→ 接 {{ p.next_no }}：{{ p.next_text }}</span></div>
 {% endfor %}
   </div>
+{% endif %}
+{% if blank %}
+  <div class="write-box">白纸这一轮写在这儿 —— 写比说慢，最容易暴露错字漏字</div>
 {% endif %}
   <table class="plan">
     <thead>
@@ -55,6 +58,9 @@
       <li><i></i><b>准确</b>错字、漏字、加字合计 0 处</li>
       <li><i></i><b>中间切入</b>上面 3 处抽查点都接得上</li>
       <li><i></i><b>保持</b>隔 1 天以上再过一次，还过</li>
+{% if copy %}
+      <li><i></i><b>默写</b>{{ copy }}写下来，零错字 —— 会背 ≠ 会写</li>
+{% endif %}
     </ul>
   </div>
   <div class="foot">{{ tally }}</div>

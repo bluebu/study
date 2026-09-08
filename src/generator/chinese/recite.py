@@ -19,6 +19,8 @@ spec 在 storage/spec/chinese/recite/<课号>.txt，产物落在 dist/chinese/re
 
 判定「掌握」的四条判据在页底，**缺一条都不算**：流利（卡壳 0 次）、
 准确（0 处错漏）、**中间切入**（随口报一块能接下一块）、保持（隔天再过）。
+spec 给了 `copy:`（书上要求默写的那几首）就多出第五条「默写零错字」——
+**会背 ≠ 会写**，四上全册只有《题西林壁》《出塞》《夏日绝句》要默写。
 第三条最能识破假掌握 —— 只会顺流背的孩子从头能背，报中间那句就接不上，
 说明他记的是一条声音链、不是内容。抽查点脚本自动挑，见 `_probes()`。
 
@@ -35,7 +37,22 @@ from lib import page, paths, sheet, spec as spec_lib, tmpl
 
 SPECS = paths.spec("chinese", "recite")
 
-DEFAULTS = {"title": "背诵单", "plan": "1,2,4,7"}
+# size 是「排满一页 A4」的旋钮：原文字号。孩子要照着这行读和盖住说，
+# **17px 是给九岁孩子的下限，别为了塞内容往下调** —— 先收间距、再一段一张
+DEFAULTS = {"title": "背诵单", "plan": "1,2,4,7", "size": 17}
+
+PROBE_CUT = 16    # 抽查点印多长：家长照着念个开头就够定位，全句会占两行
+
+# 多短的块算「短块」：提示（首字 · 关键词）排在原文**右边**而不是下面。
+# 古诗一句 5~8 字，右边大片空白，一句一块 × 12 块摊下来能省掉半页 ——
+# 三首诗的单子本来要两页，就是这么压回一页的。
+INLINE_MAX = 14
+
+# 块少到几块就在下半页印背写格。观潮 8 块正好装满一页，6 块以下必然有富余
+# （精卫填海、王戎不取道旁李都是 4 块，原来下半页是一大片白纸）。
+# **按块数判断，不靠 CSS 收缩** —— flex 压到 0 也还留着 border 和 padding，
+# 长单子就会被那几毫米顶到第二页
+BLANK_MAX = 6
 
 ROUNDS = 3        # 提示递减三轮：全文 → 只看首字 → 白纸
 PROBES = 3        # 抽查点：随口报一块，孩子接下一块
@@ -57,6 +74,8 @@ def _sections(sp: spec_lib.Spec) -> list[dict]:
                 "text": text,
                 "first": text[0],          # 第 2 轮的提示：只给首字
                 "key": key.strip(),        # 第 3 轮的提示：关键词
+                # 短块（诗句 / 文言短句）：提示排在原文右边，省掉一行
+                "inline": len(text) <= INLINE_MAX,
                 "rounds": ROUNDS,
             })
         if chunks:
@@ -82,8 +101,12 @@ def _probes(sections: list[dict]) -> list[dict]:
     step = max(1, round(len(cand) / PROBES))
     picked = cand[::step][:PROBES]
     nxt = {c["no"]: flat[i + 1] for i, c in enumerate(flat[:-1])}
-    return [{"no": c["no"], "text": c["text"],
-             "next_no": nxt[c["no"]]["no"], "next_text": nxt[c["no"]]["text"]}
+
+    def head(s: str) -> str:
+        return s if len(s) <= PROBE_CUT else s[:PROBE_CUT] + "……"
+
+    return [{"no": c["no"], "text": head(c["text"]),
+             "next_no": nxt[c["no"]]["no"], "next_text": head(nxt[c["no"]]["text"])}
             for c in picked]
 
 
@@ -111,10 +134,14 @@ def _render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, dict]:
     heading = sp.get("title", DEFAULTS["title"])
     body = tmpl.body(
         "recite/sheet.html",
+        size=sp.int_("size", DEFAULTS["size"]),
+        blank=total <= BLANK_MAX,      # 块少 → 下半页那片空白改印背写格
         heading=heading,
         sub=sp.get("range", ""),
         info=page.sheet_info("", show=True),
         require=sp.get("require", ""),
+        # 书上要求默写的（`copy:`）多一条判据 —— 会背 ≠ 会写
+        copy=sp.get("copy", ""),
         sections=sections,
         probes=_probes(sections),
         plan=_plan(sp),
@@ -133,7 +160,8 @@ def _render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, dict]:
             noindex=True,          # 课文原文，不需要被搜索引擎收录
         ),
     )
-    print(f"    → recite/{out.name}  （{len(sections)} 段 / {total} 块）")
+    print(f"    → recite/{out.name}  （{len(sections)} 段 / {total} 块 · "
+          f"原文 {sp.int_("size", DEFAULTS["size"])}px）")
     ok = bool(pdf) and sheet.to_pdf(out, out.with_suffix(".pdf"))
     return ok, {"sections": len(sections), "chunks": total}
 
