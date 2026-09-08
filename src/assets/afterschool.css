@@ -43,7 +43,7 @@ body{
 .blank{ display: inline-block; border-bottom: 1px solid #111; width: 46px; }
 
 /* ── 一栏 ── */
-.part{ margin-bottom: 3mm; }
+.part{ margin-bottom: 2.5mm; }
 .part h2{
   display: flex;
   align-items: baseline;
@@ -70,7 +70,7 @@ body{
 .part.first{
   background: var(--c-drill-bg);
   border-radius: 5px;
-  padding: 3mm 4mm 3.5mm;
+  padding: 2.5mm 4mm 3mm;
 }
 .part.first h2 .no{ background: #fff; color: var(--c-drill); }
 
@@ -81,8 +81,8 @@ body{
   gap: 2mm;
   font-size: 12px;
   color: #444;
-  margin: 0 0 1.4mm;
-  line-height: 1.5;
+  margin: 0 0 1.1mm;
+  line-height: 1.45;
 }
 .note i{
   flex: 0 0 auto;
@@ -145,10 +145,14 @@ body{
 .row{
   display: flex;
   align-items: center;
+  /* **显式 width:100%**：grid item 本该自己 stretch，可空行（只有横线和两个
+     格子）实测只有 46px 宽 —— 横线塌成 0、格子挤到左边。量出来的，别删 */
+  width: 100%;
   gap: 0;
-  /* 横线是要写字的（「小卷 → 1 课看拼音写词，错改 3 遍」），行高给足 ——
-     第一栏不再抄一遍作业、语文又排了两列，腾出来的高度都还给这些行 */
-  padding: 2.6mm 0;
+  /* 横线是要写字的（「小卷 → 1 课看拼音写词，错改 3 遍」），行高给足。
+     19 行（14 项 + 5 条补充横线）是这张纸的全部预算 —— **再加项就得减
+     GROUP，别往下调这个 padding**，2mm 已经是能写字的下限 */
+  padding: 2mm 0;
   border-bottom: 1px dotted var(--line);
 }
 .row .name{ flex: 0 0 var(--name); font-size: 13px; }
@@ -159,6 +163,11 @@ body{
   border-bottom: 1px solid #bbb;
   align-self: stretch;
 }
+/* 预留的格子：**只有一条下划线 + 两个格子**（项目名也写在线上）——
+   清单只列常见的那几类，老师临时加的、自愿的写这儿。
+   横线从名字列一直拉到格子前，所以 margin-left 归零 */
+.row.blank .fill{ margin-left: 0; }
+
 .row .box{
   flex: 0 0 var(--col);
   display: grid;

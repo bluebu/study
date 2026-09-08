@@ -17,7 +17,9 @@
    空着分不出「没留」和「没检查」。
    **项的顺序就是做的顺序**，纸上自动编号（预习、复习排在末尾）。
    项按 **5 个一组、2 列**排（`GROUP` / `GRID`）：语文 9 项排成 5+4，
-   数学 3 项、英语 2 项**整组留在左列不换列**，三科的格子落在同两条竖线上
+   数学 3 项、英语 2 项**整组留在左列不换列**，三科的格子落在同两条竖线上。
+   一栏凑满 10 格，**空下来的格子印成横线** —— 老师临时加的、自愿的那些
+   清单里没有，手写在那几行上（照样两个格子可打勾）
 3. **收拾书包** —— 照明天的课表装，家长签字
 
 spec 的形状：**一个区块 = 纸上一栏**，区块里两种行混着写都行 ——
@@ -59,8 +61,12 @@ def _columns(sp: spec_lib.Spec) -> list[dict]:
         # 键叫 `rows` 不叫 `items` —— Jinja 的 `a.b` 先找属性，`col.items`
         # 会拿到 dict 自带的那个方法，渲染时当场 TypeError（`lib/tmpl.py`
         # 的第三条，这儿是第三次踩）
+        # 一栏凑满 GROUP × GRID 格，**空下来的格子印成横线** ——
+        # 老师临时加的、自愿的那些作业清单里没有，就手写在这些行上
+        # （项超过一栏的格数时不补，别硬撑出一列）
         col = {"name": b.name, "head": b.head, "notes": b.notes(),
-               "rows": items, "lines": int(lines)}
+               "rows": items, "lines": int(lines),
+               "blanks": max(0, GROUP * GRID - len(items)) if items else 0}
         if col["notes"] or col["rows"] or col["lines"]:
             out.append(col)
 
