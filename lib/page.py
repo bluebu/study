@@ -101,15 +101,19 @@ def listing(
 
     sections   —— [(小标题 或 None, [条目…])]。只有词汇默写分了组，
                   其余栏目传一节、小标题给 None
-    条目       —— {href, label, small, pdf}
+    条目       —— {href, label, small, pdf, tag}
                   `pdf` 给 None 就不出打印单按钮
+                  `tag` 给 {"text": "默", "kind": "copy"} 就在**最左边**出一个
+                  字标（背诵单用它区分要默写 / 只要背）。不给就不出，
+                  其余栏目的目录页一个像素都不变
     empty      —— 一条都没有时显示的话（「往 …/ 放一份 spec」）
     """
     # 键叫 rows 不叫 items —— Jinja 的 `sec.items` 会取到 dict 自带的方法
     secs = [
         {"title": name,
          "rows": [{"href": it["href"], "label": it["label"],
-                   "small": it.get("small", ""), "pdf": it.get("pdf")}
+                   "small": it.get("small", ""), "pdf": it.get("pdf"),
+                   "tag": it.get("tag")}
                   for it in items]}
         for name, items in sections
     ]

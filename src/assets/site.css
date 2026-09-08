@@ -260,9 +260,36 @@ body{
   display: flex;
   align-items: center;
   gap: 8px;
-  padding-right: 13px;
+  padding: 0 13px;      /* 左边这 13px 是给字标的；没字标的栏目由 .main 的
+                           padding-left 补回来，总左边距还是原来的 17px */
 }
 .list li + li{ border-top: 1.5px solid var(--line); }
+
+/* 最左边那个字标（只有背诵单传：要默写的红「默」，只要背的黑「背」）。
+   一眼扫下来哪几课要默写 —— 写在 small 里那句「要默写」得读完一行小字才看见。
+   红用的是**教材总览那条例外的同一支红**（`--ov-red`，专管「要背 / 要默写」），
+   不是新引一支：分类色里仍旧没有红，红也仍旧只有「分数越差越红」和这一个用法。 */
+.list .tag{
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  font-size: .84rem;
+  font-weight: 700;
+  color: var(--ink);
+  border: 1.5px solid var(--line);      /* 描边 chip，和 hero 的 .eyebrow 同一套 */
+  background: var(--card);
+}
+/* 要默写的那几课：**红字红底**，比黑「背」重一档 —— 这一列扫下来，
+   眼睛先落在要默写的行上，那正是这个字标的用处 */
+.list .tag.copy{
+  color: var(--ov-red);
+  background: var(--ov-red-bg);
+  border-color: var(--ov-red-bg);
+}
+/* .tag.recite（黑「背」）走上面的默认色，不用再写一条 */
 
 /* 整行：点进网页版 */
 .list .main{
@@ -272,7 +299,7 @@ body{
   align-items: baseline;
   gap: 9px;
   flex-wrap: wrap;
-  padding: 14px 4px 14px 17px;
+  padding: 14px 4px 14px 4px;   /* 左边那 13px 在 .list li 上（给字标留的位） */
   text-decoration: none;
   color: var(--ink);
   font-size: .98rem;
@@ -296,7 +323,7 @@ body{
 .list .pdf:active{ background: var(--accent, var(--chinese)); color: #fff; }
 
 .list .empty{
-  padding: 16px 17px;
+  padding: 16px 4px;      /* 左右各 13px 在 .list li 上 */
   color: var(--ink-soft);
   font-size: .9rem;
 }

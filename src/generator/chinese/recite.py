@@ -197,13 +197,15 @@ def build_recite(dist: Path, pdf: bool = False) -> None:
     for path in specs:
         sp = spec_lib.parse(path)
         pdf_ok, n = _render(sp, out_dir, pdf)
-        # 要默写的那几份在目录页也标一句：挑单子的时候就知道，
-        # 不用点进去翻到页底那条判据（纸上是页眉那个橙徽章）
+        # 目录页最左边一个字标：要默写的红「默」、只要背的黑「背」。
+        # 一眼扫下来哪几课要默写 —— 原先写在 small 里那句「✎ 要默写」
+        # 得读完一行小字才看见，字标顶掉了它（一行里不说两遍）
         entries.append({
             "href": f"{path.stem}.html",
             "label": sp.get("range", path.stem),
-            "small": f"{n['sections']} 段 · {n['chunks']} 块 · 四天四轮"
-                     + ("　✎ 要默写" if sp.get("copy") else ""),
+            "small": f"{n['sections']} 段 · {n['chunks']} 块 · 四天四轮",
+            "tag": ({"text": "默", "kind": "copy"} if sp.get("copy")
+                    else {"text": "背", "kind": "recite"}),
             "pdf": f"{path.stem}.pdf" if pdf_ok else None,
         })
 
