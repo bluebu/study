@@ -8,12 +8,14 @@
 语文园地三的日积月累印着《别董大》（2024 版在园地八）。光看 spec 看不出来，
 得拿书对。对过一遍就该固化成脚本，而不是下次再人肉对一遍。
 
-三件事，只报不改 —— **改哪个字是判断，不是脚本的事**：
+四件事，只报不改 —— **改哪个字是判断，不是脚本的事**：
 
 1. 抽查单「读准」「词语」块里的每个词，必须在它那几页课文里出现
    （spec 文件头的 `pages:` 是课文书页，如 `pages: 23-27`）
-2. 教材总览的 `write=` 逐课相加，必须等于书末写字表标的「共 N 个字」
-3. 书页 → PDF 页的偏移自己探（找「写 字 表」那页），不写死
+2. **背诵单每一块的原文**，必须在它那几页课文里 —— 那是要照着背的，
+   印错一个字孩子就背错一个字
+3. 教材总览的 `write=` 逐课相加，必须等于书末写字表标的「共 N 个字」
+4. 书页 → PDF 页的偏移自己探（找「写 字 表」那页），不写死
 
 ⚠️ pdftotext 把行上方的注音混进正文里（「一溜liū烟」），所以比对前
    **必须先去掉所有拉丁字母**，否则「一溜烟」这种词一律报找不到 —— 假警报
@@ -108,6 +110,44 @@ def check_sheets(pages: list[str], offset: int) -> int:
     return bad
 
 
+def check_recite(pages: list[str], offset: int) -> int:
+    """背诵单：每一块的原文必须逐字在课文里 —— 印错一个字就背错一个字。
+
+    严格比对（去掉空白和注音之后原样 in），只在被旁批插断时降级成 `?`。
+    ⚠️ 能抓错字和多字，**抓不到漏字**（少一个字仍是顺序子串）——
+    漏字得靠人对着书读一遍，这一条脚本兜不住。
+    """
+    bad = 0
+    for path in spec_lib.specs(paths.spec("chinese", "recite")):
+        sp = spec_lib.parse(path)
+        rng = sp.get("pages")
+        if not rng:
+            print(f"  ? {path.name}：文件头没写 pages:，跳过")
+            continue
+        a, _, b = rng.partition("-")
+        text = plain(pages, offset, int(a), int(b or a))
+
+        miss, cut, n = [], [], 0
+        for block in sp.blocks:
+            for line in block.lines:
+                raw = line.strip().partition("|")[0].strip()
+                if not raw:
+                    continue
+                n += 1
+                if raw in text:
+                    continue
+                (cut if loose(raw, text) else miss).append(f"第 {n} 块「{raw[:12]}…」")
+        if miss:
+            bad += 1
+            print(f"  ✗ {path.name}（书页 {rng}）课文里对不上：{'、'.join(miss)}")
+        elif cut:
+            print(f"  ? {path.name}（书页 {rng}）疑似被旁批打断，看一眼："
+                  f"{'、'.join(cut)}")
+        else:
+            print(f"  ✓ {path.name}　{n} 块逐字对上")
+    return bad
+
+
 def check_overview(pages: list[str], offset: int) -> int:
     """教材总览：write= 逐课相加 == 书末写字表标的总数。"""
     table = plain(pages, offset, 125, 126)
@@ -142,6 +182,8 @@ def main() -> int:
 
     print("抽查单（读准 / 词语两个区块的词是不是课文里的）")
     bad = check_sheets(pages, offset)
+    print("\n背诵单（每一块的原文是不是逐字照课本）")
+    bad += check_recite(pages, offset)
     print("\n教材总览（写字数的校验和）")
     bad += check_overview(pages, offset)
 

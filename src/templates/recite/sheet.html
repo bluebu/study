@@ -1,0 +1,61 @@
+{#-
+  语文背诵单 —— 要背的那段课文切成块，三轮提示递减 + 四天间隔打卡。
+
+  纸上的顺序就是练的顺序：**书上要求 → 怎么练 → 块表 → 抽查点 → 打卡 → 判据**。
+  「怎么练」那三条和页底四条判据是**方法的一部分，固定文案写在这儿**
+  （跟 sheet-info 的「姓名 日期」同类），spec 只给原文、切块和关键词。
+
+  ⚠️ 行内元素之间不许留空白，换行会多出一个空格、版式就变了：
+     `.head .info`、`.chunk` 里的块号 / 原文 / 提示 / 三个勾选格、
+     `.probe` 里的报什么和接什么、`.rules li` 里的判据和圆圈
+-#}
+<div class="sheet">
+  <div class="head">
+    <h1>{{ heading }}{% if sub %}<small>　{{ sub }}</small>{% endif %}</h1>
+    <div class="info">{{ info|safe }}</div>
+  </div>
+{% if require %}
+  <p class="require"><b>书上要求</b>{{ require }}</p>
+{% endif %}
+  <ol class="how">
+    <li><b>读一遍就盖住说一遍。</b>说不出来才看一眼 —— 难受说明正在记住，看着书顺下来那种流利是假的</li>
+    <li><b>一块一块来，只连相邻两块。</b>别每次从头背，先从昨天卡住的那一块开始</li>
+    <li><b>三轮撤提示：</b>看全文 → 只看首字 → 白纸。每过一轮，在那一块右边打个勾</li>
+  </ol>
+{% for sec in sections %}
+  <div class="part">
+    <h2>{{ sec.name }}<small>{{ sec.chunks|length }} 块</small></h2>
+{% for c in sec.chunks %}
+    <div class="chunk"><span class="no">{{ c.no }}</span><span class="body"><span class="text">{{ c.text }}</span><span class="cue">首字 <b>{{ c.first }}</b>{% if c.key %}　·　{{ c.key }}{% endif %}</span></span><span class="ticks">{% for _ in range(c.rounds) %}<i></i>{% endfor %}</span></div>
+{% endfor %}
+  </div>
+{% endfor %}
+{% if probes %}
+  <div class="probe-box">
+    <h2>中间切入<small>家长随口报一块，孩子接下一块 —— 真会背的人从任意一句都能接</small></h2>
+{% for p in probes %}
+    <div class="probe"><span class="tick"></span><span class="q">报 <b>{{ p.no }}</b>：{{ p.text }}</span><span class="a">→ 接 {{ p.next_no }}：{{ p.next_text[:8] }}……</span></div>
+{% endfor %}
+  </div>
+{% endif %}
+  <table class="plan">
+    <thead>
+      <tr><th>打卡</th>{% for d in plan %}<th>{{ d.label }}</th>{% endfor %}</tr>
+    </thead>
+    <tbody>
+      <tr><td>日期</td>{% for d in plan %}<td></td>{% endfor %}</tr>
+      <tr><td>卡壳几次</td>{% for d in plan %}<td></td>{% endfor %}</tr>
+      <tr><td>用时</td>{% for d in plan %}<td></td>{% endfor %}</tr>
+    </tbody>
+  </table>
+  <div class="rules">
+    <h2>四条都做到才算会<small>缺一条都不算</small></h2>
+    <ul>
+      <li><i></i><b>流利</b>不提示、不打断说完，卡壳 0 次（停 3 秒以上或要提示都算卡壳）</li>
+      <li><i></i><b>准确</b>错字、漏字、加字合计 0 处</li>
+      <li><i></i><b>中间切入</b>上面 3 处抽查点都接得上</li>
+      <li><i></i><b>保持</b>隔 1 天以上再过一次，还过</li>
+    </ul>
+  </div>
+  <div class="foot">{{ tally }}</div>
+</div>

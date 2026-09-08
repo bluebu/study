@@ -56,6 +56,8 @@ storage/
     english/homework/   一天一份，文件名是 YYYYMMDD
     english/retell/     一个区块一个阶段，区块内一行一段
     chinese/practice/   语文练习 spec，文件名是 YYYYMMDD
+    chinese/recite/     背诵单 spec：一个区块一个自然段，区块内一行一块
+                        （`原文 | 关键词`）。**原文照课本逐字抄**
     chinese/check/      抽查单 spec：**按课号**命名（01、08），
                         语文园地是 <课号>y（03y = 园地一，排在第 3 课后）
     chinese/overview/   教材总览 spec：**一册一份、按册命名**（g4a = 四年级上册）
@@ -87,7 +89,7 @@ src/
                       alt「家长版」（描边，可选）+ pdf「打印单」（填色，最右）
     sheet-info.html   打印单页眉「姓名 __ 日期 __ 得分 __」，四个栏目共用
                       （第三格给空串就只出前两格 —— 抽查单的得分在页底）
-    practice/ check/ overview/ miji/ ket/ homework/ retell/   各栏目的打印单版式
+    practice/ recite/ check/ overview/ miji/ ket/ homework/ retell/   各栏目的打印单版式
     schedule/sheet.html  课程表：节次列和课格在同一个 grid 里，行高天然对齐
     review/           day.html 一天一份成绩单（当天每次录音一节）
                       one.html 一节的版式（card 宏）· sum.html 当天汇总条
@@ -97,6 +99,7 @@ src/
     palette.css       色板单一真源
     print.css         A4 打印锁
     grid.css          田字格 / 四线三格
+    recite.css        背诵单（块表 + 三轮勾选格 + 四天打卡 + 四条判据）
     check.css         抽查单（撑满 A4：错题格吃空白、过关格钉页底）
     overview.css      教材总览（一份 HTML 两用：纸上打印单 / 手机上横滚速查）
     site.css          站点页面（入口页、目录页）
@@ -110,6 +113,7 @@ src/
     chinese/          语文（CLAUDE.md 里有本科的教学准则和三个栏目的口径）
       build.py        只做分发：一个栏目一层 try
       practice.py     今日练习：看拼音写汉字（附答案版）
+      recite.py       背诵单：切块 + 三轮撤提示 + 间隔打卡，方法和判据见文件头
       check.py        抽查单：一课一张，题面版 + 家长版（家长版不进目录页）
       overview.py     教材总览：一册一份的总表，背诵 / 默写两列上底色加圆点
     english/          英语（CLAUDE.md 里有本科的教学准则和四个栏目的口径）
