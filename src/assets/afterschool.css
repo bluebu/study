@@ -202,16 +202,41 @@ body{
   line-height: 1.6;
 }
 .tip b{ color: #111; }
-/* 批改红：页底那条里直接印出来的 √ 和 ×。这支红是「拿红笔」的意思，
+/* 批改红：页底那条里直接画出来的对勾和叉。这支红是「拿红笔」的意思，
    不是色板里的分类色（那儿刻意没有红）；灰度 75，黑白打印也够深，
-   符号本身靠形状就认得出。
+   形状本身也认得出。
 
-   ⚠️ 符号用 **√ (U+221A) 和 × (U+00D7)**，不用 ✓ (U+2713) / ✗ (U+2717)：
-   后两个属于 Dingbats，**线上导 PDF 的 ubuntu runner 上不保证有字形**
-   （那台机器只装了 fonts-noto-cjk + 楷体，缺字形就是一个方块，而本地 mac
-   有 Apple Symbols 兜底、看不出问题）。√ × 一个是数学符号一个在 Latin-1，
-   Noto 必有 —— 而且中文批改本来就用这两个。 */
-.tip .mark{ font-style: normal; font-weight: 700; font-size: 1.15em; color: #C62828; }
+   ⚠️ **两个符号都用 CSS 画，不用字体里的字符** —— 两条路都试过、都不行：
+     · ✓ (U+2713) / ✗ (U+2717) 属于 Dingbats，**线上导 PDF 的 ubuntu runner
+       不保证有字形**（只装 fonts-noto-cjk + 楷体），缺字形就印成一个方块，
+       而本地 mac 有 Apple Symbols 兜底、根本看不出问题
+     · √ (U+221A) 是**根号**，顶上那一横很明显 —— 一眼就看出「这不是对号」
+   用 border 画（不是 background）：背景图形在打印对话框里能被关掉，
+   前景的边框关不掉。 */
+.tip .mark{
+  display: inline-block;
+  margin: 0 2px;
+  box-sizing: border-box;
+}
+/* 对勾：一个方块只留左、下两条边，转 -45° */
+.tip .mark.ok{
+  width: 3.4mm; height: 1.9mm;
+  margin-bottom: .6mm;
+  border-left: 2px solid #C62828;
+  border-bottom: 2px solid #C62828;
+  transform: rotate(-45deg);
+}
+/* 叉：两条横线，各转 ±45° */
+.tip .mark.no{ position: relative; width: 3.2mm; height: 3.2mm; }
+.tip .mark.no::before,
+.tip .mark.no::after{
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 50%;
+  border-top: 2px solid #C62828;
+}
+.tip .mark.no::before{ transform: rotate(45deg); }
+.tip .mark.no::after{ transform: rotate(-45deg); }
 .foot{ margin-top: 1.5mm; text-align: right; color: #777; font-size: 10px; }
 
 /* ── 屏幕（手机）：页头左右分列改成上下两行 ── */
