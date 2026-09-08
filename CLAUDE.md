@@ -63,7 +63,7 @@ storage/
     chinese/overview/   教材总览 spec：**一册一份、按册命名**（g4a = 四年级上册）
     math/miji/          秘籍 spec：错题按错因分组写，练习题只写题面、答案脚本算
     schedule/term.txt   学期日历：开学 / 期中 / 期末 / 放假，**日期只写在这一处**。
-                        首页那条倒计时读它，带 `?` 的是估的、页面上标「暂定」
+                        首页那两条倒计时读它，带 `?` 的是估的、页面上标「暂定」
     schedule/week/      课表 spec：一个区块一天，区块内一行一节（YYYYMMDD 是学期起）
     schedule/afterschool/  放学检查 spec：一个区块一栏，项行是作业类型、
                         缩进行是说明。区块属性 `lines=N` 留几行横线抄作业、
@@ -79,7 +79,7 @@ storage/
 
 ```
 build.py              总构建器。站点地图 SUBJECTS 就在文件头部；
-                      首页那条倒计时也在这儿（`countdown()` 读 spec/schedule/term.txt）
+                      首页那两条倒计时也在这儿（`countdown()` 读 spec/schedule/term.txt）
 Makefile              日常命令入口
 lib/
   paths.py            各层的位置。**改目录名只改这一个文件**

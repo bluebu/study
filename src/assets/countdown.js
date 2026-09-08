@@ -21,14 +21,12 @@ document.querySelectorAll('.count[data-date]').forEach((el) => {
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   const days = Math.round((new Date(y, m - 1, d) - today) / 86400000);
 
-  const what = el.querySelector('.what');
+  if (days < 0) { el.hidden = true; return; }     // 过去了就整条收起来（下次构建换成下一个里程碑）
+
+  // 名字那行不动（模板已经印好，还带着「暂定」标签），这儿只改天数那一行
   const num = el.querySelector('.num');
   const unit = el.querySelector('.unit');
-  const name = el.dataset.name || '';
-
-  if (days < 0) { el.hidden = true; return; }     // 过去了就整条收起来（下次构建会换成下一个里程碑）
-  num.hidden = days < 2;                          // 「就在明天」「今天」不配数字
-  if (days >= 2) { what.textContent = `距离${name}还有`; num.textContent = days; unit.textContent = '天'; }
-  else if (days === 1) { what.textContent = name; unit.textContent = '就在明天'; }
-  else { what.textContent = '今天'; unit.textContent = name; }
+  num.hidden = days < 2;                          // 「就在明天」「就是今天」不配数字
+  if (days >= 2) { num.textContent = days; unit.textContent = '天'; }
+  else { unit.textContent = days === 1 ? '就在明天' : '就是今天'; }
 });

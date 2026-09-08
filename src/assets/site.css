@@ -50,18 +50,21 @@ body{
 }
 .hero .sub{ color: var(--ink-soft); margin: 0; font-size: .92rem; }
 
-/* ── 学期倒计时（hero 下面那条）───────────────────────────
+/* ── 学期倒计时（hero 下面并排两条）─────────────────────────
    数字由 assets/countdown.js 按打开那天重算（为什么，见那个文件）。
-   色走**琥珀** `--warn`：分类色是给三科占着的，红专属分数，
-   这条既不是学科也不是成绩 —— 琥珀在这套色板里就一个意思：留神时间。
-   `.count` 是 flex，空白文本节点不生成盒子，模板里随便缩进。 */
+   色走**琥珀** `--warn`：分类色给三科占着、红专属分数，这两条既不是学科
+   也不是成绩 —— 琥珀在这套色板里就一个意思：留神时间。
+
+   **窄屏上也并排、不折成上下两行**：两个日子挨着才看得出「先考哪个、
+   再往后是哪个」，拆成两行就成了两条不相干的通知。所以靠 flex 平分宽度，
+   窄的时候缩字号，不 wrap。过期那条被 JS 收起来后，剩下的自动撑满整行。 */
+.counts{ display: flex; gap: 11px; margin: 0 0 15px; }
 .count{
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 0 7px;
-  margin: 0 0 15px;
-  padding: 11px 16px 12px;
+  flex: 1;
+  min-width: 0;
+  display: grid;            /* 三行：名字 / 天数 / 日期 */
+  margin: 0;
+  padding: 10px 13px 11px;
   background: var(--warn-bg);
   border: 2px solid var(--line);
   border-radius: 18px;
@@ -78,25 +81,32 @@ body{
   background: var(--warn);
 }
 /* 日子过了 countdown.js 会把整条 `hidden` 掉。**必须显式写这一条** ——
-   `[hidden]` 的 UA 样式是 display:none，但上面 .count 自己写了 display:flex，
+   `[hidden]` 的 UA 样式是 display:none，但上面 .count 自己写了 display:grid，
    同一个属性、后来的规则赢，光设 hidden 属性收不起来（踩过：过期那条还挂着 -1 天） */
 .count[hidden]{ display: none; }
-.count .what{ font-size: .95rem; }
+.count .what{ font-size: .88rem; font-weight: 600; }
+.count .soon{           /* 「暂定」：日期是推的、学校还没通知 */
+  margin-left: 5px;
+  font-style: normal;
+  font-size: .66rem;
+  font-weight: 400;
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 1px 5px;
+  white-space: nowrap;
+}
+.count .left{ line-height: 1.15; }
 .count .num{
   font-family: var(--font-display);
-  font-size: 1.75rem;
-  line-height: 1;
+  font-size: 1.7rem;
   letter-spacing: -.02em;
 }
-.count .unit{ font-size: .95rem; }
-/* 日期那行**自己占一行**（flex-basis:100%），别跟着天数挤 —— 
-   手机上窄，挤在一行会把「暂定」两个字折下去，看着像另起了一句话 */
-.count .when{
-  flex-basis: 100%;
-  margin-top: 2px;
-  font-size: .78rem;
-  color: var(--ink-soft);
-}
+.count .unit{ font-size: .9rem; margin-left: 3px; }
+/* 「就在明天 / 就是今天」那两天数字是收起来的，那 3px 的字距也跟着撤 ——
+   不撤的话这行比上下两行各多缩进一点，看着像没对齐 */
+.count .num[hidden] + .unit{ margin-left: 0; }
+.count .when{ font-size: .74rem; color: var(--ink-soft); }
 
 /* ── 学科卡片 ── */
 .subjects{ display: grid; gap: 15px; }

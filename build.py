@@ -32,10 +32,15 @@ TERM = paths.spec("schedule", "term.txt")
 WEEKDAYS = "一二三四五六日"
 
 
-def countdown() -> dict | None:
-    """首页那条倒计时 —— 学期日历里**下一个还没到的**里程碑。
+# 首页并排放几条倒计时。两条：期中 + 期末，正好一行两列，手机上也不挤
+COUNTDOWNS = 2
 
-    期中考完了自动换成期末，最后一个也过了整条就不出（返回 None）。
+
+def countdown() -> list[dict]:
+    """首页那两条倒计时 —— 学期日历里**接下来还没到的**里程碑，最多 COUNTDOWNS 条。
+
+    过一个少一个，自动往后顺（期中考完 → 期末 + 本学期结束），
+    全过完了返回空列表、首页那一行整个不出。
     日期后面带 `?` 的是估的（学校还没通知具体哪天），页面上标「暂定」。
 
     **这儿算出来的天数只是兜底**：站是静态的，构建时定死的数字停在最后一次
@@ -44,7 +49,7 @@ def countdown() -> dict | None:
     这个数只在没 JS 时露脸。
     """
     if not TERM.exists():
-        return None
+        return []
     sp = spec_lib.parse(TERM)
     today = datetime.now(CST).date()
     ahead = []
@@ -59,12 +64,10 @@ def countdown() -> dict | None:
                              f"2026-11-09（后面可以带 ? 表示暂定），现在是 {when!r}")
             if day >= today:
                 ahead.append((day, name, when.endswith("?")))
-    if not ahead:
-        return None
-    day, name, tentative = min(ahead)
-    return {"name": name, "iso": day.isoformat(), "days": (day - today).days,
-            "when": f"{day.month} 月 {day.day} 日 · 周{WEEKDAYS[day.weekday()]}",
-            "tentative": tentative}
+    return [{"name": name, "iso": day.isoformat(), "days": (day - today).days,
+             "when": f"{day.month} 月 {day.day} 日 · 周{WEEKDAYS[day.weekday()]}",
+             "tentative": tentative}
+            for day, name, tentative in sorted(ahead)[:COUNTDOWNS]]
 
 
 # ══════════════════════════════════════════════════════════════
@@ -131,7 +134,7 @@ def build_index() -> None:
     body = tmpl.body(
         "home.html",
         subjects=subjects,
-        count=countdown(),
+        counts=countdown(),
         stamp=datetime.now(CST).strftime("%Y-%m-%d %H:%M"),
     )
 
