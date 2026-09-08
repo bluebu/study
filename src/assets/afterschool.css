@@ -23,6 +23,14 @@ body{
      彩色打印还是同一支紫，黑白打印够黑。墨色三兄弟在 print.css */
   --accent: #6B4A87;
   --col: 10mm;      /* 「校内完成」「家中完成」两个格子的列宽，表头和格子共用 */
+  /* **左边这条槽 = 一个记号位 --dia + 一段空 --pad**。
+     栏名前的圆圈、项目序号、说明行前的小圈**都占满 --dia 并在里面居中**，
+     后面一律留 --pad 再开始文字 —— 于是三种记号的圆心落在同一条竖线上，
+     栏名 / 项目名 / 说明文字也左对齐成一条线。
+     踩过两处：h2 自己带 2mm gap、圈又比序号宽 0.5mm，「语文」比「改错」
+     右了 2.5mm；把槽填满又没留 --pad，圈直接顶到字上 */
+  --dia: 5.5mm;     /* 记号位：按最大的那个（栏名前的圆圈）定 */
+  --pad: 2mm;       /* 记号和文字之间 */
   /* 项目名那一列：装得下最长那项「一课一练改签」六个字（6 × 15px ≈ 24mm）。
      **项名字号或长度一动，这儿要一起动** —— 不然名字折成两行，
      那一行的横线跟着塌下去 */
@@ -65,23 +73,24 @@ body{
 
 .part h2{
   display: flex;
-  align-items: baseline;
-  gap: 2mm;
+  /* center 不是 baseline：圈是空元素，baseline 就是它的底边，
+     对出来圈心比字心低 2.39px（量的）。栏名永远只有一行，center 稳 */
+  align-items: center;
+  gap: var(--pad);
   font-size: 14px;
   font-weight: 700;
   margin: 0;                 /* 行距归 .bar 管 */
   line-height: 1.2;
 }
 .part h2 .no{
-  flex: 0 0 auto;
-  width: 5.5mm; height: 5.5mm;
+  flex: 0 0 var(--dia);
+  width: var(--dia); height: var(--dia);
   border-radius: 50%;
   background: var(--accent);
   color: #fff;
   font-size: 10px;
   font-weight: 700;
   display: grid; place-items: center;
-  align-self: center;
 }
 .part h2 small{ font-weight: 400; color: #666; font-size: 11px; }
 
@@ -106,7 +115,7 @@ body{
      也不用 center：手机上说明会折成两行，center 会把圈挪到两行之间去。
      flex-start 起头 + 下面那个偏移，圈心永远对准**第一行**文字的中线 */
   align-items: flex-start;
-  gap: 2mm;
+  gap: var(--pad);
   font-size: 12px;
   color: #222;
   margin: 0 0 1.1mm;
@@ -118,6 +127,10 @@ body{
   width: var(--dot); height: var(--dot);
   /* 圈心 → 第一行文字的中线：(行高 − 直径) / 2 */
   margin-top: calc((var(--lh) * 1em - var(--dot)) / 2);
+  /* 小圈比记号位窄，左右各补一半 —— 圆心落在记号位中线上（和栏名的圈、
+     项目序号同一条竖线），文字也就和栏名、项目名对齐 */
+  margin-left: calc((var(--dia) - var(--dot)) / 2);
+  margin-right: calc((var(--dia) - var(--dot)) / 2);
   border: var(--w-box) solid var(--ink-box);
   border-radius: 50%;
   background: #fff;
@@ -165,7 +178,8 @@ body{
 
 /* 项目序号：**顺序就是做的顺序**（spec 里项行的顺序，预习复习排末尾） */
 .row .i{
-  flex: 0 0 5mm;
+  flex: 0 0 var(--dia);
+  margin-right: var(--pad);
   font-size: 13px;
   font-weight: 700;
   color: var(--accent);
