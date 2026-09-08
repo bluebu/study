@@ -3,10 +3,9 @@
   同一份 HTML 两用：A4 打印单（夹在语文书里）+ 屏幕速查页（手机上翻，
   表格在 .scroll 里自己横滚，见 overview.css 的 @media screen）。
 
-  **一页一个 .sheet**，换页点在 spec 里（`[分页]`）—— 摘要框只上第一页，
-  小结钉最后一页页底。单元抬头是表内的分组行（`[分组]` → `tr.group`），
-  **和换页点是两件事**：断在哪儿由「这一页填不填得满」定。
-  页底剩下的零头由 `.scroll{flex:1}` + `table{height:100%}` 吃掉。
+  **一单元一页**：换页点在 spec 里（`[分页]`），它的 head 就是页副标题
+  （单元名）—— 摘要框只上第一页，小结钉最后一页页底。
+  行高保持自然、不拉伸：页 = 单元，八页的行高一致才对得上。
 
   ⚠️ 三处行内元素之间不许留空白，换行会多出一个空格、版式就变了：
      `.sum li` 里的标题和详情（flex 一行两栏）
@@ -18,7 +17,7 @@
 {% for pg in pages %}
 <div class="sheet">
   <div class="head">
-    <h1>{{ heading }}{% if sub %}<small>　{{ sub }}</small>{% endif %}</h1>
+    <h1>{{ heading }}{% if pg.sub %}<small>　{{ pg.sub }}</small>{% endif %}</h1>
     <div class="info">共 <b>{{ n.lessons }}</b> 课　课文要背 <b>{{ n.recite }}</b> 处　日积月累 <b>{{ n.riji }}</b> 处　默写 <b>{{ n.dictation }}</b> 处</div>
   </div>
 {% if pg.first and summaries %}
@@ -35,6 +34,12 @@
 {% endif %}
   <div class="scroll">
     <table>
+      {#- 列宽在 colgroup 上，不在 td 上：table-layout:fixed 只认第一行／colgroup
+          的宽度，写在 tbody 的 td 上会被当成建议值忽略（踩过：other 列被均分成
+          38mm，每格折七八行，八页全部溢出）。宽度值见 overview.css 的 .c-* -#}
+      <colgroup>
+        <col class="c-no"><col class="c-name"><col class="c-recite"><col class="c-copy"><col class="c-read"><col class="c-other"><col class="c-write">
+      </colgroup>
       <thead>
         <tr>
           <th>课</th><th>课文</th><th>背诵</th><th>默写</th><th>朗读</th>
@@ -43,9 +48,6 @@
       </thead>
       <tbody>
 {% for r in pg.rows %}
-{% if r.group %}
-        <tr class="group"><td colspan="7">{{ r.group }}</td></tr>
-{% else %}
         <tr{% if r.aside %} class="aside"{% endif %}>
           <td class="no">{{ r.no }}</td>
           <td class="name">{{ r.name }}</td>
@@ -55,7 +57,6 @@
           <td class="other">{{ r.other }}</td>
           <td class="write {{ r.write.cls }}">{{ r.write.val }}</td>
         </tr>
-{% endif %}
 {% endfor %}
       </tbody>
     </table>
