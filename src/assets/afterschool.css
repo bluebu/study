@@ -63,6 +63,8 @@ body{
   align-self: center;
 }
 .part h2 small{ font-weight: 400; color: #888; font-size: 11px; }
+/* 两列的栏没有竖直表头，改在抬头右边说一句 */
+.part h2 .hint{ margin-left: auto; font-weight: 400; color: #999; font-size: 9.5px; }
 
 /* 第一栏：作业抄下来了吗 —— 上底色，一眼看出先过这一栏 */
 .part.first{
@@ -105,13 +107,34 @@ body{
 .cols .pad{ flex: 1 1 auto; }
 .cols span:not(.pad){ flex: 0 0 var(--col); text-align: center; }
 
+/* 两列：项多的栏（语文 9 项排一列要占 9 行）。CSS 多列自己按列填、
+   行数自动平衡，所以不用在 Python 里算每列几行 —— 但**必须给 .row 加
+   break-inside: avoid**，不然一行会被劈到两列去。
+   一列只有 93mm，格子和名字都得收窄，横线才留得下写字的地方 */
+.rows.two{
+  --col: 10mm;
+  --name: 13mm;
+  column-count: 2;
+  column-gap: 8mm;
+}
+.rows.two .row{ break-inside: avoid; }
+
+/* 项目序号：**顺序就是做的顺序**（spec 里项行的顺序，预习复习排末尾） */
+.row .i{
+  flex: 0 0 5mm;
+  font-size: 12px;
+  color: var(--c-drill);
+  font-family: "Times New Roman", var(--font-cn), serif;
+  text-align: center;
+}
+
 .row{
   display: flex;
   align-items: center;
   gap: 0;
-  /* 横线是要写字的（「小卷 → 1 课看拼音写词，错改 3 遍」），
-     行高给足 —— 第一栏不再抄一遍作业，那 32mm 正好还给这 14 行 */
-  padding: 1.8mm 0;
+  /* 横线是要写字的（「小卷 → 1 课看拼音写词，错改 3 遍」），行高给足 ——
+     第一栏不再抄一遍作业、语文又排了两列，腾出来的高度都还给这些行 */
+  padding: 2.6mm 0;
   border-bottom: 1px dotted var(--line);
 }
 .row .name{ flex: 0 0 var(--name); font-size: 13px; }
@@ -154,4 +177,7 @@ body{
   .head .info{ white-space: normal; }
   /* 窄屏把两列格子收窄，横线才不至于被挤没 */
   .sheet{ --col: 12mm; --name: 20mm; }
+  /* 纸上排两列是为了省纸；手机一屏只有 390px，两列每列不到 180px、
+     横线就没了 —— 窄屏一律退回一列（纵向不缺空间） */
+  .rows.two{ column-count: 1; --col: 12mm; --name: 20mm; }
 }

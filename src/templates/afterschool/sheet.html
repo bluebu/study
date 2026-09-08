@@ -1,9 +1,11 @@
 {#-
   放学检查 —— 放学回来照着过一遍。一个区块 = 一栏，顺序就是检查顺序。
 
-  **每项两个格子：今天留了 ｜ 已完成。** 表头那两个小字和格子必须**竖着对齐** ——
+  **每项两个格子：今天留了 ｜ 已完成。** 单列时表头那两个小字和格子**竖着对齐** ——
   `.cols` 和 `.row` 用同一套 flex 列宽（`--col`），改一个就得改另一个，
   否则纸上小字对不到格子上，家长就不知道哪个框是哪个。
+  **两列（`cols=2`）时不出这个表头**：CSS 多列里它只会落在左列顶上，
+  右列的格子头上空着反而误导 —— 改成在抬头右边写一句话。
 
   ⚠️ 行内元素之间不许留空白，换行会多出一个空格、版式就变了：
      `.row` 里的项目名 / 横线 / 两个格子、`.cols` 里的两个小字、
@@ -16,7 +18,7 @@
   </div>
 {% for col in columns %}
   <div class="part{% if loop.first %} first{% endif %}">
-    <h2>{% if col.no %}<span class="no">{{ col.no }}</span>{% endif %}{{ col.name }}{% if col.head %}<small>{{ col.head }}</small>{% endif %}</h2>
+    <h2>{% if col.no %}<span class="no">{{ col.no }}</span>{% endif %}{{ col.name }}{% if col.head %}<small>{{ col.head }}</small>{% endif %}{% if col.rows and col.cols == 2 %}<span class="hint">每项两格：今天留了 ｜ 已完成</span>{% endif %}</h2>
 {% for note in col.notes %}
     <p class="note"><i></i>{{ note }}</p>
 {% endfor %}
@@ -27,13 +29,15 @@
 {% endfor %}
     </div>
 {% endif %}
-{% if col.show_cols %}
+{% if col.show_cols and col.cols == 1 %}
     <div class="cols"><span class="pad"></span><span>今天留了</span><span>已完成</span></div>
 {% endif %}
 {% if col.rows %}
+    <div class="rows{% if col.cols == 2 %} two{% endif %}">
 {% for it in col.rows %}
-    <div class="row"><span class="name">{{ it }}</span><span class="fill"></span><i class="box"></i><i class="box"></i></div>
+      <div class="row"><span class="i">{{ loop.index }}</span><span class="name">{{ it }}</span><span class="fill"></span><i class="box"></i><i class="box"></i></div>
 {% endfor %}
+    </div>
 {% endif %}
   </div>
 {% endfor %}

@@ -14,7 +14,9 @@
 2. **三科逐项过** —— 每一项两个格子：**今天留了** ｜ **已完成**。
    作业是这些项目的组合（语文那天可能是「小卷 + 生字本 + 背诵」），
    所以**每一项都要过一遍**：今天没留这一类，「今天留了」那格画一横 ——
-   空着分不出「没留」和「没检查」
+   空着分不出「没留」和「没检查」。
+   **项的顺序就是做的顺序**，纸上自动编号（预习、复习排在末尾）；
+   项多的栏在 spec 里写 `cols=2` 排两列 —— 语文 9 项排一列要占 9 行
 3. **收拾书包** —— 照明天的课表装，家长签字
 
 spec 的形状：**一个区块 = 纸上一栏**，区块里两种行混着写都行 ——
@@ -47,8 +49,12 @@ def _columns(sp: spec_lib.Spec) -> list[dict]:
         # 键叫 `rows` 不叫 `items` —— Jinja 的 `a.b` 先找属性，`col.items`
         # 会拿到 dict 自带的那个方法，渲染时当场 TypeError（`lib/tmpl.py`
         # 的第三条，这儿是第三次踩）
-        col = {"name": b.name, "head": b.head,
-               "notes": b.notes(), "rows": items, "lines": int(lines)}
+        cols = b.attr("cols", "1")
+        if cols not in ("1", "2"):
+            spec_lib.die(f"{sp.path.name}：[{b.name}] 的 cols= 只能是 1 或 2，"
+                         f"现在是 {cols!r}")
+        col = {"name": b.name, "head": b.head, "notes": b.notes(),
+               "rows": items, "lines": int(lines), "cols": int(cols)}
         if col["notes"] or col["rows"] or col["lines"]:
             out.append(col)
 
@@ -62,7 +68,7 @@ def _columns(sp: spec_lib.Spec) -> list[dict]:
         col["no"] = None
     for i, col in enumerate(out[1:], 1):
         col["no"] = i
-    first = next((c for c in out if c["rows"]), None)
+    first = next((c for c in out if c["rows"] and c["cols"] == 1), None)
     if first:
         first["show_cols"] = True
     return out
