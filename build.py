@@ -14,17 +14,57 @@ from __future__ import annotations
 import importlib.util
 import shutil
 import sys
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).parent.resolve()
 sys.path.insert(0, str(ROOT))
-from lib import page, paths, tmpl  # noqa: E402
+from lib import page, paths, spec as spec_lib, tmpl  # noqa: E402
 
 # 各层的位置全在 lib/paths.py 一处定义，这儿只是取个短名
 SRC, GEN, DIST = paths.SRC, paths.GEN, paths.DIST
 
 CST = timezone(timedelta(hours=8))
+
+# 学期日历。**日期是内容不是代码** —— 学校通知改期就改
+# storage/spec/schedule/term.txt 那一处，这个文件一行都不用动
+TERM = paths.spec("schedule", "term.txt")
+WEEKDAYS = "一二三四五六日"
+
+
+def countdown() -> dict | None:
+    """首页那条倒计时 —— 学期日历里**下一个还没到的**里程碑。
+
+    期中考完了自动换成期末，最后一个也过了整条就不出（返回 None）。
+    日期后面带 `?` 的是估的（学校还没通知具体哪天），页面上标「暂定」。
+
+    **这儿算出来的天数只是兜底**：站是静态的，构建时定死的数字停在最后一次
+    push 那天 —— 隔天打开就少一天、周末不提交能差两天，而倒计时给错天数比
+    不给更糟。页面上真正显示的数字由 `assets/countdown.js` 在打开时按当天重算，
+    这个数只在没 JS 时露脸。
+    """
+    if not TERM.exists():
+        return None
+    sp = spec_lib.parse(TERM)
+    today = datetime.now(CST).date()
+    ahead = []
+    for b in sp.blocks:
+        for name, when in b.items():
+            if not when:
+                continue
+            try:
+                day = date.fromisoformat(when.rstrip("?"))
+            except ValueError:
+                spec_lib.die(f"{TERM.name}：[{b.name}] {name} 的日期要写成 "
+                             f"2026-11-09（后面可以带 ? 表示暂定），现在是 {when!r}")
+            if day >= today:
+                ahead.append((day, name, when.endswith("?")))
+    if not ahead:
+        return None
+    day, name, tentative = min(ahead)
+    return {"name": name, "iso": day.isoformat(), "days": (day - today).days,
+            "when": f"{day.month} 月 {day.day} 日 · 周{WEEKDAYS[day.weekday()]}",
+            "tentative": tentative}
 
 
 # ══════════════════════════════════════════════════════════════
@@ -91,6 +131,7 @@ def build_index() -> None:
     body = tmpl.body(
         "home.html",
         subjects=subjects,
+        count=countdown(),
         stamp=datetime.now(CST).strftime("%Y-%m-%d %H:%M"),
     )
 
@@ -102,6 +143,7 @@ def build_index() -> None:
             body=body,
             emoji="📚",
             css=("site.css",),
+            js=("countdown.js",),
             root=".",
         ),
     )

@@ -12,6 +12,22 @@
     <p class="sub">语文 · 英语 · 数学，外加一张课表</p>
   </header>
 
+{% if count %}
+  {#- 学期倒计时。**天数由 assets/countdown.js 在打开页面时按当天重算** ——
+      这儿印的 `count.days` 只是没 JS 时的兜底（构建那天的数），
+      为什么不在构建时定死，见 build.py 的 countdown()。
+      `.count` 是 flex，空白文本节点不生成盒子，随便缩进。
+      ⚠️ 这条注释的收尾**不写减号**：带减号的收尾会把下一行的缩进一起吃掉
+      （CLAUDE.md 那条）。注释里也不许出现收尾记号的字面写法 ——
+      Jinja 见到第一个就当注释完了，后面的字会漏成正文（踩过） #}
+  <p class="count" data-date="{{ count.iso }}" data-name="{{ count.name }}">
+    <span class="what">距离{{ count.name }}还有</span>
+    <b class="num">{{ count.days }}</b>
+    <span class="unit">天</span>
+    <span class="when">{{ count.when }}{% if count.tentative %} · 暂定{% endif %}</span>
+  </p>
+{% endif %}
+
   <section class="subjects">
 {% for s in subjects %}
 <article class="subj" data-s="{{ s.key }}">
