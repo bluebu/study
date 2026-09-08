@@ -63,8 +63,6 @@ body{
   align-self: center;
 }
 .part h2 small{ font-weight: 400; color: #888; font-size: 11px; }
-/* 两列的栏没有竖直表头，改在抬头右边说一句 */
-.part h2 .hint{ margin-left: auto; font-weight: 400; color: #999; font-size: 9.5px; }
 
 /* 第一栏：作业抄下来了吗 —— 上底色，一眼看出先过这一栏 */
 .part.first{
@@ -99,25 +97,38 @@ body{
 /* ── 表头两个小字 + 逐项两个格子：共用 --col / --name 对齐 ── */
 .cols{
   display: flex;
-  align-items: baseline;
+  gap: 8mm;                /* 和 .rows 的 column-gap 一样，两组才对得上列 */
   font-size: 9.5px;
   color: #999;
   margin-bottom: .8mm;
 }
-.cols .pad{ flex: 1 1 auto; }
-.cols span:not(.pad){ flex: 0 0 var(--col); text-align: center; }
+/* 一组标签对齐一列的格子。列数由模板按 cols 出几组，宽度走同一套变量 */
+.cols .half{ flex: 1 1 0; display: flex; align-items: baseline; min-width: 0; }
+.cols .half .pad{ flex: 1 1 auto; }
+/* nowrap：格子只有 10mm，「今天留了」四个字比它宽 —— 让标签溢出格子居中
+   排开，别折成两行（折了就压到下一行的项目名上） */
+.cols .half span:not(.pad){
+  flex: 0 0 var(--col);
+  text-align: center;
+  white-space: nowrap;
+}
 
 /* 两列：项多的栏（语文 9 项排一列要占 9 行）。CSS 多列自己按列填、
    行数自动平衡，所以不用在 Python 里算每列几行 —— 但**必须给 .row 加
    break-inside: avoid**，不然一行会被劈到两列去。
-   一列只有 93mm，格子和名字都得收窄，横线才留得下写字的地方 */
-.rows.two{
+
+   **三科都排两列，列宽就一致** —— 名字、横线、两个格子落在同两条竖线上，
+   看一眼语文上面那两个小字就知道每一科的格子是什么。
+   列宽变量挂在 `.part.two` 上，表头（`.cols`）和行（`.rows`）都继承它，
+   **一处定义** —— 分开写两份早晚漂。 */
+.part.two{
   --col: 10mm;
-  --name: 13mm;
-  column-count: 2;
-  column-gap: 8mm;
+  /* 装得下最长那项「一课一练改签」六个字（6 × 13px ≈ 21mm，留 1mm 余量）。
+     **换更长的项名要一起加宽** —— 不然名字折成两行，那一行的横线跟着塌下去 */
+  --name: 22mm;
 }
-.rows.two .row{ break-inside: avoid; }
+.part.two .rows{ column-count: 2; column-gap: 8mm; }
+.part.two .rows .row{ break-inside: avoid; }
 
 /* 项目序号：**顺序就是做的顺序**（spec 里项行的顺序，预习复习排末尾） */
 .row .i{
@@ -178,6 +189,9 @@ body{
   /* 窄屏把两列格子收窄，横线才不至于被挤没 */
   .sheet{ --col: 12mm; --name: 20mm; }
   /* 纸上排两列是为了省纸；手机一屏只有 390px，两列每列不到 180px、
-     横线就没了 —— 窄屏一律退回一列（纵向不缺空间） */
-  .rows.two{ column-count: 1; --col: 12mm; --name: 20mm; }
+     横线就没了 —— 窄屏一律退回一列（纵向不缺空间）。
+     表头那两组也收成一组，不然右边那组对着空气 */
+  .part.two{ --col: 12mm; --name: 20mm; }
+  .part.two .rows{ column-count: 1; }
+  .cols .half + .half{ display: none; }
 }

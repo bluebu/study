@@ -68,7 +68,7 @@ def _columns(sp: spec_lib.Spec) -> list[dict]:
         col["no"] = None
     for i, col in enumerate(out[1:], 1):
         col["no"] = i
-    first = next((c for c in out if c["rows"] and c["cols"] == 1), None)
+    first = next((c for c in out if c["rows"]), None)
     if first:
         first["show_cols"] = True
     return out
