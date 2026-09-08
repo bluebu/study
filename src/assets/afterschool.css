@@ -83,18 +83,26 @@ body{
 
 /* 说明行：每条前面一个圈，过一条画一个 */
 .note{
+  --lh: 1.45;                /* 行高和圈的直径要一起参与算偏移，所以做成变量 */
+  --dot: 4mm;
   display: flex;
-  align-items: baseline;
+  /* **不用 align-items:baseline** —— 圈是个空元素，它的基线就是自己的底边，
+     于是圈的**底边**对到文字基线上、整个圈高出文字中线 3px（量出来的）。
+     也不用 center：手机上说明会折成两行，center 会把圈挪到两行之间去。
+     flex-start 起头 + 下面那个偏移，圈心永远对准**第一行**文字的中线 */
+  align-items: flex-start;
   gap: 2mm;
   font-size: 12px;
   color: #222;
   margin: 0 0 1.1mm;
-  line-height: 1.45;
+  line-height: var(--lh);
 }
 .note i{
   flex: 0 0 auto;
   box-sizing: border-box;
-  width: 4mm; height: 4mm;
+  width: var(--dot); height: var(--dot);
+  /* 圈心 → 第一行文字的中线：(行高 − 直径) / 2 */
+  margin-top: calc((var(--lh) * 1em - var(--dot)) / 2);
   border: var(--w-box) solid var(--ink-box);
   border-radius: 50%;
   background: #fff;
