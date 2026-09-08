@@ -19,7 +19,8 @@
    **项的顺序就是做的顺序**，纸上自动编号（预习、复习排在末尾）。
    项按 **5 个一组、2 列**排（`GROUP` / `GRID`）：语文 8 项排成 5+3，
    数学 3 项、英语 2 项**整组留在左列不换列** —— 列宽按 2 列固定，
-   所以三科的格子落在同两条竖线上。空下来的格子就留白，不印横线
+   所以三科的格子落在同两条竖线上。**右列没排满的那几格补成空格子**
+   （一条横线 + 两个格子，没序号没项目名）：老师临时加的作业写这儿
 3. **收拾书包** —— 照明天的课表装，家长签字
 
 spec 的形状：**一个区块 = 纸上一栏**，区块里两种行混着写都行 ——
@@ -61,8 +62,14 @@ def _columns(sp: spec_lib.Spec) -> list[dict]:
         # 键叫 `rows` 不叫 `items` —— Jinja 的 `a.b` 先找属性，`col.items`
         # 会拿到 dict 自带的那个方法，渲染时当场 TypeError（`lib/tmpl.py`
         # 的第三条，这儿是第三次踩）
+        # grid 的行数**按本栏的项数定，不是固定 GROUP**：数学 3 项要的是
+        # 「3 行 × 2 列」，给 5 行的话补出来的空格子会流回左列第 4、5 行去。
+        # 补几个 = 把这个矩形填满（语文 5×2 补 2、数学 3×2 补 3、英语 2×2 补 2）,
+        # 所以补空格子**一行纸都不多占**
+        nrows = min(len(items), GROUP)
         col = {"name": b.name, "head": b.head, "notes": b.notes(),
-               "rows": items, "lines": int(lines)}
+               "rows": items, "lines": int(lines),
+               "nrows": nrows, "blanks": max(0, nrows * GRID - len(items))}
         if col["notes"] or col["rows"] or col["lines"]:
             out.append(col)
 
@@ -89,7 +96,6 @@ def _render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, dict]:
     heading = sp.get("title", DEFAULTS["title"])
     body = tmpl.body(
         "afterschool/sheet.html",
-        group=GROUP,
         grid=GRID,
         heading=heading,
         who=sp.get("who", "姓名"),

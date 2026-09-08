@@ -162,7 +162,8 @@ body{
      现在一栏只印真有的项（语文 5 行 + 数学 3 + 英语 2 = 10 行），预算宽松，
      所以行高给到 2.8mm；**再加项之前先量一遍 PDF 页数** */
   padding: 2.8mm 0;
-  border-bottom: 1px dotted var(--ink-rule);
+  /* **行与行之间不画分隔虚线** —— 每行本来就有一条写字的横线（.fill），
+     再来一条通栏虚线就是笔记本横格那个样子，说过不要了。行距靠 padding 分开 */
 }
 .row .name{ flex: 0 0 var(--name); font-size: 15px; }
 /* 横线：写今天这一类具体是什么（「小卷 → 1 课看拼音写词，错改 3 遍」）*/
@@ -172,6 +173,13 @@ body{
   border-bottom: var(--w-line) solid var(--ink-line);
   align-self: stretch;
 }
+/* 空格子（右列没排满的那几格）：没序号没项目名，横线**从项目名那一列起**
+   —— 和上面几行的名字左边缘对齐，够写下老师临时加的那一项。
+   格子照旧两个，所以「校内 / 家中」那两条竖线不断。
+   ⚠️ 类名叫 spare 不叫 blank —— `.blank` 是页头「姓名 ___」那条填空线
+   （带 `border-bottom`），撞上了每个空行底下会多出一条通栏黑线 */
+.row.spare .fill{ margin-left: 0; }
+
 .row .box{
   flex: 0 0 var(--col);
   display: grid;

@@ -6,8 +6,10 @@
   否则纸上小字对不到格子上，家长就不知道哪个框是哪个。
   表头出 `grid` 组（这张纸是 2 组），左右各对齐一列的格子 —— 行是 grid
   按列填的，表头不在那个流里，所以得自己摆几组。
-  **一组 5 项、排 2 列这两个数由 afterschool.py 注入到 `.sheet` 的
-  `--rows` / `--gcols`**，CSS 只读变量、模板只读 `grid` —— 一处定义。
+  **排 2 列这个数由 afterschool.py 注入到 `.sheet` 的 `--gcols`**，
+  CSS 只读变量、模板只读 `grid` —— 一处定义。
+  **`--rows` 挂在每个 `.rows` 上、按本栏项数来**（数学是 3 行不是 5 行），
+  不然补出来的空格子会流回左列去 —— 为什么，见 afterschool.py。
 
   页底那条是给孩子的两个动作，**红色的对勾和叉直接印出来当示范**
   （`.tip .mark.ok` / `.no`，空元素、形状由 CSS 画）—— 写「用红笔打钩」
@@ -17,7 +19,7 @@
      `.row` 里的项目名 / 横线 / 两个格子、`.cols` 里的两个小字、
      `.note` 里的圈和文字
 -#}
-<div class="sheet" style="--rows:{{ group }}; --gcols:{{ grid }}">
+<div class="sheet" style="--gcols:{{ grid }}">
   <div class="head">
     <h1>{{ heading }}</h1>
     <div class="info">{{ who }} <span class="blank"></span> 日期 <span class="blank"></span> 星期 <span class="blank"></span></div>
@@ -39,9 +41,12 @@
     <div class="cols">{% for _ in range(grid) %}<span class="half"><span class="pad"></span><span>校内完成</span><span>家中完成</span></span>{% endfor %}</div>
 {% endif %}
 {% if col.rows %}
-    <div class="rows">
+    <div class="rows" style="--rows:{{ col.nrows }}">
 {% for it in col.rows %}
       <div class="row"><span class="i">{{ loop.index }}</span><span class="name">{{ it }}</span><span class="fill"></span><i class="box"></i><i class="box"></i></div>
+{% endfor %}
+{% for _ in range(col.blanks) %}
+      <div class="row spare"><span class="i"></span><span class="fill"></span><i class="box"></i><i class="box"></i></div>
 {% endfor %}
     </div>
 {% endif %}
