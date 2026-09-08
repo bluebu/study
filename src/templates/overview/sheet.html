@@ -1,0 +1,63 @@
+{#-
+  语文教材总览 —— 一册一份的宏观总表，每课一行。
+  同一份 HTML 两用：A4 打印单（夹在语文书里）+ 屏幕速查页（手机上翻，
+  表格在 .scroll 里自己横滚，见 overview.css 的 @media screen）。
+
+  ⚠️ 三处行内元素之间不许留空白，换行会多出一个空格、版式就变了：
+     `.sum li` 里的标题和详情（flex 一行两栏）
+     格子里的圆点 `<i>●</i>` 和后面的文字
+     `{{ heading }}<small>` —— 那个全角空格写在 small 里面
+  ⚠️ 「有没有要求」「写几个字」的判断全在 overview.py 里算好了
+     （`_mark()` / `_write()`），模板只管把 ● 摆上去、挑个 class。
+-#}
+<div class="sheet">
+  <div class="head">
+    <h1>{{ heading }}{% if sub %}<small>　{{ sub }}</small>{% endif %}</h1>
+    <div class="info">共 <b>{{ n.lessons }}</b> 课　课文要背 <b>{{ n.recite }}</b> 处　日积月累 <b>{{ n.riji }}</b> 处　默写 <b>{{ n.dictation }}</b> 首</div>
+  </div>
+{% if summaries %}
+  <div class="sum">
+    <ul>
+{% for s in summaries %}
+      <li><b>{{ s.head }}</b><span>{{ s.detail }}</span></li>
+{% endfor %}
+    </ul>
+  </div>
+{% endif %}
+{% if note %}
+  <p class="note">{{ note }}</p>
+{% endif %}
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>课</th><th>课文</th><th>背诵</th><th>默写</th><th>朗读</th>
+          <th>其他要求（书上原话）</th><th>写字</th>
+        </tr>
+      </thead>
+      <tbody>
+{% for r in rows %}
+        <tr{% if r.yuan %} class="yuan"{% endif %}>
+          <td class="no">{{ r.no }}</td>
+          <td class="name">{{ r.name }}</td>
+          <td class="recite {{ r.recite.cls }}">{% if r.recite.dot %}<i>●</i>{% endif %}{{ r.recite.val or "—" }}</td>
+          <td class="copy {{ r.dictation.cls }}">{% if r.dictation.dot %}<i>●</i>{% endif %}{{ r.dictation.val or "—" }}</td>
+          <td class="read{% if not r.read %} off{% endif %}">{{ r.read or "—" }}</td>
+          <td class="other">{{ r.other }}</td>
+          <td class="write {{ r.write.cls }}">{{ r.write.val }}</td>
+        </tr>
+{% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% if tails %}
+  <div class="tail">
+    <ul>
+{% for t in tails %}
+      <li>{{ t }}</li>
+{% endfor %}
+    </ul>
+  </div>
+{% endif %}
+  <div class="foot">{{ tally }}</div>
+</div>

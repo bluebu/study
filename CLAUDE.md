@@ -55,7 +55,10 @@ storage/
     english/ket/selections/  抽选卷 spec：跨主题挑词，题号沿用原主题
     english/homework/   一天一份，文件名是 YYYYMMDD
     english/retell/     一个区块一个阶段，区块内一行一段
-    chinese/practice/   语文 spec，文件名是 YYYYMMDD
+    chinese/practice/   语文练习 spec，文件名是 YYYYMMDD
+    chinese/check/      抽查单 spec：**按课号**命名（01、08），
+                        语文园地是 <课号>y（03y = 园地一，排在第 3 课后）
+    chinese/overview/   教材总览 spec：**一册一份、按册命名**（g4a = 四年级上册）
     math/miji/          秘籍 spec：错题按错因分组写，练习题只写题面、答案脚本算
     schedule/week/      课表 spec：一个区块一天，区块内一行一节（YYYYMMDD 是学期起）
   result/             算出来的指标（可再生，push 当回归基准）
@@ -81,8 +84,9 @@ src/
     foot.html         页脚（备案号 + 统计）
     home.html         总入口页的卡片（三科 + 课程表）
     list.html         目录页，五个栏目共用
-    sheet-info.html   打印单页眉「姓名 __ 日期 __ 得分 __」，三个栏目共用
-    practice/ miji/ ket/ homework/ retell/   各栏目的打印单版式
+    sheet-info.html   打印单页眉「姓名 __ 日期 __ 得分 __」，四个栏目共用
+                      （第三格给空串就只出前两格 —— 抽查单的得分在页底）
+    practice/ check/ overview/ miji/ ket/ homework/ retell/   各栏目的打印单版式
     schedule/sheet.html  课程表：节次列和课格在同一个 grid 里，行高天然对齐
     review/           day.html 一天一份成绩单（当天每次录音一节）
                       one.html 一节的版式（card 宏）· sum.html 当天汇总条
@@ -92,6 +96,8 @@ src/
     palette.css       色板单一真源
     print.css         A4 打印锁
     grid.css          田字格 / 四线三格
+    check.css         抽查单（撑满 A4：错题格吃空白、过关格钉页底）
+    overview.css      教材总览（一份 HTML 两用：纸上打印单 / 手机上横滚速查）
     site.css          站点页面（入口页、目录页）
     foot.css          页脚（备案号 + 统计），page.py 挂页脚时自动引上
     trend.css         趋势页（曲线卡片 + 指标总表）
@@ -100,7 +106,11 @@ src/
     review-play.css   比对里能点的词（绿=课本朗读那一句 / 红=她读的那一段）
     review-play.js    **全站唯一一个脚本**。点词听读音，逻辑和为什么见文件头
   generator/          **所有生成器 .py**，一科一层目录
-    chinese/build.py  语文练习单
+    chinese/          语文（CLAUDE.md 里有本科的教学准则和三个栏目的口径）
+      build.py        只做分发：一个栏目一层 try
+      practice.py     今日练习：看拼音写汉字（附答案版）
+      check.py        抽查单：一课一张，题面版 + 家长版（家长版不进目录页）
+      overview.py     教材总览：一册一份的总表，背诵 / 默写两列上底色加圆点
     english/          英语（CLAUDE.md 里有本科的教学准则和四个栏目的口径）
       build.py        只做分发：一个栏目一层 try
       review.py       打卡评价：朗读成绩单（数只写 words / errors，其余算出来）
@@ -395,7 +405,7 @@ make clean      # 删 dist/
 
 | 想做什么 | 去看 |
 |---|---|
-| 语文练习单 / 朗读单 / 抽查单 / 总表 | `../chinese/{practice,recite,check,outline}/` + 各自 README |
+| 语文朗读单（大字课文 + 打卡圈，还没搬） | `../chinese/recite/` + 它的 README |
 | KET 四线三格默写卷、群公告 → 打卡单 | `../english/{ket,homework}/` + `.claude/skills/` |
 | 朗读声学分析（本机 Speech 离线转写 + 逐词时间戳） | `../english/review/tools/{words.swift,analyze.py}` |
 | 数学讲义版式、竖式排版 | `../math/docs/*.html` |

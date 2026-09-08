@@ -1,0 +1,60 @@
+{#-
+  语文抽查单 —— 一课一张，家长照着问，孩子口头答，逐项打勾。
+
+  一份 spec 出两版，开关只有 `answers` 一个：
+  勾选框、`time=`、`pass=` 两版都印；`=` 右边的答案、`ask` 的答案、
+  `answer:` 只印家长版；使用说明（hint）也只给家长；错题格只给题面版。
+
+  ⚠️ 三处行内元素之间不许留空白，换行会多出一个空格、版式就变了：
+     `.bh` 里的圆圈号 / 标题 / 右边的时长过关标签
+     `.items .it` 里的勾选框 / 题面 / 答案 / 点线
+     `.ask` 里的勾选框和正文
+  ⚠️ `{{ b.name }}<small>` 之间同理 —— 那个全角空格写在 small 里面。
+-#}
+<div class="sheet">
+  <div class="head">
+    <h1>{{ heading }}{% if sub %}<small>　{{ sub }}</small>{% endif %}</h1>
+    <div class="info">{% if minutes %}约 <b>{{ minutes }}</b> 分钟　{% endif %}{{ info|safe }}</div>
+  </div>
+{% if hint %}
+  <p class="hint">{{ hint }}</p>
+{% endif %}
+  <div class="blocks">
+{% for b in blocks %}
+    <div class="block">
+      <div class="bh"><span class="no">{{ loop.index }}</span><h2>{{ b.name }}{% if b.head %}<small>　{{ b.head }}</small>{% endif %}</h2><span class="meta">{% if b.time %}<em>{{ b.time }} 分钟</em>{% endif %}{% if b.pass_ %}<i>过关：{{ b.pass_ }}</i>{% endif %}</span></div>
+{% if b.note %}
+      <p class="note">{{ b.note }}</p>
+{% endif %}
+{% if b.grid %}
+      <div class="items">
+{% for it in b.grid %}
+        <div class="it"><span class="tick"></span><span class="q">{{ it.q }}</span>{% if answers and it.a %}<span class="a">{{ it.a }}</span>{% endif %}<span class="dots"></span></div>
+{% endfor %}
+      </div>
+{% endif %}
+{% for a in b.asks %}
+      <div class="ask"><span class="tick"></span><span class="body"><span class="q">{{ a.q }}</span>{% if answers and a.a %}<div class="a"><b>答：</b>{{ a.a }}</div>{% endif %}</span></div>
+{% endfor %}
+{% if b.ln %}
+      <div class="lines">
+{% for _ in range(b.ln) %}
+        <div class="ln"></div>
+{% endfor %}
+      </div>
+{% endif %}
+{% if answers and b.answer %}
+      <p class="answer"><b>答：</b>{{ b.answer }}</p>
+{% endif %}
+    </div>
+{% endfor %}
+  </div>
+{% if memo %}
+  <div class="memo">{{ memo }}</div>
+{% endif %}
+  <div class="total">
+    <span class="big">过关 <span class="blank"></span> / <b>{{ total }}</b> 项</span>
+    <span>错的圈出来，明天再问一遍　　家长签字 <span class="blank"></span></span>
+  </div>
+  <div class="foot">{{ tally }}</div>
+</div>

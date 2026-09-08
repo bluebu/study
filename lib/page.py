@@ -68,8 +68,11 @@ def render(
 def sheet_info(third: str = "得分", *, show: bool = True) -> str:
     """打印单页眉右边那行「姓名 ___ 日期 ___ <third> ___」。
 
-    三个栏目共用（语文 / 数学 / 词汇默写），第三格的名字不同（得分 / 用时）。
-    原先各栏目存一份 INFO 常量，改一处要改三个文件。
+    四个栏目共用（语文练习 / 抽查单 / 数学 / 词汇默写），第三格的名字不同
+    （得分 / 用时）。原先各栏目存一份 INFO 常量，改一处要改三个文件。
+
+    `third=""` 只出前两格 —— 抽查单的得分记在页底的「过关 __ / N 项」里，
+    页眉再来一格是重复的。
     """
     return tmpl.render("sheet-info.html", third=third, show=show).rstrip("\n")
 

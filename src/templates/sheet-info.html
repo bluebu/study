@@ -5,5 +5,6 @@
   ⚠️ 整行必须留在一行：`.head .info` 是 white-space:nowrap 的普通块，
   「姓名 」后面那个空格是有意的，换行会多出空格、也可能把 nowrap 顶宽。
   答案版不出这一行（传 show=False）—— 家长批改用，不需要签名格。
+  第三格给空串就只出「姓名 __ 日期 __」（抽查单：得分记在页底的过关格里）。
 -#}
-{% if show %}姓名 <span class="blank"></span> 日期 <span class="blank"></span> {{ third }} <span class="blank"></span>{% endif %}
+{% if show %}姓名 <span class="blank"></span> 日期 <span class="blank"></span>{% if third %} {{ third }} <span class="blank"></span>{% endif %}{% endif %}

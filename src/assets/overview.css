@@ -1,0 +1,130 @@
+/* ── 教材总览（语文）───────────────────────────────────────
+   一册一份的总表：每课一行，背诵 / 默写两列上底色加圆点，一眼扫得出
+   哪几行有活儿。依赖 palette.css + print.css。
+
+   **同一份 HTML 两用**：纸上是 A4 打印单（11px 小字，18 行正好装满一页），
+   屏幕上是速查页 —— 手机窄，所以表格在 .scroll 里横滚、字号放大一档
+   （只在 @media screen 里改，@media print 一个字都不动）。
+
+   行数变多先缩 td.other 的字号／行距，再收 th,td 的 padding；
+   底部小结靠 .tail{margin-top:auto} 钉在页底，别删。
+   改完 Read 生成的 PDF 看排版。 */
+
+body{
+  margin: 0;
+  font-family: var(--font-cn);
+  color: #111;
+  font-size: 11px;
+  background: #888;             /* 屏幕上模拟纸外的桌面 */
+}
+@media print{ body{ background: #fff; } }
+
+/* 一页装完：小结钉在页底。边距比别的打印单窄一点 —— 这张表要塞 18 行 */
+.sheet{
+  display: flex;
+  flex-direction: column;
+  min-height: 297mm;
+  padding: 12mm 14mm;
+}
+@media print{ .sheet{ height: 297mm; } }
+
+/* ── 页头 ── */
+.head{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 2px solid #111;
+  padding-bottom: 5px;
+  margin-bottom: 3mm;
+}
+.head h1{ font-size: 17px; margin: 0; padding-right: 10px; }
+.head h1 small{ font-size: 11px; font-weight: 400; color: #666; }
+.head .info{ font-size: 10px; color: #666; white-space: nowrap; }
+.head .info b{ color: var(--chinese); }
+
+/* ── 顶部摘要框：手机上第一屏就看到「要背的只有 3 处」── */
+.sum{
+  border: 1.2px solid var(--chinese);
+  border-radius: 5px;
+  background: var(--card);
+  padding: 4px 9px;
+  margin-bottom: 2mm;
+}
+.sum ul{ list-style: none; margin: 0; padding: 0; }
+.sum li{ display: flex; gap: 7px; font-size: 10.5px; line-height: 1.62; }
+.sum li b{ flex: 0 0 auto; color: var(--chinese); white-space: nowrap; }
+.sum li span{ color: #444; }
+
+.note{ font-size: 9.5px; color: #999; margin: 0 0 2mm; }
+
+/* ── 总表 ── */
+table{ width: 100%; border-collapse: collapse; }
+th, td{ border: .6pt solid var(--line); padding: 2px 4px; vertical-align: middle; }
+thead th{
+  background: var(--chinese-bg);
+  color: var(--ink);
+  font-size: 10px;
+  white-space: nowrap;
+}
+td.no{
+  width: 10mm;
+  text-align: center;
+  color: var(--chinese);
+  font-weight: 700;
+  font-size: 9.5px;
+  font-family: "Times New Roman", var(--font-cn), serif;
+}
+td.name{ width: 25mm; font-family: var(--font-kai); font-size: 12.5px; }
+td.read{ width: 22mm; }
+td.recite{ width: 25mm; }
+td.copy{ width: 20mm; font-size: 10px; }
+td.other{ font-size: 9.5px; color: #444; line-height: 1.45; }
+td.write{ width: 12mm; text-align: center; font-size: 9.5px; color: #666; }
+
+/* 要背 / 要默写：底色 + 圆点，一眼扫得出哪几行有。
+   底色走 --warn 家族 —— 分类色里刻意没有红，红专属「分数越差越红」 */
+.on{ background: var(--warn-bg); color: var(--ink); font-weight: 700; }
+.on i{ font-style: normal; margin-right: 2px; color: var(--chinese); }
+.off{ color: #C4C4C4; }
+.todo{ color: #999; }
+/* 语文园地行：底色略淡、课号课名转灰，和课文行分得开 */
+tr.yuan{ background: var(--grid); }
+tr.yuan td.no, tr.yuan td.name{ color: var(--ink-soft); }
+
+/* ── 底部小结 ── */
+.tail{
+  margin-top: auto;
+  padding-top: 3mm;
+  border-top: 1.5px dashed #bbb;
+}
+.tail ul{ list-style: none; margin: 0; padding: 0; }
+.tail li{ font-size: 9.5px; color: #555; line-height: 1.7; }
+.tail li::before{ content: "· "; color: var(--chinese); font-weight: 700; }
+
+.foot{ margin-top: 2mm; text-align: right; color: #999; font-size: 9px; }
+
+/* ── 屏幕：同一份 HTML 当速查页用 ──────────────────────────
+   宽表格自己横向滚动，别让整页横滚（.sheet 有 max-width:100%，
+   但里面 7 列的表格压不动 —— 内容会跑到纸外面去）。 */
+@media screen{
+  .scroll{ overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
+/* 手机上纸宽被压到屏宽，11px 的表格字太小 —— 放大一档，横滚着看。
+   页头也得竖排：nowrap 的 .info 会把标题挤成一列竖着排
+   （「教 材 总 览」一个字一行，是在真实视口截图里看出来的）。 */
+@media screen and (max-width: 760px){
+  .head{ flex-direction: column; align-items: flex-start; gap: 3px; }
+  .head h1{ font-size: 19px; padding-right: 0; }
+  .head h1 small{ font-size: 12.5px; }
+  .head .info{ font-size: 12px; white-space: normal; }
+  table{ min-width: 700px; }
+  thead th{ font-size: 12px; }
+  td.no{ font-size: 11px; }
+  td.name{ font-size: 15px; }
+  td.recite, td.copy, td.read{ font-size: 12.5px; }
+  td.other{ font-size: 11.5px; min-width: 62mm; }
+  td.write{ font-size: 11.5px; }
+  .sum li{ font-size: 12.5px; }
+  .note{ font-size: 11.5px; }
+  .tail li{ font-size: 12px; }
+}
