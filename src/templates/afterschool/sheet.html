@@ -1,18 +1,23 @@
 {#-
   放学检查 —— 放学回来照着过一遍。一个区块 = 一栏，顺序就是检查顺序。
+  **一页 = 一个 .sheet**（spec 里的 `[分页]` 切的），所以「HTML 里 .sheet
+  的个数 == PDF 页数」这条自检照样成立。
 
   **每项两个格子：校内完成 ｜ 家中完成。** 表头那两个小字和格子**竖着对齐** ——
   `.cols` 和 `.row` 用同一套 flex 列宽（`--col`），改一个就得改另一个，
   否则纸上小字对不到格子上，家长就不知道哪个框是哪个。
-  表头出 `grid` 组（这张纸是 2 组），左右各对齐一列的格子 —— 行是 grid
-  按列填的，表头不在那个流里，所以得自己摆几组。
+  表头出 `col.ncols` 组，左右各对齐一列的格子 —— 行是 grid 按列填的，
+  表头不在那个流里，所以得自己摆几组。**每页都要出一遍**（出在本页第一个
+  有项的栏上），afterschool.py 的 `_pages()` 管这件事。
+  **`--rows` / `--gcols` 挂在每个 `.rows` 上、按本栏的项数和列数来**
+  （数学是 3 行不是 5 行，家庭作业是 1 列不是 2 列），不然补出来的空格子
+  会流回左列去 —— 为什么，见 afterschool.py。
   **`.bar` 把栏名和这几组小字放在同一行**（同一个 grid 格子里叠着，
   竖向居中）—— 别改成 h2 里跟栏名排 flex，那样小字就和格子错开了，
   为什么见 afterschool.css。
-  **排 2 列这个数由 afterschool.py 注入到 `.sheet` 的 `--gcols`**，
-  CSS 只读变量、模板只读 `grid` —— 一处定义。
-  **`--rows` 挂在每个 `.rows` 上、按本栏项数来**（数学是 3 行不是 5 行），
-  不然补出来的空格子会流回左列去 —— 为什么，见 afterschool.py。
+
+  项目名是空串的行（spec 里 `slots=N` 留出来的位子）只出序号和横线，
+  留着手填；右列没排满补的那几格连序号都没有。两种都是 `.row.spare`。
 
   页底那条是给孩子的两个动作，**红色的对勾和叉直接印出来当示范**
   （`.tip .mark.ok` / `.no`，空元素、形状由 CSS 画）—— 写「用红笔打钩」
@@ -22,17 +27,18 @@
      `.row` 里的项目名 / 横线 / 两个格子、`.cols` 里的两个小字、
      `.note` 里的圈和文字
 -#}
-<div class="sheet" style="--gcols:{{ grid }}">
+{% for pg in pages %}
+<div class="sheet">
   <div class="head">
-    <h1>{{ heading }}</h1>
+    <h1>{{ pg.heading }}</h1>
     <div class="info">{{ who }} <span class="blank"></span> 日期 <span class="blank"></span> 星期 <span class="blank"></span></div>
   </div>
-{% for col in columns %}
-  <div class="part{% if loop.first %} first{% endif %}">
+{% for col in pg.columns %}
+  <div class="part{% if loop.first and not col.no %} first{% endif %}">
     <div class="bar">
       <h2>{% if col.no %}<span class="no">{{ col.no }}</span>{% endif %}{{ col.name }}{% if col.head %}<small>{{ col.head }}</small>{% endif %}</h2>
 {% if col.show_cols %}
-      <div class="cols">{% for _ in range(grid) %}<span class="half"><span class="pad"></span><span>校内完成</span><span>家中完成</span></span>{% endfor %}</div>
+      <div class="cols">{% for _ in range(col.ncols) %}<span class="half"><span class="pad"></span><span>校内完成</span><span>家中完成</span></span>{% endfor %}</div>
 {% endif %}
     </div>
 {% for note in col.notes %}
@@ -46,9 +52,13 @@
     </div>
 {% endif %}
 {% if col.rows %}
-    <div class="rows" style="--rows:{{ col.nrows }}">
+    <div class="rows" style="--rows:{{ col.nrows }}; --gcols:{{ col.ncols }}">
 {% for it in col.rows %}
+{% if it %}
       <div class="row"><span class="i">{{ loop.index }}</span><span class="name">{{ it }}</span><span class="fill"></span><i class="box"></i><i class="box"></i></div>
+{% else %}
+      <div class="row spare"><span class="i">{{ loop.index }}</span><span class="fill"></span><i class="box"></i><i class="box"></i></div>
+{% endif %}
 {% endfor %}
 {% for _ in range(col.blanks) %}
       <div class="row spare"><span class="i"></span><span class="fill"></span><i class="box"></i><i class="box"></i></div>
@@ -58,5 +68,8 @@
   </div>
 {% endfor %}
   <p class="tip">每一项都要过一遍：<b>留了的画 <i class="mark ok"></i>，没留的画 <i class="mark no"></i></b> —— 空着分不出「没留」还是「没检查」。</p>
+{% if loop.last %}
   <div class="foot">{{ tally }}</div>
+{% endif %}
 </div>
+{% endfor %}
