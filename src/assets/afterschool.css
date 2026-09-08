@@ -34,7 +34,6 @@
   --ink-box:  var(--t2);   /* 勾选框、小圈的边框 */
   --ink-line: var(--t3);   /* 写字的横线 */
   --w-box: 1.6px;          /* 2px 太重：26 个框排下来比正文还抢眼 */
-  --w-dot: 1.4px;          /* 说明行那个小圈更小，再细一档才和大框一样轻重 */
 }
 
 /* ⚠️ **每一处文字都要写 line-height，而且写数字**（不写就是 `normal`，
@@ -68,6 +67,16 @@ body{
      右了 2.5mm；把槽填满又没留 --pad，圈直接顶到字上 */
   --dia: 5.5mm;     /* 记号位：按最大的那个（栏名前的圆圈）定 */
   --pad: 2mm;       /* 记号和文字之间 */
+  /* **格子只有一种**：说明行前面的和项目行后面的是同一个东西（同边长、
+     同圆角、同粗细），孩子看到方格子就知道「这儿要勾」。一处定义 */
+  --box: 5mm;
+  /* **说明行和项目行同一套行距**：格子 5mm + 上下 --pitch。
+     一眼看着是一张表、不是两种东西 —— 说明行原先 12px / 挤在一起，
+     和上面的项目行差一截。两处都读这一个变量，**别只改一处**。
+     这个数就是一页的预算：纸上 21 行（15 个项目 + 6 条说明），
+     1.7mm → 行距 8.4mm，自然高 1097.8px / A4 1122.5px。
+     往上调之前先量（`node tools/shot.mjs … --probe`，超 1122.5px 就多一张纸） */
+  --pitch: 1.7mm;
   /* 项目名那一列：装得下最长那项「一课一练改签」六个字（6 × 15px ≈ 24mm）。
      **项名字号或长度一动，这儿要一起动** —— 不然名字折成两行，
      那一行的横线跟着塌下去 */
@@ -75,9 +84,10 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 297mm;
-  /* 加了下半区（家庭作业 5 行）之后一页装不下了，纸边距从 14mm 收到 12mm。
-     **别再往下收** —— 家用喷墨最后几毫米印不到 */
-  padding: 12mm 12mm;
+  /* 加了下半区（家庭作业 5 行）、说明行又跟项目行统一了行距之后，
+     纸边距从 14mm 一路收到 11mm。**别再往下收** ——
+     家用喷墨最后几毫米印不到 */
+  padding: 11mm 12mm;
 }
 @media print{ .sheet{ height: 297mm; } }
 
@@ -150,34 +160,38 @@ body{
   padding: 2mm 4mm 2.5mm;
 }
 
-/* 说明行：每条前面一个圈，过一条画一个 */
+/* 说明行：每条前面一个格子，过一条勾一个 —— **和项目行后面的格子一模一样**
+   （原先是圆圈，两种记号让人分不清哪个才是要勾的） */
 .note{
-  --lh: 1.45;                /* 行高和圈的直径要一起参与算偏移，所以做成变量 */
-  --dot: 4mm;
+  --lh: 1.2;                 /* 行高和格子边长要一起参与算偏移，所以做成变量 */
+  --dot: var(--box);
   display: flex;
-  /* **不用 align-items:baseline** —— 圈是个空元素，它的基线就是自己的底边，
-     于是圈的**底边**对到文字基线上、整个圈高出文字中线 3px（量出来的）。
-     也不用 center：手机上说明会折成两行，center 会把圈挪到两行之间去。
-     flex-start 起头 + 下面那个偏移，圈心永远对准**第一行**文字的中线 */
+  /* **不用 align-items:baseline** —— 格子是个空元素，它的基线就是自己的底边，
+     于是格子的**底边**对到文字基线上、整个格子高出文字中线 3px（量出来的）。
+     也不用 center：手机上说明会折成两行，center 会把格子挪到两行之间去。
+     flex-start 起头 + 下面那个偏移，格心永远对准**第一行**文字的中线 */
   align-items: flex-start;
   gap: var(--pad);
-  font-size: 12px;
-  color: var(--t1);          /* 说明是要读的字，和项目名同一级 */
-  margin: 0 0 0.9mm;
+  /* 字号、行高、行距**和项目名一样**（15px / 1.2 / --pitch）：
+     说明也是要读的字，没理由比项目名小一号、挤一档 */
+  font-size: 15px;
+  color: var(--t1);
+  margin: 0;
+  padding: var(--pitch) 0;
   line-height: var(--lh);
 }
 .note i{
   flex: 0 0 auto;
   box-sizing: border-box;
   width: var(--dot); height: var(--dot);
-  /* 圈心 → 第一行文字的中线：(行高 − 直径) / 2 */
+  /* 格心 → 第一行文字的中线：(行高 − 边长) / 2 */
   margin-top: calc((var(--lh) * 1em - var(--dot)) / 2);
-  /* 小圈比记号位窄，左右各补一半 —— 圆心落在记号位中线上（和栏名的圈、
+  /* 格子比记号位窄，左右各补一半 —— 格心落在记号位中线上（和栏名的圈、
      项目序号同一条竖线），文字也就和栏名、项目名对齐 */
   margin-left: calc((var(--dia) - var(--dot)) / 2);
   margin-right: calc((var(--dia) - var(--dot)) / 2);
-  border: var(--w-dot) solid var(--ink-box);
-  border-radius: 50%;
+  border: var(--w-box) solid var(--ink-box);
+  border-radius: 1mm;
   background: #fff;
 }
 
@@ -242,10 +256,10 @@ body{
   gap: 0;
   /* 横线是要写字的（「小卷 → 1 课看拼音写词，错改 3 遍」），行高要够下笔。
      纸上现在 15 行（语文 5 + 数学 3 + 英语 2 + 家庭作业 5），一页的预算全在
-     这一处：2mm 上下 padding + 5mm 的格子 = 9mm 行距，和作业本一格差不多。
+     这一处 —— 行距是 --pitch（说明行共用同一个数，见文件头）。
      **再加项之前先量一遍**（`node tools/shot.mjs … --probe` 看 .sheet 高度，
      超过 1122.5px 就是超出 A4 了，PDF 会多出一张纸） */
-  padding: 2mm 0;
+  padding: var(--pitch) 0;
   /* **行与行之间不画分隔虚线** —— 每行本来就有一条写字的横线（.fill），
      再来一条通栏虚线就是笔记本横格那个样子，说过不要了。行距靠 padding 分开 */
 }
@@ -279,7 +293,7 @@ body{
   /* border-box：2px 的边框吃在这 5mm 里 —— 不然边框一加粗，19 行各高 0.5mm，
      整张纸就顶到第二页去了（改粗细前先想一下这条） */
   box-sizing: border-box;
-  width: 5mm; height: 5mm;
+  width: var(--box); height: var(--box);
   border: var(--w-box) solid var(--ink-box);
   border-radius: 1mm;
   background: #fff;
@@ -287,30 +301,37 @@ body{
 
 /* ── 下半区（spec 里 `[分区]` 之后的栏）────────────────────────
    **不是分页，一天还是一张纸**：上半区是学校留的作业（照作业本核），
-   下半区是家里加的 —— 要一眼看出是两码事。
+   下半区是家里加的 —— 隔开就行，别抢眼。
 
-   先试过「画一条分界线」：这张纸上到处都是横线，一条线分不出来是「边界」
-   还是「又一行」。所以整块框起来 —— **浅底 + 一圈线**，和第一栏那个框
-   同一套装饰（同一族的浅紫底、同一支紫的描边），纸上就读成「一个独立区块」。
-   光靠底色不行：#F0E7F7 灰度 235，黑白打印几乎是白的，那圈线才是凭据。
+   试过两版都不对：一条通栏实线（这张纸上到处是横线，分不出是「边界」还是
+   「又一行」）、浅底加描边整块框起来（太显眼，反倒像这一区更重要）。
+   现在是**一条点线** —— 点线在纸上只有「这儿隔一下」这一个意思，
+   不会被当成要写字的横线，也不会把这一区抬起来。
+   区里的栏一律照常样式：**家庭作业和上面三科长得一样**，只是隔在线下面。
 
-   ⚠️ **左右用负边距铺到纸的边距里**：框往外长、内容不动，区域里的项目名、
-   横线、格子这才还落在上半区那几条竖线上。改成正常的 padding 会把这一区
-   整体缩进去，两个区的格子列当场错开。 */
+   ⚠️ 这一区**不许左右缩进**（别加 padding-left / margin-left）：
+   一缩进来，下半区的项目名、横线、格子就和上半区那几条竖线错开了。 */
 .zone.other{
-  margin: 4mm -4mm 0;
-  padding: 3mm 4mm 1.5mm;
-  background: var(--c-drill-bg);
-  border: 1.2px solid var(--accent);
-  border-radius: 5px;
+  margin-top: 4mm;
+  padding-top: 3mm;
+  border-top: 2px dotted var(--t3);
 }
-/* 框里最后一栏的下边距归框的 padding 管，不然底下多出一条空白 */
-.zone.other .part:last-child{ margin-bottom: 0; }
+
+/* 一个区里的几栏**并排**（spec 里 `[分区] cols=2`）：家庭作业在左半边、
+   生活习惯在右半边。列间距和上半区两列的 8mm 一样 —— 看着是同一套栅格。
+   align-items:start：两栏项数不一样时各自贴顶，不要被拉齐 */
+.zone.side{
+  display: grid;
+  grid-template-columns: repeat(var(--zcols, 2), minmax(0, 1fr));
+  column-gap: 8mm;
+  align-items: start;
+}
+.zone.side .part{ margin-bottom: 0; }
 
 /* ── 页底 ── */
 .tip{
   margin-top: auto;
-  padding-top: 2.5mm;
+  padding-top: 2mm;
   border-top: 1.2px dashed var(--t4);
   font-size: 11px;
   color: var(--t2);
@@ -367,5 +388,8 @@ body{
      表头那第二组也收掉，不然它对着空气 */
   .sheet{ --col: 12mm; --name: 22mm; }
   .rows{ grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; }
+  /* 并排的区在手机上也退回一列（一列不到 180px，横线就没了） */
+  .zone.side{ grid-template-columns: 1fr; }
+  .zone.side .part{ margin-bottom: 2mm; }
   .cols .half + .half{ display: none; }
 }

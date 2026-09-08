@@ -1,9 +1,14 @@
 {#-
   放学检查 —— 放学回来照着过一遍。一个区块 = 一栏，顺序就是检查顺序。
-  **一天一张纸（一个 .sheet）**。spec 里的 `[分区]` 把后面的栏整块框起来：
+  **一天一张纸（一个 .sheet）**。spec 里的 `[分区]` 隔一条点线：
   上半区是学校留的作业、下半区是家里加的，一眼看出是两码事，**不分页**。
+  `[分区] cols=2` 的区里，几栏**并排**（家庭作业在左、生活习惯在右）——
+  `.zone.side`，列宽走 `--zcols`。
 
-  **每项两个格子：校内完成 ｜ 家中完成。** 表头那两个小字和格子**竖着对齐** ——
+  **每项两个格子：校内完成 ｜ 家中完成**（`boxes=1` 的栏只有一个，
+  比如家庭作业 —— 家里加的作业没有「校内完成」）。格子的名字来自
+  `col.labels`，**从右往左取**，所以一格的栏和两格的栏最右那格对在同一条
+  竖线上。表头那几个小字和格子**竖着对齐** ——
   `.cols` 和 `.row` 用同一套 flex 列宽（`--col`），改一个就得改另一个，
   否则纸上小字对不到格子上，家长就不知道哪个框是哪个。
   表头出 `col.ncols` 组，左右各对齐一列的格子 —— 行是 grid 按列填的，
@@ -25,21 +30,21 @@
 
   ⚠️ 行内元素之间不许留空白，换行会多出一个空格、版式就变了：
      `.row` 里的项目名 / 横线 / 两个格子、`.cols` 里的两个小字、
-     `.note` 里的圈和文字
+     `.note` 里的格子和文字
 -#}
 <div class="sheet">
   <div class="head">
     <h1>{{ heading }}</h1>
-    <div class="info">{{ who }} <span class="blank"></span> 日期 <span class="blank"></span> 星期 <span class="blank"></span></div>
+    <div class="info">日期 <span class="blank"></span></div>
   </div>
 {% for z in zones %}
-  <div class="zone{% if not loop.first %} other{% endif %}">
-{% for col in z %}
+  <div class="zone{% if not loop.first %} other{% endif %}{% if z.zcols > 1 %} side{% endif %}" style="--zcols:{{ z.zcols }}">
+{% for col in z.parts %}
   <div class="part{% if loop.first and not col.no %} first{% endif %}">
     <div class="bar">
       <h2>{% if col.no %}<span class="no">{{ col.no }}</span>{% endif %}{{ col.name }}{% if col.head %}<small>{{ col.head }}</small>{% endif %}</h2>
 {% if col.show_cols %}
-      <div class="cols">{% for _ in range(col.ncols) %}<span class="half"><span class="pad"></span><span>校内完成</span><span>家中完成</span></span>{% endfor %}</div>
+      <div class="cols">{% for _ in range(col.ncols) %}<span class="half"><span class="pad"></span>{% for lbl in col.labels %}<span>{{ lbl }}</span>{% endfor %}</span>{% endfor %}</div>
 {% endif %}
     </div>
 {% for note in col.notes %}
@@ -56,13 +61,13 @@
     <div class="rows" style="--rows:{{ col.nrows }}; --gcols:{{ col.ncols }}">
 {% for it in col.rows %}
 {% if it %}
-      <div class="row"><span class="i">{{ loop.index }}</span><span class="name">{{ it }}</span><span class="fill"></span><i class="box"></i><i class="box"></i></div>
+      <div class="row"><span class="i">{{ loop.index }}</span><span class="name">{{ it }}</span><span class="fill"></span>{% for _ in range(col.boxes) %}<i class="box"></i>{% endfor %}</div>
 {% else %}
-      <div class="row spare"><span class="i">{{ loop.index }}</span><span class="fill"></span><i class="box"></i><i class="box"></i></div>
+      <div class="row spare"><span class="i">{{ loop.index }}</span><span class="fill"></span>{% for _ in range(col.boxes) %}<i class="box"></i>{% endfor %}</div>
 {% endif %}
 {% endfor %}
 {% for _ in range(col.blanks) %}
-      <div class="row spare"><span class="i"></span><span class="fill"></span><i class="box"></i><i class="box"></i></div>
+      <div class="row spare"><span class="i"></span><span class="fill"></span>{% for _ in range(col.boxes) %}<i class="box"></i>{% endfor %}</div>
 {% endfor %}
     </div>
 {% endif %}

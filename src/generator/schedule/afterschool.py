@@ -11,7 +11,8 @@
 1. **作业抄下来了吗** —— 放学前要把老师留的作业抄在作业本上带回家。
    这一栏只做入口检查、**不编号也不再抄一遍**：作业本就是原始记录，
    照着它去填下面各科的横线。没抄下来，后面全是空的
-2. **三科逐项过** —— 每一项两个格子：**校内完成** ｜ **家中完成**。
+2. **三科逐项过** —— 每一项两个格子：**校内完成** ｜ **家中完成**
+   （`boxes=` 能改成一格，家庭作业那栏就只有「家中完成」）。
    作业是这些项目的组合（语文那天可能是「小卷 + 生字本 + 背诵」），
    所以**每一项都要过一遍**：留了的画对勾（在哪儿做完的勾哪一格），
    **没留的画叉** —— 空着分不出「没留」和「没检查」。
@@ -27,19 +28,23 @@
    固定，只有第一项是每天都有的，剩下几行留白手填
 
 spec 的形状：**一个区块 = 纸上一栏**，区块里两种行混着写都行 ——
-缩进行是说明（每条前面一个圈），项行是作业类型（`,` `，` `、` 分隔）。
+缩进行是说明（每条前面一个格子），项行是作业类型（`,` `，` `、` 分隔）。
 想加一栏（比如「明天要带的东西」）直接在 spec 里加区块，代码一行不用改。
 区块属性：
 
     lines=N   这一栏留 N 行横线（抄作业用）
     cols=N    排几列，默认 2；`cols=1` 排一列（横线长，够写具体内容）
+    boxes=N   每项几个格子，默认 2（校内完成 ｜ 家中完成）。**家庭作业
+              `boxes=1`** —— 家里加的作业没有「校内完成」这回事。
+              名字从右往左取，所以一格的栏和两格的栏最右那格对在同一条竖线上
     slots=N   **这一栏固定 N 个编号位**：写了名字的照抄，剩下的只出序号和
               横线、留着手填。家庭作业就靠它 —— 每天加什么不一定，位子先留好
-    [分区]    **不是一栏，也不是分页**：后面的栏整块框起来（浅底 + 描边），
-              纸上看着是另一个区域，**一天还是一张纸**。不带抬头 ——
-              区域的名字就是它下面那一栏的名字。
-              「校内完成 / 家中完成」那行小字**每个区域各出一遍**
-              （出在本区第一个有项的栏上）
+    [分区]    **不是一栏，也不是分页**：纸上隔一条点线，下面是另一个区域，
+              **一天还是一张纸**。不带抬头 —— 区域的名字就是它下面那几栏
+              的名字。属性 `cols=N`：**本区的栏并排排 N 列**
+              （`[分区] cols=2` → 家庭作业在左半边、生活习惯在右半边）。
+              「校内完成 / 家中完成」那行小字**每个区域各出一遍**；
+              并排的区里每栏各出一遍 —— 左右是两列，各认自己那个格子
 """
 
 from __future__ import annotations
@@ -60,6 +65,10 @@ DEFAULTS = {"title": "放学检查"}
 # 这两个数注入到每个 .rows 的 --rows / --gcols，CSS 只读变量，**一处定义**
 GROUP = 5
 GRID = 2
+
+# 每项后面那几个格子的名字，**从右往左取**：`boxes=1` 取最右那个（家中完成）。
+# 右对齐是关键 —— 一格的栏和两格的栏，最右那一格落在同一条竖线上
+BOX_LABELS = ("校内完成", "家中完成")
 ZONE = "分区"      # 这个名字的区块不是一栏，是纸上的一条区域分界线
 
 
@@ -81,14 +90,18 @@ def _columns(sp: spec_lib.Spec) -> list[dict]:
         if b.name == ZONE:
             if b.head:
                 spec_lib.die(f"{sp.path.name}：[{ZONE}] 不带抬头（现在写着"
-                             f" {b.head!r}）—— 区域的名字就是它下面那一栏的名字")
-            out.append({"zone": True})
+                             f" {b.head!r}）—— 区域的名字就是它下面那几栏的名字")
+            out.append({"zone": True, "zcols": max(1, _num(sp, b, "cols", "1"))})
             continue
 
         # 项行的左边就是项目名（`小卷, 书后习题, 背`），没有 `=` 右边
         items = [left for left, _ in b.items() if left]
         lines = _num(sp, b, "lines", "0")
         ncols = max(1, _num(sp, b, "cols", str(GRID)))
+        boxes = _num(sp, b, "boxes", str(len(BOX_LABELS)))
+        if not 1 <= boxes <= len(BOX_LABELS):
+            spec_lib.die(f"{sp.path.name}：[{b.name}] 的 boxes= 只能是 "
+                         f"1~{len(BOX_LABELS)}，现在是 {boxes}")
         # slots=N：**位子先留好**，写了名字的照抄，剩下的补成空串 ——
         # 模板见到空串就只出序号和横线（家庭作业每天加什么不一定）
         slots = _num(sp, b, "slots", "0")
@@ -104,6 +117,7 @@ def _columns(sp: spec_lib.Spec) -> list[dict]:
         nrows = min(len(items), GROUP) if ncols > 1 else len(items)
         col = {"name": b.name, "head": b.head, "notes": b.notes(),
                "rows": items, "lines": lines, "ncols": ncols,
+               "boxes": boxes, "labels": list(BOX_LABELS[-boxes:]),
                "nrows": nrows, "blanks": max(0, nrows * ncols - len(items))}
         if col["notes"] or col["rows"] or col["lines"]:
             out.append(col)
@@ -122,29 +136,32 @@ def _columns(sp: spec_lib.Spec) -> list[dict]:
     return out
 
 
-def _zones(rows: list[dict]) -> list[list[dict]]:
-    """按 `[分区]` 切区域。**区域是纸上框一块，不是分页** —— 一天一张。
+def _zones(rows: list[dict]) -> list[dict]:
+    """按 `[分区]` 切区域。**区域是纸上隔一条点线，不是分页** —— 一天一张。
 
-    「校内完成 / 家中完成」那行小字**每个区域各出一遍**（出在本区第一个
-    有项的栏上）：下半区离上面那行小字隔了半张纸，不重出就认不出哪列是哪列。
+    `zcols` 是这一区的栏并排几列（`[分区] cols=2` → 左右各一栏）。
+
+    「校内完成 / 家中完成」那行小字**每个区域各出一遍**：下半区离上面那行
+    小字隔了半张纸，不重出就认不出哪列是哪列。**并排的区里每栏各出一遍**
+    —— 左右两栏是两列格子，各认自己头上那个名字。
     """
-    zones, cur = [], []
+    zones, cur = [], {"zcols": 1, "parts": []}
     for row in rows:
         if "zone" in row:
-            if cur:
+            if cur["parts"]:
                 zones.append(cur)
-            cur = []
+            cur = {"zcols": row["zcols"], "parts": []}
             continue
-        cur.append(row)
-    if cur:
+        cur["parts"].append(row)
+    if cur["parts"]:
         zones.append(cur)
 
     for z in zones:
-        for col in z:
+        withrows = [c for c in z["parts"] if c["rows"]]
+        for col in z["parts"]:
             col["show_cols"] = False
-        first = next((c for c in z if c["rows"]), None)
-        if first:
-            first["show_cols"] = True
+        for col in (withrows if z["zcols"] > 1 else withrows[:1]):
+            col["show_cols"] = True
     return zones
 
 
@@ -160,7 +177,6 @@ def _render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, dict]:
         "afterschool/sheet.html",
         heading=heading,
         zones=zones,
-        who=sp.get("who", "姓名"),
         total=total,
         tally=f"{len(cols)} 栏 / {total} 项",
     )
