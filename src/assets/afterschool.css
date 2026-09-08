@@ -19,9 +19,12 @@ body{
 @media print{ body{ background: #fff; } }
 
 .sheet{
-  /* 本栏目的强调色：--c-drill (#A97EC4) 打黑白是中灰，压深到灰度 90 ——
-     彩色打印还是同一支紫，黑白打印够黑。墨色三兄弟在 print.css */
-  --accent: #6B4A87;
+  /* 本栏目的强调色（沿用课程表家族的 --c-drill 那支紫）。
+     **它只做装饰**：栏号的圈、项目序号、第一栏的框 —— 孩子要拿笔画的东西
+     （勾选框、写字的横线）一律走 print.css 的墨色变量，跟这支紫无关。
+     所以这儿不用压到灰度 90 去凑对比度，反而要放浅一点：
+     原先 #6B4A87 填成实心圆盘，一张纸上四个，看着有压迫感。 */
+  --accent: #7C61A0;
   --col: 10mm;      /* 「校内完成」「家中完成」两个格子的列宽，表头和格子共用 */
   /* **左边这条槽 = 一个记号位 --dia + 一段空 --pad**。
      栏名前的圆圈、项目序号、说明行前的小圈**都占满 --dia 并在里面居中**，
@@ -82,12 +85,17 @@ body{
   margin: 0;                 /* 行距归 .bar 管 */
   line-height: 1.2;
 }
+/* 栏号：**空心圈**，不是实心圆盘 —— 四个实心紫盘排下来一张纸就压住了。
+   box-sizing 必须是 border-box：flex-basis 就是 --dia，边框要是往外长，
+   这一栏的记号位就比别的宽 2.8px，左对齐当场散掉（--dia 那段说的那条线） */
 .part h2 .no{
   flex: 0 0 var(--dia);
+  box-sizing: border-box;
   width: var(--dia); height: var(--dia);
   border-radius: 50%;
-  background: var(--accent);
-  color: #fff;
+  border: 1.4px solid var(--accent);
+  background: #fff;
+  color: var(--accent);
   font-size: 10px;
   font-weight: 700;
   display: grid; place-items: center;
@@ -103,7 +111,6 @@ body{
   border-radius: 5px;
   padding: 2.5mm 4mm 3mm;
 }
-.part.first h2 .no{ background: #fff; color: var(--accent); }
 
 /* 说明行：每条前面一个圈，过一条画一个 */
 .note{
