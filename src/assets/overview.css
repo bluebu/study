@@ -2,13 +2,17 @@
    一册一份的总表：每课一行，背诵 / 默写两列上底色加圆点，一眼扫得出
    哪几行有活儿。依赖 palette.css + print.css。
 
-   **同一份 HTML 两用**：纸上是 A4 打印单（11px 小字，18 行正好装满一页），
+   **同一份 HTML 两用**：纸上是 A4 打印单（11px 小字，一页装得下约 20 行），
    屏幕上是速查页 —— 手机窄，所以表格在 .scroll 里横滚、字号放大一档
-   （只在 @media screen 里改，@media print 一个字都不动）。
+   （只在 @media screen 里改）。
 
-   行数变多先缩 td.other 的字号／行距，再收 th,td 的 padding；
-   底部小结靠 .tail{margin-top:auto} 钉在页底，别删。
-   改完 Read 生成的 PDF 看排版。 */
+   **一册一张连续的表，不强制换页**：换页交给打印机在行边界断，所以这一份的
+   打印边距走 @page（文件末尾那段 @media print），不是 .sheet 的 padding ——
+   padding 只在盒子的头尾生效，跨页之后中间几页会顶到纸边上。
+
+   行数变多先缩 td.other 的字号／行距，再收 th,td 的 padding。
+   改完 Read 生成的 PDF 看排版，**每一页都要看**（表头有没有跟着重复、
+   行有没有被切成两半、中间页的边距在不在）。 */
 
 body{
   margin: 0;
@@ -19,14 +23,14 @@ body{
 }
 @media print{ body{ background: #fff; } }
 
-/* 一页装完：小结钉在页底。边距比别的打印单窄一点 —— 这张表要塞 18 行 */
+/* 边距比别的打印单窄一点 —— 这张表列多、行也多。
+   屏幕上是一张长白纸（内容超过 A4 就自己长下去），纸上的边距见文件末尾 */
 .sheet{
   display: flex;
   flex-direction: column;
   min-height: 297mm;
   padding: 12mm 14mm;
 }
-@media print{ .sheet{ height: 297mm; } }
 
 /* ── 页头 ── */
 .head{
@@ -91,6 +95,20 @@ td.write{ width: 12mm; text-align: center; font-size: 9.5px; color: #666; }
 tr.aside{ background: var(--grid); }
 tr.aside td.no, tr.aside td.name{ color: var(--ink-soft); }
 
+/* 单元分组行（`[分组]`）：原先是硬换页点，现在是表内的一条抬头。
+   跟在它后面的那几行不许和它分家 —— break-after:avoid 见文件末尾 */
+tr.group td{
+  background: var(--chinese-bg);
+  border-top: 1.6px solid var(--chinese);
+  padding: 3px 5px;
+  font-size: 10.5px;
+  font-weight: 700;
+  /* 字色走 --ink 不走 --chinese：#EE7D5B 灰度 154，黑白激光打出来一片糊。
+     和表头的区分靠上面那条橙线，不靠字色 */
+  color: var(--ink);
+  letter-spacing: .3px;
+}
+
 /* ── 底部小结 ── */
 .tail{
   margin-top: auto;
@@ -102,10 +120,6 @@ tr.aside td.no, tr.aside td.name{ color: var(--ink-soft); }
 .tail li::before{ content: "· "; color: var(--chinese); font-weight: 700; }
 
 .foot{ margin-top: 2mm; text-align: right; color: #999; font-size: 9px; }
-/* 没有小结的页（多页里的前几页）：页脚自己钉页底。
-   **别给 .tail 和 .foot 都写 margin-top:auto** —— 两个 auto 平分剩余空间，
-   小结会飘到页面中间去 */
-.foot.pin{ margin-top: auto; }
 
 /* ── 屏幕：同一份 HTML 当速查页用 ──────────────────────────
    宽表格自己横向滚动，别让整页横滚（.sheet 有 max-width:100%，
@@ -131,4 +145,32 @@ tr.aside td.no, tr.aside td.name{ color: var(--ink-soft); }
   .sum li{ font-size: 12.5px; }
   .note{ font-size: 11.5px; }
   .tail li{ font-size: 12px; }
+}
+
+/* ── 纸：一册一张连续的表，换页交给打印机 ──────────────────
+   这一份**故意不走 print.css 那条通用锁**（`@page{margin:0}` + 边距写在
+   `.sheet` 的 padding 上）。那条锁的前提是「一页一个 .sheet」；这张表要跨页，
+   而 padding 只在盒子的头尾生效 —— 跨页之后第 2、3 页会顶到纸边上，
+   左右还会被 210mm 宽的 .sheet 顶出去。所以边距改由 @page 给：
+
+   · @page 的 margin 一给，可用宽度就是 210-28=182mm，
+     `html,body{width:210mm}`（print.css）和 `.sheet{width:210mm}` 都得放开
+   · `.sheet` 在纸上不再是 flex —— flex 容器跨页 Chrome 会漏行；
+     block 下 `.tail{margin-top:auto}` 自然失效，小结就跟在表格后面
+   · `thead{display:table-header-group}` 让表头每页重复；
+     `tr{break-inside:avoid}` 防一行被切成两半；
+     分组行后面紧跟的那一行不许和它分家（break-after:avoid） */
+@media print{
+  @page{ size: A4; margin: 12mm 14mm; }
+  html, body{ width: auto; }
+  .sheet{
+    display: block;
+    width: auto;
+    min-height: 0;
+    padding: 0;
+  }
+  thead{ display: table-header-group; }
+  tr{ break-inside: avoid; }
+  tr.group{ break-inside: avoid; break-after: avoid; }
+  .tail{ break-inside: avoid; }
 }
