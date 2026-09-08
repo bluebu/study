@@ -6,6 +6,9 @@
   否则纸上小字对不到格子上，家长就不知道哪个框是哪个。
   表头出 `grid` 组（这张纸是 2 组），左右各对齐一列的格子 —— 行是 grid
   按列填的，表头不在那个流里，所以得自己摆几组。
+  **`.bar` 把栏名和这几组小字放在同一行**（同一个 grid 格子里叠着，
+  竖向居中）—— 别改成 h2 里跟栏名排 flex，那样小字就和格子错开了，
+  为什么见 afterschool.css。
   **排 2 列这个数由 afterschool.py 注入到 `.sheet` 的 `--gcols`**，
   CSS 只读变量、模板只读 `grid` —— 一处定义。
   **`--rows` 挂在每个 `.rows` 上、按本栏项数来**（数学是 3 行不是 5 行），
@@ -26,7 +29,12 @@
   </div>
 {% for col in columns %}
   <div class="part{% if loop.first %} first{% endif %}">
-    <h2>{% if col.no %}<span class="no">{{ col.no }}</span>{% endif %}{{ col.name }}{% if col.head %}<small>{{ col.head }}</small>{% endif %}</h2>
+    <div class="bar">
+      <h2>{% if col.no %}<span class="no">{{ col.no }}</span>{% endif %}{{ col.name }}{% if col.head %}<small>{{ col.head }}</small>{% endif %}</h2>
+{% if col.show_cols %}
+      <div class="cols">{% for _ in range(grid) %}<span class="half"><span class="pad"></span><span>校内完成</span><span>家中完成</span></span>{% endfor %}</div>
+{% endif %}
+    </div>
 {% for note in col.notes %}
     <p class="note"><i></i>{{ note }}</p>
 {% endfor %}
@@ -36,9 +44,6 @@
       <div class="ln"></div>
 {% endfor %}
     </div>
-{% endif %}
-{% if col.show_cols %}
-    <div class="cols">{% for _ in range(grid) %}<span class="half"><span class="pad"></span><span>校内完成</span><span>家中完成</span></span>{% endfor %}</div>
 {% endif %}
 {% if col.rows %}
     <div class="rows" style="--rows:{{ col.nrows }}">

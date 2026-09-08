@@ -48,13 +48,28 @@ body{
 
 /* ── 一栏 ── */
 .part{ margin-bottom: 2.5mm; }
+
+/* 栏抬头这一行：栏名和「校内完成 / 家中完成」**排在同一行**。
+   两样东西放进**同一个 grid 格子**（都是 grid-area 1/1，叠着），于是：
+     · 小字那条仍然是**整栏宽**，和下面 .rows 的两列对得上
+       （每组靠 .pad 把标签推到那一列的格子上方）
+     · align-items:center 让小字和栏名竖着**居中对齐**
+   ⚠️ **别改成把 .cols 塞进 h2 里跟栏名排 flex** —— 那样两个 half 只剩
+   「整栏宽 − 栏名宽」的一半，标签立刻和格子错开，家长分不清哪个框是哪个。 */
+.bar{
+  display: grid;
+  align-items: center;
+  margin: 0 0 2mm;
+}
+.bar > *{ grid-area: 1 / 1; }
+
 .part h2{
   display: flex;
   align-items: baseline;
   gap: 2mm;
   font-size: 14px;
   font-weight: 700;
-  margin: 0 0 2mm;
+  margin: 0;                 /* 行距归 .bar 管 */
   line-height: 1.2;
 }
 .part h2 .no{
@@ -118,7 +133,6 @@ body{
   gap: 8mm;                /* 和 .rows 的 column-gap 一样，两组才对得上列 */
   font-size: 9.5px;
   color: #555;
-  margin-bottom: .8mm;
 }
 /* 一组标签对齐一列的格子。列数由模板按 cols 出几组，宽度走同一套变量 */
 .cols .half{ flex: 1 1 0; display: flex; align-items: baseline; min-width: 0; }
