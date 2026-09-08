@@ -3,10 +3,10 @@
   同一份 HTML 两用：A4 打印单（夹在语文书里）+ 屏幕速查页（手机上翻，
   表格在 .scroll 里自己横滚，见 overview.css 的 @media screen）。
 
-  **一册一张连续的表，不强制换页**：换页交给打印机在行边界断，
-  单元边界出的是表内分组行（`[分组]` → `tr.group`），不是换页点。
-  硬换页那一版按单元断成 13 / 12 / 10 行，而一页装得下约 20 行，
-  第二页表格只排到 2/3 处、底下空掉小半页。
+  **一页一个 .sheet**，换页点在 spec 里（`[分页]`）—— 摘要框只上第一页，
+  小结钉最后一页页底。单元抬头是表内的分组行（`[分组]` → `tr.group`），
+  **和换页点是两件事**：断在哪儿由「这一页填不填得满」定。
+  页底剩下的零头由 `.scroll{flex:1}` + `table{height:100%}` 吃掉。
 
   ⚠️ 三处行内元素之间不许留空白，换行会多出一个空格、版式就变了：
      `.sum li` 里的标题和详情（flex 一行两栏）
@@ -15,12 +15,13 @@
   ⚠️ 「有没有要求」「写几个字」的判断全在 overview.py 里算好了
      （`_mark()` / `_write()`），模板只管把 ● 摆上去、挑个 class。
 -#}
+{% for pg in pages %}
 <div class="sheet">
   <div class="head">
     <h1>{{ heading }}{% if sub %}<small>　{{ sub }}</small>{% endif %}</h1>
     <div class="info">共 <b>{{ n.lessons }}</b> 课　课文要背 <b>{{ n.recite }}</b> 处　日积月累 <b>{{ n.riji }}</b> 处　默写 <b>{{ n.dictation }}</b> 处</div>
   </div>
-{% if summaries %}
+{% if pg.first and summaries %}
   <div class="sum">
     <ul>
 {% for s in summaries %}
@@ -29,7 +30,7 @@
     </ul>
   </div>
 {% endif %}
-{% if note %}
+{% if pg.first and note %}
   <p class="note">{{ note }}</p>
 {% endif %}
   <div class="scroll">
@@ -41,7 +42,7 @@
         </tr>
       </thead>
       <tbody>
-{% for r in rows %}
+{% for r in pg.rows %}
 {% if r.group %}
         <tr class="group"><td colspan="7">{{ r.group }}</td></tr>
 {% else %}
@@ -59,7 +60,7 @@
       </tbody>
     </table>
   </div>
-{% if tails %}
+{% if pg.last and tails %}
   <div class="tail">
     <ul>
 {% for t in tails %}
@@ -68,5 +69,6 @@
     </ul>
   </div>
 {% endif %}
-  <div class="foot">{{ tally }}</div>
+  <div class="foot">{{ pg.tally }}</div>
 </div>
+{% endfor %}

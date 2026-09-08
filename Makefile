@@ -10,7 +10,7 @@ PORT ?= 8002
 HOST ?= 0.0.0.0
 PY   ?= python3
 
-.PHONY: help deps build pdf up open stop clean shot textbook
+.PHONY: help deps build pdf up open stop clean shot fit textbook
 .DEFAULT_GOAL := help
 
 help:
@@ -31,6 +31,9 @@ help:
 	@echo "  make shot URL=dist/english/review/2026-08-28.html OUT=/tmp/a.png"
 	@echo "               真实手机视口截图（改完排版自检用，见 tools/shot.mjs）"
 	@echo "               加 EL=\".box.scales\" 只截一个元素；PROBE=1 只报尺寸不出图"
+	@echo ""
+	@echo "  make fit URL=dist/chinese/overview/g4a.html"
+	@echo "               打印单的换页点该挑在哪儿（见 tools/fit.mjs）"
 	@echo ""
 	@echo "  make up PORT=9000    换端口"
 	@echo ""
@@ -89,6 +92,15 @@ shot:
 	  test -n "$(OUT)" || { echo "  要给 OUT=<图.png>（或者加 PROBE=1 只看尺寸）"; exit 1; }; \
 	  node tools/shot.mjs "$$u" "$(OUT)" $(WIDTH) $(if $(EL),--el "$(EL)"); \
 	fi
+
+# 换页点该挑在哪儿：量各行的自然高度，报最少几页、每页断在哪一行。
+# 一页装几行是行高定的、机器猜不出来，所以换页点写在 spec 里，这儿只负责量
+fit:
+	@test -n "$(URL)" || { echo "  用法：make fit URL=<页面>"; exit 1; }
+	@node -e "require.resolve('playwright-core')" 2>/dev/null \
+	  || { echo "  先装一次：npm i playwright-core"; exit 1; }
+	@u="$(URL)"; case "$$u" in http*|file:*) ;; *) u="$$(cd $$(dirname $$u) && pwd)/$$(basename $$u)";; esac; \
+	node tools/fit.mjs "$$u"
 
 # 拿教材 PDF 核一遍语文的 spec —— 版本对不上就会印错内容给孩子。
 # 教材是版权内容，不进仓库；PDF= 指到本机那份（默认四上语文）

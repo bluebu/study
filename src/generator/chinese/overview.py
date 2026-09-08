@@ -2,7 +2,7 @@
 
 spec 在 storage/spec/chinese/overview/<册>.txt，产物落在 dist/chinese/overview/：
 
-    <册>.html / .pdf     A4 打印单，一张连着排的长表，夹在语文书里；
+    <册>.html / .pdf     A4 打印单，一页一张，夹在语文书里；
                          屏幕上（尤其手机）同一份就是速查页，表格自己横滚
     index.html           目录页
 
@@ -16,17 +16,20 @@ spec 在 storage/spec/chinese/overview/<册>.txt，产物落在 dist/chinese/ove
                 缩进行 = 「其他要求」列。课号带 `*` 是略读课文（只认字、不写字），
                 `[园地N]` 和 `[读书吧]` 不是课文（课号和课文名换灰、底色略淡）
     [分组]      表内的单元分组行，head 是组名（`[分组] 第五~第八单元`）
+    [分页]      换页点：纸在这儿断开。和 [分组] 是两件事 —— 一个是内容结构、
+                一个是纸的边界，**不必落在同一处**
     [小结]      底部小结，一行一条
 
-**不强制换页：一册就是一张连着排的长表**，换页交给打印机在行边界断
-（`tr{break-inside:avoid}` + `thead` 每页重复表头）。原先 `[分页]` 是人定的
-硬换页点，按单元边界断成三页 13 / 12 / 10 行 —— 一页装得下约 20 行，
-于是第二页表格只排到 2/3 处、下面空掉小半页。单元边界该留的是**分组行**，
-不是换页点。
+**换页点是人定的，但定在哪儿由「填满」说话，不是由单元边界说话。**
+原先这两件事挤在一个区块里：`[分页]` 既当单元抬头又当换页点，于是断成
+13 / 12 / 10 行 —— 一页 A4 装得下约 20 行，第二页的表格只排到 2/3 处、
+底下空掉 376px（≈7 行）。现在分开：单元抬头留在表内（`[分组]`），
+换页点（`[分页]`）挑在页子正好装满的地方，页底剩下的零头由
+`.scroll{flex:1}` + `table{height:100%}` 吃掉（见 `overview.css`）。
 
-⚠️ 所以这一份的打印边距**走 `@page`，不是 `.sheet` 的 padding**
-（`overview.css` 末尾那段 `@media print` 覆盖了 print.css 的通用锁）：
-padding 只在盒子的头尾生效，跨页之后中间几页会顶到纸边上。
+⚠️ **改了行高、字号或摘要框的行数，就要重新挑换页点** —— 一页装几行是
+行高定的，机器算不准（「其他要求」列折几行随内容变）。挑法：`make pdf`
+之后逐页 Read，哪一页底下空出一大条，就把 `[分页]` 往后挪一行再看。
 
 内容准则（搬内容前先读，每条都踩过）：
 
@@ -52,6 +55,7 @@ DEFAULTS = {"title": "教材总览"}
 SUMMARY = "摘要"          # 顶部摘要框那个区块的名字
 TAIL = "小结"             # 底部小结那个区块的名字
 GROUP = "分组"            # 表内的单元分组行，head 是组名
+BREAK = "分页"            # 换页点。和 GROUP 分开：内容结构 ≠ 纸的边界
 TODO = "待补"             # 课本还没到手的单元：印灰字，不算进「要背」
 
 # 不是课文的行：语文园地、快乐读书吧。转灰 + 淡底，和课文行分得开
@@ -80,16 +84,17 @@ def _write(val: str, *, skim: bool) -> dict:
     return {"val": f"{val} 字", "cls": ""}
 
 
-def _rows(sp: spec_lib.Spec) -> tuple[list[dict], list[dict], list[str]]:
-    """区块 → (行, 顶部摘要, 底部小结)。全册一张连续的表，`[分组]` 是表内的分组行。
+def _pages(sp: spec_lib.Spec) -> tuple[list[dict], list[dict], list[str]]:
+    """区块 → (页, 顶部摘要, 底部小结)。一页一个 `.sheet`，`[分页]` 就是换页点。
 
-    分组行也走这一串（带 `group` 键），模板里一个 `{% if r.group %}` 分岔 ——
-    单元边界得跟着行一起流到它该在的位置上，不能另起一层结构。
+    `[分组]` 的抬头行跟着行一起流（带 `group` 键，模板里一个
+    `{% if r.group %}` 分岔）—— 它是内容结构，得落在它该在的那一行上，
+    和纸在哪儿断开无关。
 
     课文行里那个键叫 `dictation` 不叫 `copy`：Jinja 的 `a.b` 先找属性，`r.copy`
     会拿到 dict 自带的 `copy` 方法（`lib/tmpl.py` 的第三条）。
     """
-    rows: list[dict] = []
+    pages: list[dict] = [{"rows": []}]
     summaries, tails = [], []
 
     for b in sp.blocks:
@@ -102,12 +107,16 @@ def _rows(sp: spec_lib.Spec) -> tuple[list[dict], list[dict], list[str]]:
         if b.name == TAIL:
             tails += [line.strip() for line in b.lines if line.strip()]
             continue
+        if b.name == BREAK:
+            if pages[-1]["rows"]:                    # 连着两个 [分页] 不出空白页
+                pages.append({"rows": []})
+            continue
         if b.name == GROUP:
-            rows.append({"group": b.head})
+            pages[-1]["rows"].append({"group": b.head})
             continue
 
         skim = b.name.endswith("*")                  # 略读课文
-        rows.append({
+        pages[-1]["rows"].append({
             "group": "",
             "no": b.name,
             "name": b.head,
@@ -120,9 +129,10 @@ def _rows(sp: spec_lib.Spec) -> tuple[list[dict], list[dict], list[str]]:
             "aside": b.name.startswith(ASIDE),       # 语文园地 / 快乐读书吧
         })
 
+    rows = [r for pg in pages for r in pg["rows"]]
     if not any(not r["group"] for r in rows):
         spec_lib.die(f"{sp.path.name} 里没有任何 [课号] 区块")
-    return rows, summaries, tails
+    return pages, summaries, tails
 
 
 def _counts(rows: list[dict]) -> dict:
@@ -139,12 +149,20 @@ def _counts(rows: list[dict]) -> dict:
 
 
 def _render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, dict]:
-    rows, summaries, tails = _rows(sp)
+    pages, summaries, tails = _pages(sp)
+    rows = [r for pg in pages for r in pg["rows"]]
     n = _counts(rows)
     lines = sum(1 for r in rows if not r["group"])
 
     heading = sp.get("title", DEFAULTS["title"])
     desc = "；".join(f'{s["head"]}：{s["detail"]}' for s in summaries[:2]) or heading
+
+    # 摘要框和文件头那行小字只上第一页，小结钉最后一页页底
+    for i, pg in enumerate(pages, 1):
+        pg["first"] = i == 1
+        pg["last"] = i == len(pages)
+        pg["tally"] = (f"第 {i} / {len(pages)} 页　全册 {lines} 行"
+                       if len(pages) > 1 else f"共 {lines} 行")
 
     body = tmpl.body(
         "overview/sheet.html",
@@ -153,9 +171,8 @@ def _render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, dict]:
         n=n,
         note=sp.get("note", ""),
         summaries=summaries,
-        rows=rows,
+        pages=pages,
         tails=tails,
-        tally=f"共 {lines} 行",
     )
 
     out = page.write(
@@ -170,7 +187,7 @@ def _render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, dict]:
             noindex=True,          # 教材内容，不需要被搜索引擎收录
         ),
     )
-    print(f"    → overview/{out.name}  （{lines} 行 · "
+    print(f"    → overview/{out.name}  （{len(pages)} 页 · {lines} 行 · "
           f"要背 {n['recite']} 处 · 默写 {n['dictation']} 处）")
     ok = bool(pdf) and sheet.to_pdf(out, out.with_suffix(".pdf"))
     return ok, n
