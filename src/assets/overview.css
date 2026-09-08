@@ -22,6 +22,11 @@
    ⚠️ 因此 `.scroll` 不许写 `flex:1`、`table` 不许写 `height:100%`
    （试过：拉伸撑满会把两行的那页摊成两个巨大的空格子）。
 
+   **配色不走语文橙，走老站那套蓝 / 红 / 绿**（取值在 palette.css 的 `--ov-*`）：
+   蓝管结构（表头、课号、摘要框），红管「有活儿」（要背 / 要默写的格子），
+   绿管语文园地那几行。这张表的全部用处就是扫出哪几行有活儿 —— 橙底和语文的
+   三科色是同一支，底色和字色撞在一起就扫不出来了。
+
    排不下先动列宽（`td.other` 挤了就从 recite / copy / read 那几列匀），
    **别动字号和行距**。改完 Read 生成的 PDF，**每一页都要看**：
    有没有哪个单元超出一页、行高有没有跑偏。 */
@@ -75,13 +80,13 @@ body{
 .head h1{ font-size: 20px; margin: 0; padding-right: 10px; }
 .head h1 small{ font-size: 13px; font-weight: 400; color: #666; }
 .head .info{ font-size: 12px; color: #666; white-space: nowrap; }
-.head .info b{ color: var(--chinese); }
+.head .info b{ color: var(--ov-blue); }
 
 /* ── 顶部摘要框：手机上第一屏就看到「要背的只有 3 处」── */
 .sum{
-  border: 1.2px solid var(--chinese);
+  border: 1.2px solid var(--ov-line);
   border-radius: 5px;
-  background: var(--card);
+  background: var(--ov-blue-soft);
   padding: 4px 9px;
   margin-bottom: 2mm;
 }
@@ -91,8 +96,8 @@ body{
 .sum ul{ list-style: none; margin: 0; padding: 0; column-count: 2; column-gap: 9mm; }
 .sum li{ break-inside: avoid; }
 .sum li{ display: flex; gap: 9px; font-size: 13px; line-height: 1.8; }
-.sum li b{ flex: 0 0 auto; color: var(--chinese); white-space: nowrap; }
-.sum li span{ color: #444; }
+.sum li b{ flex: 0 0 auto; color: var(--ov-blue); white-space: nowrap; }
+.sum li span{ color: #333; }
 
 .note{ font-size: 12px; color: #999; margin: 0 0 2mm; }
 
@@ -110,10 +115,10 @@ table{ width: 100%; table-layout: fixed; border-collapse: collapse; }
    字号从小四降到五号之后行的绝对高度也跟着矮了，所以行距从 1.7 提到 1.85 ——
    14px × 1.85 ≈ 26px，和原先 16px × 1.7 的观感一样。
    页高够用（最挤的第八单元那页也还剩 150px 上下），别再往回收 */
-th, td{ border: .6pt solid var(--line); padding: 6px 7px; vertical-align: middle; }
+th, td{ border: .6pt solid var(--ov-line); padding: 6px 7px; vertical-align: middle; }
 thead th{
-  background: var(--chinese-bg);
-  color: var(--ink);
+  background: var(--ov-blue-bg);
+  color: var(--ov-blue);
   font-size: 13px;
   white-space: nowrap;
 }
@@ -137,12 +142,12 @@ thead th{
 
 td.no{
   text-align: center;
-  color: var(--chinese);
+  color: var(--ov-blue);
   font-weight: 700;
   font-size: 13px;
   font-family: "Times New Roman", var(--font-cn), serif;
 }
-td.name{ font-family: var(--font-kai); font-size: 16px; line-height: 1.5; }
+td.name{ font-family: var(--font-kai); font-size: 16px; line-height: 1.5; color: #111; }
 td.read{ line-height: 1.6; }
 td.recite{ line-height: 1.6; }
 td.copy{ line-height: 1.6; }
@@ -152,15 +157,16 @@ td.copy{ line-height: 1.6; }
 td.other{ font-size: 14px; color: #333; line-height: 1.85; }
 td.write{ text-align: center; font-size: 13px; color: #555; }
 
-/* 要背 / 要默写：底色 + 圆点，一眼扫得出哪几行有。
-   底色走 --warn 家族 —— 分类色里刻意没有红，红专属「分数越差越红」 */
-.on{ background: var(--warn-bg); color: var(--ink); font-weight: 700; }
-.on i{ font-style: normal; margin-right: 2px; color: var(--chinese); }
+/* 要背 / 要默写：淡红底 + 红字 + 红圆点，一眼扫得出哪几行有活儿。
+   红在这个栏目是有意的例外，为什么见 palette.css 的 --ov-* 那一段 */
+.on{ background: var(--ov-red-bg); color: var(--ov-red); font-weight: 700; }
+.on i{ font-style: normal; margin-right: 2px; color: var(--ov-red); }
 .off{ color: #C4C4C4; }
 .todo{ color: #999; }
-/* 不是课文的行（语文园地 / 快乐读书吧）：底色略淡、课号课名转灰 */
-tr.aside{ background: var(--grid); }
-tr.aside td.no, tr.aside td.name{ color: var(--ink-soft); }
+/* 不是课文的行（语文园地 / 快乐读书吧）：底色略淡，课号和「日积月累」转绿 ——
+   绿是这张表里「这行不是课文」的唯一标记，别改成灰（灰和 off 的占位符撞） */
+tr.aside{ background: var(--ov-aside-bg); }
+tr.aside td.no, tr.aside td.name{ color: var(--ov-green); }
 
 /* ── 底部小结 ── */
 /* 小结钉在第八单元那页的表格下面 —— 那一页是全册最挤的一页
@@ -169,7 +175,7 @@ tr.aside td.no, tr.aside td.name{ color: var(--ink-soft); }
 .tail{
   margin-top: 3mm;
   padding-top: 2mm;
-  border-top: 1.5px dashed #bbb;
+  border-top: 1.5px dashed var(--ov-line);
 }
 /* 小结两栏。⚠️ **别指望分栏能压高度**：这一块的高度被最长那条（多音字清单
    90 字）主宰，栏一窄它就多折几行，两栏三栏量出来都是 145px。分栏是为了
@@ -178,7 +184,7 @@ tr.aside td.no, tr.aside td.name{ color: var(--ink-soft); }
 .tail ul{ list-style: none; margin: 0; padding: 0; column-count: 2; column-gap: 9mm; }
 .tail li{ break-inside: avoid; }
 .tail li{ font-size: 13px; color: #444; line-height: 1.8; }
-.tail li::before{ content: "· "; color: var(--chinese); font-weight: 700; }
+.tail li::before{ content: "· "; color: var(--ov-blue); font-weight: 700; }
 
 /* 页码钉在页底：表格不撑满了，页底那块留白归它顶着。
    **别把 margin-top:auto 同时给 .tail 和 .foot** —— 两个 auto 平分剩余空间，
