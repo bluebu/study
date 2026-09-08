@@ -68,10 +68,10 @@ def render(
 def sheet_info(third: str = "得分", *, show: bool = True) -> str:
     """打印单页眉右边那行「姓名 ___ 日期 ___ <third> ___」。
 
-    四个栏目共用（语文练习 / 抽查单 / 数学 / 词汇默写），第三格的名字不同
+    四个栏目共用（语文练习 / 背诵单 / 数学秘籍 / 词汇默写），第三格的名字不同
     （得分 / 用时）。原先各栏目存一份 INFO 常量，改一处要改三个文件。
 
-    `third=""` 只出前两格 —— 抽查单的得分记在页底的「过关 __ / N 项」里，
+    `third=""` 只出前两格 —— 背诵单的成绩记在块表的三轮勾选格里，
     页眉再来一格是重复的。
     """
     return tmpl.render("sheet-info.html", third=third, show=show).rstrip("\n")
@@ -100,18 +100,15 @@ def listing(
 
     sections   —— [(小标题 或 None, [条目…])]。只有词汇默写分了组，
                   其余栏目传一节、小标题给 None
-    条目       —— {href, label, small, pdf, alt}
+    条目       —— {href, label, small, pdf}
                   `pdf` 给 None 就不出打印单按钮
-                  `alt` = {href, label}，同一份 spec 的第二版多一个次要入口
-                  （抽查单的「家长版」）。不传就不出，别的栏目一行不用改
     empty      —— 一条都没有时显示的话（「往 …/ 放一份 spec」）
     """
     # 键叫 rows 不叫 items —— Jinja 的 `sec.items` 会取到 dict 自带的方法
     secs = [
         {"title": name,
          "rows": [{"href": it["href"], "label": it["label"],
-                   "small": it.get("small", ""), "pdf": it.get("pdf"),
-                   "alt": it.get("alt")}
+                   "small": it.get("small", ""), "pdf": it.get("pdf")}
                   for it in items]}
         for name, items in sections
     ]

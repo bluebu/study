@@ -91,10 +91,10 @@ src/
     page.html         全站页面骨架（head / og / 资产链接 / 页脚）
     foot.html         页脚（备案号 + 统计）
     home.html         总入口页的卡片（三科 + 课程表）
-    list.html         目录页，各栏目共用。一条右边最多两个按钮：
-                      alt「家长版」（描边，可选）+ pdf「打印单」（填色，最右）
+    list.html         目录页，各栏目共用。一条右边一个按钮：
+                      pdf「打印单」（填色，最右）
     sheet-info.html   打印单页眉「姓名 __ 日期 __ 得分 __」，四个栏目共用
-                      （第三格给空串就只出前两格 —— 抽查单的得分在页底）
+                      （第三格给空串就只出前两格 —— 背诵单用这个形状）
     practice/ recite/ check/ overview/ miji/ ket/ homework/ retell/
     afterschool/      放学检查（两列勾选格：校内完成 ｜ 家中完成）
                       一天一张纸，`[分区]` 在纸上框出下半区
@@ -108,7 +108,7 @@ src/
     print.css         A4 打印锁
     grid.css          田字格 / 四线三格
     recite.css        背诵单（块表 + 三轮勾选格 + 四天打卡 + 四条判据）
-    check.css         抽查单（撑满 A4：错题格吃空白、过关格钉页底）
+    check.css         抽查单（撑满 A4，过关格钉页底）
     overview.css      教材总览（一份 HTML 两用：纸上打印单 / 手机上横滚速查）
                       **A4 横版**；正文 14px（五号）/ 行距 1.85；列宽在 colgroup 上
                       配色走 palette.css 的 --ov-*（蓝 / 红 / 绿），不走语文橙
@@ -126,7 +126,7 @@ src/
       build.py        只做分发：一个栏目一层 try
       practice.py     今日练习：看拼音写汉字（附答案版）
       recite.py       背诵单：切块 + 三轮撤提示 + 间隔打卡，方法和判据见文件头
-      check.py        抽查单：一课一张，题面版 + 家长版（家长版不进目录页）
+      check.py        抽查单：一课一张一页，答案全印（家长照着问、照着改）
       overview.py     教材总览：一册一份的总表，背诵 / 默写两列上底色加圆点
                       A4 横版、一单元一页、正文 14px（五号）
     english/          英语（CLAUDE.md 里有本科的教学准则和四个栏目的口径）

@@ -6,12 +6,13 @@
   条目那个键叫 `rows` 不叫 `items`：Jinja 的 `.` 先找属性，`sec.items` 会取到
   dict 自带的 `items` 方法，不是这儿要的列表 —— 踩过一次。
 
-  ⚠️ `{{ label }}<small>` 和 `</a><a class="alt">`、`</a><a class="pdf">` 之间
-  **不许出现空白**。.list li 和 .list .main 都是 flex，空白文本节点本身会被忽略，
-  但一条一行这个形状要保住 —— 拆成多行以后 diff 里看不出是不是真的没动版式。
+  ⚠️ `{{ label }}<small>` 和 `</a><a class="pdf">` 之间**不许出现空白**。
+  .list li 和 .list .main 都是 flex，空白文本节点本身会被忽略，但一条一行
+  这个形状要保住 —— 拆成多行以后 diff 里看不出是不是真的没动版式。
 
-  条目右边最多两个按钮：`alt` 是同一份 spec 的第二版（抽查单的「家长版」），
-  描边不填色；`pdf` 是主按钮，填色，**始终排在最右**。
+  条目右边只有一个按钮：`pdf`（「打印单」），填色，排在最右。
+  原先还有一个描边的 `alt`，给抽查单的「家长版」用 —— 抽查单收成一版之后
+  没有使用者了，连同 page.listing 的那个键一起撤掉。
 -#}
 <main class="wrap"{% if accent %} style="--accent: var(--{{ accent }}); --accent-bg: var(--{{ accent }}-bg)"{% endif %}>
   <header class="hero">
@@ -25,7 +26,7 @@
 {% endif %}
   <ul class="list">
 {% for it in sec.rows %}
-    <li><a class="main" href="{{ it.href }}">{{ it.label }}<small>{{ it.small }}</small></a>{% if it.alt %}<a class="alt" href="{{ it.alt.href }}">{{ it.alt.label }}</a>{% endif %}{% if it.pdf %}<a class="pdf" href="{{ it.pdf }}">{{ pdf_label }}</a>{% endif %}</li>
+    <li><a class="main" href="{{ it.href }}">{{ it.label }}<small>{{ it.small }}</small></a>{% if it.pdf %}<a class="pdf" href="{{ it.pdf }}">{{ pdf_label }}</a>{% endif %}</li>
 {% endfor %}
 {% if not sec.rows %}
     <li><span class="empty">{{ empty }}</span></li>

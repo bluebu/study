@@ -8,7 +8,6 @@ lesson: 精卫填海
 hint: 家长照着念。这一课全文只 35 字，书上要求背下来。
 pages: 50
 minutes: 10
-memo: 错在哪儿，记一笔——
 
 [读准] 文言文先读准 time=2 pass=全对
 炎帝之少女=shào, 名曰=yuē,

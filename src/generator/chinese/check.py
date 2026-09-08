@@ -2,9 +2,12 @@
 
 spec 在 storage/spec/chinese/check/<课号>.txt，产物落在 dist/chinese/check/：
 
-    <课号>.html / .pdf              题面版（答案不印，动笔的题空着写，页底有错题格）
-    <课号>-answers.html / .pdf      家长版（答案全印，照着问、照着改）
-    index.html                      目录页（一条一课，右边挂「家长版」+「打印单」）
+    <课号>.html / .pdf   一课一张，答案全印（家长照着问、照着改）
+    index.html           目录页（一条一课，右边挂「打印单」）
+
+**一份 spec 只出一版。** 原先出两版（答案不印的「题面版」+ 答案全印的
+「家长版」），但家长照着问的永远是印答案那份，孩子手上不需要一张
+写着题目的纸 —— 两版并存只是让目录页多一个按钮、PDF 多一份。
 
 **一课一张，一张一页。** 混着问，孩子累，也看不出是哪一课没记住。
 spec 按课号命名：`01.txt` = 第 1 课；语文园地写 `<课号>y`，**严格照课本目录
@@ -13,13 +16,13 @@ spec 按课号命名：`01.txt` = 第 1 课；语文园地写 `<课号>y`，**�
 
 区块内四种行（`lib/spec.py` 只解析骨架，这几行的语义是这个栏目自己的）：
 
-    note:   块说明，灰色小字，两版都印
+    note:   块说明，灰色小字
     汉字=答案  网格项，两列排，一项一个勾选框（`,` `，` `、` 分隔，可跨行写）
     ask: 题面 | 参考答案     整行问答，题面或答案长的用它
     lines: N                留 N 条空白横线，配 `answer:` 写参考答案
 
-勾选框、`time=`、`pass=` 两版都印；`=` 右边的答案、`ask` 的答案、`answer:`
-**只印在家长版上** —— 一份 spec 出两版，靠的就是这一个开关。
+`=` 右边的答案、`ask` 的答案、`answer:` 都印出来；听写的空白横线压到一行
+（够家长记个错字，不是给孩子写字用的）。
 """
 
 from __future__ import annotations
@@ -31,7 +34,7 @@ from lib import page, paths, sheet, spec as spec_lib, tmpl
 
 SPECS = paths.spec("chinese", "check")
 
-DEFAULTS = {"title": "抽查单", "memo": "错在哪儿，记一笔——"}
+DEFAULTS = {"title": "抽查单"}
 
 # 区块内的 key: 行。**其余非空行都是网格项** —— 所以这四个名字是保留的
 KEYS = ("note", "answer", "lines", "ask")
@@ -101,40 +104,32 @@ def _order(path: Path) -> tuple:
     return (1, 0, 0)
 
 
-def _render(sp: spec_lib.Spec, out_dir: Path, *, pdf: bool, answers: bool) -> bool:
+def _render(sp: spec_lib.Spec, out_dir: Path, *, pdf: bool) -> bool:
     """渲染一份抽查单。返回 PDF 是否真的生成出来了。"""
     if not sp.blocks:
         spec_lib.die(f"{sp.path.name} 里没有任何 [题块]")
 
     blocks = [_block(b, sp) for b in sp.blocks]
     for b in blocks:
-        # 家长版不用给孩子留书写空间，留一行够家长记错字就行
-        b["ln"] = (1 if answers else b["lines"]) if b["lines"] else 0
+        # 听写的横线压到一行：够家长记个错字，不是给孩子写字用的
+        b["ln"] = 1 if b["lines"] else 0
     total = sum(len(b["grid"]) + len(b["asks"]) + (1 if b["lines"] else 0)
                 for b in blocks)
 
-    heading = sp.get("title", DEFAULTS["title"]) + ("（家长版）" if answers else "")
-    hint = sp.get("hint", "")
-
+    heading = sp.get("title", DEFAULTS["title"])
     body = tmpl.body(
         "check/sheet.html",
         heading=heading,
         sub=sp.get("range", ""),
         minutes=sp.get("minutes", ""),
-        # 家长版不用填姓名日期，页眉右边整条不出
-        info=page.sheet_info("", show=not answers),
-        hint=hint if hint and answers else "",     # 使用说明是给家长看的
+        hint=sp.get("hint", ""),           # 使用说明，印在页头下面
         blocks=blocks,
-        answers=answers,
-        # 家长版答案多、本来就满，所以不印错题格
-        memo="" if answers else sp.get("memo", DEFAULTS["memo"]),
         total=total,
         tally=f"共 {len(blocks)} 题块 / {total} 项",
     )
 
-    name = sp.path.stem + ("-answers" if answers else "")
     out = page.write(
-        out_dir / f"{name}.html",
+        out_dir / f"{sp.path.stem}.html",
         page.render(
             title=f'{heading}　{sp.get("range", "")}'.strip(),
             body=body,
@@ -173,8 +168,7 @@ def build_check(dist: Path, pdf: bool = False) -> None:
     entries = []
     for path in specs:
         sp = spec_lib.parse(path)
-        pdf_ok = _render(sp, out_dir, pdf=pdf, answers=False)
-        _render(sp, out_dir, pdf=pdf, answers=True)   # 家长版不进目录页
+        pdf_ok = _render(sp, out_dir, pdf=pdf)
 
         lesson = sp.get("lesson", "")
         label = _label(path.stem, lesson)
@@ -185,9 +179,6 @@ def build_check(dist: Path, pdf: bool = False) -> None:
             "label": label,
             "small": " ".join(b.name for b in sp.blocks),
             "pdf": f"{path.stem}.pdf" if pdf_ok else None,
-            # 家长照着问的就是这一份，所以目录页给它一个入口 ——
-            # 练习单的答案版不列（那是批改参考，列出来孩子先看见答案）
-            "alt": {"href": f"{path.stem}-answers.html", "label": "家长版"},
         })
 
     _index(out_dir, entries)

@@ -237,19 +237,6 @@ body{
 }
 .list .pdf:active{ background: var(--accent, var(--chinese)); color: #fff; }
 
-/* 右侧的次要入口：同一份 spec 的第二版（抽查单的「家长版」）。
-   描边不填色 —— 「打印单」才是这一行的主按钮，两个都填色就分不出主次。 */
-.list .alt{
-  flex: 0 0 auto;
-  font-family: var(--font-display);
-  font-size: .78rem;
-  color: var(--ink-soft);
-  border: 1.5px solid var(--line);
-  border-radius: 999px;
-  padding: 4px 11px;
-}
-.list .alt:active{ color: var(--ink); border-color: var(--ink-soft); }
-
 .list .empty{
   padding: 16px 17px;
   color: var(--ink-soft);

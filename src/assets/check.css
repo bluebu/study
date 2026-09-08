@@ -1,10 +1,9 @@
 /* ── 抽查单（语文）─────────────────────────────────────────
-   一课一张，一张一页：撑满 A4，总评区钉在页底，题面版下半页的空白
-   由错题格（.memo）吃掉 —— 空白就变成了能写字的地方。
+   一课一张，一张一页：撑满 A4，总评区钉在页底。
    依赖 palette.css + print.css。
 
    **字号是给孩子看的，别调小**：题面楷体 20px、块名 18px，
-   家长版的答案 12.5px。一张单子 5~6 个题块正好装满一页 A4，
+   答案 12.5px。一张单子 5~6 个题块正好装满一页 A4，
    块多了会溢出到第二页 —— 删块，或把 ask 的答案写短些。
    改完 Read 生成的 PDF 看排版，别凭 HTML 源码想象。 */
 
@@ -17,7 +16,7 @@ body{
 }
 @media print{ body{ background: #fff; } }
 
-/* 一张单子一页：撑满 A4，好让 .memo 吃掉空白、.total 钉在页底 */
+/* 一张单子一页：撑满 A4，好让 .total 钉在页底 */
 .sheet{ display: flex; flex-direction: column; min-height: 297mm; }
 @media print{ .sheet{ height: 297mm; } }
 
@@ -37,7 +36,7 @@ body{
 .head .info b{ color: var(--chinese); }
 .blank{ display: inline-block; border-bottom: 1px solid #111; width: 42px; }
 
-/* 使用说明：只印家长版 */
+/* 使用说明（spec 的 hint:）：印在页头下面，给家长看的 */
 .hint{
   font-size: 13px;
   color: var(--ink);
@@ -119,23 +118,11 @@ body{
 .ask .a{ font-size: 12.5px; color: #777; line-height: 1.65; }
 .ask .a b{ color: var(--chinese); font-weight: 400; }
 
-/* ── 听写用的空白横线（家长版压到一行，够记错字就行）── */
+/* ── 听写用的空白横线（压到一行，够家长记个错字就行）── */
 .lines .ln{ height: 11mm; border-bottom: var(--w-line) solid var(--ink-line); }
 .lines .ln:first-child{ margin-top: 1mm; }
 .answer{ font-size: 12.5px; color: #999; margin: 2mm 0 0; }
 .answer b{ color: var(--chinese); font-weight: 400; }
-
-/* 错题格吃掉剩余高度（只印题面版）：把空白变成能写字的地方 */
-.memo{
-  flex: 1 1 auto;
-  min-height: 16mm;
-  margin-top: 2mm;
-  border: 1px dashed var(--line);
-  border-radius: 4px;
-  padding: 3px 8px;
-  font-size: 12px;
-  color: var(--ink-soft);
-}
 
 /* 总评区钉在页底 */
 .total{
