@@ -4,7 +4,7 @@ spec 在 storage/spec/chinese/check/<课号>.txt，产物落在 dist/chinese/che
 
     <课号>.html / .pdf              题面版（答案不印，动笔的题空着写，页底有错题格）
     <课号>-answers.html / .pdf      家长版（答案全印，照着问、照着改）
-    index.html                      目录页（**家长版不列进去**）
+    index.html                      目录页（一条一课，右边挂「家长版」+「打印单」）
 
 **一课一张，一张一页。** 混着问，孩子累，也看不出是哪一课没记住。
 spec 按课号命名：`01.txt` = 第 1 课；语文园地写 `<课号>y`，**严格照课本目录
@@ -185,6 +185,9 @@ def build_check(dist: Path, pdf: bool = False) -> None:
             "label": label,
             "small": " ".join(b.name for b in sp.blocks),
             "pdf": f"{path.stem}.pdf" if pdf_ok else None,
+            # 家长照着问的就是这一份，所以目录页给它一个入口 ——
+            # 练习单的答案版不列（那是批改参考，列出来孩子先看见答案）
+            "alt": {"href": f"{path.stem}-answers.html", "label": "家长版"},
         })
 
     _index(out_dir, entries)

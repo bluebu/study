@@ -193,12 +193,13 @@ body{
   box-shadow: 0 3px 0 var(--line);
   overflow: hidden;
 }
-/* 左边一行内容 + 右边一个「打印单」按钮。
-   grid 而不是 flex：两列的意图直接写在 grid-template-columns 里，
-   minmax(0,1fr) 明确「左列可以收缩到 0」，窄屏上 small 会自己换行。 */
+/* 左边一行内容 + 右边一到两个按钮（「家长版」「打印单」）。
+   原先是两列 grid，右边按钮**数量可变**之后换成 flex —— grid 的空轨道
+   仍旧吃一份 gap，只有一个按钮的栏目会白多 8px；flex 的 gap 只落在
+   真正相邻的两个元素之间。左列可收缩靠 .main 的 flex:1 1 auto + min-width:0
+   （原先是 minmax(0,1fr) 在管），窄屏上 small 照旧自己换行。 */
 .list li{
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  display: flex;
   align-items: center;
   gap: 8px;
   padding-right: 13px;
@@ -207,6 +208,7 @@ body{
 
 /* 整行：点进网页版 */
 .list .main{
+  flex: 1 1 auto;
   min-width: 0;
   display: flex;
   align-items: baseline;
@@ -234,6 +236,19 @@ body{
   padding: 5px 12px;
 }
 .list .pdf:active{ background: var(--accent, var(--chinese)); color: #fff; }
+
+/* 右侧的次要入口：同一份 spec 的第二版（抽查单的「家长版」）。
+   描边不填色 —— 「打印单」才是这一行的主按钮，两个都填色就分不出主次。 */
+.list .alt{
+  flex: 0 0 auto;
+  font-family: var(--font-display);
+  font-size: .78rem;
+  color: var(--ink-soft);
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 11px;
+}
+.list .alt:active{ color: var(--ink); border-color: var(--ink-soft); }
 
 .list .empty{
   padding: 16px 17px;

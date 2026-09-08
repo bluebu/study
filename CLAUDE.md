@@ -83,7 +83,8 @@ src/
     page.html         全站页面骨架（head / og / 资产链接 / 页脚）
     foot.html         页脚（备案号 + 统计）
     home.html         总入口页的卡片（三科 + 课程表）
-    list.html         目录页，五个栏目共用
+    list.html         目录页，各栏目共用。一条右边最多两个按钮：
+                      alt「家长版」（描边，可选）+ pdf「打印单」（填色，最右）
     sheet-info.html   打印单页眉「姓名 __ 日期 __ 得分 __」，四个栏目共用
                       （第三格给空串就只出前两格 —— 抽查单的得分在页底）
     practice/ check/ overview/ miji/ ket/ homework/ retell/   各栏目的打印单版式
