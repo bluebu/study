@@ -202,10 +202,16 @@ body{
   line-height: 1.6;
 }
 .tip b{ color: #111; }
-/* 批改红：页底那条里直接印出来的示范对号。这支红是「拿红笔」的意思，
+/* 批改红：页底那条里直接印出来的 √ 和 ×。这支红是「拿红笔」的意思，
    不是色板里的分类色（那儿刻意没有红）；灰度 75，黑白打印也够深，
-   而且对号本身靠形状就认得出 */
-.tip .mark{ font-style: normal; font-weight: 700; color: #C62828; }
+   符号本身靠形状就认得出。
+
+   ⚠️ 符号用 **√ (U+221A) 和 × (U+00D7)**，不用 ✓ (U+2713) / ✗ (U+2717)：
+   后两个属于 Dingbats，**线上导 PDF 的 ubuntu runner 上不保证有字形**
+   （那台机器只装了 fonts-noto-cjk + 楷体，缺字形就是一个方块，而本地 mac
+   有 Apple Symbols 兜底、看不出问题）。√ × 一个是数学符号一个在 Latin-1，
+   Noto 必有 —— 而且中文批改本来就用这两个。 */
+.tip .mark{ font-style: normal; font-weight: 700; font-size: 1.15em; color: #C62828; }
 .foot{ margin-top: 1.5mm; text-align: right; color: #777; font-size: 10px; }
 
 /* ── 屏幕（手机）：页头左右分列改成上下两行 ── */
