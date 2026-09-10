@@ -1,0 +1,251 @@
+# 超8 · Lesson 5
+#
+# ── 正文的写法（见 src/generator/english/CLAUDE.md）
+# 报告正文只写**孩子的朗读**。机器为什么误判、我们怎么核的，全部留在这些 # 注释里。
+#
+# ── 扫描把三个行首字母吃掉了，已回改重跑（不是课本印错，别归错因）
+# 第 5 课起划线换成了「上下两条长横线 + 一条竖边」把整块圈住，第 54 页那条**竖边压在
+# 每行第一个字母上**，OCR 就把首字母连着竖线一起丢了：
+#     rapital → capital（c 的左半被竖线吃掉，认成 r）
+#     leeping → sleeping（s 整个被吃）
+#     ne      → me（m 的左竖被吃，认成 n）
+# 三处都对着 p54.suspect-*.png 核过图。feeder 只标出了前两个（第三个 ne 在词表里
+# 查不出、没进 spellFlags），**三个是同一个成因**，一起改了 p54.ref.txt 再重跑 read：
+# 候选 35 → 32 处。不改的话 sleeping 会算成「读错 + 多读」两笔冤枉账。
+#
+# ── 逐条核完：32 处候选 → 计错 16 处。撤下的 16 条分四类
+#
+#   · **转写整段乱了 10 条**：96.6–112.0 秒六条、193.2–195.4 秒四条。
+#     前一段的实际转写是「many more tenement clawing. Um, Clowering, On me. I was so
+#     surprised that I yelled, get off me your box, the ten men were so scared that」——
+#     中间「I was so surprised that I yelled」一字不差，两头却连着六处对不上，
+#     典型的整段乱。后一段是「sleeping at, it's friendly, took my 100 of them on」，
+#     hundred 被听成 one hundred 这种就是转写自己加的词。
+#   · **卡在 cart 上回读，挤错位 3 条**（184.4–186.2 秒）：她在 cart 这个词上卡住，
+#     先跳过去读了「and gentle put me on it」，再退回来把整句重读一遍
+#     （磕巴里 174.8 秒那条就是证据）。cart / and / gently 三个词她第二遍都读了。
+#   · **专名转写靠不住 1 条**：Lilliput → pots（把握 0.32）。和前十二份里 Heidi、
+#     Sesemann 同一个口径。**但 Mildendo 那两处计错了** —— 两次读出来的都是
+#     mildando / meldando，同一个音岔了两遍，那不是识别器拼不出，是她真读岔了。
+#   · **连读被切错 2 条**：「lie down comfortably」她读的时候 down 的尾音和后面连上，
+#     转写切成了「lie uncomfortably」—— 于是机器判成「down 漏读 + comfortably 多个词头」
+#     两处。un 这个音只可能来自 down 的 -own，两条一起撤。
+#
+# ── 这次录音 4 分 26 秒，只有 2 分 52 秒读的是这两页的划线六段
+#    0.0 –  52.4 秒   开头念第 48–50 页 Words and Expressions 的生词表（27 个词）
+#  223.9 – 265.6 秒   读完 “From there, I” 就往下读到了第 55 页（“looked out at the
+#                     beautiful Lilliput countryside…”，正好是 9/10 那天的划线范围）
+# 两段都写进了 [跳过]，duration / pause_count / pause_ratio 三个都扣掉它们再算。
+# 边界是核过 words.tsv 的：222.84–223.86 那个「I」是第 54 页最后一个词，
+# 也是第 55 页那句的主语，她连着读下去了 —— 照 refTimes 的末词时刻（260.4 秒）切
+# 会把第 55 页整段算进课文。**卡壳没有写进去** —— 卡在一个词上十几秒也是朗读的一部分。
+#
+# ── 这次的错分得比上一次散：元音 4 / 词尾 4 / 小词 3 / 词形 2 / 专名 2 / 辅音 1
+# 上一次 13 处里 6 处是「看岔成形近词」，这次那一类只剩 2 处（while → well、
+# inside → instead）—— **while → well 和上一次是同一个词同一个错**。
+# 元音升到 4 处（sand → sun、bow → ball、island → aaron、smile → smell）是这次最多的一类。
+# 词尾 4 处（had → has ×2、hands → hand、thin → thing），**连着三次没改**
+# （p16-17 3 处、p18-19 3 处、这次 4 处）；两处 had → has 是时态形式，按「词尾」记。
+#
+# ── auto_bounds 的老问题这次不犯
+# 这两页没有 Mr. 这类缩写，句末是靠句号推的、没有手写 [句末]，和前十二份同一把尺子。
+date: 2026-09-08
+cat: 超8
+order: 53
+page: 53–54
+prev: super8/L4/p18-19
+book: 格列佛游记
+part: 划线六段
+words: 208
+errors: 16
+score: 56
+naep: 2
+
+[评分] 准确度=19/30 流利度=15/30 断句语调=14/25 发音=8/15
+
+[总评] 208 个词错 16 处，准确率 92.3% —— 和上一次（92.9%）基本持平，但读得比以前顺。
+    平均 2.6 个词一组，上一次是 1.8，十三次里只有 8 月 25 日那两页比这次更成串；
+    停顿占了 28.9% 的时长，是十三次里最低的一次；67 个正确词/分，比上一次快 6 个。
+    错都压在第 54 页：那页 90 个词错 10 处，第 53 页 118 个词才错 6 处 ——
+    密度是前一页的两倍半。最吃力的是 **cart** 这一个词，从 170.8 秒卡到 185.0 秒，
+    前后 14 秒：她先跳过去读了后半句，再退回来把整句重读了一遍。
+
+[跳过] 0-52.4 = 念生词表, 223.9-265.6 = 往下读到第 55 页
+    这次录音 4 分 26 秒，只有 2 分 52 秒读的是这两页的划线六段。
+    开头 52.4 秒念的是第 48–50 页那份生词表（27 个词），不是这次要评的朗读；
+    末尾她读完第 54 页最后那句 “From there, I”，没停就接着往下读了第 55 页
+    41.7 秒 —— 那正好是 9 月 10 日的划线范围，读得不亏，但不算进这一份。
+    这两段**时长里有、词数里没有**，四个数字都扣掉它们再算 —— 图上灰底的就是它们。
+
+[卡壳] 65.5-69.5 = 卡 4.0 秒, 117.4-120.5 = 停 3.1 秒, 141.8-148.6 = 翻页 6.8 秒, 170.8-174.5 = 卡 3.7 秒, 174.5-185.0 = 卡 10.5 秒
+    最后那两次是连着的**同一个坎**：读到 “The tiny people made a big” 停了 3.7 秒，
+    憋出后半句 “and gentle put me on it” 又退回来重读，整整 14.2 秒都耗在 **cart**
+    这一个词上。65.5 秒那次 4 秒是**找下一条线**：第 53 页划中的第一段读完，
+    中间隔着章标题和一整段没划线的正文，她要在页面上找到下一条横线才能接着读。
+    141.8 秒那次 6.8 秒是翻页，从第 53 页最后一句到第 54 页第一句。
+
+[分页] 这次读了 2 页
+第 53 页 = 52.4-141.8 秒 · 118 词 · 计错 6 处 · 语速 79 词/分
+第 54 页 = 148.6-223.9 秒 · 90 词 · 计错 10 处 · 语速 72 词/分
+    **两页差得很开。** 第 53 页 118 个词只错 6 处，一段 26 个词一口气读到底；
+    第 54 页 90 个词错 10 处，密度是前一页的两倍半，14 秒的那个坎也在这一页。
+    第 54 页出现了三个这本书特有的名字（Lilliput、Mildendo ×2），
+    单是地名就占掉 3 处错。
+
+[对比] 和上一页比
+    准确率 = 基本持平
+    正确词/分 = 快了 6 个
+    几个词一停 = 明显更成串
+    停顿占时长 = 歇得少了
+    92.9% → 92.3%，还在「偏难」这一档；61 → 67 个正确词/分，是十三次里第四快。
+    上一次 182 个词错 13 处，这一次 208 个词错 16 处 —— 错的密度几乎一样，
+    快的是**节奏**：1.8 → 2.6 个词一组，停顿占时长 35.3% → 28.9%。
+
+[比对] 逐字比对 · 机器候选 32 处 · 逐条核完计错 16 处
+原文 down on the *sand* In just a
+实读 down on the *sun* In just a
+    〔元音〕 57.7 秒。sand 读成 sun —— /æ/ 读成了 /ʌ/，后面的 d 也没出来
+原文 into a deep *sleep* I looked down
+实读 into a deep *sniff* I looked down
+    〔辅音〕 64.6 秒。sleep 读成 sniff —— sl 的 /l/ 换成了 /n/
+原文 my thumb He *had* a bow and
+实读 my thumb He *has* a bow and
+    〔词尾〕 86.0 秒。had 读成 has。整段讲的是已经发生的事，这儿要的是过去时
+原文 He had a *bow* and arrows in
+实读 He had a *ball* and arrows in
+    〔元音〕 88.4 秒。bow 读成 ball。这个词在这一课出现得少，音没定下来
+原文 arrows in his *hands* There were many
+实读 arrows in his *hand* There were many
+    〔词尾〕 91.1 秒。hands 读成 hand，丢了 -s
+原文 were many more *tiny* men crawling on
+识别成 were many more *clawing* men crawling on
+    96.6 秒。这一段（96.6–112.0 秒）转写整个乱了：中间「I was so surprised that I yelled」一字不差，两头却连着六处对不上。不计错
+原文 many more tiny *men* crawling on me
+识别成 many more tiny *um* crawling on me
+    97.6 秒。同上。不计错
+原文 more tiny men *crawling* on me I
+识别成 more tiny men *clowering* on me I
+    98.8 秒。同上。不计错
+原文 Get off me *you* bugs The tiny
+识别成 Get off me *your* bugs The tiny
+    110.2 秒。同上。不计错
+原文 off me you *bugs* The tiny men
+识别成 off me you *box* The tiny men
+    110.6 秒。同上。不计错
+原文 you bugs The *tiny* men were so
+识别成 you bugs The *ten* men were so
+    112.0 秒。同上。不计错
+原文 up with many *thin* ropes like string
+实读 up with many *thing* ropes like string
+    〔词尾〕 129.4 秒。thin 读成 thing，词尾多冒出一个 /ŋ/
+原文 was loose The *island* was called Lilliput
+实读 was loose The *aaron* was called Lilliput
+    〔元音〕 148.6 秒。island 读成 aaron —— 开头的 /aɪ/ 读成了 /æ/。这个词的 s 不发音，是这一段的难点
+原文 island was called *Lilliput* Its king lived
+识别成 island was called *pots* Its king lived
+    152.5 秒。地名，识别器只会往认识的词上靠，和前十二份里 Heidi、Sesemann 同一个口径。不计错
+原文 was called Lilliput *Its* king lived in
+实读 was called Lilliput *the* king lived in
+    〔小词〕 153.4 秒。Its 读成 the
+原文 a castle in *Mildendo* the capital city
+实读 a castle in *mildando* the capital city
+    〔专名〕 156.8 秒。Mildendo 读成 mildando。这个地名她读了两次，两次都是同一个音岔了，所以计错
+原文 capital city which *had* high walls around
+实读 capital city which *has* high walls around
+    〔词尾〕 161.4 秒。had 读成 has，和 86.0 秒那处同一个毛病
+原文 it from danger *The* tiny people made
+实读 it from danger *and* tiny people made
+    〔小词〕 168.2 秒。The 读成 and，两句连成了一句
+原文 made a big *cart* and gently put
+识别成 made a big *gentle* and gently put
+    184.4 秒。她卡在 cart 上，先跳过去读了后半句再退回来重读，这三条是那一遍挤错的位。第二遍 cart 读出来了。不计错
+原文 a big cart *and* gently put me
+识别成 a big cart *gentle* gently put me
+    185.0 秒。同上。不计错
+原文 big cart and *gently* put me on
+识别成 big cart and *they* put me on
+    186.2 秒。同上。不计错
+原文 me on it *while* I was sleeping
+实读 me on it *well* I was sleeping
+    〔词形〕 188.5 秒。while 读成 well —— **上一次（9 月 5 日）也是这个词、这个错**
+原文 I was sleeping *It* finally took nine
+识别成 I was sleeping *it's* finally took nine
+    193.2 秒。这一段（193.2–195.4 秒）转写又乱了，实际转写是「sleeping at, it's friendly, took my 100 of them on」。不计错
+原文 was sleeping It *finally* took nine hundred
+识别成 was sleeping It *friendly* took nine hundred
+    193.7 秒。同上。不计错
+原文 It finally took *nine* hundred of them
+识别成 It finally took *my* hundred of them
+    194.9 秒。同上。不计错
+原文 finally took nine *hundred* of them and
+识别成 finally took nine *one hundred* of them and
+    195.4 秒。同上 —— hundred 被听成 one hundred，是转写自己加的词。不计错
+原文 hundred of them *and* fifteen strong horses
+实读 hundred of them *on* fifteen strong horses
+    〔小词〕 197.9 秒。and 读成 on
+原文 take me to *Mildendo* I think this
+实读 take me to *meldando* I think this
+    〔专名〕 203.7 秒。同 156.8 秒那处，第二遍还是这个音
+原文 myself with a *smile* It was big
+实读 myself with a *smell* It was big
+    〔元音〕 212.5 秒。smile 读成 smell —— 双元音 /aɪ/ 塌成了 /e/
+原文 me to crawl *inside* and lie down
+实读 me to crawl *instead* and lie down
+    〔词形〕 217.0 秒。inside 读成 instead，两个词长得像
+原文 inside and lie *（漏读）* comfortably From there
+识别成 inside and lie *（漏读）* comfortably From there
+    「lie down comfortably」她是连着读下来的，down 的尾音和后面粘在一起，转写切成了「lie uncomfortably」。这条和下一条是同一处，一起不计错
+原文 and lie down *comfortably* From there I
+识别成 and lie down *uncomfortably* From there I
+    219.1 秒。同上 —— 多出来的那个 un 只可能来自 down 的 -own。不计错
+
+[磕巴] 退回去重来、多读了词的地方 · 5 处
+*some* He had a bow
+    83.8 秒。“He had a bow” 起了个头，退回去重读。
+*tenement* tiny men crawling on
+    96.1 秒。这是 96.6–112.0 秒那段乱转写的头一个词。
+*the lady* Lilliput Its king lived
+    151.9 秒。“was called Lilliput” 头一遍没出来，退回去重读。
+*and gentle put me on it gentle* cart and gently put
+    174.8 秒。**这次最长的一处**：卡在 cart 上读不出来，先跳过去把后半句
+    “and gently put me on it” 读了，再退回来从 cart 重读整句。前后 14.2 秒。
+*at* It finally took nine
+    192.1 秒。“while I was sleeping” 读完，接下一句时含混了一声。
+
+[亮点]
+**“The tiny men were so scared that they jumped and screamed. Some of them fell off me. I tried to move, but I was tied up with many”** —— **26 个词一口气读完、一处没错**，94 词/分，是这次最长的一段干净朗读。
+**“I looked down and couldn't believe my eyes. There was a tiny man standing on my chest, not bigger than my thumb!”** —— 紧接着又是 **23 个词没错**，84 词/分。
+**“‘I think this will be my new home,’ I said to myself with a”** —— 第 54 页最吃力的那一页上，这 14 个词读到了 143 词/分，是整段录音最快的一句。
+**节奏是这十三次里最好的一次**：平均 2.6 个词一组（上一次 1.8），停顿只占 28.9% 的时长 —— 十三次里最低。**读完划线还接着往下读了第 55 页 41.7 秒**，一句没被要求读的话，自己读下去了。
+
+[三件事]
+🔤 四处元音读岔：sand / bow / island / smile
+    16 处错里 4 处是元音，这次最多的一类 —— sand 读成 sun、bow 读成 ball、
+    island 读成 aaron、smile 读成 smell。**摆成最小对立对挨着念**：
+    sand-sun、smile-smell 各念三遍，听自己嘴里是不是两个音。
+🔚 词尾连着三次没改：had → has 两次、hands → hand、thin → thing
+    上上次 3 处、上一次 3 处、这次 4 处。两处 had 读成 has 是时态 ——
+    **这一课整段讲的是已经发生的事**。每句最后一个词多含半拍再往下读。
+📍 开读前把三个名字先念熟：Lilliput · Mildendo · island
+    第 54 页 10 处错里 3 处是名字，Mildendo 两遍都读成了 mildando。
+    这三个词单独拎出来各念五遍，再放回句子里 —— 名字一顺，第 54 页就顺了。
+
+[斜线]
+The tiny people
+made a big cart
+and gently put me on it
+while I was sleeping.
+
+[尺子]
+    92.3% 落在「偏难」这一档 —— 和上一次（92.9%）基本持平。
+        208 个词错 16 处，其中 10 处压在第 54 页那 90 个词里。
+    67 个正确词/分钟，比上一次（61）快 6 个，是十三次里第四快，
+        过了**三年级秋季 25 百分位**（59），离 50 百分位（83）还有一段。
+        母语常模只当参照系，不是及格线。
+    平均 2.6 个词一组，比上一次（1.8）明显成串，十三次里排第三；仍按第 2 级放着。
+
+[怎么来的]
+**准确率 92.3%**（读对 192 / 划线六段共 208 词）。替换、漏读、读错音计错；插入的词和退回去重读只算不流利、不计错。上面的比对列了 32 条候选、计错 16 处 —— 撤下的 16 条分四类：10 条是转写整段乱了（96.6–112.0 秒六条、193.2–195.4 秒四条，两段中间夹着的句子都是一字不差的）；3 条是她卡在 cart 上先跳读后半句、退回来重读时挤错的位；1 条是地名 Lilliput，识别器只会往认识的词上靠；2 条是「lie down comfortably」连读被切成了「lie uncomfortably」。
+**每分钟正确词数 67**（WCPM）= 读对的 192 词 ÷ 171.5 秒 × 60。录音一共 4 分 26 秒，其中 1 分 34 秒读的不是这两页的划线段：开头 52.4 秒念第 48–50 页那 27 个生词，末尾 41.7 秒往下读到了第 55 页。这两段不算进时长，图上灰底的就是它们。
+**断句**取 81 次停顿（灰底那两段的不算），平均 2.6 个词一组。停顿阈值取「说话声级 − 10 dB」，和前面十二次同一把尺子。
+这次是 9 月 8 日的录音，第 53–54 页的划线六段一口气读完，是《格列佛游记》这本的第一次。**发音这一项没有一个音一个音地听过**，是从录音里推出来的，不如亲耳听准，所以这一项的分给得保守。
