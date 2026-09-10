@@ -14,22 +14,18 @@ from __future__ import annotations
 import importlib.util
 import shutil
 import sys
-from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).parent.resolve()
 sys.path.insert(0, str(ROOT))
-from lib import page, paths, spec as spec_lib, tmpl  # noqa: E402
+from lib import page, paths, spec as spec_lib, term, tmpl  # noqa: E402
 
 # 各层的位置全在 lib/paths.py 一处定义，这儿只是取个短名
 SRC, GEN, DIST = paths.SRC, paths.GEN, paths.DIST
 
-CST = timezone(timedelta(hours=8))
-
-# 学期日历。**日期是内容不是代码** —— 学校通知改期就改
-# storage/spec/schedule/term.txt 那一处，这个文件一行都不用动
-TERM = paths.spec("schedule", "term.txt")
-WEEKDAYS = "一二三四五六日"
+# 学期日历的读取口径在 lib/term.py（打卡单也用同一份）。
+# **日期是内容不是代码** —— 学校通知改期就改
+# storage/spec/schedule/term.txt 那一处，这两个文件一行都不用动
 
 
 # 首页并排放几条倒计时。两条：期中 + 期末，正好一行两列，手机上也不挤
@@ -47,27 +43,13 @@ def countdown() -> list[dict]:
     push 那天 —— 隔天打开就少一天、周末不提交能差两天，而倒计时给错天数比
     不给更糟。页面上真正显示的数字由 `assets/countdown.js` 在打开时按当天重算，
     这个数只在没 JS 时露脸。
+
+    （打卡单页头那块倒计时不走这条路：纸上的数按**打卡那天**算，见 lib/term.py）
     """
-    if not TERM.exists():
-        return []
-    sp = spec_lib.parse(TERM)
-    today = datetime.now(CST).date()
-    ahead = []
-    for b in sp.blocks:
-        for name, when in b.items():
-            if not when:
-                continue
-            try:
-                day = date.fromisoformat(when.rstrip("?"))
-            except ValueError:
-                spec_lib.die(f"{TERM.name}：[{b.name}] {name} 的日期要写成 "
-                             f"2026-11-09（后面可以带 ? 表示暂定），现在是 {when!r}")
-            if day >= today:
-                ahead.append((day, name, when.endswith("?")))
-    return [{"name": name, "iso": day.isoformat(), "days": (day - today).days,
-             "when": f"{day.month} 月 {day.day} 日 · 周{WEEKDAYS[day.weekday()]}",
-             "tentative": tentative}
-            for day, name, tentative in sorted(ahead)[:COUNTDOWNS]]
+    today = term.today()
+    return [{"name": m.name, "iso": m.iso, "days": m.days_from(today),
+             "when": m.when, "tentative": m.tentative}
+            for m in term.ahead(today, COUNTDOWNS)]
 
 
 # ══════════════════════════════════════════════════════════════
@@ -135,7 +117,7 @@ def build_index() -> None:
         "home.html",
         subjects=subjects,
         counts=countdown(),
-        stamp=datetime.now(CST).strftime("%Y-%m-%d %H:%M"),
+        stamp=term.now().strftime("%Y-%m-%d %H:%M"),
     )
 
     page.write(

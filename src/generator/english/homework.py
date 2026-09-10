@@ -33,7 +33,9 @@ import re
 import sys
 from pathlib import Path
 
-from lib import page, paths, sheet, spec as spec_lib, tmpl
+from datetime import date
+
+from lib import page, paths, sheet, spec as spec_lib, term, tmpl
 
 SPECS = paths.spec("english", "homework")
 
@@ -137,6 +139,35 @@ def inline(text: str) -> str:
     return out
 
 
+def spec_day(stem: str) -> date | None:
+    """文件名 `YYYYMMDD` → 日期。
+
+    打卡单这一天是几号，真源是**文件名**，不是 spec 里那行 `date:` ——
+    那行是印在页头的排版文字（「9月10日」），没有年份，跨年就算不了差。
+    """
+    m = re.fullmatch(r"(\d{4})(\d{2})(\d{2})", stem)
+    return date(*(int(x) for x in m.groups())) if m else None
+
+
+def dday_ctx(day: date | None) -> dict | None:
+    """页头右上角那块：距离**下一个还没到的**里程碑（期中 → 期末 → …）还有几天。
+
+    **基准日是打卡那天，不是构建那天。** 这张单子是纸：9 月 10 日那张上面
+    印的就是 9 月 10 日到期中的天数，隔多久重新构建都是这个数，不会漂 ——
+    所以这儿不需要首页 countdown.js 那套「打开时重算」（见 lib/term.py）。
+
+    哪天考、叫什么名字全从 storage/spec/schedule/term.txt 来，学校改期
+    只改那一处。日子全过完了返回 None，页头右边就空着。
+    """
+    if day is None:
+        return None
+    nxt = term.ahead(day, 1)
+    if not nxt:
+        return None
+    m = nxt[0]
+    return {"name": m.name, "days": m.days_from(day), "tentative": m.tentative}
+
+
 def task_ctx(task: Task) -> dict:
     """一项作业交给模板的形状 —— 标记全在模板里，这儿只做 inline 和分列算行数。"""
     return {
@@ -185,12 +216,13 @@ def squeeze_for(tasks: list[Task], memo_lines: int) -> str:
     return f"--gap:{gap}px;--pad:{pad}px"
 
 
-def render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, int]:
+def render(sp: spec_lib.Spec, out_dir: Path, pdf: bool,
+           day: date | None) -> tuple[bool, int]:
     tasks = [Task(b, i) for i, b in enumerate(sp.blocks)]
     if not tasks:
         spec_lib.die(f"{sp.path.name} 里没有任何任务行")
 
-    date = sp.get("date", "")
+    head_date = sp.get("date", "")      # 页头印的排版文字。真正的日期是 day（文件名）
     title = sp.get("title", DEFAULTS["title"])
     memo_lines = sp.int_("memo", DEFAULTS["memo"])
     squeeze = squeeze_for(tasks, memo_lines)
@@ -198,7 +230,8 @@ def render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, int]:
     body = tmpl.body(
         "homework/sheet.html",
         squeeze=squeeze,
-        date=date,
+        date=head_date,
+        dday=dday_ctx(day),
         title=title,
         subtitle=sp.get("subtitle", DEFAULTS["subtitle"]),
         tip_left=inline(sp.get("tip-left", DEFAULTS["tip-left"])),
@@ -211,8 +244,8 @@ def render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, int]:
     out = page.write(
         out_dir / f"{sp.path.stem}.html",
         page.render(
-            title=" ".join(x for x in (date, title) if x),
-            description=f"{date}的英语打卡作业清单，共 {len(tasks)} 项，A4 打印。",
+            title=" ".join(x for x in (head_date, title) if x),
+            description=f"{head_date}的英语打卡作业清单，共 {len(tasks)} 项，A4 打印。",
             body=body,
             emoji="✅",
             css=("print.css", "homework.css"),
@@ -254,10 +287,10 @@ def build_homework(dist: Path, pdf: bool = False) -> None:
     entries = []
     for path in specs:
         sp = spec_lib.parse(path)
-        pdf_ok, count = render(sp, out_dir, pdf)
-        ymd = re.fullmatch(r"(\d{4})(\d{2})(\d{2})", path.stem)
-        en = (f"{MONTHS_EN[int(ymd.group(2)) - 1]} {int(ymd.group(3))} · Daily checklist"
-              if ymd else "Daily checklist")
+        day = spec_day(path.stem)
+        pdf_ok, count = render(sp, out_dir, pdf, day)
+        en = (f"{MONTHS_EN[day.month - 1]} {day.day} · Daily checklist"
+              if day else "Daily checklist")
         entries.append({"stem": path.stem, "label": sp.get("date") or path.stem,
                         "count": count, "en": en, "pdf": pdf_ok})
 

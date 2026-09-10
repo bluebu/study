@@ -1,11 +1,14 @@
 {#-
   每日打卡 —— 一张 A4，一项作业一行，右边一个大方框打勾。
 
-  ⚠️ 两处**必须留在一行**，因为它们不是 flex / grid 容器，换行会多出一个空格：
-     .head .who  —— 普通块 + white-space:nowrap，「姓名 」后面那个空格是有意的
+  ⚠️ 一处**必须留在一行**，因为它不是 flex / grid 容器，换行会多出一个空格：
      .foot .sign —— 普通块，两个 <span> 靠 margin-right 拉开，中间不能有空白
-  其余（.tip / .task / .words / .w 全是 flex 或 grid）空白文本节点不生成盒子，
-  按正常缩进写就行。
+  其余（.tip / .task / .words / .w / .head .dday 全是 flex 或 grid）空白文本
+  节点不生成盒子，按正常缩进写就行。
+
+  .head .dday 是页头右上角的倒计时（距离期中 / 期末还有几天）。天数按**打卡
+  那天**算好印死在纸上，不像首页那两条要靠 countdown.js 重算 —— 为什么，
+  见 lib/term.py 和 homework.py 的 dday_ctx()。日子全过完了整块不出。
 
   squeeze 是 homework.py 挑出来的间距档（`--gap:7px;--pad:9px` 这样一串），
   项数多到一页装不下才有值；空串的日子这个属性根本不出，HTML 和以前逐字节一样。
@@ -24,7 +27,16 @@
         <div class="en">{{ subtitle }}</div>
       </div>
     </div>
-    <div class="who">姓名 <i class="u"></i><span>家长签字 <i class="u"></i></span></div>
+{% if dday %}
+    <div class="dday">
+      <span class="lb">{% if dday.days %}距离{% endif %}{{ dday.name }}{% if dday.tentative %}<i class="soon">暂定</i>{% endif %}</span>
+{% if dday.days %}
+      <b class="n">{{ dday.days }}</b><span class="unit">天</span>
+{% else %}
+      <b class="n sm">就是今天</b>
+{% endif %}
+    </div>
+{% endif %}
   </div>
 
   <div class="tip">

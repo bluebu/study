@@ -63,7 +63,8 @@ storage/
     chinese/overview/   教材总览 spec：**一册一份、按册命名**（g4a = 四年级上册）
     math/miji/          秘籍 spec：错题按错因分组写，练习题只写题面、答案脚本算
     schedule/term.txt   学期日历：开学 / 期中 / 期末 / 放假，**日期只写在这一处**。
-                        首页那两条倒计时读它，带 `?` 的是估的、页面上标「暂定」
+                        首页那两条倒计时和打卡单页头的倒计时都读它（口径在
+                        lib/term.py），带 `?` 的是估的、页面上标「暂定」
     schedule/week/      课表 spec：一个区块一天，区块内一行一节（YYYYMMDD 是学期起）
     schedule/afterschool/  放学检查 spec：一个区块一栏，项行是作业类型、
                         缩进行是说明。区块属性 `lines=N` 留几行横线抄作业、
@@ -79,10 +80,13 @@ storage/
 
 ```
 build.py              总构建器。站点地图 SUBJECTS 就在文件头部；
-                      首页那两条倒计时也在这儿（`countdown()` 读 spec/schedule/term.txt）
+                      首页那两条倒计时也在这儿（`countdown()`，日历走 lib/term.py）
 Makefile              日常命令入口
 lib/
   paths.py            各层的位置。**改目录名只改这一个文件**
+  term.py             学期日历 spec/schedule/term.txt 的读取口径。
+                      两个下游：首页那两条倒计时（按**打开那天**算）、
+                      打卡单页头右上角那块（按**打卡那天**算，印死在纸上）
   spec.py             spec DSL 解析（三科共用）
   tmpl.py             Jinja2 环境。模板的三条规矩写在它的文档串里
   page.py             页面骨架 + 目录页 + 打印单页眉（都只填模板，不拼字符串）
