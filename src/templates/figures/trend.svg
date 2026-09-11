@@ -3,6 +3,8 @@
 
   x **等距**排开，不按真实日期间距 —— 朗读不是每天都有，按日期排会挤成一堆，
   而且同一天读两页就重叠了（p68 / p69 就是同一天）。标签写页码，日期在下面的表里。
+  **x 标签放不下的那几个 Python 那边给的是空串**（figures._fit_labels）：点照画、
+  字不画，不然 14 个点上「70–72」这种区间标签会糊成一片。
   y 超出 [lo, hi] 的夹住，免得一次异常把整张图压平。
   右侧留白 PAD：末点的 x 标签 text-anchor=middle，留少了会伸出 viewBox 被裁掉。
 -#}
@@ -14,8 +16,12 @@
 <path d="{{ path }}" fill="none" stroke="{{ color }}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 {% for p in points %}
 <circle cx="{{ p.x }}" cy="{{ p.y }}" r="10" fill="var(--card)" stroke="{{ color }}" stroke-width="5"/>
-<text x="{{ p.x }}" y="{{ p.vy }}" font-size="30" font-weight="700" fill="{{ color }}" text-anchor="middle">{{ p.v }}</text>
-<text x="{{ p.x }}" y="{{ label_y }}" font-size="28" fill="var(--ink-soft)" text-anchor="middle">{{ p.label }}</text>
+{#- 数值标签描一圈卡片底色（paint-order 先描边后填字）：点低的时候标签会压在
+    网格线上，89.0 / 88.2 那两个数字被横线穿过就读不出来了 -#}
+<text x="{{ p.x }}" y="{{ p.vy }}" font-size="30" font-weight="700" fill="{{ color }}" text-anchor="middle" stroke="var(--card)" stroke-width="8" paint-order="stroke" stroke-linejoin="round">{{ p.v }}</text>
+{% if p.label %}
+<text x="{{ p.x }}" y="{{ label_y }}" font-size="{{ label_font }}" fill="var(--ink-soft)" text-anchor="middle">{{ p.label }}</text>
+{% endif %}
 {% endfor %}
 <line x1="{{ GUT }}" y1="{{ bot }}" x2="{{ right }}" y2="{{ bot }}" stroke="var(--line)" stroke-width="3"/>
 <text x="{{ right }}" y="{{ unit_y }}" font-size="26" fill="var(--ink-soft)" text-anchor="end">{{ unit }}</text>

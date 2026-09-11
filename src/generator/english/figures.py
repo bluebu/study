@@ -203,6 +203,32 @@ def timeline_svg(data, bounds, stalls, skips=()):
 # ── 趋势：一条随时间的折线 ──────────────────────────────────
 # 数据来自 storage/result/english/review.csv（result 层），不是从 spec 现算的。
 
+# x 轴标签的粗略宽度：字号 28 那几个数字大约 0.56em 一个字符，en dash 同宽。
+# 估算只用来判断「这一个还放得下吗」，不求准 —— 差一两个单位不影响取舍。
+LABEL_EM = 0.56
+
+
+def _fit_labels(labels, xs, font, gap=14):
+    """标签挤不开就不画那几个。返回一串 bool，False 的位置只留点、不留字。
+
+    **从右往左扫，所以最后一次一定留得住** —— 那是最新的一次，也是看趋势的人
+    第一眼要找的。从左往右扫会把它挤掉。
+
+    为什么需要这一步：x 是等距的，而标签宽度差得很远 —— 单页是「65」（2 字符），
+    一次录音跨几页就是「70–72」（5 字符）。14 个点时每格只有 63 个 viewBox 单位，
+    区间标签要 77，于是从第 6 个点起全糊成一片（`70–723–746–89–1112–15…`）。
+    只写页码、不写「第 … 页」已经省过一轮，不够；再缩就得编缩写，反而看不懂。
+    """
+    keep = [False] * len(labels)
+    left_edge = None                  # 上一个留下的标签的左边界
+    for i in range(len(labels) - 1, -1, -1):
+        half = len(labels[i]) * LABEL_EM * font / 2
+        if left_edge is None or xs[i] + half + gap <= left_edge:
+            keep[i] = True
+            left_edge = xs[i] - half
+    return keep
+
+
 def trend_svg(points, lo, hi, ticks, unit="", color="var(--c-read)"):
     """一条随时间的折线。points = [(标签, 数值), ...]，按时间顺序给。
 
@@ -210,25 +236,33 @@ def trend_svg(points, lo, hi, ticks, unit="", color="var(--c-read)"):
     而且同一天读两页就重叠了（p68 / p69 就是同一天）。标签写页码，日期在下面的表里。
     y 线性映射到 [lo, hi]，超出范围的夹住（免得一次异常把整张图压平）。
     字号按 viewBox 单位给：整张图在手机上会被压到 ~330px 宽，别再往小调。
+
+    **放不下的 x 标签会被跳掉**（`_fit_labels`）—— 点照画，只是不标页码。
+    准确率和 WCPM 两张图的标签一样，所以跳掉的是同几个，上下对得齐。
     """
     if len(points) < 2:
         return ""
     # PAD 是右侧留白：末点的 x 标签 text-anchor=middle，留少了会伸出 viewBox 被裁掉
     W, GUT, TOP, H, PAD = 1000.0, 96.0, 60.0, 300.0, 80.0
+    LABEL_FONT = 28
     n, bot = len(points), TOP + H
     x = lambda i: round(GUT + i * (W - GUT - PAD) / (n - 1), 1)
     y = lambda v: round(TOP + (1 - (min(max(v, lo), hi) - lo) / (hi - lo)) * H, 1)
+    xs = [x(i) for i in range(n)]
+    keep = _fit_labels([str(lb) for lb, _ in points], xs, LABEL_FONT)
 
     return tmpl.render(
         "figures/trend.svg",
         W=f"{W:.0f}", view_h=f"{bot + 96:.0f}", GUT=GUT, right=f"{W - PAD:.0f}",
         bot=bot, label_x=GUT - 16, label_y=bot + 44, unit_y=bot + 88,
-        n=n, unit=unit, color=color,
+        n=n, unit=unit, color=color, label_font=LABEL_FONT,
         first=points[0][1], last=points[-1][1],
         ticks=[{"y": y(v), "ty": y(v) + 10, "v": v} for v in ticks],
         path=" ".join(f"{'M' if i == 0 else 'L'}{x(i)} {y(v)}"
                       for i, (_, v) in enumerate(points)),
-        points=[{"x": x(i), "y": y(v), "vy": y(v) - 26, "v": v, "label": label}
+        # label 给空串 = 这一个放不下，只画点不画字（模板里一个 if）
+        points=[{"x": xs[i], "y": y(v), "vy": y(v) - 26, "v": v,
+                 "label": label if keep[i] else ""}
                 for i, (label, v) in enumerate(points)],
     ).rstrip("\n")
 
