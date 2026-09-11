@@ -48,6 +48,26 @@
   display:grid; place-items:center; font-family:var(--font-display); font-weight:800;
   color:var(--s,var(--ink-soft)); background:var(--sbg,rgba(120,104,84,.10));
 }
+/* 有点读作业、还没有成绩单的一天。**虚线 + 不可点**，形状上就和有成绩单的那几天
+   分得开：日期还是同一档字号（时间线要对齐），右边一行小字说缺的是哪几页。
+   刻意不给红 —— 红专属「分数越差越红」，缺一份不是考差了。 */
+.gap{
+  margin:26px 0 10px; padding:11px 13px;
+  border:1.5px dashed var(--line); border-radius:12px;
+  background:transparent;
+}
+.gap h2{
+  margin:0; font-family:var(--font-display); font-size:.95rem;
+  letter-spacing:.02em; color:var(--ink-soft); font-weight:700;
+}
+.gap p{
+  margin:3px 0 0; font-size:.8rem; line-height:1.6; color:var(--ink-soft);
+  display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;
+}
+.gap p small{
+  font-size:.72rem; padding:1px 8px; border-radius:999px;
+  border:1px solid var(--line); color:var(--ink-soft); white-space:nowrap;
+}
 .empty{ color:var(--ink-soft); text-align:center; padding:40px 0; }
 
 /* site.css 里的「打印单」按钮吃的是语文橙红。放到这一页就不对了：

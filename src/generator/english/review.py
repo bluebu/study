@@ -59,6 +59,8 @@ sys.path.insert(0, str(HERE))
 import figures  # noqa: E402
 
 SPECS = paths.spec("english", "review")
+# 打卡单的 spec —— 只读，用来找「有点读作业、却还没有成绩单」的日子（pending_days）
+HOMEWORK = paths.spec("english", "homework")
 DATA = paths.data("english", "review")
 RESULT = paths.result("english", "review.csv")
 ERRORS_RESULT = paths.result("english", "review-errors.csv")
@@ -1280,7 +1282,7 @@ def error_stats(limit_recent: int = 3) -> dict | None:
             "covered_pct": round(sum(x["rn"] for x in top) / rtotal * 100)}
 
 
-def build_trend(out_dir: Path) -> bool:
+def build_trend(out_dir: Path, pending: list[dict] | None = None) -> bool:
     """趋势页：两条曲线 + 一张全量数据表。
 
     **故意从 CSV 读，不用内存里的 reports。** 这样 result 表就必须是能被别处消费的
@@ -1288,6 +1290,7 @@ def build_trend(out_dir: Path) -> bool:
     这一页完全一样。少于两次朗读画不出趋势，直接不出这一页。
     """
     rows = read_result()
+    pending = pending or []
     if len(rows) < 2:
         print("    · 趋势：不足两次朗读，跳过")
         return False
@@ -1304,18 +1307,29 @@ def build_trend(out_dir: Path) -> bool:
         parts = iso.split("-")
         return f"{int(parts[1])}/{int(parts[2])}" if len(parts) == 3 else iso
 
+    # 「全部数据」那张表：成绩单 + 缺口按日期排在一起。**缺口插在表里不堆在页头** ——
+    # 断在哪两次之间要看得见（9/7 那天的第 51–52 页就断在 9/5 和 9/8 中间）。
+    # sort 是稳定的，同一天读了几次的相对顺序不动。
+    table = [{**r,
+              "gap": False,
+              "iso": r["date"],
+              "date": short_date(r["date"]),
+              # 表里只留「课/页」，全 slug 在 390px 上放不下
+              "slug": "/".join(r["slug"].split("/")[-2:]),
+              "fg": figures.score_color(int(r["score"]))[0]}
+             for r in rows]
+    table += [{"gap": True, "iso": g["date"], "date": g["short"], "pages": g["pages"]}
+              for g in pending]
+    table.sort(key=lambda x: x["iso"])
+
     body = tmpl.body(
         "review/trend.html",
         n=len(rows),
         accuracy_svg=figures.trend_svg(acc, 86, 100, (90, 95, 98), "准确率 %"),
         wcpm_svg=figures.trend_svg(wcpm, 0, 100, (0, 50, 100), "WCPM", "var(--c-listen)"),
         errs=error_stats(),
-        rows=[{**r,
-               "date": short_date(r["date"]),
-               # 表里只留「课/页」，全 slug 在 390px 上放不下
-               "slug": "/".join(r["slug"].split("/")[-2:]),
-               "fg": figures.score_color(int(r["score"]))[0]}
-              for r in rows],
+        pending=pending,
+        rows=table,
     )
 
     page.write(
@@ -1332,6 +1346,53 @@ def build_trend(out_dir: Path) -> bool:
     )
     print(f"    → review/trend.html  （{len(rows)} 次）")
     return True
+
+
+def pending_days(done: set[str]) -> list[dict]:
+    """有点读作业、还没有成绩单的日子 —— 目录页和趋势页都要提示。
+
+    **判据是打卡单里的点读那一项**：`[点读]` 区块下带「划线」的那条
+    （`* 第 57–58 页 划线部分`）就是这一天该录、该评的那几页。它有下游
+    （喂数据台按它拼录音名），所以拿它当基准最稳。
+
+    读的是 `storage/spec/english/homework/`（**输入层**），不是 homework 的
+    result —— 走 result 就得依赖构建顺序（review 先跑，那张表还是上一轮的）。
+
+    ⚠️ **措辞里不许有「今天」「昨天」**。dist 是静态的，构建那天算出来的
+    「今天」隔天打开就错了（同 countdown.js 那条：给错比不给更糟）。
+    所以一律写「还没有成绩单」，哪天打开都成立。
+
+    只看打卡单有、成绩单没有的方向。反过来（8/25 有成绩单、没有打卡单入库）
+    不提示 —— 那是打卡单那边的缺口，不是这一页要说的事。
+    """
+    out = []
+    for path in spec_lib.specs(HOMEWORK):
+        stem = path.stem                       # YYYYMMDD
+        if len(stem) != 8 or not stem.isdigit():
+            continue
+        iso = f"{stem[:4]}-{stem[4:6]}-{stem[6:]}"
+        if iso in done:
+            continue
+        sp = spec_lib.parse(path)
+        blocks = [b for b in sp.blocks if b.name == "点读"]
+        if not blocks:
+            continue                           # 那天没布置点读，本来就不该有成绩单
+        marked = [ln.strip().lstrip("* ").strip()
+                  for ln in blocks[0].lines
+                  if ln.strip().startswith("*") and "划线" in ln]
+        if not marked:
+            continue
+        lesson = re.search(r"Lesson\s*\d+", blocks[0].head)
+        pages = re.search(r"第\s*[\d—–-]+\s*页", marked[0])
+        out.append({
+            "date": iso,
+            "label": pretty_date(iso),
+            "short": f"{int(stem[4:6])}/{int(stem[6:])}",
+            "what": dot_join([lesson.group(0) if lesson else "", marked[0]]),
+            # 趋势表里那一格跨 7 列，窄屏放不下整句 —— 只留页码
+            "pages": pages.group(0) if pages else marked[0],
+        })
+    return out
 
 
 def day_summary(rows: list[Report], prev: list[Report] | None) -> dict:
@@ -1381,11 +1442,14 @@ def day_summary(rows: list[Report], prev: list[Report] | None) -> dict:
 
 def build_index(out_dir: Path, by_date: dict[str, list[Report]], order: list[str],
                 sums: dict[str, dict], pdfs: dict[str, bool],
-                trend: bool, total: int) -> None:
+                trend: bool, total: int, pending: list[dict] | None = None) -> None:
     """目录页：按日期倒序，每天一条汇总 + 当天每次录音一行。
 
     行链的是**日页的锚点**（`2026-08-27.html#super8-L3-p68-69`）——
     报告已经并进日页了，一次录音不再单独占一个 URL。
+
+    `pending`（有点读作业、还没有成绩单的日子）**按日期插进同一条时间线**，
+    不堆在页头 —— 缺口要看得出断在哪两次之间，摆在顶上就只是个通知。
     """
     days = []
     for date in order:
@@ -1400,6 +1464,8 @@ def build_index(out_dir: Path, by_date: dict[str, list[Report]], order: list[str
                 "fg": fg, "bg": bg, "color": r.color_var,
             })
         days.append({
+            "gap": False,
+            "date": date,
             "label": pretty_date(date),
             "href": f"{date}.html",
             # 报告本身是网页（手机上看），PDF 只是想转发给别人时的附加件。
@@ -1409,7 +1475,13 @@ def build_index(out_dir: Path, by_date: dict[str, list[Report]], order: list[str
             "sum": sums[date],
         })
 
-    body = tmpl.body("review/index.html", total=total, trend=trend, days=days)
+    for gap in (pending or []):
+        days.append({"gap": True, "label": gap["label"], "what": gap["what"],
+                     "date": gap["date"]})
+    days.sort(key=lambda d: d.get("date") or "", reverse=True)
+
+    body = tmpl.body("review/index.html", total=total, trend=trend, days=days,
+                     pending=pending or [])
 
     page.write(
         out_dir / "index.html",
@@ -1471,5 +1543,8 @@ def build_review(dist: Path, pdf: bool = False) -> None:
 
     # 先落 result 表，趋势页再从那张表读回来 —— 顺序不能反
     write_result(reports)
-    trend = build_trend(out_dir)
-    build_index(out_dir, by_date, order, sums, pdfs, trend, len(reports))
+    pending = pending_days(set(by_date))
+    if pending:
+        print("    · 还没有成绩单：" + "、".join(g["short"] for g in pending))
+    trend = build_trend(out_dir, pending)
+    build_index(out_dir, by_date, order, sums, pdfs, trend, len(reports), pending)

@@ -49,6 +49,15 @@ body{
   line-height: 1.25;
 }
 .hero .sub{ color: var(--ink-soft); margin: 0; font-size: .92rem; }
+/* 页头的缺口提示（打卡评价的目录页和趋势页共用）：哪几天有作业、还没有成绩单。
+   **虚线是「缺口」的视觉语言** —— 列表里那几块、趋势表里那几行都是虚线，
+   一眼认得出是同一件事。不给红：红专属「分数越差越红」，缺一份不是考差了 */
+.hero .miss{
+  display: inline-block; margin: 9px 0 0;
+  font-size: .8rem; line-height: 1.6; color: var(--ink-soft);
+  padding: 7px 12px; border: 1.5px dashed var(--line); border-radius: 10px;
+}
+.hero .miss b{ color: var(--ink); }
 
 /* ── 学期倒计时（hero 下面并排两条）─────────────────────────
    数字由 assets/countdown.js 按打开那天重算（为什么，见那个文件）。

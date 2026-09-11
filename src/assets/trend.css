@@ -102,3 +102,14 @@
 /* nowrap + 够宽：390px 上「35 处 · 21.1%」会断成两行，八行里只有前五行断，
    参差着看更乱。宽度按最长的那条（「35 处 · 21.1%」）量的 */
 .kv { flex: 0 0 94px; text-align: right; white-space: nowrap; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+
+/* 「全部数据」表里的缺口行：那天有点读作业、没有成绩单。
+   斜体 + 虚线上边框，扫表时一眼看出断在哪两次之间；
+   窄屏 media query 藏第 3/4/7 列时它是 colspan 的一整格，不受影响 */
+.tbl tr.gap td{
+  color: var(--ink-soft); font-style: italic;
+  border-top: 1.5px dashed var(--line); background: transparent;
+  /* .tbl 整体是 nowrap（数字列不许折），跨列这一格放开 —— 390px 上它得能折行，
+     不然整张表被撑出横向滚动 */
+  white-space: normal;
+}
