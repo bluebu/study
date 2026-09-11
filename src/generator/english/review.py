@@ -474,9 +474,27 @@ def pretty_date(iso: str) -> str:
 
 
 def score_box(r: Report, others: dict[str, Report], *, first: bool = True) -> dict:
+    """分数卡：大数字 + 一句话总评 + 说明 + 要点 + 四维条 + 尺子。
+
+    `[总评]` 的缩进行里，**以 `* ` 开头的是一条要点**，出成独立一行（前面一个圆点）；
+    其余行照旧拼成一段说明。要点之后的普通行接到最后那条要点上（续行）。
+
+    加要点是因为这一段会长：9/10 那份把「两堆老错 + 三个长词的坎 + 两页密度」
+    挤成了一段九行的小字，屏幕上就是一堵墙，六个数字一个都读不出来。
+    **老 spec 里一个 `*` 开头的说明行都没有** —— 它们仍旧走 joined，渲染一字不变。
+    """
     b = r.blocks.get("总评")
     lead = b.head if b else ""
-    tip = joined(b.notes()) if b else ""
+    plain: list[str] = []
+    points: list[str] = []
+    for note in (b.notes() if b else []):
+        if note.startswith("* "):
+            points.append(note[2:].strip())
+        elif points:
+            points[-1] = _join(points[-1], note)
+        else:
+            plain.append(note)
+    tip = joined(plain)
 
     bars = []
     got = dict(parse_pairs(r.blocks["评分"].head)) if "评分" in r.blocks else {}
@@ -488,6 +506,7 @@ def score_box(r: Report, others: dict[str, Report], *, first: bool = True) -> di
         bars.append({"name": name, "pct": round(n / full * 100), "val": f"{n}/{full}"})
 
     return {"num": r.score, "lead": lead, "tip": rich(tip) if tip else "",
+            "points": [rich(x) for x in points],
             "bars": bars, "ruler": score_ruler(r, others, first)}
 
 

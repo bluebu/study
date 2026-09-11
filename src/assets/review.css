@@ -78,6 +78,18 @@ h1{ font-family:var(--font-display); font-size:clamp(1.7rem,6.4vw,2.4rem);
 .score .say .tip{ color:var(--ink-soft); font-size:.9rem; margin-top:6px; }
 
 /* 分数的尺子：换书就换了一把尺子，这一行让那个大数字有个限定语 */
+/* 总评里的要点行（[总评] 的 `* ` 说明行）。一条一行、圆点悬挂在文字外面，
+   数字才落在每行开头读得出来。颜色同 .tip，b 用正文色提一级 */
+.score .pts{ list-style:none; margin:8px 0 0; padding:0; }
+.score .pts li{
+  position:relative; padding-left:15px; margin-top:5px;
+  color:var(--ink-soft); font-size:.9rem; line-height:1.75;
+}
+.score .pts li::before{
+  content:""; position:absolute; left:3px; top:.62em;
+  width:5px; height:5px; border-radius:50%; background:var(--score,var(--read)); opacity:.55;
+}
+.score .pts b{ color:var(--ink); }
 .score .ruler{ margin:14px 0 0; font-size:.8rem; line-height:1.65; color:var(--ink-soft); }
 
 .bars{ margin-top:18px; display:flex; flex-direction:column; gap:10px; }

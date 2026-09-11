@@ -73,6 +73,14 @@
 {% if r.score.tip %}
         <p class="tip">{{ r.score.tip|safe }}</p>
 {% endif %}
+{% if r.score.points %}
+        {#- 一条要点一行。`[总评]` 里 `* ` 开头的说明行走这儿，密的那种总评才读得下去 -#}
+        <ul class="pts">
+{% for pt in r.score.points %}
+          <li>{{ pt|safe }}</li>
+{% endfor %}
+        </ul>
+{% endif %}
       </span>
       <div class="bars" style="flex-basis:100%">
 {% for b in r.score.bars %}
