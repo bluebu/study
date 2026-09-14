@@ -1,0 +1,265 @@
+# 超8 · Lesson 5
+#
+# ── 正文的写法（见 src/generator/english/CLAUDE.md）
+# 报告正文只写**孩子的朗读**。机器为什么误判、我们怎么核的，全部留在这些 # 注释里。
+#
+# ── .ref.txt 改了两处扫描认错，改完重跑了 read
+# 第 57 页原来是「tied cach corner」和「he said, "l have talked」——
+# 前者 scan 自己标了可疑（suspect-cach.png 上放大看得很清楚，课本印的是 each）；
+# 后者是大写 I 被认成小写 l（同一行里 “I continued” 的 I 认对了，只有引号后面那个认岔）。
+# 两处都不是课本印错，是这批微信压过的照片上笔画丢了。改完 .ref.txt 重跑 read ——
+# [比对] / [卡壳] / [分页] 全是照基准算的，不能在草稿上硬改。重跑后这两条候选自己消失了。
+#
+# ── 第 6 条整条没读，这是这一份最要紧的一件事
+# 课文最后一个词 objects 在 186.6 秒读完，192.66 秒起就在念第 48–50 页那份生词表
+# （Solar / Diligent / abandon / arrows / suggestor / enormous / communicate /
+#  belongings / Invention / palm / advisor / custom / attack / anchor / emergency …），
+# 一直念到录音结束（240.1 秒）。**“6. I could not leave the kingdom without getting
+# permission.” 这 10 个词一个音都没有。**
+# 草稿里 215.5–237.5 秒那 10 条「转写乱段」是**假的** —— 对齐把生词表末尾的
+# advisor / custom / though / attack / anchor / emergency / made / red / feast / robot
+# 拉去顶了这 10 个词。和 9/10 那次（生词表顶了 “That was my gun”）同一个毛病。
+# p58.marked.png 上第 6 条的橙框逐词都在，划线范围没标错 —— 就是漏读。
+# 按口径（漏读计错）计 10 处，[比对] 里**一个词一条**。
+# 不合成一条写〔漏读×10〕：error_words 是从「原文」行的 *高亮* 取词的，
+# 合成一条会让整句当成一个「词」进 review-errors.csv，趋势页的「反复栽的词」
+# 就印出一整句 ×10（踩过，看截图才发现）。拆开之后这 10 个词各 1 次，
+# 进不了 repeat 榜，统计才是对的。
+#
+# ── words 写 206，不改
+# 9/10 那次把没读的 48 词从 words 里扣掉，理由是**那一段 9 月 8 日已经读掉了**。
+# 这次第 6 条没在任何一次录音里读过，是这次真漏了，所以 206 照留、按漏读计。
+#
+# ── 逐条核完：35 处候选 → 计错 29 处。撤下的 8 条分四类
+#   · **同音，转写分不出 3 条**：96.2 advisers→advisors（adviser / advisor 同音）、
+#     143.8 “2.”→to（two / to 同音）、168.7 “4.”→for（four / for 同音）。
+#     她读的音是对的，和 9/10 那次 knew→new 同一个口径。
+#   · **卡壳时哼的语气声占了小词的位 3 条**：63.3 a→um（marvelous 前哼了一声）、
+#     83.1 on→uh、83.5 I→uh（段落切换处 6.9 秒开不了口，哼了两声才起来）。
+#   · **对齐把生词表的词顶上来 10 条**：215.5–237.5 秒那一串，见上。
+#     这 10 个词另按漏读计，不在这儿重复算。
+#   · **多读的词占了后一个词的位 1 条**：47.2 sport→but。46.5 秒那个 “sports”
+#     才是她读的 sport（词尾多了 -s），47.2 秒起那 3.6 秒是拖长的含混音，
+#     对齐把它配给了 sport。这处按 sports 计 1 处词尾错，不重复计。
+#
+# ── 这次的错：漏读 11 / 词尾 5 / 辅音 4 / 词形 4 / 小词 2 / 元音 1 / 生词 1 / 专名 1
+# **词尾连着第六次没改**（p16-17 3 处、p18-19 3 处、p53-54 4 处、p55-56 7 处、这次 5 处）：
+# sport→sports、amazed→amazing、continued→continue、talked→take、agree→agreed。
+# **辅音 4 处里 set→send 占两处**（89.2 / 109.4），同一个词两次都把 -t 读成 -nd。
+# Lilliput 这次只出现一次，仍旧是 little-part 那个音 —— 和 9/10 那五次一模一样，
+# 所以照 9/10 的口径计错（不是识别器随机拼不出）。
+#
+# ── free→first 标了「识别成」，编号会出 ?
+# 89.2–91.6 秒 “set me free” 转写给 “send me 1st”，把握 0.50，这一段前后
+# （80.6–91.6 秒）转写整体偏乱。set→send 两次一致所以照计，free→first 这一处
+# 不听录音判不准，按准则第 2 条标存疑、计 1 处错，正文里告诉家长去听哪一段。
+#
+# ── auto_bounds 这次照常用
+# 原文里 “1.”–“6.” 这六个序号各带一个句号，auto_bounds 会当成句末 ——
+# 可这六处她本来就是当成一句一句读的（每条之间都停），推出来的句末位置对得上，
+# 不另写 [句末]。
+
+date: 2026-09-11
+cat: 超8
+order: 57
+page: 57–58
+prev: super8/L5/p55-56
+book: 格列佛游记
+part: 划线三段
+words: 206
+errors: 29
+score: 48
+naep: 2
+
+[评分] 准确度=14/30 流利度=13/30 断句语调=13/25 发音=8/15
+
+[总评] 206 个词错 29 处，准确率 85.9% —— 十五次里最低，可 29 处里有 11 处是没读。
+    真正读错的 19 处全挤在第 57 页；第 58 页读出声的那 72 个词只错了 1 处。
+    这一份就看这三条：
+    * **第 6 条整条跳过去了** —— “6. I could not leave the kingdom without getting
+        permission.” 10 个词一个音都没有。读完第 5 条就直接去念生词表了
+    * **59 个词连着一处没错** —— 第 58 页第 2 到第 4 条，93 词/分，
+        是十五次里最长的一段干净朗读（上一次最长 30 个词）
+    * **词尾连着第六次没改** —— sport、amazed、continued、talked、agree 五处
+
+[跳过] 186.7-245.35 = 念生词表
+    录音一共 4 分 5 秒，末尾 58 秒念的是第 48–50 页那份生词表（二十来个词），
+    不是这次要评的朗读 —— **时长里有、词数里没有**，四个数字都扣掉它再算，
+    图上灰底的就是它。课文最后一个词 objects 她在 186.6 秒就读完了。
+
+[卡壳] 47.2-50.8 = 卡 3.6 秒, 74.5-81.4 = 卡 6.9 秒, 116.4-135.8 = 翻页 19.4 秒
+    116.4 秒那 19.4 秒是**翻页**，从第 57 页翻到第 58 页 —— 这是今天最长的一次停。
+    74.5 秒那 6.9 秒在段落中间：“Everyone was amazed and thought I was wonderful!”
+    读完，下一段的 **As** 开不了口，哼了两声才起来。
+    47.2 秒那 3.6 秒卡在 sport 上，前面刚把它读成 sports。
+
+[分页] 这次读了 2 页
+第 57 页 = 1.6-116.4 秒 · 123 词 · 计错 17 处 · 语速 64 词/分
+第 58 页 = 135.8-186.7 秒 · 83 词（其中 11 个没读）· 计错 12 处 · 语速 85 词/分
+    **两页读得完全不一样**。第 57 页每 7 个词错一处，是整本书里密度最高的一页；
+    第 58 页是六条并列的短句（“I had to…” / “I could not…”），句式一条比一条熟，
+    读出声的 72 个词只错 1 处、还快了 21 词/分。
+    第 58 页那 12 处错里有 11 处是**没读**（序号 “1.” 和整条第 6 条），
+    不是读错 —— 她眼睛跳着走，一条读完没回头看还剩几条。
+
+[对比] 和上一页比
+    准确率 = 又降了 2.3 个点
+    正确词/分 = 快了 8 个
+    几个词一停 = 成串了一截
+    停顿占时长 = 高了 5.8 个点
+    88.2% → 85.9%，还在「偏难」这一档，是十五次里最低的一次。
+    **可这次低和上次低不是一回事**：上一次 238 个词错 28 处，处处是读错；
+    这一次 29 处里 11 处是整段跳过去没读，**真正读错的 19 处摊在 206 个词上，
+    每 10.8 个词错一处**，比上一次（每 8.5 个）稀。
+    49 → 57 个正确词/分，2.1 → 2.5 个词一组，两项都是这本书里最好的一次。
+    停顿占时长 33.8%，比上一次（28.0%）高 —— 大半是翻页那 19.4 秒。
+
+[比对] 逐字比对 · 这次读的三段里机器候选 35 处 · 逐条核完计错 29 处
+原文 the four sticks *firmly* into the ground
+实读 the four sticks *warmly* into the ground… *formly* into the ground
+    〔生词〕20.6 秒。firmly **读了两遍，两遍都没对** —— 先读成 warmly，
+    退回来又读成 formly。中间的 /ɜː/ 两次都落在了别的元音上
+原文 this new setup *if* any of the
+实读 this new setup *i* any of the
+    〔小词〕32.1 秒。if 读成 i，后面紧接着 any 也走了音（下一条）——
+    “if any” 这两个小词连读，糊成了一个 “I need”
+原文 new setup if *any* of the men
+识别成 new setup if *need* of the men
+    〔词形〕32.9 秒。**这处没听清** —— 转写只有 0.15 的把握，接在上一处后面，
+    具体读成了什么得你亲耳听 32–34 秒。计分时按错了 1 处算
+原文 any of the *men* fell they would
+实读 any of the *people* fell they would
+    〔词形〕37.0 秒。men 读成 people —— 下一页满篇都是 “the little people”，
+    这一句写的是 men。开读前把整句扫一遍就不会串
+原文 of the men *fell* they would land
+实读 of the men *fall* they would land
+    〔元音〕37.4 秒。fell 读成 fall，/e/ 张成了 /ɔː/。这一句是过去时
+原文 below the rope *It* made the sport
+实读 below the rope *and* made the sport
+    〔小词〕44.9 秒。句号后面新起一句的 It 读成了 and，两句连成了一句
+原文 It made the *sport* much safer and
+实读 It made the *sports* much safer and
+    〔词尾〕46.5 秒。sport 读成 sports，多了个 -s；读完又在这儿拖了 3.6 秒
+原文 and the king *praised* me for my
+实读 and the king *raised* me for my
+    〔辅音〕56.9 秒。praised 读成 raised —— 开头的 pr- 只剩一个 r
+原文 my cleverness He *even* called it a
+实读 my cleverness He *ever* called it a
+    〔辅音〕61.1 秒。even 读成 ever，中间的 /v/ 后面那个 /n/ 没出来
+原文 invention Everyone was *amazed* and thought I
+实读 invention Everyone was *amazing* and thought I
+    〔词尾〕69.6 秒。amazed 读成 amazing —— 这一句是「大家很惊讶」，不是「很惊人」
+原文 went on I *continued* to ask the
+实读 went on I *continue* to ask the
+    〔词尾〕84.7 秒。continued 丢了 -d，又是词尾
+原文 the king to *set* me free Finally
+实读 the king to *send* me free Finally
+    〔辅音〕89.2 秒。set 读成 send，-t 变成了 -nd
+原文 to set me *free* Finally he said
+识别成 to set me *first* Finally he said
+    〔词形〕90.2 秒。**这处没听清** —— free 听着像 first，具体读成了什么
+    得你亲耳听 89–92 秒那一句。计分时按错了 1 处算，如果其实读对了，准确率是 86.4%
+原文 said I have *talked* to my advisers
+实读 said I have *take* to my advisers
+    〔词尾〕93.0 秒。talked 读成 take，-ed 没出来
+原文 about you We *agree* that you have
+实读 about you We *agreed* that you have
+    〔词尾〕100.0 秒。这次反过来 —— agree 多读出一个 -d
+原文 people I will *set* you free if
+实读 people I will *send* you free if
+    〔辅音〕109.4 秒。set 又读成 send，**同一个词今天第二遍**。
+    这一遍后面的 free 读对了
+原文 you make six *promises* The promises were
+实读 you make six *problem* The promises were
+    〔词形〕114.1 秒。promises 读成 problem —— 两个词开头都是 pro-，后半截岔了
+原文 The promises were *1* I had to
+实读 The promises were *（漏读）* I had to
+    〔漏读〕序号 “1.” 跳过去了。后面 2.–5. 四个序号都读了
+原文 to others in *Lilliput* 5 I had
+实读 to others in *little part* 5 I had
+    〔专名〕177.8 秒。Lilliput 又读成「little part」—— Lilli- 不是 little。
+    上一次这个名字出现 5 次、5 次都是这个音，这次只出现一次，还是它
+原文 carry heavy objects *6* I could not
+实读 carry heavy objects *（没读）* I could not
+    〔漏读〕**第 6 条整条跳过去了** —— 从这个序号起 10 个词一个音都没有。
+    读完第 5 条的 objects（186.6 秒）停了 6 秒，接着念的就是第 48–50 页那份生词表
+原文 heavy objects 6 *I* could not leave
+实读 heavy objects 6 *（没读）* could not leave
+    〔漏读〕第 6 条第 2 个词
+原文 objects 6 I *could* not leave the
+实读 objects 6 I *（没读）* not leave the
+    〔漏读〕第 6 条第 3 个词
+原文 6 I could *not* leave the kingdom
+实读 6 I could *（没读）* leave the kingdom
+    〔漏读〕第 6 条第 4 个词
+原文 I could not *leave* the kingdom without
+实读 I could not *（没读）* the kingdom without
+    〔漏读〕第 6 条第 5 个词
+原文 could not leave *the* kingdom without getting
+实读 could not leave *（没读）* kingdom without getting
+    〔漏读〕第 6 条第 6 个词
+原文 not leave the *kingdom* without getting permission
+实读 not leave the *（没读）* without getting permission
+    〔漏读〕第 6 条第 7 个词
+原文 leave the kingdom *without* getting permission
+实读 leave the kingdom *（没读）* getting permission
+    〔漏读〕第 6 条第 8 个词
+原文 the kingdom without *getting* permission
+实读 the kingdom without *（没读）* permission
+    〔漏读〕第 6 条第 9 个词
+原文 kingdom without getting *permission*
+实读 kingdom without getting *（没读）*
+    〔漏读〕第 6 条第 10 个词
+
+[磕巴] 退回去重来、多读了词的地方 · 3 处
+*with* tied each corner to a strong stick
+    10.6 秒。“tied each corner **with**… to a strong stick” —— 多冒出一个 with，
+    随即自己顺过去了。
+*step is … set up* with this new setup if any
+    26.0 秒。setup 试了两遍：先读成 “step is”，再退回来读对了 “set up”。
+    **第二遍是对的**，后面接的 if any 才走了音。
+*you* you have been good to our
+    101.2 秒。you 读了两遍才接上，中间不到一秒。
+
+[亮点]
+**“I had to help the country in war and peace. 2. Before I could visit the capital, I had to give a two-hour warning so the little people could get out of the street. 3. I could not step on the little people or the animals. 4. I had to carry important messages from the king to others in”** —— **59 个词连着一处没错**，139.4 秒读到 177.4 秒、**93 词/分**，是这十五次里最长的一段干净朗读，上一次最长那段是 30 个词。里面有 capital、warning、important、messages 四个长词，一个都没卡。
+**“Thankfully, I had a smart idea. I took out my handkerchief and tied each corner to a strong stick. Then, I planted the four sticks”** —— 开场 **25 个词没错**，也是 93 词/分。**handkerchief 这个词今天出现两次，两次都读对了** —— 9 月 10 日那次它还读成了 hunkerchief。
+**第 58 页读出声的 72 个词只错 1 处。** 六条并列的短句越读越顺，比第 57 页快 21 词/分。
+**57 个正确词/分、2.5 个词一组 —— 两项都是《格列佛游记》这本里最好的一次。**
+
+[三件事]
+👀 读完一条抬眼看一眼还剩几条
+    今天 29 处错里有 11 处不是读错，是**没读**：序号 “1.” 和整条第 6 条
+    （10 个词）。第 58 页是 1.–6. 六条并列，读完第 5 条就直接翻去念生词表了。
+    **下次读这种带序号的列表，每读完一条用手指往下点一下，读到 6. 再收。**
+🔚 词尾连着第六次没改：sport · amazed · continued · talked · agree
+    五处里三处是丢（sport 多了 -s、continued 丢了 -d、talked 丢了 -ed），
+    两处是方向反了（amazed 读成 amazing、agree 多出一个 -d）。
+    **每句最后一个词多含半拍再往下读**，这五个词各念三遍，
+    念到自己听得见那个 -s / -d / -ed。
+🔊 set 这个词两遍都读成了 send
+    89.2 秒 “set me free”、109.4 秒 “set you free”，两次都把 -t 读成了 -nd。
+    **对着镜子看口型**：set 的收尾是舌尖顶住上齿龈马上断掉，send 要先出鼻音再收。
+    连着念 set / send / set / send 十遍，听自己两个词是不是一个音。
+
+[斜线]
+With this new setup,
+if any of the men fell,
+they would land safely
+on the handkerchief
+below the rope.
+
+[尺子]
+    85.9% 落在「偏难」这一档 —— 比上一次（88.2%）又往左挪了一截，是十五次里最低。
+        206 个词错 29 处，**其中 11 处是整段没读**；真正读错的 19 处摊下来
+        每 10.8 个词一处，比上一次（每 8.5 个）稀。
+    57 个正确词/分钟，比上一次（49）快 8 个，过了**三年级秋季 10 百分位**（40），
+        离 25 百分位（59）只差 2 个。母语常模只当参照系，不是及格线。
+    平均 2.5 个词一组，比上一次（2.1）成串了一截，是这本书里最好的一次，
+        仍按第 2 级放着。
+
+[怎么来的]
+**准确率 85.9%**（读对 177 / 划线共 206 词）。替换、漏读、读错音计错；插入的词和退回去重读只算不流利、不计错。上面的比对列了 29 条、计错 29 处，一条对一处；末尾那连着的 10 条就是没读的第 6 条，一个词一条。机器给的 35 处候选里撤下 17 条：**10 条**是对齐把末尾那份生词表的词拉去顶了没读的第 6 条；**3 条**是同音、转写分不出（advisers / advisors，序号 “2.” 和 “4.” 读作 two / four）；**3 条**是卡壳时哼的语气声占了小词的位；**1 条**是拖长的含混音占了 sport 的位 —— 她读的 sport 多了个 -s，已按词尾计 1 处，不在这儿重复算。
+**每分钟正确词数 57**（WCPM）= 读对的 177 词 ÷ 186.7 秒 × 60。录音一共 4 分 5 秒，末尾 58 秒念的是第 48–50 页那份生词表，不算进时长，图上灰底的就是它。
+**断句**取 84 次停顿（灰底那段的不算），平均 2.5 个词一组。停顿阈值取「说话声级 − 10 dB」，和前面十四次同一把尺子。
+这次是 9 月 11 日的录音，第 57–58 页的划线三段，《格列佛游记》这本的第三次。**发音这一项没有一个音一个音地听过**，是从录音里推出来的，不如亲耳听准，所以这一项的分给得保守；any 和 free 那两处标了存疑，编号出的是 ?。

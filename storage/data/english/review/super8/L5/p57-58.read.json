@@ -1,0 +1,3837 @@
+{
+  "acoustics" : {
+    "duration" : 245.35,
+    "pause_count" : 120,
+    "pause_ratio" : 0.38,
+    "pause_total" : 93.21,
+    "pauses" : [
+      {
+        "dur" : 0.51,
+        "end" : 0.51,
+        "start" : 0
+      },
+      {
+        "dur" : 1.49,
+        "end" : 8.12,
+        "start" : 6.63
+      },
+      {
+        "dur" : 0.41,
+        "end" : 8.97,
+        "start" : 8.56
+      },
+      {
+        "dur" : 0.3,
+        "end" : 11.42,
+        "start" : 11.12
+      },
+      {
+        "dur" : 0.35,
+        "end" : 12.05,
+        "start" : 11.7
+      },
+      {
+        "dur" : 0.84,
+        "end" : 14.66,
+        "start" : 13.82
+      },
+      {
+        "dur" : 1.11,
+        "end" : 18.81,
+        "start" : 17.7
+      },
+      {
+        "dur" : 0.62,
+        "end" : 21.18,
+        "start" : 20.56
+      },
+      {
+        "dur" : 0.82,
+        "end" : 22.78,
+        "start" : 21.96
+      },
+      {
+        "dur" : 0.41,
+        "end" : 24.48,
+        "start" : 24.07
+      },
+      {
+        "dur" : 0.28,
+        "end" : 26.6,
+        "start" : 26.32
+      },
+      {
+        "dur" : 0.68,
+        "end" : 27.74,
+        "start" : 27.06
+      },
+      {
+        "dur" : 0.77,
+        "end" : 29.78,
+        "start" : 29.01
+      },
+      {
+        "dur" : 0.86,
+        "end" : 31.49,
+        "start" : 30.63
+      },
+      {
+        "dur" : 0.4,
+        "end" : 32.22,
+        "start" : 31.82
+      },
+      {
+        "dur" : 0.34,
+        "end" : 34.65,
+        "start" : 34.31
+      },
+      {
+        "dur" : 0.75,
+        "end" : 35.47,
+        "start" : 34.72
+      },
+      {
+        "dur" : 0.37,
+        "end" : 36.78,
+        "start" : 36.41
+      },
+      {
+        "dur" : 0.84,
+        "end" : 39.11,
+        "start" : 38.27
+      },
+      {
+        "dur" : 0.58,
+        "end" : 43.67,
+        "start" : 43.09
+      },
+      {
+        "dur" : 0.47,
+        "end" : 45.34,
+        "start" : 44.87
+      },
+      {
+        "dur" : 0.41,
+        "end" : 47.53,
+        "start" : 47.12
+      },
+      {
+        "dur" : 0.31,
+        "end" : 47.94,
+        "start" : 47.63
+      },
+      {
+        "dur" : 2.14,
+        "end" : 50.32,
+        "start" : 48.18
+      },
+      {
+        "dur" : 0.28,
+        "end" : 51.54,
+        "start" : 51.26
+      },
+      {
+        "dur" : 0.3,
+        "end" : 55.41,
+        "start" : 55.11
+      },
+      {
+        "dur" : 0.39,
+        "end" : 58.16,
+        "start" : 57.77
+      },
+      {
+        "dur" : 0.66,
+        "end" : 60.78,
+        "start" : 60.12
+      },
+      {
+        "dur" : 0.48,
+        "end" : 61.86,
+        "start" : 61.38
+      },
+      {
+        "dur" : 1.05,
+        "end" : 64.18,
+        "start" : 63.13
+      },
+      {
+        "dur" : 1.47,
+        "end" : 68.36,
+        "start" : 66.89
+      },
+      {
+        "dur" : 0.88,
+        "end" : 72.01,
+        "start" : 71.13
+      },
+      {
+        "dur" : 0.29,
+        "end" : 72.69,
+        "start" : 72.4
+      },
+      {
+        "dur" : 0.32,
+        "end" : 73.05,
+        "start" : 72.73
+      },
+      {
+        "dur" : 0.3,
+        "end" : 75.33,
+        "start" : 75.03
+      },
+      {
+        "dur" : 0.8,
+        "end" : 76.26,
+        "start" : 75.46
+      },
+      {
+        "dur" : 0.55,
+        "end" : 77,
+        "start" : 76.45
+      },
+      {
+        "dur" : 1.94,
+        "end" : 79.11,
+        "start" : 77.17
+      },
+      {
+        "dur" : 1.07,
+        "end" : 80.31,
+        "start" : 79.24
+      },
+      {
+        "dur" : 0.56,
+        "end" : 81.13,
+        "start" : 80.57
+      },
+      {
+        "dur" : 0.36,
+        "end" : 86.03,
+        "start" : 85.67
+      },
+      {
+        "dur" : 0.5,
+        "end" : 87.17,
+        "start" : 86.67
+      },
+      {
+        "dur" : 0.48,
+        "end" : 88.26,
+        "start" : 87.78
+      },
+      {
+        "dur" : 0.41,
+        "end" : 92.47,
+        "start" : 92.06
+      },
+      {
+        "dur" : 0.43,
+        "end" : 94.39,
+        "start" : 93.96
+      },
+      {
+        "dur" : 0.57,
+        "end" : 95.91,
+        "start" : 95.34
+      },
+      {
+        "dur" : 0.3,
+        "end" : 98.24,
+        "start" : 97.94
+      },
+      {
+        "dur" : 0.39,
+        "end" : 102.17,
+        "start" : 101.78
+      },
+      {
+        "dur" : 0.94,
+        "end" : 104.34,
+        "start" : 103.4
+      },
+      {
+        "dur" : 0.6,
+        "end" : 105.13,
+        "start" : 104.53
+      },
+      {
+        "dur" : 0.35,
+        "end" : 111.95,
+        "start" : 111.6
+      },
+      {
+        "dur" : 0.69,
+        "end" : 113.49,
+        "start" : 112.8
+      },
+      {
+        "dur" : 1.88,
+        "end" : 115.75,
+        "start" : 113.87
+      },
+      {
+        "dur" : 6.16,
+        "end" : 122.73,
+        "start" : 116.57
+      },
+      {
+        "dur" : 1.09,
+        "end" : 124.86,
+        "start" : 123.77
+      },
+      {
+        "dur" : 0.31,
+        "end" : 125.2,
+        "start" : 124.89
+      },
+      {
+        "dur" : 0.81,
+        "end" : 126.69,
+        "start" : 125.88
+      },
+      {
+        "dur" : 0.33,
+        "end" : 127.06,
+        "start" : 126.73
+      },
+      {
+        "dur" : 0.42,
+        "end" : 128.47,
+        "start" : 128.05
+      },
+      {
+        "dur" : 0.96,
+        "end" : 129.46,
+        "start" : 128.5
+      },
+      {
+        "dur" : 1.33,
+        "end" : 132.52,
+        "start" : 131.19
+      },
+      {
+        "dur" : 1.64,
+        "end" : 134.87,
+        "start" : 133.23
+      },
+      {
+        "dur" : 0.3,
+        "end" : 137.08,
+        "start" : 136.78
+      },
+      {
+        "dur" : 0.61,
+        "end" : 138.11,
+        "start" : 137.5
+      },
+      {
+        "dur" : 0.47,
+        "end" : 139.08,
+        "start" : 138.61
+      },
+      {
+        "dur" : 0.28,
+        "end" : 143.55,
+        "start" : 143.27
+      },
+      {
+        "dur" : 0.62,
+        "end" : 144.45,
+        "start" : 143.83
+      },
+      {
+        "dur" : 1.85,
+        "end" : 146.36,
+        "start" : 144.51
+      },
+      {
+        "dur" : 0.46,
+        "end" : 150.33,
+        "start" : 149.87
+      },
+      {
+        "dur" : 0.38,
+        "end" : 151.61,
+        "start" : 151.23
+      },
+      {
+        "dur" : 0.59,
+        "end" : 158.56,
+        "start" : 157.97
+      },
+      {
+        "dur" : 0.25,
+        "end" : 158.83,
+        "start" : 158.58
+      },
+      {
+        "dur" : 0.35,
+        "end" : 159.67,
+        "start" : 159.32
+      },
+      {
+        "dur" : 0.26,
+        "end" : 160.1,
+        "start" : 159.84
+      },
+      {
+        "dur" : 1.8,
+        "end" : 162.53,
+        "start" : 160.73
+      },
+      {
+        "dur" : 0.68,
+        "end" : 163.5,
+        "start" : 162.82
+      },
+      {
+        "dur" : 0.32,
+        "end" : 164.94,
+        "start" : 164.62
+      },
+      {
+        "dur" : 0.92,
+        "end" : 169.64,
+        "start" : 168.72
+      },
+      {
+        "dur" : 0.4,
+        "end" : 173.62,
+        "start" : 173.22
+      },
+      {
+        "dur" : 0.57,
+        "end" : 176.29,
+        "start" : 175.72
+      },
+      {
+        "dur" : 1.54,
+        "end" : 179.82,
+        "start" : 178.28
+      },
+      {
+        "dur" : 0.45,
+        "end" : 180.72,
+        "start" : 180.27
+      },
+      {
+        "dur" : 0.59,
+        "end" : 183.21,
+        "start" : 182.62
+      },
+      {
+        "dur" : 1.19,
+        "end" : 187.73,
+        "start" : 186.54
+      },
+      {
+        "dur" : 2.25,
+        "end" : 190.16,
+        "start" : 187.91
+      },
+      {
+        "dur" : 0.55,
+        "end" : 191.2,
+        "start" : 190.65
+      },
+      {
+        "dur" : 0.46,
+        "end" : 192.24,
+        "start" : 191.78
+      },
+      {
+        "dur" : 0.6,
+        "end" : 193.98,
+        "start" : 193.38
+      },
+      {
+        "dur" : 0.33,
+        "end" : 194.87,
+        "start" : 194.54
+      },
+      {
+        "dur" : 2.22,
+        "end" : 197.28,
+        "start" : 195.06
+      },
+      {
+        "dur" : 0.29,
+        "end" : 198.55,
+        "start" : 198.26
+      },
+      {
+        "dur" : 0.39,
+        "end" : 202.16,
+        "start" : 201.77
+      },
+      {
+        "dur" : 0.62,
+        "end" : 205.09,
+        "start" : 204.47
+      },
+      {
+        "dur" : 0.34,
+        "end" : 206.32,
+        "start" : 205.98
+      },
+      {
+        "dur" : 0.34,
+        "end" : 208.14,
+        "start" : 207.8
+      },
+      {
+        "dur" : 0.84,
+        "end" : 210.46,
+        "start" : 209.62
+      },
+      {
+        "dur" : 0.44,
+        "end" : 211.86,
+        "start" : 211.42
+      },
+      {
+        "dur" : 1.34,
+        "end" : 213.89,
+        "start" : 212.55
+      },
+      {
+        "dur" : 0.34,
+        "end" : 214.99,
+        "start" : 214.65
+      },
+      {
+        "dur" : 2.12,
+        "end" : 217.39,
+        "start" : 215.27
+      },
+      {
+        "dur" : 0.27,
+        "end" : 218.75,
+        "start" : 218.48
+      },
+      {
+        "dur" : 0.46,
+        "end" : 219.23,
+        "start" : 218.77
+      },
+      {
+        "dur" : 0.26,
+        "end" : 219.93,
+        "start" : 219.67
+      },
+      {
+        "dur" : 0.73,
+        "end" : 221.02,
+        "start" : 220.29
+      },
+      {
+        "dur" : 1.45,
+        "end" : 223.07,
+        "start" : 221.62
+      },
+      {
+        "dur" : 1.31,
+        "end" : 225.12,
+        "start" : 223.81
+      },
+      {
+        "dur" : 0.71,
+        "end" : 225.85,
+        "start" : 225.14
+      },
+      {
+        "dur" : 0.99,
+        "end" : 226.87,
+        "start" : 225.88
+      },
+      {
+        "dur" : 0.94,
+        "end" : 227.84,
+        "start" : 226.9
+      },
+      {
+        "dur" : 0.36,
+        "end" : 228.94,
+        "start" : 228.58
+      },
+      {
+        "dur" : 0.34,
+        "end" : 232.73,
+        "start" : 232.39
+      },
+      {
+        "dur" : 0.3,
+        "end" : 233.11,
+        "start" : 232.81
+      },
+      {
+        "dur" : 2.03,
+        "end" : 235.29,
+        "start" : 233.26
+      },
+      {
+        "dur" : 0.32,
+        "end" : 236.47,
+        "start" : 236.15
+      },
+      {
+        "dur" : 0.28,
+        "end" : 237.1,
+        "start" : 236.82
+      },
+      {
+        "dur" : 1.86,
+        "end" : 239.11,
+        "start" : 237.25
+      },
+      {
+        "dur" : 1.7,
+        "end" : 242.1,
+        "start" : 240.4
+      },
+      {
+        "dur" : 0.77,
+        "end" : 242.88,
+        "start" : 242.11
+      },
+      {
+        "dur" : 0.41,
+        "end" : 243.8,
+        "start" : 243.39
+      },
+      {
+        "dur" : 1.02,
+        "end" : 245.23,
+        "start" : 244.21
+      }
+    ],
+    "source" : "30968.MP4",
+    "speech_time" : 152.14,
+    "threshold_db" : -33.1
+  },
+  "alignment" : {
+    "accuracy" : 83,
+    "correctWordCount" : 171,
+    "diffs" : [
+      {
+        "category" : "extra",
+        "confidence" : 0.497,
+        "context" : "tied each corner to a strong stick",
+        "end" : 11.7,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "with",
+        "refIndex" : 15,
+        "start" : 10.62,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.583,
+        "context" : "the four sticks firmly into the ground",
+        "end" : 19.62,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "warmly",
+        "refIndex" : 25,
+        "start" : 17.88,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.991,
+        "context" : "the four sticks firmly into the ground",
+        "end" : 19.92,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "into",
+        "refIndex" : 25,
+        "start" : 19.62,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.497,
+        "context" : "the four sticks firmly into the ground",
+        "end" : 20.58,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "the",
+        "refIndex" : 25,
+        "start" : 19.92,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.259,
+        "context" : "the four sticks firmly into the ground",
+        "end" : 22.08,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "formly",
+        "ref" : "firmly",
+        "refIndex" : 25,
+        "start" : 20.58,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.26 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.089,
+        "context" : "with this new setup if any of",
+        "end" : 27.24,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "step",
+        "refIndex" : 32,
+        "start" : 26.04,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.09 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.244,
+        "context" : "with this new setup if any of",
+        "end" : 28.92,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "is",
+        "refIndex" : 32,
+        "start" : 27.24,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.24 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.123,
+        "context" : "this new setup if any of the",
+        "end" : 32.1,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "it",
+        "refIndex" : 33,
+        "start" : 30.78,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.12 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "function",
+        "confidence" : 0.486,
+        "context" : "this new setup if any of the",
+        "end" : 32.88,
+        "kind" : "substitute",
+        "label" : "小词",
+        "read" : "i",
+        "ref" : "if",
+        "refIndex" : 33,
+        "start" : 32.1,
+        "suggest" : "count",
+        "why" : "两个都是小词，读串了。这类错扎堆出现就是眼睛跑在手指前面"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.148,
+        "context" : "new setup if any of the men",
+        "end" : 33.42,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "need",
+        "ref" : "any",
+        "refIndex" : 34,
+        "start" : 32.88,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.15 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.902,
+        "context" : "any of the men fell they would",
+        "end" : 37.38,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "people",
+        "ref" : "men",
+        "refIndex" : 37,
+        "start" : 37.02,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.534,
+        "context" : "of the men fell they would land",
+        "end" : 38.46,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "fall",
+        "ref" : "fell",
+        "refIndex" : 38,
+        "start" : 37.38,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "function",
+        "confidence" : 0.86,
+        "context" : "below the rope it made the sport",
+        "end" : 45.72,
+        "kind" : "substitute",
+        "label" : "小词",
+        "read" : "and",
+        "ref" : "it",
+        "refIndex" : 49,
+        "start" : 44.94,
+        "suggest" : "count",
+        "why" : "两个都是小词，读串了。这类错扎堆出现就是眼睛跑在手指前面"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.419,
+        "context" : "it made the sport much safer and",
+        "end" : 47.1,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "sports",
+        "refIndex" : 52,
+        "start" : 46.5,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.219,
+        "context" : "it made the sport much safer and",
+        "end" : 50.76,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "but",
+        "ref" : "sport",
+        "refIndex" : 52,
+        "start" : 47.16,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.22 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.229,
+        "context" : "and the king praised me for my",
+        "end" : 57.84,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "raised",
+        "ref" : "praised",
+        "refIndex" : 58,
+        "start" : 56.94,
+        "suggest" : "count",
+        "why" : "原文是「praised」，开头的 p- 丢了。识别器对这处只有 0.23 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.85,
+        "context" : "my cleverness he even called it a",
+        "end" : 62.16,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "ever",
+        "ref" : "even",
+        "refIndex" : 64,
+        "start" : 61.08,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.221,
+        "context" : "even called it a marvelous invention everyone",
+        "end" : 64.92,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "um",
+        "ref" : "a",
+        "refIndex" : 67,
+        "start" : 63.3,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.22 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.994,
+        "context" : "invention everyone was amazed and thought i",
+        "end" : 69.96,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "amazing",
+        "ref" : "amazed",
+        "refIndex" : 72,
+        "start" : 69.6,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.275,
+        "context" : "as time went on i continued to",
+        "end" : 83.52,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "uh",
+        "ref" : "on",
+        "refIndex" : 81,
+        "start" : 83.1,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.28 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.063,
+        "context" : "time went on i continued to ask",
+        "end" : 84.66,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "uh",
+        "ref" : "i",
+        "refIndex" : 82,
+        "start" : 83.52,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.06 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.688,
+        "context" : "went on i continued to ask the",
+        "end" : 84.84,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "continue",
+        "ref" : "continued",
+        "refIndex" : 83,
+        "start" : 84.66,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.803,
+        "context" : "the king to set me free finally",
+        "end" : 89.58,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "send",
+        "ref" : "set",
+        "refIndex" : 89,
+        "start" : 89.22,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.504,
+        "context" : "to set me free finally he said",
+        "end" : 90.78,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "first",
+        "ref" : "free",
+        "refIndex" : 91,
+        "start" : 90.18,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.168,
+        "context" : "said i have talked to my advisers",
+        "end" : 93.54,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "take",
+        "ref" : "talked",
+        "refIndex" : 97,
+        "start" : 93,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.17 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.643,
+        "context" : "talked to my advisers about you we",
+        "end" : 97.92,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "advisors",
+        "ref" : "advisers",
+        "refIndex" : 100,
+        "start" : 96.24,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.692,
+        "context" : "about you we agree that you have",
+        "end" : 100.38,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "agreed",
+        "ref" : "agree",
+        "refIndex" : 104,
+        "start" : 99.96,
+        "suggest" : "count",
+        "why" : "原文是「agree」，读出来多了个词尾 -d"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.174,
+        "context" : "we agree that you have been good",
+        "end" : 102.06,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "you",
+        "refIndex" : 106,
+        "start" : 101.16,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.17 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.93,
+        "context" : "people i will set you free if",
+        "end" : 109.92,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "send",
+        "ref" : "set",
+        "refIndex" : 115,
+        "start" : 109.38,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.693,
+        "context" : "you make six promises the promises were",
+        "end" : 116.4,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "problem",
+        "ref" : "promises",
+        "refIndex" : 122,
+        "start" : 114.12,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "omitted",
+        "context" : "the promises were one i had to",
+        "kind" : "omit",
+        "label" : "漏读",
+        "ref" : "one",
+        "refIndex" : 126,
+        "suggest" : "count",
+        "why" : "整个词跳过去了"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.346,
+        "context" : "war and peace two before i could",
+        "end" : 147,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "to",
+        "ref" : "two",
+        "refIndex" : 137,
+        "start" : 143.76,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.35 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.43,
+        "context" : "or the animals four i had to",
+        "end" : 169.86,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "for",
+        "ref" : "four",
+        "refIndex" : 173,
+        "start" : 168.66,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.128,
+        "context" : "to others in lilliput five i had",
+        "end" : 177.78,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "little",
+        "refIndex" : 186,
+        "start" : 177.42,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.13 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.657,
+        "context" : "to others in lilliput five i had",
+        "end" : 178.32,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "part",
+        "ref" : "lilliput",
+        "refIndex" : 186,
+        "start" : 177.78,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.526,
+        "context" : "carry heavy objects six i could not",
+        "end" : 198.36,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "solar",
+        "refIndex" : 196,
+        "start" : 192.66,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.375,
+        "context" : "carry heavy objects six i could not",
+        "end" : 200.7,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "diligent",
+        "refIndex" : 196,
+        "start" : 198.42,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.624,
+        "context" : "carry heavy objects six i could not",
+        "end" : 201.9,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "abandon",
+        "refIndex" : 196,
+        "start" : 200.7,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.521,
+        "context" : "carry heavy objects six i could not",
+        "end" : 203.58,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "arrows",
+        "refIndex" : 196,
+        "start" : 201.9,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.1,
+        "context" : "carry heavy objects six i could not",
+        "end" : 204.6,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "suggestor",
+        "refIndex" : 196,
+        "start" : 203.58,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.10 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.699,
+        "context" : "carry heavy objects six i could not",
+        "end" : 206.04,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "enormous",
+        "refIndex" : 196,
+        "start" : 204.6,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.583,
+        "context" : "carry heavy objects six i could not",
+        "end" : 207.84,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "communicate",
+        "refIndex" : 196,
+        "start" : 206.04,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.579,
+        "context" : "carry heavy objects six i could not",
+        "end" : 209.46,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "belongings",
+        "refIndex" : 196,
+        "start" : 207.84,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.564,
+        "context" : "carry heavy objects six i could not",
+        "end" : 211.56,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "invention",
+        "refIndex" : 196,
+        "start" : 209.52,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.378,
+        "context" : "carry heavy objects six i could not",
+        "end" : 212.46,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "palm",
+        "refIndex" : 196,
+        "start" : 211.56,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.337,
+        "context" : "carry heavy objects six i could not",
+        "end" : 215.4,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "advisor",
+        "refIndex" : 196,
+        "start" : 212.46,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.34 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.557,
+        "context" : "carry heavy objects six i could not",
+        "end" : 218.46,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "advisor",
+        "ref" : "six",
+        "refIndex" : 196,
+        "start" : 215.52,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.42,
+        "context" : "heavy objects six i could not leave",
+        "end" : 220.2,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "custom",
+        "ref" : "i",
+        "refIndex" : 197,
+        "start" : 218.52,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.369,
+        "context" : "objects six i could not leave the",
+        "end" : 221.52,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "though",
+        "ref" : "could",
+        "refIndex" : 198,
+        "start" : 220.2,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.661,
+        "context" : "six i could not leave the kingdom",
+        "end" : 223.74,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "attack",
+        "ref" : "not",
+        "refIndex" : 199,
+        "start" : 221.64,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.538,
+        "context" : "i could not leave the kingdom without",
+        "end" : 228.78,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "anchor",
+        "ref" : "leave",
+        "refIndex" : 200,
+        "start" : 223.8,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.793,
+        "context" : "could not leave the kingdom without getting",
+        "end" : 229.98,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "emergency",
+        "ref" : "the",
+        "refIndex" : 201,
+        "start" : 228.78,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.87,
+        "context" : "not leave the kingdom without getting permission",
+        "end" : 230.64,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "made",
+        "ref" : "kingdom",
+        "refIndex" : 202,
+        "start" : 229.98,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.355,
+        "context" : "leave the kingdom without getting permission",
+        "end" : 236.1,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "red",
+        "ref" : "without",
+        "refIndex" : 203,
+        "start" : 230.76,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.359,
+        "context" : "the kingdom without getting permission",
+        "end" : 237.42,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "feast",
+        "ref" : "getting",
+        "refIndex" : 204,
+        "start" : 236.1,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.556,
+        "context" : "kingdom without getting permission",
+        "end" : 240.12,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "robot",
+        "ref" : "permission",
+        "refIndex" : 205,
+        "start" : 237.48,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      }
+    ],
+    "readWordCount" : 228,
+    "refTimes" : [
+      1.62,
+      1.8,
+      2.1,
+      2.64,
+      3.12,
+      4.32,
+      4.56,
+      4.86,
+      5.28,
+      5.64,
+      7.08,
+      8.4,
+      9.6,
+      10.08,
+      10.62,
+      12.24,
+      12.54,
+      13.14,
+      13.8,
+      15.42,
+      15.6,
+      16.38,
+      16.74,
+      17.04,
+      17.82,
+      22.08,
+      23.1,
+      23.4,
+      24.12,
+      24.72,
+      25.44,
+      26.04,
+      30.78,
+      32.88,
+      33.42,
+      36.48,
+      37.02,
+      37.38,
+      38.46,
+      39.48,
+      40.08,
+      40.62,
+      41.4,
+      42.3,
+      42.36,
+      43.26,
+      44.16,
+      44.4,
+      44.94,
+      45.72,
+      46.26,
+      46.5,
+      50.76,
+      51.96,
+      53.88,
+      54.3,
+      56.16,
+      56.94,
+      57.84,
+      58.5,
+      58.92,
+      59.22,
+      60.18,
+      61.08,
+      62.16,
+      62.7,
+      63.3,
+      64.92,
+      65.7,
+      66.6,
+      69.3,
+      69.6,
+      69.96,
+      70.8,
+      72.18,
+      73.32,
+      73.62,
+      74.52,
+      81.42,
+      81.9,
+      83.1,
+      83.52,
+      84.66,
+      84.84,
+      85.5,
+      86.16,
+      87.42,
+      88.74,
+      89.22,
+      89.58,
+      90.18,
+      90.78,
+      91.56,
+      91.68,
+      92.28,
+      92.7,
+      93,
+      93.54,
+      94.74,
+      96.24,
+      97.92,
+      98.82,
+      99.9,
+      99.96,
+      100.38,
+      101.16,
+      102.36,
+      102.72,
+      103.08,
+      106.5,
+      106.98,
+      107.58,
+      107.82,
+      109.02,
+      109.38,
+      109.92,
+      110.4,
+      110.82,
+      111.66,
+      112.08,
+      112.44,
+      114,
+      116.4,
+      135.84,
+      136.56,
+      138.84,
+      null,
+      139.38,
+      139.68,
+      139.98,
+      140.64,
+      141.12,
+      141.42,
+      142.32,
+      142.74,
+      143.1,
+      143.64,
+      147,
+      147.18,
+      147.6,
+      147.9,
+      148.44,
+      149.1,
+      150.06,
+      150.6,
+      150.96,
+      151.74,
+      152.04,
+      153.12,
+      154.08,
+      154.98,
+      155.4,
+      155.76,
+      156.42,
+      156.84,
+      157.5,
+      157.68,
+      159.12,
+      159.78,
+      160.08,
+      160.56,
+      162.66,
+      163.86,
+      164.22,
+      164.64,
+      165.3,
+      165.66,
+      166.2,
+      166.5,
+      167.04,
+      167.7,
+      168,
+      168.66,
+      169.86,
+      170.28,
+      170.64,
+      171.6,
+      172.2,
+      172.98,
+      173.76,
+      174.72,
+      175.02,
+      175.38,
+      176.7,
+      176.88,
+      177.42,
+      178.32,
+      180.06,
+      181.02,
+      181.44,
+      182.16,
+      183.6,
+      184.68,
+      185.16,
+      185.7,
+      186.6,
+      218.46,
+      220.2,
+      221.52,
+      223.74,
+      228.78,
+      229.98,
+      230.64,
+      236.1,
+      237.42,
+      240.12
+    ],
+    "refWordCount" : 206,
+    "wcpm" : 42
+  },
+  "pages" : [
+    {
+      "end" : 116.4,
+      "errors" : 21,
+      "extras" : 9,
+      "matched" : 123,
+      "page" : 57,
+      "start" : 1.62,
+      "words" : 123
+    },
+    {
+      "end" : 240.12,
+      "errors" : 14,
+      "extras" : 12,
+      "matched" : 82,
+      "page" : 58,
+      "start" : 135.84,
+      "words" : 83
+    }
+  ],
+  "refSuspects" : [
+    {
+      "page" : 57,
+      "suggestions" : [
+        "each",
+        "cash",
+        "caca"
+      ],
+      "word" : "cach"
+    }
+  ],
+  "reference" : "Thankfully, I had a smart idea. I took out my handkerchief and tied each\ncorner to a strong stick. Then, I planted the four sticks firmly into the ground.\nWith this new setup, if any of the men fell, they would land safely on the\nhandkerchief below the rope. It made the sport much safer, and the king praised\nme for my cleverness. He even called it a marvelous invention. Everyone was\namazed and thought I was wonderful!\nAs time went on, I continued to ask the king to set me free. Finally, he said, \"I\nhave talked to my advisers about you. We agree that you have been good to our\npeople. I will set you free if you make six promises.\"\nThe promises were:\n1. I had to help the country in war and peace.\n2. Before I could visit the capital, I had to give a two-hour warning so the\nlittle people could get out of the street.\n3. I could not step on the little people or the animals.\n4. I had to carry important messages from the king to others in Lilliput.\n5. I had to help workers carry heavy objects.\n6. I could not leave the kingdom without getting permission.",
+  "slug" : "super8/L5/p57-58",
+  "transcript" : {
+    "alternatives" : [
+      {
+        "end" : 1.8,
+        "start" : 0,
+        "texts" : [
+          "Thankfully, I",
+          "Thankfully I"
+        ]
+      },
+      {
+        "end" : 3.12,
+        "start" : 1.8,
+        "texts" : [
+          "had a smart"
+        ]
+      },
+      {
+        "end" : 4.38,
+        "start" : 3.12,
+        "texts" : [
+          "idea.",
+          "idea",
+          "idea,"
+        ]
+      },
+      {
+        "end" : 5.64,
+        "start" : 4.38,
+        "texts" : [
+          "I took out my"
+        ]
+      },
+      {
+        "end" : 7.14,
+        "start" : 5.64,
+        "texts" : [
+          "handkerchief.",
+          "hunkerchief.",
+          "hankerchief.",
+          "handkerchief,",
+          "handkerchief"
+        ]
+      },
+      {
+        "end" : 8.4,
+        "start" : 7.14,
+        "texts" : [
+          "And",
+          "and"
+        ]
+      },
+      {
+        "end" : 10.62,
+        "start" : 8.4,
+        "texts" : [
+          "tied each corner"
+        ]
+      },
+      {
+        "end" : 11.7,
+        "start" : 10.62,
+        "texts" : [
+          "with",
+          "went"
+        ]
+      },
+      {
+        "end" : 12.54,
+        "start" : 11.7,
+        "texts" : [
+          "to a"
+        ]
+      },
+      {
+        "end" : 13.92,
+        "start" : 12.54,
+        "texts" : [
+          "strong stick.",
+          "draw stick.",
+          "drumstick"
+        ]
+      },
+      {
+        "end" : 15.6,
+        "start" : 13.92,
+        "texts" : [
+          "Then I",
+          "The I",
+          "Then, I",
+          "The, I"
+        ]
+      },
+      {
+        "end" : 17.04,
+        "start" : 15.6,
+        "texts" : [
+          "planted the 4"
+        ]
+      },
+      {
+        "end" : 17.88,
+        "start" : 17.04,
+        "texts" : [
+          "sticks.",
+          "sticks,"
+        ]
+      },
+      {
+        "end" : 33.42,
+        "start" : 17.88,
+        "texts" : [
+          "Warmly into the, formly, into the ground, with this new step, is, set up, it, I need,"
+        ]
+      },
+      {
+        "end" : 37.02,
+        "start" : 33.42,
+        "texts" : [
+          "Of, the",
+          "Of the"
+        ]
+      },
+      {
+        "end" : 42.36,
+        "start" : 37.02,
+        "texts" : [
+          "people fall, they would land safely on the"
+        ]
+      },
+      {
+        "end" : 44.16,
+        "start" : 42.36,
+        "texts" : [
+          "handkerchief, below",
+          "handkerchief below"
+        ]
+      },
+      {
+        "end" : 46.5,
+        "start" : 44.16,
+        "texts" : [
+          "the rope, and made the"
+        ]
+      },
+      {
+        "end" : 47.16,
+        "start" : 46.5,
+        "texts" : [
+          "sports.",
+          "sport."
+        ]
+      },
+      {
+        "end" : 51.96,
+        "start" : 47.16,
+        "texts" : [
+          "But much",
+          "Spot much",
+          "Spot, much"
+        ]
+      },
+      {
+        "end" : 54.3,
+        "start" : 51.96,
+        "texts" : [
+          "safer, and",
+          "safer and"
+        ]
+      },
+      {
+        "end" : 59.22,
+        "start" : 54.3,
+        "texts" : [
+          "the king raised me for my"
+        ]
+      },
+      {
+        "end" : 60.2399375,
+        "start" : 59.22,
+        "texts" : [
+          "cleverness.",
+          "cleverness,"
+        ]
+      },
+      {
+        "end" : 62.7,
+        "start" : 60.24,
+        "texts" : [
+          "He ever called"
+        ]
+      },
+      {
+        "end" : 65.7,
+        "start" : 62.7,
+        "texts" : [
+          "it, um, marvelous",
+          "it um, marvelous",
+          "it um marvelous"
+        ]
+      },
+      {
+        "end" : 66.72,
+        "start" : 65.7,
+        "texts" : [
+          "invention.",
+          "invention,",
+          "invention?"
+        ]
+      },
+      {
+        "end" : 69.6,
+        "start" : 66.72,
+        "texts" : [
+          "Everyone was"
+        ]
+      },
+      {
+        "end" : 70.8,
+        "start" : 69.6,
+        "texts" : [
+          "amazing and",
+          "amazing, and"
+        ]
+      },
+      {
+        "end" : 73.32,
+        "start" : 70.8,
+        "texts" : [
+          "thought I",
+          "thought, I"
+        ]
+      },
+      {
+        "end" : 73.62,
+        "start" : 73.32,
+        "texts" : [
+          "was"
+        ]
+      },
+      {
+        "end" : 74.58,
+        "start" : 73.62,
+        "texts" : [
+          "wonderful.",
+          "wonderful,"
+        ]
+      },
+      {
+        "end" : 93,
+        "start" : 80.58,
+        "texts" : [
+          "As time went, uh, uh, continue to ask the king to send me 1st finally, he said, I have"
+        ]
+      },
+      {
+        "end" : 94.74,
+        "start" : 93,
+        "texts" : [
+          "take to",
+          "ticked to"
+        ]
+      },
+      {
+        "end" : 102.72,
+        "start" : 94.74,
+        "texts" : [
+          "my advisors, about you, we agreed that you, you have"
+        ]
+      },
+      {
+        "end" : 106.5,
+        "start" : 102.72,
+        "texts" : [
+          "been good",
+          "been, good"
+        ]
+      },
+      {
+        "end" : 106.98,
+        "start" : 106.5,
+        "texts" : [
+          "to"
+        ]
+      },
+      {
+        "end" : 107.58,
+        "start" : 106.98,
+        "texts" : [
+          "our",
+          "all"
+        ]
+      },
+      {
+        "end" : 107.88,
+        "start" : 107.58,
+        "texts" : [
+          "people."
+        ]
+      },
+      {
+        "end" : 112.08,
+        "start" : 107.88,
+        "texts" : [
+          "I will send you free if you"
+        ]
+      },
+      {
+        "end" : 114.1199375,
+        "start" : 112.08,
+        "texts" : [
+          "make 6.",
+          "make 6",
+          "make, 6.",
+          "make six.",
+          "make."
+        ]
+      },
+      {
+        "end" : 116.46,
+        "start" : 114.12,
+        "texts" : [
+          "Problem.",
+          "Problem?",
+          "Problem",
+          "problem."
+        ]
+      },
+      {
+        "end" : 136.56,
+        "start" : 134.46,
+        "texts" : [
+          "The promises"
+        ]
+      },
+      {
+        "end" : 139.38,
+        "start" : 136.56,
+        "texts" : [
+          "were, I",
+          "were, why, I",
+          "were I",
+          "were, why I"
+        ]
+      },
+      {
+        "end" : 143.1,
+        "start" : 139.38,
+        "texts" : [
+          "had to help the country in war and"
+        ]
+      },
+      {
+        "end" : 143.76,
+        "start" : 143.1,
+        "texts" : [
+          "peace.",
+          "peace,"
+        ]
+      },
+      {
+        "end" : 147.18,
+        "start" : 143.76,
+        "texts" : [
+          "To, before",
+          "To before"
+        ]
+      },
+      {
+        "end" : 152.04,
+        "start" : 147.18,
+        "texts" : [
+          "I could visit the capital, I had to give"
+        ]
+      },
+      {
+        "end" : 153.72,
+        "start" : 152.04,
+        "texts" : [
+          "a 2",
+          "uh 2",
+          "uh, 2"
+        ]
+      },
+      {
+        "end" : 154.08,
+        "start" : 153.72,
+        "texts" : [
+          "hour"
+        ]
+      },
+      {
+        "end" : 155.4,
+        "start" : 154.08,
+        "texts" : [
+          "warning so",
+          "warning, so"
+        ]
+      },
+      {
+        "end" : 160.68,
+        "start" : 155.4,
+        "texts" : [
+          "the little people could get out of the street."
+        ]
+      },
+      {
+        "end" : 162.9,
+        "start" : 160.68,
+        "texts" : [
+          "3",
+          "Three",
+          "3.",
+          "Three.",
+          "Three,"
+        ]
+      },
+      {
+        "end" : 175.02,
+        "start" : 162.9,
+        "texts" : [
+          "I could not step on the little people or the animals. For I had to carry important messages from the"
+        ]
+      },
+      {
+        "end" : 176.7,
+        "start" : 175.02,
+        "texts" : [
+          "king to",
+          "king. To"
+        ]
+      },
+      {
+        "end" : 177.78,
+        "start" : 176.7,
+        "texts" : [
+          "others in little"
+        ]
+      },
+      {
+        "end" : 178.44,
+        "start" : 177.78,
+        "texts" : [
+          "part.",
+          "parts.",
+          "pot.",
+          "part?"
+        ]
+      },
+      {
+        "end" : 181.02,
+        "start" : 178.44,
+        "texts" : [
+          "5 I",
+          "Five I",
+          "Five, I"
+        ]
+      },
+      {
+        "end" : 185.7,
+        "start" : 181.02,
+        "texts" : [
+          "had to help workers carry heavy"
+        ]
+      },
+      {
+        "end" : 186.66,
+        "start" : 185.7,
+        "texts" : [
+          "objects.",
+          "object."
+        ]
+      },
+      {
+        "end" : 198.42,
+        "start" : 192.66,
+        "texts" : [
+          "Solar.",
+          "Solo.",
+          "Solar,",
+          "Solar",
+          "Solar!"
+        ]
+      },
+      {
+        "end" : 203.58,
+        "start" : 198.42,
+        "texts" : [
+          "Diligent, abandon, arrows,"
+        ]
+      },
+      {
+        "end" : 204.6,
+        "start" : 203.58,
+        "texts" : [
+          "suggestor,",
+          "segestra,",
+          "suggest,"
+        ]
+      },
+      {
+        "end" : 207.84,
+        "start" : 204.6,
+        "texts" : [
+          "enormous, communicate,"
+        ]
+      },
+      {
+        "end" : 209.5199375,
+        "start" : 207.84,
+        "texts" : [
+          "belongings.",
+          "belongings,"
+        ]
+      },
+      {
+        "end" : 211.56,
+        "start" : 209.52,
+        "texts" : [
+          "Invention,"
+        ]
+      },
+      {
+        "end" : 212.46,
+        "start" : 211.56,
+        "texts" : [
+          "palm,",
+          "palm."
+        ]
+      },
+      {
+        "end" : 215.52,
+        "start" : 212.46,
+        "texts" : [
+          "advisor.",
+          "Advisor.",
+          "advisors.",
+          "advisor,"
+        ]
+      },
+      {
+        "end" : 218.52,
+        "start" : 215.52,
+        "texts" : [
+          "Advisor.",
+          "advisor.",
+          "Adviser.",
+          "Advisor. Ad,",
+          "Advisor. Advisor"
+        ]
+      },
+      {
+        "end" : 221.64,
+        "start" : 218.52,
+        "texts" : [
+          "custom, though.",
+          "custom, though,",
+          "custom though.",
+          "Custom.",
+          "Custom, though."
+        ]
+      },
+      {
+        "end" : 223.7999375,
+        "start" : 221.64,
+        "texts" : [
+          "Attack.",
+          "Attack!",
+          "Attack?",
+          "Attack"
+        ]
+      },
+      {
+        "end" : 229.98,
+        "start" : 223.8,
+        "texts" : [
+          "Anchor, emergency",
+          "Anchor emergency",
+          "Anchor Emergency",
+          "Anchor. Emergency"
+        ]
+      },
+      {
+        "end" : 230.76,
+        "start" : 229.98,
+        "texts" : [
+          "made."
+        ]
+      },
+      {
+        "end" : 237.48,
+        "start" : 230.76,
+        "texts" : [
+          "Red. Feast.",
+          "Red feast.",
+          "Red, feast.",
+          "Red face.",
+          "Red."
+        ]
+      },
+      {
+        "end" : 240.1799375,
+        "start" : 237.48,
+        "texts" : [
+          "Robot.",
+          "robot.",
+          "Robot?",
+          "Robot.."
+        ]
+      }
+    ],
+    "contextPrimed" : true,
+    "locale" : "en-US",
+    "runs" : [
+      {
+        "confidence" : 0.896,
+        "end" : 1.62,
+        "start" : 0,
+        "text" : "Thankfully,"
+      },
+      {
+        "confidence" : 1,
+        "end" : 1.8,
+        "start" : 1.62,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 2.1,
+        "start" : 1.8,
+        "text" : " had"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 2.64,
+        "start" : 2.1,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.985,
+        "end" : 3.12,
+        "start" : 2.64,
+        "text" : " smart"
+      },
+      {
+        "confidence" : 0.642,
+        "end" : 4.32,
+        "start" : 3.12,
+        "text" : " idea."
+      },
+      {
+        "confidence" : 0.999,
+        "end" : 4.56,
+        "start" : 4.38,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.999,
+        "end" : 4.86,
+        "start" : 4.56,
+        "text" : " took"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 5.28,
+        "start" : 4.86,
+        "text" : " out"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 5.64,
+        "start" : 5.28,
+        "text" : " my"
+      },
+      {
+        "confidence" : 0.883,
+        "end" : 7.08,
+        "start" : 5.64,
+        "text" : " handkerchief."
+      },
+      {
+        "confidence" : 0.597,
+        "end" : 8.4,
+        "start" : 7.14,
+        "text" : " And"
+      },
+      {
+        "confidence" : 0.884,
+        "end" : 9.6,
+        "start" : 8.4,
+        "text" : " tied"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 10.08,
+        "start" : 9.6,
+        "text" : " each"
+      },
+      {
+        "confidence" : 0.982,
+        "end" : 10.62,
+        "start" : 10.08,
+        "text" : " corner"
+      },
+      {
+        "confidence" : 0.497,
+        "end" : 11.7,
+        "start" : 10.62,
+        "text" : " with"
+      },
+      {
+        "confidence" : 0.825,
+        "end" : 12.24,
+        "start" : 11.7,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.88,
+        "end" : 12.54,
+        "start" : 12.24,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.533,
+        "end" : 13.14,
+        "start" : 12.54,
+        "text" : " strong"
+      },
+      {
+        "confidence" : 0.632,
+        "end" : 13.8,
+        "start" : 13.14,
+        "text" : " stick."
+      },
+      {
+        "confidence" : 0.455,
+        "end" : 15.42,
+        "start" : 13.92,
+        "text" : " Then"
+      },
+      {
+        "confidence" : 0.96,
+        "end" : 15.6,
+        "start" : 15.42,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.957,
+        "end" : 16.38,
+        "start" : 15.6,
+        "text" : " planted"
+      },
+      {
+        "confidence" : 0.964,
+        "end" : 16.74,
+        "start" : 16.38,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.903,
+        "end" : 17.04,
+        "start" : 16.74,
+        "text" : " 4"
+      },
+      {
+        "confidence" : 0.684,
+        "end" : 17.82,
+        "start" : 17.04,
+        "text" : " sticks."
+      },
+      {
+        "confidence" : 0.583,
+        "end" : 19.62,
+        "start" : 17.88,
+        "text" : " Warmly"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 19.92,
+        "start" : 19.62,
+        "text" : " into"
+      },
+      {
+        "confidence" : 0.497,
+        "end" : 20.58,
+        "start" : 19.92,
+        "text" : " the,"
+      },
+      {
+        "confidence" : 0.259,
+        "end" : 22.08,
+        "start" : 20.58,
+        "text" : " formly,"
+      },
+      {
+        "confidence" : 0.662,
+        "end" : 23.1,
+        "start" : 22.08,
+        "text" : " into"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 23.4,
+        "start" : 23.1,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.508,
+        "end" : 24.12,
+        "start" : 23.4,
+        "text" : " ground,"
+      },
+      {
+        "confidence" : 0.848,
+        "end" : 24.72,
+        "start" : 24.12,
+        "text" : " with"
+      },
+      {
+        "confidence" : 0.722,
+        "end" : 25.44,
+        "start" : 24.72,
+        "text" : " this"
+      },
+      {
+        "confidence" : 0.652,
+        "end" : 26.04,
+        "start" : 25.44,
+        "text" : " new"
+      },
+      {
+        "confidence" : 0.089,
+        "end" : 27.24,
+        "start" : 26.04,
+        "text" : " step,"
+      },
+      {
+        "confidence" : 0.244,
+        "end" : 28.92,
+        "start" : 27.24,
+        "text" : " is,"
+      },
+      {
+        "confidence" : 0.56,
+        "end" : 30.12,
+        "start" : 28.92,
+        "text" : " set"
+      },
+      {
+        "confidence" : 0.198,
+        "end" : 30.78,
+        "start" : 30.12,
+        "text" : " up,"
+      },
+      {
+        "confidence" : 0.123,
+        "end" : 32.1,
+        "start" : 30.78,
+        "text" : " it,"
+      },
+      {
+        "confidence" : 0.486,
+        "end" : 32.88,
+        "start" : 32.1,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.148,
+        "end" : 33.42,
+        "start" : 32.88,
+        "text" : " need,"
+      },
+      {
+        "confidence" : 0.35,
+        "end" : 36.48,
+        "start" : 33.42,
+        "text" : " Of,"
+      },
+      {
+        "confidence" : 0.49,
+        "end" : 37.02,
+        "start" : 36.48,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.902,
+        "end" : 37.38,
+        "start" : 37.02,
+        "text" : " people"
+      },
+      {
+        "confidence" : 0.534,
+        "end" : 38.46,
+        "start" : 37.38,
+        "text" : " fall,"
+      },
+      {
+        "confidence" : 0.495,
+        "end" : 39.48,
+        "start" : 38.46,
+        "text" : " they"
+      },
+      {
+        "confidence" : 0.574,
+        "end" : 40.08,
+        "start" : 39.48,
+        "text" : " would"
+      },
+      {
+        "confidence" : 0.882,
+        "end" : 40.62,
+        "start" : 40.08,
+        "text" : " land"
+      },
+      {
+        "confidence" : 0.747,
+        "end" : 41.4,
+        "start" : 40.62,
+        "text" : " safely"
+      },
+      {
+        "confidence" : 0.977,
+        "end" : 42.3,
+        "start" : 41.4,
+        "text" : " on"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 42.36,
+        "start" : 42.3,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.803,
+        "end" : 43.26,
+        "start" : 42.36,
+        "text" : " handkerchief,"
+      },
+      {
+        "confidence" : 0.88,
+        "end" : 44.16,
+        "start" : 43.26,
+        "text" : " below"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 44.4,
+        "start" : 44.16,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.666,
+        "end" : 44.94,
+        "start" : 44.4,
+        "text" : " rope,"
+      },
+      {
+        "confidence" : 0.86,
+        "end" : 45.72,
+        "start" : 44.94,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.844,
+        "end" : 46.26,
+        "start" : 45.72,
+        "text" : " made"
+      },
+      {
+        "confidence" : 0.889,
+        "end" : 46.5,
+        "start" : 46.26,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.419,
+        "end" : 47.1,
+        "start" : 46.5,
+        "text" : " sports."
+      },
+      {
+        "confidence" : 0.219,
+        "end" : 50.76,
+        "start" : 47.16,
+        "text" : " But"
+      },
+      {
+        "confidence" : 0.605,
+        "end" : 51.96,
+        "start" : 50.76,
+        "text" : " much"
+      },
+      {
+        "confidence" : 0.513,
+        "end" : 53.88,
+        "start" : 51.96,
+        "text" : " safer,"
+      },
+      {
+        "confidence" : 0.865,
+        "end" : 54.3,
+        "start" : 53.88,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.471,
+        "end" : 56.16,
+        "start" : 54.3,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.591,
+        "end" : 56.94,
+        "start" : 56.16,
+        "text" : " king"
+      },
+      {
+        "confidence" : 0.229,
+        "end" : 57.84,
+        "start" : 56.94,
+        "text" : " raised"
+      },
+      {
+        "confidence" : 0.636,
+        "end" : 58.5,
+        "start" : 57.84,
+        "text" : " me"
+      },
+      {
+        "confidence" : 0.963,
+        "end" : 58.92,
+        "start" : 58.5,
+        "text" : " for"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 59.22,
+        "start" : 58.92,
+        "text" : " my"
+      },
+      {
+        "confidence" : 0.628,
+        "end" : 60.18,
+        "start" : 59.22,
+        "text" : " cleverness."
+      },
+      {
+        "confidence" : 0.368,
+        "end" : 61.08,
+        "start" : 60.24,
+        "text" : " He"
+      },
+      {
+        "confidence" : 0.85,
+        "end" : 62.16,
+        "start" : 61.08,
+        "text" : " ever"
+      },
+      {
+        "confidence" : 0.418,
+        "end" : 62.7,
+        "start" : 62.16,
+        "text" : " called"
+      },
+      {
+        "confidence" : 0.487,
+        "end" : 63.3,
+        "start" : 62.7,
+        "text" : " it,"
+      },
+      {
+        "confidence" : 0.221,
+        "end" : 64.92,
+        "start" : 63.3,
+        "text" : " um,"
+      },
+      {
+        "confidence" : 0.896,
+        "end" : 65.7,
+        "start" : 64.92,
+        "text" : " marvelous"
+      },
+      {
+        "confidence" : 0.773,
+        "end" : 66.6,
+        "start" : 65.7,
+        "text" : " invention."
+      },
+      {
+        "confidence" : 0.441,
+        "end" : 69.3,
+        "start" : 66.72,
+        "text" : " Everyone"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 69.6,
+        "start" : 69.3,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 69.96,
+        "start" : 69.6,
+        "text" : " amazing"
+      },
+      {
+        "confidence" : 0.974,
+        "end" : 70.8,
+        "start" : 69.96,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.769,
+        "end" : 72.18,
+        "start" : 70.8,
+        "text" : " thought"
+      },
+      {
+        "confidence" : 0.978,
+        "end" : 73.32,
+        "start" : 72.18,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 73.62,
+        "start" : 73.32,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.928,
+        "end" : 74.52,
+        "start" : 73.62,
+        "text" : " wonderful."
+      },
+      {
+        "confidence" : 0.66,
+        "end" : 81.42,
+        "start" : 80.58,
+        "text" : " As"
+      },
+      {
+        "confidence" : 0.488,
+        "end" : 81.9,
+        "start" : 81.42,
+        "text" : " time"
+      },
+      {
+        "confidence" : 0.384,
+        "end" : 83.1,
+        "start" : 81.9,
+        "text" : " went,"
+      },
+      {
+        "confidence" : 0.275,
+        "end" : 83.52,
+        "start" : 83.1,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.063,
+        "end" : 84.66,
+        "start" : 83.52,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.688,
+        "end" : 84.84,
+        "start" : 84.66,
+        "text" : " continue"
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 85.5,
+        "start" : 84.84,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.949,
+        "end" : 86.16,
+        "start" : 85.5,
+        "text" : " ask"
+      },
+      {
+        "confidence" : 0.667,
+        "end" : 87.42,
+        "start" : 86.16,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.774,
+        "end" : 88.74,
+        "start" : 87.42,
+        "text" : " king"
+      },
+      {
+        "confidence" : 0.636,
+        "end" : 89.22,
+        "start" : 88.74,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.803,
+        "end" : 89.58,
+        "start" : 89.22,
+        "text" : " send"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 90.18,
+        "start" : 89.58,
+        "text" : " me"
+      },
+      {
+        "confidence" : 0.504,
+        "end" : 90.78,
+        "start" : 90.18,
+        "text" : " 1st"
+      },
+      {
+        "confidence" : 0.42,
+        "end" : 91.56,
+        "start" : 90.78,
+        "text" : " finally,"
+      },
+      {
+        "confidence" : 0.948,
+        "end" : 91.68,
+        "start" : 91.56,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.543,
+        "end" : 92.28,
+        "start" : 91.68,
+        "text" : " said,"
+      },
+      {
+        "confidence" : 0.988,
+        "end" : 92.7,
+        "start" : 92.28,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 93,
+        "start" : 92.7,
+        "text" : " have"
+      },
+      {
+        "confidence" : 0.168,
+        "end" : 93.54,
+        "start" : 93,
+        "text" : " take"
+      },
+      {
+        "confidence" : 0.841,
+        "end" : 94.74,
+        "start" : 93.54,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.886,
+        "end" : 96.24,
+        "start" : 94.74,
+        "text" : " my"
+      },
+      {
+        "confidence" : 0.643,
+        "end" : 97.92,
+        "start" : 96.24,
+        "text" : " advisors,"
+      },
+      {
+        "confidence" : 0.891,
+        "end" : 98.82,
+        "start" : 97.92,
+        "text" : " about"
+      },
+      {
+        "confidence" : 0.421,
+        "end" : 99.9,
+        "start" : 98.82,
+        "text" : " you,"
+      },
+      {
+        "confidence" : 0.747,
+        "end" : 99.96,
+        "start" : 99.9,
+        "text" : " we"
+      },
+      {
+        "confidence" : 0.692,
+        "end" : 100.38,
+        "start" : 99.96,
+        "text" : " agreed"
+      },
+      {
+        "confidence" : 0.948,
+        "end" : 101.16,
+        "start" : 100.38,
+        "text" : " that"
+      },
+      {
+        "confidence" : 0.174,
+        "end" : 102.06,
+        "start" : 101.16,
+        "text" : " you,"
+      },
+      {
+        "confidence" : 0.842,
+        "end" : 102.36,
+        "start" : 102.06,
+        "text" : " you"
+      },
+      {
+        "confidence" : 0.98,
+        "end" : 102.72,
+        "start" : 102.36,
+        "text" : " have"
+      },
+      {
+        "confidence" : 0.65,
+        "end" : 103.08,
+        "start" : 102.72,
+        "text" : " been"
+      },
+      {
+        "confidence" : 0.912,
+        "end" : 106.5,
+        "start" : 103.08,
+        "text" : " good"
+      },
+      {
+        "confidence" : 0.936,
+        "end" : 106.98,
+        "start" : 106.5,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.442,
+        "end" : 107.58,
+        "start" : 106.98,
+        "text" : " our"
+      },
+      {
+        "confidence" : 0.825,
+        "end" : 107.82,
+        "start" : 107.58,
+        "text" : " people."
+      },
+      {
+        "confidence" : 0.966,
+        "end" : 109.02,
+        "start" : 107.88,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 109.38,
+        "start" : 109.02,
+        "text" : " will"
+      },
+      {
+        "confidence" : 0.93,
+        "end" : 109.92,
+        "start" : 109.38,
+        "text" : " send"
+      },
+      {
+        "confidence" : 0.978,
+        "end" : 110.4,
+        "start" : 109.92,
+        "text" : " you"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 110.82,
+        "start" : 110.4,
+        "text" : " free"
+      },
+      {
+        "confidence" : 0.979,
+        "end" : 111.66,
+        "start" : 110.82,
+        "text" : " if"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 112.08,
+        "start" : 111.66,
+        "text" : " you"
+      },
+      {
+        "confidence" : 0.984,
+        "end" : 112.44,
+        "start" : 112.08,
+        "text" : " make"
+      },
+      {
+        "confidence" : 0.482,
+        "end" : 114,
+        "start" : 112.44,
+        "text" : " 6."
+      },
+      {
+        "confidence" : 0.693,
+        "end" : 116.4,
+        "start" : 114.12,
+        "text" : " Problem."
+      },
+      {
+        "confidence" : 0.857,
+        "end" : 135.84,
+        "start" : 134.46,
+        "text" : " The"
+      },
+      {
+        "confidence" : 0.83,
+        "end" : 136.56,
+        "start" : 135.84,
+        "text" : " promises"
+      },
+      {
+        "confidence" : 0.224,
+        "end" : 138.84,
+        "start" : 136.56,
+        "text" : " were,"
+      },
+      {
+        "confidence" : 0.882,
+        "end" : 139.38,
+        "start" : 138.84,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.867,
+        "end" : 139.68,
+        "start" : 139.38,
+        "text" : " had"
+      },
+      {
+        "confidence" : 0.854,
+        "end" : 139.98,
+        "start" : 139.68,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.82,
+        "end" : 140.64,
+        "start" : 139.98,
+        "text" : " help"
+      },
+      {
+        "confidence" : 0.852,
+        "end" : 141.12,
+        "start" : 140.64,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.835,
+        "end" : 141.42,
+        "start" : 141.12,
+        "text" : " country"
+      },
+      {
+        "confidence" : 0.896,
+        "end" : 142.32,
+        "start" : 141.42,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.923,
+        "end" : 142.74,
+        "start" : 142.32,
+        "text" : " war"
+      },
+      {
+        "confidence" : 0.965,
+        "end" : 143.1,
+        "start" : 142.74,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.847,
+        "end" : 143.64,
+        "start" : 143.1,
+        "text" : " peace."
+      },
+      {
+        "confidence" : 0.346,
+        "end" : 147,
+        "start" : 143.76,
+        "text" : " To,"
+      },
+      {
+        "confidence" : 0.968,
+        "end" : 147.18,
+        "start" : 147,
+        "text" : " before"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 147.6,
+        "start" : 147.18,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 147.9,
+        "start" : 147.6,
+        "text" : " could"
+      },
+      {
+        "confidence" : 0.928,
+        "end" : 148.44,
+        "start" : 147.9,
+        "text" : " visit"
+      },
+      {
+        "confidence" : 0.964,
+        "end" : 149.1,
+        "start" : 148.44,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.542,
+        "end" : 150.06,
+        "start" : 149.1,
+        "text" : " capital,"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 150.6,
+        "start" : 150.06,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.98,
+        "end" : 150.96,
+        "start" : 150.6,
+        "text" : " had"
+      },
+      {
+        "confidence" : 0.951,
+        "end" : 151.74,
+        "start" : 150.96,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.878,
+        "end" : 152.04,
+        "start" : 151.74,
+        "text" : " give"
+      },
+      {
+        "confidence" : 0.235,
+        "end" : 153.12,
+        "start" : 152.04,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.925,
+        "end" : 153.72,
+        "start" : 153.12,
+        "text" : " 2"
+      },
+      {
+        "confidence" : 0.959,
+        "end" : 154.08,
+        "start" : 153.72,
+        "text" : " hour"
+      },
+      {
+        "confidence" : 0.84,
+        "end" : 154.98,
+        "start" : 154.08,
+        "text" : " warning"
+      },
+      {
+        "confidence" : 0.972,
+        "end" : 155.4,
+        "start" : 154.98,
+        "text" : " so"
+      },
+      {
+        "confidence" : 0.964,
+        "end" : 155.76,
+        "start" : 155.4,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.943,
+        "end" : 156.42,
+        "start" : 155.76,
+        "text" : " little"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 156.84,
+        "start" : 156.42,
+        "text" : " people"
+      },
+      {
+        "confidence" : 0.984,
+        "end" : 157.5,
+        "start" : 156.84,
+        "text" : " could"
+      },
+      {
+        "confidence" : 0.981,
+        "end" : 157.68,
+        "start" : 157.5,
+        "text" : " get"
+      },
+      {
+        "confidence" : 0.71,
+        "end" : 159.12,
+        "start" : 157.68,
+        "text" : " out"
+      },
+      {
+        "confidence" : 0.975,
+        "end" : 159.78,
+        "start" : 159.12,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 160.08,
+        "start" : 159.78,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.816,
+        "end" : 160.56,
+        "start" : 160.08,
+        "text" : " street."
+      },
+      {
+        "confidence" : 0.413,
+        "end" : 162.66,
+        "start" : 160.68,
+        "text" : " 3"
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 163.86,
+        "start" : 162.9,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.974,
+        "end" : 164.22,
+        "start" : 163.86,
+        "text" : " could"
+      },
+      {
+        "confidence" : 0.851,
+        "end" : 164.64,
+        "start" : 164.22,
+        "text" : " not"
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 165.3,
+        "start" : 164.64,
+        "text" : " step"
+      },
+      {
+        "confidence" : 0.981,
+        "end" : 165.66,
+        "start" : 165.3,
+        "text" : " on"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 166.2,
+        "start" : 165.66,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 166.5,
+        "start" : 166.2,
+        "text" : " little"
+      },
+      {
+        "confidence" : 0.984,
+        "end" : 167.04,
+        "start" : 166.5,
+        "text" : " people"
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 167.7,
+        "start" : 167.04,
+        "text" : " or"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 168,
+        "start" : 167.7,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.695,
+        "end" : 168.66,
+        "start" : 168,
+        "text" : " animals."
+      },
+      {
+        "confidence" : 0.43,
+        "end" : 169.86,
+        "start" : 168.66,
+        "text" : " For"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 170.28,
+        "start" : 169.86,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.95,
+        "end" : 170.64,
+        "start" : 170.28,
+        "text" : " had"
+      },
+      {
+        "confidence" : 0.923,
+        "end" : 171.6,
+        "start" : 170.64,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.985,
+        "end" : 172.2,
+        "start" : 171.6,
+        "text" : " carry"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 172.98,
+        "start" : 172.2,
+        "text" : " important"
+      },
+      {
+        "confidence" : 0.979,
+        "end" : 173.76,
+        "start" : 172.98,
+        "text" : " messages"
+      },
+      {
+        "confidence" : 0.984,
+        "end" : 174.72,
+        "start" : 173.76,
+        "text" : " from"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 175.02,
+        "start" : 174.72,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.862,
+        "end" : 175.38,
+        "start" : 175.02,
+        "text" : " king"
+      },
+      {
+        "confidence" : 0.868,
+        "end" : 176.7,
+        "start" : 175.38,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 176.88,
+        "start" : 176.7,
+        "text" : " others"
+      },
+      {
+        "confidence" : 0.951,
+        "end" : 177.42,
+        "start" : 176.88,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.128,
+        "end" : 177.78,
+        "start" : 177.42,
+        "text" : " little"
+      },
+      {
+        "confidence" : 0.657,
+        "end" : 178.32,
+        "start" : 177.78,
+        "text" : " part."
+      },
+      {
+        "confidence" : 0.543,
+        "end" : 180.06,
+        "start" : 178.44,
+        "text" : " 5"
+      },
+      {
+        "confidence" : 0.979,
+        "end" : 181.02,
+        "start" : 180.06,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.962,
+        "end" : 181.44,
+        "start" : 181.02,
+        "text" : " had"
+      },
+      {
+        "confidence" : 0.92,
+        "end" : 182.16,
+        "start" : 181.44,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.761,
+        "end" : 183.6,
+        "start" : 182.16,
+        "text" : " help"
+      },
+      {
+        "confidence" : 0.984,
+        "end" : 184.68,
+        "start" : 183.6,
+        "text" : " workers"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 185.16,
+        "start" : 184.68,
+        "text" : " carry"
+      },
+      {
+        "confidence" : 0.97,
+        "end" : 185.7,
+        "start" : 185.16,
+        "text" : " heavy"
+      },
+      {
+        "confidence" : 0.787,
+        "end" : 186.6,
+        "start" : 185.7,
+        "text" : " objects."
+      },
+      {
+        "confidence" : 0.526,
+        "end" : 198.36,
+        "start" : 192.66,
+        "text" : " Solar."
+      },
+      {
+        "confidence" : 0.375,
+        "end" : 200.7,
+        "start" : 198.42,
+        "text" : " Diligent,"
+      },
+      {
+        "confidence" : 0.624,
+        "end" : 201.9,
+        "start" : 200.7,
+        "text" : " abandon,"
+      },
+      {
+        "confidence" : 0.521,
+        "end" : 203.58,
+        "start" : 201.9,
+        "text" : " arrows,"
+      },
+      {
+        "confidence" : 0.1,
+        "end" : 204.6,
+        "start" : 203.58,
+        "text" : " suggestor,"
+      },
+      {
+        "confidence" : 0.699,
+        "end" : 206.04,
+        "start" : 204.6,
+        "text" : " enormous,"
+      },
+      {
+        "confidence" : 0.583,
+        "end" : 207.84,
+        "start" : 206.04,
+        "text" : " communicate,"
+      },
+      {
+        "confidence" : 0.579,
+        "end" : 209.46,
+        "start" : 207.84,
+        "text" : " belongings."
+      },
+      {
+        "confidence" : 0.564,
+        "end" : 211.56,
+        "start" : 209.52,
+        "text" : " Invention,"
+      },
+      {
+        "confidence" : 0.378,
+        "end" : 212.46,
+        "start" : 211.56,
+        "text" : " palm,"
+      },
+      {
+        "confidence" : 0.337,
+        "end" : 215.4,
+        "start" : 212.46,
+        "text" : " advisor."
+      },
+      {
+        "confidence" : 0.557,
+        "end" : 218.46,
+        "start" : 215.52,
+        "text" : " Advisor."
+      },
+      {
+        "confidence" : 0.42,
+        "end" : 220.2,
+        "start" : 218.52,
+        "text" : " custom,"
+      },
+      {
+        "confidence" : 0.369,
+        "end" : 221.52,
+        "start" : 220.2,
+        "text" : " though."
+      },
+      {
+        "confidence" : 0.661,
+        "end" : 223.74,
+        "start" : 221.64,
+        "text" : " Attack."
+      },
+      {
+        "confidence" : 0.538,
+        "end" : 228.78,
+        "start" : 223.8,
+        "text" : " Anchor,"
+      },
+      {
+        "confidence" : 0.793,
+        "end" : 229.98,
+        "start" : 228.78,
+        "text" : " emergency"
+      },
+      {
+        "confidence" : 0.87,
+        "end" : 230.64,
+        "start" : 229.98,
+        "text" : " made."
+      },
+      {
+        "confidence" : 0.355,
+        "end" : 236.1,
+        "start" : 230.76,
+        "text" : " Red."
+      },
+      {
+        "confidence" : 0.359,
+        "end" : 237.42,
+        "start" : 236.1,
+        "text" : " Feast."
+      },
+      {
+        "confidence" : 0.556,
+        "end" : 240.12,
+        "start" : 237.48,
+        "text" : " Robot."
+      }
+    ],
+    "source" : "super8-L5-p57-58-B53256C4-F29D-49A6-B87F-4F741367CE77.m4a"
+  },
+  "words" : [
+    "thankfully",
+    "i",
+    "had",
+    "a",
+    "smart",
+    "idea",
+    "i",
+    "took",
+    "out",
+    "my",
+    "handkerchief",
+    "and",
+    "tied",
+    "each",
+    "corner",
+    "with",
+    "to",
+    "a",
+    "strong",
+    "stick",
+    "then",
+    "i",
+    "planted",
+    "the",
+    "4",
+    "sticks",
+    "warmly",
+    "into",
+    "the",
+    "formly",
+    "into",
+    "the",
+    "ground",
+    "with",
+    "this",
+    "new",
+    "step",
+    "is",
+    "set",
+    "up",
+    "it",
+    "i",
+    "need",
+    "of",
+    "the",
+    "people",
+    "fall",
+    "they",
+    "would",
+    "land",
+    "safely",
+    "on",
+    "the",
+    "handkerchief",
+    "below",
+    "the",
+    "rope",
+    "and",
+    "made",
+    "the",
+    "sports",
+    "but",
+    "much",
+    "safer",
+    "and",
+    "the",
+    "king",
+    "raised",
+    "me",
+    "for",
+    "my",
+    "cleverness",
+    "he",
+    "ever",
+    "called",
+    "it",
+    "um",
+    "marvelous",
+    "invention",
+    "everyone",
+    "was",
+    "amazing",
+    "and",
+    "thought",
+    "i",
+    "was",
+    "wonderful",
+    "as",
+    "time",
+    "went",
+    "uh",
+    "uh",
+    "continue",
+    "to",
+    "ask",
+    "the",
+    "king",
+    "to",
+    "send",
+    "me",
+    "1st",
+    "finally",
+    "he",
+    "said",
+    "i",
+    "have",
+    "take",
+    "to",
+    "my",
+    "advisors",
+    "about",
+    "you",
+    "we",
+    "agreed",
+    "that",
+    "you",
+    "you",
+    "have",
+    "been",
+    "good",
+    "to",
+    "our",
+    "people",
+    "i",
+    "will",
+    "send",
+    "you",
+    "free",
+    "if",
+    "you",
+    "make",
+    "6",
+    "problem",
+    "the",
+    "promises",
+    "were",
+    "i",
+    "had",
+    "to",
+    "help",
+    "the",
+    "country",
+    "in",
+    "war",
+    "and",
+    "peace",
+    "to",
+    "before",
+    "i",
+    "could",
+    "visit",
+    "the",
+    "capital",
+    "i",
+    "had",
+    "to",
+    "give",
+    "a",
+    "2",
+    "hour",
+    "warning",
+    "so",
+    "the",
+    "little",
+    "people",
+    "could",
+    "get",
+    "out",
+    "of",
+    "the",
+    "street",
+    "3",
+    "i",
+    "could",
+    "not",
+    "step",
+    "on",
+    "the",
+    "little",
+    "people",
+    "or",
+    "the",
+    "animals",
+    "for",
+    "i",
+    "had",
+    "to",
+    "carry",
+    "important",
+    "messages",
+    "from",
+    "the",
+    "king",
+    "to",
+    "others",
+    "in",
+    "little",
+    "part",
+    "5",
+    "i",
+    "had",
+    "to",
+    "help",
+    "workers",
+    "carry",
+    "heavy",
+    "objects",
+    "solar",
+    "diligent",
+    "abandon",
+    "arrows",
+    "suggestor",
+    "enormous",
+    "communicate",
+    "belongings",
+    "invention",
+    "palm",
+    "advisor",
+    "advisor",
+    "custom",
+    "though",
+    "attack",
+    "anchor",
+    "emergency",
+    "made",
+    "red",
+    "feast",
+    "robot"
+  ]
+}
