@@ -1,0 +1,241 @@
+# 超8 · Lesson 6
+#
+# ── 正文的写法（见 src/generator/english/CLAUDE.md）
+# 报告正文只写**孩子的朗读**。机器为什么误判、我们怎么核的，全部留在这些 # 注释里。
+#
+# ── 基准核过了，划线范围没问题
+# p7 / p8 的 marked.png 逐词看过：两页各一个框，框内每个词都有橙框，没有整行漏掉的。
+# p7 = 121 词（两段）、p8 = 109 词（一段），合 230，和 words 对得上。
+# .ref.txt 这两页没有需要改的扫描错（今天那批 9 处 OCR 订正落在 p10/p11/p15/p18/p19/p21/p25）。
+#
+# ── [跳过] 只留末尾那 15.3 秒，草稿给的另一段**不跳**
+# 草稿把 165.8-187.7 也列成了跳过候选，核完是错的：那 21.9 秒她在试 peculiar
+# （转写记下的是 “and yeah uh pair p peace co pick”），是卡壳不是念别的东西，
+# 按口径卡壳不跳。真该跳的是 316.9-332.2 —— 她把 p8 末尾那个跨页的句子读完了
+# （“…her face / was lined with wrinkles, her hair was nearly white, and she walked stiffly.”），
+# 后半截印在第 9 页、这次没划线，时长里有、词数里没有，扣掉。
+#
+# ── 逐条核完：55 处候选 → 计错 34 处
+# 机器建议计错 31 处，全部照计。另外 24 处标的是「转写乱段 · 建议存疑」，分两种：
+#   · **计错 3 处**（125.0–138.7 秒）：转写文本自己就是连贯的 ——
+#     “causing the home to tumble. Trumble, Trumble, violent to live.”
+#     house→home、tremble 试了三遍没出来、violently→violent to live，
+#     三处都看得出是她在挣扎，不是转写乱掉。
+#   · **撤下 21 处**（98.0–110.4 的 6 处、185.0–223.9 的 12 处、291.8–300.7 的 3 处）：
+#     这三段对齐明显错位了 —— 185–224 秒那段转写里 “Peculiar” 明明出现了，
+#     却被算成 attire→tear；“Tickling sound when they moved” 读了两遍，
+#     对齐把第二遍当成了后面的词。错位之后逐条的「原文 vs 实读」不成立，
+#     判不出哪几个是她真读错的。
+#     ⚠️ **这 21 处得听录音才能定**，三段时刻是 98–110 秒 / 185–224 秒 / 292–301 秒。
+#     全算她错的话准确率是 76.1%，现在按不计错出的是 85.2% —— 差 9 个百分点。
+#     听完要调就改 errors 和 [评分]，[比对] 里把那几条按「识别成」补回来。
+#
+# ── 这次的错：生词 10 / 元音 7 / 词尾 6 / 专名 4 / 词形 4 / 小词 2 / 漏读 1
+# **生词头一次占到第一位**（前几次最多的是词尾）。10 处里 5 处是试了三五遍才过去的：
+# peculiar（21.9 秒）、sprinkled（23.1 秒）、pleats（7.9 秒）、undoubtedly（6.8 秒）、
+# tremble（三遍 tumble/trumble）。这一课的生词密度和前两册不是一个量级。
+# **词尾连着第七次没改**：toward→towards、showed→show、Quick→quickly、
+# shiny→shining、boots→boot、sprinkled→sprinkle。
+# **Aunt Em 四次全错**（Aunt→and 两次、Em→um 两次），Henry→harry 两次 ——
+# 专名和小词撞在一起，是整篇开头最先失分的地方。
+#
+# ── auto_bounds 这次照常用
+# 两页都是常规叙述段，句号就是句末，没有序号列表也没有引号内分句，推出来的位置对得上。
+
+date: 2026-09-14
+cat: 超8
+order: 7
+page: 7–8
+prev: super8/L5/p57-58
+book: 绿野仙踪
+part: 划线两段
+words: 230
+errors: 34
+score: 41
+naep: 2
+
+[评分] 准确度=14/30 流利度=9/30 断句语调=11/25 发音=7/15
+
+[总评] 新书第一课，生词把整段朗读拖住了
+    准确率 85.2%，和上一次（85.9%）几乎一样；真正变了的是速度 —— 每分钟读对的词
+    从 57 掉到 37。慢下来的时间几乎全花在五个词上：peculiar 试了五遍用掉 22 秒，
+    sprinkled 试了五遍用掉 23 秒，pleats、undoubtedly、tremble 各卡了七八秒。
+    这五处加起来 70 秒，占了整段录音的两成二。**她一个都没跳过去，全试出来了**，
+    这是好事；要练的是「开口之前先把长词拆开看一眼」，别在句子中间才第一次遇见它。
+
+[跳过] 316.9-332.2 = 读完了跨页的那半句
+    第 8 页最后一句话断在「her face」，后半截印在第 9 页、这次没划线。
+    她照着句子读完了，所以这 15.3 秒不算进上面那些数。
+
+[卡壳] 76.9-87.7 = 卡 10.8 秒, 165.8-187.7 = 卡 21.9 秒, 203.5-210.0 = 卡 6.5 秒, 242.9-250.9 = 卡 7.9 秒, 257.6-280.7 = 卡 23.1 秒, 307.6-314.5 = 卡 6.8 秒
+    六处停得久的，五处都卡在一个具体的词上：peculiar（166 秒起）、tinkling（204 秒起）、
+    pleats（243 秒起）、sprinkled（258 秒起）、undoubtedly（308 秒起）。
+    只有 77 秒那次不是 —— 那儿是「A single glance showed」换气没接上，哼了两声才起来。
+
+[分页] 这次读了 2 页
+第 7 页 = 1.0-146.0 秒 · 121 词 · 候选错 29 处 · 多读 24 处 · 语速 50 词/分
+第 8 页 = 150.7-316.9 秒 · 109 词 · 候选错 26 处 · 多读 39 处 · 语速 45 词/分（已扣掉读原文以外的 21.9 秒）
+    第 8 页更吃力：词少了 12 个，时间反而多花了 21 秒。那一段全是描写衣着的词
+    （peculiar、attire、tinkling、pleats、cuff、gown、shimmering），一句里能撞上两三个。
+
+[对比] 和上一页比
+    两次都是同一部手机录的视频，录音条件一样，可以直接比。
+
+[比对] 逐字比对 · 34 处
+原文 particular day Uncle *Henry* sat on the
+实读 particular day Uncle *harry* sat on the
+    〔专名〕 4.3 秒。Henry 读成 harry —— 这个名字这两页出现两次，两次都是这个音
+原文 day Uncle Henry *sat* on the doorstep
+实读 day Uncle Henry *says* on the doorstep
+    〔词形〕 5.0 秒。sat 看成了 says，两个词只差中间一个字母
+原文 his gaze fixed *anxiously* upon the unusually
+实读 his gaze fixed *stressedly* upon the unusually
+    〔生词〕 15.8 秒。anxiously 没读出来，换了个意思相近的词
+原文 anxiously upon the *unusually* gray sky Aunt
+实读 anxiously upon the *the* gray sky Aunt
+    〔生词〕 21.5 秒。unusually 前面试了一次 i usually，最后滑过去了
+原文 unusually gray sky *Aunt* Em was busy
+实读 unusually gray sky *and* Em was busy
+    〔小词〕 23.4 秒。Aunt 读成了 and
+原文 gray sky Aunt *Em* was busy washing
+实读 gray sky Aunt *um* was busy washing
+    〔专名〕 23.8 秒。Em 读成了哼的那一声
+原文 dishes Suddenly Uncle *Henry* stood up and
+实读 dishes Suddenly Uncle *harry* stood up and
+    〔专名〕 29.8 秒。Henry 第二次读成 harry
+原文 to his wife *Em* there's a cyclone
+实读 to his wife *（漏读）* there's a cyclone
+    〔漏读〕 整个词跳过去了
+原文 Em there's a *cyclone* coming I'll go
+实读 Em there's a *clone* coming I'll go
+    〔词形〕 43.0 秒。cyclone 开头的 cy- 丢了，读成了 clone
+原文 check on the *livestock* With that he
+实读 check on the *stuck* With that he
+    〔生词〕 51.8 秒。livestock 前面试了一次 left dog，没出来
+原文 that he hurried *toward* the sheds where
+实读 that he hurried *towards* the sheds where
+    〔词尾〕 55.0 秒。toward 读出来多了个 -s
+原文 hurried toward the *sheds* where the cows
+实读 hurried toward the *shy* where the cows
+    〔生词〕 55.8 秒。sheds 没读出来
+原文 sheds where the *cows* and horses were
+实读 sheds where the *car* and horses were
+    〔元音〕 60.1 秒。cows 的 /aʊ/ 读成了 car 的 /ɑː/
+原文 horses were kept *Aunt* Em stopped her
+实读 horses were kept *and* Em stopped her
+    〔小词〕 64.8 秒。Aunt 第二次读成 and
+原文 were kept Aunt *Em* stopped her work
+实读 were kept Aunt *um* stopped her work
+    〔专名〕 66.0 秒。Em 第二次读成哼的那一声
+原文 A single glance *showed* there was danger
+实读 A single glance *show* there was danger
+    〔词尾〕 87.7 秒。showed 少了 -ed，这一句是过去时
+原文 showed there was *danger* Quick Dorothy she
+实读 showed there was *dandra* Quick Dorothy she
+    〔生词〕 89.1 秒。danger 没读准
+原文 there was danger *Quick* Dorothy she screamed
+实读 there was danger *quickly* Dorothy she screamed
+    〔词尾〕 90.2 秒。Quick 读成了 quickly，这儿是喊话不是副词
+原文 and followed her *aunt* However halfway across
+实读 and followed her *arms* However halfway across
+    〔词形〕 115.3 秒。aunt 看成了 arms
+原文 roared causing the *house* to tremble violently
+实读 roared causing the *home* to tremble violently
+    〔元音〕 127.0 秒。house 读成了 home
+原文 the house to *tremble* violently Losing her
+实读 the house to *tumble* violently Losing her
+    〔生词〕 134.6 秒。tremble 试了三遍（tumble / trumble / trumble）都没出来
+原文 house to tremble *violently* Losing her balance
+实读 house to tremble *violent to live* Losing her balance
+    〔生词〕 134.9 秒。violently 拆成了三个音节往外蹦
+原文 her balance Dorothy *tumbled* to the floor
+实读 her balance Dorothy *trembled* to the floor
+    〔词形〕 143.0 秒。上一句的 tremble 和这一句的 tumbled 正好换了个个儿
+原文 her Three were *men* and one was
+实读 her Three were *man* and one was
+    〔元音〕 162.1 秒。men 的 /e/ 读成了 man 的 /æ/
+原文 that matched their *hats* and their shiny
+实读 that matched their *head* and their shiny
+    〔元音〕 225.0 秒。hats 读成了 head
+原文 hats and their *shiny* boots had a
+实读 hats and their *shining* boots had a
+    〔词尾〕 227.1 秒。shiny 读成了 shining
+原文 and their shiny *boots* had a deep
+实读 and their shiny *boot* had a deep
+    〔词尾〕 228.5 秒。boots 少了 -s
+原文 a deep blue *cuff* The woman had
+实读 a deep blue *cough* The woman had
+    〔元音〕 232.0 秒。cuff 的 /ʌ/ 读成了 cough 的 /ɒ/
+原文 woman had a *white* hat and a
+实读 woman had a *wet* hat and a
+    〔元音〕 236.4 秒。white 的长音读成了 wet 的短音
+原文 long dress with *pleats* flowing from her
+实读 long dress with *plate* flowing from her
+    〔生词〕 249.7 秒。pleats 试了 plate 没出来，这儿卡了 7.9 秒
+原文 Sparkling stars were *sprinkled* over her gown
+实读 Sparkling stars were *sprinkle* over her gown
+    〔词尾〕 276.5 秒。sprinkled 少了 -d。这个词前后试了五遍、卡了 23.1 秒
+原文 sprinkled over her *gown* shimmering like diamonds
+实读 sprinkled over her *gun* shimmering like diamonds
+    〔元音〕 287.3 秒。gown 的 /aʊ/ 读成了 gun 的 /ʌ/
+原文 over her gown *shimmering* like diamonds in
+实读 over her gown *shiny* like diamonds in
+    〔生词〕 288.3 秒。shimmering 换成了前面刚见过的 shiny
+原文 the woman was *undoubtedly* much older her
+实读 the woman was *t* much older her
+    〔生词〕 313.1 秒。undoubtedly 试了几遍只出来一个音，这儿卡了 6.8 秒
+
+[磕巴] 读了两遍才接上的地方 · 6 处
+*fixed fixed fixed* fixed anxiously upon the
+    8.6 秒。fixed 连读三遍才往下走，是开头还没进入状态
+*uh uh there was then uh* glance showed there was
+    77.0 秒。「A single glance showed」这句换气没接上，哼了两声才起来
+*and yeah uh pair p peace co pick* in peculiar attire They
+    165.9 秒。peculiar 试了五个音才出来，用掉 21.9 秒 —— 这一段最难的一个词
+*tumble trumble trumble violent* tremble violently Losing her
+    128.5 秒。tremble 连试三遍
+*spark sprinkling over her uh sprinkle sprinkles* sprinkled over her gown
+    257.6 秒。sprinkled 试了五遍，用掉 23.1 秒
+*hmm plate flowering from* pleats flowing from her
+    242.9 秒。pleats 和 flowing 连着两个词都没把握
+
+[亮点]
+On this particular day, Uncle Henry sat on the doorstep, his gaze fixed anxiously upon the **unusually gray sky**.
+    开头这一句读得最稳，一口气到底
+Aunt Em stopped her work and **rushed to the door**. A single glance showed there was danger.
+    短句子读得又快又准，标点停得也对
+**五个生词一个都没跳过去**
+    peculiar、sprinkled、pleats、undoubtedly、tremble，每一个都试到读出来为止。
+    这是最要紧的一条 —— 遇到不会的词肯跟它较劲，比读得快重要得多
+**句子读完了才停**
+    第 8 页最后那句话断在「her face」、后半截印在第 9 页，她照着句子读到了句号才停。
+    跟着句子走、不跟着划线走，这个习惯对着标点读的时候会一直帮她
+
+[三件事]
+🔍 开读之前，先把这一段里最长的三个词圈出来
+    这次拖住整段的是 peculiar、sprinkled、undoubtedly 这几个。开口前先找出来，
+    拆成音节念两遍（pe-cu-liar / sprin-kled / un-doubt-ed-ly），再从头读句子
+✂️ 每句最后一个词多含半拍
+    这次六处词尾错：toward→towards、showed→show、Quick→quickly、shiny→shining、
+    boots→boot、sprinkled→sprinkle。连着第七次了，都是句子说到最后松了劲
+👤 Aunt Em 和 Uncle Henry 单独念熟再放回句子
+    这两个名字这两页出现六次，错了六次。名字不用猜意思，念熟就行
+
+[斜线]
+On this particular day, /
+Uncle Henry sat on the doorstep, /
+his gaze fixed anxiously /
+upon the unusually gray sky.
+
+[尺子]
+    85.2% 落在「偏难」这一档 —— 和上一次（85.9%）基本持平。
+        230 个词错 34 处；这次的错有三成是第一次见的长词，不是读法上的老毛病。
+    37 个正确词/分钟：比上一次（57）慢了一大截，落在**二年级秋季 25 百分位**线上。
+        母语常模只当参照系，不是及格线。
+    平均 1.3 个词一组，比上一次更碎 —— 停的次数多，多半停在生词前面。
+
+[怎么来的]
+**准确率 85.2%**（读对 196 / 划线共 230 词）。替换、漏读、读错音计错；插入的词和退回去重读只算不流利、不计错。上面的比对列了 34 条、计错 34 处，一条对一处。另有三段录音（98–110 秒、185–224 秒、292–301 秒）听不清楚、判不出是不是读错，这次**没有计错** —— 想复核就听这三段，如果全算错，准确率是 76.1%。
+**每分钟正确词数 37**（WCPM）= 读对的 196 个词 ÷ 316.9 秒 × 60。末尾那 15.3 秒她读的是第 9 页的半句话，不算进来。
+**断句**取 174 次停顿里断在句子中间的那些，平均 1.3 个词一组。
+录音是手机拍的点读视频，332.2 秒；停顿按「说话声级 − 10 dB、持续 ≥0.25 秒」数；比对基准是第 7、8 页划线框住的那两段（230 词，逐词核过核对图）。**发音一项是从转写结果推断的**，不如亲耳听准。

@@ -1,0 +1,5979 @@
+{
+  "acoustics" : {
+    "duration" : 332.25,
+    "pause_count" : 181,
+    "pause_ratio" : 0.357,
+    "pause_total" : 118.57,
+    "pauses" : [
+      {
+        "dur" : 0.6,
+        "end" : 0.6,
+        "start" : 0
+      },
+      {
+        "dur" : 0.36,
+        "end" : 9.51,
+        "start" : 9.15
+      },
+      {
+        "dur" : 0.53,
+        "end" : 10.12,
+        "start" : 9.59
+      },
+      {
+        "dur" : 0.32,
+        "end" : 10.46,
+        "start" : 10.14
+      },
+      {
+        "dur" : 0.5,
+        "end" : 11.21,
+        "start" : 10.71
+      },
+      {
+        "dur" : 0.38,
+        "end" : 12.63,
+        "start" : 12.25
+      },
+      {
+        "dur" : 0.31,
+        "end" : 13.68,
+        "start" : 13.37
+      },
+      {
+        "dur" : 1.17,
+        "end" : 16.8,
+        "start" : 15.63
+      },
+      {
+        "dur" : 0.27,
+        "end" : 17.64,
+        "start" : 17.37
+      },
+      {
+        "dur" : 0.36,
+        "end" : 18.45,
+        "start" : 18.09
+      },
+      {
+        "dur" : 0.28,
+        "end" : 25.27,
+        "start" : 24.99
+      },
+      {
+        "dur" : 0.29,
+        "end" : 26.25,
+        "start" : 25.96
+      },
+      {
+        "dur" : 0.39,
+        "end" : 28.5,
+        "start" : 28.11
+      },
+      {
+        "dur" : 0.45,
+        "end" : 33.53,
+        "start" : 33.08
+      },
+      {
+        "dur" : 0.34,
+        "end" : 35.15,
+        "start" : 34.81
+      },
+      {
+        "dur" : 2.35,
+        "end" : 38.09,
+        "start" : 35.74
+      },
+      {
+        "dur" : 2.91,
+        "end" : 42.07,
+        "start" : 39.16
+      },
+      {
+        "dur" : 0.25,
+        "end" : 44.14,
+        "start" : 43.89
+      },
+      {
+        "dur" : 0.37,
+        "end" : 47.73,
+        "start" : 47.36
+      },
+      {
+        "dur" : 0.38,
+        "end" : 49.48,
+        "start" : 49.1
+      },
+      {
+        "dur" : 0.34,
+        "end" : 50.31,
+        "start" : 49.97
+      },
+      {
+        "dur" : 0.41,
+        "end" : 51.37,
+        "start" : 50.96
+      },
+      {
+        "dur" : 0.58,
+        "end" : 52.04,
+        "start" : 51.46
+      },
+      {
+        "dur" : 0.33,
+        "end" : 52.83,
+        "start" : 52.5
+      },
+      {
+        "dur" : 0.55,
+        "end" : 56.38,
+        "start" : 55.83
+      },
+      {
+        "dur" : 0.41,
+        "end" : 57.89,
+        "start" : 57.48
+      },
+      {
+        "dur" : 0.5,
+        "end" : 58.59,
+        "start" : 58.09
+      },
+      {
+        "dur" : 0.26,
+        "end" : 62.49,
+        "start" : 62.23
+      },
+      {
+        "dur" : 0.92,
+        "end" : 63.42,
+        "start" : 62.5
+      },
+      {
+        "dur" : 0.71,
+        "end" : 64.28,
+        "start" : 63.57
+      },
+      {
+        "dur" : 0.83,
+        "end" : 65.67,
+        "start" : 64.84
+      },
+      {
+        "dur" : 0.26,
+        "end" : 67.09,
+        "start" : 66.83
+      },
+      {
+        "dur" : 0.85,
+        "end" : 68.22,
+        "start" : 67.37
+      },
+      {
+        "dur" : 0.51,
+        "end" : 70.99,
+        "start" : 70.48
+      },
+      {
+        "dur" : 0.28,
+        "end" : 72.37,
+        "start" : 72.09
+      },
+      {
+        "dur" : 1.24,
+        "end" : 74.06,
+        "start" : 72.82
+      },
+      {
+        "dur" : 0.28,
+        "end" : 75.24,
+        "start" : 74.96
+      },
+      {
+        "dur" : 0.79,
+        "end" : 77.75,
+        "start" : 76.96
+      },
+      {
+        "dur" : 1.12,
+        "end" : 78.91,
+        "start" : 77.79
+      },
+      {
+        "dur" : 0.35,
+        "end" : 79.74,
+        "start" : 79.39
+      },
+      {
+        "dur" : 0.3,
+        "end" : 85.19,
+        "start" : 84.89
+      },
+      {
+        "dur" : 0.38,
+        "end" : 85.94,
+        "start" : 85.56
+      },
+      {
+        "dur" : 0.72,
+        "end" : 86.88,
+        "start" : 86.16
+      },
+      {
+        "dur" : 1.37,
+        "end" : 93.01,
+        "start" : 91.64
+      },
+      {
+        "dur" : 0.65,
+        "end" : 94.94,
+        "start" : 94.29
+      },
+      {
+        "dur" : 0.49,
+        "end" : 95.44,
+        "start" : 94.95
+      },
+      {
+        "dur" : 0.51,
+        "end" : 96.26,
+        "start" : 95.75
+      },
+      {
+        "dur" : 0.71,
+        "end" : 97.95,
+        "start" : 97.24
+      },
+      {
+        "dur" : 0.34,
+        "end" : 98.89,
+        "start" : 98.55
+      },
+      {
+        "dur" : 0.38,
+        "end" : 99.93,
+        "start" : 99.55
+      },
+      {
+        "dur" : 0.63,
+        "end" : 101.66,
+        "start" : 101.03
+      },
+      {
+        "dur" : 1.39,
+        "end" : 103.72,
+        "start" : 102.33
+      },
+      {
+        "dur" : 0.28,
+        "end" : 107.35,
+        "start" : 107.07
+      },
+      {
+        "dur" : 0.33,
+        "end" : 108.83,
+        "start" : 108.5
+      },
+      {
+        "dur" : 1.88,
+        "end" : 110.73,
+        "start" : 108.85
+      },
+      {
+        "dur" : 0.25,
+        "end" : 112.15,
+        "start" : 111.9
+      },
+      {
+        "dur" : 0.78,
+        "end" : 114.47,
+        "start" : 113.69
+      },
+      {
+        "dur" : 0.38,
+        "end" : 114.92,
+        "start" : 114.54
+      },
+      {
+        "dur" : 0.35,
+        "end" : 116.21,
+        "start" : 115.86
+      },
+      {
+        "dur" : 0.31,
+        "end" : 118.19,
+        "start" : 117.88
+      },
+      {
+        "dur" : 0.27,
+        "end" : 119.34,
+        "start" : 119.07
+      },
+      {
+        "dur" : 0.39,
+        "end" : 122.55,
+        "start" : 122.16
+      },
+      {
+        "dur" : 0.27,
+        "end" : 123.09,
+        "start" : 122.82
+      },
+      {
+        "dur" : 0.46,
+        "end" : 123.99,
+        "start" : 123.53
+      },
+      {
+        "dur" : 0.31,
+        "end" : 124.97,
+        "start" : 124.66
+      },
+      {
+        "dur" : 0.35,
+        "end" : 125.94,
+        "start" : 125.59
+      },
+      {
+        "dur" : 0.32,
+        "end" : 127.39,
+        "start" : 127.07
+      },
+      {
+        "dur" : 1.31,
+        "end" : 130.71,
+        "start" : 129.4
+      },
+      {
+        "dur" : 0.91,
+        "end" : 132.2,
+        "start" : 131.29
+      },
+      {
+        "dur" : 0.25,
+        "end" : 133.63,
+        "start" : 133.38
+      },
+      {
+        "dur" : 0.32,
+        "end" : 134.91,
+        "start" : 134.59
+      },
+      {
+        "dur" : 0.44,
+        "end" : 135.78,
+        "start" : 135.34
+      },
+      {
+        "dur" : 1.49,
+        "end" : 137.76,
+        "start" : 136.27
+      },
+      {
+        "dur" : 0.37,
+        "end" : 139.59,
+        "start" : 139.22
+      },
+      {
+        "dur" : 1.12,
+        "end" : 140.86,
+        "start" : 139.74
+      },
+      {
+        "dur" : 0.48,
+        "end" : 144.62,
+        "start" : 144.14
+      },
+      {
+        "dur" : 1.64,
+        "end" : 147.65,
+        "start" : 146.01
+      },
+      {
+        "dur" : 0.76,
+        "end" : 149.38,
+        "start" : 148.62
+      },
+      {
+        "dur" : 1.44,
+        "end" : 158.18,
+        "start" : 156.74
+      },
+      {
+        "dur" : 2.23,
+        "end" : 167.88,
+        "start" : 165.65
+      },
+      {
+        "dur" : 3.7,
+        "end" : 171.6,
+        "start" : 167.9
+      },
+      {
+        "dur" : 0.42,
+        "end" : 172.94,
+        "start" : 172.52
+      },
+      {
+        "dur" : 0.58,
+        "end" : 174.47,
+        "start" : 173.89
+      },
+      {
+        "dur" : 0.31,
+        "end" : 175.98,
+        "start" : 175.67
+      },
+      {
+        "dur" : 0.41,
+        "end" : 177.06,
+        "start" : 176.65
+      },
+      {
+        "dur" : 1.12,
+        "end" : 179.16,
+        "start" : 178.04
+      },
+      {
+        "dur" : 1.43,
+        "end" : 180.74,
+        "start" : 179.31
+      },
+      {
+        "dur" : 0.63,
+        "end" : 181.46,
+        "start" : 180.83
+      },
+      {
+        "dur" : 0.42,
+        "end" : 182.74,
+        "start" : 182.32
+      },
+      {
+        "dur" : 0.28,
+        "end" : 183.05,
+        "start" : 182.77
+      },
+      {
+        "dur" : 0.55,
+        "end" : 184.65,
+        "start" : 184.1
+      },
+      {
+        "dur" : 1.54,
+        "end" : 186.82,
+        "start" : 185.28
+      },
+      {
+        "dur" : 0.6,
+        "end" : 188.26,
+        "start" : 187.66
+      },
+      {
+        "dur" : 0.26,
+        "end" : 188.64,
+        "start" : 188.38
+      },
+      {
+        "dur" : 0.9,
+        "end" : 191.46,
+        "start" : 190.56
+      },
+      {
+        "dur" : 0.3,
+        "end" : 192.06,
+        "start" : 191.76
+      },
+      {
+        "dur" : 0.45,
+        "end" : 192.93,
+        "start" : 192.48
+      },
+      {
+        "dur" : 0.37,
+        "end" : 193.31,
+        "start" : 192.94
+      },
+      {
+        "dur" : 0.47,
+        "end" : 194.23,
+        "start" : 193.76
+      },
+      {
+        "dur" : 0.28,
+        "end" : 194.76,
+        "start" : 194.48
+      },
+      {
+        "dur" : 0.26,
+        "end" : 195.77,
+        "start" : 195.51
+      },
+      {
+        "dur" : 0.43,
+        "end" : 196.73,
+        "start" : 196.3
+      },
+      {
+        "dur" : 0.32,
+        "end" : 201.68,
+        "start" : 201.36
+      },
+      {
+        "dur" : 0.38,
+        "end" : 202.88,
+        "start" : 202.5
+      },
+      {
+        "dur" : 0.28,
+        "end" : 204.88,
+        "start" : 204.6
+      },
+      {
+        "dur" : 0.26,
+        "end" : 205.16,
+        "start" : 204.9
+      },
+      {
+        "dur" : 0.33,
+        "end" : 205.54,
+        "start" : 205.21
+      },
+      {
+        "dur" : 1.84,
+        "end" : 207.66,
+        "start" : 205.82
+      },
+      {
+        "dur" : 0.29,
+        "end" : 209.37,
+        "start" : 209.08
+      },
+      {
+        "dur" : 1.6,
+        "end" : 213.4,
+        "start" : 211.8
+      },
+      {
+        "dur" : 0.37,
+        "end" : 216.33,
+        "start" : 215.96
+      },
+      {
+        "dur" : 0.42,
+        "end" : 219.08,
+        "start" : 218.66
+      },
+      {
+        "dur" : 0.37,
+        "end" : 222.43,
+        "start" : 222.06
+      },
+      {
+        "dur" : 0.31,
+        "end" : 223.64,
+        "start" : 223.33
+      },
+      {
+        "dur" : 0.87,
+        "end" : 224.58,
+        "start" : 223.71
+      },
+      {
+        "dur" : 0.37,
+        "end" : 226.21,
+        "start" : 225.84
+      },
+      {
+        "dur" : 0.34,
+        "end" : 229.77,
+        "start" : 229.43
+      },
+      {
+        "dur" : 0.35,
+        "end" : 231.78,
+        "start" : 231.43
+      },
+      {
+        "dur" : 0.65,
+        "end" : 233.17,
+        "start" : 232.52
+      },
+      {
+        "dur" : 0.95,
+        "end" : 234.71,
+        "start" : 233.76
+      },
+      {
+        "dur" : 0.66,
+        "end" : 238.09,
+        "start" : 237.43
+      },
+      {
+        "dur" : 0.97,
+        "end" : 241.16,
+        "start" : 240.19
+      },
+      {
+        "dur" : 0.28,
+        "end" : 242.52,
+        "start" : 242.24
+      },
+      {
+        "dur" : 0.63,
+        "end" : 243.49,
+        "start" : 242.86
+      },
+      {
+        "dur" : 2.35,
+        "end" : 246.13,
+        "start" : 243.78
+      },
+      {
+        "dur" : 0.55,
+        "end" : 247.45,
+        "start" : 246.9
+      },
+      {
+        "dur" : 1.13,
+        "end" : 250.19,
+        "start" : 249.06
+      },
+      {
+        "dur" : 0.73,
+        "end" : 251.5,
+        "start" : 250.77
+      },
+      {
+        "dur" : 0.33,
+        "end" : 253.13,
+        "start" : 252.8
+      },
+      {
+        "dur" : 0.55,
+        "end" : 255.59,
+        "start" : 255.04
+      },
+      {
+        "dur" : 0.35,
+        "end" : 256.66,
+        "start" : 256.31
+      },
+      {
+        "dur" : 0.35,
+        "end" : 258.06,
+        "start" : 257.71
+      },
+      {
+        "dur" : 0.41,
+        "end" : 258.49,
+        "start" : 258.08
+      },
+      {
+        "dur" : 0.73,
+        "end" : 259.48,
+        "start" : 258.75
+      },
+      {
+        "dur" : 0.44,
+        "end" : 259.94,
+        "start" : 259.5
+      },
+      {
+        "dur" : 0.57,
+        "end" : 261.1,
+        "start" : 260.53
+      },
+      {
+        "dur" : 0.35,
+        "end" : 261.46,
+        "start" : 261.11
+      },
+      {
+        "dur" : 0.42,
+        "end" : 262.61,
+        "start" : 262.19
+      },
+      {
+        "dur" : 0.29,
+        "end" : 262.93,
+        "start" : 262.64
+      },
+      {
+        "dur" : 0.25,
+        "end" : 263.5,
+        "start" : 263.25
+      },
+      {
+        "dur" : 0.75,
+        "end" : 264.26,
+        "start" : 263.51
+      },
+      {
+        "dur" : 0.25,
+        "end" : 265.63,
+        "start" : 265.38
+      },
+      {
+        "dur" : 0.65,
+        "end" : 267.58,
+        "start" : 266.93
+      },
+      {
+        "dur" : 0.27,
+        "end" : 267.88,
+        "start" : 267.61
+      },
+      {
+        "dur" : 0.87,
+        "end" : 269.58,
+        "start" : 268.71
+      },
+      {
+        "dur" : 0.34,
+        "end" : 269.95,
+        "start" : 269.61
+      },
+      {
+        "dur" : 0.26,
+        "end" : 270.62,
+        "start" : 270.36
+      },
+      {
+        "dur" : 0.31,
+        "end" : 271.79,
+        "start" : 271.48
+      },
+      {
+        "dur" : 0.34,
+        "end" : 272.15,
+        "start" : 271.81
+      },
+      {
+        "dur" : 0.49,
+        "end" : 272.67,
+        "start" : 272.18
+      },
+      {
+        "dur" : 1.62,
+        "end" : 274.32,
+        "start" : 272.7
+      },
+      {
+        "dur" : 0.33,
+        "end" : 274.66,
+        "start" : 274.33
+      },
+      {
+        "dur" : 0.64,
+        "end" : 276.97,
+        "start" : 276.33
+      },
+      {
+        "dur" : 0.29,
+        "end" : 278.13,
+        "start" : 277.84
+      },
+      {
+        "dur" : 1.49,
+        "end" : 279.67,
+        "start" : 278.18
+      },
+      {
+        "dur" : 3.89,
+        "end" : 284.69,
+        "start" : 280.8
+      },
+      {
+        "dur" : 1.71,
+        "end" : 286.42,
+        "start" : 284.71
+      },
+      {
+        "dur" : 0.85,
+        "end" : 289,
+        "start" : 288.15
+      },
+      {
+        "dur" : 0.7,
+        "end" : 293.22,
+        "start" : 292.52
+      },
+      {
+        "dur" : 0.41,
+        "end" : 295.27,
+        "start" : 294.86
+      },
+      {
+        "dur" : 0.38,
+        "end" : 297.14,
+        "start" : 296.76
+      },
+      {
+        "dur" : 0.58,
+        "end" : 297.94,
+        "start" : 297.36
+      },
+      {
+        "dur" : 0.34,
+        "end" : 298.9,
+        "start" : 298.56
+      },
+      {
+        "dur" : 1.55,
+        "end" : 300.52,
+        "start" : 298.97
+      },
+      {
+        "dur" : 1.11,
+        "end" : 301.66,
+        "start" : 300.55
+      },
+      {
+        "dur" : 0.34,
+        "end" : 303.05,
+        "start" : 302.71
+      },
+      {
+        "dur" : 0.39,
+        "end" : 304.87,
+        "start" : 304.48
+      },
+      {
+        "dur" : 0.52,
+        "end" : 308.18,
+        "start" : 307.66
+      },
+      {
+        "dur" : 0.38,
+        "end" : 310.08,
+        "start" : 309.7
+      },
+      {
+        "dur" : 1.01,
+        "end" : 311.14,
+        "start" : 310.13
+      },
+      {
+        "dur" : 0.7,
+        "end" : 312.11,
+        "start" : 311.41
+      },
+      {
+        "dur" : 0.52,
+        "end" : 312.99,
+        "start" : 312.47
+      },
+      {
+        "dur" : 0.35,
+        "end" : 313.62,
+        "start" : 313.27
+      },
+      {
+        "dur" : 0.49,
+        "end" : 314.53,
+        "start" : 314.04
+      },
+      {
+        "dur" : 0.29,
+        "end" : 317.94,
+        "start" : 317.65
+      },
+      {
+        "dur" : 0.31,
+        "end" : 318.26,
+        "start" : 317.95
+      },
+      {
+        "dur" : 0.38,
+        "end" : 321.45,
+        "start" : 321.07
+      },
+      {
+        "dur" : 0.37,
+        "end" : 322.39,
+        "start" : 322.02
+      },
+      {
+        "dur" : 0.33,
+        "end" : 329.69,
+        "start" : 329.36
+      },
+      {
+        "dur" : 0.43,
+        "end" : 330.26,
+        "start" : 329.83
+      },
+      {
+        "dur" : 1.1,
+        "end" : 332.23,
+        "start" : 331.13
+      }
+    ],
+    "source" : "f4a7f0bc487d92f3df5c7cdc23ab2b1a.mp4",
+    "speech_time" : 213.68,
+    "threshold_db" : -30.3
+  },
+  "alignment" : {
+    "accuracy" : 76.1,
+    "correctWordCount" : 175,
+    "diffs" : [
+      {
+        "category" : "content",
+        "confidence" : 0.882,
+        "context" : "particular day uncle henry sat on the",
+        "end" : 4.98,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "harry",
+        "ref" : "henry",
+        "refIndex" : 5,
+        "start" : 4.32,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.152,
+        "context" : "day uncle henry sat on the doorstep",
+        "end" : 5.28,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "says",
+        "ref" : "sat",
+        "refIndex" : 6,
+        "start" : 4.98,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.15 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.46,
+        "context" : "doorstep his gaze fixed anxiously upon the",
+        "end" : 9.9,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "fixed",
+        "refIndex" : 12,
+        "start" : 8.64,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.113,
+        "context" : "doorstep his gaze fixed anxiously upon the",
+        "end" : 12.48,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "fixed",
+        "refIndex" : 12,
+        "start" : 9.9,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.11 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.118,
+        "context" : "doorstep his gaze fixed anxiously upon the",
+        "end" : 13.5,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "fixed",
+        "refIndex" : 12,
+        "start" : 12.48,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.12 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.045,
+        "context" : "his gaze fixed anxiously upon the unusually",
+        "end" : 15.84,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "and",
+        "refIndex" : 13,
+        "start" : 14.88,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.04 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.153,
+        "context" : "his gaze fixed anxiously upon the unusually",
+        "end" : 18.24,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "stressedly",
+        "ref" : "anxiously",
+        "refIndex" : 13,
+        "start" : 15.84,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.15 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.15,
+        "context" : "anxiously upon the unusually gray sky aunt",
+        "end" : 20.1,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "i",
+        "refIndex" : 16,
+        "start" : 19.92,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.15 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.129,
+        "context" : "anxiously upon the unusually gray sky aunt",
+        "end" : 21.48,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "usually",
+        "refIndex" : 16,
+        "start" : 20.1,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.13 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.303,
+        "context" : "anxiously upon the unusually gray sky aunt",
+        "end" : 21.9,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "the",
+        "ref" : "unusually",
+        "refIndex" : 16,
+        "start" : 21.48,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.30 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.952,
+        "context" : "unusually gray sky aunt em was busy",
+        "end" : 23.76,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "and",
+        "ref" : "aunt",
+        "refIndex" : 19,
+        "start" : 23.4,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.317,
+        "context" : "gray sky aunt em was busy washing",
+        "end" : 24.78,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "um",
+        "ref" : "em",
+        "refIndex" : 20,
+        "start" : 23.76,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.32 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.154,
+        "context" : "dishes suddenly uncle henry stood up and",
+        "end" : 30.18,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "harry",
+        "ref" : "henry",
+        "refIndex" : 28,
+        "start" : 29.82,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.15 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "omitted",
+        "context" : "to his wife em there's a cyclone",
+        "kind" : "omit",
+        "label" : "漏读",
+        "ref" : "em",
+        "refIndex" : 37,
+        "suggest" : "count",
+        "why" : "整个词跳过去了"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.351,
+        "context" : "em there's a cyclone coming i'll go",
+        "end" : 42.96,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "sad",
+        "refIndex" : 40,
+        "start" : 39.12,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.176,
+        "context" : "em there's a cyclone coming i'll go",
+        "end" : 43.8,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "clone",
+        "ref" : "cyclone",
+        "refIndex" : 40,
+        "start" : 42.96,
+        "suggest" : "count",
+        "why" : "原文是「cyclone」，开头的 cy- 丢了。识别器对这处只有 0.18 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.744,
+        "context" : "check on the livestock with that he",
+        "end" : 50.04,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "left",
+        "refIndex" : 47,
+        "start" : 48.78,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.173,
+        "context" : "check on the livestock with that he",
+        "end" : 51.84,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "dog",
+        "refIndex" : 47,
+        "start" : 50.04,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.17 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.56,
+        "context" : "check on the livestock with that he",
+        "end" : 52.2,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "stuck",
+        "ref" : "livestock",
+        "refIndex" : 47,
+        "start" : 51.84,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.558,
+        "context" : "that he hurried toward the sheds where",
+        "end" : 55.44,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "towards",
+        "ref" : "toward",
+        "refIndex" : 52,
+        "start" : 54.96,
+        "suggest" : "count",
+        "why" : "原文是「toward」，读出来多了个词尾 -s"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.409,
+        "context" : "hurried toward the sheds where the cows",
+        "end" : 57.3,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "shy",
+        "ref" : "sheds",
+        "refIndex" : 54,
+        "start" : 55.8,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.397,
+        "context" : "sheds where the cows and horses were",
+        "end" : 60.48,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "car",
+        "ref" : "cows",
+        "refIndex" : 57,
+        "start" : 60.06,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.039,
+        "context" : "horses were kept aunt em stopped her",
+        "end" : 64.8,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "um",
+        "refIndex" : 62,
+        "start" : 62.4,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.04 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.496,
+        "context" : "horses were kept aunt em stopped her",
+        "end" : 66,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "and",
+        "ref" : "aunt",
+        "refIndex" : 62,
+        "start" : 64.8,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.256,
+        "context" : "were kept aunt em stopped her work",
+        "end" : 66.96,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "um",
+        "ref" : "em",
+        "refIndex" : 63,
+        "start" : 66,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.26 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.818,
+        "context" : "work and rushed to the door a",
+        "end" : 71.1,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "to",
+        "refIndex" : 69,
+        "start" : 70.62,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.99,
+        "context" : "work and rushed to the door a",
+        "end" : 71.4,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "the",
+        "refIndex" : 69,
+        "start" : 71.1,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.52,
+        "context" : "work and rushed to the door a",
+        "end" : 72.12,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "floor",
+        "refIndex" : 69,
+        "start" : 71.4,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.041,
+        "context" : "work and rushed to the door a",
+        "end" : 73.2,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "uh",
+        "refIndex" : 69,
+        "start" : 72.12,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.04 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.196,
+        "context" : "door a single glance showed there was",
+        "end" : 79.56,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "uh",
+        "refIndex" : 74,
+        "start" : 76.98,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.20 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.107,
+        "context" : "door a single glance showed there was",
+        "end" : 83.34,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "uh",
+        "refIndex" : 74,
+        "start" : 79.56,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.11 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.722,
+        "context" : "door a single glance showed there was",
+        "end" : 83.94,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "there",
+        "refIndex" : 74,
+        "start" : 83.34,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.832,
+        "context" : "door a single glance showed there was",
+        "end" : 84.54,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "was",
+        "refIndex" : 74,
+        "start" : 83.94,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.135,
+        "context" : "door a single glance showed there was",
+        "end" : 85.26,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "then",
+        "refIndex" : 74,
+        "start" : 84.54,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.14 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.017,
+        "context" : "door a single glance showed there was",
+        "end" : 86.4,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "uh",
+        "refIndex" : 74,
+        "start" : 85.26,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.02 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.505,
+        "context" : "a single glance showed there was danger",
+        "end" : 88.44,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "show",
+        "ref" : "showed",
+        "refIndex" : 75,
+        "start" : 87.72,
+        "suggest" : "count",
+        "why" : "原文是「showed」，读出来少了词尾 -ed"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.29,
+        "context" : "showed there was danger quick dorothy she",
+        "end" : 90.18,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "dandra",
+        "ref" : "danger",
+        "refIndex" : 78,
+        "start" : 89.1,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.578,
+        "context" : "there was danger quick dorothy she screamed",
+        "end" : 90.9,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "quickly",
+        "ref" : "quick",
+        "refIndex" : 79,
+        "start" : 90.18,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "garbled",
+        "context" : "screamed run to the cellar dorothy managed",
+        "kind" : "omit",
+        "label" : "转写乱段",
+        "ref" : "the",
+        "refIndex" : 85,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.703,
+        "context" : "run to the cellar dorothy managed to",
+        "end" : 101.04,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "dorothy",
+        "ref" : "cellar",
+        "refIndex" : 86,
+        "start" : 99.96,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.191,
+        "context" : "to the cellar dorothy managed to grab",
+        "end" : 102.48,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "man",
+        "ref" : "dorothy",
+        "refIndex" : 87,
+        "start" : 101.04,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.19 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.174,
+        "context" : "the cellar dorothy managed to grab toto",
+        "end" : 104.7,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "najed",
+        "ref" : "managed",
+        "refIndex" : 88,
+        "start" : 102.48,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.17 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.03,
+        "context" : "dorothy managed to grab toto and followed",
+        "end" : 108.12,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "to",
+        "ref" : "grab",
+        "refIndex" : 90,
+        "start" : 107.58,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.03 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.339,
+        "context" : "managed to grab toto and followed her",
+        "end" : 108.36,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "and",
+        "ref" : "toto",
+        "refIndex" : 91,
+        "start" : 108.12,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.34 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.287,
+        "context" : "and followed her aunt however halfway across",
+        "end" : 115.98,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "arms",
+        "ref" : "aunt",
+        "refIndex" : 95,
+        "start" : 115.32,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.876,
+        "context" : "roared causing the house to tremble violently",
+        "end" : 127.56,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "home",
+        "ref" : "house",
+        "refIndex" : 109,
+        "start" : 127.02,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.617,
+        "context" : "the house to tremble violently losing her",
+        "end" : 129.42,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "tumble",
+        "refIndex" : 111,
+        "start" : 128.52,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.302,
+        "context" : "the house to tremble violently losing her",
+        "end" : 131.5799375,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "trumble",
+        "refIndex" : 111,
+        "start" : 129.4799375,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.30 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.297,
+        "context" : "the house to tremble violently losing her",
+        "end" : 133.8599375,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "trumble",
+        "refIndex" : 111,
+        "start" : 131.5799375,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.30 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.763,
+        "context" : "the house to tremble violently losing her",
+        "end" : 134.5799375,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "violent",
+        "refIndex" : 111,
+        "start" : 133.8599375,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.617,
+        "context" : "the house to tremble violently losing her",
+        "end" : 134.9399375,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "to",
+        "ref" : "tremble",
+        "refIndex" : 111,
+        "start" : 134.5799375,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.555,
+        "context" : "house to tremble violently losing her balance",
+        "end" : 136.7399375,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "live",
+        "ref" : "violently",
+        "refIndex" : 112,
+        "start" : 134.9399375,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.668,
+        "context" : "her balance dorothy tumbled to the floor",
+        "end" : 144,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "trembled",
+        "ref" : "tumbled",
+        "refIndex" : 117,
+        "start" : 142.98,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.569,
+        "context" : "to the floor some very strange people",
+        "end" : 150.12,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "and",
+        "refIndex" : 121,
+        "start" : 146.04,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.161,
+        "context" : "her three were men and one was",
+        "end" : 162.78,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "man",
+        "ref" : "men",
+        "refIndex" : 137,
+        "start" : 162.06,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.16 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.257,
+        "context" : "woman all dressed in peculiar attire they",
+        "end" : 172.44,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "and",
+        "refIndex" : 145,
+        "start" : 165.9,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.26 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.112,
+        "context" : "woman all dressed in peculiar attire they",
+        "end" : 175.5,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "yeah",
+        "refIndex" : 145,
+        "start" : 175.08,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.11 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.076,
+        "context" : "woman all dressed in peculiar attire they",
+        "end" : 177,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "uh",
+        "refIndex" : 145,
+        "start" : 175.5,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.08 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.15,
+        "context" : "woman all dressed in peculiar attire they",
+        "end" : 178.38,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "pair",
+        "refIndex" : 145,
+        "start" : 177,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.15 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.39,
+        "context" : "woman all dressed in peculiar attire they",
+        "end" : 179.46,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "p",
+        "refIndex" : 145,
+        "start" : 178.38,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.421,
+        "context" : "woman all dressed in peculiar attire they",
+        "end" : 182.4,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "peace",
+        "refIndex" : 145,
+        "start" : 179.58,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.249,
+        "context" : "woman all dressed in peculiar attire they",
+        "end" : 185.16,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "co",
+        "refIndex" : 145,
+        "start" : 182.4,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.25 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.552,
+        "context" : "woman all dressed in peculiar attire they",
+        "end" : 187.02,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "pick",
+        "refIndex" : 145,
+        "start" : 185.22,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.347,
+        "context" : "woman all dressed in peculiar attire they",
+        "end" : 187.68,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "her",
+        "ref" : "in",
+        "refIndex" : 145,
+        "start" : 187.02,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.35 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.194,
+        "context" : "dressed in peculiar attire they wore hats",
+        "end" : 192.06,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "i",
+        "refIndex" : 147,
+        "start" : 190.68,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.19 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.317,
+        "context" : "dressed in peculiar attire they wore hats",
+        "end" : 192.6,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "tear",
+        "refIndex" : 147,
+        "start" : 192.06,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.32 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.295,
+        "context" : "dressed in peculiar attire they wore hats",
+        "end" : 194.52,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "a",
+        "refIndex" : 147,
+        "start" : 192.6,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.189,
+        "context" : "dressed in peculiar attire they wore hats",
+        "end" : 195.36,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "tear",
+        "ref" : "attire",
+        "refIndex" : 147,
+        "start" : 194.52,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.19 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.756,
+        "context" : "peculiar attire they wore hats with bells",
+        "end" : 197.34,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "were",
+        "refIndex" : 149,
+        "start" : 196.14,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.573,
+        "context" : "peculiar attire they wore hats with bells",
+        "end" : 197.94,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "hat",
+        "refIndex" : 149,
+        "start" : 197.34,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.828,
+        "context" : "peculiar attire they wore hats with bells",
+        "end" : 198.78,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "and",
+        "ref" : "wore",
+        "refIndex" : 149,
+        "start" : 197.94,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.115,
+        "context" : "attire they wore hats with bells on",
+        "end" : 199.8,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "uh",
+        "ref" : "hats",
+        "refIndex" : 150,
+        "start" : 198.78,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.12 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.849,
+        "context" : "on them that made a sweet tinkling",
+        "end" : 203.88,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "means",
+        "refIndex" : 156,
+        "start" : 203.46,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.53,
+        "context" : "on them that made a sweet tinkling",
+        "end" : 204.54,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "sweet",
+        "refIndex" : 156,
+        "start" : 203.88,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.424,
+        "context" : "on them that made a sweet tinkling",
+        "end" : 205.8,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "thing",
+        "refIndex" : 156,
+        "start" : 204.54,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.229,
+        "context" : "on them that made a sweet tinkling",
+        "end" : 208.26,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "cling",
+        "refIndex" : 156,
+        "start" : 205.86,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.23 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.76,
+        "context" : "on them that made a sweet tinkling",
+        "end" : 208.74,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "sound",
+        "refIndex" : 156,
+        "start" : 208.26,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.839,
+        "context" : "on them that made a sweet tinkling",
+        "end" : 209.7,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "when",
+        "refIndex" : 156,
+        "start" : 208.74,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.967,
+        "context" : "on them that made a sweet tinkling",
+        "end" : 210,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "they",
+        "ref" : "made",
+        "refIndex" : 156,
+        "start" : 209.7,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.508,
+        "context" : "them that made a sweet tinkling sound",
+        "end" : 210.84,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "moved",
+        "ref" : "a",
+        "refIndex" : 157,
+        "start" : 210,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.343,
+        "context" : "that made a sweet tinkling sound when",
+        "end" : 211.8,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "the",
+        "ref" : "sweet",
+        "refIndex" : 158,
+        "start" : 210.96,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.34 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.681,
+        "context" : "made a sweet tinkling sound when they",
+        "end" : 214.14,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "tickling",
+        "ref" : "tinkling",
+        "refIndex" : 159,
+        "start" : 211.86,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.542,
+        "context" : "moved the men wore blue outfits that",
+        "end" : 218.1,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "were",
+        "refIndex" : 166,
+        "start" : 217.38,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.153,
+        "context" : "moved the men wore blue outfits that",
+        "end" : 219.66,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "blew",
+        "refIndex" : 166,
+        "start" : 218.1,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.15 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.922,
+        "context" : "moved the men wore blue outfits that",
+        "end" : 220.14,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "out",
+        "ref" : "wore",
+        "refIndex" : 166,
+        "start" : 219.66,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.277,
+        "context" : "the men wore blue outfits that matched",
+        "end" : 221.16,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "feet",
+        "ref" : "blue",
+        "refIndex" : 167,
+        "start" : 220.14,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.28 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.892,
+        "context" : "men wore blue outfits that matched their",
+        "end" : 221.58,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "and",
+        "ref" : "outfits",
+        "refIndex" : 168,
+        "start" : 221.16,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.16,
+        "context" : "wore blue outfits that matched their hats",
+        "end" : 221.94,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "the",
+        "ref" : "that",
+        "refIndex" : 169,
+        "start" : 221.58,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定。识别器对这处只有 0.16 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.251,
+        "context" : "that matched their hats and their shiny",
+        "end" : 225.72,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "head",
+        "ref" : "hats",
+        "refIndex" : 172,
+        "start" : 225,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.25 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.791,
+        "context" : "hats and their shiny boots had a",
+        "end" : 228.48,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "shining",
+        "ref" : "shiny",
+        "refIndex" : 175,
+        "start" : 227.1,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.186,
+        "context" : "and their shiny boots had a deep",
+        "end" : 229.56,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "boot",
+        "ref" : "boots",
+        "refIndex" : 176,
+        "start" : 228.48,
+        "suggest" : "count",
+        "why" : "原文是「boots」，读出来少了词尾 -s。识别器对这处只有 0.19 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.709,
+        "context" : "a deep blue cuff the woman had",
+        "end" : 233.64,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "cough",
+        "ref" : "cuff",
+        "refIndex" : 181,
+        "start" : 231.96,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.501,
+        "context" : "woman had a white hat and a",
+        "end" : 236.88,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "wet",
+        "ref" : "white",
+        "refIndex" : 186,
+        "start" : 236.4,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.389,
+        "context" : "long dress with pleats flowing from her",
+        "end" : 243.78,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "hmm",
+        "refIndex" : 193,
+        "start" : 242.94,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.491,
+        "context" : "long dress with pleats flowing from her",
+        "end" : 247.14,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "plate",
+        "refIndex" : 193,
+        "start" : 243.84,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.762,
+        "context" : "long dress with pleats flowing from her",
+        "end" : 248.22,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "flowering",
+        "refIndex" : 193,
+        "start" : 247.14,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.443,
+        "context" : "long dress with pleats flowing from her",
+        "end" : 249.72,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "from",
+        "refIndex" : 193,
+        "start" : 248.22,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.201,
+        "context" : "long dress with pleats flowing from her",
+        "end" : 250.86,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "uh",
+        "ref" : "pleats",
+        "refIndex" : 193,
+        "start" : 249.72,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.20 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.583,
+        "context" : "sparkling stars were sprinkled over her gown",
+        "end" : 261.18,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "spark",
+        "refIndex" : 201,
+        "start" : 257.58,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.549,
+        "context" : "sparkling stars were sprinkled over her gown",
+        "end" : 265.2,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "sprinkling",
+        "refIndex" : 201,
+        "start" : 261.18,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.942,
+        "context" : "sparkling stars were sprinkled over her gown",
+        "end" : 265.98,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "over",
+        "refIndex" : 201,
+        "start" : 265.2,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.633,
+        "context" : "sparkling stars were sprinkled over her gown",
+        "end" : 268.68,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "her",
+        "refIndex" : 201,
+        "start" : 265.98,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.203,
+        "context" : "sparkling stars were sprinkled over her gown",
+        "end" : 270.48,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "uh",
+        "refIndex" : 201,
+        "start" : 268.74,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.20 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.668,
+        "context" : "sparkling stars were sprinkled over her gown",
+        "end" : 271.32,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "sprinkle",
+        "refIndex" : 201,
+        "start" : 270.48,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.443,
+        "context" : "sparkling stars were sprinkled over her gown",
+        "end" : 276.48,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "sprinkles",
+        "refIndex" : 201,
+        "start" : 271.38,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.603,
+        "context" : "sparkling stars were sprinkled over her gown",
+        "end" : 280.68,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "sprinkle",
+        "ref" : "sprinkled",
+        "refIndex" : 201,
+        "start" : 276.54,
+        "suggest" : "count",
+        "why" : "原文是「sprinkled」，读出来少了词尾 -d"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.486,
+        "context" : "sprinkled over her gown shimmering like diamonds",
+        "end" : 288.24,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "gun",
+        "ref" : "gown",
+        "refIndex" : 204,
+        "start" : 287.34,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.628,
+        "context" : "over her gown shimmering like diamonds in",
+        "end" : 289.92,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "shiny",
+        "ref" : "shimmering",
+        "refIndex" : 205,
+        "start" : 288.3,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.766,
+        "context" : "in the sunlight while the bearded men",
+        "end" : 294.42,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "where",
+        "ref" : "while",
+        "refIndex" : 211,
+        "start" : 293.82,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.809,
+        "context" : "sunlight while the bearded men appeared to",
+        "end" : 295.98,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "beard",
+        "refIndex" : 213,
+        "start" : 294.96,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.557,
+        "context" : "sunlight while the bearded men appeared to",
+        "end" : 296.64,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "and",
+        "refIndex" : 213,
+        "start" : 295.98,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.671,
+        "context" : "sunlight while the bearded men appeared to",
+        "end" : 297.36,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "the",
+        "ref" : "bearded",
+        "refIndex" : 213,
+        "start" : 296.64,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "garbled",
+        "confidence" : 0.443,
+        "context" : "while the bearded men appeared to be",
+        "end" : 298.74,
+        "kind" : "substitute",
+        "label" : "转写乱段",
+        "read" : "man",
+        "ref" : "men",
+        "refIndex" : 214,
+        "start" : 297.36,
+        "suggest" : "unsure",
+        "why" : "这几秒连着好几处对不上，多半是转写整段乱了 —— 回去听一遍再定"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.414,
+        "context" : "the woman was undoubtedly much older her",
+        "end" : 308.64,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "um",
+        "refIndex" : 225,
+        "start" : 307.62,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.505,
+        "context" : "the woman was undoubtedly much older her",
+        "end" : 309.9,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "dog",
+        "refIndex" : 225,
+        "start" : 308.64,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.098,
+        "context" : "the woman was undoubtedly much older her",
+        "end" : 311.88,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "t",
+        "refIndex" : 225,
+        "start" : 310.02,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.10 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.118,
+        "context" : "the woman was undoubtedly much older her",
+        "end" : 313.08,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "t",
+        "refIndex" : 225,
+        "start" : 311.88,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.12 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.009,
+        "context" : "the woman was undoubtedly much older her",
+        "end" : 314.46,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "t",
+        "ref" : "undoubtedly",
+        "refIndex" : 225,
+        "start" : 313.08,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.01 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.949,
+        "context" : "much older her face",
+        "end" : 317.46,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "was",
+        "refIndex" : 230,
+        "start" : 316.92,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.899,
+        "context" : "much older her face",
+        "end" : 319.5,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "lined",
+        "refIndex" : 230,
+        "start" : 317.46,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.986,
+        "context" : "much older her face",
+        "end" : 320.04,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "with",
+        "refIndex" : 230,
+        "start" : 319.5,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.629,
+        "context" : "much older her face",
+        "end" : 323.94,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "wrinkles",
+        "refIndex" : 230,
+        "start" : 320.04,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.575,
+        "context" : "much older her face",
+        "end" : 324.66,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "her",
+        "refIndex" : 230,
+        "start" : 324,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.966,
+        "context" : "much older her face",
+        "end" : 325.38,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "hair",
+        "refIndex" : 230,
+        "start" : 324.66,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.95,
+        "context" : "much older her face",
+        "end" : 326.1,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "was",
+        "refIndex" : 230,
+        "start" : 325.38,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.998,
+        "context" : "much older her face",
+        "end" : 326.82,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "nearly",
+        "refIndex" : 230,
+        "start" : 326.1,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.549,
+        "context" : "much older her face",
+        "end" : 327.36,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "wet",
+        "refIndex" : 230,
+        "start" : 326.82,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.992,
+        "context" : "much older her face",
+        "end" : 327.9,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "and",
+        "refIndex" : 230,
+        "start" : 327.36,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.988,
+        "context" : "much older her face",
+        "end" : 328.5,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "she",
+        "refIndex" : 230,
+        "start" : 327.9,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.804,
+        "context" : "much older her face",
+        "end" : 329.22,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "worked",
+        "refIndex" : 230,
+        "start" : 328.5,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.716,
+        "context" : "much older her face",
+        "end" : 330.9,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "stuffly",
+        "refIndex" : 230,
+        "start" : 329.22,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      }
+    ],
+    "readWordCount" : 304,
+    "refTimes" : [
+      1.02,
+      1.56,
+      2.34,
+      4.14,
+      4.32,
+      4.98,
+      5.28,
+      5.64,
+      5.82,
+      6.96,
+      7.74,
+      8.64,
+      14.88,
+      18.24,
+      19.26,
+      19.92,
+      21.9,
+      22.5,
+      23.4,
+      23.76,
+      24.78,
+      25.02,
+      25.5,
+      27.06,
+      27.18,
+      27.9,
+      29.34,
+      29.82,
+      30.18,
+      31.08,
+      31.38,
+      31.74,
+      32.04,
+      33.06,
+      33.72,
+      33.96,
+      35.64,
+      null,
+      38.76,
+      39.12,
+      43.8,
+      45,
+      45.84,
+      46.26,
+      47.04,
+      48.12,
+      48.78,
+      52.2,
+      53.22,
+      54.12,
+      54.36,
+      54.96,
+      55.44,
+      55.8,
+      57.3,
+      59.34,
+      60.06,
+      60.48,
+      60.9,
+      61.68,
+      61.86,
+      62.34,
+      66,
+      66.96,
+      67.38,
+      68.58,
+      69.36,
+      69.78,
+      70.62,
+      74.22,
+      74.46,
+      75.06,
+      75.54,
+      76.92,
+      87.72,
+      88.44,
+      88.74,
+      89.1,
+      90.18,
+      90.9,
+      91.62,
+      93.24,
+      94.14,
+      96.78,
+      99.96,
+      null,
+      101.04,
+      102.48,
+      104.7,
+      107.58,
+      108.12,
+      108.36,
+      110.94,
+      113.88,
+      115.32,
+      115.98,
+      117.06,
+      117.84,
+      119.16,
+      119.52,
+      121.02,
+      121.44,
+      122.34,
+      123.18,
+      123.48,
+      124.32,
+      125.76,
+      126.6,
+      127.02,
+      127.56,
+      128.52,
+      134.9399375,
+      136.7399375,
+      138.66,
+      138.96,
+      142.14,
+      142.98,
+      144,
+      144.78,
+      145.08,
+      145.98,
+      150.66,
+      151.2,
+      151.68,
+      152.22,
+      152.7,
+      153.72,
+      154.08,
+      154.56,
+      155.1,
+      155.52,
+      156.3,
+      158.94,
+      160.02,
+      160.44,
+      160.98,
+      162.06,
+      162.78,
+      163.02,
+      163.5,
+      163.92,
+      164.28,
+      165.18,
+      165.3,
+      165.78,
+      187.68,
+      190.62,
+      195.36,
+      196.14,
+      198.78,
+      199.8,
+      199.92,
+      200.64,
+      201.12,
+      202.14,
+      203.46,
+      210,
+      210.84,
+      211.8,
+      214.14,
+      214.62,
+      215.28,
+      215.4,
+      215.88,
+      216.66,
+      217.38,
+      220.14,
+      221.16,
+      221.58,
+      221.94,
+      223.32,
+      225,
+      225.72,
+      226.44,
+      227.1,
+      228.48,
+      229.56,
+      229.98,
+      230.76,
+      231.3,
+      231.96,
+      233.64,
+      235.08,
+      235.44,
+      236.04,
+      236.4,
+      236.88,
+      238.14,
+      238.38,
+      238.74,
+      239.1,
+      240.12,
+      242.94,
+      250.86,
+      252.72,
+      253.38,
+      253.8,
+      255,
+      256.26,
+      256.86,
+      257.58,
+      280.68,
+      286.98,
+      287.34,
+      288.24,
+      289.92,
+      290.4,
+      291.36,
+      291.96,
+      292.32,
+      293.82,
+      294.42,
+      294.96,
+      297.36,
+      298.74,
+      302.46,
+      303.3,
+      303.72,
+      304.2,
+      305.4,
+      306.18,
+      306.78,
+      306.9,
+      307.26,
+      307.62,
+      314.46,
+      315.36,
+      316.26,
+      316.56,
+      316.92
+    ],
+    "refWordCount" : 230,
+    "wcpm" : 32
+  },
+  "pages" : [
+    {
+      "end" : 145.98,
+      "errors" : 29,
+      "extras" : 24,
+      "matched" : 119,
+      "page" : 7,
+      "start" : 1.02,
+      "words" : 121
+    },
+    {
+      "end" : 316.92,
+      "errors" : 26,
+      "extras" : 39,
+      "matched" : 109,
+      "page" : 8,
+      "start" : 150.66,
+      "words" : 109
+    }
+  ],
+  "refSuspects" : [
+
+  ],
+  "reference" : "On this particular day, Uncle Henry sat on the doorstep, his gaze fixed\nanxiously upon the unusually gray sky. Aunt Em was busy washing the dishes.\nSuddenly, Uncle Henry stood up and called out to his wife, \"Em, there's a\ncyclone coming! I'll go check on the livestock.\" With that, he hurried toward the\nsheds where the cows and horses were kept.\nAunt Em stopped her work and rushed to the door. A single glance showed\nthere was danger. \"Quick, Dorothy!\" she screamed. \"Run to the cellar!\" Dorothy\nmanaged to grab Toto and followed her aunt. However, halfway across the\nroom, a fierce gust of wind roared, causing the house to tremble violently.\nLosing her balance, Dorothy tumbled to the floor.\nSome very strange people that she had never seen before were coming\ntoward her. Three were men, and one was a woman, all dressed in peculiar\nattire. They wore hats with bells on them that made a sweet tinkling sound when\nthey moved. The men wore blue outfits that matched their hats, and their shiny\nboots had a deep blue cuff. The woman had a white hat and a long dress with\npleats flowing from her shoulders. Sparkling stars were sprinkled over her gown,\nshimmering like diamonds in the sunlight. While the bearded men appeared to\nbe about Uncle Henry's age, the woman was undoubtedly much older: her face",
+  "slug" : "super8/L6/p7-8",
+  "transcript" : {
+    "alternatives" : [
+      {
+        "end" : 4.98,
+        "start" : 0,
+        "texts" : [
+          "On this particular day, uncle harry"
+        ]
+      },
+      {
+        "end" : 5.28,
+        "start" : 4.98,
+        "texts" : [
+          "says",
+          "sat"
+        ]
+      },
+      {
+        "end" : 22.5,
+        "start" : 5.28,
+        "texts" : [
+          "on the doorstep, his gaze fixed, fixed, fixed, fixed, and, stressedly, upon the, I usually, the gray"
+        ]
+      },
+      {
+        "end" : 24.78,
+        "start" : 22.5,
+        "texts" : [
+          "sky, and um,",
+          "sky, and, um,",
+          "sky and um,"
+        ]
+      },
+      {
+        "end" : 27.96,
+        "start" : 24.78,
+        "texts" : [
+          "was busy washing the dishes."
+        ]
+      },
+      {
+        "end" : 29.34,
+        "start" : 27.96,
+        "texts" : [
+          "Suddenly,"
+        ]
+      },
+      {
+        "end" : 31.08,
+        "start" : 29.34,
+        "texts" : [
+          "Uncle Harry stood",
+          "Uncle Henry stood",
+          "uncle harry stood"
+        ]
+      },
+      {
+        "end" : 33.96,
+        "start" : 31.08,
+        "texts" : [
+          "up and called out to his"
+        ]
+      },
+      {
+        "end" : 35.76,
+        "start" : 33.96,
+        "texts" : [
+          "wife.",
+          "wife, um.",
+          "wife, and."
+        ]
+      },
+      {
+        "end" : 38.76,
+        "start" : 35.76,
+        "texts" : [
+          "There's"
+        ]
+      },
+      {
+        "end" : 39.12,
+        "start" : 38.76,
+        "texts" : [
+          "a.",
+          "a,"
+        ]
+      },
+      {
+        "end" : 42.96,
+        "start" : 39.12,
+        "texts" : [
+          "Sad"
+        ]
+      },
+      {
+        "end" : 45.06,
+        "start" : 42.96,
+        "texts" : [
+          "clone coming.",
+          "clone, coming.",
+          "clone, coming,"
+        ]
+      },
+      {
+        "end" : 54.96,
+        "start" : 45.06,
+        "texts" : [
+          "I'll go check on the left dog, stuck with that, he hurried"
+        ]
+      },
+      {
+        "end" : 55.44,
+        "start" : 54.96,
+        "texts" : [
+          "towards",
+          "toward"
+        ]
+      },
+      {
+        "end" : 55.8,
+        "start" : 55.44,
+        "texts" : [
+          "the"
+        ]
+      },
+      {
+        "end" : 57.3,
+        "start" : 55.8,
+        "texts" : [
+          "shy,",
+          "shy."
+        ]
+      },
+      {
+        "end" : 60.06,
+        "start" : 57.3,
+        "texts" : [
+          "where the",
+          "Where the",
+          "the"
+        ]
+      },
+      {
+        "end" : 62.4,
+        "start" : 60.06,
+        "texts" : [
+          "car and horses were kept."
+        ]
+      },
+      {
+        "end" : 66,
+        "start" : 62.4,
+        "texts" : [
+          "Um, and",
+          "Hmm. And"
+        ]
+      },
+      {
+        "end" : 71.4,
+        "start" : 66,
+        "texts" : [
+          "um, stopped her work and rushed to the"
+        ]
+      },
+      {
+        "end" : 74.22,
+        "start" : 71.4,
+        "texts" : [
+          "floor, uh, to",
+          "floor. To",
+          "floor, to"
+        ]
+      },
+      {
+        "end" : 75.54,
+        "start" : 74.22,
+        "texts" : [
+          "the door, a"
+        ]
+      },
+      {
+        "end" : 76.98,
+        "start" : 75.54,
+        "texts" : [
+          "single.",
+          "single,"
+        ]
+      },
+      {
+        "end" : 86.4,
+        "start" : 76.98,
+        "texts" : [
+          "Uh, uh, there was then, uh,"
+        ]
+      },
+      {
+        "end" : 88.44,
+        "start" : 86.4,
+        "texts" : [
+          "glance, show",
+          "glance, so",
+          "glance show"
+        ]
+      },
+      {
+        "end" : 89.1,
+        "start" : 88.44,
+        "texts" : [
+          "there was"
+        ]
+      },
+      {
+        "end" : 90.9,
+        "start" : 89.1,
+        "texts" : [
+          "Dandra, quickly,",
+          "Dandra quickly,"
+        ]
+      },
+      {
+        "end" : 93.24,
+        "start" : 90.9,
+        "texts" : [
+          "Dorothy, she"
+        ]
+      },
+      {
+        "end" : 94.26,
+        "start" : 93.24,
+        "texts" : [
+          "screamed.",
+          "screamed,"
+        ]
+      },
+      {
+        "end" : 96.78,
+        "start" : 94.26,
+        "texts" : [
+          "Run"
+        ]
+      },
+      {
+        "end" : 99.96,
+        "start" : 96.78,
+        "texts" : [
+          "to,",
+          "to the,"
+        ]
+      },
+      {
+        "end" : 104.7,
+        "start" : 99.96,
+        "texts" : [
+          "Dorothy, man, Najed,"
+        ]
+      },
+      {
+        "end" : 107.58,
+        "start" : 104.7,
+        "texts" : [
+          "to,",
+          "to grab the"
+        ]
+      },
+      {
+        "end" : 108.36,
+        "start" : 107.58,
+        "texts" : [
+          "to, and,",
+          "total and,"
+        ]
+      },
+      {
+        "end" : 110.94,
+        "start" : 108.36,
+        "texts" : [
+          "and"
+        ]
+      },
+      {
+        "end" : 115.32,
+        "start" : 110.94,
+        "texts" : [
+          "followed, her",
+          "followed her"
+        ]
+      },
+      {
+        "end" : 116.04,
+        "start" : 115.32,
+        "texts" : [
+          "arms.",
+          "arms,"
+        ]
+      },
+      {
+        "end" : 117.06,
+        "start" : 116.04,
+        "texts" : [
+          "However,",
+          "however,"
+        ]
+      },
+      {
+        "end" : 119.16,
+        "start" : 117.06,
+        "texts" : [
+          "halfway across"
+        ]
+      },
+      {
+        "end" : 121.02,
+        "start" : 119.16,
+        "texts" : [
+          "the room,",
+          "them, room,"
+        ]
+      },
+      {
+        "end" : 122.34,
+        "start" : 121.02,
+        "texts" : [
+          "a fierce",
+          "uh, fierce"
+        ]
+      },
+      {
+        "end" : 125.76,
+        "start" : 122.34,
+        "texts" : [
+          "gust of wind roared,"
+        ]
+      },
+      {
+        "end" : 126.6,
+        "start" : 125.76,
+        "texts" : [
+          "causing",
+          "casting"
+        ]
+      },
+      {
+        "end" : 129.48,
+        "start" : 126.6,
+        "texts" : [
+          "the home to tumble."
+        ]
+      },
+      {
+        "end" : 131.5799375,
+        "start" : 129.4799375,
+        "texts" : [
+          "Trumble,"
+        ]
+      },
+      {
+        "end" : 134.9399375,
+        "start" : 131.5799375,
+        "texts" : [
+          "Trumble, violent to",
+          "trumble, violent to",
+          "Trumble violent to",
+          "Trumble, violent, to"
+        ]
+      },
+      {
+        "end" : 136.7999375,
+        "start" : 134.9399375,
+        "texts" : [
+          "live.",
+          "live, and."
+        ]
+      },
+      {
+        "end" : 138.66,
+        "start" : 136.8,
+        "texts" : [
+          "Losing",
+          "losing"
+        ]
+      },
+      {
+        "end" : 142.2,
+        "start" : 138.66,
+        "texts" : [
+          "her balance.",
+          "her balance,",
+          "her."
+        ]
+      },
+      {
+        "end" : 142.98,
+        "start" : 142.2,
+        "texts" : [
+          "Dorothy"
+        ]
+      },
+      {
+        "end" : 144.78,
+        "start" : 142.98,
+        "texts" : [
+          "trembled to",
+          "trembled To",
+          "tremble to"
+        ]
+      },
+      {
+        "end" : 145.08,
+        "start" : 144.78,
+        "texts" : [
+          "the"
+        ]
+      },
+      {
+        "end" : 146.04,
+        "start" : 145.08,
+        "texts" : [
+          "floor.",
+          "floor"
+        ]
+      },
+      {
+        "end" : 155.1,
+        "start" : 146.04,
+        "texts" : [
+          "And some very strange people that she had never seen"
+        ]
+      },
+      {
+        "end" : 156.3,
+        "start" : 155.1,
+        "texts" : [
+          "before were,",
+          "before.",
+          "before were."
+        ]
+      },
+      {
+        "end" : 164.28,
+        "start" : 156.3,
+        "texts" : [
+          "Coming toward her 3 were, man, and one was a"
+        ]
+      },
+      {
+        "end" : 165.3,
+        "start" : 164.28,
+        "texts" : [
+          "woman, all",
+          "woman all"
+        ]
+      },
+      {
+        "end" : 165.8999375,
+        "start" : 165.3,
+        "texts" : [
+          "dressed."
+        ]
+      },
+      {
+        "end" : 175.08,
+        "start" : 165.9,
+        "texts" : [
+          "And...",
+          "Yeah.",
+          "And, um, Pasinia,",
+          "And, um, Pasinia.",
+          "And, um, pasin, yeah,"
+        ]
+      },
+      {
+        "end" : 175.5,
+        "start" : 175.08,
+        "texts" : [
+          "Yeah,",
+          "uh,"
+        ]
+      },
+      {
+        "end" : 179.58,
+        "start" : 175.5,
+        "texts" : [
+          "uh, pair, P.",
+          "uh, pair, p.",
+          "uh, pair.",
+          "a pair."
+        ]
+      },
+      {
+        "end" : 185.22,
+        "start" : 179.58,
+        "texts" : [
+          "Peace, co...",
+          "Peace.",
+          "Peace, c, liar.",
+          "Peace, c. liar.",
+          "Peace, co, liar."
+        ]
+      },
+      {
+        "end" : 187.02,
+        "start" : 185.22,
+        "texts" : [
+          "Pick"
+        ]
+      },
+      {
+        "end" : 187.74,
+        "start" : 187.02,
+        "texts" : [
+          "her.",
+          "a.",
+          "her,",
+          "her now.",
+          "her now,"
+        ]
+      },
+      {
+        "end" : 190.68,
+        "start" : 187.74,
+        "texts" : [
+          "Peculiar.",
+          "peculiar.",
+          "Peculiar..",
+          "Peculiar.,"
+        ]
+      },
+      {
+        "end" : 192.06,
+        "start" : 190.68,
+        "texts" : [
+          "I"
+        ]
+      },
+      {
+        "end" : 195.48,
+        "start" : 192.06,
+        "texts" : [
+          "tear, a tear.",
+          "tear, I tear.",
+          "tear. A tear.",
+          "tear, I tear,",
+          "tear."
+        ]
+      },
+      {
+        "end" : 198.78,
+        "start" : 195.48,
+        "texts" : [
+          "They were hat and"
+        ]
+      },
+      {
+        "end" : 199.92,
+        "start" : 198.78,
+        "texts" : [
+          "uh, with",
+          "with",
+          "uh with"
+        ]
+      },
+      {
+        "end" : 201.12,
+        "start" : 199.92,
+        "texts" : [
+          "bells on"
+        ]
+      },
+      {
+        "end" : 203.46,
+        "start" : 201.12,
+        "texts" : [
+          "them that",
+          "them, that"
+        ]
+      },
+      {
+        "end" : 203.88,
+        "start" : 203.46,
+        "texts" : [
+          "means"
+        ]
+      },
+      {
+        "end" : 205.8599375,
+        "start" : 203.88,
+        "texts" : [
+          "sweet thing.",
+          "sweet."
+        ]
+      },
+      {
+        "end" : 208.26,
+        "start" : 205.86,
+        "texts" : [
+          "Cling",
+          "Clean"
+        ]
+      },
+      {
+        "end" : 209.7,
+        "start" : 208.26,
+        "texts" : [
+          "sound when",
+          "sound, when"
+        ]
+      },
+      {
+        "end" : 210,
+        "start" : 209.7,
+        "texts" : [
+          "they"
+        ]
+      },
+      {
+        "end" : 210.96,
+        "start" : 210,
+        "texts" : [
+          "moved.",
+          "move.",
+          "moved,"
+        ]
+      },
+      {
+        "end" : 211.86,
+        "start" : 210.96,
+        "texts" : [
+          "The.",
+          "The the.",
+          "the.",
+          "The..",
+          "The,"
+        ]
+      },
+      {
+        "end" : 214.14,
+        "start" : 211.86,
+        "texts" : [
+          "Tickling"
+        ]
+      },
+      {
+        "end" : 215.28,
+        "start" : 214.14,
+        "texts" : [
+          "sound when",
+          "sound, when"
+        ]
+      },
+      {
+        "end" : 225,
+        "start" : 215.28,
+        "texts" : [
+          "they moved, the men were blew out feet, and the matched. Their"
+        ]
+      },
+      {
+        "end" : 225.72,
+        "start" : 225,
+        "texts" : [
+          "head,",
+          "hat,"
+        ]
+      },
+      {
+        "end" : 228.48,
+        "start" : 225.72,
+        "texts" : [
+          "and their shining"
+        ]
+      },
+      {
+        "end" : 229.98,
+        "start" : 228.48,
+        "texts" : [
+          "boot, had",
+          "boot had"
+        ]
+      },
+      {
+        "end" : 233.7,
+        "start" : 229.98,
+        "texts" : [
+          "a deep blue cough."
+        ]
+      },
+      {
+        "end" : 236.88,
+        "start" : 233.7,
+        "texts" : [
+          "The woman had a wet"
+        ]
+      },
+      {
+        "end" : 238.38,
+        "start" : 236.88,
+        "texts" : [
+          "hat, and",
+          "hat and"
+        ]
+      },
+      {
+        "end" : 239.1,
+        "start" : 238.38,
+        "texts" : [
+          "a long"
+        ]
+      },
+      {
+        "end" : 243.8399375,
+        "start" : 239.1,
+        "texts" : [
+          "dress, with, hmm.",
+          "dress. With, hmm.",
+          "dress, with, hm.",
+          "dress, with...",
+          "dress. With."
+        ]
+      },
+      {
+        "end" : 261.18,
+        "start" : 243.84,
+        "texts" : [
+          "Plate, flowering from, uh, flowing, from her shoulders, sparkling stars were spark,"
+        ]
+      },
+      {
+        "end" : 265.98,
+        "start" : 261.18,
+        "texts" : [
+          "sprinkling over",
+          "sprinkling, over"
+        ]
+      },
+      {
+        "end" : 268.74,
+        "start" : 265.98,
+        "texts" : [
+          "her.",
+          "her, sprinkling",
+          "her,"
+        ]
+      },
+      {
+        "end" : 271.38,
+        "start" : 268.74,
+        "texts" : [
+          "Uh, sprinkle.",
+          "Uh, sprinkled.",
+          "Uh sprinkle.",
+          "Uh sprinkled.",
+          "Uh, sprinkle.."
+        ]
+      },
+      {
+        "end" : 276.54,
+        "start" : 271.38,
+        "texts" : [
+          "Sprinkles.",
+          "Sprinkled.",
+          "Sprinkle.",
+          "Sprinkled. Oh",
+          "Sprinkles. Oh,"
+        ]
+      },
+      {
+        "end" : 280.74,
+        "start" : 276.54,
+        "texts" : [
+          "Sprinkle.",
+          "Sprinkled.",
+          "Sprinkle..",
+          "Sprinkled..",
+          "Sprinkle..."
+        ]
+      },
+      {
+        "end" : 287.34,
+        "start" : 286.74,
+        "texts" : [
+          "Over her"
+        ]
+      },
+      {
+        "end" : 288.3,
+        "start" : 287.34,
+        "texts" : [
+          "gun.",
+          "guns.",
+          "gun?",
+          "Gun.",
+          "gun.."
+        ]
+      },
+      {
+        "end" : 297.36,
+        "start" : 288.3,
+        "texts" : [
+          "Shiny like diamonds in the sunlight where the beard and the"
+        ]
+      },
+      {
+        "end" : 302.46,
+        "start" : 297.36,
+        "texts" : [
+          "man. Appeared",
+          "man appeared"
+        ]
+      },
+      {
+        "end" : 306.18,
+        "start" : 302.46,
+        "texts" : [
+          "to be about Uncle Henry's"
+        ]
+      },
+      {
+        "end" : 306.9,
+        "start" : 306.18,
+        "texts" : [
+          "age, the",
+          "age the"
+        ]
+      },
+      {
+        "end" : 307.62,
+        "start" : 306.9,
+        "texts" : [
+          "woman was"
+        ]
+      },
+      {
+        "end" : 310.02,
+        "start" : 307.62,
+        "texts" : [
+          "um dog.",
+          "um, dog.",
+          "um."
+        ]
+      },
+      {
+        "end" : 314.46,
+        "start" : 310.02,
+        "texts" : [
+          "T, T, T,",
+          "T, T,",
+          "T, the,"
+        ]
+      },
+      {
+        "end" : 316.32,
+        "start" : 314.46,
+        "texts" : [
+          "much older.",
+          "Much older.",
+          "Much older,",
+          "much older,"
+        ]
+      },
+      {
+        "end" : 320.04,
+        "start" : 316.32,
+        "texts" : [
+          "Her face was lined with"
+        ]
+      },
+      {
+        "end" : 324,
+        "start" : 320.04,
+        "texts" : [
+          "wrinkles.",
+          "wrinkles,",
+          "wrong wrinkles",
+          "wrinkles",
+          "wrong wrinkles."
+        ]
+      },
+      {
+        "end" : 326.82,
+        "start" : 324,
+        "texts" : [
+          "Her hair was nearly"
+        ]
+      },
+      {
+        "end" : 327.9,
+        "start" : 326.82,
+        "texts" : [
+          "wet and",
+          "wet, and"
+        ]
+      },
+      {
+        "end" : 328.5,
+        "start" : 327.9,
+        "texts" : [
+          "she"
+        ]
+      },
+      {
+        "end" : 330.96,
+        "start" : 328.5,
+        "texts" : [
+          "worked stuffly.",
+          "worked. Stuffly.",
+          "worked. Stuffy."
+        ]
+      }
+    ],
+    "contextPrimed" : true,
+    "locale" : "en-US",
+    "runs" : [
+      {
+        "confidence" : 0.987,
+        "end" : 1.02,
+        "start" : 0,
+        "text" : "On"
+      },
+      {
+        "confidence" : 0.937,
+        "end" : 1.56,
+        "start" : 1.02,
+        "text" : " this"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 2.34,
+        "start" : 1.56,
+        "text" : " particular"
+      },
+      {
+        "confidence" : 0.385,
+        "end" : 4.14,
+        "start" : 2.34,
+        "text" : " day,"
+      },
+      {
+        "confidence" : 0.947,
+        "end" : 4.32,
+        "start" : 4.14,
+        "text" : " uncle"
+      },
+      {
+        "confidence" : 0.882,
+        "end" : 4.98,
+        "start" : 4.32,
+        "text" : " harry"
+      },
+      {
+        "confidence" : 0.152,
+        "end" : 5.28,
+        "start" : 4.98,
+        "text" : " says"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 5.64,
+        "start" : 5.28,
+        "text" : " on"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 5.82,
+        "start" : 5.64,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.849,
+        "end" : 6.96,
+        "start" : 5.82,
+        "text" : " doorstep,"
+      },
+      {
+        "confidence" : 0.648,
+        "end" : 7.74,
+        "start" : 6.96,
+        "text" : " his"
+      },
+      {
+        "confidence" : 0.677,
+        "end" : 8.64,
+        "start" : 7.74,
+        "text" : " gaze"
+      },
+      {
+        "confidence" : 0.46,
+        "end" : 9.9,
+        "start" : 8.64,
+        "text" : " fixed,"
+      },
+      {
+        "confidence" : 0.113,
+        "end" : 12.48,
+        "start" : 9.9,
+        "text" : " fixed,"
+      },
+      {
+        "confidence" : 0.118,
+        "end" : 13.5,
+        "start" : 12.48,
+        "text" : " fixed,"
+      },
+      {
+        "confidence" : 0.194,
+        "end" : 14.88,
+        "start" : 13.5,
+        "text" : " fixed,"
+      },
+      {
+        "confidence" : 0.045,
+        "end" : 15.84,
+        "start" : 14.88,
+        "text" : " and,"
+      },
+      {
+        "confidence" : 0.153,
+        "end" : 18.24,
+        "start" : 15.84,
+        "text" : " stressedly,"
+      },
+      {
+        "confidence" : 0.86,
+        "end" : 19.26,
+        "start" : 18.24,
+        "text" : " upon"
+      },
+      {
+        "confidence" : 0.463,
+        "end" : 19.92,
+        "start" : 19.26,
+        "text" : " the,"
+      },
+      {
+        "confidence" : 0.15,
+        "end" : 20.1,
+        "start" : 19.92,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.129,
+        "end" : 21.48,
+        "start" : 20.1,
+        "text" : " usually,"
+      },
+      {
+        "confidence" : 0.303,
+        "end" : 21.9,
+        "start" : 21.48,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.732,
+        "end" : 22.5,
+        "start" : 21.9,
+        "text" : " gray"
+      },
+      {
+        "confidence" : 0.486,
+        "end" : 23.4,
+        "start" : 22.5,
+        "text" : " sky,"
+      },
+      {
+        "confidence" : 0.952,
+        "end" : 23.76,
+        "start" : 23.4,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.317,
+        "end" : 24.78,
+        "start" : 23.76,
+        "text" : " um,"
+      },
+      {
+        "confidence" : 0.982,
+        "end" : 25.02,
+        "start" : 24.78,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.986,
+        "end" : 25.5,
+        "start" : 25.02,
+        "text" : " busy"
+      },
+      {
+        "confidence" : 0.986,
+        "end" : 27.06,
+        "start" : 25.5,
+        "text" : " washing"
+      },
+      {
+        "confidence" : 0.97,
+        "end" : 27.18,
+        "start" : 27.06,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.735,
+        "end" : 27.9,
+        "start" : 27.18,
+        "text" : " dishes."
+      },
+      {
+        "confidence" : 0.549,
+        "end" : 29.34,
+        "start" : 27.96,
+        "text" : " Suddenly,"
+      },
+      {
+        "confidence" : 0.305,
+        "end" : 29.82,
+        "start" : 29.34,
+        "text" : " Uncle"
+      },
+      {
+        "confidence" : 0.154,
+        "end" : 30.18,
+        "start" : 29.82,
+        "text" : " Harry"
+      },
+      {
+        "confidence" : 0.785,
+        "end" : 31.08,
+        "start" : 30.18,
+        "text" : " stood"
+      },
+      {
+        "confidence" : 0.417,
+        "end" : 31.38,
+        "start" : 31.08,
+        "text" : " up"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 31.74,
+        "start" : 31.38,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.934,
+        "end" : 32.04,
+        "start" : 31.74,
+        "text" : " called"
+      },
+      {
+        "confidence" : 0.869,
+        "end" : 33.06,
+        "start" : 32.04,
+        "text" : " out"
+      },
+      {
+        "confidence" : 0.886,
+        "end" : 33.72,
+        "start" : 33.06,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 33.96,
+        "start" : 33.72,
+        "text" : " his"
+      },
+      {
+        "confidence" : 0.565,
+        "end" : 35.64,
+        "start" : 33.96,
+        "text" : " wife."
+      },
+      {
+        "confidence" : 0.717,
+        "end" : 38.76,
+        "start" : 35.76,
+        "text" : " There's"
+      },
+      {
+        "confidence" : 0.459,
+        "end" : 39.12,
+        "start" : 38.76,
+        "text" : " a."
+      },
+      {
+        "confidence" : 0.351,
+        "end" : 42.96,
+        "start" : 39.12,
+        "text" : " Sad"
+      },
+      {
+        "confidence" : 0.176,
+        "end" : 43.8,
+        "start" : 42.96,
+        "text" : " clone"
+      },
+      {
+        "confidence" : 0.348,
+        "end" : 45,
+        "start" : 43.8,
+        "text" : " coming."
+      },
+      {
+        "confidence" : 0.795,
+        "end" : 45.84,
+        "start" : 45.06,
+        "text" : " I'll"
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 46.26,
+        "start" : 45.84,
+        "text" : " go"
+      },
+      {
+        "confidence" : 0.968,
+        "end" : 47.04,
+        "start" : 46.26,
+        "text" : " check"
+      },
+      {
+        "confidence" : 0.905,
+        "end" : 48.12,
+        "start" : 47.04,
+        "text" : " on"
+      },
+      {
+        "confidence" : 0.902,
+        "end" : 48.78,
+        "start" : 48.12,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.744,
+        "end" : 50.04,
+        "start" : 48.78,
+        "text" : " left"
+      },
+      {
+        "confidence" : 0.173,
+        "end" : 51.84,
+        "start" : 50.04,
+        "text" : " dog,"
+      },
+      {
+        "confidence" : 0.56,
+        "end" : 52.2,
+        "start" : 51.84,
+        "text" : " stuck"
+      },
+      {
+        "confidence" : 0.875,
+        "end" : 53.22,
+        "start" : 52.2,
+        "text" : " with"
+      },
+      {
+        "confidence" : 0.543,
+        "end" : 54.12,
+        "start" : 53.22,
+        "text" : " that,"
+      },
+      {
+        "confidence" : 0.965,
+        "end" : 54.36,
+        "start" : 54.12,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.838,
+        "end" : 54.96,
+        "start" : 54.36,
+        "text" : " hurried"
+      },
+      {
+        "confidence" : 0.558,
+        "end" : 55.44,
+        "start" : 54.96,
+        "text" : " towards"
+      },
+      {
+        "confidence" : 0.741,
+        "end" : 55.8,
+        "start" : 55.44,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.409,
+        "end" : 57.3,
+        "start" : 55.8,
+        "text" : " shy,"
+      },
+      {
+        "confidence" : 0.673,
+        "end" : 59.34,
+        "start" : 57.3,
+        "text" : " where"
+      },
+      {
+        "confidence" : 0.935,
+        "end" : 60.06,
+        "start" : 59.34,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.397,
+        "end" : 60.48,
+        "start" : 60.06,
+        "text" : " car"
+      },
+      {
+        "confidence" : 0.404,
+        "end" : 60.9,
+        "start" : 60.48,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 61.68,
+        "start" : 60.9,
+        "text" : " horses"
+      },
+      {
+        "confidence" : 0.985,
+        "end" : 61.86,
+        "start" : 61.68,
+        "text" : " were"
+      },
+      {
+        "confidence" : 0.871,
+        "end" : 62.34,
+        "start" : 61.86,
+        "text" : " kept."
+      },
+      {
+        "confidence" : 0.039,
+        "end" : 64.8,
+        "start" : 62.4,
+        "text" : " Um,"
+      },
+      {
+        "confidence" : 0.496,
+        "end" : 66,
+        "start" : 64.8,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.256,
+        "end" : 66.96,
+        "start" : 66,
+        "text" : " um,"
+      },
+      {
+        "confidence" : 0.662,
+        "end" : 67.38,
+        "start" : 66.96,
+        "text" : " stopped"
+      },
+      {
+        "confidence" : 0.537,
+        "end" : 68.58,
+        "start" : 67.38,
+        "text" : " her"
+      },
+      {
+        "confidence" : 0.914,
+        "end" : 69.36,
+        "start" : 68.58,
+        "text" : " work"
+      },
+      {
+        "confidence" : 0.984,
+        "end" : 69.78,
+        "start" : 69.36,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.945,
+        "end" : 70.62,
+        "start" : 69.78,
+        "text" : " rushed"
+      },
+      {
+        "confidence" : 0.818,
+        "end" : 71.1,
+        "start" : 70.62,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 71.4,
+        "start" : 71.1,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.52,
+        "end" : 72.12,
+        "start" : 71.4,
+        "text" : " floor,"
+      },
+      {
+        "confidence" : 0.041,
+        "end" : 73.2,
+        "start" : 72.12,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.491,
+        "end" : 74.22,
+        "start" : 73.2,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 74.46,
+        "start" : 74.22,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.615,
+        "end" : 75.06,
+        "start" : 74.46,
+        "text" : " door,"
+      },
+      {
+        "confidence" : 0.842,
+        "end" : 75.54,
+        "start" : 75.06,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.586,
+        "end" : 76.92,
+        "start" : 75.54,
+        "text" : " single."
+      },
+      {
+        "confidence" : 0.196,
+        "end" : 79.56,
+        "start" : 76.98,
+        "text" : " Uh,"
+      },
+      {
+        "confidence" : 0.107,
+        "end" : 83.34,
+        "start" : 79.56,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.722,
+        "end" : 83.94,
+        "start" : 83.34,
+        "text" : " there"
+      },
+      {
+        "confidence" : 0.832,
+        "end" : 84.54,
+        "start" : 83.94,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.135,
+        "end" : 85.26,
+        "start" : 84.54,
+        "text" : " then,"
+      },
+      {
+        "confidence" : 0.017,
+        "end" : 86.4,
+        "start" : 85.26,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.259,
+        "end" : 87.72,
+        "start" : 86.4,
+        "text" : " glance,"
+      },
+      {
+        "confidence" : 0.505,
+        "end" : 88.44,
+        "start" : 87.72,
+        "text" : " show"
+      },
+      {
+        "confidence" : 0.972,
+        "end" : 88.74,
+        "start" : 88.44,
+        "text" : " there"
+      },
+      {
+        "confidence" : 0.966,
+        "end" : 89.1,
+        "start" : 88.74,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.29,
+        "end" : 90.18,
+        "start" : 89.1,
+        "text" : " Dandra,"
+      },
+      {
+        "confidence" : 0.578,
+        "end" : 90.9,
+        "start" : 90.18,
+        "text" : " quickly,"
+      },
+      {
+        "confidence" : 0.783,
+        "end" : 91.62,
+        "start" : 90.9,
+        "text" : " Dorothy,"
+      },
+      {
+        "confidence" : 0.36,
+        "end" : 93.24,
+        "start" : 91.62,
+        "text" : " she"
+      },
+      {
+        "confidence" : 0.811,
+        "end" : 94.14,
+        "start" : 93.24,
+        "text" : " screamed."
+      },
+      {
+        "confidence" : 0.469,
+        "end" : 96.78,
+        "start" : 94.26,
+        "text" : " Run"
+      },
+      {
+        "confidence" : 0.595,
+        "end" : 99.96,
+        "start" : 96.78,
+        "text" : " to,"
+      },
+      {
+        "confidence" : 0.703,
+        "end" : 101.04,
+        "start" : 99.96,
+        "text" : " Dorothy,"
+      },
+      {
+        "confidence" : 0.191,
+        "end" : 102.48,
+        "start" : 101.04,
+        "text" : " man,"
+      },
+      {
+        "confidence" : 0.174,
+        "end" : 104.7,
+        "start" : 102.48,
+        "text" : " Najed,"
+      },
+      {
+        "confidence" : 0.247,
+        "end" : 107.58,
+        "start" : 104.7,
+        "text" : " to,"
+      },
+      {
+        "confidence" : 0.03,
+        "end" : 108.12,
+        "start" : 107.58,
+        "text" : " to,"
+      },
+      {
+        "confidence" : 0.339,
+        "end" : 108.36,
+        "start" : 108.12,
+        "text" : " and,"
+      },
+      {
+        "confidence" : 0.431,
+        "end" : 110.94,
+        "start" : 108.36,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.311,
+        "end" : 113.88,
+        "start" : 110.94,
+        "text" : " followed,"
+      },
+      {
+        "confidence" : 0.721,
+        "end" : 115.32,
+        "start" : 113.88,
+        "text" : " her"
+      },
+      {
+        "confidence" : 0.287,
+        "end" : 115.98,
+        "start" : 115.32,
+        "text" : " arms."
+      },
+      {
+        "confidence" : 0.147,
+        "end" : 117.06,
+        "start" : 116.04,
+        "text" : " However,"
+      },
+      {
+        "confidence" : 0.926,
+        "end" : 117.84,
+        "start" : 117.06,
+        "text" : " halfway"
+      },
+      {
+        "confidence" : 0.94,
+        "end" : 119.16,
+        "start" : 117.84,
+        "text" : " across"
+      },
+      {
+        "confidence" : 0.502,
+        "end" : 119.52,
+        "start" : 119.16,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.459,
+        "end" : 121.02,
+        "start" : 119.52,
+        "text" : " room,"
+      },
+      {
+        "confidence" : 0.214,
+        "end" : 121.44,
+        "start" : 121.02,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.733,
+        "end" : 122.34,
+        "start" : 121.44,
+        "text" : " fierce"
+      },
+      {
+        "confidence" : 0.964,
+        "end" : 123.18,
+        "start" : 122.34,
+        "text" : " gust"
+      },
+      {
+        "confidence" : 0.956,
+        "end" : 123.48,
+        "start" : 123.18,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.966,
+        "end" : 124.32,
+        "start" : 123.48,
+        "text" : " wind"
+      },
+      {
+        "confidence" : 0.585,
+        "end" : 125.76,
+        "start" : 124.32,
+        "text" : " roared,"
+      },
+      {
+        "confidence" : 0.496,
+        "end" : 126.6,
+        "start" : 125.76,
+        "text" : " causing"
+      },
+      {
+        "confidence" : 0.97,
+        "end" : 127.02,
+        "start" : 126.6,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.876,
+        "end" : 127.56,
+        "start" : 127.02,
+        "text" : " home"
+      },
+      {
+        "confidence" : 0.923,
+        "end" : 128.52,
+        "start" : 127.56,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.617,
+        "end" : 129.42,
+        "start" : 128.52,
+        "text" : " tumble."
+      },
+      {
+        "confidence" : 0.302,
+        "end" : 131.5799375,
+        "start" : 129.4799375,
+        "text" : " Trumble,"
+      },
+      {
+        "confidence" : 0.297,
+        "end" : 133.8599375,
+        "start" : 131.5799375,
+        "text" : " Trumble,"
+      },
+      {
+        "confidence" : 0.763,
+        "end" : 134.5799375,
+        "start" : 133.8599375,
+        "text" : " violent"
+      },
+      {
+        "confidence" : 0.617,
+        "end" : 134.9399375,
+        "start" : 134.5799375,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.555,
+        "end" : 136.7399375,
+        "start" : 134.9399375,
+        "text" : " live."
+      },
+      {
+        "confidence" : 0.47,
+        "end" : 138.66,
+        "start" : 136.8,
+        "text" : " Losing"
+      },
+      {
+        "confidence" : 0.956,
+        "end" : 138.96,
+        "start" : 138.66,
+        "text" : " her"
+      },
+      {
+        "confidence" : 0.507,
+        "end" : 142.14,
+        "start" : 138.96,
+        "text" : " balance."
+      },
+      {
+        "confidence" : 0.791,
+        "end" : 142.98,
+        "start" : 142.2,
+        "text" : " Dorothy"
+      },
+      {
+        "confidence" : 0.668,
+        "end" : 144,
+        "start" : 142.98,
+        "text" : " trembled"
+      },
+      {
+        "confidence" : 0.909,
+        "end" : 144.78,
+        "start" : 144,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 145.08,
+        "start" : 144.78,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.909,
+        "end" : 145.98,
+        "start" : 145.08,
+        "text" : " floor."
+      },
+      {
+        "confidence" : 0.569,
+        "end" : 150.12,
+        "start" : 146.04,
+        "text" : " And"
+      },
+      {
+        "confidence" : 0.587,
+        "end" : 150.66,
+        "start" : 150.12,
+        "text" : " some"
+      },
+      {
+        "confidence" : 0.635,
+        "end" : 151.2,
+        "start" : 150.66,
+        "text" : " very"
+      },
+      {
+        "confidence" : 0.265,
+        "end" : 151.68,
+        "start" : 151.2,
+        "text" : " strange"
+      },
+      {
+        "confidence" : 0.949,
+        "end" : 152.22,
+        "start" : 151.68,
+        "text" : " people"
+      },
+      {
+        "confidence" : 0.945,
+        "end" : 152.7,
+        "start" : 152.22,
+        "text" : " that"
+      },
+      {
+        "confidence" : 0.92,
+        "end" : 153.72,
+        "start" : 152.7,
+        "text" : " she"
+      },
+      {
+        "confidence" : 0.96,
+        "end" : 154.08,
+        "start" : 153.72,
+        "text" : " had"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 154.56,
+        "start" : 154.08,
+        "text" : " never"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 155.1,
+        "start" : 154.56,
+        "text" : " seen"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 155.52,
+        "start" : 155.1,
+        "text" : " before"
+      },
+      {
+        "confidence" : 0.221,
+        "end" : 156.3,
+        "start" : 155.52,
+        "text" : " were,"
+      },
+      {
+        "confidence" : 0.757,
+        "end" : 158.94,
+        "start" : 156.3,
+        "text" : " Coming"
+      },
+      {
+        "confidence" : 0.508,
+        "end" : 160.02,
+        "start" : 158.94,
+        "text" : " toward"
+      },
+      {
+        "confidence" : 0.849,
+        "end" : 160.44,
+        "start" : 160.02,
+        "text" : " her"
+      },
+      {
+        "confidence" : 0.382,
+        "end" : 160.98,
+        "start" : 160.44,
+        "text" : " 3"
+      },
+      {
+        "confidence" : 0.392,
+        "end" : 162.06,
+        "start" : 160.98,
+        "text" : " were,"
+      },
+      {
+        "confidence" : 0.161,
+        "end" : 162.78,
+        "start" : 162.06,
+        "text" : " man,"
+      },
+      {
+        "confidence" : 0.957,
+        "end" : 163.02,
+        "start" : 162.78,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.973,
+        "end" : 163.5,
+        "start" : 163.02,
+        "text" : " one"
+      },
+      {
+        "confidence" : 0.979,
+        "end" : 163.92,
+        "start" : 163.5,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.963,
+        "end" : 164.28,
+        "start" : 163.92,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.493,
+        "end" : 165.18,
+        "start" : 164.28,
+        "text" : " woman,"
+      },
+      {
+        "confidence" : 0.922,
+        "end" : 165.3,
+        "start" : 165.18,
+        "text" : " all"
+      },
+      {
+        "confidence" : 0.871,
+        "end" : 165.78,
+        "start" : 165.3,
+        "text" : " dressed."
+      },
+      {
+        "confidence" : 0.257,
+        "end" : 172.44,
+        "start" : 165.9,
+        "text" : " And..."
+      },
+      {
+        "confidence" : 0.112,
+        "end" : 175.5,
+        "start" : 175.08,
+        "text" : " Yeah,"
+      },
+      {
+        "confidence" : 0.076,
+        "end" : 177,
+        "start" : 175.5,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.15,
+        "end" : 178.38,
+        "start" : 177,
+        "text" : " pair,"
+      },
+      {
+        "confidence" : 0.39,
+        "end" : 179.46,
+        "start" : 178.38,
+        "text" : " P."
+      },
+      {
+        "confidence" : 0.421,
+        "end" : 182.4,
+        "start" : 179.58,
+        "text" : " Peace,"
+      },
+      {
+        "confidence" : 0.249,
+        "end" : 185.16,
+        "start" : 182.4,
+        "text" : " co..."
+      },
+      {
+        "confidence" : 0.552,
+        "end" : 187.02,
+        "start" : 185.22,
+        "text" : " Pick"
+      },
+      {
+        "confidence" : 0.347,
+        "end" : 187.68,
+        "start" : 187.02,
+        "text" : " her."
+      },
+      {
+        "confidence" : 0.619,
+        "end" : 190.62,
+        "start" : 187.74,
+        "text" : " Peculiar."
+      },
+      {
+        "confidence" : 0.194,
+        "end" : 192.06,
+        "start" : 190.68,
+        "text" : " I"
+      },
+      {
+        "confidence" : 0.317,
+        "end" : 192.6,
+        "start" : 192.06,
+        "text" : " tear,"
+      },
+      {
+        "confidence" : 0.295,
+        "end" : 194.52,
+        "start" : 192.6,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.189,
+        "end" : 195.36,
+        "start" : 194.52,
+        "text" : " tear."
+      },
+      {
+        "confidence" : 0.163,
+        "end" : 196.14,
+        "start" : 195.48,
+        "text" : " They"
+      },
+      {
+        "confidence" : 0.756,
+        "end" : 197.34,
+        "start" : 196.14,
+        "text" : " were"
+      },
+      {
+        "confidence" : 0.573,
+        "end" : 197.94,
+        "start" : 197.34,
+        "text" : " hat"
+      },
+      {
+        "confidence" : 0.828,
+        "end" : 198.78,
+        "start" : 197.94,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.115,
+        "end" : 199.8,
+        "start" : 198.78,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.974,
+        "end" : 199.92,
+        "start" : 199.8,
+        "text" : " with"
+      },
+      {
+        "confidence" : 0.518,
+        "end" : 200.64,
+        "start" : 199.92,
+        "text" : " bells"
+      },
+      {
+        "confidence" : 0.921,
+        "end" : 201.12,
+        "start" : 200.64,
+        "text" : " on"
+      },
+      {
+        "confidence" : 0.829,
+        "end" : 202.14,
+        "start" : 201.12,
+        "text" : " them"
+      },
+      {
+        "confidence" : 0.839,
+        "end" : 203.46,
+        "start" : 202.14,
+        "text" : " that"
+      },
+      {
+        "confidence" : 0.849,
+        "end" : 203.88,
+        "start" : 203.46,
+        "text" : " means"
+      },
+      {
+        "confidence" : 0.53,
+        "end" : 204.54,
+        "start" : 203.88,
+        "text" : " sweet"
+      },
+      {
+        "confidence" : 0.424,
+        "end" : 205.8,
+        "start" : 204.54,
+        "text" : " thing."
+      },
+      {
+        "confidence" : 0.229,
+        "end" : 208.26,
+        "start" : 205.86,
+        "text" : " Cling"
+      },
+      {
+        "confidence" : 0.76,
+        "end" : 208.74,
+        "start" : 208.26,
+        "text" : " sound"
+      },
+      {
+        "confidence" : 0.839,
+        "end" : 209.7,
+        "start" : 208.74,
+        "text" : " when"
+      },
+      {
+        "confidence" : 0.967,
+        "end" : 210,
+        "start" : 209.7,
+        "text" : " they"
+      },
+      {
+        "confidence" : 0.508,
+        "end" : 210.84,
+        "start" : 210,
+        "text" : " moved."
+      },
+      {
+        "confidence" : 0.343,
+        "end" : 211.8,
+        "start" : 210.96,
+        "text" : " The."
+      },
+      {
+        "confidence" : 0.681,
+        "end" : 214.14,
+        "start" : 211.86,
+        "text" : " Tickling"
+      },
+      {
+        "confidence" : 0.756,
+        "end" : 214.62,
+        "start" : 214.14,
+        "text" : " sound"
+      },
+      {
+        "confidence" : 0.984,
+        "end" : 215.28,
+        "start" : 214.62,
+        "text" : " when"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 215.4,
+        "start" : 215.28,
+        "text" : " they"
+      },
+      {
+        "confidence" : 0.626,
+        "end" : 215.88,
+        "start" : 215.4,
+        "text" : " moved,"
+      },
+      {
+        "confidence" : 0.812,
+        "end" : 216.66,
+        "start" : 215.88,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.264,
+        "end" : 217.38,
+        "start" : 216.66,
+        "text" : " men"
+      },
+      {
+        "confidence" : 0.542,
+        "end" : 218.1,
+        "start" : 217.38,
+        "text" : " were"
+      },
+      {
+        "confidence" : 0.153,
+        "end" : 219.66,
+        "start" : 218.1,
+        "text" : " blew"
+      },
+      {
+        "confidence" : 0.922,
+        "end" : 220.14,
+        "start" : 219.66,
+        "text" : " out"
+      },
+      {
+        "confidence" : 0.277,
+        "end" : 221.16,
+        "start" : 220.14,
+        "text" : " feet,"
+      },
+      {
+        "confidence" : 0.892,
+        "end" : 221.58,
+        "start" : 221.16,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.16,
+        "end" : 221.94,
+        "start" : 221.58,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.303,
+        "end" : 223.32,
+        "start" : 221.94,
+        "text" : " matched."
+      },
+      {
+        "confidence" : 0.256,
+        "end" : 225,
+        "start" : 223.32,
+        "text" : " Their"
+      },
+      {
+        "confidence" : 0.251,
+        "end" : 225.72,
+        "start" : 225,
+        "text" : " head,"
+      },
+      {
+        "confidence" : 0.705,
+        "end" : 226.44,
+        "start" : 225.72,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.267,
+        "end" : 227.1,
+        "start" : 226.44,
+        "text" : " their"
+      },
+      {
+        "confidence" : 0.791,
+        "end" : 228.48,
+        "start" : 227.1,
+        "text" : " shining"
+      },
+      {
+        "confidence" : 0.186,
+        "end" : 229.56,
+        "start" : 228.48,
+        "text" : " boot,"
+      },
+      {
+        "confidence" : 0.877,
+        "end" : 229.98,
+        "start" : 229.56,
+        "text" : " had"
+      },
+      {
+        "confidence" : 0.953,
+        "end" : 230.76,
+        "start" : 229.98,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 231.3,
+        "start" : 230.76,
+        "text" : " deep"
+      },
+      {
+        "confidence" : 0.973,
+        "end" : 231.96,
+        "start" : 231.3,
+        "text" : " blue"
+      },
+      {
+        "confidence" : 0.709,
+        "end" : 233.64,
+        "start" : 231.96,
+        "text" : " cough."
+      },
+      {
+        "confidence" : 0.938,
+        "end" : 235.08,
+        "start" : 233.7,
+        "text" : " The"
+      },
+      {
+        "confidence" : 0.939,
+        "end" : 235.44,
+        "start" : 235.08,
+        "text" : " woman"
+      },
+      {
+        "confidence" : 0.984,
+        "end" : 236.04,
+        "start" : 235.44,
+        "text" : " had"
+      },
+      {
+        "confidence" : 0.98,
+        "end" : 236.4,
+        "start" : 236.04,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.501,
+        "end" : 236.88,
+        "start" : 236.4,
+        "text" : " wet"
+      },
+      {
+        "confidence" : 0.397,
+        "end" : 238.14,
+        "start" : 236.88,
+        "text" : " hat,"
+      },
+      {
+        "confidence" : 0.873,
+        "end" : 238.38,
+        "start" : 238.14,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.851,
+        "end" : 238.74,
+        "start" : 238.38,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 239.1,
+        "start" : 238.74,
+        "text" : " long"
+      },
+      {
+        "confidence" : 0.513,
+        "end" : 240.12,
+        "start" : 239.1,
+        "text" : " dress,"
+      },
+      {
+        "confidence" : 0.407,
+        "end" : 242.94,
+        "start" : 240.12,
+        "text" : " with,"
+      },
+      {
+        "confidence" : 0.389,
+        "end" : 243.78,
+        "start" : 242.94,
+        "text" : " hmm."
+      },
+      {
+        "confidence" : 0.491,
+        "end" : 247.14,
+        "start" : 243.84,
+        "text" : " Plate,"
+      },
+      {
+        "confidence" : 0.762,
+        "end" : 248.22,
+        "start" : 247.14,
+        "text" : " flowering"
+      },
+      {
+        "confidence" : 0.443,
+        "end" : 249.72,
+        "start" : 248.22,
+        "text" : " from,"
+      },
+      {
+        "confidence" : 0.201,
+        "end" : 250.86,
+        "start" : 249.72,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.627,
+        "end" : 252.72,
+        "start" : 250.86,
+        "text" : " flowing,"
+      },
+      {
+        "confidence" : 0.729,
+        "end" : 253.38,
+        "start" : 252.72,
+        "text" : " from"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 253.8,
+        "start" : 253.38,
+        "text" : " her"
+      },
+      {
+        "confidence" : 0.806,
+        "end" : 255,
+        "start" : 253.8,
+        "text" : " shoulders,"
+      },
+      {
+        "confidence" : 0.976,
+        "end" : 256.26,
+        "start" : 255,
+        "text" : " sparkling"
+      },
+      {
+        "confidence" : 0.986,
+        "end" : 256.86,
+        "start" : 256.26,
+        "text" : " stars"
+      },
+      {
+        "confidence" : 0.959,
+        "end" : 257.58,
+        "start" : 256.86,
+        "text" : " were"
+      },
+      {
+        "confidence" : 0.583,
+        "end" : 261.18,
+        "start" : 257.58,
+        "text" : " spark,"
+      },
+      {
+        "confidence" : 0.549,
+        "end" : 265.2,
+        "start" : 261.18,
+        "text" : " sprinkling"
+      },
+      {
+        "confidence" : 0.942,
+        "end" : 265.98,
+        "start" : 265.2,
+        "text" : " over"
+      },
+      {
+        "confidence" : 0.633,
+        "end" : 268.68,
+        "start" : 265.98,
+        "text" : " her."
+      },
+      {
+        "confidence" : 0.203,
+        "end" : 270.48,
+        "start" : 268.74,
+        "text" : " Uh,"
+      },
+      {
+        "confidence" : 0.668,
+        "end" : 271.32,
+        "start" : 270.48,
+        "text" : " sprinkle."
+      },
+      {
+        "confidence" : 0.443,
+        "end" : 276.48,
+        "start" : 271.38,
+        "text" : " Sprinkles."
+      },
+      {
+        "confidence" : 0.603,
+        "end" : 280.68,
+        "start" : 276.54,
+        "text" : " Sprinkle."
+      },
+      {
+        "confidence" : 0.797,
+        "end" : 286.98,
+        "start" : 286.74,
+        "text" : " Over"
+      },
+      {
+        "confidence" : 0.869,
+        "end" : 287.34,
+        "start" : 286.98,
+        "text" : " her"
+      },
+      {
+        "confidence" : 0.486,
+        "end" : 288.24,
+        "start" : 287.34,
+        "text" : " gun."
+      },
+      {
+        "confidence" : 0.628,
+        "end" : 289.92,
+        "start" : 288.3,
+        "text" : " Shiny"
+      },
+      {
+        "confidence" : 0.575,
+        "end" : 290.4,
+        "start" : 289.92,
+        "text" : " like"
+      },
+      {
+        "confidence" : 0.563,
+        "end" : 291.36,
+        "start" : 290.4,
+        "text" : " diamonds"
+      },
+      {
+        "confidence" : 0.851,
+        "end" : 291.96,
+        "start" : 291.36,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.934,
+        "end" : 292.32,
+        "start" : 291.96,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.877,
+        "end" : 293.82,
+        "start" : 292.32,
+        "text" : " sunlight"
+      },
+      {
+        "confidence" : 0.766,
+        "end" : 294.42,
+        "start" : 293.82,
+        "text" : " where"
+      },
+      {
+        "confidence" : 0.937,
+        "end" : 294.96,
+        "start" : 294.42,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.809,
+        "end" : 295.98,
+        "start" : 294.96,
+        "text" : " beard"
+      },
+      {
+        "confidence" : 0.557,
+        "end" : 296.64,
+        "start" : 295.98,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.671,
+        "end" : 297.36,
+        "start" : 296.64,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.443,
+        "end" : 298.74,
+        "start" : 297.36,
+        "text" : " man."
+      },
+      {
+        "confidence" : 0.433,
+        "end" : 302.46,
+        "start" : 298.74,
+        "text" : " Appeared"
+      },
+      {
+        "confidence" : 0.661,
+        "end" : 303.3,
+        "start" : 302.46,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 303.72,
+        "start" : 303.3,
+        "text" : " be"
+      },
+      {
+        "confidence" : 0.969,
+        "end" : 304.2,
+        "start" : 303.72,
+        "text" : " about"
+      },
+      {
+        "confidence" : 0.631,
+        "end" : 305.4,
+        "start" : 304.2,
+        "text" : " Uncle"
+      },
+      {
+        "confidence" : 0.671,
+        "end" : 306.18,
+        "start" : 305.4,
+        "text" : " Henry's"
+      },
+      {
+        "confidence" : 0.593,
+        "end" : 306.78,
+        "start" : 306.18,
+        "text" : " age,"
+      },
+      {
+        "confidence" : 0.876,
+        "end" : 306.9,
+        "start" : 306.78,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.98,
+        "end" : 307.26,
+        "start" : 306.9,
+        "text" : " woman"
+      },
+      {
+        "confidence" : 0.877,
+        "end" : 307.62,
+        "start" : 307.26,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.414,
+        "end" : 308.64,
+        "start" : 307.62,
+        "text" : " um"
+      },
+      {
+        "confidence" : 0.505,
+        "end" : 309.9,
+        "start" : 308.64,
+        "text" : " dog."
+      },
+      {
+        "confidence" : 0.098,
+        "end" : 311.88,
+        "start" : 310.02,
+        "text" : " T,"
+      },
+      {
+        "confidence" : 0.118,
+        "end" : 313.08,
+        "start" : 311.88,
+        "text" : " T,"
+      },
+      {
+        "confidence" : 0.009,
+        "end" : 314.46,
+        "start" : 313.08,
+        "text" : " T,"
+      },
+      {
+        "confidence" : 0.639,
+        "end" : 315.36,
+        "start" : 314.46,
+        "text" : " much"
+      },
+      {
+        "confidence" : 0.585,
+        "end" : 316.26,
+        "start" : 315.36,
+        "text" : " older."
+      },
+      {
+        "confidence" : 0.508,
+        "end" : 316.56,
+        "start" : 316.32,
+        "text" : " Her"
+      },
+      {
+        "confidence" : 0.98,
+        "end" : 316.92,
+        "start" : 316.56,
+        "text" : " face"
+      },
+      {
+        "confidence" : 0.949,
+        "end" : 317.46,
+        "start" : 316.92,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.899,
+        "end" : 319.5,
+        "start" : 317.46,
+        "text" : " lined"
+      },
+      {
+        "confidence" : 0.986,
+        "end" : 320.04,
+        "start" : 319.5,
+        "text" : " with"
+      },
+      {
+        "confidence" : 0.629,
+        "end" : 323.94,
+        "start" : 320.04,
+        "text" : " wrinkles."
+      },
+      {
+        "confidence" : 0.575,
+        "end" : 324.66,
+        "start" : 324,
+        "text" : " Her"
+      },
+      {
+        "confidence" : 0.966,
+        "end" : 325.38,
+        "start" : 324.66,
+        "text" : " hair"
+      },
+      {
+        "confidence" : 0.95,
+        "end" : 326.1,
+        "start" : 325.38,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 326.82,
+        "start" : 326.1,
+        "text" : " nearly"
+      },
+      {
+        "confidence" : 0.549,
+        "end" : 327.36,
+        "start" : 326.82,
+        "text" : " wet"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 327.9,
+        "start" : 327.36,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.988,
+        "end" : 328.5,
+        "start" : 327.9,
+        "text" : " she"
+      },
+      {
+        "confidence" : 0.804,
+        "end" : 329.22,
+        "start" : 328.5,
+        "text" : " worked"
+      },
+      {
+        "confidence" : 0.716,
+        "end" : 330.9,
+        "start" : 329.22,
+        "text" : " stuffly."
+      }
+    ],
+    "source" : "super8-L6-p7-8-F91F018D-85B8-4D6F-8B92-2457448653C7.m4a"
+  },
+  "words" : [
+    "on",
+    "this",
+    "particular",
+    "day",
+    "uncle",
+    "harry",
+    "says",
+    "on",
+    "the",
+    "doorstep",
+    "his",
+    "gaze",
+    "fixed",
+    "fixed",
+    "fixed",
+    "fixed",
+    "and",
+    "stressedly",
+    "upon",
+    "the",
+    "i",
+    "usually",
+    "the",
+    "gray",
+    "sky",
+    "and",
+    "um",
+    "was",
+    "busy",
+    "washing",
+    "the",
+    "dishes",
+    "suddenly",
+    "uncle",
+    "harry",
+    "stood",
+    "up",
+    "and",
+    "called",
+    "out",
+    "to",
+    "his",
+    "wife",
+    "there's",
+    "a",
+    "sad",
+    "clone",
+    "coming",
+    "i'll",
+    "go",
+    "check",
+    "on",
+    "the",
+    "left",
+    "dog",
+    "stuck",
+    "with",
+    "that",
+    "he",
+    "hurried",
+    "towards",
+    "the",
+    "shy",
+    "where",
+    "the",
+    "car",
+    "and",
+    "horses",
+    "were",
+    "kept",
+    "um",
+    "and",
+    "um",
+    "stopped",
+    "her",
+    "work",
+    "and",
+    "rushed",
+    "to",
+    "the",
+    "floor",
+    "uh",
+    "to",
+    "the",
+    "door",
+    "a",
+    "single",
+    "uh",
+    "uh",
+    "there",
+    "was",
+    "then",
+    "uh",
+    "glance",
+    "show",
+    "there",
+    "was",
+    "dandra",
+    "quickly",
+    "dorothy",
+    "she",
+    "screamed",
+    "run",
+    "to",
+    "dorothy",
+    "man",
+    "najed",
+    "to",
+    "to",
+    "and",
+    "and",
+    "followed",
+    "her",
+    "arms",
+    "however",
+    "halfway",
+    "across",
+    "the",
+    "room",
+    "a",
+    "fierce",
+    "gust",
+    "of",
+    "wind",
+    "roared",
+    "causing",
+    "the",
+    "home",
+    "to",
+    "tumble",
+    "trumble",
+    "trumble",
+    "violent",
+    "to",
+    "live",
+    "losing",
+    "her",
+    "balance",
+    "dorothy",
+    "trembled",
+    "to",
+    "the",
+    "floor",
+    "and",
+    "some",
+    "very",
+    "strange",
+    "people",
+    "that",
+    "she",
+    "had",
+    "never",
+    "seen",
+    "before",
+    "were",
+    "coming",
+    "toward",
+    "her",
+    "3",
+    "were",
+    "man",
+    "and",
+    "one",
+    "was",
+    "a",
+    "woman",
+    "all",
+    "dressed",
+    "and",
+    "yeah",
+    "uh",
+    "pair",
+    "p",
+    "peace",
+    "co",
+    "pick",
+    "her",
+    "peculiar",
+    "i",
+    "tear",
+    "a",
+    "tear",
+    "they",
+    "were",
+    "hat",
+    "and",
+    "uh",
+    "with",
+    "bells",
+    "on",
+    "them",
+    "that",
+    "means",
+    "sweet",
+    "thing",
+    "cling",
+    "sound",
+    "when",
+    "they",
+    "moved",
+    "the",
+    "tickling",
+    "sound",
+    "when",
+    "they",
+    "moved",
+    "the",
+    "men",
+    "were",
+    "blew",
+    "out",
+    "feet",
+    "and",
+    "the",
+    "matched",
+    "their",
+    "head",
+    "and",
+    "their",
+    "shining",
+    "boot",
+    "had",
+    "a",
+    "deep",
+    "blue",
+    "cough",
+    "the",
+    "woman",
+    "had",
+    "a",
+    "wet",
+    "hat",
+    "and",
+    "a",
+    "long",
+    "dress",
+    "with",
+    "hmm",
+    "plate",
+    "flowering",
+    "from",
+    "uh",
+    "flowing",
+    "from",
+    "her",
+    "shoulders",
+    "sparkling",
+    "stars",
+    "were",
+    "spark",
+    "sprinkling",
+    "over",
+    "her",
+    "uh",
+    "sprinkle",
+    "sprinkles",
+    "sprinkle",
+    "over",
+    "her",
+    "gun",
+    "shiny",
+    "like",
+    "diamonds",
+    "in",
+    "the",
+    "sunlight",
+    "where",
+    "the",
+    "beard",
+    "and",
+    "the",
+    "man",
+    "appeared",
+    "to",
+    "be",
+    "about",
+    "uncle",
+    "henry's",
+    "age",
+    "the",
+    "woman",
+    "was",
+    "um",
+    "dog",
+    "t",
+    "t",
+    "t",
+    "much",
+    "older",
+    "her",
+    "face",
+    "was",
+    "lined",
+    "with",
+    "wrinkles",
+    "her",
+    "hair",
+    "was",
+    "nearly",
+    "wet",
+    "and",
+    "she",
+    "worked",
+    "stuffly"
+  ]
+}
