@@ -625,13 +625,16 @@ def timeline(r: Report) -> dict:
     # 图下面那段话 = [卡壳] 的说明 + [跳过] 的说明。灰带只有宽的那几条印得下标签
     # （见 figures.timeline_svg），窄的那几条全靠这段话交代 —— 以前 [跳过] 的
     # 缩进行写了没人看得见，白写
-    note = joined(r.blocks["卡壳"].notes()) if "卡壳" in r.blocks else ""
-    if "跳过" in r.blocks:
-        note = "\n".join(x for x in (note, joined(r.blocks["跳过"].notes())) if x)
+    #
+    # **两段各自成段**：讲的是两件事（哪儿卡住了 / 哪几段不算数），
+    # 以前用 "\n" 拼成一个字符串，HTML 里换行只渲染成一个空格，
+    # 于是「…哼了两声才起来。 第 8 页最后一句话断在…」连着读，像同一件事
+    notes = [x for x in (joined(r.blocks[k].notes()) if k in r.blocks else ""
+                         for k in ("卡壳", "跳过")) if x]
     # 图画的是**整段录音**（raw_duration），[跳过] 那几段涂灰；
     # 上面「四个数字」里的秒数和 WCPM 用的是扣完的 r.duration。两个数不一样是对的。
     return {"seconds": round(r.raw_duration), "svg": svg, "counts": counts,
-            "note": rich(note) if note else ""}
+            "notes": [rich(x) for x in notes]}
 
 
 def ref_text(slug: str) -> str:

@@ -134,9 +134,9 @@
         <span><i style="background:var(--tl-long)"></i>句中长停 ≥0.8 秒 · {{ r.timeline.counts.long }} 次</span>
         <span><i style="background:var(--tl-mid)"></i>句中短停 · {{ r.timeline.counts.mid }} 次</span>
       </div>
-{% if r.timeline.note %}
-      <p class="tl-note">{{ r.timeline.note|safe }}</p>
-{% endif %}
+{% for n in r.timeline.notes %}
+      <p class="tl-note">{{ n|safe }}</p>
+{% endfor %}
     </section>
 {% endif %}
 {% if r.pages %}
