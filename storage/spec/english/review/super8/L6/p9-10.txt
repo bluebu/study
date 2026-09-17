@@ -1,0 +1,255 @@
+# 超8 · Lesson 6
+#
+# ── 正文的写法（见 src/generator/english/CLAUDE.md）
+# 报告正文只写**孩子的朗读**。机器为什么误判、我们怎么核的，全部留在这些 # 注释里。
+#
+# ── 基准核过了，划线范围没问题
+# p9 / p10 的 marked.png 逐词看过：两页各一个框（都是「上下两条长横线 + 竖边」那种整块圈），
+# 框内每个词都有橙框，没有整行漏掉的。p9 = 55 词（两段）、p10 = 137 词（三段），
+# 合 192，和 words 对得上。`refSuspects` 是空的 —— 这次划中范围里一处 OCR 可疑词都没有
+# （两页各有一个 spellFlag：p9 的 stiflly、p10 的 carlier，都 isMarked=false，在框外，不进基准）。
+#
+# ── [跳过] 两段，草稿给的边界核完都对
+# 开头 32.9 秒读的是划线**上面**那一段（marked.png 上看得清清楚楚，绿框之外）：
+#   课本 “The old woman walked up to Dorothy, bowed nicely… saving us from her mean rule.”
+#   她读成 “The old man walked up to Dorothy, bold nestly… from her main rule.”
+#   —— 这段没划线，时长里有、词数里没有，扣掉。
+#   ⚠️ 但**这段里 mean 又读成了 main**，和划线段里 155.6 秒那处一模一样。
+#     不计错，可是它把「mean 四次全错」这条坐实了（见 [三件事] 第二条）。
+# 末尾 98.4 秒念的是第 4–6 页那份生词表：wizard / sorcerers / cyclone / cornfield /
+#   cower / spectacle / stumble / stove / tent / reveal / tender…，孤立的词、彼此不成句、
+#   在原文里连不成行，不是朗读。打卡单 5️⃣ 要求的就是这个，读完顺手录进来了。
+#
+# ── 逐条核完：30 处候选 → 计错 18 处
+# 机器建议计错 18 处，全部照计。另外 12 处标的是「存疑」，这次**全部撤下**，分三组：
+#   · **97.5–110.7 秒 7 处**：转写是「who wants rude hair, I could have. Feed them,
+#     freedom, munchkin myself」—— 对齐没有错位（前后 “the wicked witch who” 和
+#     “myself. But I thought all witches” 都严丝合缝对上了），但转写自己拼不成句，
+#     置信度一路压到 0.05 / 0.18 / 0.20 / 0.24。判不出是她读得含混还是识别器听岔。
+#     ⚠️ **这 7 处里有两处很像真错，回头听录音先核这两个**：
+#       would→could 置信度 0.96（这么高多半是她真读了 could）、
+#       ruled→rude 正好是丢 -ed，和她这次那 9 处词尾一个形状。
+#   · **131.8–137.8 秒 3 处**：Two→to / are→our / nice→nights。**Two 和 to 完全同音**，
+#     识别器只能靠上下文选，上下文一乱就选错 —— 这一处足以说明整段的判词不可靠，三处一起撤。
+#   · **专名 2 处**：Oz→the（129.1 秒，同一句里多冒出个 all；Oz 在 170 秒那次识别器认出来了，
+#     所以这处多半是转写的锅）、I'm→and（141.4 秒，她在「north and the, uh, north and south」
+#     那儿回读重来，对齐吃进了多读的词）。
+#   全算错的话准确率是 84.4%（现在 90.6%），差 6.2 个百分点。听完要调就改 errors 和 [评分]。
+#
+# ── 这次的错：词尾 9 / 词形 2 / 小词 2 / 辅音 2 / 元音 1 / 生词 1 / 漏读 1
+# **词尾第一次占到一半**（9/18）。上一次是生词 10 排第一、词尾 6；这两页生词那一头几乎没了
+# （只有 hesitated 一处），拖住她的换成了 -ed / -s / -ing：
+#   mistake→mistakes、pointing→pointed、wood→wooden、replied→replies、
+#   kind-hearted→kind hearty、wizards→wizard、remarked→remark、defeated→defeat、lives→lived。
+# **mean 这个词划线段里出现 3 次、错 3 次**（me / main / 整个跳过），加上跳过段那次共四次全错。
+#
+# ── 文本确实比上一次简单，但这是量出来的，不是替数字找的理由
+# p7-8：230 词 · 平均词长 4.47 · ≥8 字母的词 19 处（8.3%）
+# p9-10：192 词 · 平均词长 4.05 · ≥8 字母的词 11 处（5.7%）
+# 上一次那五个卡住她的长词（peculiar / sprinkled / pleats / undoubtedly / tremble）
+# 这两页一个都没有 —— 这两页是对话，她读对话一向快。
+#
+# ── auto_bounds 核过了，这次不用手写 [句末]
+# 这两页是对话段，引号内分句多，本来最容易漏。逐个核了一遍：推出 19 个句末，
+# 位置全对，带引号收尾的那四处（anyone." / Look!" / myself." / City."）也认出来了。
+# 报告上「句末停顿 15 次」是这 19 处里她真停了的那些，不是少数了。
+
+date: 2026-09-15
+cat: 超8
+order: 9
+page: 9–10
+prev: p7-8
+book: 绿野仙踪
+part: 划线五段
+words: 192
+errors: 18
+score: 55
+naep: 2
+
+[评分] 准确度=18/30 流利度=15/30 断句语调=14/25 发音=8/15
+
+[总评] 速度追回来了 —— 这次拖住她的不是生词，是词尾
+    准确率从 85.2% 回到 90.6%，每分钟读对的词从 37 升到 70，两个数都是换到这本书以来最好的。
+    上一次五个长词吃掉 70 秒，这两页一个那样的词都没有（对话段，平均词长从 4.47 掉到 4.05）。
+    **所以真正值得看的是剩下的 18 处错里有 9 处是词尾** —— 一半。
+    不是不认识这些词，是句子说到最后一个音节松了劲：pointing 读成 pointed、
+    wizards 掉了 -s、defeated 掉了 -ed。这一条已经连着八次了，
+    生词那头一让开，它就成了最大的一块。
+
+[跳过] 0.0-32.9 = 读了划线前的一段, 183.1-281.5 = 念生词表
+    开头这 32.9 秒读的是划线框上面那一段（老太太迎上来那几句），这次没划线；
+    末尾这 98.4 秒念的是第 4–6 页的生词表，孤立的词，不是朗读。两段都不算进下面的数。
+
+[卡壳] 32.9-35.3 = 卡 2.4 秒, 51.3-55.9 = 卡 4.6 秒, 105.2-107.8 = 卡 2.6 秒, 116.9-120.4 = 卡 3.5 秒, 173.5-178.1 = 卡 4.6 秒
+    五处里只有第一处是卡在生词上（hesitated，最后读成了 hated）。其余四处都不是不认识：
+    52 秒那次是 “chuckling.” 后面换引号换段，找下一行找了 4.5 秒；
+    117 秒那次哼了一声才接上 remarked；174 秒那次 strongest 连读了三遍。
+    105 秒那次落在转写乱掉的那一段里，判不出卡在哪个词上。
+
+[分页] 这次读了 2 页
+第 9 页 = 32.9-76.7 秒 · 55 词 · 候选错 5 处 · 多读 49 处 · 语速 75 词/分
+第 10 页 = 79.9-183.1 秒 · 137 词 · 候选错 25 处 · 多读 13 处 · 语速 80 词/分
+    两页其实一样稳（各自 9 成上下），第 10 页词多了一倍半、错也多了五倍，
+    但那一页是女巫一长段独白，kind-hearted、Munchkins、wizards、defeated 挤在一起。
+    第 9 页那「多读 49 处」不是她在这一页读岔了 —— 开头读的划线前那一段记在了这一页名下。
+
+[对比] 和上一页比
+    同一课、同一部手机录的视频，录音条件一样，两次可以直接比。
+
+[比对] 逐字比对 · 30 处（计错 18）
+原文 Dorothy *hesitated* before answering You
+实读 Dorothy *hated* before answering You
+    〔生词〕 32.9 秒。hesitated 停了 2.4 秒才出来，读成了 hated —— 中间那个音节整个吞掉了
+原文 must be some *mistake* I haven't killed
+实读 must be some *mistakes* I haven't killed
+    〔词尾〕 42.4 秒。mistake 读出来多了个 -s
+原文 I haven't killed *anyone* Your house certainly
+实读 I haven't killed *everyone* Your house certainly
+    〔词形〕 45.4 秒。anyone 看成了 everyone，意思正好反过来
+原文 Look she added *pointing* to the corner
+实读 Look she added *pointed* to the corner
+    〔词尾〕 63.7 秒。pointing 读成 pointed，这儿是「一边说一边指」，不是过去式
+原文 feet under a *wood* beam I'm the
+实读 feet under a *wooden* beam I'm the
+    〔词尾〕 73.6 秒。wood 读出来多了 -en
+原文 a wood beam *I'm* the Witch of
+实读 a wood beam *um* the Witch of
+    〔小词〕 76.9 秒。翻到第 10 页那一下哼了一声，把开头的 I'm 顶掉了
+原文 of the North *replied* the woman But
+实读 of the North *replies* the woman But
+    〔词尾〕 82.3 秒。replied 读成 replies，-ed 换成了 -s
+原文 But I'm a *kind-hearted* witch beloved by
+实读 But I'm a *kind hearty* witch beloved by
+    〔词尾〕 86.8 秒。kind-hearted 拆成两个词读，后半截的 -ed 变成了 -y
+原文 wicked witch who *once* ruled here I
+识别成 wicked witch who *wants* ruled here I
+    〔－〕 99.5 秒。这一段（97.5–110.7）转写整个拼不成句，判不出是她读含混还是识别器听岔，不计错
+原文 witch who once *ruled* here I would
+识别成 witch who once *rude* here I would
+    〔－〕 100.0 秒。同上一段。**这处最像真错** —— rude 正好就是 ruled 丢了 -ed
+原文 who once ruled *here* I would have
+识别成 who once ruled *hair* I would have
+    〔－〕 100.4 秒。同上一段
+原文 ruled here I *would* have freed the
+识别成 ruled here I *could* have freed the
+    〔－〕 102.1 秒。同上一段。**这处也像真错** —— 识别器对 could 有 0.96 的把握
+原文 I would have *freed* the Munchkins myself
+识别成 I would have *them* the Munchkins myself
+    〔－〕 104.8 秒。同上一段
+原文 would have freed *the* Munchkins myself But
+识别成 would have freed *freedom* Munchkins myself But
+    〔－〕 105.2 秒。同上一段
+原文 have freed the *Munchkins* myself But I
+识别成 have freed the *munchkin* myself But I
+    〔－〕 107.8 秒。同上一段
+原文 all witches and *wizards* were wicked remarked
+实读 all witches and *wizard* were wicked remarked
+    〔词尾〕 114.7 秒。wizards 掉了 -s，前面还多读了一个 the
+原文 wizards were wicked *remarked* Dorothy Oh no
+实读 wizards were wicked *remark* Dorothy Oh no
+    〔词尾〕 119.5 秒。remarked 掉了 -ed，前面哼了一声停了 3.5 秒
+原文 no the woman *explained* In the Land
+实读 no the woman *exclaimed* In the Land
+    〔词形〕 124.1 秒。explained 看成了 exclaimed，只差中间一个字母
+原文 the Land of *Oz* we only had
+识别成 the Land of *the* we only had
+    〔－〕 129.1 秒。Oz 是专名，识别器往认识的词上靠；同一句里还多冒出个 all。
+        170 秒那次「a great wizard named Oz」它认出来了，所以这处多半是转写的锅，不计错
+原文 had four witches *Two* are nice living
+识别成 had four witches *to* are nice living
+    〔－〕 133.8 秒。**Two 和 to 完全同音**，识别器只能靠上下文选，这一段上下文乱了，不计错
+原文 four witches Two *are* nice living in
+识别成 four witches Two *our* nice living in
+    〔－〕 134.7 秒。同上一段（131.8–137.8）
+原文 witches Two are *nice* living in the
+识别成 witches Two are *nights* living in the
+    〔－〕 135.1 秒。同上一段
+原文 and the south *I'm* one of the
+识别成 and the south *and* one of the
+    〔－〕 141.4 秒。她在「north and the, uh, north and south」那儿回读重来，
+        对齐把多读的 and 吃了进来，不计错
+原文 the west were *mean* But you defeated
+实读 the west were *me* But you defeated
+    〔辅音〕 152.6 秒。mean 尾巴上的 /n/ 没出来，读成了 me
+原文 mean But you *defeated* the mean one
+实读 mean But you *defeat* the mean one
+    〔词尾〕 154.5 秒。defeated 掉了 -ed，这一句是过去时
+原文 you defeated the *mean* one from the
+实读 you defeated the *main* one from the
+    〔元音〕 155.6 秒。mean 的 /iː/ 读成了 main 的 /eɪ/。开头那段没划线的课文里也是这个音
+原文 so now we *only* have one mean
+实读 so now we *could* have one mean
+    〔小词〕 159.3 秒。only 读成了 could，识别器对这处有 0.99 的把握
+原文 only have one *mean* witch left in
+实读 only have one *（漏读）* witch left in
+    〔漏读〕 mean 第三次，这次整个跳过去了
+原文 have one mean *witch* left in the
+实读 have one mean *movie* left in the
+    〔辅音〕 160.6 秒。和上面那处连着 ——「mean witch」两个词糊成了一个音
+原文 of all and *lives* in the Emerald
+实读 of all and *lived* in the Emerald
+    〔词尾〕 180.1 秒。lives 读成 lived，这一句说的是现在
+
+[磕巴] 10 处（不计错）
+*the old man walked up to dorothy bold nestly and spoke in a pleasant voice welcome great magic lady to the match king's place you are very we are very thankful to you for beating the bad witch of the east and the saving us from her main rule* Dorothy hesitated before answering
+    0.0 秒。这是划线框上面那一段，她从第 9 页页首读起的，已经从时长里扣掉
+*kind* kind-hearted witch beloved by
+    86.3 秒。kind-hearted 拆成「kind + hearty」两次读，前半截被算成多读
+*feed* freed the Munchkins myself
+    104.1 秒。落在转写乱掉的那一段里
+*the* wizards were wicked remarked
+    113.9 秒。多读了一个 the：「all witches and the wizard」
+*hmm* remarked Dorothy Oh no
+    117.0 秒。wicked 之后哼了一声，停了 3.5 秒才接上 remark
+*all* Oz we only had
+    128.5 秒。Oz 被识别成 all
+*could* only had four witches
+    129.9 秒。多读了 could：「we could only had four witches」
+*uh north and* south I'm one of
+    139.4 秒。读到「north and the」发现不对，哼了一声重来「north and south」—— 回读
+*strongest of all strongest* strongest of all and
+    173.5 秒。strongest 连读三遍，这是五处停顿里最长的一处（4.6 秒）
+*wizard circle the so seller seller seller seller i take cough grunt so cyclone sorcerers sorcerers cornfield car queen queer ting cower cored d chop chop top uh back to to to to to to spectacle a dorm some salmon stumble stumble stumble this stove and habit hi tent tent tent tent tent hi hi hi zard reveal and tent tent tender* City
+    183.1 秒。第 4–6 页的生词表，不是朗读，已经从时长里扣掉
+
+[亮点]
+"You are very kind, but I think there must be some mistake. **I haven't killed anyone.**"
+    第 9 页这一句一口气到底，引号里的短句读得又快又准
+"Two are nice, **living in the north and the south.**"
+    一长段独白没有中断过 —— 上一次五个长词各卡七八秒，这两页一次都没出现
+**平均 3.0 个词一组，十七次里最成串的一次**
+    上一次是 1.3，一个词一个词往外蹦。这次停顿基本落在标点上，
+    对话体的引号和逗号她跟得住
+
+[三件事]
+🔚 每句最后一个音节多含半拍
+    这次 18 处错有 9 处是词尾：pointing→pointed、wizards→wizard、remarked→remark、
+    defeated→defeat、lives→lived、replied→replies、mistake→mistakes、wood→wooden、
+    kind-hearted→kind hearty。连着第八次了。读完一句先别急着换气，把最后那个 -ed / -s 说完
+🎯 mean 这个词单独念熟
+    这两页 mean 出现三次，错了三次（me / main / 整个跳过）；开头没划线的那一段里
+    还有第四次，也读成了 main。/miːn/ —— 和 me、main 各差一点，三个词摆一起念几遍
+📖 长句读到后半截，小词最容易换
+    only 读成 could、would 读成 could（这处还没定）—— 都是句子过半之后的小词。
+    长句读之前先用眼睛扫到句号，心里有个长度
+
+[斜线]
+But you defeated /
+the mean one from the east, /
+so now we only have /
+one mean witch left, in the west.
+
+[尺子]
+    90.6% 还在「偏难」这一档 —— 比上一次（85.2%）往右挪了 5.4 个百分点，
+        是换到这本书以来最好的一次。192 个词错 18 处，其中 9 处是词尾。
+    70 个正确词/分钟，比上一次（37）快了将近一倍，是十七次里第四快 ——
+        越过**三年级秋季 25 百分位**（59），也过了四年级秋季 10 百分位（60），
+        离三年级 50 百分位（83）还有一段。母语常模只当参照系，不是及格线。
+    平均 3.0 个词一组，十七次里最成串的一次（上一次 1.3）；停顿占时长从 36% 降到 20%，
+        停的次数少了、也多半落在标点上，但回读还不少，仍按第 2 级放着。
+
+[怎么来的]
+**准确率 90.6%**（读对 174 / 划线共 192 词）。替换、漏读、读错音计错；插入的词和退回去重读只算不流利、不计错。上面的比对列了 30 条、计错 18 处 —— 另外 12 条写的是「识别成」，那几处判不出是她读错还是转写没听准，这次**没有计错**：97.5–110.7 秒 7 处、131.8–137.8 秒 3 处、两处专名。想复核就听这三段，如果全算错，准确率是 84.4%。
+**每分钟正确词数 70**（WCPM）= 读对的 174 个词 ÷ 150.2 秒 × 60。开头读划线前那一段的 32.9 秒、末尾念生词表的 98.4 秒都不算进来。
+**断句**取 65 次停顿里断在句子中间的那些，平均 3.0 个词一组。句末位置由原文句末标点推出（19 处），逐个核过。
+录音是手机拍的点读视频，281.5 秒；停顿按「说话声级 − 10 dB、持续 ≥0.25 秒」数；比对基准是第 9、10 页划线框住的那五段（192 词，对着核对图逐词看过）。**发音一项是从转写结果推断的**，不如亲耳听准。
