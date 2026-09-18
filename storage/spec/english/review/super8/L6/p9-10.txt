@@ -234,9 +234,9 @@ naep: 2
     长句读之前先用眼睛扫到句号，心里有个长度
 
 [斜线]
-But you defeated /
-the mean one from the east, /
-so now we only have /
+But you defeated
+the mean one from the east,
+so now we only have
 one mean witch left, in the west.
 
 [尺子]

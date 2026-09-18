@@ -222,9 +222,9 @@ Aunt Em stopped her work and **rushed to the door**. A single glance showed ther
     这两个名字这两页出现六次，错了六次。名字不用猜意思，念熟就行
 
 [斜线]
-On this particular day, /
-Uncle Henry sat on the doorstep, /
-his gaze fixed anxiously /
+On this particular day,
+Uncle Henry sat on the doorstep,
+his gaze fixed anxiously
 upon the unusually gray sky.
 
 [尺子]
