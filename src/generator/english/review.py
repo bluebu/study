@@ -138,16 +138,73 @@ class Report:
         # （「读了原文以外的 113.2 秒」），但边界机器切不干净 —— 对齐会把生词表
         # 末几个词拉去顶课文结尾的词（p70-72 的 only/in、p12-15 的 problems），
         # 照 refTimes 首尾切会把整段生词表算进课文。所以机器给候选、人定边界。
-        self.skips: list[tuple[float, float, str]] = []
+        human: list[tuple[float, float, str]] = []
         if "跳过" in self.blocks:
             for span, label in spec_lib.Block(
                     name="", lines=[self.blocks["跳过"].head]).items():
                 a, _, b = span.partition("-")
-                self.skips.append((float(a), float(b), label or "不计"))
+                human.append((float(a), float(b), label or "不计"))
 
-        # ── 其余全部算出来
         self.raw_duration = float(self.acoustics["duration"])   # 录音本身多长（图上画的是它）
         _pauses = self.acoustics.get("pauses") or []
+
+        # ── 另外三段也不是朗读，但边界是**硬的**，所以机器自己扣，不用人写进 [跳过]
+        #
+        #   · 开头：按下录音到开口那几秒
+        #   · 末尾：最后一个原文词读完到停止录音 —— 读完了还得腾出手去按停止
+        #   · 翻页：上一页读完到下一页开口（跨页录音才有）
+        #
+        # 从前这三段照算进 duration、停顿也照数。9/17 那次尤其明显：翻页 7.7 秒 +
+        # 结尾 4.7 秒占了扣完时长的 10%，停顿占时长因此印成 37%（实际 32%），
+        # WCPM 印成 77（实际 86）。18 份里每一份都被撑大过，只是多少不同。
+        #
+        # 和 [跳过] 的分工是「边界谁定得准」：念生词表、读划线外的段落要人定
+        # （对齐会把生词表末几个词拉去顶课文结尾），这三段的边界 refTimes 和
+        # pages 里现成，机器算得比人准。两边有重叠就取并集，不会双扣。
+        auto: list[tuple[float, float, str]] = []
+        if _pauses and _pauses[0]["start"] < 0.1:
+            auto.append((0.0, _pauses[0]["end"], "还没开口"))
+        _times = [t for t in ((self.reading or {}).get("alignment", {}).get("refTimes") or [])
+                  if t is not None]
+        if _times and _times[-1] < self.raw_duration:
+            auto.append((_times[-1], self.raw_duration, "读完了"))
+        _pages = (self.reading or {}).get("pages") or []
+        for _prev, _next in zip(_pages, _pages[1:]):
+            if _next["start"] > _prev["end"]:
+                auto.append((_prev["end"], _next["start"], "翻页"))
+
+        # 并成不重叠的区间再扣 —— 重叠的部分扣两遍会把分母做小。
+        # 标签跟着人写的那条走：人写的说的是「读的是什么」，比「读完了」有信息量。
+        self.skips: list[tuple[float, float, str]] = []
+        for a, b, label in sorted(human + auto):
+            if self.skips and a <= self.skips[-1][1]:
+                pa, pb, plabel = self.skips[-1]
+                keep = plabel if (pa, pb, plabel) in human else label
+                self.skips[-1] = (pa, max(pb, b), keep)
+            else:
+                self.skips.append((a, b, label))
+
+        # 自动扣的那几段里**人没写进 [跳过] 的**那部分，报告里要交代一句 ——
+        # 否则「录音 209 秒、四个数字里写 106 秒」读的人算不平账。
+        # 已经被 [跳过] 盖住的不重复说（p9-10 末尾那段既是生词表也是「读完了」）。
+        self.auto_only: list[tuple[float, str]] = []
+        for a, b, label in sorted(auto):
+            rest = [(a, b)]
+            for ha, hb, _ in human:
+                cut = []
+                for ra, rb in rest:
+                    if ha < rb and hb > ra:      # 有重叠，剪掉中间那块
+                        if ra < ha:
+                            cut.append((ra, ha))
+                        if hb < rb:
+                            cut.append((hb, rb))
+                    else:
+                        cut.append((ra, rb))
+                rest = cut
+            left = round(sum(y - x for x, y in rest), 1)
+            if left >= 0.1:
+                self.auto_only.append((left, label))   # 已按起点排好，图上从左到右
+
         if self.skips and _pauses:
             _kept = [q for q in _pauses
                      if not any(a <= q["start"] < b for a, b, _ in self.skips)]
@@ -631,6 +688,11 @@ def timeline(r: Report) -> dict:
     # 于是「…哼了两声才起来。 第 8 页最后一句话断在…」连着读，像同一件事
     notes = [x for x in (joined(r.blocks[k].notes()) if k in r.blocks else ""
                          for k in ("卡壳", "跳过")) if x]
+    # 机器自己扣的那几段（开头没开口 / 翻页 / 读完了）也得交代 —— 它们在图上是灰带，
+    # 窄的那几条印不下标签，不说一句的话「录音 209 秒、四个数字写 106 秒」算不平账
+    if r.auto_only:
+        head = "另外这几段也不是在读，一并扣掉了：" if notes else "有几段不是在读，扣掉了："
+        notes.append(head + "、".join(f"{lab} {sec} 秒" for sec, lab in r.auto_only) + "。")
     # 图画的是**整段录音**（raw_duration），[跳过] 那几段涂灰；
     # 上面「四个数字」里的秒数和 WCPM 用的是扣完的 r.duration。两个数不一样是对的。
     return {"seconds": round(r.raw_duration), "svg": svg, "counts": counts,
