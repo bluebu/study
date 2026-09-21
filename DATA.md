@@ -165,6 +165,32 @@ p16 正是这一种）。错一位在页面上只表现成「点绿词听到别�
 **带 `.draft.` 的文件生成器一律跳过**（`lib/spec.py` 的 `specs()`，各科发现 spec
 都走它）。所以草稿躺在 spec 目录里既不进 git、也不会被建成一页。
 
+## 笔顺字形（`storage/data/chinese/stroke/`）—— data 层里唯一不是 feeder 产出的
+
+一个字一份 `<字>.json`，写字单（笔顺）拿它画范字和逐笔累加图。
+
+| 字段 | 是什么 |
+|---|---|
+| `strokes` | 一笔一条 SVG path，**按书写顺序排** |
+| `medians` | 每一笔的中线点列。第一个点就是起笔处（纸上那个绿点） |
+| `radStrokes` | 哪几笔属于部首。现在没用上，原样留着 |
+
+坐标系是 1024×1024 的字身框、**Y 轴朝上**，所以模板里统一套
+`translate(0,900) scale(1,-1)`。**900 不是 1024** —— 那是基线位置，
+改了整字会跑出格子。
+
+- **怎么补**：`python3 tools/fetch-stroke.py 提 纲`，或者
+  `python3 tools/fetch-stroke.py --from-spec storage/spec/chinese/writing/07y.txt`。
+  写字单缺字会**当场报错**并打出这条命令，不会静默少印一个字
+- **要 push**。和别的 data 一样进 repo，理由却不是「源没了就算不出来」，
+  而是 **CI 不该联网拉第三方**：拉不到就少印一个字，上游改了字形就两次打印不一样。
+  一个字 2~6 KB，一学期几百个字一两兆，不值得为省这点体积把构建绑在网上
+- **来源**：hanzi-writer-data（MIT）→ Make Me a Hanzi（LGPL / Arphic Public License）
+  → 字形出自 Arphic 文鼎楷体。**和 CI 里给田字格装的 `fonts-arphic-ukai` 是同一套字形**，
+  所以 SVG 画的范字和别处字体渲染的范字长得一样
+- **这一层不放别的**：`storage/data/chinese/` 下现在只有 stroke 一个来源，
+  哪天 feeder 真产出了语文的测量数据（比如朗读），那是另一个子目录的事
+
 ## 人写的判断（会话产出，全部**进 repo**）
 
 | 栏目 | 目录 | 命名 | 读它的生成器 |
@@ -176,6 +202,7 @@ p16 正是这一种）。错一位在页面上只表现成「点绿词听到别�
 | 语文练习 | `storage/spec/chinese/practice/` | `<YYYYMMDD>.txt` | `src/generator/chinese/practice.py` |
 | 背诵单 | `storage/spec/chinese/recite/` | `<课号>.txt` | `src/generator/chinese/recite.py` |
 | 抽查单 | `storage/spec/chinese/check/` | `<课号>.txt`（园地是 `<课号>y`） | `src/generator/chinese/check.py` |
+| 写字（笔顺） | `storage/spec/chinese/writing/` | `<课号>.txt`（园地是 `<课号>y`，同抽查单） | `src/generator/chinese/writing.py` |
 | 教材总览 | `storage/spec/chinese/overview/` | `<册>.txt`（`g4a` = 四年级上册） | `src/generator/chinese/overview.py` |
 | 数学秘籍 | `storage/spec/math/miji/` | `<错因slug>.txt` | `src/generator/math/build.py` |
 | 一周课表 | `storage/spec/schedule/week/` | `<YYYYMMDD>.txt` | `src/generator/schedule/week.py` |

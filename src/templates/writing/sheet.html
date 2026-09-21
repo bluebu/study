@@ -1,0 +1,55 @@
+{#-
+  语文写字 · 笔顺单 —— 一个字一行：左边大田字格印整字，右边逐笔累加。
+
+  ⚠️ 坐标系：笔顺数据是 1024×1024 的字身框、**Y 轴朝上**，所以每个 <svg> 里
+     都要套 translate(0,900) scale(1,-1) 翻过来。**900 不是 1024** ——
+     那是 Make Me a Hanzi 的基线位置，改成 1024 整字会往上跑出格子。
+     这个变换是常量，所以写在模板里；画哪几条 path、哪条是新的、绿点点在哪，
+     都是 writing.py 算好传进来的（模板不做计算）。
+
+  ⚠️ `.head .info` 是 nowrap 的普通块，「姓名 」后面那些空格是有意的，
+     整串当可信 HTML 传进来（page.sheet_info()），不在这儿拆。
+
+  ⚠️ `.wd` 里词和拼音之间**不许换行** —— 那是两个行内元素，中间的换行会折成
+     一个空格，词和拼音就分家了。`.st` 里的格子和序号同理。
+     别的地方不用担心：.steps 是 grid、.ch 是 flex，空白文本节点不生成盒子。
+-#}
+<div class="sheet" style="--big:{{ big }}mm; --step:{{ step }}mm">
+  <div class="head">
+    <h1>{{ heading }}</h1>
+    <div class="info">{{ info|safe }}</div>
+  </div>
+{% if hint %}
+  <p class="hint">{{ hint }}</p>
+{% endif %}
+{% for blk in blocks %}
+  <div class="block">
+    <h2>{{ blk.label }}</h2>
+{% for w in blk.words %}
+    <div class="word">
+      <div class="wd">{{ w.word }}<span class="wpy">{{ w.py }}</span></div>
+{% for c in w.chars %}
+      <div class="ch">
+        <i class="tian big">
+          <svg viewBox="0 0 1024 1024" aria-label="{{ c.char }}">
+            <g transform="translate(0,900) scale(1,-1)">
+{% for p in c.paths %}
+              <path class="{{ p.cls }}" d="{{ p.d }}"/>
+{% endfor %}
+            </g>
+          </svg>
+        </i>
+        <div class="meta"><span class="cpy">{{ c.py }}</span><span class="cnt">{{ c.total }} 画</span></div>
+        <div class="steps {{ c.wrap }}">
+{% for s in c.steps %}
+          <div class="st"><i class="tian step"><svg viewBox="0 0 1024 1024" aria-hidden="true"><g transform="translate(0,900) scale(1,-1)">{% for p in s.paths %}<path class="{{ p.cls }}" d="{{ p.d }}"/>{% endfor %}<circle class="dot" cx="{{ s.dot.x }}" cy="{{ s.dot.y }}" r="52"/></g></svg></i><b>{{ s.n }}</b></div>
+{% endfor %}
+        </div>
+      </div>
+{% endfor %}
+    </div>
+{% endfor %}
+  </div>
+{% endfor %}
+  <div class="foot">{{ total }}</div>
+</div>

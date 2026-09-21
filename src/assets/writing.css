@@ -1,0 +1,182 @@
+/* ── 写字 · 笔顺单（语文）────────────────────────────────────
+   一个字一行：左边大田字格印整字，右边把笔画逐笔累加铺开。
+   依赖 palette.css + print.css + grid.css。
+
+   --big / --step 由 spec 的旋钮通过 .sheet 的内联 style 注入。
+
+   ⚠️ **范字是 SVG 不是字体**，所以这儿不用 --font-kai。为什么见 writing.py 的
+      文件头（一句话：字体切不出「第 3 笔是哪一段」，而且本地 mac 和线上 ubuntu
+      的楷体字形还不一样）。
+
+   ⚠️ **颜色是按黑白打印定的，不是按屏幕。** 家长点「打印单」多半是黑白激光，
+      所以「这一笔是新的」不能只靠色相：新笔画 --stroke-new 灰度 88、
+      旧笔画 --stroke-old 灰度 176，差整整 88 级 —— 黑白打出来是「深灰 vs 浅灰」，
+      照样一眼看出多了哪一笔。红色只是彩色打印和屏幕上的增强。
+      **别把 old 调深**，那样黑白下两者就糊成一片了。
+      （逐笔累加这个形式本身也不依赖颜色：第 N 格就是比第 N-1 格多一笔。
+      颜色、绿点、序号是三重冗余，掉任何一个都还认得出笔顺。）
+
+   ⚠️ 红色在全站是「分数越差越红」的专属色，这儿是**第二个有意的例外**
+      （第一个是教材总览的「有活儿」格）。笔顺表用红标当前笔画是字帖通用惯例,
+      孩子在学校见到的就是这个样子，换成别的色反而要重新学怎么看。 */
+
+:root{
+  --stroke-new:  #C0392B;   /* 这一笔新写的（灰度 88，黑白打印是深灰） */
+  --stroke-old:  #B0B0B0;   /* 之前已经写好的（灰度 176，浅） */
+  --stroke-dot:  #1B7F4B;   /* 起笔点（灰度 100，黑白打印看得见）。半径在模板里，13mm 格子下约 1.3mm */
+  --step-rule:   #C9C9C9;   /* 小格的框线：**灰的，不是红的** —— 见下面那条 */
+}
+
+body{
+  margin: 0;
+  font-family: var(--font-cn);
+  color: #111;
+  font-size: 13px;
+  background: #888;             /* 屏幕上模拟纸外的桌面 */
+}
+@media print{ body{ background: #fff; } }
+
+.sheet{ --big: 24mm; --step: 13mm; }
+
+/* ── 页头（和今日练习一个形状，两张单子会挨着打印）── */
+.head{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 2px solid #111;
+  padding-bottom: 6px;
+  margin-bottom: 4mm;
+}
+.head h1{ font-size: 15px; margin: 0; padding-right: 10px; }
+.head .info{ font-size: 12px; white-space: nowrap; }
+.head .info span{ margin-left: 10px; }
+.blank{ display: inline-block; border-bottom: 1px solid #111; width: 44px; }
+
+.hint{ font-size: 11px; color: #777; margin: 0 0 3.5mm; }
+
+/* ── 区块 ── */
+.block{ margin-bottom: 3mm; }
+.block h2{
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 2.5mm;
+  border-left: 3px solid var(--chinese);
+  padding-left: 5px;
+  line-height: 1.2;
+}
+
+/* ── 一个词 ── */
+.word{
+  break-inside: avoid;          /* 一个词不劈到两页 —— 两个字要挨着看才有用 */
+  margin-bottom: 3mm;
+}
+.wd{
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1.5mm;
+  letter-spacing: .5px;
+}
+.wd .wpy{               /* 和词之间不许有空白节点，间距靠 margin（见模板注释） */
+  margin-left: 8px;
+  font-size: 11px;
+  font-weight: 400;
+  color: #777;
+  font-family: "Times New Roman", var(--font-cn), serif;
+  letter-spacing: 0;
+}
+
+/* ── 一个字一行：大格 | 拼音+画数 / 逐笔小格 ── */
+.ch{
+  display: grid;
+  grid-template-columns: var(--big) 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 3mm;
+  align-items: start;
+  margin-bottom: 2.5mm;
+  break-inside: avoid;
+}
+.ch .tian.big{
+  --cell: var(--big);
+  grid-column: 1;
+  grid-row: 1 / 3;              /* 大格左边独占两行高 */
+}
+.ch .meta{
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  line-height: 1;
+  margin-bottom: 1.2mm;
+}
+.meta .cpy{
+  font-size: 12px;
+  color: #444;
+  font-family: "Times New Roman", var(--font-cn), serif;
+}
+.meta .cnt{ font-size: 10px; color: #999; }
+
+/* 逐笔小格。格子连成一条（共享边线），一格一步 */
+.steps{
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  align-items: flex-start;
+}
+.steps.wrap{ flex-wrap: wrap; row-gap: 2mm; }
+
+.st{ text-align: center; }
+/* 相邻两格共享边线：靠负边距。grid.css 那条 `.tian + .tian` 在这儿不起作用 ——
+   格子外面包了 .st（要在下面挂序号），两个 .tian 不是兄弟。
+   ⚠️ 别改成给每格各画一圈边框，相邻边会叠成双倍粗线。 */
+.st + .st{ margin-left: calc(var(--tian-rule) * -1); }
+/* 折行时新一行的第一格要把负边距还回来，否则它会往左啃掉一条边 */
+.steps.wrap .st:first-child{ margin-left: 0; }
+
+/* ⚠️ **小格的框线走灰，不跟大格的红。** 田字格的红线是给「写」用的（照着格子
+   摆结构），笔顺小格是给「看」的：这一格和上一格差在哪一笔。框线、十字虚线
+   要是也红，13mm 见方里三样红东西叠在一起，新笔画那一抹红就跳不出来了 ——
+   第一版就是这么印出来的，一眼扫过去全是红。
+   现在这张纸上**红色只有一个意思：这一笔是新写的**。 */
+.st .tian.step{
+  --cell: var(--step);
+  --tian-rule-color: var(--step-rule);
+  --tian-cross-color: #E6E6E6;     /* 十字虚线再淡一档，13mm 里别喧宾夺主 */
+}
+.st b{
+  display: block;
+  font-size: 9px;
+  font-weight: 400;
+  color: #999;
+  line-height: 1.6;
+}
+
+/* ── 笔画本身 ── */
+.tian svg{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.tian svg path.old{ fill: var(--stroke-old); }
+.tian svg path.new{ fill: var(--stroke-new); }
+/* 大格里的整字：全是 .old，但那儿要的是清楚的黑字，不是浅灰 */
+.tian.big svg path{ fill: #1A1A1A; }
+.tian svg circle.dot{ fill: var(--stroke-dot); }
+
+.foot{
+  margin-top: 3mm;
+  text-align: right;
+  color: #999;
+  font-size: 10px;
+}
+
+/* ── 手机上 ────────────────────────────────────────────────
+   .sheet 有 max-width:100%，但里面这条 12 格的笔顺是压不动的（每格是固定 mm）。
+   所以窄屏让 .steps 自己折行 —— 纸上一行排满是为了省页高，屏幕上纵向不缺空间。
+   ⚠️ 只在 @media screen 里改，@media print 一个字都不动。 */
+@media screen and (max-width: 560px){
+  .steps{ flex-wrap: wrap; row-gap: 2mm; }
+  .steps .st:first-child{ margin-left: 0; }
+  .ch{ grid-template-columns: var(--big) 1fr; }
+}
