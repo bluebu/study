@@ -12,17 +12,37 @@
      整串当可信 HTML 传进来（page.sheet_info()），不在这儿拆。
 
   ⚠️ 这几处**行内元素之间不许换行**，换行会折成一个空格、版式就变了：
-     `.wd` 里的词和拼音、`.rad` 里的部首和名称、`.st` 里的格子和号码。
-     别的地方不用担心：.steps 是 grid、.ch 是 grid，空白文本节点不生成盒子。
+     `.wd` 里的词和拼音、`.meta` 里的部首和名称、`.st` 里的格子和号码。
+     别的地方不用担心：.steps 是 flex、.ch 是 flex，空白文本节点不生成盒子。
+
+  ⚠️ `.glyph` 把大格和字的信息（拼音 / 画数 / 部首）包成左边一栏，**信息在大格
+     底下不在右边** —— 这样大格的上沿和第一行笔顺格的上沿严格对齐。
+     原先信息占了右栏第一行，笔顺格被它往下推，大格就和格子错开半行。
+
+  ⚠️ **整页包在一个 <table> 里，页头在 <thead>**，这是为了让页头在每一页顶上
+     重复 —— 多页的单子分开拿在手上，第 3 页也得知道是哪一课的。
+     表头重复是打印规范定义的行为，浏览器**会自动为它留出每页的高度**。
+     试过 position:fixed：页头确实每页重复了，但内容不给它让位（padding 只在
+     第一页生效），第 2 页起笔画直接压在页头字上。@page margin box 那套
+     Chrome 不支持，所以表格是这儿唯一靠得住的办法。
+     ⚠️ 别把 thead 拆成多行或者往 tbody 里塞 <tr> —— 一行一格是有意的，
+     表格在这儿只当「每页重复表头」的容器用，版式仍旧是里面那些 div 的事。
 
   ⚠️ 「要求会默写」的徽章是**纯文字**，不用 emoji —— PDF 由 CI 的 ubuntu 导出，
      那儿只装了中文字体，emoji 会印成豆腐块（背诵单那个铅笔徽章为此改成了内联 SVG）。
 -#}
 <div class="sheet" style="--big:{{ big }}mm; --step:{{ step }}mm">
-  <div class="head">
-    <h1>{{ heading }}</h1>
-    <div class="info">{{ info|safe }}</div>
-  </div>
+ <table class="pg">
+  <thead>
+   <tr><th>
+    <div class="head">
+      <h1>{{ heading }}</h1>
+      <div class="info">{{ info|safe }}</div>
+    </div>
+   </th></tr>
+  </thead>
+  <tbody>
+   <tr><td>
 {% if hint %}
   <p class="hint">{{ hint }}</p>
 {% endif %}
@@ -40,16 +60,18 @@
 {% endif %}
 {% for c in w.chars %}
       <div class="ch">
-        <i class="tian big">
-          <svg viewBox="0 0 1024 1024" aria-label="{{ c.char }}">
-            <g transform="translate(0,900) scale(1,-1)">
+        <div class="glyph">
+          <i class="tian big">
+            <svg viewBox="0 0 1024 1024" aria-label="{{ c.char }}">
+              <g transform="translate(0,900) scale(1,-1)">
 {% for p in c.paths %}
-              <path class="{{ p.cls }}" d="{{ p.d }}"/>
+                <path class="{{ p.cls }}" d="{{ p.d }}"/>
 {% endfor %}
-            </g>
-          </svg>
-        </i>
-        <div class="meta"><span class="cpy">{{ c.py }}</span><span class="cnt">{{ c.total }} 画</span><span class="rad"><i class="r">{{ c.rad }}</i>{{ c.rad_name }}</span></div>
+              </g>
+            </svg>
+          </i>
+          <div class="meta"><span class="cpy">{{ c.py }}</span><span class="cnt">{{ c.total }} 画</span><span class="rad"><i class="r">{{ c.rad }}</i>{{ c.rad_name }}</span></div>
+        </div>
         <div class="steps {{ c.wrap }}">
 {% for s in c.steps %}
           <div class="st"><i class="tian step"><svg viewBox="0 0 1024 1024" aria-hidden="true"><g transform="translate(0,900) scale(1,-1)">{% for p in s.paths %}<path class="{{ p.cls }}" d="{{ p.d }}"/>{% endfor %}<circle class="dot" cx="{{ s.dot.x }}" cy="{{ s.dot.y }}" r="52"/></g></svg></i><b>{{ s.n }}</b><em>{{ s.name }}</em></div>
@@ -62,4 +84,7 @@
   </div>
 {% endfor %}
   <div class="foot">{{ total }}</div>
+   </td></tr>
+  </tbody>
+ </table>
 </div>

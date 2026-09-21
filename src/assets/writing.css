@@ -54,6 +54,29 @@ body{
 .head .info span{ margin-left: 10px; }
 .blank{ display: inline-block; border-bottom: 1px solid #111; width: 44px; }
 
+/* ── 页头在每页顶上重复 ──────────────────────────────────────
+   一课 26 个字要六页，**分开拿在手上，第 3 页也得知道是哪一课的**。
+   静态 HTML 不知道分页点在哪，所以整页包进一个 <table>、页头放 <thead> ——
+   表头重复是打印规范定义的行为，浏览器会**自动为它留出每页的高度**。
+
+   ⚠️ 试过 position:fixed（看着更省事）：页头确实每页重复了，但**内容不给它
+      让位** —— padding-top 只在第一页生效，第 2 页起笔画直接压在页头字上，
+      印出来两层叠着。@page 的 margin box 那套 Chrome 不支持，
+      `counter(page)` 也只在那儿能用，所以这张纸有页头、没页码。 */
+.pg{
+  width: 100%;
+  border-collapse: collapse;
+}
+.pg th,
+.pg td{
+  padding: 0;
+  text-align: left;
+  font-weight: 400;
+  vertical-align: top;
+}
+/* 每页的页头底下都要留一道气口，不然第 2 页起第一个字贴着横线 */
+.pg thead .head{ margin-bottom: 4mm; }
+
 .hint{ font-size: 11px; color: #777; margin: 0 0 3.5mm; }
 
 /* 「要求会默写」——**纯文字，不用 emoji**（CI 的 ubuntu 只装了中文字体，
@@ -79,7 +102,12 @@ body{
   border-left: 3px solid var(--chinese);
   padding-left: 5px;
   line-height: 1.2;
+  /* 标题不许自己待在一页最底下 —— 「词语表」印在第 2 页页底、字全在第 3 页，
+     翻页的人会以为这一栏是空的 */
+  break-after: avoid;
 }
+/* 词头（提纲 tí gāng）同理：它和底下第一个字得在同一页上 */
+.wd{ break-after: avoid; }
 
 /* ── 一个词 ── */
 .word{
@@ -87,10 +115,12 @@ body{
   margin-bottom: 3mm;
 }
 .wd{
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   color: #111;
-  margin-bottom: 1.5mm;
+  margin-bottom: 2mm;
+  padding-left: 6px;
+  border-left: 2px solid var(--chinese-bg);
   letter-spacing: .5px;
 }
 .wd .wpy{               /* 和词之间不许有空白节点，间距靠 margin（见模板注释） */
@@ -102,70 +132,75 @@ body{
   letter-spacing: 0;
 }
 
-/* ── 一个字一行：大格 | 拼音+画数 / 逐笔小格 ── */
+/* ── 一个字一行：左栏（大格 + 字的信息）| 右栏（逐笔小格）──
+   ⚠️ **信息在大格底下，不在右栏第一行。** 原先它占着右栏第一行，把笔顺格
+      整体往下推半行，大格的上沿就和第一行格子错开了 —— 一眼看过去左右不齐。
+      现在两栏都从同一条上沿开始。 */
 .ch{
-  display: grid;
-  grid-template-columns: var(--big) 1fr;
-  grid-template-rows: auto auto;
-  column-gap: 3mm;
-  align-items: start;
-  margin-bottom: 2.5mm;
+  display: flex;
+  align-items: flex-start;      /* 两栏顶部对齐，就是「齐」的来源 */
+  gap: 4mm;
+  margin-bottom: 2mm;
+  padding-bottom: 2mm;
+  border-bottom: 1px solid #F0EDE8;   /* 字与字之间一条极淡的界，扫的时候不串行 */
   break-inside: avoid;
 }
-.ch .tian.big{
-  --cell: var(--big);
-  grid-column: 1;
-  grid-row: 1 / 3;              /* 大格左边独占两行高 */
+.word .ch:last-child{ border-bottom: 0; padding-bottom: 0; }
+
+.glyph{
+  width: var(--big);
+  flex: none;
+  text-align: center;
 }
-.ch .meta{
-  grid-column: 2;
-  grid-row: 1;
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
-  line-height: 1;
-  margin-bottom: 1.2mm;
+.glyph .tian.big{ --cell: var(--big); }
+
+/* 字的信息：拼音 / 共几画 / 偏旁部首。排在大格底下，宽度就是大格那么宽 */
+.meta{
+  margin-top: 1.5mm;
+  line-height: 1.35;
 }
 .meta .cpy{
-  font-size: 17px;      /* 这一行的主角。孩子先念音、再看字怎么写 */
+  display: block;
+  font-size: 17px;      /* 这一块的主角。孩子先念音、再看字怎么写 */
   color: #222;
   font-family: "Times New Roman", var(--font-cn), serif;
-  line-height: 1;
 }
 .meta .cnt{ font-size: 10px; color: #999; }
 
 /* 偏旁部首：部首本身印大一点，后面跟中文名（草字头、提手旁）。
    独体字（生、气、丹、乐）名字那格印「独体字」—— 不硬安一个偏旁名，那是编的。 */
 .meta .rad{
+  display: block;
   font-size: 11px;
-  color: #666;
-  padding-left: 7px;
-  border-left: 1px solid #DDD;
+  color: #555;
+  white-space: nowrap;
 }
 .meta .rad .r{
   font-family: var(--font-kai);
   font-size: 15px;
   font-style: normal;
-  color: #222;
-  margin-right: 3px;
+  color: var(--chinese);   /* 部首是这张纸上唯一用语文橙的地方：一眼找得到 */
+  margin-right: 2px;
 }
 
 /* 逐笔小格。格子连成一条（共享边线），一格一步 */
 .steps{
-  grid-column: 2;
-  grid-row: 2;
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;        /* 画数多的字自己折行，折行点由 --step 和版心宽度定 */
+  row-gap: 2mm;
 }
-.steps.wrap{ flex-wrap: wrap; row-gap: 2mm; }
 
 .st{ text-align: center; }
 /* 相邻两格共享边线：靠负边距。grid.css 那条 `.tian + .tian` 在这儿不起作用 ——
    格子外面包了 .st（要在下面挂序号），两个 .tian 不是兄弟。
    ⚠️ 别改成给每格各画一圈边框，相邻边会叠成双倍粗线。 */
 .st + .st{ margin-left: calc(var(--tian-rule) * -1); }
-/* 折行时新一行的第一格要把负边距还回来，否则它会往左啃掉一条边 */
-.steps.wrap .st:first-child{ margin-left: 0; }
+/* 折行时新一行的第一格会把负边距用在行首、往左啃掉一条边。
+   flex 换行后拿不到「每行第一个」的选择器，所以给整条 steps 补回 1px 左内边距，
+   让被啃掉的那条边有地方待。 */
+.steps{ padding-left: var(--tian-rule); }
+.steps .st:first-child{ margin-left: 0; }
 
 /* ⚠️ **小格的框线走灰，不跟大格的红。** 田字格的红线是给「写」用的（照着格子
    摆结构），笔顺小格是给「看」的：这一格和上一格差在哪一笔。框线、十字虚线
@@ -221,7 +256,5 @@ body{
    所以窄屏让 .steps 自己折行 —— 纸上一行排满是为了省页高，屏幕上纵向不缺空间。
    ⚠️ 只在 @media screen 里改，@media print 一个字都不动。 */
 @media screen and (max-width: 560px){
-  .steps{ flex-wrap: wrap; row-gap: 2mm; }
-  .steps .st:first-child{ margin-left: 0; }
-  .ch{ grid-template-columns: var(--big) 1fr; }
+  .ch{ gap: 3mm; }
 }
