@@ -1,0 +1,103 @@
+{#-
+  英语语法练习 —— 一个大题一块，题面在前几张纸上，**答案单独一张**。
+
+  ⚠️ 整页包在一个 <table> 里、页头放 <thead>，为的是页头在每一页顶上重复
+     （多页的单子分开拿在手上，第 2 页也得知道是哪个单元的）。
+     纸的上边距也挂在 thead 上 —— 挂在 .sheet 上只在第一页出现一次。
+     两处都和写字单同一套，试过什么、为什么不行，见 writing.css 那两段注释。
+
+  ⚠️ 这几处行内元素之间不许换行，换行会折成一个空格、版式就变了：
+     `.head .info`（sheet_info 自己的形状）、`.bh` 里的题号 / 标题 / 右标签、
+     `.bank` 里的词、`.it` 里的题号 / 题面 / 附属行、`.bl` 里的横线。
+     `.its` 是普通列表、`.tbl` 是表格，那儿的缩进不用管。
+
+  ⚠️ 空格线是 Python 插进题面里的（`_blanks()`），所以 `r.q` 才 |safe ——
+     题面本身先 escape 过了。**几条线由答案的词数定**，线宽是固定的：
+     线一长一短等于把答案印在纸上。
+-#}
+<div class="sheet">
+ <table class="pg">
+  <thead>
+   <tr><th>
+    <div class="head">
+      <h1>{{ heading }}{% if sub %}<small>　{{ sub }}</small>{% endif %}</h1>
+      <div class="info">{{ info|safe }}</div>
+    </div>
+   </th></tr>
+  </thead>
+  <tbody>
+   <tr><td>
+{% if hint %}
+    <p class="hint">{{ hint }}</p>
+{% endif %}
+{% for g in groups %}
+    <section class="blk">
+      <div class="bh"><span class="no">{{ g.no }}</span><h2>{{ g.title }}</h2>{% if g.tag %}<span class="tag">{{ g.tag }}</span>{% endif %}</div>
+{% if g.bank %}
+      <div class="bank">{% for w in g.bank %}<span class="w{{ ' used' if w.used }}">{{ w.text }}</span>{% endfor %}</div>
+{% endif %}
+{% if g.kind == 'table' %}
+      <table class="tbl">
+        <tr class="hd">{% for c in g.cols %}<th>{{ c }}</th>{% endfor %}</tr>
+{% if g.eg %}
+        <tr class="egrow">{% for c in g.eg.cells %}<td>{{ c }}</td>{% endfor %}</tr>
+{% endif %}
+{% for r in g.rows %}
+        <tr><td class="term">{{ r.term }}</td>{% for _ in range(r.blanks) %}<td></td>{% endfor %}</tr>
+{% endfor %}
+      </table>
+{% else %}
+{% if g.eg %}
+      <p class="eg"><b>例</b><span class="q">{{ g.eg.q|safe }}</span>{% if g.eg.cn %}<span class="cn">{{ g.eg.cn }}</span>{% endif %}</p>
+{% endif %}
+      <ol class="its">
+{% for r in g.rows %}
+        <li class="it"><i class="n">{{ r.no }}</i><span class="q">{{ r.q|safe }}{% for s in r.subs %}<span class="sub{{ ' cn' if s.cn }}">{{ s.text }}</span>{% endfor %}</span></li>
+{% endfor %}
+      </ol>
+{% endif %}
+    </section>
+{% endfor %}
+    <p class="foot">{{ tally }}　·　答案在最后一张纸上</p>
+   </td></tr>
+  </tbody>
+  <tfoot><tr><td class="pad"></td></tr></tfoot>
+ </table>
+</div>
+<div class="sheet ans">
+ <table class="pg">
+  <thead>
+   <tr><th>
+    <div class="head">
+      <h1>{{ heading }}<small>　答案</small></h1>
+      <div class="info">对着改 · 前面几张纸上不印答案</div>
+    </div>
+   </th></tr>
+  </thead>
+  <tbody>
+   <tr><td>
+{% for a in answers %}
+    <section class="ablk">
+      <div class="bh"><span class="no">{{ a.no }}</span><h2>{{ a.title }}</h2></div>
+{% if a.kind == 'table' %}
+      <table class="tbl atbl">
+        <tr class="hd">{% for c in a.cols %}<th>{{ c }}</th>{% endfor %}</tr>
+{% for r in a.rows %}
+        <tr>{% for c in r.cells %}<td>{{ c }}</td>{% endfor %}</tr>
+{% endfor %}
+      </table>
+{% else %}
+      <ol class="alist">
+{% for r in a.rows %}
+        <li><i class="n">{{ r.no }}</i><span class="a">{{ r.a }}</span></li>
+{% endfor %}
+      </ol>
+{% endif %}
+    </section>
+{% endfor %}
+    <p class="foot">{{ tally }}</p>
+   </td></tr>
+  </tbody>
+  <tfoot><tr><td class="pad"></td></tr></tfoot>
+ </table>
+</div>

@@ -209,6 +209,7 @@ p16 正是这一种）。错一位在页面上只表现成「点绿词听到别�
 | 词汇默写 | `storage/spec/english/ket/words/`<br>`storage/spec/english/ket/selections/` | `<NN>_<主题>.csv`<br>`<YYYYMMDD>.txt` | `src/generator/english/ket.py` |
 | 每日打卡 | `storage/spec/english/homework/` | `<YYYYMMDD>.txt` | `src/generator/english/homework.py` |
 | 复述故事 | `storage/spec/english/retell/` | `<故事slug>.txt` | `src/generator/english/retell.py` |
+| 语法练习 | `storage/spec/english/grammar/` | `<单元slug>.txt`（`u05-adverbs` = 第 5 单元副词） | `src/generator/english/grammar.py` |
 | 语文练习 | `storage/spec/chinese/practice/` | `<YYYYMMDD>.txt` | `src/generator/chinese/practice.py` |
 | 背诵单 | `storage/spec/chinese/recite/` | `<课号>.txt` | `src/generator/chinese/recite.py` |
 | 抽查单 | `storage/spec/chinese/check/` | `<课号>.txt`（园地是 `<课号>y`） | `src/generator/chinese/check.py` |

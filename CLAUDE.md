@@ -55,6 +55,8 @@ storage/
     english/ket/selections/  抽选卷 spec：跨主题挑词，题号沿用原主题
     english/homework/   一天一份，文件名是 YYYYMMDD
     english/retell/     一个区块一个阶段，区块内一行一段
+    english/grammar/    语法练习 spec：一个区块一个大题，**区块名就是书上的题号**，
+                        一行一题 `题面 | 答案`。答案只印在最后那张纸上
     chinese/practice/   语文练习 spec，文件名是 YYYYMMDD
     chinese/recite/     背诵单 spec：一个区块一个自然段，区块内一行一块
                         （`原文 | 关键词`）。**原文照课本逐字抄**
@@ -102,7 +104,7 @@ src/
                       pdf「打印单」（填色，最右）
     sheet-info.html   打印单页眉「姓名 __ 日期 __ 得分 __」，四个栏目共用
                       （第三格给空串就只出前两格 —— 背诵单用这个形状）
-    practice/ recite/ check/ overview/ miji/ ket/ homework/ retell/
+    practice/ recite/ check/ overview/ miji/ ket/ homework/ retell/ grammar/
     afterschool/      放学检查（两列勾选格：校内完成 ｜ 家中完成）
                       一天一张纸，`[分区]` 在纸上框出下半区
     schedule/sheet.html  课程表：节次列和课格在同一个 grid 里，行高天然对齐
@@ -119,6 +121,8 @@ src/
     overview.css      教材总览（一份 HTML 两用：纸上打印单 / 手机上横滚速查）
                       **A4 横版**；正文 14px（五号）/ 行距 1.85；列宽在 colgroup 上
                       配色走 palette.css 的 --ov-*（蓝 / 红 / 绿），不走语文橙
+    grammar.css       语法练习（空格线宽固定 --bl —— 线长跟着答案走就等于
+                      把答案印在纸上；词库那行必须是 flex，见英语 CLAUDE.md）
     site.css          站点页面（入口页、目录页）
     foot.css          页脚（备案号 + 统计），page.py 挂页脚时自动引上
     trend.css         趋势页（曲线卡片 + 指标总表）
@@ -138,7 +142,7 @@ src/
       check.py        抽查单：一课一张一页，答案全印（家长照着问、照着改）
       overview.py     教材总览：一册一份的总表，背诵 / 默写两列上底色加圆点
                       A4 横版、一单元一页、正文 14px（五号）
-    english/          英语（CLAUDE.md 里有本科的教学准则和四个栏目的口径）
+    english/          英语（CLAUDE.md 里有本科的教学准则和五个栏目的口径）
       build.py        只做分发：一个栏目一层 try
       review.py       打卡评价：朗读成绩单（数只写 words / errors，其余算出来）
                       末尾落 storage/result/english/review.csv，再出趋势页
@@ -146,6 +150,8 @@ src/
       ket.py          词汇默写：CSV → A4 默写卷（单主题 / 合集 / 抽选卷 / 答案对照）
       homework.py     每日打卡：群公告 → 一张 A4 作业清单
       retell.py       复述故事：关键词按情节五阶段分组，看着讲一遍
+      grammar.py      语法练习：语法书的练习题 → A4 打印单，末页附答案
+                      （一处空画几条线由答案的词数定，线宽固定）
     math/build.py     计算秘籍：错题清单 + 口诀卡 + 重练题（两页 A4）
     schedule/         课程表（build.py 只做分发）
       week.py         一周课表：一周一张 A4 横版

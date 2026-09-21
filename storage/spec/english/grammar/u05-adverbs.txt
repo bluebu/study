@@ -1,0 +1,72 @@
+# Unit 5 副词
+# 照语法书第 26–28 页逐题抄，题号沿用书上的（三 / 四 / 五）。
+# 第 26 页顶上还留着第二大题的第 10 小题（Kate is a beautiful girl. She dresses ___.），
+# 那一大题的前 9 题在第 25 页、没给图，整题抄不全，所以没收进来。
+#
+# `题面 | 答案` —— 答案不上题面页，印在最后那张答案页上。
+# 题面里一处 `__` 就是一处空，**画几条线由答案的词数定**（线宽是固定的，
+# 长短跟着答案走等于把答案印在纸上）。缩进行是这一题的附属行：
+# 中文提示（第五大题）或者对话的下一句（第三大题的 5、8）。
+pages: 26–28
+hint: 每处空画了几条线，就填几个词。填完把整句小声读一遍。
+
+[三] 从方框中选择最恰当的副词，并用其正确形式填空，每个词只能用一次。 | 10 题
+词库: often, why, away, politely, again, outside, too, how, early, always, suddenly
+例: I *often* go to school by bus. | 我经常乘公共汽车上学。
+Tom speaks __ to his teacher. | politely
+Can you wait for me if you arrive there __ than I? | earlier
+The railway station is a few miles __. | away
+John is __ late for school. This makes his teacher very angry. | always
+–__ did you throw away the cake? | Why
+    –It tastes sour.
+The children are playing games __ in the sun. | outside
+Mom is __ happy to say a word. | too
+–__ do you like the dishes? | How
+    –Very much.
+The driver braked (刹车) __ when he saw a dog ahead (在前方). | suddenly
+What bad weather! It's raining __. | again
+
+[四] 写出下列副词的比较级和最高级。 | 15 词  type=table  cols=副词原级 | 比较级 | 最高级
+例: late | later | latest
+fast | faster | fastest
+hard | harder | hardest
+early | earlier | earliest
+badly | worse | worst
+well | better | best
+far | farther / further | farthest / furthest
+clearly | more clearly | most clearly
+carefully | more carefully | most carefully
+happily | more happily | most happily
+slowly | more slowly | most slowly
+quickly | more quickly | most quickly
+loudly | more loudly | most loudly
+safely | more safely | most safely
+quietly | more quietly | most quietly
+differently | more differently | most differently
+
+[五] 根据中文提示完成句子。 | 12 题
+例: Mary runs *as* *fast* *as* I do. | 玛丽跑得和我一样快。
+Mary jumps __ I do. | as high as
+    玛丽跳得和我一样高。
+I write __ Sarah does. | as neatly as
+    我写得和萨拉一样工整。
+Julie works __ Tom. | harder than
+    朱丽比汤姆学习刻苦。
+Helen listens to the teacher __ John. | more carefully than
+    海伦听讲比约翰认真。
+I do __ Jim does. | not skate as well as
+    我溜冰没有吉姆溜得好。
+Sarah __ I do. | doesn't read as many books as
+    萨拉读的书没有我读的多。
+Which one do you like __ all the three? | best of
+    这三个之中你最喜欢哪一个？
+Lucy sings __. | best in our class
+    露西在我们班唱歌最好。
+Henry loves birds __ I do. | more than
+    亨利比我更喜欢鸟。
+Let's meet __. | at seven thirty on Sunday morning
+    咱们星期日早上七点半集合。
+My sister gets up __ I. | earlier than
+    姐姐比我起得早。
+Tom plays basketball __ Jim. | as well as
+    汤姆篮球打得和吉姆一样好。
