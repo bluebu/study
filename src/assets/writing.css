@@ -74,6 +74,24 @@ body{
   font-weight: 400;
   vertical-align: top;
 }
+/* ⚠️ **纸的上边距交给表头，不留在 .sheet 上。**
+   `.sheet` 的 padding-top 是块级内边距 —— 只在元素开头出现**一次**，
+   所以第 1 页页头上方有 14mm 留白、第 2 页起页头直接贴着纸边，
+   同一张单子前后两个样。挪到每页都渲染的 thead 上，各页就一模一样了。 */
+.sheet{ padding-top: 0; padding-bottom: 0; }
+.pg thead th{ padding-top: 14mm; }
+/* ⚠️ **表格末尾一点底部空间都不能留，否则 PDF 末尾多一张全白的纸。**
+   Chrome 打印长表格时会为「下一页的表头」预留高度；内容排到最后一页末尾时，
+   底下哪怕只多几毫米，都会把那份预留顶成真的一页 —— 印出来是一张什么都没有的
+   纸，家长会以为打印坏了。改成 0 就回到 6 页。
+
+   诊断留个记号，省得下次又从头找：**拆掉表格语义（.pg 全设 display:block）
+   就是 6 页无白页**，所以病根在表格分页，不在内容高度（正文实测 1352mm，
+   每页 271mm，理论才 5 页）。`page-break-inside:auto`、`border-collapse`、
+   `thead{break-inside:avoid}` 都试过，一个都不管用。
+
+   代价是最后一页内容贴着纸底 —— 这张单子最后一页只排到一半，看不出来。 */
+.pg tbody td{ padding-bottom: 0; }
 /* 每页的页头底下都要留一道气口，不然第 2 页起第一个字贴着横线 */
 .pg thead .head{ margin-bottom: 4mm; }
 
