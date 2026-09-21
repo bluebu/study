@@ -1,18 +1,22 @@
 {#-
-  语文写字 · 笔顺单 —— 一个字一行：左边大田字格印整字，右边逐笔累加。
+  语文写字 · 笔顺单 —— 一个字一行：左边大田字格印整字、底下标部首，
+  右边逐笔累加，每格底下是号码 + 这一笔的中文名字。
 
-  ⚠️ 坐标系：笔顺数据是 1024×1024 的字身框、**Y 轴朝上**，所以每个 <svg> 里
+  ⚠️ 坐标系：字形数据是 1024×1024 的字身框、**Y 轴朝上**，所以每个 <svg> 里
      都要套 translate(0,900) scale(1,-1) 翻过来。**900 不是 1024** ——
      那是 Make Me a Hanzi 的基线位置，改成 1024 整字会往上跑出格子。
-     这个变换是常量，所以写在模板里；画哪几条 path、哪条是新的、绿点点在哪，
-     都是 writing.py 算好传进来的（模板不做计算）。
+     这个变换是常量，所以写在模板里；画哪几条 path、哪条是新的、绿点点在哪、
+     这一笔叫什么，都是 writing.py 算好传进来的（模板不做计算）。
 
   ⚠️ `.head .info` 是 nowrap 的普通块，「姓名 」后面那些空格是有意的，
      整串当可信 HTML 传进来（page.sheet_info()），不在这儿拆。
 
-  ⚠️ `.wd` 里词和拼音之间**不许换行** —— 那是两个行内元素，中间的换行会折成
-     一个空格，词和拼音就分家了。`.st` 里的格子和序号同理。
-     别的地方不用担心：.steps 是 grid、.ch 是 flex，空白文本节点不生成盒子。
+  ⚠️ 这几处**行内元素之间不许换行**，换行会折成一个空格、版式就变了：
+     `.wd` 里的词和拼音、`.rad` 里的部首和名称、`.st` 里的格子和号码。
+     别的地方不用担心：.steps 是 grid、.ch 是 grid，空白文本节点不生成盒子。
+
+  ⚠️ 「要求会默写」的徽章是**纯文字**，不用 emoji —— PDF 由 CI 的 ubuntu 导出，
+     那儿只装了中文字体，emoji 会印成豆腐块（背诵单那个铅笔徽章为此改成了内联 SVG）。
 -#}
 <div class="sheet" style="--big:{{ big }}mm; --step:{{ step }}mm">
   <div class="head">
@@ -24,10 +28,16 @@
 {% endif %}
 {% for blk in blocks %}
   <div class="block">
+{% if blk.must_copy %}
+    <h2>{{ blk.label }}<i class="badge">要求会默写</i></h2>
+{% else %}
     <h2>{{ blk.label }}</h2>
+{% endif %}
 {% for w in blk.words %}
     <div class="word">
+{% if w.show_word %}
       <div class="wd">{{ w.word }}<span class="wpy">{{ w.py }}</span></div>
+{% endif %}
 {% for c in w.chars %}
       <div class="ch">
         <i class="tian big">
@@ -39,10 +49,10 @@
             </g>
           </svg>
         </i>
-        <div class="meta"><span class="cpy">{{ c.py }}</span><span class="cnt">{{ c.total }} 画</span></div>
+        <div class="meta"><span class="cpy">{{ c.py }}</span><span class="cnt">{{ c.total }} 画</span><span class="rad"><i class="r">{{ c.rad }}</i>{{ c.rad_name }}</span></div>
         <div class="steps {{ c.wrap }}">
 {% for s in c.steps %}
-          <div class="st"><i class="tian step"><svg viewBox="0 0 1024 1024" aria-hidden="true"><g transform="translate(0,900) scale(1,-1)">{% for p in s.paths %}<path class="{{ p.cls }}" d="{{ p.d }}"/>{% endfor %}<circle class="dot" cx="{{ s.dot.x }}" cy="{{ s.dot.y }}" r="52"/></g></svg></i><b>{{ s.n }}</b></div>
+          <div class="st"><i class="tian step"><svg viewBox="0 0 1024 1024" aria-hidden="true"><g transform="translate(0,900) scale(1,-1)">{% for p in s.paths %}<path class="{{ p.cls }}" d="{{ p.d }}"/>{% endfor %}<circle class="dot" cx="{{ s.dot.x }}" cy="{{ s.dot.y }}" r="52"/></g></svg></i><b>{{ s.n }}</b><em>{{ s.name }}</em></div>
 {% endfor %}
         </div>
       </div>
