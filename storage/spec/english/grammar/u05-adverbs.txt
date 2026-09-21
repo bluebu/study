@@ -10,6 +10,20 @@
 pages: 26–28
 hint: 每处空画了几条线，就填几个词。填完把整句小声读一遍。
 
+[讲解] 副词 Adverbs · 动笔前看两分钟  type=tip
+副词说动作怎么样 | He runs *fast*. · She speaks *politely*.
+    形容词说人（a *fast* runner），副词说动作（runs *fast*）；why · how 也是副词
+短副词加 -er / -est | fast → *faster* → *fastest* · early → *earlier* → *earliest*
+    y 结尾的先把 y 换成 i。fast · hard · late · early 走这条
+-ly 的加 more / most | slowly → *more slowly* → *most slowly*
+三个不按规则的 | well → *better* → *best* · badly → *worse* → *worst* · far → *farther* → *farthest*
+一样 / 不如：as … as | Mary runs *as fast as* I do. · I don't skate *as well as* Jim.
+    两个 as 中间放原级，不变形
+比用 than，最用 in / of | She gets up *earlier than* I. · Lucy sings *best in* our class.
+    than 前面放比较级，in / of 前面放最高级
+时间从小往大排 | Let's meet *at seven thirty* *on Sunday morning*.
+    先说几点，再说哪天 —— 和中文正好反过来
+
 [三] 从方框中选择最恰当的副词，并用其正确形式填空，每个词只能用一次。 | 10 题
 词库: often, why, away, politely, again, outside, too, how, early, always, suddenly
 例: I *often* go to school by bus. | 我经常乘公共汽车上学。

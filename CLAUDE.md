@@ -56,7 +56,8 @@ storage/
     english/homework/   一天一份，文件名是 YYYYMMDD
     english/retell/     一个区块一个阶段，区块内一行一段
     english/grammar/    语法练习 spec：一个区块一个大题，**区块名就是书上的题号**，
-                        一行一题 `题面 | 答案`。答案只印在最后那张纸上
+                        一行一题 `题面 | 答案`。`type=tip` 的区块是讲解，排在题前面；
+                        **默认不印答案**（`answers: 1` 才印）
     chinese/practice/   语文练习 spec，文件名是 YYYYMMDD
     chinese/recite/     背诵单 spec：一个区块一个自然段，区块内一行一块
                         （`原文 | 关键词`）。**原文照课本逐字抄**
@@ -150,8 +151,8 @@ src/
       ket.py          词汇默写：CSV → A4 默写卷（单主题 / 合集 / 抽选卷 / 答案对照）
       homework.py     每日打卡：群公告 → 一张 A4 作业清单
       retell.py       复述故事：关键词按情节五阶段分组，看着讲一遍
-      grammar.py      语法练习：语法书的练习题 → A4 打印单，末页附答案
-                      （一处空画几条线由答案的词数定，线宽固定）
+      grammar.py      语法练习：语法书的练习题 → A4 打印单，题前面附最短讲解
+                      （一处空画几条线由答案的词数定，线宽固定；默认不印答案）
     math/build.py     计算秘籍：错题清单 + 口诀卡 + 重练题（两页 A4）
     schedule/         课程表（build.py 只做分发）
       week.py         一周课表：一周一张 A4 横版

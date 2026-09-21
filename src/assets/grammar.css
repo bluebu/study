@@ -100,6 +100,42 @@ body{
   padding: 1px 6px;
 }
 
+/* ── 讲解 ──────────────────────────────────────────────────
+   这个单元就那么几条规则，排在题目前面，动笔前两分钟看完。
+   左边要点（中文）、右边例子（英文），例子里的词描青色 ——
+   **孩子扫的是右边那一列**：规则记不住，例句的样子记得住。 */
+.tips{
+  background: var(--gram-bg);
+  border-radius: 3mm;
+  padding: 3mm 4mm;
+  margin: 0 0 3mm;
+}
+.tip{
+  display: grid;
+  grid-template-columns: 42mm 1fr;
+  column-gap: 3mm;
+  align-items: baseline;
+  line-height: 1.45;
+}
+.tip + .tip{ margin-top: 1.4mm; }
+.tip b{ font-size: 12.5px; font-weight: 700; color: var(--ink); }
+.tip .ex{
+  font-family: Arial, "Liberation Sans", "Helvetica Neue", var(--font-cn), sans-serif;
+  font-size: 13.5px;
+  color: #111;
+}
+.tip em{ font-style: normal; font-weight: 700; color: var(--gram); }
+.tip .sub{ grid-column: 2; font-size: 10.5px; color: #6B6B6B; line-height: 1.35; }
+
+/* 讲解块的名字塞不进 6mm 的圆点里，改成一个宽标签 */
+.bh .no.wide{
+  width: auto;
+  height: 5mm;
+  border-radius: 3px;
+  padding: 0 6px;
+  font-size: 10.5px;
+}
+
 /* ── 方框里的备选词 ────────────────────────────────────────
    书上是一个圆角框，词摊在里面。例句用掉的那个词跟书上一样标出来 ——
    「每个词只能用一次」这条规则得看得见。 */
@@ -145,7 +181,7 @@ body{
   display: flex;
   align-items: baseline;
   gap: 5px;
-  margin-bottom: 4mm;
+  margin-bottom: 3.4mm;
   break-inside: avoid;
 }
 .it .n{
@@ -236,6 +272,9 @@ body{
    ⚠️ 只在 @media screen 里改，@media print 一个字都不动。 */
 @media screen and (max-width: 560px){
   :root{ --bl: 46px; }
+  /* 讲解在窄屏上摞起来：36mm 一列 + 例句，390px 上挤成两三行 */
+  .tip{ grid-template-columns: 1fr; }
+  .tip .sub{ grid-column: 1; }
   .bank{ padding: 3mm; gap: 1mm 3mm; }
   .alist{ columns: 1; }
 }

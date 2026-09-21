@@ -11,6 +11,9 @@
      `.bank` 里的词、`.it` 里的题号 / 题面 / 附属行、`.bl` 里的横线。
      `.its` 是普通列表、`.tbl` 是表格，那儿的缩进不用管。
 
+  讲解块（`type=tip`）排在最前面：一条一行，左边要点、右边例子，`*词*` 描成青色。
+  **纸上没有答案页兜底**（默认不印），所以这几条要覆盖这个单元用得上的全部规则。
+
   ⚠️ 空格线是 Python 插进题面里的（`_blanks()`），所以 `r.q` 才 |safe ——
      题面本身先 escape 过了。**几条线由答案的词数定**，线宽是固定的：
      线一长一短等于把答案印在纸上。
@@ -32,11 +35,17 @@
 {% endif %}
 {% for g in groups %}
     <section class="blk">
-      <div class="bh"><span class="no">{{ g.no }}</span><h2>{{ g.title }}</h2>{% if g.tag %}<span class="tag">{{ g.tag }}</span>{% endif %}</div>
+      <div class="bh"><span class="{{ g.nocls }}">{{ g.no }}</span><h2>{{ g.title }}</h2>{% if g.tag %}<span class="tag">{{ g.tag }}</span>{% endif %}</div>
 {% if g.bank %}
       <div class="bank">{% for w in g.bank %}<span class="w{{ ' used' if w.used }}">{{ w.text }}</span>{% endfor %}</div>
 {% endif %}
-{% if g.kind == 'table' %}
+{% if g.kind == 'tip' %}
+      <div class="tips">
+{% for r in g.rows %}
+        <div class="tip"><b>{{ r.point|safe }}</b><span class="ex">{{ r.eg|safe }}</span>{% for x in r.subs %}<span class="sub">{{ x.text|safe }}</span>{% endfor %}</div>
+{% endfor %}
+      </div>
+{% elif g.kind == 'table' %}
       <table class="tbl">
         <tr class="hd">{% for c in g.cols %}<th>{{ c }}</th>{% endfor %}</tr>
 {% if g.eg %}
@@ -52,18 +61,23 @@
 {% endif %}
       <ol class="its">
 {% for r in g.rows %}
-        <li class="it"><i class="n">{{ r.no }}</i><span class="q">{{ r.q|safe }}{% for s in r.subs %}<span class="sub{{ ' cn' if s.cn }}">{{ s.text }}</span>{% endfor %}</span></li>
+        <li class="it"><i class="n">{{ r.no }}</i><span class="q">{{ r.q|safe }}{% for s in r.subs %}<span class="sub{{ ' cn' if s.cn }}">{{ s.text|safe }}</span>{% endfor %}</span></li>
 {% endfor %}
       </ol>
 {% endif %}
     </section>
 {% endfor %}
+{% if answers %}
     <p class="foot">{{ tally }}　·　答案在最后一张纸上</p>
+{% else %}
+    <p class="foot">{{ tally }}</p>
+{% endif %}
    </td></tr>
   </tbody>
   <tfoot><tr><td class="pad"></td></tr></tfoot>
  </table>
 </div>
+{% if answers %}
 <div class="sheet ans">
  <table class="pg">
   <thead>
@@ -101,3 +115,4 @@
   <tfoot><tr><td class="pad"></td></tr></tfoot>
  </table>
 </div>
+{% endif %}

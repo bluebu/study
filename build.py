@@ -81,7 +81,7 @@ SUBJECTS = [
             {"name": "每日打卡",   "desc": "作业清单，打印打勾",  "href": "homework/", "state": "ready"},
             {"name": "打卡评价",   "desc": "朗读流利度 + 成绩单", "href": "review/",   "state": "ready"},
             {"name": "复述故事",   "desc": "关键词地图，看着讲",  "href": "retell/",   "state": "ready"},
-            {"name": "语法练习",   "desc": "一个单元一份，末页答案", "href": "grammar/",  "state": "ready"},
+            {"name": "语法练习",   "desc": "先看几条讲解再动笔", "href": "grammar/",  "state": "ready"},
         ],
     },
     {

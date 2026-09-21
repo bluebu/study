@@ -1,12 +1,14 @@
-"""英语 · 语法练习 —— 语法书上的练习题整理成 A4 打印单，末页附答案。
+"""英语 · 语法练习 —— 语法书上的练习题整理成 A4 打印单，前面附最短讲解。
 
     storage/spec/english/grammar/<slug>.txt
         → dist/english/grammar/<slug>.html + .pdf + index.html
 
 书上一个单元的练习分散在两三页上，边角还压着别的单元的题；抄成一份 spec 之后
-一个单元一张（多了自动续页），**答案单独印在最后一张纸上** —— 孩子拿前几页写，
-家长留最后一页对。原先那种「答案印在题目旁边」的版式这儿不做：一眼扫到答案，
-这份练习就白做了。
+一个单元一张（多了自动续页）。第一块是**讲解**：这个单元就那么几条规则，
+一条一行配一个例子，动笔前两分钟看完 —— 讲在前面，题才有的做。
+
+**答案默认不印**（`answers: 1` 才印，印了在最后一张）：这沓纸是拿来练的，
+答案夹在里面就白练了。
 
 ## spec 怎么写
 
@@ -24,10 +26,16 @@
     例: late | later | latest
     fast | faster | fastest
 
-两种形状，靠 `type=` 分（默认 `fill`）：
+    [讲解] 副词 Adverbs  type=tip
+    -ly 的副词前面加 more / most | slowly → *more slowly* → *most slowly*
+        carefully · happily · quietly 都一样，不加 -er
+
+三种形状，靠 `type=` 分（默认 `fill`）：
 
   · **fill** 填空题：一行一题，`题面 | 答案`。题面里**一处 `__` 就是一处空**
   · **table** 变形表：一行一项，`给出的 | 答案 | 答案`，列头写在 `cols=` 里
+  · **tip** 讲解：一行一条，`要点 | 例子`，缩进行是补一句。放在 spec 最前面
+    就印在题目前面，例子里的词用 `*词*` 标出来
 
 三条额外的行，都靠行首认（和 retell 的 `?` 行一个路子，不用配置）：
 
@@ -36,13 +44,16 @@
   · 缩进行 —— 这一题的附属行：中文提示（有汉字，印成小字灰色）
     或者对话的下一句（没汉字，跟题面同一档字号）
 
-## 两条定死的
+## 三条定死的
 
 1. **一处空画几条线，由答案的词数定**（`as high as` → 三条线）。
    线宽是固定的 —— 跟着答案长短走等于把答案印在纸上，`too` 和 `suddenly`
    的空一样宽，孩子才得靠句子判断
-2. **答案在自己那一张纸上**，不在题面页的角落里。题面页几张由内容定
-   （一个大题不劈成两半，Chrome 自己排），答案页永远是最后一张
+2. **默认不印答案**。孩子手上这沓纸是拿来练的，答案夹在里面就白练了 ——
+   要那一张就在文件头写 `answers: 1`，它永远是最后一张
+3. **讲解要短**：一条一行、配一个例子，**动笔前两分钟看得完**。
+   讲解长过题目，孩子就整块跳过去了 —— 但这个单元要用到的规则一条都不能少，
+   因为纸上没有答案页兜底
 
 页头在每一页重复（`<table>` + `<thead>`，和写字单同一套，原委见 writing.css）。
 """
@@ -70,7 +81,7 @@ TAILS = ".,?!;:"                        # 空后面紧跟这些就把线和标�
 
 BANK_LEAD = ("词库",)
 EG_LEAD = ("例",)
-KINDS = ("fill", "table")
+KINDS = ("fill", "table", "tip")
 
 
 def _lead(line: str, names: tuple[str, ...]) -> str | None:
@@ -156,7 +167,9 @@ def _group(block: spec_lib.Block, where: str) -> Group:
             continue
 
         left, sep, right = line.partition("|")
-        if kind == "table":
+        if kind == "tip":
+            g.items.append(Item(q=left.strip(), a=right.strip()))
+        elif kind == "table":
             cells = [c.strip() for c in line.split("|")]
             if len(cells) != len(cols):
                 spec_lib.die(f"{where}：[{block.name}] 这一行 {len(cells)} 格、"
@@ -173,14 +186,20 @@ def _group(block: spec_lib.Block, where: str) -> Group:
 
 
 def _sub_ctx(text: str) -> dict:
-    """缩进行：有汉字就是中文提示（小字灰），没有就是对话的下一句。"""
-    return {"text": text, "cn": bool(CJK.search(text))}
+    """缩进行：有汉字就是中文提示（小字灰），没有就是对话的下一句。
+
+    也走一遍 `*词*` —— 讲解的补充句里要描词（踩过：`a *fast* runner`
+    原样印上了星号）。中文提示里本来就没有星号，那几行一个像素都不变。
+    """
+    return {"text": _rich(text), "cn": bool(CJK.search(text))}
 
 
 def _group_ctx(g: Group, where: str) -> dict:
     used = {w.lower() for w in STRESS.findall(g.eg[0])} if g.eg else set()
     ctx = {
         "no": g.no,
+        # 题号是一个字（三 / 四 / 五）→ 圆点；讲解块的名字塞不进圆点里 → 宽标签
+        "nocls": "no wide" if g.kind == "tip" else "no",
         "title": g.title,
         "tag": g.tag,
         "kind": g.kind,
@@ -190,7 +209,11 @@ def _group_ctx(g: Group, where: str) -> dict:
         "rows": [],
     }
 
-    if g.kind == "table":
+    if g.kind == "tip":
+        ctx["rows"] = [{"point": _rich(it.q), "eg": _rich(it.a),
+                        "subs": [_sub_ctx(x) for x in it.subs]}
+                       for it in g.items]
+    elif g.kind == "table":
         if g.eg:
             ctx["eg"] = {"cells": g.eg}
         ctx["rows"] = [{"no": i, "term": it.q, "blanks": len(g.cols) - 1}
@@ -221,8 +244,12 @@ def render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, str]:
         spec_lib.die(f"{where} 里没有任何 [大题]")
 
     groups = [_group(b, where) for b in sp.blocks]
-    total = sum(len(g.items) for g in groups)
-    tally = f"{len(groups)} 大题 · {total} 题"
+    asks = [g for g in groups if g.kind != "tip"]      # 讲解不是大题，不进计数
+    total = sum(len(g.items) for g in asks)
+    tips = sum(len(g.items) for g in groups if g.kind == "tip")
+    tally = " · ".join(x for x in (f"{tips} 条讲解" if tips else "",
+                                   f"{len(asks)} 大题", f"{total} 题") if x)
+    answers = bool(sp.int_("answers", 0))              # 默认不印答案，见文件头第 2 条
 
     heading = sp.title or DEFAULTS["title"]
     sub = " · ".join(x for x in (sp.get("book", ""),
@@ -235,7 +262,7 @@ def render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, str]:
         info=page.sheet_info("得分"),
         hint=sp.get("hint", DEFAULTS["hint"]),
         groups=[_group_ctx(g, where) for g in groups],
-        answers=[_ans_ctx(g) for g in groups],
+        answers=[_ans_ctx(g) for g in asks] if answers else None,
         tally=tally,
     )
 
@@ -243,7 +270,7 @@ def render(sp: spec_lib.Spec, out_dir: Path, pdf: bool) -> tuple[bool, str]:
         out_dir / f"{sp.path.stem}.html",
         page.render(
             title=f"{heading} 语法练习",
-            description=f"{heading} 的语法练习单，{tally}，末页附答案，A4 打印。",
+            description=f"{heading} 的语法练习单，{tally}，A4 打印。",
             body=body,
             emoji="🔤",
             css=("print.css", "grammar.css"),
@@ -260,10 +287,10 @@ def build_index(out_dir: Path, entries: list[dict]) -> None:
     page.listing(
         out_dir,
         title="语法练习 · 英语",
-        description="语法书上的练习题整理成 A4 打印单，最后一张是答案，家长留着对。",
+        description="语法书上的练习题整理成 A4 打印单，动笔前先看几条最短讲解。",
         emoji="🔤",
         h1="语法练习",
-        sub=f"一个单元一份，末页附答案 · 共 {len(entries)} 份",
+        sub=f"一个单元一份，先看几条讲解再动笔 · 共 {len(entries)} 份",
         sections=[(None, [{"href": f'{e["stem"]}.html',
                            "label": e["label"],
                            "small": " · ".join(x for x in (e["tally"], e["pages"]) if x),
