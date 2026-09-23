@@ -23,7 +23,7 @@
 .mt .motto q{ quotes:"「" "」"; }
 .mt .motto small{ font-family:var(--font-cn); font-size:.75rem; margin-left:6px; }
 
-/* ── 一课一张卡，一张一行：左 = 方法，右 = 高手的工具 ── */
+/* ── 一课一张卡，一张一行：左 = 方法，右 = 一条常识 ── */
 .mt .card{
   display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1.1fr);
   background:var(--card, #FFFDF8); border:1px solid var(--line); border-radius:18px;
@@ -71,7 +71,7 @@
 .mt .yd .mh .ic{ background:linear-gradient(135deg, var(--bonus-bg, #FFF6DF), var(--bonus-bg2, #FCE9B8)); }
 .mt .yd .mh b{ color:var(--ink); }
 
-/* ── 右半：高手的工具（收藏卡：金色渐变、徽章、荧光笔名字、角落一颗星） ── */
+/* ── 右半：一条常识（收藏卡：金色渐变、学科小牌、荧光笔名字、角落一颗星） ── */
 .mt .rt{
   position:relative; padding:16px 14px 16px;
   background:linear-gradient(150deg, var(--bonus-bg, #FFF6DF) 0%, var(--bonus-bg2, #FCE9B8) 100%);
@@ -91,7 +91,6 @@
   width:fit-content; padding:0 2px;
   background:linear-gradient(transparent 58%, var(--bonus-hl, #F8DC8E) 58%);
 }
-.mt .in .kind{ display:block; margin-top:4px; font-size:.72rem; color:var(--bonus, #B8862B); }
 .mt .it{ position:relative; margin-top:8px !important; font-size:.86rem; line-height:1.8; color:var(--ink); }
 
 /* 窄屏上下叠 */
