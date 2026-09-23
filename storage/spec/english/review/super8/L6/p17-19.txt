@@ -175,17 +175,17 @@ naep: 2
 **possessed 卡住之后，自己回头补上了**
     读不出来先往下走、读完再回来补，比停在那儿干等强
 
-[三件事]
-🔤 第 19 页那六行，开读前先把生词挑出来
+[一个问题] 第 19 页，六行卡了四次
+找 卡住的是哪几个词？下次读之前，自己先把它们圈出来
     cupboard（/ˈkʌb.ərd/，p 不发音）、adorned、diamonds、possessed、summon、commands、hesitated。
-    这一段 71 个词读了 93 秒，卡的全是这几个。先拆开念三遍：
-    pos-sessed、sum-mon、com-mands、hes-i-tat-ed，再放回句子里读两遍
-👀 形近的词多看一眼
-    shaped 看成 sharp、seek 看成 think、cupboard 看成 cardboard、this 看成 his。
-    都是开头对了就往下猜。每个词看到最后一个字母再出声
-✍️ 书上写 I will 就读 I will
-    这次两处 I will 都读成了 I'll，said 读成了 says。
-    书上印的是什么就读什么，别顺嘴改
+    这一段 71 个词读了 93 秒，五处卡壳有四处在这一页
+法 田忌法
+    同样这几个词，换个顺序：先单独拿出来拆开念三遍（pos-sessed、sum-mon、com-mands、
+    hes-i-tat-ed），念熟了再放回句子里读。
+    这次 possessed 卡住之后，你先往下读、读完再回头补上 —— 这也是换顺序，是你自己想出来的
+回 上次（9/20）也是卡在长词上，办法是「开读前先把长词挑出来念熟」
+    这次还是卡了 5 处，和上次一样多；最长的 possessed 前后花了 20 秒。
+    先问一句：这次读之前念了吗？没念，下次先念；念了还卡，就该换个办法了
 
 [斜线]
 In her cupboard,
