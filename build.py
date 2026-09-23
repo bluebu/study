@@ -69,6 +69,7 @@ SUBJECTS = [
             {"name": "抽查单",   "desc": "一课一张，家长照着问", "href": "check/",    "state": "ready"},
             {"name": "教材总览", "desc": "哪篇要背、哪首要默写", "href": "overview/", "state": "ready"},
             {"name": "写字",     "desc": "笔顺一笔一笔铺开",     "href": "writing/",  "state": "ready"},
+            {"name": "学习方法", "desc": "一课一个办法，卡住了用", "href": "methods/",  "state": "ready"},
         ],
     },
     {

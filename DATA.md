@@ -220,7 +220,7 @@ p16 正是这一种）。错一位在页面上只表现成「点绿词听到别�
 | 数学秘籍 | `storage/spec/math/miji/` | `<错因slug>.txt` | `src/generator/math/build.py` |
 | 一周课表 | `storage/spec/schedule/week/` | `<YYYYMMDD>.txt` | `src/generator/schedule/week.py` |
 | 放学检查 | `storage/spec/schedule/afterschool/` | `<YYYYMMDD>.txt`（学期起；`[分区]` 后面的栏在纸上框成下半区，不分页） | `src/generator/schedule/afterschool.py` |
-| 方法工具箱 | `storage/spec/` | `methods.txt`（三科共用：每个方法借一课语文课文起名） | `lib/methods.py` → 打卡评价的 `[一个问题]` |
+| 学习方法 | `storage/spec/` | `methods.txt`（三科共用：一课一个方法、照课本顺序，`learned:` 学到第几课） | `lib/methods.py` → `src/generator/chinese/methods.py` + 打卡评价的 `[一个问题]` |
 | 学期日历 | `storage/spec/schedule/` | `term.txt`（一学期一份：开学 / 期中 / 期末 / 放假，带 `?` 的是估的）| `build.py` 的 `countdown()`（首页倒计时） |
 
 **只有打卡评价读 spec 之外的数据文件**，其余十一个都是 spec 单一输入。

@@ -65,8 +65,9 @@ storage/
                         语文园地是 <课号>y（03y = 园地一，排在第 3 课后）
     chinese/overview/   教材总览 spec：**一册一份、按册命名**（g4a = 四年级上册）
     math/miji/          秘籍 spec：错题按错因分组写，练习题只写题面、答案脚本算
-    methods.txt         方法工具箱：遇到难处用的几个办法，每个借一课语文课文起名
-                        （田忌法、庐山法……），三科共用。**只用她学过的课**
+    methods.txt         学习方法：一课提炼一个遇到难题时用的办法，名字借那一课
+                        （田忌法、庐山法……），**照课本顺序**，三科共用。
+                        `learned:` 学到第几课，之后的不许用
     schedule/term.txt   学期日历：开学 / 期中 / 期末 / 放假，**日期只写在这一处**。
                         首页那两条倒计时和打卡单页头的倒计时都读它（口径在
                         lib/term.py），带 `?` 的是估的、页面上标「暂定」
@@ -92,7 +93,7 @@ lib/
   term.py             学期日历 spec/schedule/term.txt 的读取口径。
                       两个下游：首页那两条倒计时（按**打开那天**算）、
                       打卡单页头右上角那块（按**打卡那天**算，印死在纸上）
-  methods.py          方法工具箱 spec/methods.txt 的读取口径（打卡评价的「一个问题」在用）
+  methods.py          学习方法 spec/methods.txt 的读取口径（语文学习方法页 + 打卡评价「下次读之前」）
   spec.py             spec DSL 解析（三科共用）
   tmpl.py             Jinja2 环境。模板的三条规矩写在它的文档串里
   page.py             页面骨架 + 目录页 + 打印单页眉（都只填模板，不拼字符串）
@@ -108,7 +109,7 @@ src/
                       pdf「打印单」（填色，最右）
     sheet-info.html   打印单页眉「姓名 __ 日期 __ 得分 __」，四个栏目共用
                       （第三格给空串就只出前两格 —— 背诵单用这个形状）
-    practice/ recite/ check/ overview/ miji/ ket/ homework/ retell/ grammar/
+    practice/ recite/ check/ overview/ methods/ miji/ ket/ homework/ retell/ grammar/
     afterschool/      放学检查（两列勾选格：校内完成 ｜ 家中完成）
                       一天一张纸，`[分区]` 在纸上框出下半区
     schedule/sheet.html  课程表：节次列和课格在同一个 grid 里，行高天然对齐
@@ -128,6 +129,7 @@ src/
     grammar.css       语法练习（空格线宽固定 --bl —— 线长跟着答案走就等于
                       把答案印在纸上；词库那行必须是 flex，见英语 CLAUDE.md）
     site.css          站点页面（入口页、目录页）
+    methods.css       学习方法（卡片给孩子、底下那张表给大人）
     foot.css          页脚（备案号 + 统计），page.py 挂页脚时自动引上
     trend.css         趋势页（曲线卡片 + 指标总表）
     schedule.css      课程表（行高 --h / 节次列宽 --pn 两个变量，手机上只改这两个）
@@ -146,6 +148,7 @@ src/
       check.py        抽查单：一课一张一页，答案全印（家长照着问、照着改）
       overview.py     教材总览：一册一份的总表，背诵 / 默写两列上底色加圆点
                       A4 横版、一单元一页、正文 14px（五号）
+      methods.py      学习方法：一课一张方法卡，照课本顺序（spec 是 spec/methods.txt）
     english/          英语（CLAUDE.md 里有本科的教学准则和五个栏目的口径）
       build.py        只做分发：一个栏目一层 try
       review.py       打卡评价：朗读成绩单（数只写 words / errors，其余算出来）
