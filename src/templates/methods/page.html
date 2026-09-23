@@ -14,7 +14,6 @@
   页底给大人：作业里怎么用。都直接露出来，不折叠。
 
   ⚠️ .mh 里图标、名字、步骤标签是 flex，之间的空白不生成盒子。
-     .tl 里「<b>引子</b>」和后面的用法写在一行：li 是行内排版，换行多一个空格。
      .motto 里 <q> 和 <small> 写在一行，同理。
 -#}
 <main class="wrap mt" style="--accent: var(--chinese); --accent-bg: var(--chinese-bg)">
@@ -43,11 +42,12 @@
       <p class="it">{{ m.idea.text }}</p>
     </div>
 {% if m.tools %}
-    {#- 语文园地那一串「课本里的一句 → 怎么用」：放在卡底、横跨两半。
+    {#- 语文园地那一串「课本里的一句 → 怎么用」：卡里的子栏目，一条一行，
+        左右两半和上面对齐（左 = 课本里的一句，右 = 怎么用）。
         塞在左半里时，手机上左边被拉得老长、右边空一大截 -#}
     <ul class="tl">
 {% for t in m.tools %}
-      <li><b>{{ t.quote }}</b>{{ t.how }}</li>
+      <li><b>{{ t.quote }}</b><span>{{ t.how }}</span></li>
 {% endfor %}
     </ul>
 {% endif %}

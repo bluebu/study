@@ -51,18 +51,22 @@
 .mt .story{ margin-top:8px !important; font-size:.84rem; line-height:1.75; color:var(--ink-soft); }
 .mt .from{ margin-top:8px !important; font-size:.72rem; color:var(--ink-soft); letter-spacing:.03em; }
 
-/* 语文园地：课本里的一句 → 遇到问题时怎么用 */
-.mt .tl{
-  grid-column:1 / -1; list-style:none; margin:0; padding:12px 14px 14px 16px;
-  display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:8px;
-  border-top:1.5px dashed var(--line);
-}
+/* 语文园地：子栏目，一条一行，左右两半和上面的卡对齐（列宽同 .card） */
+.mt .tl{ grid-column:1 / -1; list-style:none; margin:0; padding:0; }
 .mt .tl li{
-  font-size:.84rem; line-height:1.7;
-  padding:6px 10px; border-radius:10px; background:var(--chinese-bg, #FBE0D5);
-  background:color-mix(in srgb, var(--chinese-bg, #FBE0D5) 45%, #fff);
+  display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1.1fr);
+  border-top:1px dashed var(--line);
 }
-.mt .tl b{ display:block; font-family:var(--font-kai); font-size:.95rem; font-weight:400; color:var(--chinese, #EE7D5B); }
+.mt .tl b{
+  padding:10px 14px 10px 16px;
+  font-family:var(--font-kai); font-size:.98rem; font-weight:400; line-height:1.65;
+  color:var(--chinese, #EE7D5B);
+}
+.mt .tl li > span{
+  padding:10px 14px; font-size:.85rem; line-height:1.75;
+  background:color-mix(in srgb, var(--bonus-bg, #FFF6DF) 70%, #fff);
+  border-left:1.5px dashed var(--bonus-line, #EBD7A6);
+}
 .mt .yd .mh .ic{ background:linear-gradient(135deg, var(--bonus-bg, #FFF6DF), var(--bonus-bg2, #FCE9B8)); }
 .mt .yd .mh b{ color:var(--ink); }
 
@@ -91,7 +95,8 @@
 
 /* 窄屏上下叠 */
 @media (max-width: 359px){
-  .mt .card{ grid-template-columns:1fr; }
+  .mt .card, .mt .tl li{ grid-template-columns:1fr; }
+  .mt .tl li > span{ border-left:none; }
   .mt .rt{ border-left:none; border-top:1.5px dashed var(--bonus-line, #EBD7A6); }
 }
 
