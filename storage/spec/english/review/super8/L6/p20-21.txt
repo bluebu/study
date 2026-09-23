@@ -1,0 +1,226 @@
+# 超8 · Lesson 6
+#
+# ── 正文的写法（见 src/generator/english/CLAUDE.md）
+# 报告正文只写**孩子的朗读**。机器为什么误判、我们怎么核的，全部留在这些 # 注释里。
+#
+# ── 读的是第 20–21 页，不是打卡单上的 19–20
+# 打卡单写「第 19–20 页 划线部分」，喂数据台照它拼了 super8/L6/p19-20，第一遍拿 p19+p20 跑，
+#   第 19 页 71 词只对上一小半、168 处候选 —— 基准配错了。
+# 转写开口就是「Hiding her true intentions…」（p20 第一句），读完 p20 的「melted away completely」
+#   接的是「Dorothy asked about his magic…」—— 这是 **p21 的划线框**（marked.png 上一个框，
+#   两段 107 词）。整段录音里没有一句 p19 的原文。p19 那一框（In her cupboard…）9/21 已经在
+#   p17-19 里读过、评过了。
+#   所以这次是 p20-21，改名重跑：原文 233 词，第 20 页 126 词、第 21 页 107 词，两页都对得上。
+#   9/22 那份打卡单的 spec **不改** —— 公告原文就写 19–20，这儿记下实际读的是哪两页。
+#   错名的那三份测量数据（p19-20.*）已从 storage/data 删掉。
+#
+# ── [跳过] 一段：266.9 秒之后不是划线段
+# p21 划线框最后一句「…to carry her across the desert.」在 266.9 秒读完。之后：
+#   · 266.9–287.3 秒读了框**下面**那一行没划线的「The Tin Woodman reminded her of the golden cap,
+#     and Dorothy realized it was a brilliant idea.」（转写「A tin woman. in the heart of this
+#     golden cap. And Dorothy realized it was a brilliant idea.」）
+#   · 298.3 秒起是第 4–6 页那份生词表（wizard / scarecrow / cough / sorceress / bricks /
+#     cornfields / stumble / dissolved…），念到录音末尾
+#   两段连着，一起写成 266.9–346.8。草稿给的边界是对的（这次对齐没有把生词表拉去顶课文结尾）。
+#
+# ── 逐条核完：79 处候选 → 计错 18 处
+# 计的 18 处：词形 7（pleased→placed / possession→position / astonishment→establishment /
+#   explained→exclaim / replied→exclaiming / need→see / believe→live）、词尾 4（shoe→shoes /
+#   had→has / melted→melt / call→called）、小词 4（a→the 三次、as→and）、生词 2（stumbled /
+#   dissolve）、辅音 1（bucket→packet）。
+#   其中 5 条是「识别成」（stumbled / pleased / possession / dissolve / replied），计了错、标 ?。
+#   · replied→exclaiming：那一句她说的明显不是 replied（转写不会凭空编出 exclaiming），
+#     多半是和上一句的 explained 串了，但具体读成了什么得听 185–186 秒
+#   · had→has 标词尾不标小词（草稿填的是小词）：要练的是「这段是过去时」，同 9/21 said→says
+# 撤下 61 处：
+#   · **Oz 五处**（the / was / was / was / would）。⚠️ **连着四份一共十三次，一次都没认出来**
+#     （9/17 三次、9/20 两次、9/21 三次、这次五次）。按口径仍不计错。还是最该亲耳听的一个词
+#   · **Tin Woodman / Woodman 三处**（but / him / never）+ wanted→woman、a→her：转写「the team
+#     woman, but him, woman, her heart」。Woodman 被连着听成 woman，专名，不计
+#   · **Kansas→I、to→that**（247 秒，「return houses, all of that. I」）：专名，不计
+#   · **0–30 秒 17 处**（p20 头两句）：true / intentions / witch / secretly / placed / an / iron /
+#     bar / kitchen / unseen / by / anyone / she（漏）/ over / the / hidden / bar。转写「Hiding her
+#     tree in, tensions, her, and the... Do we still cry, placed, um, um, on the occasion floor,
+#     I'll see, my animal, as there, Dorothy, crossed the floor, his down board. Over and...」。
+#     intentions 被念成 in-tensions 是拆着念出来的（念对了、慢），计进 [磕巴] 不计错；
+#     kitchen→occasion 有 0.82 的把握，但 kitchen 她天天见，occasion 又是转写按「the o…」猜的，
+#     不计。**stumbled 单独拿出来计了错**（→ his down board，按「识别成」出 ?）：stumble 是生词表上的词，
+#     这一句读了十秒、中间卡了 6 秒
+#   · **38–66 秒 9 处**：lost→last（0.31）/ The→with / Wicked→him / Witch→which（同音）/
+#     one（漏）/ of→well / the→there / shoes→was / in→from。转写「And last one of her silver shoes.
+#     With him, which was placed, with her successful trick. Oh. Now that she had well... There was
+#     from her position.」**pleased→placed（0.54）和 possession→position（0.55）单独拿出来计了**：
+#     两个都是换成了形近的真词，placed 三行前刚读过
+#   · **106–128 秒 10 处**：soaking→in（她念成 so-in，拆着念的）/ witch→which / head→high（0.14）/
+#     to→of / foot→food（0.41）/ woman→man（「wicked old man」，woman 念快了就是这个音）/
+#     out→all / a→the / of→all（「let all the cry, all fear」，0.37–0.55，整句都糊）
+#   · **p21 其余 9 处**：a→common（173 秒 just a common man 念成 common, common man —— 是重复，
+#     a 那处 0.18 判不死）/ asked（漏）+ brains→prince（0.32）/ needed→the + courage→curry
+#     （198.8 秒先读了一遍「he need carriage」，又退回来「He did the curry」—— 重读，进 [磕巴]）/
+#     already→you（「all right, you brave」，是 al-read-y 拆着念）/ said→sad（0.29）/
+#     the→those / then→has（0.03）/ said→say + that→yes / and→called + to→he'll /
+#     Winged→wind（/wɪŋd/ 和 /wɪnd/ 太近）
+#   全算错的话准确率是 66.1%（现在 92.3%）。**第 20 页头三行几乎整段在乱段里**，所以这个数偏宽。
+#
+# ── 文本
+# p17-19：264 词
+# p20-21：233 词（第 20 页头三行 56 个词里挤着 intentions / secretly / unseen / stumbled /
+#   possession；第 20 页后半 astonishment / dissolve）
+
+date: 2026-09-22
+cat: 超8
+order: 20
+page: 20–21
+prev: p17-19
+book: 绿野仙踪
+part: 划线两段
+words: 233
+errors: 18
+score: 49
+naep: 2
+
+[评分] 准确度=19/30 流利度=11/30 断句语调=12/25 发音=7/15
+
+[总评] 长词又多了，读得慢了一点
+    准确率 92.3%，比上一次（95.5%）低了 3.2 个百分点，落回「偏难」这一档；
+    每分钟读对的词也比上一次少了一点。
+    最吃力的是第 20 页开头三行：intentions、secretly、unseen、stumbled、possession 挤在 56 个词里，
+    她读了 66 秒，五处卡壳有四处在这三行。
+    读得最顺的是第 20 页中间「Dorothy was very upset about losing her shoe…」那一段，
+    和第 21 页 Scarecrow 那一句。
+    18 处错里有 7 处是把词看成了长得像的另一个词（pleased 读成 placed、explained 读成 exclaim、
+    believe 读成 live），这比读不出来的生词还多。
+
+[跳过] 266.9-346.8 = 划线外的一行 + 念生词表
+    第 21 页划线读完之后，她接着读了框下面没划线的一行（The Tin Woodman reminded her…），
+    然后念第 4–6 页的生词表（wizard / scarecrow / sorceress / stumble / dissolved…）。
+    这 80 秒不是这次要评的朗读，不算进下面的数。
+
+[卡壳] 1.5-6.0 = 卡 4.5 秒, 29.6-35.8 = 卡 6.2 秒, 51.5-56.5 = 卡 4.9 秒, 59.0-64.3 = 卡 5.3 秒, 173.3-178.6 = 卡 5.3 秒
+    头四处都在第 20 页开头三行。第一处是 intentions：拆成 in-ten-tions 念了一遍才往下走；
+    30 秒那次在 stumbled over the hidden bar 这一句里停了 6 秒；
+    52 秒那次读完 successful trick 停了 5 秒才接 now that；59 秒那次卡在 possession 前面。
+    第 21 页只有一处：just a common man，common 念了两遍。
+    第 20→21 页翻页不算卡壳，图上标着「翻页」，时长也扣掉了。
+
+[分页] 这次读了 2 页
+第 20 页 = 1.2-140.2 秒 · 126 词 · 候选错 46 处 · 多读 14 处 · 语速 54 词/分
+第 21 页 = 160.4-266.9 秒 · 107 词 · 候选错 33 处 · 多读 25 处 · 语速 60 词/分
+    第 20 页更吃力：五处卡壳有四处在这一页，而且全在开头三行。
+    第 21 页快一些，但 7 处错里有 4 处是看岔了词（explained / replied / need / believe）。
+
+[对比] 和上一页比
+    同一课、同一部手机录的视频，录音条件一样，可以直接比。
+
+[比对] 逐字比对 · 18 处（计错 18）
+原文 As Dorothy crossed the floor, she *stumbled* over the hidden bar
+识别成 As Dorothy crossed the floor *his down board* over the hidden bar
+    〔生词〕 25.9–35.8 秒。stumbled（绊了一下）没读顺，这一句中间还停了 6 秒。
+        stum-bled 两个音节，生词表上就有这个词。具体读成了什么得亲耳听 25–30 秒；计分时按错了 1 处算
+原文 The Wicked Witch was *pleased* with her successful trick,
+识别成 The Wicked Witch was *placed* with her successful trick
+    〔词形〕 47.2 秒。pleased（高兴）读得像 placed —— 三行前刚读过 placed an iron bar
+原文 now that she had one of the shoes in her *possession*.
+识别成 now that she had one of the shoes in her *position*
+    〔词形〕 66.0 秒。possession（拥有）读得像 position，前面还停了 5 秒。pos-ses-sion
+原文 Dorothy was very upset about losing her *shoe*
+实读 Dorothy was very upset about losing her *shoes*
+    〔词尾〕 74.8 秒。书上是 shoe，只丢了一只
+原文 and she grabbed *a* nearby bucket of water,
+实读 and she grabbed *the* nearby bucket of water
+    〔小词〕 102.7 秒。a 读成了 the
+原文 and she grabbed a nearby *bucket* of water,
+实读 and she grabbed a nearby *packet* of water
+    〔辅音〕 104.9 秒。bucket（水桶）开头的 /b/ 读成了 /p/，成了 packet
+原文 To Dorothy's *astonishment*, the wicked woman
+实读 To Dorothy's *establishment* the wicked woman
+    〔词形〕 119.1 秒。astonishment（吃惊）看成了 establishment，前面先停了一下。as-ton-ish-ment
+原文 began to shrink and *dissolve*.
+识别成 began to shrink and *the dog*
+    〔生词〕 131.8 秒。dissolve（溶化）没读出来。dis-solve。
+        具体读成了什么得亲耳听 130–133 秒；计分时按错了 1 处算
+原文 In *a* short time,
+实读 In *the* short time
+    〔小词〕 133.4 秒。a 读成了 the
+原文 In a short time, she *had* melted away completely.
+实读 In the short time she *has* melted away completely
+    〔词尾〕 135.7 秒。had 读成 has —— 故事是过去时
+原文 she had *melted* away completely.
+实读 she has *melt* away completely
+    〔词尾〕 136.1 秒。melted 丢了 -ed
+原文 Dorothy asked about his magic, and Oz *explained* that he was just a common man.
+实读 Dorothy asked about his magic and Oz *exclaim* that he was just a common man
+    〔词形〕 168.2 秒。explained（解释）看成了 exclaimed（喊）—— 两个词只差中间两个字母
+原文 but Oz *replied* that he didn't need them
+识别成 but Oz *exclaiming* that he didn't need them
+    〔词形〕 185.8 秒。replied（回答）没读成 replied，像是又读成了上一句那个 exclaim。
+        得亲耳听 185–187 秒；计分时按错了 1 处算
+原文 that he didn't *need* them
+实读 that he didn't *see* them
+    〔词形〕 188.8 秒。need 读成了 see
+原文 that he didn't need them *as* he was constantly learning
+实读 that he didn't need them *and* he was constantly learning
+    〔小词〕 189.8 秒。as 读成了 and
+原文 just needed to *believe* in himself.
+实读 just needed to *live* in himself
+    〔词形〕 217.0 秒。believe 丢了开头的 be-，成了 live。be-lieve
+原文 but Oz said having *a* heart could make him sad sometimes,
+实读 but Oz said having *the* heart could make him sad sometimes
+    〔小词〕 231.5 秒。a 读成了 the
+原文 and suggested she *call* the Winged Monkeys
+实读 suggesting that she *called* the Winged Monkeys
+    〔词尾〕 257.8 秒。call 多了 -ed。这里是 suggested she call，call 用原形
+
+[磕巴] 读了两遍才接上的地方 · 6 处
+*tree in tensions her* intentions the witch
+    1.5 秒。intentions 拆成 in-ten-tions 念了一遍，才接着往下读
+*dorothy uh* Dorothy asked about his magic
+    146.3 秒。第 21 页开头 Dorothy 起了两次头
+*common* common man The Scarecrow
+    173.3 秒。just a common man，common 念了两遍
+*he need carriage* he needed courage but Oz
+    202.4 秒。The Lion said he needed courage 这一句先读了一遍，又退回来重读
+*all right* already brave just needed
+    212.7 秒。already 拆成 all-read-y 念出来的
+*he was guest she suggested* suggesting that she call
+    251.8 秒。suggested 试了三次，最后自己读出来了
+
+[亮点]
+"Dorothy was very upset about losing her shoe and asked for it back. **The witch, refusing to give it back, claimed it as her own.** Dorothy's anger grew,"
+    第 20 页中间这 28 个词一口气下来，没卡、没回头 —— 这次最顺的一段
+"The Scarecrow asked for brains, but Oz replied that he didn't need them as he was **constantly learning and getting smarter**."
+    第 21 页 constantly learning and getting smarter 这一串长词读得又稳又清楚
+**suggested 读了三次，自己读出来了**
+    第 21 页 suggested 前两次没出来，她没跳过去，第三次读对了
+
+# 给孩子看的，一眼看完。说明给大人：
+# 第 20 页开头三行卡了四次，卡的全是这几个长词；9/21 起用的办法「开读前先把长词挑出来念熟」
+#   这次还是没见效（卡住 5 → 5），问题没改善，接着写同一个（口径：别为了新鲜换）。先问她读前念了没有。
+# 另一件值得当面点给她听的：18 处错里 7 处是看岔成长得像的词（pleased→placed、explained→exclaim、
+#   believe→live），这类不是不会读，是眼睛扫快了。不单独成一个问题 —— 一次只盯一个。
+# suggested 读了三次没放弃、第三次自己读对了 —— 这就是田忌法里「换个顺序」之外的另一半：不跳过
+[一个问题] 田忌法 | 这几个词先念熟，再读句子
+词 in-ten-tions=打算, stum-bled=绊了一下, pos-ses-sion=拥有, as-ton-ish-ment=吃惊, dis-solve=溶化, sug-gest-ed=建议
+比 卡住 | 5 | 5
+
+[斜线]
+Hiding her true intentions,
+the witch secretly placed an iron bar
+on the kitchen floor,
+unseen by anyone.
+
+[尺子]
+    92.3% 落回「偏难」这一档 —— 比上一次（95.5%）往左挪了一截。
+        233 个词错 18 处。第 20 页开头三行有一大段听不清是读错还是没听准，没有计错，
+        全算上的话会更低。
+    52 个正确词/分钟，比上一次（55）又慢了 3，比 9/17（86）慢了 34。
+        落在**三年级秋季 10 到 25 百分位之间**（40 / 59）。第 20 页开头三行读了 66 秒，是慢下来的主要原因。
+        母语常模只当参照系，不是及格线。
+    平均 1.8 个词一组，比上一次（2.0）碎了一点；停顿占时长 34%，比上一次（36%）少一点。
+        仍按第 2 级放着。
+
+[怎么来的]
+**准确率 92.3%**（读对 215 / 划线共 233 词）。替换、漏读、读错音计错；插入的词和退回去重读只算不流利、不计错；读错之后自己改对的（suggested）也不计错。上面的比对列了 18 条、计错 18 处 —— 其中 5 条标 ? 的是读音拿不准、按错算的（stumbled / pleased / possession / dissolve / replied）。另外 Oz 这个名字五处、Tin Woodman 三处，和第 20 页 0–30 秒（Hiding her true intentions … the hidden bar）、106–128 秒（soaking the witch … a cry of fear）两段听不清是读错还是没听准，**没有计错**；想复核就听这几处，这个 92.3% 偏宽。
+**每分钟正确词数 52**（WCPM）= 读对的 215 个词 ÷ 246.4 秒 × 60。不算进来的有：末尾读划线外那一行和念生词表的 79.9 秒（边界是人判的）、第 20→21 页翻页的 20.2 秒、按下录音到开口那 0.3 秒。
+**断句**取 129 次停顿里断在句子中间的那些，平均 1.8 个词一组。句末位置由原文句末标点推出。
+录音是手机拍的点读视频，346.8 秒；停顿按「说话声级 − 10 dB、持续 ≥0.25 秒」数；比对基准是第 20、21 页划线框住的两段（233 词，对着核对图逐词看过）。**发音一项是从转写结果推断的**，不如亲耳听准。
