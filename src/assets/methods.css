@@ -32,3 +32,16 @@
 .mt .use td:first-child{ white-space:nowrap; font-weight:600; }
 .mt .use tr.later{ color:var(--ink-soft); }
 .mt .use tr.later td:first-child{ font-weight:400; }
+
+/* 单元页那句名言 */
+.mt .motto{ margin:-4px 0 10px; font-family:var(--font-kai); font-size:.95rem; color:var(--ink-soft); }
+
+/* 语文园地：占满一整行，排在本单元最后 */
+.mt .corner{ grid-column:1 / -1; background:var(--accent-bg); border-color:transparent; }
+.mt .corner .mh b{ color:var(--ink); }
+.mt .corner .ch{ margin-top:12px !important; font-weight:700; font-size:.95rem; }
+.mt .corner ul{ margin:6px 0 0; padding-left:1.2em; }
+.mt .corner li{ font-size:.92rem; line-height:1.75; margin-top:2px; }
+.mt .corner .qs{ list-style:none; padding-left:0; }
+.mt .corner .qs li{ font-family:var(--font-kai); font-size:1.05rem; }
+.mt .corner .qs small{ font-family:var(--font-cn); font-size:.78rem; color:var(--ink-soft); margin-left:6px; }

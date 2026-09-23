@@ -1,6 +1,9 @@
 {#-
   语文 · 学习方法：一课一个办法，**严格照课本顺序**（第 1 课到第 27 课，按单元分组）。
 
+  每个单元：单元页那句名言 → 本单元的课 → 语文园地（分析思路 / 名言警句 / 书写提示），
+  园地照课本位置排在本单元最后，第五单元是「交流平台」。
+
   上半页给孩子：一张卡一个方法 —— 图标 + 名字、问自己的那一句（最大）、
   课文里那件事（一行小字）、出自第几课。没学到的课转灰，写「学了再用」。
   下半页给大人：作业里怎么用，同样照课本顺序，直接露出来（不折叠）。
@@ -19,6 +22,9 @@
   <p class="steps">遇到难题{% for key, icon in steps.items() %}<span>{{ icon }} {{ key }}</span>{% endfor %}</p>
 {% for u in units %}
   <h2 class="sec">{{ u.head }}</h2>
+{% if u.motto %}
+  <p class="motto">{{ u.motto }}</p>
+{% endif %}
   <div class="cards">
 {% for m in u.methods %}
     <section class="card{{ '' if m.learned else ' later' }}">
@@ -28,6 +34,36 @@
       <p class="from">第 {{ m.no }} 课《{{ m.title }}》{% if not m.learned %} · 学了再用{% endif %}</p>
     </section>
 {% endfor %}
+{% if u.corner %}
+{% set c = u.corner %}
+    <section class="card corner{{ '' if c.learned else ' later' }}">
+      <p class="mh"><span class="ic">📒</span><b>{{ c.head }}</b></p>
+{% if c.thinks %}
+      <p class="ch">🧭 分析思路</p>
+      <ul>
+{% for t in c.thinks %}
+        <li>{{ t }}</li>
+{% endfor %}
+      </ul>
+{% endif %}
+{% if c.quotes %}
+      <p class="ch">💬 名言警句</p>
+      <ul class="qs">
+{% for q in c.quotes %}
+        <li>{{ q.text }}{% if q.who %}<small>—— {{ q.who }}</small>{% endif %}</li>
+{% endfor %}
+      </ul>
+{% endif %}
+{% if c.writes %}
+      <p class="ch">✍️ 书写提示</p>
+      <ul>
+{% for t in c.writes %}
+        <li>{{ t }}</li>
+{% endfor %}
+      </ul>
+{% endif %}
+    </section>
+{% endif %}
   </div>
 {% endfor %}
   <h2 class="sec">📝 给家长：作业里怎么用</h2>

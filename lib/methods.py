@@ -19,7 +19,9 @@ from typing import NamedTuple
 from lib import paths, spec as spec_lib
 
 METHODS = paths.spec("methods.txt")
-UNIT = "单元"          # [单元] 第一单元 —— 单元分隔，不是方法
+UNIT = "单元"          # [单元] 第一单元 | 单元页那句话 —— 单元分隔，不是方法
+CORNER = "园地"        # [园地] 语文园地一 —— 梳理与交流 / 名言 / 书写提示，不是方法
+CORNER_KEYS = {"思": "thinks", "言": "quotes", "写": "writes"}
 
 
 class Method(NamedTuple):
@@ -45,7 +47,10 @@ def _parse():
     units: list[dict] = []
     for b in sp.blocks:
         if b.name == UNIT:
-            units.append({"head": b.head, "methods": []})
+            units.append({"head": b.head, "motto": b.tag, "methods": [], "corner": None})
+            continue
+        if b.name == CORNER:
+            units[-1]["corner"] = _corner(b, units[-1])
             continue
         no, _, title = b.head.partition(" ")
         step = b.attr("step", "")
@@ -59,13 +64,32 @@ def _parse():
     return learned, steps, units
 
 
+def _corner(b, unit: dict) -> dict:
+    """语文园地：照课本位置挂在本单元最后。本单元的课都学过了，园地才算学过。"""
+    out = {"head": b.head, "thinks": [], "quotes": [], "writes": [],
+           "learned": all(m.learned for m in unit["methods"])}
+    for line in b.lines:
+        key, _, text = line.strip().partition(" ")
+        if not key:
+            continue
+        if key not in CORNER_KEYS:
+            spec_lib.die(f"{METHODS.name} [园地] {b.head}：每行以「思 / 言 / 写」起头，读到 {line.strip()!r}")
+        if key == "言":
+            words, _, who = text.partition("——")
+            out["quotes"].append({"text": words.strip(), "who": who.strip()})
+        else:
+            out[CORNER_KEYS[key]].append(text.strip())
+    return out
+
+
 def load() -> dict[str, Method]:
     _, _, units = _parse()
     return {m.name: m for u in units for m in u["methods"]}
 
 
 def book() -> dict:
-    """整册，照课本顺序：{learned, steps: {步: 图标}, units: [{head, methods}]}。"""
+    """整册，照课本顺序：{learned, steps: {步: 图标},
+    units: [{head, motto, methods, corner: {head, thinks, quotes, writes, learned} | None}]}。"""
     learned, steps, units = _parse()
     return {"learned": learned, "steps": steps, "units": units}
 
