@@ -62,7 +62,7 @@
   font-family:var(--font-kai); font-size:.98rem; font-weight:400; line-height:1.65;
   color:var(--chinese, #EE7D5B);
 }
-.mt .tl b small{ display:block; margin-top:2px; font-family:var(--font-cn); font-size:.74rem; color:var(--ink-soft); }
+.mt .tl b small{ display:block; margin-top:4px; text-align:right; font-family:var(--font-cn); font-size:.74rem; color:var(--ink-soft); }
 .mt .tl li > span{
   padding:10px 14px; font-size:.85rem; line-height:1.75;
   background:color-mix(in srgb, var(--bonus-bg, #FFF6DF) 70%, #fff);
@@ -97,7 +97,7 @@
 /* 窄屏上下叠 */
 @media (max-width: 359px){
   .mt .card, .mt .tl li{ grid-template-columns:1fr; }
-  .mt .tl b small{ display:block; margin-top:2px; font-family:var(--font-cn); font-size:.74rem; color:var(--ink-soft); }
+  .mt .tl b small{ display:block; margin-top:4px; text-align:right; font-family:var(--font-cn); font-size:.74rem; color:var(--ink-soft); }
 .mt .tl li > span{ border-left:none; }
   .mt .rt{ border-left:none; border-top:1.5px dashed var(--bonus-line, #EBD7A6); }
 }
