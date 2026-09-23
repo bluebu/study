@@ -40,7 +40,13 @@
     </div>
     <div class="rt">
       <p class="in"><span class="badge">{{ m.idea.kind }}</span><b>{{ m.idea.name }}</b></p>
-      <p class="it">{{ m.idea.text }}</p>
+{% for p in m.idea.parts %}
+{% if p.label %}
+      <div class="box {{ p.kind }}"><span class="bl">{{ p.label }}</span><p>{{ p.text }}</p></div>
+{% else %}
+      <p class="it {{ p.kind }}">{{ p.text }}</p>
+{% endif %}
+{% endfor %}
     </div>
 {% if m.tools %}
     {#- 语文园地那一串「课本里的一句 → 怎么用」：卡里的子栏目，一条一行，

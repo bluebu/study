@@ -21,7 +21,7 @@
 .mt .sec::after{ content:""; flex:1; height:1.5px; background:linear-gradient(90deg, var(--chinese-bg, #FBE0D5), transparent); }
 .mt .motto{ margin:0 0 12px; font-family:var(--font-kai); font-size:.98rem; color:var(--ink-soft); }
 .mt .motto q{ quotes:"「" "」"; }
-.mt .motto small{ font-family:var(--font-cn); font-size:.75rem; margin-left:6px; }
+.mt .motto small{ font-family:var(--font-cn); font-size:.75rem; margin-left:6px; white-space:nowrap; }
 
 /* ── 一课一张卡，一张一行：左 = 方法，右 = 一条常识 ── */
 .mt .card{
@@ -91,7 +91,17 @@
   width:fit-content; padding:0 2px;
   background:linear-gradient(transparent 58%, var(--bonus-hl, #F8DC8E) 58%);
 }
-.mt .it{ position:relative; margin-top:8px !important; font-size:.86rem; line-height:1.8; color:var(--ink); }
+/* 常识那段话分块：lead 这是什么 → 例子 / 实验小框 → take 落点。大段话孩子不看 */
+.mt .it{ position:relative; margin-top:8px !important; font-size:.86rem; line-height:1.75; color:var(--ink); }
+.mt .it.lead{ font-size:.9rem; font-weight:600; }
+.mt .it.take{ padding-left:1.2em; text-indent:-1.2em; color:var(--ink); }
+.mt .it.take::before{ content:"→ "; color:var(--bonus, #B8862B); font-weight:700; }
+.mt .box{
+  position:relative; margin-top:10px; padding:8px 10px 8px;
+  background:rgba(255,255,255,.72); border:1px solid var(--bonus-line, #EBD7A6); border-radius:10px;
+}
+.mt .box .bl{ display:block; font-size:.7rem; font-weight:700; color:var(--bonus, #B8862B); letter-spacing:.04em; }
+.mt .box p{ margin-top:3px !important; font-size:.84rem; line-height:1.7; }
 
 /* 窄屏上下叠 */
 @media (max-width: 359px){

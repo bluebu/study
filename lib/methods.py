@@ -30,13 +30,41 @@ class Method(NamedTuple):
     icon: str       # 🐎
     step: str       # 解决问题 —— 五步里用在哪一步
     use: str        # 作业里怎么用（给大人看的）
-    idea: dict      # 理：{name, kind, text} 右半张卡的常识
+    idea: dict      # 理：{name, kind, parts} 右半张卡的常识，parts 见 _idea_parts
     tools: list     # 用：[{quote, who, how}] 课本里的一句（——朝代·人名）→ 遇到问题时怎么用
 
     @property
     def source(self) -> str:
         """卡片底下那行出处：「第 7 课《田忌赛马》」或「语文园地二」。"""
         return f"第 {self.no} 课《{self.title}》" if self.no else self.title
+
+
+BOXES = {"例：": ("eg", "📖 例子"), "实验：": ("lab", "🔬 实验")}
+
+
+def _idea_parts(text: str) -> list[dict]:
+    """「理」那段话按 // 分块，一块一个作用（大段话孩子不看）：
+
+        第一块          lead  这是什么
+        「例：」开头     eg    课文里的例子，进小框
+        「实验：」开头   lab   研究里的实验，进小框
+        最后一块（非框） take  落点，前面带 →
+        其余            p     普通一句
+    """
+    raw = [x.strip() for x in text.split("//") if x.strip()]
+    out = []
+    for i, seg in enumerate(raw):
+        box = next((k for k in BOXES if seg.startswith(k)), None)
+        if box:
+            kind, label = BOXES[box]
+            out.append({"kind": kind, "label": label, "text": seg[len(box):].strip()})
+        elif i == 0:
+            out.append({"kind": "lead", "label": "", "text": seg})
+        elif i == len(raw) - 1:
+            out.append({"kind": "take", "label": "", "text": seg})
+        else:
+            out.append({"kind": "p", "label": "", "text": seg})
+    return out
 
 
 def _method(b, steps: dict) -> Method:
@@ -56,7 +84,7 @@ def _method(b, steps: dict) -> Method:
             parts = [x.strip() for x in text.split("|")]
             if len(parts) != 3:
                 spec_lib.die(f"{where}：「理」是「常识名 | 哪一类 | 讲给孩子的话」，读到 {text!r}")
-            idea = dict(zip(("name", "kind", "text"), parts))
+            idea = {"name": parts[0], "kind": parts[1], "parts": _idea_parts(parts[2])}
         elif key == "用":
             quote, arrow, how = text.partition("→")
             if not arrow:
