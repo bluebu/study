@@ -27,7 +27,7 @@
   <h2 class="sec">{{ u.head }}</h2>
 {% if u.motto %}
 {% set words, _, who = u.motto.partition("——") %}
-  <p class="motto"><q>{{ words }}</q>{% if who %}<small>—— {{ who }}</small>{% endif %}</p>
+  <p class="motto"><q>{{ words }}</q>{% if who %}<small>——{{ who }}</small>{% endif %}</p>
 {% endif %}
 {% for m in u.methods %}
   <section class="card{{ ' yd' if not m.no }}">
@@ -47,7 +47,7 @@
         塞在左半里时，手机上左边被拉得老长、右边空一大截 -#}
     <ul class="tl">
 {% for t in m.tools %}
-      <li><b>{{ t.quote }}</b><span>{{ t.how }}</span></li>
+      <li><b>{{ t.quote }}{% if t.who %}<small>——{{ t.who }}</small>{% endif %}</b><span>{{ t.how }}</span></li>
 {% endfor %}
     </ul>
 {% endif %}

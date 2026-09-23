@@ -31,7 +31,7 @@ class Method(NamedTuple):
     step: str       # 解决问题 —— 五步里用在哪一步
     use: str        # 作业里怎么用（给大人看的）
     idea: dict      # 理：{name, kind, text} 右半张卡的常识
-    tools: list     # 用：[{quote, how}] 课本里的一句 → 遇到问题时怎么用
+    tools: list     # 用：[{quote, who, how}] 课本里的一句（——朝代·人名）→ 遇到问题时怎么用
 
     @property
     def source(self) -> str:
@@ -61,7 +61,8 @@ def _method(b, steps: dict) -> Method:
             quote, arrow, how = text.partition("→")
             if not arrow:
                 spec_lib.die(f"{where}：「用」是「课本里的一句 → 怎么用」，读到 {text!r}")
-            tools.append({"quote": quote.strip(), "how": how.strip()})
+            words, _, who = quote.partition("——")
+            tools.append({"quote": words.strip(), "who": who.strip(), "how": how.strip()})
         else:
             spec_lib.die(f"{where}：缩进行以「课 / 理 / 用」起头，读到 {line!r}")
     if not story or not idea:
