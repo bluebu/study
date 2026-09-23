@@ -70,24 +70,6 @@
       <span class="num"><b>{{ r.score.num }}</b><span>／100</span></span>
       <span class="say">
         <p class="lead">{{ r.score.lead }}</p>
-{% if r.score.tip or r.score.points %}
-        {#- 分数旁边只留一句话，给孩子看。那段分析是给大人的，折在「细说」里 -#}
-        <details class="more"><summary>细说</summary>
-{% endif %}
-{% if r.score.tip %}
-        <p class="tip">{{ r.score.tip|safe }}</p>
-{% endif %}
-{% if r.score.points %}
-        {#- 一条要点一行。`[总评]` 里 `* ` 开头的说明行走这儿，密的那种总评才读得下去 -#}
-        <ul class="pts">
-{% for pt in r.score.points %}
-          <li>{{ pt|safe }}</li>
-{% endfor %}
-        </ul>
-{% endif %}
-{% if r.score.tip or r.score.points %}
-        </details>
-{% endif %}
       </span>
       <div class="bars" style="flex-basis:100%">
 {% for b in r.score.bars %}
@@ -138,6 +120,23 @@
 {% endfor %}
 {% if r.compare.note %}
       <p class="sc-note" style="margin-top:4px">{{ r.compare.note|safe }}</p>
+{% endif %}
+    </section>
+{% endif %}
+{% if r.score.tip or r.score.points %}
+{#- 总评的说明。给大人看的，所以不放分数旁边（孩子一打开看到的那一屏只留一句话），
+    也**不折叠** —— 要点一下才看得见的东西，等于没有 -#}
+{{ mini("📝", "细说") }}
+    <section class="box say2">
+{% if r.score.tip %}
+      <p class="tip">{{ r.score.tip|safe }}</p>
+{% endif %}
+{% if r.score.points %}
+      <ul class="pts">
+{% for pt in r.score.points %}
+        <li>{{ pt|safe }}</li>
+{% endfor %}
+      </ul>
 {% endif %}
     </section>
 {% endif %}
