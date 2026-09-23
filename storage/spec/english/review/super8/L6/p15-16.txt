@@ -1,0 +1,211 @@
+# 超8 · Lesson 6
+#
+# ── 正文的写法（见 src/generator/english/CLAUDE.md）
+# 报告正文只写**孩子的朗读**。机器为什么误判、我们怎么核的，全部留在这些 # 注释里。
+#
+# ── 9/18 那次（p13-14）暂缺，所以 prev 接的是 9/17 的 p11-12
+#
+# ── 当天两个视频，只评这一个
+# 0ea12584….mp4（268.8 秒）= 这份。bf463c6b….mp4（246.4 秒）开口是「Chapter 4, Animals and
+#   Pebbles… The Hawaiian monk seal…」—— 是打卡单 4️⃣ 的 Wonders 6 Chapter 4，
+#   不是超8 划线段，手上没有它的原文，不评。试跑时拿 p13/p14 当基准对过：6% 对上，确认不是。
+#
+# ── 基准核过了
+# 草稿报 p15 的 `casily` 可疑 —— 那是 page.json 里残留的 spellFlags，p15.ref.txt 在 9/15
+#   已经改成 easily 了（read.json 的 reference 里是 easily），不用重跑。
+# 原文 207 词，实读 269 词：多出来的 62 个里约 50 个是末尾那份生词表，余下是回读，
+#   没有「M 远大于 N」的整行漏掉征兆。
+#
+# ── [跳过] 一段：197.7 秒之后全是生词表
+# 课文最后一句「…where the Great Oz lived」她在 195.1–197.6 秒读完（转写成 the grit odds live），
+#   203.7 秒起是第 4–6 页那份生词表（wizard / scarecrow / sailor / livestock / attire /
+#   cough / sorceress / cornfield / tin / colored / ditch / stumble / inhabitant…），
+#   一直念到录音末尾。和 9/15 一样是**读完课文再念表**（9/17 是先念表）。
+# 草稿给的两段（195.1–230.5 / 230.5–258.7）两头都不对：对齐把 Great / Oz / lived 拉去顶了
+#   255–262 秒生词表里的 heather / ray / tendon，所以起点偏早、终点够不到录音末尾。
+#   改成 197.7–268.8 一段。
+#
+# ── 逐条核完：43 处候选 → 计错 12 处
+# 计的 12 处：元音 5（beasts→based / Lion→line / claws→close / axe→ex / carried→curried）、
+#   生词 3（depths / terribly / brutes）、词尾 3（fell→fells / toward→towards / lived→live）、
+#   小词 1（at→as）。其中 5 处是「识别成」（depths / terribly / axe / carried / brutes），
+#   计了错但报告上标 ? —— 读音得亲耳听才定得死。
+# 撤下 31 处，分四组：
+#   · **专名 7 处**：Kalidahs 四次（colorless / colors / candidas / desks）、Oz 两次
+#     （ours / odds）、Cowardly→card。⚠️ **Oz 又是一次都没认出来** —— 9/17 三次、这次两次，
+#     连着两份五次全军覆没。按口径仍不计错，但这是最该回去听的一个词。
+#   · **27.9–33.6 秒 5 处**：Lion→with / whispered→part / to→of / Kalidahs / lived→live。
+#     转写是「and the line with part of them that the colorless live there」——
+#     with part 就是 whispered 拆开了。lived→live 把握只有 0.15，不计（末尾那处 0.66 计了）。
+#     Lion 在这儿也听成了 line，但段落乱，只计 53.9 秒干净的那一处。
+#   · **58.8–64.5 秒 3 处**：tear→tell / in 漏 / two→into。「tell me into」就是 tear me in two
+#     连读，in two ≈ into。tear 这处最像真错（撕裂的 tear 她可能读成了眼泪的 tear），但判不死。
+#   · **95.6–111.6 秒 8 处**：that / rested / on / their / side / ditch / Tin / Woodman。
+#     转写「and the, sad. Of the date, stage. The 10 men began…」。97.6–100.6 那 3 秒只出了
+#     一个把握 0.01 的 the，**rested 那儿多半是真卡了**；ditch 听成 date、stage 两样，
+#     像是试了两遍 —— 但她在生词表里 222 秒把 Ditch 念对了，判不死，都不计。
+#   · **其余 8 处**：heard→card（0.33，card 同一段录音里还冒过一次顶 Cowardly，识别器的偏好）/
+#     noises→indoices（非词）/ I'm→um（0.05）/ thinking 漏 + about→oh（79–85 秒，been 拖了
+#     2.2 秒，thinking 多半含在里面）/ Woodman→old man（old man 就是 Woodman）/
+#     turned→they went on（0.15–0.35，三个词挤在 0.66 秒里，是 turned 被拆了）/ Great→grit。
+#   全算错的话准确率是 79.2%（现在 94.2%），撤下的比例 31/43 比 9/17（13/20）还高。
+#   这次的乱段多，是因为她**真的读得磕绊**（132–165 秒一句话读了 33 秒），不全是转写的锅 ——
+#   所以这 94.2% 偏乐观。[怎么来的] 里写了复核的地方。
+#
+# ── towards 计了错
+# toward / towards 意思一样，但口径是替换就计；识别器把握 0.86，是真读成了 towards。
+# 和 9/17 的 cannot→can't 不一样：那处在乱段里、是识别器常合写，这处是干净的。
+#
+# ── 文本比 9/17 难，实测的数
+# p11-12：159 词 · 平均词长 3.72 · ≥8 字母 3 处
+# p15-16：207 词 · 平均词长 4.08 · ≥8 字母 10 处（Kalidahs 四次、Cowardly、whispered、
+#   terribly、Scarecrow、thinking、snarling）。还有 depths / brutes / gulf / ditch 这类
+#   辅音丛短词。
+#
+# ── auto_bounds 没手写 [句末]，出完核一眼停顿地图
+
+date: 2026-09-20
+cat: 超8
+order: 15
+page: 15–16
+prev: p11-12
+book: 绿野仙踪
+part: 划线三段
+words: 207
+errors: 12
+score: 51
+naep: 2
+
+[评分] 准确度=20/30 流利度=12/30 断句语调=12/25 发音=7/15
+
+[总评] 准确率差不多，速度掉回去了 —— 慢在两三个长词上
+    准确率 94.2%，比上一次（95.6%）低了 1.4 个百分点；每分钟读对 60 个词，比上一次（86）慢了 26。
+    这两页八个字母以上的长词有 10 个（上一次 3 个），Kalidahs 这个怪兽的名字就出现了四次。
+    最吃力的是第 16 页一句话：「The falling branch carried the ugly, snarling brutes with it.」
+    她读了 33 秒 —— snarling 试了三遍、brutes 试了两遍。
+    好的地方是**两次读错之后自己退回去改对了**（crossed → across、places → pieces），
+    说明她读的时候在想意思。
+
+[跳过] 197.7-268.8 = 念生词表
+    读完课文之后，末尾这 71 秒念的是第 4–6 页那份生词表（wizard / scarecrow / sailor /
+    livestock / ditch / stumble…），孤立的词，不是朗读。不算进下面的数。
+
+[卡壳] 15.2-19.3 = 卡 4.0 秒, 122.5-126.5 = 卡 4.0 秒, 140.6-152.0 = 卡 11.4 秒, 153.2-160.5 = 卡 7.3 秒, 168.4-174.2 = 卡 5.8 秒
+    最长的两处挨在一起，都在同一句里：snarling 卡了 11 秒（试了三遍才出来），
+    紧接着 brutes 又卡 7 秒。另外三处都是她自己在改：15 秒那次读完 They soon
+    退回去把 courage 重读了一遍；122 秒那次 across 先读成 crossed、停下来改对；
+    168 秒那次 pieces 先读成 places，读到 truck 发现不对，退回去重来。
+    第 15 页翻到第 16 页那一下不算卡壳，图上标着「翻页」，时长也扣掉了。
+
+[分页] 这次读了 2 页
+第 15 页 = 0.9-73.4 秒 · 94 词 · 候选错 20 处 · 多读 5 处 · 语速 78 词/分
+第 16 页 = 76.9-264.5 秒 · 113 词 · 候选错 23 处 · 多读 61 处 · 语速 55 词/分（已扣掉读原文以外的 63.5 秒）
+    第 16 页更吃力：计错 7 处（第 15 页 5 处），五处卡壳里有四处在这一页，
+    落水那一句（falling branch … snarling brutes）一句就读了 33 秒。
+    第 15 页是狮子的一大段对白，除了 Kalidahs 这个名字，读得比较连贯。
+    「多读 61 处」大半是末尾念的生词表，记在了这一页名下。
+
+[对比] 和上一页比
+    同一课、同一部手机录的视频，录音条件一样，可以直接比。9/18 那次（第 13–14 页）的录音暂缺，
+    所以这里比的是 9/17 的第 11–12 页。
+
+[比对] 逐字比对 · 12 处（计错 12）
+原文 soon heard strange noises in the *depths* of the forest
+识别成 soon heard strange noises in the *deep path* of the forest
+    〔生词〕 23.5 秒。先读成 deep，又试了一次，都没把 depths 读出来。
+        depths 尾巴上 -pths 四个辅音挤在一起，是这一页最难发的一个音
+原文 They are huge *beasts* with bodies like
+实读 They are huge *based* with bodies like
+    〔元音〕 44.6 秒。beasts 的长 /iː/ 读成了 based 的 /eɪ/
+原文 like tigers," replied the *Lion*, "and with claws
+实读 like tigers replied the *line* and with claws
+    〔元音〕 53.9 秒。Lion 是两个音节 /ˈlaɪ.ən/，读成了一个音节的 line。
+        这一页 Lion 出现三次，开头那次读对了
+原文 "and with *claws* so long and sharp
+实读 and with *close* so long and sharp
+    〔元音〕 55.9 秒。claws 的 /ɔː/ 读成了 close 的 /oʊ/
+原文 Toto. I'm *terribly* afraid of the Kalidahs."
+识别成 Toto I'm *tell* afraid of the Kalidahs
+    〔生词〕 68.3 秒。terribly 只出来前半截，后面拖了两秒才接上 afraid。
+        具体读成了什么得亲耳听 67–71 秒；计分时按错了 1 处算
+原文 began to use his *axe* at once
+识别成 began to use his *ex* at once
+    〔元音〕 112.3 秒。axe 的 /æ/ 读成了 /e/ —— 嘴张得不够大。中国孩子最常见的一对
+原文 were nearly across, the tree *fell* with a crash
+实读 were nearly across the tree *fells* with a crash
+    〔词尾〕 128.6 秒。fell 是过去时，多加了个 -s
+原文 The falling branch *carried* the ugly, snarling
+识别成 The falling branch *curried* the ugly snarling
+    〔元音〕 138.6 秒。carried 读成了 curried，头一个元音不对。这一句她一共读了 33 秒
+原文 the ugly, snarling *brutes* with it.
+识别成 the ugly snarling *Barrett… bird* with it
+    〔生词〕 153.3–160.5 秒。试了两遍没读出来，停了 7 秒才接上 with it
+原文 on the sharp rocks *at* the bottom.
+实读 on the sharp rocks *as* the bottom
+    〔小词〕 177.5 秒。at 读成了 as
+原文 and turned again *toward* the Emerald City,
+实读 and turned again *towards* the Emerald City
+    〔词尾〕 189.3 秒。多加了个 -s。意思一样，但书上写的是 toward
+原文 where the Great Oz *lived.*
+实读 where the Great Oz *live*
+    〔词尾〕 197.2 秒。lived 丢了 -d。整篇最后一个词 —— 过去时的 -ed 是她的老问题了
+
+[磕巴] 读了两遍才接上的地方 · 6 处
+*courage this one* heard strange noises in
+    15.4 秒。读完 They soon 退回去，把上一句末尾的 courage 重读了一遍再往下走
+*deep* depths of the forest
+    23.5 秒。depths 先读成 deep，见比对第 1 条
+*the and* the end of the tree
+    93.4 秒。chop away the 之后停住，从 the end 重新起了一次
+*crossed* across the tree fell
+    122.5 秒。across 先读成 crossed，停下来改对了 —— 这是好习惯
+*ugliest mark snarling* snarling brutes with
+    140.6 秒。snarling 试了三遍：第一遍连着 ugly 读成了一团，第二、三遍才出来
+*places on the truck* pieces on the sharp
+    168.4 秒。pieces 先读成 places、读到 truck 觉得不对，退回去改成 pieces。自己改对的
+
+[亮点]
+"Do you think," the Cowardly Lion asked, "if I go to the Emerald City with you, **that Oz would give me courage?**"
+    开头这一句 20 个词，12 秒读完，中间只歇了四口气
+"**It was not long before they reached the road of yellow bricks**"
+    最后一段这 12 个词 8 秒读完，一个没错 —— 这一句的语速是 90 词/分
+**两处读错都是自己改回来的**
+    crossed → across、places → pieces：读出来的词和句子意思对不上，她自己听出来了，
+    退回去重读。这是在读意思，不是在念字
+
+[三件事]
+🔤 开读前把长词先挑出来念熟
+    这两页最卡的是 snarling（11 秒）、brutes（7 秒）、depths、terribly，
+    还有出现四次的怪兽名字 Kalidahs（/kəˈlɪ.dəz/）。
+    读之前先把这几个词拆开念：snar-ling、brutes、depths、ter-ri-bly、Ka-li-dahs，
+    每个念三遍再放回句子里
+👄 元音读准：挨着念四对
+    这次五处元音错：axe 读成 ex、claws 读成 close、beasts 读成 based、
+    Lion 读成 line、carried 读成 curried。axe 的 /æ/ 嘴要张得像咬苹果。
+    把这几对挨着念，听出差别再放回句子：axe–ex、claws–close、beast–base、lion–line
+⏱️ 过去时的尾巴要念出来
+    lived 读成 live、fell 多了个 -s。故事是过去时，每句最后那个动词多含半拍，
+    -ed 的 /d/ 要听得见
+
+[斜线]
+The falling branch
+carried the ugly, snarling brutes
+with it.
+Both were dashed to pieces
+on the sharp rocks
+at the bottom.
+
+[尺子]
+    94.2% 落在「偏难」这一档的最右边，离「教学」只差一点 —— 比上一次（95.6%）往左挪了一小截。
+        207 个词错 12 处。这两页的长词比上一次多了两倍多。
+    60 个正确词/分钟，比上一次（86）慢了 26，回到了 9/4 第 16–17 页那个水平。
+        压在**三年级秋季 25 百分位**线上（59），离 50 百分位（83）差 23。
+        母语常模只当参照系，不是及格线。
+    平均 2.0 个词一组，比上一次（2.8）碎了；停顿占时长从 32% 升到 36%。
+        卡在 snarling、brutes 那两处的 18 秒都算在里面。仍按第 2 级放着。
+
+[怎么来的]
+**准确率 94.2%**（读对 195 / 划线共 207 词）。替换、漏读、读错音计错；插入的词和退回去重读只算不流利、不计错。上面的比对列了 12 条、计错 12 处 —— 其中 5 条标 ? 的是读音拿不准、按错算的（depths / terribly / axe / carried / brutes）。另外 Kalidahs、Oz 这两个名字和 96–112 秒那一段（…rested on their side of the ditch. The Tin Woodman…）听不清是读错还是没听准，**没有计错**；想复核就听这几处，全算错的话准确率会低得多，所以这个 94.2% 偏宽。
+**每分钟正确词数 60**（WCPM）= 读对的 195 个词 ÷ 193.7 秒 × 60。不算进来的有：末尾念生词表的 71.1 秒（边界是人判的）、第 15 页翻到第 16 页那 3.5 秒、按下录音到开口那不到一秒。
+**断句**取 101 次停顿里断在句子中间的那些，平均 2.0 个词一组。句末位置由原文句末标点推出。
+录音是手机拍的点读视频，268.8 秒；停顿按「说话声级 − 10 dB、持续 ≥0.25 秒」数；比对基准是第 15、16 页划线框住的三段（207 词）。**发音一项是从转写结果推断的**，不如亲耳听准。
