@@ -1,41 +1,57 @@
-/* 语文 · 学习方法。卡片给孩子看（字大、字少），底下那张表给大人。
-   页骨架（.wrap .hero .sec）走 site.css，这里只管卡片和表 */
+/* 语文 · 学习方法。卡片给孩子看，底下那张表给大人。
+   页骨架（.wrap .hero .sec）走 site.css，这里只管主线、卡片和表 */
 
-.mt .steps{
-  display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:6px 8px;
-  margin:0 0 8px; font-size:.85rem; color:var(--ink-soft);
+/* 页头：五步主线 + 一句态度 */
+.mt .road{ text-align:center; margin:0 0 6px; }
+.mt .road p{ margin:0; }
+.mt .flow{ display:flex; flex-wrap:wrap; justify-content:center; gap:6px; }
+.mt .flow span{
+  background:var(--card); border:1px solid var(--line); border-radius:99px;
+  padding:3px 10px; font-size:.85rem; font-weight:600;
 }
-.mt .steps span{ background:var(--card); border:1px solid var(--line); border-radius:99px; padding:2px 10px; color:var(--ink); }
+.mt .flow span + span::before{ content:"→"; margin:0 6px 0 -2px; color:var(--ink-soft); font-weight:400; }
+.mt .vow{ margin-top:10px !important; font-size:.9rem; line-height:1.8; color:var(--ink); }
 
-.mt .cards{ display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:12px; }
+/* 单元页那句话 */
+.mt .motto{ margin:-4px 0 10px; font-family:var(--font-kai); font-size:.95rem; color:var(--ink-soft); }
+
+/* 一课一张卡，一张一行：左 = 方法，右 = 常识 */
 .mt .card{
+  display:grid; grid-template-columns:minmax(0, 1.25fr) minmax(0, 1fr);
   background:var(--card); border:1.5px solid var(--line); border-radius:16px;
-  box-shadow:0 2px 0 var(--line); padding:14px 16px;
+  box-shadow:0 2px 0 var(--line); overflow:hidden; margin-bottom:12px;
 }
 .mt .card p{ margin:0; }
-.mt .mh{ display:flex; align-items:center; gap:8px; }
-.mt .mh .ic{ font-size:1.6rem; line-height:1; }
-.mt .mh b{ font-size:1.25rem; color:var(--accent); }
-.mt .mh .st{ margin-left:auto; font-size:.75rem; color:var(--ink-soft); white-space:nowrap; }
-.mt .ask{ margin-top:8px !important; font-family:var(--font-display); font-size:1.15rem; font-weight:700; }
-.mt .story{ margin-top:6px !important; font-size:.85rem; line-height:1.7; color:var(--ink-soft); }
-.mt .from{ margin-top:6px !important; font-size:.75rem; color:var(--ink-soft); }
+.mt .lf{ padding:14px 14px 12px 16px; }
+.mt .rt{ padding:14px 14px 12px; background:var(--accent-bg); }
+
+.mt .mh{ display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+.mt .mh .ic{ font-size:1.5rem; line-height:1; }
+.mt .mh b{ font-size:1.2rem; color:var(--accent); }
+.mt .mh .st{ font-size:.72rem; color:var(--ink-soft); white-space:nowrap; }
+.mt .ask{ margin-top:8px !important; font-family:var(--font-display); font-size:1.1rem; font-weight:700; line-height:1.5; }
+.mt .story{ margin-top:6px !important; font-size:.84rem; line-height:1.7; color:var(--ink-soft); }
+.mt .from{ margin-top:6px !important; font-size:.74rem; color:var(--ink-soft); }
+
+/* 语文园地：课本里的一句 → 遇到问题时怎么用 */
+.mt .tl{ list-style:none; margin:8px 0 0; padding:0; }
+.mt .tl li{ font-size:.84rem; line-height:1.7; margin-top:6px; }
+.mt .tl b{ display:block; font-family:var(--font-kai); font-size:.95rem; font-weight:400; color:var(--accent); }
+.mt .yd .mh b{ color:var(--ink); }
+
+/* 右半：常识 */
+.mt .in b{ display:block; font-size:1rem; }
+.mt .in span{ display:inline-block; margin-top:3px; font-size:.7rem; color:var(--ink-soft);
+  border:1px solid var(--line); border-radius:99px; padding:0 7px; background:var(--card); }
+.mt .it{ margin-top:8px !important; font-size:.86rem; line-height:1.75; }
+
+/* 窄屏上下叠 */
+@media (max-width: 359px){
+  .mt .card{ grid-template-columns:1fr; }
+}
 
 .mt .tip{ font-size:.88rem; color:var(--ink-soft); line-height:1.8; margin:0 0 10px; }
 .mt .use{ width:100%; border-collapse:collapse; font-size:.88rem; background:var(--card); border-radius:12px; overflow:hidden; }
 .mt .use td{ padding:8px 10px; border-top:1px solid var(--line); vertical-align:top; line-height:1.65; }
 .mt .use tr:first-child td{ border-top:none; }
 .mt .use td:first-child{ white-space:nowrap; font-weight:600; }
-
-/* 单元页那句名言 */
-.mt .motto{ margin:-4px 0 10px; font-family:var(--font-kai); font-size:.95rem; color:var(--ink-soft); }
-
-/* 语文园地：占满一整行，排在本单元最后 */
-.mt .corner{ grid-column:1 / -1; background:var(--accent-bg); border-color:transparent; }
-.mt .corner .mh b{ color:var(--ink); }
-.mt .corner .ch{ margin-top:12px !important; font-weight:700; font-size:.95rem; }
-.mt .corner ul{ margin:6px 0 0; padding-left:1.2em; }
-.mt .corner li{ font-size:.92rem; line-height:1.75; margin-top:2px; }
-.mt .corner .qs{ list-style:none; padding-left:0; }
-.mt .corner .qs li{ font-family:var(--font-kai); font-size:1.05rem; }
-.mt .corner .qs small{ font-family:var(--font-cn); font-size:.78rem; color:var(--ink-soft); margin-left:6px; }

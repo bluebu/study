@@ -1,70 +1,54 @@
 {#-
-  语文 · 学习方法：一课一个办法，**严格照课本顺序**（第 1 课到第 27 课，按单元分组）。
+  语文 · 学习方法：一课一张卡，**严格照课本顺序**（课文照课次，语文园地排在本单元
+  最后一课后面，第五单元是「交流平台」）。语文园地和课文一样是一张卡。
 
-  每个单元：单元页那句名言 → 本单元的课 → 语文园地（分析思路 / 名言警句 / 书写提示），
-  园地照课本位置排在本单元最后，第五单元是「交流平台」。
+  一张卡占一整行，左右两半：
+    左  这一课的方法 —— 图标 + 名字 + 步骤标签、问自己的那一句（最大）、
+        课文里那件事、出处；语文园地多一串「用得上」（课本里的一句 → 怎么用）
+    右  一条方法论 / 辩证法 / 哲学 / 心理学常识，接着这一课讲
+  窄屏（< 360px）上下叠。
 
-  上半页给孩子：一张卡一个方法 —— 图标 + 名字、问自己的那一句（最大）、
-  课文里那件事（一行小字）、出自第几课。
-  下半页给大人：作业里怎么用，同样照课本顺序，直接露出来（不折叠）。
+  页头是五步主线 + 一句态度；页底给大人：作业里怎么用。都直接露出来，不折叠。
 
-  step 只是卡片右上角的小标签（这个方法用在遇到难题的哪一步），**不决定顺序**。
-
-  ⚠️ .mh 里图标、名字、步骤标签是 flex，之间的空白不生成盒子；
-     .from 里「第 7 课」和《田忌赛马》写在一行，别拆开 —— 拆开多一个空格。
+  ⚠️ .mh 里图标、名字、步骤标签是 flex，之间的空白不生成盒子。
+     .tl 里「<b>引子</b>」和后面的用法写在一行：li 是行内排版，换行多一个空格。
 -#}
 <main class="wrap mt" style="--accent: var(--chinese); --accent-bg: var(--chinese-bg)">
   <header class="hero">
     <a class="back" href="../">‹ 语文</a>
     <h1>学习方法</h1>
-    <p class="sub">{{ book_name }} · 一课一个办法</p>
+    <p class="sub">{{ book_name }} · 一课一个办法 · 遇到难题自己来</p>
   </header>
-  <p class="steps">遇到难题{% for key, icon in steps.items() %}<span>{{ icon }} {{ key }}</span>{% endfor %}</p>
+  <section class="road">
+    <p class="flow">{% for key, icon in steps.items() %}<span>{{ icon }} {{ key }}</span>{% endfor %}</p>
+    <p class="vow">走神、摸鱼、应付了事，吃亏的是自己。<br>想清楚自己要什么，想到就去做，别怕。</p>
+  </section>
 {% for u in units %}
   <h2 class="sec">{{ u.head }}</h2>
 {% if u.motto %}
   <p class="motto">{{ u.motto }}</p>
 {% endif %}
-  <div class="cards">
 {% for m in u.methods %}
-    <section class="card">
+  <section class="card{{ ' yd' if not m.no }}">
+    <div class="lf">
       <p class="mh"><span class="ic">{{ m.icon }}</span><b>{{ m.name }}</b><span class="st">{{ steps[m.step] }} {{ m.step }}</span></p>
       <p class="ask">{{ m.ask }}</p>
       <p class="story">{{ m.story }}</p>
-      <p class="from">第 {{ m.no }} 课《{{ m.title }}》</p>
-    </section>
-{% endfor %}
-{% if u.corner %}
-{% set c = u.corner %}
-    <section class="card corner">
-      <p class="mh"><span class="ic">📒</span><b>{{ c.head }}</b></p>
-{% if c.thinks %}
-      <p class="ch">🧭 分析思路</p>
-      <ul>
-{% for t in c.thinks %}
-        <li>{{ t }}</li>
+{% if m.tools %}
+      <ul class="tl">
+{% for t in m.tools %}
+        <li><b>{{ t.quote }}</b>{{ t.how }}</li>
 {% endfor %}
       </ul>
 {% endif %}
-{% if c.quotes %}
-      <p class="ch">💬 名言警句</p>
-      <ul class="qs">
-{% for q in c.quotes %}
-        <li>{{ q.text }}{% if q.who %}<small>—— {{ q.who }}</small>{% endif %}</li>
+      <p class="from">{{ m.source }}</p>
+    </div>
+    <div class="rt">
+      <p class="in"><b>💡 {{ m.idea.name }}</b><span>{{ m.idea.kind }}</span></p>
+      <p class="it">{{ m.idea.text }}</p>
+    </div>
+  </section>
 {% endfor %}
-      </ul>
-{% endif %}
-{% if c.writes %}
-      <p class="ch">✍️ 书写提示</p>
-      <ul>
-{% for t in c.writes %}
-        <li>{{ t }}</li>
-{% endfor %}
-      </ul>
-{% endif %}
-    </section>
-{% endif %}
-  </div>
 {% endfor %}
   <h2 class="sec">📝 给家长：作业里怎么用</h2>
   <p class="tip">不用专门讲。她卡住的时候说一句方法名，或者问她卡片上那一句 —— 答案让她自己说。</p>
