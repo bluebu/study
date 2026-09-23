@@ -21,17 +21,11 @@
 .mt .story{ margin-top:6px !important; font-size:.85rem; line-height:1.7; color:var(--ink-soft); }
 .mt .from{ margin-top:6px !important; font-size:.75rem; color:var(--ink-soft); }
 
-/* 还没学到的课：转灰，名字也不上色 */
-.mt .card.later{ opacity:.45; box-shadow:none; }
-.mt .card.later .mh b{ color:var(--ink-soft); }
-
 .mt .tip{ font-size:.88rem; color:var(--ink-soft); line-height:1.8; margin:0 0 10px; }
 .mt .use{ width:100%; border-collapse:collapse; font-size:.88rem; background:var(--card); border-radius:12px; overflow:hidden; }
 .mt .use td{ padding:8px 10px; border-top:1px solid var(--line); vertical-align:top; line-height:1.65; }
 .mt .use tr:first-child td{ border-top:none; }
 .mt .use td:first-child{ white-space:nowrap; font-weight:600; }
-.mt .use tr.later{ color:var(--ink-soft); }
-.mt .use tr.later td:first-child{ font-weight:400; }
 
 /* 单元页那句名言 */
 .mt .motto{ margin:-4px 0 10px; font-family:var(--font-kai); font-size:.95rem; color:var(--ink-soft); }

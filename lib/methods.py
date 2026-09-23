@@ -6,8 +6,7 @@
     src/generator/english/review.py    打卡评价「下次读之前」：只写方法名，
                                        图标和问句由这儿补上
 
-报告里用了一个查不到、或者还没学到的方法，当场报错 —— 印出来的就是一个
-没人跟她解释过的词，那又变回大人在讲道理。
+报告里用了一个查不到的方法名，当场报错 —— 印出来的就是一个没人跟她解释过的词。
 
 想在别处（数学秘籍、语文抽查单）用同一套方法，从这儿取，别再解析一遍那份 spec。
 """
@@ -33,12 +32,10 @@ class Method(NamedTuple):
     icon: str       # 🐎
     step: str       # 想 —— 遇到难题时用在哪一步
     use: str        # 作业里怎么用（给大人看的）
-    learned: bool   # 学过没有（课号 <= spec 头的 learned）
 
 
 def _parse():
     sp = spec_lib.parse(METHODS)
-    learned = sp.int_("learned", 0)
     steps = {}
     for part in sp.get("steps", "").split(","):
         key, _, icon = part.strip().partition("=")
@@ -59,15 +56,14 @@ def _parse():
         if not units:
             spec_lib.die(f"{METHODS.name} [{b.name}]：第一个方法前面要先有一个 [单元]")
         m = Method(b.name, no, title.strip(), b.tag, " ".join(b.notes()), b.attr("icon", ""),
-                   step, b.attr("use", ""), int(no) <= learned)
+                   step, b.attr("use", ""))
         units[-1]["methods"].append(m)
-    return learned, steps, units
+    return steps, units
 
 
 def _corner(b, unit: dict) -> dict:
-    """语文园地：照课本位置挂在本单元最后。本单元的课都学过了，园地才算学过。"""
-    out = {"head": b.head, "thinks": [], "quotes": [], "writes": [],
-           "learned": all(m.learned for m in unit["methods"])}
+    """语文园地：照课本位置挂在本单元最后。"""
+    out = {"head": b.head, "thinks": [], "quotes": [], "writes": []}
     for line in b.lines:
         key, _, text = line.strip().partition(" ")
         if not key:
@@ -83,15 +79,15 @@ def _corner(b, unit: dict) -> dict:
 
 
 def load() -> dict[str, Method]:
-    _, _, units = _parse()
+    _, units = _parse()
     return {m.name: m for u in units for m in u["methods"]}
 
 
 def book() -> dict:
-    """整册，照课本顺序：{learned, steps: {步: 图标},
-    units: [{head, motto, methods, corner: {head, thinks, quotes, writes, learned} | None}]}。"""
-    learned, steps, units = _parse()
-    return {"learned": learned, "steps": steps, "units": units}
+    """整册，照课本顺序：{steps: {步: 图标},
+    units: [{head, motto, methods, corner: {head, thinks, quotes, writes} | None}]}。"""
+    steps, units = _parse()
+    return {"steps": steps, "units": units}
 
 
 def get(name: str, where: str) -> Method:
@@ -99,8 +95,4 @@ def get(name: str, where: str) -> Method:
     if name not in box:
         spec_lib.die(f"{where}：方法「{name}」不在 {METHODS.name} 里（有：{'、'.join(box)}）"
                      "—— 要加新方法先写进那份 spec")
-    m = box[name]
-    if not m.learned:
-        spec_lib.die(f"{where}：「{name}」出自第 {m.no} 课《{m.title}》，她还没学到"
-                     f"（{METHODS.name} 的 learned 写的是学到哪一课）—— 换一个学过的方法")
-    return m
+    return box[name]

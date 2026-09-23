@@ -5,7 +5,7 @@
   园地照课本位置排在本单元最后，第五单元是「交流平台」。
 
   上半页给孩子：一张卡一个方法 —— 图标 + 名字、问自己的那一句（最大）、
-  课文里那件事（一行小字）、出自第几课。没学到的课转灰，写「学了再用」。
+  课文里那件事（一行小字）、出自第几课。
   下半页给大人：作业里怎么用，同样照课本顺序，直接露出来（不折叠）。
 
   step 只是卡片右上角的小标签（这个方法用在遇到难题的哪一步），**不决定顺序**。
@@ -17,7 +17,7 @@
   <header class="hero">
     <a class="back" href="../">‹ 语文</a>
     <h1>学习方法</h1>
-    <p class="sub">{{ book_name }} · 一课一个办法 · 学到第 {{ learned }} 课</p>
+    <p class="sub">{{ book_name }} · 一课一个办法</p>
   </header>
   <p class="steps">遇到难题{% for key, icon in steps.items() %}<span>{{ icon }} {{ key }}</span>{% endfor %}</p>
 {% for u in units %}
@@ -27,16 +27,16 @@
 {% endif %}
   <div class="cards">
 {% for m in u.methods %}
-    <section class="card{{ '' if m.learned else ' later' }}">
+    <section class="card">
       <p class="mh"><span class="ic">{{ m.icon }}</span><b>{{ m.name }}</b><span class="st">{{ steps[m.step] }} {{ m.step }}</span></p>
       <p class="ask">{{ m.ask }}</p>
       <p class="story">{{ m.story }}</p>
-      <p class="from">第 {{ m.no }} 课《{{ m.title }}》{% if not m.learned %} · 学了再用{% endif %}</p>
+      <p class="from">第 {{ m.no }} 课《{{ m.title }}》</p>
     </section>
 {% endfor %}
 {% if u.corner %}
 {% set c = u.corner %}
-    <section class="card corner{{ '' if c.learned else ' later' }}">
+    <section class="card corner">
       <p class="mh"><span class="ic">📒</span><b>{{ c.head }}</b></p>
 {% if c.thinks %}
       <p class="ch">🧭 分析思路</p>
@@ -67,11 +67,11 @@
   </div>
 {% endfor %}
   <h2 class="sec">📝 给家长：作业里怎么用</h2>
-  <p class="tip">不用专门讲。她卡住的时候说一句方法名，或者问她卡片上那一句 —— 答案让她自己说。灰色的是还没学到的课，先别用。</p>
+  <p class="tip">不用专门讲。她卡住的时候说一句方法名，或者问她卡片上那一句 —— 答案让她自己说。</p>
   <table class="use">
 {% for u in units %}
 {% for m in u.methods %}
-    <tr class="{{ '' if m.learned else 'later' }}"><td>{{ m.icon }} {{ m.name }}</td><td>{{ m.use }}</td></tr>
+    <tr><td>{{ m.icon }} {{ m.name }}</td><td>{{ m.use }}</td></tr>
 {% endfor %}
 {% endfor %}
   </table>
