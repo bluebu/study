@@ -14,12 +14,16 @@
   自己夸自己稀罕，孩子一眼看穿。稀罕靠的是里面实打实的人名和实验。
   页底给大人：作业里怎么用。都直接露出来，不折叠。
 
+  **同一份 HTML 两用**：屏幕上是这张页面，纸上是 A4 打印版（methods.pdf，
+  打印样式在 methods.css 的 @media print 里，内容一个字不变）。
+
   ⚠️ .mh 里图标、名字、步骤标签是 flex，之间的空白不生成盒子。
      .motto 里 <q> 和 <small> 写在一行，同理。
 -#}
 <main class="wrap mt" style="--accent: var(--chinese); --accent-bg: var(--chinese-bg)">
   <header class="hero">
     <a class="back" href="../../">‹ 学习小站</a>
+    <a class="pdf" href="methods.pdf">打印版 · A4</a>
     <h1>学习方法</h1>
     <p class="sub">{{ book_name }} · 一课一个办法</p>
   </header>

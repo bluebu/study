@@ -11,13 +11,15 @@ spec 是 storage/spec/methods.txt（三科共用，读取口径在 lib/methods.p
 - 页头是五步主线（想要什么 → 收集信息 → 分析问题 → 解决问题 → 检查复盘）
   和一句态度；页底给大人（作业里怎么用）。**都直接露出来**，不做折叠
 - 27 课全部放开，不按进度转灰（家长的决定）
+- **同一份 HTML 两用**：`--pdf` 时导出 methods.pdf（A4），右上角「打印版」链过去。
+  打印样式只在 methods.css 的 `@media print` 里，内容不变
 """
 
 from __future__ import annotations
 
 from pathlib import Path
 
-from lib import methods, page, tmpl
+from lib import methods, page, sheet, tmpl
 
 BOOK = "四年级上册"
 
@@ -28,7 +30,7 @@ def build_methods(dist: Path, pdf: bool = False) -> None:
     n = sum(len(u["methods"]) for u in bk["units"])
     body = tmpl.body("methods/page.html", book_name=BOOK,
                      steps=bk["steps"], units=bk["units"])
-    page.write(
+    out = page.write(
         out_dir / "index.html",
         page.render(
             title="学习方法 · 语文",
@@ -41,3 +43,6 @@ def build_methods(dist: Path, pdf: bool = False) -> None:
         ),
     )
     print(f"    → methods/index.html  （{n} 个方法）")
+    if pdf:
+        # 同一份 HTML 导 A4：打印样式在 methods.css 的 @media print 里
+        sheet.to_pdf(out, out_dir / "methods.pdf")

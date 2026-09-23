@@ -3,6 +3,14 @@
    颜色一律取 palette.css 的变量，**每个都带兜底值** —— palette.css 被浏览器缓存成
    旧版时变量取不到，整块会变透明（踩过：右半张的浅金底整个没了，看着像白卡）。 */
 
+/* ── 右上角「打印版」按钮（只在屏幕上） ── */
+.mt .hero{ position:relative; }
+.mt .hero .pdf{
+  position:absolute; right:0; top:0;
+  font-size:.8rem; font-weight:600; color:var(--chinese, #EE7D5B); text-decoration:none;
+  background:#fff; border:1px solid var(--chinese-bg, #FBE0D5); border-radius:99px; padding:3px 12px;
+}
+
 /* ── 页头：五步主线 ── */
 .mt .flow{ display:flex; flex-wrap:wrap; justify-content:center; gap:8px 6px; margin:0 0 14px; }
 .mt .flow span{
@@ -118,3 +126,30 @@
 .mt .use td{ padding:9px 10px; border-top:1px solid var(--line); vertical-align:top; line-height:1.65; }
 .mt .use tr:first-child td{ border-top:none; }
 .mt .use td:first-child{ white-space:nowrap; font-weight:600; }
+
+/* ── A4 打印版（make pdf / CI 导出 methods.pdf）──────────────────────
+   同一份 HTML，纸上只换版式、不换内容。和别的打印单不一样的地方：
+   这张是**一路往下流的长文档**，所以边距写在 @page 上（每页都有），
+   不学 print.css 把边距写在 .sheet 的 padding 上 —— 那样只有第一页有上边距
+   （写字单踩过）。卡片整张不跨页，单元标题不落在页底。 */
+@page{ size:A4; margin:12mm 11mm; }
+@media print{
+  html, body{
+    width:auto; margin:0; padding:0;
+    background:#fff !important;
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;
+  }
+  .mt.wrap{ max-width:none; width:auto; padding:0; }
+  .mt .hero{ margin-bottom:4mm; }
+  .mt .hero .back, .mt .hero .pdf{ display:none; }
+  .mt .hero h1{ font-size:1.7rem; margin:0; }
+  .mt .flow{ margin-bottom:2mm; }
+  .mt .sec{ margin-top:6mm; break-after:avoid; page-break-after:avoid; }
+  .mt .motto{ break-after:avoid; page-break-after:avoid; }
+  .mt .card{
+    break-inside:avoid; page-break-inside:avoid;
+    box-shadow:none; margin-bottom:4mm;
+  }
+  .mt .use tr{ break-inside:avoid; page-break-inside:avoid; }
+  .mt .use{ box-shadow:none; border:1px solid var(--line); }
+}
