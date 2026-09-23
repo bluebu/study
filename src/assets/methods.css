@@ -1,53 +1,104 @@
 /* 语文 · 学习方法。卡片给孩子看，底下那张表给大人。
-   页骨架（.wrap .hero .sec）走 site.css，这里只管主线、卡片和表 */
+   页骨架（.wrap .hero .sec）走 site.css，这里只管主线、卡片和表。
+   颜色一律取 palette.css 的变量，**每个都带兜底值** —— palette.css 被浏览器缓存成
+   旧版时变量取不到，整块会变透明（踩过：右半张的浅金底整个没了，看着像白卡）。 */
 
-/* 页头：五步主线 */
-.mt .flow{ display:flex; flex-wrap:wrap; justify-content:center; gap:6px; margin:0 0 6px; }
+/* ── 页头：五步主线 ── */
+.mt .flow{ display:flex; flex-wrap:wrap; justify-content:center; gap:8px 6px; margin:0 0 14px; }
 .mt .flow span{
-  background:var(--card); border:1px solid var(--line); border-radius:99px;
-  padding:3px 10px; font-size:.85rem; font-weight:600;
+  background:linear-gradient(180deg, #fff, var(--chinese-bg, #FBE0D5));
+  border:1px solid var(--line); border-radius:99px;
+  padding:4px 12px; font-size:.85rem; font-weight:600;
+  box-shadow:0 1px 0 var(--line);
 }
-.mt .flow span + span::before{ content:"→"; margin:0 6px 0 -2px; color:var(--ink-soft); font-weight:400; }
+.mt .flow span + span::before{ content:"→"; margin:0 6px 0 -3px; color:var(--chinese, #EE7D5B); font-weight:700; }
 
-/* 单元页那句话 */
-.mt .motto{ margin:-4px 0 10px; font-family:var(--font-kai); font-size:.95rem; color:var(--ink-soft); }
+/* ── 单元标题 + 单元页那句话 ── */
+.mt .sec{
+  display:flex; align-items:center; gap:10px;
+  margin:26px 0 4px; color:var(--chinese, #EE7D5B); font-size:1rem; letter-spacing:.08em;
+}
+.mt .sec::after{ content:""; flex:1; height:1.5px; background:linear-gradient(90deg, var(--chinese-bg, #FBE0D5), transparent); }
+.mt .motto{ margin:0 0 12px; font-family:var(--font-kai); font-size:.98rem; color:var(--ink-soft); }
+.mt .motto q{ quotes:"「" "」"; }
+.mt .motto small{ font-family:var(--font-cn); font-size:.75rem; margin-left:6px; }
 
-/* 一课一张卡，一张一行：左 = 方法，右 = 常识 */
+/* ── 一课一张卡，一张一行：左 = 方法，右 = 高手的工具 ── */
 .mt .card{
   display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1.1fr);
-  background:var(--card); border:1.5px solid var(--line); border-radius:16px;
-  box-shadow:0 2px 0 var(--line); overflow:hidden; margin-bottom:12px;
+  background:var(--card, #FFFDF8); border:1px solid var(--line); border-radius:18px;
+  box-shadow:0 1px 2px rgba(120,104,84,.08), 0 6px 18px -10px rgba(120,104,84,.35);
+  overflow:hidden; margin-bottom:14px;
 }
 .mt .card p{ margin:0; }
-.mt .lf{ padding:14px 14px 12px 16px; }
-.mt .rt{ padding:14px 14px 12px; background:var(--bonus-bg); border-left:1.5px dashed var(--bonus-line); }
+.mt .lf{ padding:16px 14px 14px 16px; }
 
-.mt .mh{ display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
-.mt .mh .ic{ font-size:1.5rem; line-height:1; }
-.mt .mh b{ font-size:1.2rem; color:var(--accent); }
-.mt .mh .st{ font-size:.72rem; color:var(--ink-soft); white-space:nowrap; }
-.mt .ask{ margin-top:8px !important; font-family:var(--font-display); font-size:1.1rem; font-weight:700; line-height:1.5; }
-.mt .story{ margin-top:6px !important; font-size:.84rem; line-height:1.7; color:var(--ink-soft); }
-.mt .from{ margin-top:6px !important; font-size:.74rem; color:var(--ink-soft); }
+.mt .mh{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.mt .mh .ic{
+  flex:0 0 auto; width:40px; height:40px; border-radius:50%;
+  display:grid; place-items:center; font-size:1.35rem; line-height:1;
+  background:var(--chinese-bg, #FBE0D5); box-shadow:inset 0 0 0 2px #fff;
+}
+.mt .mh b{ font-size:1.22rem; color:var(--chinese, #EE7D5B); letter-spacing:.02em; }
+.mt .mh .st{
+  font-size:.7rem; color:var(--ink-soft); white-space:nowrap;
+  background:#fff; border:1px solid var(--line); border-radius:99px; padding:1px 8px;
+}
+.mt .ask{
+  margin-top:12px !important; padding-left:10px; border-left:3px solid var(--chinese, #EE7D5B);
+  font-family:var(--font-display); font-size:1.1rem; font-weight:700; line-height:1.5;
+}
+.mt .story{ margin-top:8px !important; font-size:.84rem; line-height:1.75; color:var(--ink-soft); }
+.mt .from{ margin-top:8px !important; font-size:.72rem; color:var(--ink-soft); letter-spacing:.03em; }
 
 /* 语文园地：课本里的一句 → 遇到问题时怎么用 */
-.mt .tl{ list-style:none; margin:8px 0 0; padding:0; }
-.mt .tl li{ font-size:.84rem; line-height:1.7; margin-top:6px; }
-.mt .tl b{ display:block; font-family:var(--font-kai); font-size:.95rem; font-weight:400; color:var(--accent); }
+.mt .tl{
+  grid-column:1 / -1; list-style:none; margin:0; padding:12px 14px 14px 16px;
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:8px;
+  border-top:1.5px dashed var(--line);
+}
+.mt .tl li{
+  font-size:.84rem; line-height:1.7;
+  padding:6px 10px; border-radius:10px; background:var(--chinese-bg, #FBE0D5);
+  background:color-mix(in srgb, var(--chinese-bg, #FBE0D5) 45%, #fff);
+}
+.mt .tl b{ display:block; font-family:var(--font-kai); font-size:.95rem; font-weight:400; color:var(--chinese, #EE7D5B); }
+.mt .yd .mh .ic{ background:linear-gradient(135deg, var(--bonus-bg, #FFF6DF), var(--bonus-bg2, #FCE9B8)); }
 .mt .yd .mh b{ color:var(--ink); }
 
-/* 右半：高手的工具（浅金，收藏卡的感觉） */
-.mt .in span{ display:block; font-size:.72rem; color:var(--bonus); font-weight:600; letter-spacing:.02em; }
-.mt .in b{ display:block; margin-top:4px; font-size:1.05rem; }
-.mt .it{ margin-top:8px !important; font-size:.86rem; line-height:1.75; }
+/* ── 右半：高手的工具（收藏卡：金色渐变、徽章、荧光笔名字、角落一颗星） ── */
+.mt .rt{
+  position:relative; padding:16px 14px 16px;
+  background:linear-gradient(150deg, var(--bonus-bg, #FFF6DF) 0%, var(--bonus-bg2, #FCE9B8) 100%);
+  border-left:1.5px dashed var(--bonus-line, #EBD7A6);
+}
+.mt .rt::after{
+  content:"✦"; position:absolute; right:10px; bottom:6px;
+  font-size:2.4rem; line-height:1; color:var(--bonus, #B8862B); opacity:.12; pointer-events:none;
+}
+.mt .in .badge{
+  display:inline-block; font-size:.7rem; font-weight:700; letter-spacing:.04em;
+  color:var(--bonus, #B8862B); background:#fff; border:1px solid var(--bonus-line, #EBD7A6);
+  border-radius:99px; padding:2px 9px; box-shadow:0 1px 0 var(--bonus-line, #EBD7A6);
+}
+.mt .in b{
+  display:block; margin-top:10px; font-size:1.12rem; line-height:1.4;
+  width:fit-content; padding:0 2px;
+  background:linear-gradient(transparent 58%, var(--bonus-hl, #F8DC8E) 58%);
+}
+.mt .in .kind{ display:block; margin-top:4px; font-size:.72rem; color:var(--bonus, #B8862B); }
+.mt .it{ position:relative; margin-top:8px !important; font-size:.86rem; line-height:1.8; color:var(--ink); }
 
 /* 窄屏上下叠 */
 @media (max-width: 359px){
   .mt .card{ grid-template-columns:1fr; }
+  .mt .rt{ border-left:none; border-top:1.5px dashed var(--bonus-line, #EBD7A6); }
 }
 
+/* ── 页底：给家长 ── */
 .mt .tip{ font-size:.88rem; color:var(--ink-soft); line-height:1.8; margin:0 0 10px; }
-.mt .use{ width:100%; border-collapse:collapse; font-size:.88rem; background:var(--card); border-radius:12px; overflow:hidden; }
-.mt .use td{ padding:8px 10px; border-top:1px solid var(--line); vertical-align:top; line-height:1.65; }
+.mt .use{ width:100%; border-collapse:collapse; font-size:.88rem; background:var(--card, #FFFDF8); border-radius:14px; overflow:hidden;
+  box-shadow:0 1px 2px rgba(120,104,84,.08); }
+.mt .use td{ padding:9px 10px; border-top:1px solid var(--line); vertical-align:top; line-height:1.65; }
 .mt .use tr:first-child td{ border-top:none; }
 .mt .use td:first-child{ white-space:nowrap; font-weight:600; }
