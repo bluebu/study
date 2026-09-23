@@ -70,6 +70,10 @@
       <span class="num"><b>{{ r.score.num }}</b><span>／100</span></span>
       <span class="say">
         <p class="lead">{{ r.score.lead }}</p>
+{% if r.score.tip or r.score.points %}
+        {#- 分数旁边只留一句话，给孩子看。那段分析是给大人的，折在「细说」里 -#}
+        <details class="more"><summary>细说</summary>
+{% endif %}
 {% if r.score.tip %}
         <p class="tip">{{ r.score.tip|safe }}</p>
 {% endif %}
@@ -80,6 +84,9 @@
           <li>{{ pt|safe }}</li>
 {% endfor %}
         </ul>
+{% endif %}
+{% if r.score.tip or r.score.points %}
+        </details>
 {% endif %}
       </span>
       <div class="bars" style="flex-basis:100%">
