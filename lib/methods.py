@@ -22,13 +22,15 @@ class Method(NamedTuple):
     title: str      # 田忌赛马
     ask: str        # 换个顺序行不行？
     story: str      # 同样三匹马，换个出场顺序……
+    icon: str       # 🐎
 
 
 def load() -> dict[str, Method]:
     box = {}
     for b in spec_lib.parse(METHODS).blocks:
         no, _, title = b.head.partition(" ")
-        box[b.name] = Method(b.name, no, title.strip(), b.tag, " ".join(b.notes()))
+        box[b.name] = Method(b.name, no, title.strip(), b.tag, " ".join(b.notes()),
+                             b.attr("icon", ""))
     return box
 
 

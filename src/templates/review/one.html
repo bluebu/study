@@ -93,32 +93,18 @@
 {% endif %}
     </section>
 {% if r.problem %}
-{#- 这次的一个问题：找 → 法 → 回。「找」的答案折在 <details> 里，先让她自己找 -#}
-{{ mini("✏️", "这次的一个问题") }}
-    <div class="todo problem">
-      <p class="q">{{ r.problem.head|safe }}</p>
-{% for s in r.problem.steps %}
-      <div class="t">
-        <span class="ic">{{ s.icon }}</span>
-        <span>
-{% if s.method %}
-          <p class="h"><b class="mname">{{ s.method.name }}</b><span class="mfrom">语文第 {{ s.method.no }} 课《{{ s.method.title }}》</span></p>
-          <p class="ask">「{{ s.method.ask }}」</p>
-          <p class="d2 story">{{ s.method.story }}</p>
-          <p class="d2">{{ s.desc|safe }}</p>
-{% elif s.key == "找" %}
-          <p class="h">{{ s.title|safe }}</p>
-{% if s.desc %}
-          <details><summary>看答案</summary><p class="d2">{{ s.desc|safe }}</p></details>
+{#- 下次读之前：给孩子看的，一眼看完。方法 · 一句话 · 大字的词 · 两个数 -#}
+{{ mini("✏️", "下次读之前") }}
+    <section class="box problem">
+      <p class="pm"><span class="pi">{{ r.problem.icon }}</span><b>{{ r.problem.name }}</b><span class="ask">{{ r.problem.ask }}</span></p>
+      <p class="todo1">{{ r.problem.todo }}</p>
+{% if r.problem.words %}
+      <p class="ws">{% for w in r.problem.words %}<span class="w">{{ w }}</span>{% endfor %}</p>
 {% endif %}
-{% else %}
-          <p class="h">{{ s.title|safe }}</p>
-          <p class="d2">{{ s.desc|safe }}</p>
+{% if r.problem.cmp %}
+      <p class="pc">{{ r.problem.cmp.label }}：上次 <b>{{ r.problem.cmp.was }}</b> 次 → 这次 <b>{{ r.problem.cmp.now }}</b> 次</p>
 {% endif %}
-        </span>
-      </div>
-{% endfor %}
-    </div>
+    </section>
 {% elif r.todos %}
 {{ mini("✏️", "下次试试这三件事") }}
     <div class="todo">

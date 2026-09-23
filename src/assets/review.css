@@ -196,14 +196,19 @@ mark{ background:var(--math-bg); color:#1F7A55; border-radius:5px; padding:0 3px
 .todo .t .h{ font-weight:600; }
 .todo .t .d2{ font-size:.88rem; color:var(--ink-soft); margin-top:2px; }
 
-/* 这次的一个问题（找 → 法 → 回）。卡片沿用 .todo .t，多出来的只有这几样 */
-.problem .q{ margin:0; font-weight:700; font-size:1.05rem; }
-.problem .mname{ color:var(--english); }
-.problem .mfrom{ font-size:.8rem; color:var(--ink-soft); font-weight:400; margin-left:8px; }
-.problem .ask{ margin:4px 0 0; font-family:var(--font-display); font-size:1.02rem; }
-.problem .story{ color:var(--ink-soft); }
-.problem details{ margin-top:6px; }
-.problem summary{ font-size:.85rem; color:var(--english); cursor:pointer; }
+/* 下次读之前：给孩子看的，字大、字少 */
+.problem{ text-align:center; }
+.problem p{ margin:0; }
+.problem .pm{ display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:6px 10px; }
+.problem .pi{ font-size:2rem; line-height:1; }
+.problem .pm b{ font-size:1.5rem; color:var(--english); }
+.problem .ask{ flex-basis:100%; color:var(--ink-soft); font-size:.9rem; }
+.problem .todo1{ margin-top:12px; font-size:1.15rem; font-weight:700; }
+.problem .ws{ margin-top:14px; display:flex; flex-wrap:wrap; justify-content:center; gap:10px; }
+.problem .w{ font-family:var(--font-display); font-size:1.35rem; font-weight:700;
+  background:var(--english-bg); border-radius:12px; padding:6px 14px; }
+.problem .pc{ margin-top:14px; font-size:.9rem; color:var(--ink-soft); }
+.problem .pc b{ color:var(--ink); font-size:1.05rem; }
 
 .how{ font-size:.86rem; color:var(--ink-soft); }
 .how p{ margin:0 0 8px; }

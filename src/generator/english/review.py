@@ -1069,52 +1069,41 @@ def todos(r: Report) -> list[dict]:
              "desc": rich(joined(it["desc"]))} for it in items]
 
 
-PROBLEM_STEPS = {"找": "🔍", "法": "🧰", "回": "🔁"}
-
-
 def problem(r: Report) -> dict | None:
-    """这次的一个问题（`[一个问题]`）—— 取代 `[三件事]` 的写法，旧报告照旧出三件事。
+    """下次读之前（`[一个问题]`）—— 取代 `[三件事]`，旧报告照旧出三件事。
 
-    三件事是**大人找好问题、大人给好办法**，一次换三条新的、下次也不回头看，
-    结果一直没被用上。这里改成一次只盯一个问题，每次走同一个循环：
+    **这一块是给孩子看的，一眼看完**：一个方法、一句话、几个大字的词、两个数。
+    三件事那种「大人找好问题 + 一段段说明」她一眼都不看；上一版的找 → 法 → 回
+    三张卡也一样，字太多。所以只留这四样：
 
-        找  她先自己找（抬头是给她的线索，缩进行是答案，页面上折起来）
-        法  从工具箱（storage/spec/methods.txt）挑一个方法，抬头只写方法名，
-            出自哪课、问自己的那句由 lib/methods 补上；缩进行是这次怎么用
-        回  上次那个办法有没有用 —— 拿这次的数说话。**试 → 看结果 → 调整**
-            这一圈本身才是要她学会的东西
+        [一个问题] 田忌法 | 这几个词先念熟，再读句子     ← 方法名 | 做什么，一句话
+        词 cup-board, pos-sessed, sum-mon               ← 要练的词，连字符 = 音节
+        比 卡住 | 5 | 5                                 ← 看什么 | 上次 | 这次
 
-    区块抬头是那个问题，一句话。三步都可省，但顺序固定（找 → 法 → 回）。
+    方法名从工具箱（storage/spec/methods.txt）取图标和「问自己的那一句」。
+    `词` `比` 都可省（第一次写没有上次）。为什么这么写、说明文字写在哪，见英语 CLAUDE.md。
     """
     b = r.blocks.get("一个问题")
     if not b:
         return None
-    steps, cur = {}, None
+    where = f"{r.slug} [一个问题]"
+    m = methods.get(b.head.strip(), where)
+    words, cmp = [], None
     for line in b.lines:
-        if not line.strip():
+        key, _, rest = line.strip().partition(" ")
+        if not key:
             continue
-        if line[:1].isspace():
-            if cur is None:
-                spec_lib.die(f"{r.slug}：[一个问题] 缩进行前面得先有一行「找 / 法 / 回」")
-            cur["desc"].append(line.strip())
-            continue
-        key, _, title = line.strip().partition(" ")
-        if key not in PROBLEM_STEPS:
-            spec_lib.die(f"{r.slug}：[一个问题] 每行以「找 / 法 / 回」起头，读到 {line.strip()!r}")
-        cur = steps[key] = {"title": title.strip(), "desc": []}
-
-    out = []
-    for key, icon in PROBLEM_STEPS.items():
-        if key not in steps:
-            continue
-        st = steps[key]
-        item = {"key": key, "icon": icon, "title": rich(st["title"]),
-                "desc": rich(joined(st["desc"])), "method": None}
-        if key == "法":
-            m = methods.get(st["title"], f"{r.slug} [一个问题]")
-            item["method"] = m._asdict()
-        out.append(item)
-    return {"head": rich(b.head), "steps": out}
+        if key == "词":
+            words = [w.replace("-", "·") for w, _ in spec_lib.Block(name="", lines=[rest]).items()]
+        elif key == "比":
+            parts = [x.strip() for x in rest.split("|")]
+            if len(parts) != 3:
+                spec_lib.die(f"{where}：「比」这行是「看什么 | 上次 | 这次」，读到 {rest!r}")
+            cmp = dict(zip(("label", "was", "now"), parts))
+        else:
+            spec_lib.die(f"{where}：每行以「词 / 比」起头，读到 {line.strip()!r}")
+    return {"icon": m.icon, "name": m.name, "ask": m.ask, "todo": b.tag,
+            "words": words, "cmp": cmp}
 
 
 def pages(r: Report) -> dict | None:
