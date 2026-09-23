@@ -206,7 +206,9 @@ mark{ background:var(--math-bg); color:#1F7A55; border-radius:5px; padding:0 3px
 .problem .todo1{ margin-top:12px; font-size:1.15rem; font-weight:700; }
 .problem .ws{ margin-top:14px; display:flex; flex-wrap:wrap; justify-content:center; gap:10px; }
 .problem .w{ font-family:var(--font-display); font-size:1.35rem; font-weight:700;
-  background:var(--english-bg); border-radius:12px; padding:6px 14px; }
+  background:var(--english-bg); border-radius:12px; padding:6px 14px;
+  display:flex; flex-direction:column; align-items:center; }
+.problem .w small{ font-family:var(--font-cn); font-size:.85rem; font-weight:400; color:var(--ink-soft); }
 .problem .pc{ margin-top:14px; font-size:.9rem; color:var(--ink-soft); }
 .problem .pc b{ color:var(--ink); font-size:1.05rem; }
 

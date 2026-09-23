@@ -179,7 +179,7 @@ naep: 2
 # 上次（9/20）的办法「开读前先把长词挑出来念熟」这次没见效（卡壳 5 → 5），先问她读前念了没有。
 # possessed 卡住后她自己先往下读、回头再补 —— 这也是换顺序，当面点给她听
 [一个问题] 田忌法 | 这几个词先念熟，再读句子
-词 cup-board, a-dorned, pos-sessed, sum-mon, com-mands, hes-i-tat-ed
+词 cup-board=橱柜, a-dorned=装饰着, pos-sessed=拥有, sum-mon=召唤, com-mands=命令, hes-i-tat-ed=犹豫
 比 卡住 | 5 | 5
 
 [斜线]

@@ -1077,7 +1077,7 @@ def problem(r: Report) -> dict | None:
     三张卡也一样，字太多。所以只留这四样：
 
         [一个问题] 田忌法 | 这几个词先念熟，再读句子     ← 方法名 | 做什么，一句话
-        词 cup-board, pos-sessed, sum-mon               ← 要练的词，连字符 = 音节
+        词 cup-board=橱柜, pos-sessed=拥有              ← 要练的词，连字符 = 音节，= 后是中文意思
         比 卡住 | 5 | 5                                 ← 看什么 | 上次 | 这次
 
     方法名从工具箱（storage/spec/methods.txt）取图标和「问自己的那一句」。
@@ -1094,7 +1094,9 @@ def problem(r: Report) -> dict | None:
         if not key:
             continue
         if key == "词":
-            words = [w.replace("-", "·") for w, _ in spec_lib.Block(name="", lines=[rest]).items()]
+            # 读错说明不熟，所以每个词带中文意思（按这一页的语境给，不是词典第一义）
+            words = [{"en": w.replace("-", "·"), "zh": zh}
+                     for w, zh in spec_lib.Block(name="", lines=[rest]).items()]
         elif key == "比":
             parts = [x.strip() for x in rest.split("|")]
             if len(parts) != 3:

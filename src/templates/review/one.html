@@ -99,7 +99,7 @@
       <p class="pm"><span class="pi">{{ r.problem.icon }}</span><b>{{ r.problem.name }}</b><span class="ask">{{ r.problem.ask }}</span></p>
       <p class="todo1">{{ r.problem.todo }}</p>
 {% if r.problem.words %}
-      <p class="ws">{% for w in r.problem.words %}<span class="w">{{ w }}</span>{% endfor %}</p>
+      <p class="ws">{% for w in r.problem.words %}<span class="w">{{ w.en }}{% if w.zh %}<small>{{ w.zh }}</small>{% endif %}</span>{% endfor %}</p>
 {% endif %}
 {% if r.problem.cmp %}
       <p class="pc">{{ r.problem.cmp.label }}：上次 <b>{{ r.problem.cmp.was }}</b> 次 → 这次 <b>{{ r.problem.cmp.now }}</b> 次</p>
