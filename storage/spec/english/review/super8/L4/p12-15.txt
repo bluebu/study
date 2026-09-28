@@ -82,13 +82,13 @@ naep: 2
 
 [总评] 一口气读了 472 个词，是上一次的 2.4 倍，中间有 37 个词连成一串一处没错。
     读对 423 个，准确率 89.6%（上一次 91.4%），分数 46（上一次 50）。
-    这四页 472 个词，是上一次的 2.4 倍，一口气读了 9 分 0 秒；
-    人名地名是德语（Sesemann、Rottenmeier、Sebastian、Dorfli），句子也比前面长。
-    真正要练的还是元音：49 处错里 **12 处是长音读成了短音**，
-    **hut 这个词出现四次、有三次读成了 heart** —— 第一册第 6–8 页就栽过同一个词。
-    另外 saw 读成 so、see 读成 say、liked 读成 lacked、bound 读成 bond，都是同一族。
-    好消息是 231 到 261 秒那 37 个词：从 “once-in-a-lifetime opportunity” 一路读到
-    “stormed out of the hut”，74 个词一分钟，一处没错。**她能读成串，只是还不能一直保持。**
+    * **篇幅是上一次的 2.4 倍** —— 472 个词一口气读了 9 分 0 秒；人名地名是德语
+        （Sesemann、Rottenmeier、Sebastian、Dorfli），句子也比前面长
+    * **真正要练的还是元音** —— 49 处错里 **12 处是长音读成了短音**，
+        **hut 出现四次、有三次读成了 heart**（第一册第 6–8 页就栽过同一个词）；
+        saw 读成 so、see 读成 say、liked 读成 lacked、bound 读成 bond，都是同一族
+    * **231 到 261 秒那 37 个词一处没错** —— 从 “once-in-a-lifetime opportunity” 一路读到
+        “stormed out of the hut”，74 个词一分钟。她能读成串，只是还不能一直保持
 
 [跳过] 540.4-657.3 = 念生词表
     课文读到 “No problems!” 就完了（540 秒），后面那 117 秒念的是第 3–5 页那 22 个生词。

@@ -83,13 +83,13 @@ naep: 2
 
 [总评] 长词又多了，读得慢了一点
     准确率 92.3%，比上一次（95.5%）低了 3.2 个百分点，落回「偏难」这一档；
-    每分钟读对的词也比上一次少了一点。
-    最吃力的是第 20 页开头三行：intentions、secretly、unseen、stumbled、possession 挤在 56 个词里，
-    她读了 66 秒，五处卡壳有四处在这三行。
-    读得最顺的是第 20 页中间「Dorothy was very upset about losing her shoe…」那一段，
-    和第 21 页 Scarecrow 那一句。
-    18 处错里有 7 处是把词看成了长得像的另一个词（pleased 读成 placed、explained 读成 exclaim、
-    believe 读成 live），这比读不出来的生词还多。
+        每分钟读对的词也比上一次少了一点。
+    * **最吃力的是第 20 页开头三行** —— intentions、secretly、unseen、stumbled、possession
+        挤在 56 个词里，她读了 66 秒，五处卡壳有四处在这三行
+    * **7 处是看成了长得像的词** —— pleased 读成 placed、explained 读成 exclaim、
+        believe 读成 live，比读不出来的生词还多
+    * **最顺的两段** —— 第 20 页中间「Dorothy was very upset about losing her shoe…」，
+        和第 21 页 Scarecrow 那一句
 
 [跳过] 266.9-346.8 = 划线外的一行 + 念生词表
     第 21 页划线读完之后，她接着读了框下面没划线的一行（The Tin Woodman reminded her…），

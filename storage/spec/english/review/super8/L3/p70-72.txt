@@ -71,15 +71,15 @@ prev: p69
 [评分] 准确度=19/30 流利度=13/30 断句语调=12/25 发音=8/15
 
 [总评] 三页一口气读下来，越往后越赶。
-    349 个词、6 分 18 秒，篇幅是上一次（p69，91 词）的近四倍，准确率反而从 89.0%
-    回到 92.3%。但按页拆开是一路往下的：94.5% → 92.8% → 88.7%，而第 72 页的语速
-    比前两页还快了两成 —— 不是读慢了读错，是读到第三页开始赶。
-    27 处计错分四类：**12 处是长实词没读出来**（vowed / cruel / other / trial /
-    criminal / lion / greediness / rudeness / Thinking / gotten / chains / prince），
-    6 处整词漏读（However / continued / all / away / back / only），
-    6 处是形近词和小词读串（form 读成 from、fell 读成 felt、lake 读成 like、
-    were 读成 are、a 读成 the、vow 读成 wow），3 处是词尾（escape 多了 -d、
-    advisers 和 faults 少了 -s）。
+    349 个词、6 分 18 秒，篇幅是上一次（p69，91 词）的近四倍，准确率反而从 89.0% 回到 92.3%。
+    * **越往后越赶** —— 按页拆开是一路往下的：94.5% → 92.8% → 88.7%，而第 72 页的语速
+        比前两页还快了两成，不是读慢了读错，是读到第三页开始赶
+    * **12 处是长实词没读出来** —— vowed / cruel / other / trial / criminal / lion / greediness /
+        rudeness / Thinking / gotten / chains / prince
+    * **6 处整词漏读** —— However / continued / all / away / back / only
+    * **6 处是形近词和小词读串** —— form 读成 from、fell 读成 felt、lake 读成 like、
+        were 读成 are、a 读成 the、vow 读成 wow
+    * **3 处是词尾** —— escape 多了 -d、advisers 和 faults 少了 -s
 
 [跳过] 335.1-378.6 = 念生词表
     课文读到 “took pleasure” 就完了（335 秒），后面那 43 秒念的是这一课的生词表。

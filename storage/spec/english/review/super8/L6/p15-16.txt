@@ -80,11 +80,10 @@ naep: 2
 
 [总评] 准确率差不多，速度掉回去了 —— 慢在两三个长词上
     准确率 94.2%，比上一次（95.6%）低了 1.4 个百分点；每分钟读对 60 个词，比上一次（86）慢了 26。
-    这两页八个字母以上的长词有 10 个（上一次 3 个），Kalidahs 这个怪兽的名字就出现了四次。
-    最吃力的是第 16 页一句话：「The falling branch carried the ugly, snarling brutes with it.」
-    她读了 33 秒 —— snarling 试了三遍、brutes 试了两遍。
-    好的地方是**两次读错之后自己退回去改对了**（crossed → across、places → pieces），
-    说明她读的时候在想意思。
+    * **长词多了两倍多** —— 八个字母以上的有 10 个（上一次 3 个），Kalidahs 这个怪兽的名字就出现了四次
+    * **一句话读了 33 秒** —— 第 16 页「The falling branch carried the ugly, snarling brutes with it.」，
+        snarling 试了三遍、brutes 试了两遍
+    * **两次读错之后自己退回去改对了** —— crossed → across、places → pieces，说明她读的时候在想意思
 
 [跳过] 197.7-268.8 = 念生词表
     读完课文之后，末尾这 71 秒念的是第 4–6 页那份生词表（wizard / scarecrow / sailor /

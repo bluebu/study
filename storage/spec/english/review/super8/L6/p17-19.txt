@@ -85,11 +85,11 @@ naep: 2
 
 [总评] 读得更准了，就是慢了一点
     准确率 95.5%，比上一次（94.2%）高了 1.3 个百分点，回到「教学」这一档；
-    但每分钟读对 55 个词，比上一次（60）又慢了一点。
-    第 18 页那段「In this country, everyone must pay for everything he gets…」30 个词 20 秒读完，
-    是这三页最顺的一段。难的是第 19 页：cupboard、adorned、diamonds、possessed、summon、
-    commands 这一串词挤在六行里，71 个词她读了 93 秒，五处卡壳有四处在这一页。
-    还有一件好事：第 18 页中间有一行没划线，她跳过去了，没有顺手多读。
+        但每分钟读对 55 个词，比上一次（60）又慢了一点。
+    * **最顺的一段** —— 第 18 页「In this country, everyone must pay for everything he gets…」30 个词 20 秒读完
+    * **难的是第 19 页** —— cupboard、adorned、diamonds、possessed、summon、commands 挤在六行里，
+        71 个词她读了 93 秒，五处卡壳有四处在这一页
+    * **没划线的那一行跳过去了** —— 第 18 页中间那行，她没有顺手多读
 
 [跳过] 278.3-340.9 = 念生词表
     读完课文之后，末尾这 63 秒念的是第 4–6 页那份生词表（wizard / scarecrow / livestock /
