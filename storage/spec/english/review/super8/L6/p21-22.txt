@@ -1,0 +1,225 @@
+# 超8 · Lesson 6
+#
+# ── 正文的写法（见 src/generator/english/CLAUDE.md）
+# 报告正文只写**孩子的朗读**。机器为什么误判、我们怎么核的，全部留在这些 # 注释里。
+#
+# ── 读的是第 21–22 页，和 9/24 打卡单一致
+# 打卡单写「第 21–22 页 划线部分」，录音开口就是 p21 划框第一句「Dorothy asked about his magic」，
+#   读到 p22 划框最后「…and Toto in their arms and」。原文 189 词（p21 107、p22 82），两页都对得上。
+# ⚠️ **p21 这是第二遍**：9/22 那次录音（p20-21）已经读过、评过 p21 这一框。
+#   同一框两天读了两遍，正好能直接比 —— 见 [分页] 和 [亮点]。
+#
+# ── [跳过] 两段（草稿给的边界不对，按转写重定）
+# · 86.3–139.9 秒：p21 划框最后一句「…across the desert.」在 86.3 秒前读完，她接着读了框**下面**
+#   没划线的四行（The Tin Woodman reminded her of the golden cap … because they were tied to it.），
+#   转写「the team reminded her of the wooden pap … they were tied to it」逐句对得上。
+#   草稿把这段当成「84.6–118.6 卡 34 秒」+「118.6–139.9 读了别的」，是对齐把 desert 拉到 139.6 秒去顶
+#   这段末尾造成的 —— 实际不是卡壳，是读了划线外的内容。139.9→146.0 的翻页机器自己扣
+# · 236.5–335.4 秒：p22 划框止于半句「…Toto in their arms and」，她顺着把这句读完，又往下读了
+#   第 23 页开头两句（flew them safely over the hill … wishing them luck.，到 263.8 秒），
+#   之后是第 4–6 页的生词表（sorcerer / rake / cornfield / spectacles / adorns / diamond / stumble /
+#   inhabitant / wizard / reveal…），念到录音末尾。两段连着一起跳。
+#   对齐把 arms 拉到 297.7 秒（→ gray），那条比对是假的，撤掉
+#
+# ── 逐条核完：58 处候选 → 计错 19 处
+# 计的 19 处：词尾 9（brains / said / suggested / call / had / put / Winged ×3）、词形 6（explained / once /
+#   recited / awaiting / told / companions）、小词 2（and→to / their→her）、元音 1（sad→said）、漏读 1（on）。
+#   其中 Winged 三处是「识别成」（计了错、标 ?）：三次转写都是「the wing, the monkeys」—— 读到 wing 停一下、
+#   再从 the 起头，-ed 没出来。把握 0.36 / 0.33 / 0.19，低；但三次一模一样，不像是转写偶然听错。
+#   p21 的 79.8 秒那处（the winged the monkeys）识别出了 winged，不计。
+#   9/22 的 Winged→wind 当时没计 —— 那是一处孤例，这次是三处同一个形状，所以计
+# · had→has、said→says 标词尾不标小词：要练的是「这段是过去时」（同 9/21、9/22）
+# · put on → puts：「she puts the golden cap」（0.79），put 多了 -s、on 没读，计两处
+# · recited → received（0.38）：先读「and the magic words that received」跳过了 recited，
+#   又退回来「The magic word」重读，recited 始终没出来，按词形计一处
+# 撤下 39 处：
+#   · **Oz 六处**（they / was / also / all / also + 64 秒那句里的一处）—— 按口径仍不计错。
+#     五份录音连着一次都没认出来，还是最该亲耳听的一个词
+#   · **Tin Woodman / Woodman / Toto 五处**（tune and / old man / team woman / total）：专名，不计
+#   · **8.4–10.7 秒 a common man**：转写只有一个 um（0.10），但那 2.3 秒够念三个词，判不死，不计。
+#     9/22 这里是 common 念了两遍
+#   · **31.3–32.8 秒 The Lion said he → The line**：Lion 被听成 line 是常事；said he 在不到一秒里，
+#     判不出是没读还是连着念糊了，不计
+#   · **38–50 秒**：just needed to → destinated. So（0.36 / 0.22，just-needed 连着念就是这个音）/
+#     wanted a heart → want of hearts（0.36 / 0.61 / 0.48）/ said → have（0.24，后面紧跟 having，
+#     多半是 having 起了一次头）。都在一串低把握里，不计
+#   · **64–70 秒 how she could return to Kansas → How he was with her hands. And**（0.37–0.49，
+#     And 0.12）。⚠️ 9/22 这一句也整句乱（return houses, all of that. I），**两次都乱在同一句**，
+#     但到底读成了什么只有耳朵能定，不计。值得听 64–70 秒
+#   · desert → deserts（0.58）：后面紧接着就开始读划线外那一行，-s 可能是连读出来的，不计
+#     （brains→brain 那处后面是 but，没有这个问题，计了）
+#   · calling → according（0.25）、agreed → or great（0.01 / 0.38，是 a-greed 拆着念）、
+#     words → word / whores（0.32 / 0.18）、Monkeys promptly → monkey is prompt. Promptly（重读）、
+#     The Monkeys promptly → Properly（0.19，拖了 4 秒，进 [卡壳]）：都不计
+#   全算错的话准确率会低得多（机器候选 58 处 = 69.3%），这个 89.9% 偏宽。
+#
+# ── p21 两遍对比（同一框 107 词）
+#   9/22：160.4–266.9 秒，106.5 秒，错 7 处（explained / replied / need / as / believe / a / call）
+#   9/24：1.1–86.3 秒，85.2 秒，错 7 处（explained / brains / sad / said / and / suggested / call）
+#   错数一样；replied / need / as / believe 四处这次都读对了，explained→exclaim 和 call→called 两次都错。
+#   快了 21 秒。
+#
+# ── 文本
+# p20-21：233 词
+# p21-22：189 词（p22 的 Winged Monkeys 出现三次，外加 recited / promptly ×2 / awaiting / companions / Quadlings）
+
+date: 2026-09-24
+cat: 超8
+order: 21
+page: 21–22
+prev: p20-21
+book: 绿野仙踪
+part: 划线两段
+words: 189
+errors: 19
+score: 49
+naep: 2
+
+[评分] 准确度=17/30 流利度=13/30 断句语调=12/25 发音=7/15
+
+[总评] 第 21 页读第二遍，快了不少
+    准确率 89.9%，比上一次（92.3%）又低了 2.4 个百分点，还在「偏难」这一档。
+    第 21 页是 9/22 读过的那一框，这次是第二遍：用时从 106 秒缩到 85 秒，
+    上次读错的 replied、need、as、believe 这次全读对了。
+    吃力的是第 22 页：82 个词错了 12 处，recited 读成 received、told 读成 hold、
+    companions 读成 companies，都是看成了长得像的词；
+    Winged Monkeys 出现三次，三次都读成了 wing，-ed 没出来。
+    19 处错里有 9 处是词尾，比上一次（4 处）多了一倍多 —— had 读成 has、said 读成 says、
+    put 读成 puts，故事是过去时，词尾一丢就变成了现在时。
+
+[句末] 10.7, 31.3, 46.5, 62.2, 70.0, 86.2, 161.3, 186.8, 204.4, 224.2
+
+[跳过] 86.3-139.9 = 划线外的四行, 236.5-335.4 = 往后读 + 念生词表
+    第 21 页划线读完之后，她接着读了框下面没划线的四行（The Tin Woodman reminded her of the golden cap…）；
+    第 22 页读完之后，又往下读了第 23 页开头两句，然后念第 4–6 页的生词表。
+    这两段不是这次要评的朗读，不算进上面的数。
+
+[卡壳] 14.0-21.1 = 卡 7.1 秒, 167.9-177.2 = 卡 9.3 秒, 191.6-199.1 = 卡 7.5 秒, 224.3-228.2 = 卡 3.9 秒
+    第 21 页只有一处：Oz replied that 这里，replied 读完「嗯、嗯」了两下才接上。
+    第 22 页三处：recited the magic words 这一句停了 9 秒，最后还是退回去重读了一遍；
+    The Winged Monkeys promptly appeared 这一句 promptly 念了两次才接 appeared；
+    The Monkeys promptly lifted 又卡在 promptly 上。
+    第 21→22 页翻页不算卡壳，时长也扣掉了。
+
+[分页] 这次读了 2 页
+第 21 页 = 1.1-86.3 秒 · 107 词 · 错 7 处 · 语速 75 词/分
+第 22 页 = 146.0-236.5 秒 · 82 词 · 错 12 处 · 语速 54 词/分
+    第 22 页更吃力：词少了 25 个，错反而多了 5 处，四处卡壳有三处在这一页。
+    第 21 页是第二遍读，9/22 那次读这一页用了 106 秒、语速 60 词/分。
+
+[对比] 和上一页比
+    同一课、同一部手机录的视频，录音条件一样，可以直接比。
+
+[比对] 逐字比对 · 19 处（计错 19）
+原文 Dorothy asked about his magic, and Oz *explained* that he was just a common man.
+实读 Dorothy asked about his magic and Oz *exclaimed* that he was just
+    〔词形〕 5.2 秒。explained（解释）看成了 exclaimed（喊）—— 9/22 读这一句也是这么错的
+原文 The Scarecrow asked for *brains*, but Oz replied
+实读 The Scarecrow asked for *brain* but Oz replied
+    〔词尾〕 13.0 秒。brains 丢了 -s
+原文 but Oz said having a heart could make him *sad* sometimes,
+实读 but Oz said having a heart could make him *said* sometimes
+    〔元音〕 55.8 秒。sad /æ/ 读得像 said /e/ —— 嘴要张得更大一点
+原文 Oz *said* that he had no idea
+实读 Oz *says* that he had no idea
+    〔词尾〕 70.4 秒。said 读成 says —— 故事是过去时
+原文 that he had no idea *and* suggested she call
+实读 that he had no idea *to* suggest she called
+    〔小词〕 74.1 秒。and 读成了 to
+原文 that he had no idea and *suggested* she call
+实读 that he had no idea to *suggest* she called
+    〔词尾〕 74.9 秒。suggested 丢了 -ed。9/22 这个词试了三次才出来
+原文 and suggested she *call* the Winged Monkeys
+实读 to suggest she *called* the Winged Monkeys
+    〔词尾〕 78.7 秒。call 多了 -ed。这里是 suggested she call，call 用原形 —— 9/22 也是这么错的
+原文 The Tin Woodman suggested calling the *Winged* Monkeys,
+识别成 The Tin Woodman suggested calling the *wing, the* Monkeys
+    〔词尾〕 149.8 秒。Winged（长翅膀的）读到 wing 就停了，-ed 没出来，又从 the 起头。
+        这一页 Winged 三次都是这样；听不太清，计分时按错了 1 处算
+原文 that she still *had* the right to command them
+实读 that she still *has* the right to command them
+    〔词尾〕 157.0 秒。had 读成 has —— 故事是过去时
+原文 the right to command them *once* more.
+实读 the right to command them *was* more
+    〔词形〕 159.8 秒。once 看成了 was
+原文 and she *put* on the golden cap
+实读 and she *puts* the golden cap
+    〔词尾〕 164.2 秒。put 多了 -s
+原文 and she put *on* the golden cap
+实读 and she puts *（漏读）* the golden cap
+    〔漏读〕 164.5 秒。on 没读
+原文 and *recited* the magic words.
+实读 and the magic words that *received*
+    〔词形〕 174.7 秒。recited（念）看成了 received（收到），还先跳过去读了后面的 the magic words。re-cit-ed
+原文 The *Winged* Monkeys promptly appeared before her,
+识别成 The *wing, the* monkey is prompt. Promptly appeared before her
+    〔词尾〕 189.5 秒。Winged 又读成了 wing。听不太清，计分时按错了 1 处算
+原文 appeared before her, *awaiting* her orders.
+实读 appeared before her *waiting* her orders
+    〔词形〕 202.4 秒。awaiting 丢了开头的 a-，成了 waiting。a-wait-ing
+原文 Dorothy simply *told* the Winged Monkeys
+实读 Dorothy simply *hold* the Winged Monkeys
+    〔词形〕 213.2 秒。told 看成了 hold
+原文 Dorothy simply told the *Winged* Monkeys to carry them
+识别成 Dorothy simply hold the *wing, the* monkeys to carry them
+    〔词尾〕 214.3 秒。第三次 Winged 读成 wing。听不太清，计分时按错了 1 处算
+原文 The Monkeys promptly lifted Dorothy, her *companions*, and Toto
+实读 lifted Dorothy her *companies* and Toto
+    〔词形〕 231.8 秒。companions（同伴）看成了 companies（公司）。com-pan-ions
+原文 and Toto in *their* arms
+实读 and Toto in *her* arms
+    〔小词〕 234.9 秒。their 读成了 her
+
+[磕巴] 读了两遍才接上的地方 · 5 处
+*calm* constantly learning and getting smarter
+    25.2 秒。constantly 起了一次头，第二次读出来了
+*he he* she call the Winged Monkeys
+    75.2 秒。she 起了两次头
+*the magic words that received* The magic words The Winged Monkeys
+    167.9 秒。recited the magic words 这一句先读岔了，退回来又读了一遍 the magic words
+*prompt* promptly appeared before her
+    191.6 秒。promptly 起了一次头
+*he decided to* told the Winged Monkeys
+    211.2 秒。simply 后面多读了 he decided to，才接上 told
+
+[亮点]
+**第 21 页读第二遍，上次错的四处全改过来了**
+    9/22 读这一页，replied、need、as、believe 读错了；今天四处都读对了，用时也从 106 秒缩到 85 秒。
+"The Scarecrow asked for brains, but Oz replied that he didn't need them as he was **constantly learning and getting smarter**."
+    Scarecrow 那一句两次都读得稳，constantly learning and getting smarter 一口气下来。
+"When they asked what she wanted, Dorothy simply told the Winged Monkeys **to carry them over the hill to the country of the Quadlings**."
+    carry them over the hill 那一句是第 22 页最顺的一段，Quadlings 这个名字也读出来了。
+
+# 给孩子看的，一眼看完。说明给大人：
+# 卡壳 5 → 4，只少了一处，还不算改善，接着写同一个（口径：别为了新鲜换）。这次卡的是第 22 页的
+#   recited / promptly，和上两次一样是长词。先问她读前念了没有。
+# 第 21 页读第二遍错的四处全改对了 —— 这就是「先念熟再读」的效果，当面点给她听：
+#   念熟了的那一页就是不卡。
+# 词尾这次 9 处，是最多的一类（had→has、said→says、put→puts、Winged→wing），但一次只盯一个，
+#   不单独成一个问题；Winged 就放进下面这组词里一起念
+[一个问题] 田忌法 | 这几个词先念熟，再读句子
+词 re-cit-ed=念, prompt-ly=立刻, a-wait-ing=等着, com-pan-ions=同伴, wing-ed=长翅膀的, sug-gest-ed=提议
+比 卡住 | 5 | 4
+
+[斜线]
+The Tin Woodman suggested
+calling the Winged Monkeys,
+reminding Dorothy
+that she still had the right
+to command them once more.
+
+[尺子]
+    89.9% 还在「偏难」这一档 —— 比上一次（92.3%）又往左挪了一截。
+        189 个词错 19 处，其中 12 处在第 22 页。Winged 那三处听不太清、按错算了，
+        如果其实读对了，是 91.5%。
+    58 个正确词/分钟，比上一次（52）快了 6。
+        压在**三年级秋季 25 百分位**（59）线下面一点。第 21 页读第二遍快了，第 22 页还是慢。
+        母语常模只当参照系，不是及格线。
+    平均 2.6 个词一组，比上一次（1.8）成串了一些；停顿占时长 23%，比上一次（34%）少。
+        仍按第 2 级放着。
+
+[怎么来的]
+**准确率 89.9%**（读对 170 / 划线共 189 词）。替换、漏读、读错音计错；插入的词和退回去重读只算不流利、不计错。上面的比对列了 19 条、计错 19 处 —— 其中 3 条标 ? 的是 Winged 读音拿不准、按错算的。另外 Oz、Tin Woodman、Toto 这几个名字，和 64–70 秒「how she could return to Kansas」那一句听不清是读错还是没听准，**没有计错**；想复核就听这几处，这个 89.9% 偏宽。
+**每分钟正确词数 58**（WCPM）= 读对的 170 个词 ÷ 176.6 秒 × 60。不算进来的有：第 21 页读完后读划线外那四行的 53.6 秒、第 22 页读完后往下读和念生词表的 98.9 秒（边界是人判的）、第 21→22 页翻页的 6.1 秒、按下录音到开口那一小会儿。
+**断句**取 73 次停顿里断在句子中间的那些，平均 2.6 个词一组。句末位置是对着录音一句句标的。
+录音是手机拍的点读视频，335.4 秒；停顿按「说话声级 − 10 dB、持续 ≥0.25 秒」数；比对基准是第 21、22 页划线框住的两段（189 词，对着核对图逐词看过）。**发音一项是从转写结果推断的**，不如亲耳听准。
