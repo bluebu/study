@@ -52,7 +52,7 @@ import re
 import sys
 from pathlib import Path
 
-from lib import methods, page, paths, sheet, spec as spec_lib, tmpl
+from lib import lexile, methods, page, paths, sheet, spec as spec_lib, tmpl
 
 HERE = Path(__file__).parent
 sys.path.insert(0, str(HERE))
@@ -118,6 +118,12 @@ class Report:
 
         reading = DATA / f"{self.slug}.read.json"
         self.reading = json.loads(reading.read_text(encoding="utf-8")) if reading.exists() else None
+
+        # ── 课文蓝思（估算，口径见 lib/lexile.py）
+        # 取 read.json 里的 reference —— 那是这次**实际拿来比对**的原文。别从 .ref.txt 重拼：
+        # 9/28 那次 p23 前两句 9/24 已经读过，基准只取了后半页，整页 p23.ref.txt 会多算 38 个词
+        src = (self.reading or {}).get("reference") or ref_text(self.slug)
+        self.lexile = lexile.estimate(src) if src else None
 
         # ── 人给的两个数
         self.words = sp.int_("words", 0)
@@ -523,8 +529,19 @@ def hero(r: Report, *, lesson: bool = False, book: bool = False) -> dict:
         pieces.append(f'《{r.spec.get("book")}》')
     # 「划线三段 110 词」是一节，不要在中间再断开
     pieces.append(" ".join(x for x in (r.spec.get("part"), f"{r.words} 词") if x))
+    if shows_lexile(r):
+        pieces.append(f"课文约 {r.lexile}L")
 
     return {"title": title, "sub": dot_join(pieces)}
+
+
+# 蓝思从这一天起上报告（家长 9/29 提的，「从 0928 开始」）。csv 里历史每一行都算了 ——
+# 那是课文的属性、随时能重算；只是更早的报告页面不回头改
+LEXILE_FROM = "2026-09-28"
+
+
+def shows_lexile(r: "Report") -> bool:
+    return bool(r.lexile) and r.date >= LEXILE_FROM
 
 
 def pretty_date(iso: str) -> str:
@@ -645,12 +662,19 @@ def compare(r: Report, others: dict[str, Report]) -> dict | None:
         ("停顿占时长", [f"{round(x.pause_ratio * 100)}%" for x in chain],
          round(chain[-1].pause_ratio * 100) - round(chain[-2].pause_ratio * 100), 0),
     ]
+    # 课文难度：一行实测的数，替「这次是不是书难了」回答 —— 不上色，难一点不算坏事
+    if shows_lexile(r) and all(x.lexile for x in chain):
+        rows.append(("课文蓝思", [f"{x.lexile}L" for x in chain],
+                     chain[-1].lexile - chain[-2].lexile, 0))
 
     out = []
     for name, values, delta, digits in rows:
         # 停顿占比是「越小越好」，涨了要标红
         good = delta < 0 if name == "停顿占时长" else delta > 0
         cls = "flat" if abs(delta) < 10 ** -digits / 2 else ("up" if good else "down")
+        if name.startswith("课文蓝思"):
+            cls = "flat"
+            words.setdefault(name, "持平" if not delta else f"{'难了' if delta > 0 else '易了'} {abs(delta)}L")
         tag = words.get(name) or (f"{'+' if delta > 0 else '−'}{abs(round(delta, digits) if digits else abs(int(delta)))}")
         # 前几次划掉、最后一次不划：「95.2% → 96.4% → 94.7%」。箭头由模板插
         out.append({"k": name, "was": values[:-1], "now": values[-1],
@@ -678,6 +702,33 @@ def timeline(r: Report) -> dict:
             a, _, bnd = span.partition("-")
             stalls.append((float(a), float(bnd), label))
 
+    # ── 一处卡壳一张小卡（9/28 起）：缩进行写成「短语 | 发生了什么 | 问一句」
+    #
+    # 原先是一段话把五处串起来（「…停在 Scarecrow 前面；where he was well-liked 读到 was…」），
+    # 家长说不直观：图上的括号和话里的哪一句对不上，也没有「然后呢」。现在图上标 ①②③，
+    # 底下一处一行，第三栏是**一句引导她自己想的问题**（口径同「下次读之前」：
+    # 不替她下结论，给一个能自己找到答案的抓手）。
+    # 带两个 | 的缩进行按抬头行的顺序对上每一处；条数必须一样多，否则当场报错。
+    # 不带 | 的缩进行照旧是一段话（翻页之类的交代），旧报告全是这种，版式不变。
+    cards, rest = [], []
+    if "卡壳" in r.blocks:
+        for n in r.blocks["卡壳"].notes():
+            (cards if n.count("|") >= 2 else rest).append(n)
+    if cards and len(cards) != len(stalls):
+        spec_lib.die(f"{r.slug}：[卡壳] 抬头 {len(stalls)} 处，「短语 | 发生了什么 | 问一句」却写了 {len(cards)} 行")
+    items = []
+    if cards:
+        order = sorted(range(len(stalls)), key=lambda i: stalls[i][0])
+        for no, i in enumerate(order):
+            a, bnd, _ = stalls[i]
+            phrase, what, ask = (x.strip() for x in cards[i].split("|", 2))
+            sec = f"{bnd - a:.1f}"
+            mark = CIRCLED[no]
+            items.append({"no": mark, "sec": sec,
+                          "phrase": re.sub(r"\*(.+?)\*", r'<b class="hit">\1</b>', rich(phrase)),
+                          "what": rich(what), "ask": rich(ask)})
+            stalls[i] = (a, bnd, mark)   # 图上只标编号，秒数在底下那张卡里 —— 手机上 1000 宽的图缩到 390，「① 2.5 秒」只剩 6px 高
+
     svg, counts = figures.timeline_svg(r.acoustics, bounds, stalls, r.skips)
     # 图下面那段话 = [卡壳] 的说明 + [跳过] 的说明。灰带只有宽的那几条印得下标签
     # （见 figures.timeline_svg），窄的那几条全靠这段话交代 —— 以前 [跳过] 的
@@ -686,8 +737,7 @@ def timeline(r: Report) -> dict:
     # **两段各自成段**：讲的是两件事（哪儿卡住了 / 哪几段不算数），
     # 以前用 "\n" 拼成一个字符串，HTML 里换行只渲染成一个空格，
     # 于是「…哼了两声才起来。 第 8 页最后一句话断在…」连着读，像同一件事
-    notes = [x for x in (joined(r.blocks[k].notes()) if k in r.blocks else ""
-                         for k in ("卡壳", "跳过")) if x]
+    notes = [x for x in (joined(rest), joined(r.blocks["跳过"].notes()) if "跳过" in r.blocks else "") if x]
     # 机器自己扣的那几段（开头没开口 / 翻页 / 读完了）也得交代 —— 它们在图上是灰带，
     # 窄的那几条印不下标签，不说一句的话「录音 209 秒、四个数字写 106 秒」算不平账
     if r.auto_only:
@@ -696,7 +746,11 @@ def timeline(r: Report) -> dict:
     # 图画的是**整段录音**（raw_duration），[跳过] 那几段涂灰；
     # 上面「四个数字」里的秒数和 WCPM 用的是扣完的 r.duration。两个数不一样是对的。
     return {"seconds": round(r.raw_duration), "svg": svg, "counts": counts,
-            "notes": [rich(x) for x in notes]}
+            "stalls": items, "notes": [rich(x) for x in notes]}
+
+
+CIRCLED = "①②③④⑤⑥⑦⑧⑨⑩"
+
 
 
 def ref_text(slug: str) -> str:
@@ -1155,9 +1209,13 @@ def scales(r: Report) -> str:
 
 def how(r: Report) -> list[str]:
     b = r.blocks.get("怎么来的")
-    if not b:
-        return []
-    return [rich(para) for para in grouped(b.lines)]
+    out = [rich(para) for para in grouped(b.lines)] if b else []
+    if shows_lexile(r) and out:
+        out.append(rich(
+            f"**课文蓝思约 {r.lexile}L 是估算**，不是官方值：按蓝思公开的公式，用句子长短和生词多少来算，"
+            "拿四本有官方值的英文原著校准过，整本书上误差约 50L。"
+            "一次只读一两百个词，误差还会更大 —— 用来看这次比上次难还是易，别看个位数。"))
+    return out
 
 
 # ══════════════════════════════════════════════════════════════
@@ -1276,7 +1334,7 @@ def render_day(date: str, rows: list[Report], others: dict[str, Report],
 RESULT_FIELDS = ["slug", "date", "order", "cat", "book", "page",
                  "words", "errors", "correct", "accuracy", "wcpm",
                  "duration", "pause_count", "pause_ratio", "per_group",
-                 "score", "naep"]
+                 "score", "naep", "lexile"]
 
 
 def write_result(reports: list[Report]) -> None:
@@ -1300,7 +1358,7 @@ def write_result(reports: list[Report]) -> None:
                         r.spec.get("book", ""), r.spec.get("page", ""),
                         r.words, r.errors, r.correct, r.accuracy, r.wcpm,
                         r.duration, r.pause_count, r.pause_ratio, r.per_group,
-                        r.score, r.naep])
+                        r.score, r.naep, r.lexile or ""])
     print(f"    → result/english/review.csv  （{len(reports)} 行）")
 
     # 错误明细：一行一处错。趋势页的分类统计和 Top3 从这儿读回来。

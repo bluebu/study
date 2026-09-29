@@ -29,6 +29,6 @@
 {% endfor %}
 {% for s in stalls %}
   <path d="M{{ s.x1 }} {{ y_bracket_lo }} L{{ s.x1 }} {{ y_bracket_hi }} L{{ s.x2 }} {{ y_bracket_hi }} L{{ s.x2 }} {{ y_bracket_lo }}" fill="none" stroke="var(--tl-long)" stroke-width="2"/>
-  <text x="{{ s.mid }}" y="{{ s.y }}" font-size="16" font-weight="700" fill="var(--tl-long)" text-anchor="middle">{{ s.label }}</text>
+  <text x="{{ s.mid }}" y="{{ s.y }}" font-size="{{ s.fs }}" font-weight="700" fill="var(--tl-long)" text-anchor="middle">{{ s.label }}</text>
 {% endfor %}
 </svg>

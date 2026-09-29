@@ -179,8 +179,9 @@ def timeline_svg(data, bounds, stalls, skips=()):
         # 文字居中在括号上，但两头夹住不许伸出 viewBox —— 伸出去会被 SVG 裁掉半行字
         # （p70-72 末尾那处卡壳一直到 376 秒，标签中心几乎贴着右边）
         tx = mid if half * 2 + 4 > W else min(max(mid, half + 2), W - half - 2)
+        # 只有一个圈号（新版卡壳卡片）的放大到 26 —— 秒数挪进了图下的卡片，图上只剩编号
         marks.append({"x1": x1, "x2": x2, "mid": round(tx, 2), "label": label,
-                      "y": y_label - r * 20})
+                      "y": y_label - r * 20, "fs": 26 if len(label) == 1 else 16})
     extra = max(len(rows) - 1, 0) * 20
 
     svg = tmpl.render(

@@ -151,6 +151,18 @@ h1{ font-family:var(--font-display); font-size:clamp(1.7rem,6.4vw,2.4rem);
 .legend i{ display:inline-block; width:14px; height:14px; border-radius:4px;
            vertical-align:-2px; margin-right:5px; border:1px solid var(--line); }
 .tl-note{ font-size:.9rem; margin:14px 0 0; }
+.tl-note.small{ font-size:.8rem; color:var(--ink-soft); }
+/* 一处卡壳一行：左边编号（和图上的括号同色），右边三行 —— 卡在哪 / 发生了什么 / 问一句 */
+.stalls{ list-style:none; margin:16px 0 0; padding:0; display:flex; flex-direction:column; gap:10px; }
+.stalls li{ display:grid; grid-template-columns:30px 1fr; gap:0 10px; align-items:start;
+            background:rgba(238,125,91,.06); border-radius:12px; padding:10px 12px; }
+.stalls .no{ font-size:1.3rem; line-height:1.4; color:var(--tl-long); font-weight:700; text-align:center; }
+.stalls p{ margin:0; min-width:0; }
+.stalls .ph{ font-family:var(--font-display); font-size:1.05rem; }
+.stalls .ph .hit{ color:var(--tl-long); border-bottom:2px solid var(--tl-long); }
+.stalls .what{ font-size:.86rem; color:var(--ink-soft); margin-top:2px; }
+.stalls .what em{ font-style:normal; font-weight:700; color:var(--tl-long); margin-right:6px; }
+.stalls .ask{ font-size:.92rem; margin-top:6px; color:var(--ink); }
 
 /* 逐字比对 */
 .diff{ display:flex; flex-direction:column; gap:12px; }

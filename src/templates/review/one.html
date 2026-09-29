@@ -153,8 +153,23 @@
         <span><i style="background:var(--tl-long)"></i>句中长停 ≥0.8 秒 · {{ r.timeline.counts.long }} 次</span>
         <span><i style="background:var(--tl-mid)"></i>句中短停 · {{ r.timeline.counts.mid }} 次</span>
       </div>
+{% if r.timeline.stalls %}
+{#- 一处卡壳一行：编号和图上的括号对得上；第三行是引导她自己想的那一句。 -#}
+      <ol class="stalls">
+{% for s in r.timeline.stalls %}
+        <li>
+          <span class="no">{{ s.no }}</span>
+          <div>
+            <p class="ph">{{ s.phrase|safe }}</p>
+            <p class="what"><em>{{ s.sec }} 秒</em>{{ s.what|safe }}</p>
+            <p class="ask">💭 {{ s.ask|safe }}</p>
+          </div>
+        </li>
+{% endfor %}
+      </ol>
+{% endif %}
 {% for n in r.timeline.notes %}
-      <p class="tl-note">{{ n|safe }}</p>
+      <p class="tl-note{% if r.timeline.stalls %} small{% endif %}">{{ n|safe }}</p>
 {% endfor %}
     </section>
 {% endif %}
