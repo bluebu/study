@@ -1,0 +1,2685 @@
+{
+  "acoustics" : {
+    "duration" : 142.57,
+    "pause_count" : 57,
+    "pause_ratio" : 0.253,
+    "pause_total" : 36.13,
+    "pauses" : [
+      {
+        "dur" : 0.74,
+        "end" : 0.74,
+        "start" : 0
+      },
+      {
+        "dur" : 0.96,
+        "end" : 7.32,
+        "start" : 6.36
+      },
+      {
+        "dur" : 0.89,
+        "end" : 13.21,
+        "start" : 12.32
+      },
+      {
+        "dur" : 0.44,
+        "end" : 13.81,
+        "start" : 13.37
+      },
+      {
+        "dur" : 0.26,
+        "end" : 20.08,
+        "start" : 19.82
+      },
+      {
+        "dur" : 0.35,
+        "end" : 21.26,
+        "start" : 20.91
+      },
+      {
+        "dur" : 0.33,
+        "end" : 21.61,
+        "start" : 21.28
+      },
+      {
+        "dur" : 0.78,
+        "end" : 25.93,
+        "start" : 25.15
+      },
+      {
+        "dur" : 0.73,
+        "end" : 30.36,
+        "start" : 29.63
+      },
+      {
+        "dur" : 0.66,
+        "end" : 34.06,
+        "start" : 33.4
+      },
+      {
+        "dur" : 0.35,
+        "end" : 36.18,
+        "start" : 35.83
+      },
+      {
+        "dur" : 0.38,
+        "end" : 37.18,
+        "start" : 36.8
+      },
+      {
+        "dur" : 0.36,
+        "end" : 40.9,
+        "start" : 40.54
+      },
+      {
+        "dur" : 0.62,
+        "end" : 42.84,
+        "start" : 42.22
+      },
+      {
+        "dur" : 0.78,
+        "end" : 45.12,
+        "start" : 44.34
+      },
+      {
+        "dur" : 0.67,
+        "end" : 46.32,
+        "start" : 45.65
+      },
+      {
+        "dur" : 0.38,
+        "end" : 49.8,
+        "start" : 49.42
+      },
+      {
+        "dur" : 0.85,
+        "end" : 52.6,
+        "start" : 51.75
+      },
+      {
+        "dur" : 0.5,
+        "end" : 55.3,
+        "start" : 54.8
+      },
+      {
+        "dur" : 1.41,
+        "end" : 57.28,
+        "start" : 55.87
+      },
+      {
+        "dur" : 0.42,
+        "end" : 61.5,
+        "start" : 61.08
+      },
+      {
+        "dur" : 0.27,
+        "end" : 62.8,
+        "start" : 62.53
+      },
+      {
+        "dur" : 0.59,
+        "end" : 63.91,
+        "start" : 63.32
+      },
+      {
+        "dur" : 0.48,
+        "end" : 66.33,
+        "start" : 65.85
+      },
+      {
+        "dur" : 0.4,
+        "end" : 70.15,
+        "start" : 69.75
+      },
+      {
+        "dur" : 0.26,
+        "end" : 70.43,
+        "start" : 70.17
+      },
+      {
+        "dur" : 0.87,
+        "end" : 72.33,
+        "start" : 71.46
+      },
+      {
+        "dur" : 0.59,
+        "end" : 77.01,
+        "start" : 76.42
+      },
+      {
+        "dur" : 0.86,
+        "end" : 79.57,
+        "start" : 78.71
+      },
+      {
+        "dur" : 0.36,
+        "end" : 82.89,
+        "start" : 82.53
+      },
+      {
+        "dur" : 0.33,
+        "end" : 84.46,
+        "start" : 84.13
+      },
+      {
+        "dur" : 0.47,
+        "end" : 86.36,
+        "start" : 85.89
+      },
+      {
+        "dur" : 0.33,
+        "end" : 87.04,
+        "start" : 86.71
+      },
+      {
+        "dur" : 0.28,
+        "end" : 87.61,
+        "start" : 87.33
+      },
+      {
+        "dur" : 0.42,
+        "end" : 88.43,
+        "start" : 88.01
+      },
+      {
+        "dur" : 2.64,
+        "end" : 91.61,
+        "start" : 88.97
+      },
+      {
+        "dur" : 0.43,
+        "end" : 94.29,
+        "start" : 93.86
+      },
+      {
+        "dur" : 0.51,
+        "end" : 95.62,
+        "start" : 95.11
+      },
+      {
+        "dur" : 0.9,
+        "end" : 100.61,
+        "start" : 99.71
+      },
+      {
+        "dur" : 0.41,
+        "end" : 101.51,
+        "start" : 101.1
+      },
+      {
+        "dur" : 0.89,
+        "end" : 104.17,
+        "start" : 103.28
+      },
+      {
+        "dur" : 0.37,
+        "end" : 107.88,
+        "start" : 107.51
+      },
+      {
+        "dur" : 1.79,
+        "end" : 111.69,
+        "start" : 109.9
+      },
+      {
+        "dur" : 0.81,
+        "end" : 116.71,
+        "start" : 115.9
+      },
+      {
+        "dur" : 0.35,
+        "end" : 122.08,
+        "start" : 121.73
+      },
+      {
+        "dur" : 0.78,
+        "end" : 124.6,
+        "start" : 123.82
+      },
+      {
+        "dur" : 0.71,
+        "end" : 127.24,
+        "start" : 126.53
+      },
+      {
+        "dur" : 0.26,
+        "end" : 128.67,
+        "start" : 128.41
+      },
+      {
+        "dur" : 0.29,
+        "end" : 128.99,
+        "start" : 128.7
+      },
+      {
+        "dur" : 0.59,
+        "end" : 129.62,
+        "start" : 129.03
+      },
+      {
+        "dur" : 0.39,
+        "end" : 130.46,
+        "start" : 130.07
+      },
+      {
+        "dur" : 0.27,
+        "end" : 132.73,
+        "start" : 132.46
+      },
+      {
+        "dur" : 0.48,
+        "end" : 133.23,
+        "start" : 132.75
+      },
+      {
+        "dur" : 1.7,
+        "end" : 136.95,
+        "start" : 135.25
+      },
+      {
+        "dur" : 1.11,
+        "end" : 139.7,
+        "start" : 138.59
+      },
+      {
+        "dur" : 0.66,
+        "end" : 141.15,
+        "start" : 140.49
+      },
+      {
+        "dur" : 0.42,
+        "end" : 141.68,
+        "start" : 141.26
+      }
+    ],
+    "source" : "3fcd205c0e9dd91c3d418a3eaec861f9.mp4",
+    "speech_time" : 106.44,
+    "threshold_db" : -29.7
+  },
+  "alignment" : {
+    "accuracy" : 88.9,
+    "correctWordCount" : 160,
+    "diffs" : [
+      {
+        "category" : "content",
+        "confidence" : 0.27,
+        "context" : "glinda assured dorothy that she",
+        "end" : 2.46,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "sure",
+        "ref" : "assured",
+        "refIndex" : 1,
+        "start" : 1.86,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.27 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.779,
+        "context" : "golden cap dorothy happily agreed since she",
+        "end" : 14.64,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "had",
+        "refIndex" : 23,
+        "start" : 14.4,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.282,
+        "context" : "golden cap dorothy happily agreed since she",
+        "end" : 14.94,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "player",
+        "ref" : "happily",
+        "refIndex" : 23,
+        "start" : 14.64,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.28 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.838,
+        "context" : "cap dorothy happily agreed since she had",
+        "end" : 15.6,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "grades",
+        "ref" : "agreed",
+        "refIndex" : 24,
+        "start" : 14.94,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.823,
+        "context" : "cap anymore glinda then turned to the",
+        "end" : 23.52,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "doesn't",
+        "ref" : "then",
+        "refIndex" : 35,
+        "start" : 22.74,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "morph",
+        "confidence" : 0.679,
+        "context" : "anymore glinda then turned to the scarecrow",
+        "end" : 23.94,
+        "kind" : "substitute",
+        "label" : "词尾",
+        "read" : "turn",
+        "ref" : "turned",
+        "refIndex" : 36,
+        "start" : 23.52,
+        "suggest" : "count",
+        "why" : "原文是「turned」，读出来少了词尾 -ed"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.551,
+        "context" : "about his plans once dorothy had left",
+        "end" : 29.52,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "to",
+        "refIndex" : 45,
+        "start" : 28.92,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.294,
+        "context" : "about his plans once dorothy had left",
+        "end" : 31.08,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "whilst",
+        "ref" : "once",
+        "refIndex" : 45,
+        "start" : 29.52,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.29 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.98,
+        "context" : "scarecrow revealed his intention to return to",
+        "end" : 37.86,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "attention",
+        "ref" : "intention",
+        "refIndex" : 53,
+        "start" : 37.32,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.486,
+        "context" : "city where he was well-liked by the",
+        "end" : 44.46,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "was",
+        "refIndex" : 62,
+        "start" : 43.56,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.072,
+        "context" : "city where he was well-liked by the",
+        "end" : 46.2,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "um",
+        "refIndex" : 62,
+        "start" : 44.46,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.07 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.197,
+        "context" : "city where he was well-liked by the",
+        "end" : 46.74,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "uh",
+        "refIndex" : 62,
+        "start" : 46.2,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复。识别器对这处只有 0.20 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.965,
+        "context" : "where he was well-liked by the people",
+        "end" : 47.46,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "well",
+        "refIndex" : 63,
+        "start" : 46.92,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.38,
+        "context" : "where he was well-liked by the people",
+        "end" : 48.12,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "lacked",
+        "ref" : "well-liked",
+        "refIndex" : 63,
+        "start" : 47.46,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.255,
+        "context" : "asked the tin woodman what he planned",
+        "end" : 61.08,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "woman",
+        "ref" : "woodman",
+        "refIndex" : 81,
+        "start" : 60.36,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.26 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.027,
+        "context" : "dorothy left the tin woodman said he",
+        "end" : 68.7,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "ten",
+        "ref" : "tin",
+        "refIndex" : 91,
+        "start" : 68.22,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方。识别器对这处只有 0.03 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.191,
+        "context" : "left the tin woodman said he wanted",
+        "end" : 69.66,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "women",
+        "ref" : "woodman",
+        "refIndex" : 92,
+        "start" : 68.7,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑。识别器对这处只有 0.19 的把握（整段中位数 0.82）—— 多半是她读得含混，值得回去听一遍。**这个数不改判决**"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.617,
+        "context" : "back to the winkies' country where they",
+        "end" : 75.48,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "winkies",
+        "ref" : "winkies'",
+        "refIndex" : 101,
+        "start" : 74.58,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.726,
+        "context" : "be their ruler glinda promised to ask",
+        "end" : 85.08,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "galinda",
+        "ref" : "glinda",
+        "refIndex" : 114,
+        "start" : 83.94,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.543,
+        "context" : "to ask the winged monkeys to take",
+        "end" : 92.28,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "wing",
+        "refIndex" : 119,
+        "start" : 88.86,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.946,
+        "context" : "to ask the winged monkeys to take",
+        "end" : 92.58,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "the",
+        "ref" : "winged",
+        "refIndex" : 119,
+        "start" : 92.28,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.646,
+        "context" : "the winkies then glinda asked the lion",
+        "end" : 102,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "galinda",
+        "ref" : "glinda",
+        "refIndex" : 132,
+        "start" : 101.1,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.57,
+        "context" : "went home the lion said he wanted",
+        "end" : 112.32,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "line",
+        "refIndex" : 145,
+        "start" : 111.96,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "properNoun",
+        "confidence" : 0.77,
+        "context" : "went home the lion said he wanted",
+        "end" : 112.74,
+        "kind" : "substitute",
+        "label" : "专名",
+        "read" : "is",
+        "ref" : "lion",
+        "refIndex" : 145,
+        "start" : 112.32,
+        "suggest" : "unsure",
+        "why" : "专有名词转写靠不住，机器只会往认识的词上靠 —— 拿不准就存疑"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.765,
+        "context" : "home the lion said he wanted to",
+        "end" : 113.04,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "that",
+        "ref" : "said",
+        "refIndex" : 146,
+        "start" : 112.74,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "extra",
+        "confidence" : 0.808,
+        "context" : "where the animals there treated him like",
+        "end" : 120.54,
+        "kind" : "insert",
+        "label" : "多读",
+        "read" : "they",
+        "refIndex" : 159,
+        "start" : 119.76,
+        "suggest" : "skip",
+        "why" : "多读出来的词不计错，只算不流利 —— 回去听是回读还是重复"
+      },
+      {
+        "category" : "function",
+        "confidence" : 0.443,
+        "context" : "where the animals there treated him like",
+        "end" : 120.78,
+        "kind" : "substitute",
+        "label" : "小词",
+        "read" : "were",
+        "ref" : "there",
+        "refIndex" : 159,
+        "start" : 120.54,
+        "suggest" : "count",
+        "why" : "两个都是小词，读串了。这类错扎堆出现就是眼睛跑在手指前面"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.808,
+        "context" : "the animals there treated him like a",
+        "end" : 121.32,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "traded",
+        "ref" : "treated",
+        "refIndex" : 160,
+        "start" : 120.78,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      },
+      {
+        "category" : "content",
+        "confidence" : 0.737,
+        "context" : "like a king glinda promised to ask",
+        "end" : 125.16,
+        "kind" : "substitute",
+        "label" : "实词",
+        "read" : "belinda",
+        "ref" : "glinda",
+        "refIndex" : 165,
+        "start" : 123.6,
+        "suggest" : "count",
+        "why" : "实词换了词，是这一页真正要练的地方"
+      }
+    ],
+    "readWordCount" : 189,
+    "refTimes" : [
+      1.86,
+      2.46,
+      3.3,
+      3.48,
+      4.02,
+      4.44,
+      4.8,
+      5.16,
+      5.52,
+      5.76,
+      6.48,
+      7.74,
+      7.98,
+      8.82,
+      9.78,
+      10.14,
+      10.56,
+      10.8,
+      11.22,
+      11.7,
+      12,
+      12.24,
+      14.4,
+      14.94,
+      15.6,
+      15.96,
+      16.56,
+      17.16,
+      17.58,
+      17.82,
+      18.24,
+      18.48,
+      18.78,
+      19.44,
+      22.74,
+      23.52,
+      23.94,
+      24.36,
+      24.54,
+      27,
+      27.18,
+      27.48,
+      28.14,
+      28.56,
+      28.92,
+      31.08,
+      31.98,
+      32.46,
+      33.12,
+      34.62,
+      35.22,
+      36.66,
+      37.32,
+      37.86,
+      39.06,
+      39.48,
+      40.08,
+      40.26,
+      41.52,
+      42.36,
+      43.08,
+      43.56,
+      46.92,
+      48.12,
+      48.36,
+      48.6,
+      49.32,
+      50.1,
+      50.4,
+      50.88,
+      51.84,
+      52.86,
+      53.22,
+      53.82,
+      54.12,
+      54.48,
+      55.68,
+      57.96,
+      58.68,
+      59.58,
+      60.36,
+      61.08,
+      61.92,
+      62.4,
+      63.12,
+      64.14,
+      64.44,
+      65.34,
+      67.14,
+      67.56,
+      68.22,
+      68.7,
+      69.66,
+      70.92,
+      71.58,
+      73.14,
+      73.32,
+      73.5,
+      73.74,
+      74.16,
+      74.58,
+      75.48,
+      76.26,
+      77.28,
+      77.7,
+      78,
+      78.6,
+      79.86,
+      80.76,
+      81.6,
+      81.9,
+      82.14,
+      83.04,
+      83.94,
+      85.08,
+      85.86,
+      86.46,
+      87.24,
+      88.86,
+      92.58,
+      93.18,
+      93.6,
+      94.56,
+      96.12,
+      96.84,
+      97.2,
+      97.44,
+      97.74,
+      98.28,
+      98.58,
+      99.96,
+      101.1,
+      102,
+      102.54,
+      103.32,
+      104.58,
+      105.3,
+      106.02,
+      106.44,
+      106.74,
+      107.58,
+      108.9,
+      109.2,
+      109.62,
+      111.96,
+      112.74,
+      113.04,
+      113.76,
+      114.24,
+      115.26,
+      115.44,
+      115.56,
+      116.82,
+      117.12,
+      117.42,
+      118.2,
+      119.1,
+      119.46,
+      119.76,
+      120.78,
+      121.32,
+      122.34,
+      123,
+      123.18,
+      123.48,
+      125.16,
+      126,
+      127.5,
+      128.28,
+      129.78,
+      131.22,
+      132,
+      132.36,
+      133.56,
+      134.46,
+      134.64,
+      134.88,
+      137.28,
+      138.3,
+      140.1
+    ],
+    "refWordCount" : 180,
+    "wcpm" : 67
+  },
+  "pages" : [
+    {
+      "end" : 19.44,
+      "errors" : 3,
+      "extras" : 1,
+      "matched" : 34,
+      "page" : 23,
+      "start" : 1.86,
+      "words" : 34
+    },
+    {
+      "end" : 140.1,
+      "errors" : 17,
+      "extras" : 8,
+      "matched" : 146,
+      "page" : 24,
+      "start" : 22.74,
+      "words" : 146
+    }
+  ],
+  "refSuspects" : [
+
+  ],
+  "reference" : "Glinda assured Dorothy that she could help her go back home, but in return,\nDorothy needed to give her the golden cap. Dorothy happily agreed since she\nhad no use for the cap anymore.\nGlinda then turned to the Scarecrow and asked about his plans once Dorothy\nhad left. The Scarecrow revealed his intention to return to the Emerald City,\nwhere he was well-liked by the people. His only concern was how to cross the hill.\nNext, Glinda asked the Tin Woodman what he planned to do after Dorothy\nleft. The Tin Woodman said he wanted to go back to the Winkies' country,\nwhere they liked him and wanted him to be their ruler. Glinda promised to ask\nthe Winged Monkeys to take him safely to the land of the Winkies.\nThen, Glinda asked the Lion what he would do when Dorothy went home.\nThe Lion said he wanted to go back to the big forest, where the animals there\ntreated him like a king. Glinda promised to ask the Winged Monkeys to take\nhim back to his favorite forest.",
+  "slug" : "super8/L6/p23-24",
+  "transcript" : {
+    "alternatives" : [
+      {
+        "end" : 1.86,
+        "start" : 0,
+        "texts" : [
+          "Glinda,",
+          "Kalinda,",
+          "Galinda,"
+        ]
+      },
+      {
+        "end" : 3.48,
+        "start" : 1.86,
+        "texts" : [
+          "sure, Dorothy, that",
+          "sure, Dorothy that",
+          "sure Dorothy that"
+        ]
+      },
+      {
+        "end" : 6.54,
+        "start" : 3.48,
+        "texts" : [
+          "she could help her go back home."
+        ]
+      },
+      {
+        "end" : 7.98,
+        "start" : 6.54,
+        "texts" : [
+          "But in"
+        ]
+      },
+      {
+        "end" : 9.78,
+        "start" : 7.98,
+        "texts" : [
+          "return, Dorothy",
+          "return Dorothy"
+        ]
+      },
+      {
+        "end" : 11.22,
+        "start" : 9.78,
+        "texts" : [
+          "needed to give her"
+        ]
+      },
+      {
+        "end" : 11.7,
+        "start" : 11.22,
+        "texts" : [
+          "the",
+          "a"
+        ]
+      },
+      {
+        "end" : 12,
+        "start" : 11.7,
+        "texts" : [
+          "golden"
+        ]
+      },
+      {
+        "end" : 12.36,
+        "start" : 12,
+        "texts" : [
+          "cap.",
+          "cat."
+        ]
+      },
+      {
+        "end" : 14.64,
+        "start" : 12.36,
+        "texts" : [
+          "Dorothy had"
+        ]
+      },
+      {
+        "end" : 14.94,
+        "start" : 14.64,
+        "texts" : [
+          "player",
+          "play"
+        ]
+      },
+      {
+        "end" : 15.6,
+        "start" : 14.94,
+        "texts" : [
+          "grades",
+          "a grade",
+          "a grades"
+        ]
+      },
+      {
+        "end" : 19.5,
+        "start" : 15.6,
+        "texts" : [
+          "since she had no use for the cap anymore."
+        ]
+      },
+      {
+        "end" : 22.74,
+        "start" : 19.5,
+        "texts" : [
+          "Glinda",
+          "Glen"
+        ]
+      },
+      {
+        "end" : 27,
+        "start" : 22.74,
+        "texts" : [
+          "doesn't turn to the scarecrow"
+        ]
+      },
+      {
+        "end" : 27.48,
+        "start" : 27,
+        "texts" : [
+          "and asked",
+          "asked"
+        ]
+      },
+      {
+        "end" : 28.92,
+        "start" : 27.48,
+        "texts" : [
+          "about his plans"
+        ]
+      },
+      {
+        "end" : 29.52,
+        "start" : 28.92,
+        "texts" : [
+          "to.",
+          "to,"
+        ]
+      },
+      {
+        "end" : 31.08,
+        "start" : 29.52,
+        "texts" : [
+          "Whilst",
+          "whilst"
+        ]
+      },
+      {
+        "end" : 33.18,
+        "start" : 31.08,
+        "texts" : [
+          "Dorothy had left."
+        ]
+      },
+      {
+        "end" : 54.12,
+        "start" : 33.18,
+        "texts" : [
+          "The scarecrow revealed his attention to return to the emerald city, where he was, um, uh, was well lacked by the people, his only concern was, how to cross the"
+        ]
+      },
+      {
+        "end" : 55.68,
+        "start" : 54.12,
+        "texts" : [
+          "hill next.",
+          "hill, next."
+        ]
+      },
+      {
+        "end" : 57.96,
+        "start" : 55.68,
+        "texts" : [
+          "Glinda"
+        ]
+      },
+      {
+        "end" : 59.58,
+        "start" : 57.96,
+        "texts" : [
+          "asked the",
+          "asked, the"
+        ]
+      },
+      {
+        "end" : 60.36,
+        "start" : 59.58,
+        "texts" : [
+          "tin"
+        ]
+      },
+      {
+        "end" : 61.14,
+        "start" : 60.36,
+        "texts" : [
+          "woman.",
+          "woman,"
+        ]
+      },
+      {
+        "end" : 68.22,
+        "start" : 61.14,
+        "texts" : [
+          "What he planned to do after Dorothy left the"
+        ]
+      },
+      {
+        "end" : 68.7,
+        "start" : 68.22,
+        "texts" : [
+          "10",
+          "team"
+        ]
+      },
+      {
+        "end" : 73.32,
+        "start" : 68.7,
+        "texts" : [
+          "women. Said he, Wanted to",
+          "women. Said he wanted to",
+          "and then. Said he wanted to",
+          "and then said he wanted to"
+        ]
+      },
+      {
+        "end" : 75.48,
+        "start" : 73.32,
+        "texts" : [
+          "go back to the Winkies"
+        ]
+      },
+      {
+        "end" : 76.32,
+        "start" : 75.48,
+        "texts" : [
+          "country.",
+          "country?"
+        ]
+      },
+      {
+        "end" : 77.7,
+        "start" : 76.32,
+        "texts" : [
+          "Where they"
+        ]
+      },
+      {
+        "end" : 78.66,
+        "start" : 77.7,
+        "texts" : [
+          "liked him.",
+          "like him.",
+          "lack him.",
+          "lacked him",
+          "lacked him,"
+        ]
+      },
+      {
+        "end" : 86.46,
+        "start" : 78.66,
+        "texts" : [
+          "And wanted him to be their ruler, Galinda promised to"
+        ]
+      },
+      {
+        "end" : 88.86,
+        "start" : 86.46,
+        "texts" : [
+          "ask the,",
+          "ask, the,"
+        ]
+      },
+      {
+        "end" : 92.58,
+        "start" : 88.86,
+        "texts" : [
+          "Wing the",
+          "Winged the"
+        ]
+      },
+      {
+        "end" : 98.58,
+        "start" : 92.58,
+        "texts" : [
+          "monkeys to take him safely to the land of the"
+        ]
+      },
+      {
+        "end" : 100.02,
+        "start" : 98.58,
+        "texts" : [
+          "winkies.",
+          "Winkies.",
+          "winkies"
+        ]
+      },
+      {
+        "end" : 101.1,
+        "start" : 100.02,
+        "texts" : [
+          "Then,"
+        ]
+      },
+      {
+        "end" : 102,
+        "start" : 101.1,
+        "texts" : [
+          "Galinda",
+          "Glinda"
+        ]
+      },
+      {
+        "end" : 103.32,
+        "start" : 102,
+        "texts" : [
+          "asked the,"
+        ]
+      },
+      {
+        "end" : 105.3,
+        "start" : 103.32,
+        "texts" : [
+          "Lion what",
+          "Lion, what"
+        ]
+      },
+      {
+        "end" : 106.44,
+        "start" : 105.3,
+        "texts" : [
+          "he would"
+        ]
+      },
+      {
+        "end" : 107.58,
+        "start" : 106.44,
+        "texts" : [
+          "do when",
+          "do, and"
+        ]
+      },
+      {
+        "end" : 109.6799375,
+        "start" : 107.58,
+        "texts" : [
+          "Dorothy went home."
+        ]
+      },
+      {
+        "end" : 115.44,
+        "start" : 109.68,
+        "texts" : [
+          "The line is that he wanted to go"
+        ]
+      },
+      {
+        "end" : 116.82,
+        "start" : 115.44,
+        "texts" : [
+          "back to",
+          "back. To"
+        ]
+      },
+      {
+        "end" : 120.78,
+        "start" : 116.82,
+        "texts" : [
+          "the big forest where the animals they were"
+        ]
+      },
+      {
+        "end" : 122.34,
+        "start" : 120.78,
+        "texts" : [
+          "traded him",
+          "trading him",
+          "traded. him"
+        ]
+      },
+      {
+        "end" : 123.18,
+        "start" : 122.34,
+        "texts" : [
+          "like a"
+        ]
+      },
+      {
+        "end" : 123.6,
+        "start" : 123.18,
+        "texts" : [
+          "king.",
+          "king,"
+        ]
+      },
+      {
+        "end" : 125.16,
+        "start" : 123.6,
+        "texts" : [
+          "Belinda"
+        ]
+      },
+      {
+        "end" : 127.5,
+        "start" : 125.16,
+        "texts" : [
+          "promised to",
+          "promised, to"
+        ]
+      },
+      {
+        "end" : 129.78,
+        "start" : 127.5,
+        "texts" : [
+          "ask the",
+          "ask. The"
+        ]
+      },
+      {
+        "end" : 132,
+        "start" : 129.78,
+        "texts" : [
+          "winged monkeys",
+          "wing the monkeys"
+        ]
+      },
+      {
+        "end" : 137.28,
+        "start" : 132,
+        "texts" : [
+          "to take him back to his"
+        ]
+      },
+      {
+        "end" : 140.16,
+        "start" : 137.28,
+        "texts" : [
+          "favorite forest.",
+          "favorite. Forest."
+        ]
+      }
+    ],
+    "contextPrimed" : true,
+    "locale" : "en-US",
+    "runs" : [
+      {
+        "confidence" : 0.457,
+        "end" : 1.86,
+        "start" : 0,
+        "text" : "Glinda,"
+      },
+      {
+        "confidence" : 0.27,
+        "end" : 2.46,
+        "start" : 1.86,
+        "text" : " sure,"
+      },
+      {
+        "confidence" : 0.789,
+        "end" : 3.3,
+        "start" : 2.46,
+        "text" : " Dorothy,"
+      },
+      {
+        "confidence" : 0.935,
+        "end" : 3.48,
+        "start" : 3.3,
+        "text" : " that"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 4.02,
+        "start" : 3.48,
+        "text" : " she"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 4.44,
+        "start" : 4.02,
+        "text" : " could"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 4.8,
+        "start" : 4.44,
+        "text" : " help"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 5.16,
+        "start" : 4.8,
+        "text" : " her"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 5.52,
+        "start" : 5.16,
+        "text" : " go"
+      },
+      {
+        "confidence" : 0.999,
+        "end" : 5.76,
+        "start" : 5.52,
+        "text" : " back"
+      },
+      {
+        "confidence" : 0.83,
+        "end" : 6.48,
+        "start" : 5.76,
+        "text" : " home."
+      },
+      {
+        "confidence" : 0.844,
+        "end" : 7.74,
+        "start" : 6.54,
+        "text" : " But"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 7.98,
+        "start" : 7.74,
+        "text" : " in"
+      },
+      {
+        "confidence" : 0.675,
+        "end" : 8.82,
+        "start" : 7.98,
+        "text" : " return,"
+      },
+      {
+        "confidence" : 0.966,
+        "end" : 9.78,
+        "start" : 8.82,
+        "text" : " Dorothy"
+      },
+      {
+        "confidence" : 0.975,
+        "end" : 10.14,
+        "start" : 9.78,
+        "text" : " needed"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 10.56,
+        "start" : 10.14,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 10.8,
+        "start" : 10.56,
+        "text" : " give"
+      },
+      {
+        "confidence" : 0.978,
+        "end" : 11.22,
+        "start" : 10.8,
+        "text" : " her"
+      },
+      {
+        "confidence" : 0.957,
+        "end" : 11.7,
+        "start" : 11.22,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.972,
+        "end" : 12,
+        "start" : 11.7,
+        "text" : " golden"
+      },
+      {
+        "confidence" : 0.931,
+        "end" : 12.24,
+        "start" : 12,
+        "text" : " cap."
+      },
+      {
+        "confidence" : 0.984,
+        "end" : 14.4,
+        "start" : 12.36,
+        "text" : " Dorothy"
+      },
+      {
+        "confidence" : 0.779,
+        "end" : 14.64,
+        "start" : 14.4,
+        "text" : " had"
+      },
+      {
+        "confidence" : 0.282,
+        "end" : 14.94,
+        "start" : 14.64,
+        "text" : " player"
+      },
+      {
+        "confidence" : 0.838,
+        "end" : 15.6,
+        "start" : 14.94,
+        "text" : " grades"
+      },
+      {
+        "confidence" : 0.554,
+        "end" : 15.96,
+        "start" : 15.6,
+        "text" : " since"
+      },
+      {
+        "confidence" : 0.951,
+        "end" : 16.56,
+        "start" : 15.96,
+        "text" : " she"
+      },
+      {
+        "confidence" : 0.944,
+        "end" : 17.16,
+        "start" : 16.56,
+        "text" : " had"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 17.58,
+        "start" : 17.16,
+        "text" : " no"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 17.82,
+        "start" : 17.58,
+        "text" : " use"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 18.24,
+        "start" : 17.82,
+        "text" : " for"
+      },
+      {
+        "confidence" : 0.973,
+        "end" : 18.48,
+        "start" : 18.24,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.893,
+        "end" : 18.78,
+        "start" : 18.48,
+        "text" : " cap"
+      },
+      {
+        "confidence" : 0.921,
+        "end" : 19.44,
+        "start" : 18.78,
+        "text" : " anymore."
+      },
+      {
+        "confidence" : 0.487,
+        "end" : 22.74,
+        "start" : 19.5,
+        "text" : " Glinda"
+      },
+      {
+        "confidence" : 0.823,
+        "end" : 23.52,
+        "start" : 22.74,
+        "text" : " doesn't"
+      },
+      {
+        "confidence" : 0.679,
+        "end" : 23.94,
+        "start" : 23.52,
+        "text" : " turn"
+      },
+      {
+        "confidence" : 0.97,
+        "end" : 24.36,
+        "start" : 23.94,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.931,
+        "end" : 24.54,
+        "start" : 24.36,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.238,
+        "end" : 27,
+        "start" : 24.54,
+        "text" : " scarecrow"
+      },
+      {
+        "confidence" : 0.018,
+        "end" : 27.18,
+        "start" : 27,
+        "text" : " and"
+      },
+      {
+        "confidence" : 0.933,
+        "end" : 27.48,
+        "start" : 27.18,
+        "text" : " asked"
+      },
+      {
+        "confidence" : 0.975,
+        "end" : 28.14,
+        "start" : 27.48,
+        "text" : " about"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 28.56,
+        "start" : 28.14,
+        "text" : " his"
+      },
+      {
+        "confidence" : 0.913,
+        "end" : 28.92,
+        "start" : 28.56,
+        "text" : " plans"
+      },
+      {
+        "confidence" : 0.551,
+        "end" : 29.52,
+        "start" : 28.92,
+        "text" : " to."
+      },
+      {
+        "confidence" : 0.294,
+        "end" : 31.08,
+        "start" : 29.52,
+        "text" : " Whilst"
+      },
+      {
+        "confidence" : 0.972,
+        "end" : 31.98,
+        "start" : 31.08,
+        "text" : " Dorothy"
+      },
+      {
+        "confidence" : 0.941,
+        "end" : 32.46,
+        "start" : 31.98,
+        "text" : " had"
+      },
+      {
+        "confidence" : 0.621,
+        "end" : 33.12,
+        "start" : 32.46,
+        "text" : " left."
+      },
+      {
+        "confidence" : 0.602,
+        "end" : 34.62,
+        "start" : 33.18,
+        "text" : " The"
+      },
+      {
+        "confidence" : 0.862,
+        "end" : 35.22,
+        "start" : 34.62,
+        "text" : " scarecrow"
+      },
+      {
+        "confidence" : 0.867,
+        "end" : 36.66,
+        "start" : 35.22,
+        "text" : " revealed"
+      },
+      {
+        "confidence" : 0.963,
+        "end" : 37.32,
+        "start" : 36.66,
+        "text" : " his"
+      },
+      {
+        "confidence" : 0.98,
+        "end" : 37.86,
+        "start" : 37.32,
+        "text" : " attention"
+      },
+      {
+        "confidence" : 0.932,
+        "end" : 39.06,
+        "start" : 37.86,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 39.48,
+        "start" : 39.06,
+        "text" : " return"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 40.08,
+        "start" : 39.48,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 40.26,
+        "start" : 40.08,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.462,
+        "end" : 41.52,
+        "start" : 40.26,
+        "text" : " emerald"
+      },
+      {
+        "confidence" : 0.368,
+        "end" : 42.36,
+        "start" : 41.52,
+        "text" : " city,"
+      },
+      {
+        "confidence" : 0.702,
+        "end" : 43.08,
+        "start" : 42.36,
+        "text" : " where"
+      },
+      {
+        "confidence" : 0.959,
+        "end" : 43.56,
+        "start" : 43.08,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.486,
+        "end" : 44.46,
+        "start" : 43.56,
+        "text" : " was,"
+      },
+      {
+        "confidence" : 0.072,
+        "end" : 46.2,
+        "start" : 44.46,
+        "text" : " um,"
+      },
+      {
+        "confidence" : 0.197,
+        "end" : 46.74,
+        "start" : 46.2,
+        "text" : " uh,"
+      },
+      {
+        "confidence" : 0.916,
+        "end" : 46.92,
+        "start" : 46.74,
+        "text" : " was"
+      },
+      {
+        "confidence" : 0.965,
+        "end" : 47.46,
+        "start" : 46.92,
+        "text" : " well"
+      },
+      {
+        "confidence" : 0.38,
+        "end" : 48.12,
+        "start" : 47.46,
+        "text" : " lacked"
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 48.36,
+        "start" : 48.12,
+        "text" : " by"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 48.6,
+        "start" : 48.36,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.587,
+        "end" : 49.32,
+        "start" : 48.6,
+        "text" : " people,"
+      },
+      {
+        "confidence" : 0.771,
+        "end" : 50.1,
+        "start" : 49.32,
+        "text" : " his"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 50.4,
+        "start" : 50.1,
+        "text" : " only"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 50.88,
+        "start" : 50.4,
+        "text" : " concern"
+      },
+      {
+        "confidence" : 0.496,
+        "end" : 51.84,
+        "start" : 50.88,
+        "text" : " was,"
+      },
+      {
+        "confidence" : 0.709,
+        "end" : 52.86,
+        "start" : 51.84,
+        "text" : " how"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 53.22,
+        "start" : 52.86,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 53.82,
+        "start" : 53.22,
+        "text" : " cross"
+      },
+      {
+        "confidence" : 0.995,
+        "end" : 54.12,
+        "start" : 53.82,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.967,
+        "end" : 54.48,
+        "start" : 54.12,
+        "text" : " hill"
+      },
+      {
+        "confidence" : 0.557,
+        "end" : 55.68,
+        "start" : 54.48,
+        "text" : " next."
+      },
+      {
+        "confidence" : 0.614,
+        "end" : 57.96,
+        "start" : 55.68,
+        "text" : " Glinda"
+      },
+      {
+        "confidence" : 0.867,
+        "end" : 58.68,
+        "start" : 57.96,
+        "text" : " asked"
+      },
+      {
+        "confidence" : 0.693,
+        "end" : 59.58,
+        "start" : 58.68,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.12,
+        "end" : 60.36,
+        "start" : 59.58,
+        "text" : " tin"
+      },
+      {
+        "confidence" : 0.255,
+        "end" : 61.08,
+        "start" : 60.36,
+        "text" : " woman."
+      },
+      {
+        "confidence" : 0.141,
+        "end" : 61.92,
+        "start" : 61.14,
+        "text" : " What"
+      },
+      {
+        "confidence" : 0.969,
+        "end" : 62.4,
+        "start" : 61.92,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.763,
+        "end" : 63.12,
+        "start" : 62.4,
+        "text" : " planned"
+      },
+      {
+        "confidence" : 0.773,
+        "end" : 64.14,
+        "start" : 63.12,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.966,
+        "end" : 64.44,
+        "start" : 64.14,
+        "text" : " do"
+      },
+      {
+        "confidence" : 0.972,
+        "end" : 65.34,
+        "start" : 64.44,
+        "text" : " after"
+      },
+      {
+        "confidence" : 0.955,
+        "end" : 67.14,
+        "start" : 65.34,
+        "text" : " Dorothy"
+      },
+      {
+        "confidence" : 0.987,
+        "end" : 67.56,
+        "start" : 67.14,
+        "text" : " left"
+      },
+      {
+        "confidence" : 0.959,
+        "end" : 68.22,
+        "start" : 67.56,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.027,
+        "end" : 68.7,
+        "start" : 68.22,
+        "text" : " 10"
+      },
+      {
+        "confidence" : 0.191,
+        "end" : 69.66,
+        "start" : 68.7,
+        "text" : " women."
+      },
+      {
+        "confidence" : 0.274,
+        "end" : 70.92,
+        "start" : 69.66,
+        "text" : " Said"
+      },
+      {
+        "confidence" : 0.477,
+        "end" : 71.58,
+        "start" : 70.92,
+        "text" : " he,"
+      },
+      {
+        "confidence" : 0.419,
+        "end" : 73.14,
+        "start" : 71.58,
+        "text" : " Wanted"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 73.32,
+        "start" : 73.14,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 73.5,
+        "start" : 73.32,
+        "text" : " go"
+      },
+      {
+        "confidence" : 0.998,
+        "end" : 73.74,
+        "start" : 73.5,
+        "text" : " back"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 74.16,
+        "start" : 73.74,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 74.58,
+        "start" : 74.16,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.617,
+        "end" : 75.48,
+        "start" : 74.58,
+        "text" : " Winkies"
+      },
+      {
+        "confidence" : 0.561,
+        "end" : 76.26,
+        "start" : 75.48,
+        "text" : " country."
+      },
+      {
+        "confidence" : 0.224,
+        "end" : 77.28,
+        "start" : 76.32,
+        "text" : " Where"
+      },
+      {
+        "confidence" : 0.979,
+        "end" : 77.7,
+        "start" : 77.28,
+        "text" : " they"
+      },
+      {
+        "confidence" : 0.307,
+        "end" : 78,
+        "start" : 77.7,
+        "text" : " liked"
+      },
+      {
+        "confidence" : 0.599,
+        "end" : 78.6,
+        "start" : 78,
+        "text" : " him."
+      },
+      {
+        "confidence" : 0.43,
+        "end" : 79.86,
+        "start" : 78.66,
+        "text" : " And"
+      },
+      {
+        "confidence" : 0.991,
+        "end" : 80.76,
+        "start" : 79.86,
+        "text" : " wanted"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 81.6,
+        "start" : 80.76,
+        "text" : " him"
+      },
+      {
+        "confidence" : 0.999,
+        "end" : 81.9,
+        "start" : 81.6,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.996,
+        "end" : 82.14,
+        "start" : 81.9,
+        "text" : " be"
+      },
+      {
+        "confidence" : 0.834,
+        "end" : 83.04,
+        "start" : 82.14,
+        "text" : " their"
+      },
+      {
+        "confidence" : 0.753,
+        "end" : 83.94,
+        "start" : 83.04,
+        "text" : " ruler,"
+      },
+      {
+        "confidence" : 0.726,
+        "end" : 85.08,
+        "start" : 83.94,
+        "text" : " Galinda"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 85.86,
+        "start" : 85.08,
+        "text" : " promised"
+      },
+      {
+        "confidence" : 0.974,
+        "end" : 86.46,
+        "start" : 85.86,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.843,
+        "end" : 87.24,
+        "start" : 86.46,
+        "text" : " ask"
+      },
+      {
+        "confidence" : 0.374,
+        "end" : 88.86,
+        "start" : 87.24,
+        "text" : " the,"
+      },
+      {
+        "confidence" : 0.543,
+        "end" : 92.28,
+        "start" : 88.86,
+        "text" : " Wing"
+      },
+      {
+        "confidence" : 0.946,
+        "end" : 92.58,
+        "start" : 92.28,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.976,
+        "end" : 93.18,
+        "start" : 92.58,
+        "text" : " monkeys"
+      },
+      {
+        "confidence" : 0.973,
+        "end" : 93.6,
+        "start" : 93.18,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.788,
+        "end" : 94.56,
+        "start" : 93.6,
+        "text" : " take"
+      },
+      {
+        "confidence" : 0.661,
+        "end" : 96.12,
+        "start" : 94.56,
+        "text" : " him"
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 96.84,
+        "start" : 96.12,
+        "text" : " safely"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 97.2,
+        "start" : 96.84,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.997,
+        "end" : 97.44,
+        "start" : 97.2,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.98,
+        "end" : 97.74,
+        "start" : 97.44,
+        "text" : " land"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 98.28,
+        "start" : 97.74,
+        "text" : " of"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 98.58,
+        "start" : 98.28,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.657,
+        "end" : 99.96,
+        "start" : 98.58,
+        "text" : " winkies."
+      },
+      {
+        "confidence" : 0.363,
+        "end" : 101.1,
+        "start" : 100.02,
+        "text" : " Then,"
+      },
+      {
+        "confidence" : 0.646,
+        "end" : 102,
+        "start" : 101.1,
+        "text" : " Galinda"
+      },
+      {
+        "confidence" : 0.783,
+        "end" : 102.54,
+        "start" : 102,
+        "text" : " asked"
+      },
+      {
+        "confidence" : 0.393,
+        "end" : 103.32,
+        "start" : 102.54,
+        "text" : " the,"
+      },
+      {
+        "confidence" : 0.282,
+        "end" : 104.58,
+        "start" : 103.32,
+        "text" : " Lion"
+      },
+      {
+        "confidence" : 0.968,
+        "end" : 105.3,
+        "start" : 104.58,
+        "text" : " what"
+      },
+      {
+        "confidence" : 0.93,
+        "end" : 106.02,
+        "start" : 105.3,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.966,
+        "end" : 106.44,
+        "start" : 106.02,
+        "text" : " would"
+      },
+      {
+        "confidence" : 0.983,
+        "end" : 106.74,
+        "start" : 106.44,
+        "text" : " do"
+      },
+      {
+        "confidence" : 0.562,
+        "end" : 107.58,
+        "start" : 106.74,
+        "text" : " when"
+      },
+      {
+        "confidence" : 0.969,
+        "end" : 108.9,
+        "start" : 107.58,
+        "text" : " Dorothy"
+      },
+      {
+        "confidence" : 0.957,
+        "end" : 109.2,
+        "start" : 108.9,
+        "text" : " went"
+      },
+      {
+        "confidence" : 0.76,
+        "end" : 109.62,
+        "start" : 109.2,
+        "text" : " home."
+      },
+      {
+        "confidence" : 0.942,
+        "end" : 111.96,
+        "start" : 109.68,
+        "text" : " The"
+      },
+      {
+        "confidence" : 0.57,
+        "end" : 112.32,
+        "start" : 111.96,
+        "text" : " line"
+      },
+      {
+        "confidence" : 0.77,
+        "end" : 112.74,
+        "start" : 112.32,
+        "text" : " is"
+      },
+      {
+        "confidence" : 0.765,
+        "end" : 113.04,
+        "start" : 112.74,
+        "text" : " that"
+      },
+      {
+        "confidence" : 0.702,
+        "end" : 113.76,
+        "start" : 113.04,
+        "text" : " he"
+      },
+      {
+        "confidence" : 0.463,
+        "end" : 114.24,
+        "start" : 113.76,
+        "text" : " wanted"
+      },
+      {
+        "confidence" : 0.833,
+        "end" : 115.26,
+        "start" : 114.24,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.99,
+        "end" : 115.44,
+        "start" : 115.26,
+        "text" : " go"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 115.56,
+        "start" : 115.44,
+        "text" : " back"
+      },
+      {
+        "confidence" : 0.73,
+        "end" : 116.82,
+        "start" : 115.56,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.989,
+        "end" : 117.12,
+        "start" : 116.82,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.942,
+        "end" : 117.42,
+        "start" : 117.12,
+        "text" : " big"
+      },
+      {
+        "confidence" : 0.957,
+        "end" : 118.2,
+        "start" : 117.42,
+        "text" : " forest"
+      },
+      {
+        "confidence" : 0.975,
+        "end" : 119.1,
+        "start" : 118.2,
+        "text" : " where"
+      },
+      {
+        "confidence" : 0.993,
+        "end" : 119.46,
+        "start" : 119.1,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.977,
+        "end" : 119.76,
+        "start" : 119.46,
+        "text" : " animals"
+      },
+      {
+        "confidence" : 0.808,
+        "end" : 120.54,
+        "start" : 119.76,
+        "text" : " they"
+      },
+      {
+        "confidence" : 0.443,
+        "end" : 120.78,
+        "start" : 120.54,
+        "text" : " were"
+      },
+      {
+        "confidence" : 0.808,
+        "end" : 121.32,
+        "start" : 120.78,
+        "text" : " traded"
+      },
+      {
+        "confidence" : 0.704,
+        "end" : 122.34,
+        "start" : 121.32,
+        "text" : " him"
+      },
+      {
+        "confidence" : 0.994,
+        "end" : 123,
+        "start" : 122.34,
+        "text" : " like"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 123.18,
+        "start" : 123,
+        "text" : " a"
+      },
+      {
+        "confidence" : 0.796,
+        "end" : 123.48,
+        "start" : 123.18,
+        "text" : " king."
+      },
+      {
+        "confidence" : 0.737,
+        "end" : 125.16,
+        "start" : 123.6,
+        "text" : " Belinda"
+      },
+      {
+        "confidence" : 0.767,
+        "end" : 126,
+        "start" : 125.16,
+        "text" : " promised"
+      },
+      {
+        "confidence" : 0.806,
+        "end" : 127.5,
+        "start" : 126,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.927,
+        "end" : 128.28,
+        "start" : 127.5,
+        "text" : " ask"
+      },
+      {
+        "confidence" : 0.486,
+        "end" : 129.78,
+        "start" : 128.28,
+        "text" : " the"
+      },
+      {
+        "confidence" : 0.76,
+        "end" : 131.22,
+        "start" : 129.78,
+        "text" : " winged"
+      },
+      {
+        "confidence" : 0.981,
+        "end" : 132,
+        "start" : 131.22,
+        "text" : " monkeys"
+      },
+      {
+        "confidence" : 0.939,
+        "end" : 132.36,
+        "start" : 132,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.676,
+        "end" : 133.56,
+        "start" : 132.36,
+        "text" : " take"
+      },
+      {
+        "confidence" : 0.953,
+        "end" : 134.46,
+        "start" : 133.56,
+        "text" : " him"
+      },
+      {
+        "confidence" : 0.992,
+        "end" : 134.64,
+        "start" : 134.46,
+        "text" : " back"
+      },
+      {
+        "confidence" : 0.958,
+        "end" : 134.88,
+        "start" : 134.64,
+        "text" : " to"
+      },
+      {
+        "confidence" : 0.743,
+        "end" : 137.28,
+        "start" : 134.88,
+        "text" : " his"
+      },
+      {
+        "confidence" : 0.94,
+        "end" : 138.3,
+        "start" : 137.28,
+        "text" : " favorite"
+      },
+      {
+        "confidence" : 0.809,
+        "end" : 140.1,
+        "start" : 138.3,
+        "text" : " forest."
+      }
+    ],
+    "source" : "super8-L6-p23-24-25456F4B-F70F-4C15-AFDC-8C7EA0E0A6EC.m4a"
+  },
+  "words" : [
+    "glinda",
+    "sure",
+    "dorothy",
+    "that",
+    "she",
+    "could",
+    "help",
+    "her",
+    "go",
+    "back",
+    "home",
+    "but",
+    "in",
+    "return",
+    "dorothy",
+    "needed",
+    "to",
+    "give",
+    "her",
+    "the",
+    "golden",
+    "cap",
+    "dorothy",
+    "had",
+    "player",
+    "grades",
+    "since",
+    "she",
+    "had",
+    "no",
+    "use",
+    "for",
+    "the",
+    "cap",
+    "anymore",
+    "glinda",
+    "doesn't",
+    "turn",
+    "to",
+    "the",
+    "scarecrow",
+    "and",
+    "asked",
+    "about",
+    "his",
+    "plans",
+    "to",
+    "whilst",
+    "dorothy",
+    "had",
+    "left",
+    "the",
+    "scarecrow",
+    "revealed",
+    "his",
+    "attention",
+    "to",
+    "return",
+    "to",
+    "the",
+    "emerald",
+    "city",
+    "where",
+    "he",
+    "was",
+    "um",
+    "uh",
+    "was",
+    "well",
+    "lacked",
+    "by",
+    "the",
+    "people",
+    "his",
+    "only",
+    "concern",
+    "was",
+    "how",
+    "to",
+    "cross",
+    "the",
+    "hill",
+    "next",
+    "glinda",
+    "asked",
+    "the",
+    "tin",
+    "woman",
+    "what",
+    "he",
+    "planned",
+    "to",
+    "do",
+    "after",
+    "dorothy",
+    "left",
+    "the",
+    "10",
+    "women",
+    "said",
+    "he",
+    "wanted",
+    "to",
+    "go",
+    "back",
+    "to",
+    "the",
+    "winkies",
+    "country",
+    "where",
+    "they",
+    "liked",
+    "him",
+    "and",
+    "wanted",
+    "him",
+    "to",
+    "be",
+    "their",
+    "ruler",
+    "galinda",
+    "promised",
+    "to",
+    "ask",
+    "the",
+    "wing",
+    "the",
+    "monkeys",
+    "to",
+    "take",
+    "him",
+    "safely",
+    "to",
+    "the",
+    "land",
+    "of",
+    "the",
+    "winkies",
+    "then",
+    "galinda",
+    "asked",
+    "the",
+    "lion",
+    "what",
+    "he",
+    "would",
+    "do",
+    "when",
+    "dorothy",
+    "went",
+    "home",
+    "the",
+    "line",
+    "is",
+    "that",
+    "he",
+    "wanted",
+    "to",
+    "go",
+    "back",
+    "to",
+    "the",
+    "big",
+    "forest",
+    "where",
+    "the",
+    "animals",
+    "they",
+    "were",
+    "traded",
+    "him",
+    "like",
+    "a",
+    "king",
+    "belinda",
+    "promised",
+    "to",
+    "ask",
+    "the",
+    "winged",
+    "monkeys",
+    "to",
+    "take",
+    "him",
+    "back",
+    "to",
+    "his",
+    "favorite",
+    "forest"
+  ]
+}

@@ -1,0 +1,156 @@
+# 超8 · Lesson 6
+#
+# ── 正文的写法（见 src/generator/english/CLAUDE.md）
+# 报告正文只写**孩子的朗读**。机器为什么误判、我们怎么核的，全部留在这些 # 注释里。
+#
+# ── 读的是第 23 页后半 + 第 24 页，和 9/28 打卡单「第 23–24 页 划线部分」对得上，但 p23 少前两句
+# p23 划框开头那两句（flew them safely over the hill … wishing them luck.，38 词）
+#   **9/24 那次录音已经读过**：她读完 p22 顺着往下读到了这里（p21-22.txt 的 [跳过] 236.5–263.8 秒）。
+#   家长说明了这一点，录音开口也确实是「Glinda assured Dorothy…」。
+# 第一遍拿整页 p23.ref.txt 跑，p23 只对上 47%，前面那 38 个词全成了「漏读」。
+#   所以 p23 的基准只取第 4 行起（Glinda assured … the cap anymore.，34 词）重跑了一遍 read，
+#   `--ref <裁过的 p23>,p24.ref.txt`。裁过的那份没进库（库里的 p23.ref.txt 是整页原文，不动），
+#   但 read.json 的 reference 里存的就是这次实际用的 180 词，可复算。
+# 原文 180 词（p23 后半 34、p24 146），p24 划框第一句「Glinda then turned」到最后「favorite forest.」全读了。
+# 录音 142.6 秒，最后一个词 140.1 秒读完，前后都没有读别的东西，**不需要 [跳过]**。
+#   19.4→22.7 的翻页机器自己扣。
+#
+# ── 逐条核完：20 处换词候选 → 计错 4 处
+# 计的 4 处：
+#   · turned → turn（23.5 秒，0.68）：转写是「doesn't turn」—— then turned 丢了 -ed 连起来就是这个音，
+#     then 本身算读了（见下），turned 按词尾计
+#   · once → whilst（29.5 秒，0.29，前面还多一个 to）：把握低，判不死 → 「识别成」计一处。
+#     9/24 同一个词 once 读成 was，这是她读不稳的一个词。想复核听 28.9–31.1 秒
+#   · intention → attention（37.3 秒，0.98）：把握很高，词形
+#   · treated → traded（120.8 秒，0.81；备选 trading）：/iː/ 读成 /eɪ/，元音
+# 撤下 16 处：
+#   · **Glinda 四处**（sure / galinda ×2 / belinda）+ **Tin Woodman 三处**（woman / ten / women）
+#     + **Lion**（line is）：专名，按口径不计。
+#     其中 1.9 秒 assured → sure：Glinda 的尾音 -a 和 assured 的 a- 连在一起，备选 Glinda,/Galinda，不计
+#   · **said → that**（112.7 秒）：「The line is that he」≈ The Lion said he，和 9/24 那处一样，不计
+#   · **happily → player / agreed → grades**（14.6 / 14.9 秒）：Dorothy 拖了 2 秒、先出一个 had（0.78），
+#     是 hap-pi-ly 拆着起头；agreed 备选「a grade」，是 a-greed 拆着念（同 9/24）。不计，had 进 [磕巴]
+#   · **then → doesn't**（22.7 秒）：见上，then turn 连读
+#   · **well-liked → well lacked**（47.5 秒，0.38）：well 读出来了；liked 在 77.7 秒那处识别成 liked，
+#     备选里才有 lacked —— 同一个音两处听法不一样，不计
+#   · **Winkies' → winkies**：只差一个撇号，读音一样，不计
+#   · **Winged → the**（88.9–92.6 秒）：「the, Wing the monkeys」，**备选里有「Winged the」** ——
+#     候选里出现了原文那个词，按口径算转写的锅，不计。但停了 3.7 秒，进 [卡壳]。
+#     第二处 Winged（129.8 秒）直接识别成 winged。9/24 那三处 wing 这次没重现
+#   · **there → they were**（120.5 秒，0.44）：多一个 they（0.81）+ there 读成 were，
+#     可能是 they-were 真读岔，也可能是 there 拖长了；判不准，不计
+#   全算错的话准确率 88.9%（20 处），这个 97.8% 偏宽。
+#
+# ── 分数
+# 准确度 25：97.8% 进了「教学」档，本课最高（之前最高 p11-12 的 95.6% 给了 22）
+# 流利度 15：WCPM 比上一次高一截，但 p24 仍是 75 词/分左右；比 p11-12（86 WCPM，17）低
+# 断句语调 13 / 发音 8：Galinda / Tin woman 这种名字的音、treated 的元音
+# 合计 61
+#
+# ── 文本
+# p21-22：189 词（9/24）
+# p23-24：180 词（p23 后半 34 + p24 146）。p24 名字密：Glinda ×5、Tin Woodman ×2、Winkies ×2、
+#   Winged Monkeys ×2、Scarecrow ×2、Lion ×2、Emerald City
+
+date: 2026-09-28
+cat: 超8
+order: 23
+page: 23–24
+prev: p21-22
+book: 绿野仙踪
+part: 划线两段
+words: 180
+errors: 4
+score: 61
+naep: 2
+
+[评分] 准确度=25/30 流利度=15/30 断句语调=13/25 发音=8/15
+
+[总评] 读得准多了，卡得也短了
+    180 个词错 4 处，准确率 97.8%，比上一次（89.9%）高了 7.9 个百分点。分三块看：
+    * **准确率这一课最高** —— 之前最高是第 11–12 页的 95.6%，这次头一回进了「要带一带」档
+    * **卡住的时间短了** —— 最久一次 3.7 秒；上一次最久 9.3 秒，还有三次超过 7 秒
+    * **错的 4 处都在第 24 页** —— turned 丢了 -ed、intention 看成 attention、treated 读成 traded、
+        once 这个词又没读稳（上次读成 was）
+
+[句末] 6.5, 12.2, 19.4, 33.1, 49.3, 54.5, 67.6, 83.9, 100.0, 109.6, 123.5, 140.1
+
+[卡壳] 24.5-27.0 = 卡 2.5 秒, 43.6-46.9 = 卡 3.4 秒, 88.9-92.6 = 卡 3.7 秒, 109.6-112.0 = 卡 2.3 秒, 134.9-137.3 = 卡 2.4 秒
+    五处都在第 24 页，最久 3.7 秒：
+    turned to the Scarecrow 停在 Scarecrow 前面；where he was well-liked 读到 was「嗯、嗯」了两下，退回去重读 was 才接上；
+    ask the Winged Monkeys 在 Winged 上停了一下又从 the 起头；The Lion said 停在 Lion 前面；
+    to his favorite forest 停在 favorite 前面。
+    第 23→24 页翻页不算卡壳，时长也扣掉了。
+
+[分页] 这次读了 2 页
+第 23 页 = 1.9-19.4 秒 · 34 词 · 错 0 处 · 语速 116 词/分
+第 24 页 = 22.7-140.1 秒 · 146 词 · 错 4 处 · 语速 73 词/分
+    第 23 页只读了后半页 —— 前两句 9/24 那次已经顺着读过了。
+    第 24 页更吃力：Glinda、Tin Woodman、Winkies、Winged Monkeys 这些名字一页里出现了十几次，五处卡壳全在这一页。
+
+[对比] 和上一页比
+    同一课、同一部手机录的视频，录音条件一样，可以直接比。
+
+[比对] 逐字比对 · 4 处（计错 4）
+原文 Glinda then *turned* to the Scarecrow
+实读 Glinda then *turn* to the Scarecrow
+    〔词尾〕 23.5 秒。turned 丢了 -ed —— 故事是过去时
+原文 and asked about his plans *once* Dorothy had left.
+识别成 and asked about his plans to *whilst* Dorothy had left
+    〔词形〕 29.5 秒。once（一旦……之后）没读稳，上次这个词读成了 was。
+        听不太清，计分时按错了 1 处算，如果其实读对了，准确率是 98.3%
+原文 The Scarecrow revealed his *intention* to return to the Emerald City,
+实读 The Scarecrow revealed his *attention* to return to the Emerald City
+    〔词形〕 37.3 秒。intention（打算）看成了 attention（注意）。in-ten-tion
+原文 where the animals there *treated* him like a king.
+实读 where the animals they were *traded* him like a king
+    〔元音〕 120.8 秒。treated /iː/ 读得像 traded /eɪ/ —— ea 在这里念长音 ee
+
+[磕巴] 读了两遍才接上的地方 · 3 处
+*had* happily agreed since she
+    14.4 秒。happily 起了一次头，第二次读出来了
+*was um uh* was well-liked by the people
+    43.6 秒。was 读完停下来，退回去又读了一遍 was 才接 well-liked
+*wing* Winged Monkeys to take
+    88.9 秒。Winged 读到一半停了，又从 the 起头
+
+[亮点]
+**准确率 97.8%，这一课最高的一次**
+    180 个词只错 4 处，第 23 页那 34 个词一个没错。
+"Glinda assured Dorothy that she could help her go back home, but in return, Dorothy **needed to give her the golden cap**."
+    开头这一句读得又稳又快，but in return 也断在了对的地方。
+"Glinda promised to ask the Winged Monkeys **to take him safely to the land of the Winkies**."
+    后半句一口气下来；最后一句 Winged Monkeys 也直接读对了 —— 上次三次都读成 wing。
+
+# 给孩子看的，一眼看完。说明给大人：
+# 卡壳 4 → 5，条数没少，但最久的那次从 9.3 秒缩到 3.7 秒，四次超过 7 秒的一次都没有了。
+#   比那行改看「卡住超过 5 秒」的次数（9/24：7.1 / 9.3 / 7.5 → 3 次；这次 0 次）——
+#   [卡壳] 条数是「≥2 秒的前几名」，两份口径不严格一样，比条数说明不了问题。模板里单位写死是「次」。
+# 田忌法接着用：上一次那组词里的 Winged 这次最后一处直接读对了，当面点给她听。
+#   这次卡的还是长词和名字（Scarecrow / well-liked / favorite），错的 intention / treated / once
+#   都是开读前念一遍就能避开的。
+[一个问题] 田忌法 | 这几个词先念熟，再读句子
+词 in-ten-tion=打算, well-liked=受欢迎, treat-ed=对待, once=一旦, fa-vor-ite=最喜欢的, Scare-crow=稻草人
+比 卡住超过 5 秒 | 3 | 0
+
+[斜线]
+The Scarecrow revealed
+his intention
+to return to the Emerald City,
+where he was well-liked
+by the people.
+
+[尺子]
+    97.8% 进了「要带一带」这一档 —— 比上一次（89.9%）往右挪了一大截。
+        180 个词错 4 处。once 那处听不太清、按错算了，如果其实读对了，是 98.3%，刚好够到「能自己读」。
+    78 个正确词/分钟，比上一次（58）快了 20，这一课第二快（第 11–12 页是 86）。
+        落在**三年级秋季 25 百分位**（59）和 **50 百分位**（83）之间，离 50 百分位差 5 个。
+        母语常模只当参照系，不是及格线。
+    平均 3.5 个词一组，比上一次（2.6）成串了；停顿占时长 25%，和上一次（23%）差不多。
+        卡住的时候还是一个词一个词往外挤，仍按第 2 级放着。
+
+[怎么来的]
+**准确率 97.8%**（读对 176 / 划线共 180 词）。替换、漏读、读错音计错；插入的词和退回去重读只算不流利、不计错。上面的比对列了 4 条、计错 4 处 —— 其中 1 条标 ? 的是 once 听不太清、按错算的。另外 Glinda、Tin Woodman、Lion 这几个名字，和 happily agreed、the animals there 这两处听不清是读错还是没听准，**没有计错**；想复核就听这几处，这个 97.8% 偏宽。
+**每分钟正确词数 78**（WCPM）= 读对的 176 个词 ÷ 136.1 秒 × 60。不算进来的有：第 23→24 页翻页那 3.3 秒、按下录音到开口和读完到停止录音那一小会儿。
+**断句**取 51 次停顿里断在句子中间的那些，平均 3.5 个词一组。第 23 页只算后半页 —— 前两句 9/24 那次已经读过了。
+录音是手机拍的点读视频，142.6 秒；停顿按「说话声级 − 10 dB、持续 ≥0.25 秒」数；比对基准是第 23 页后半、第 24 页划线框住的两段（180 词）。**发音一项是从转写结果推断的**，不如亲耳听准。
