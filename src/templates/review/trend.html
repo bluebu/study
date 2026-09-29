@@ -2,7 +2,7 @@
   趋势页：两条曲线 + 一张全量数据表。数据来自 storage/result/english/review.csv，
   **不是从 spec 现算的** —— 那张表必须真能被别的工具消费，所以这一页故意绕一圈读文件。
 
-  表在 390px 上放不下 8 列，靠 trend.css 的 media query 藏掉第 3/4/7 列，
+  表在 390px 上放不下 9 列，靠 trend.css 的 media query 藏掉第 3/4/7 列，
   外面再套一层 .scroll 兜底。日期只留月/日、slug 只留「课/页」也是为了这个。
 -#}
 <main class="wrap">
@@ -64,19 +64,19 @@
     <div class="scroll">
       <table class="tbl">
         <thead><tr><th>日期</th><th>课/页</th><th>词数</th><th>错</th>
-          <th>准确率</th><th>WCPM</th><th>几词一停</th><th>分</th></tr></thead>
+          <th>准确率</th><th>WCPM</th><th>几词一停</th><th>分</th><th>蓝思</th></tr></thead>
         <tbody>
 {% for r in rows %}
 {% if r.gap %}
-      <tr class="gap"><td>{{ r.date }}</td><td colspan="7">{{ r.pages }} 还没有成绩单</td></tr>
+      <tr class="gap"><td>{{ r.date }}</td><td colspan="8">{{ r.pages }} 还没有成绩单</td></tr>
 {% else %}
-      <tr><td>{{ r.date }}</td><td>{{ r.slug }}</td><td class="n">{{ r.words }}</td><td class="n">{{ r.errors }}</td><td class="n">{{ r.accuracy }}%</td><td class="n">{{ r.wcpm }}</td><td class="n">{{ r.per_group }}</td><td class="n" style="--s:{{ r.fg }}">{{ r.score }}</td></tr>
+      <tr><td>{{ r.date }}</td><td>{{ r.slug }}</td><td class="n">{{ r.words }}</td><td class="n">{{ r.errors }}</td><td class="n">{{ r.accuracy }}%</td><td class="n">{{ r.wcpm }}</td><td class="n">{{ r.per_group }}</td><td class="n" style="--s:{{ r.fg }}">{{ r.score }}</td><td class="n">{% if r.lexile %}{{ r.lexile }}L{% endif %}</td></tr>
 {% endif %}
 {% endfor %}
         </tbody>
       </table>
     </div>
     <p class="note">整张表在 <code>storage/result/english/review.csv</code>，
-      每次构建全量重算覆盖。</p>
+      每次构建全量重算覆盖。蓝思是课文的估算值（不是官方值），误差见每份报告末尾。</p>
   </section>
 </main>
