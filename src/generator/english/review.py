@@ -535,13 +535,9 @@ def hero(r: Report, *, lesson: bool = False, book: bool = False) -> dict:
     return {"title": title, "sub": dot_join(pieces)}
 
 
-# 蓝思从这一天起上报告（家长 9/29 提的，「从 0928 开始」）。csv 里历史每一行都算了 ——
-# 那是课文的属性、随时能重算；只是更早的报告页面不回头改
-LEXILE_FROM = "2026-09-28"
-
-
+# 蓝思是课文的属性、随时能重算，所以**每一份报告都出**（9/29 先从 9/28 起，当天家长要求历史全补上）
 def shows_lexile(r: "Report") -> bool:
-    return bool(r.lexile) and r.date >= LEXILE_FROM
+    return bool(r.lexile)
 
 
 def pretty_date(iso: str) -> str:
