@@ -57,6 +57,7 @@ from lib import lexile, methods, page, paths, sheet, spec as spec_lib, tmpl
 HERE = Path(__file__).parent
 sys.path.insert(0, str(HERE))
 import figures  # noqa: E402
+import level  # noqa: E402
 
 SPECS = paths.spec("english", "review")
 # 打卡单的 spec —— 只读，用来找「有点读作业、却还没有成绩单」的日子（pending_days）
@@ -1441,6 +1442,26 @@ def error_stats(limit_recent: int = 3) -> dict | None:
             "covered_pct": round(sum(x["rn"] for x in top) / rtotal * 100)}
 
 
+def level_ctx(rows: list[dict]) -> dict:
+    """趋势页顶上「现在的水平」：level.assess() 的数 + 一句人话 + 档位 / 常模位置。"""
+    lv = level.assess(rows)
+    m = {x["key"]: x for x in lv["metrics"]}
+    acc, wc = float(m["accuracy"]["level"]), float(m["wcpm"]["level"])
+    m["accuracy"]["zone"] = "能自己读" if acc >= 98 else "要带一带" if acc >= 95 else "偏难"
+    p10, p25, p50, p75, p90 = figures.ORF_FALL["三年级"]
+    pos = next((f"{a}–{b} 百分位之间" for (a, lo), (b, hi) in
+                zip(((10, p10), (25, p25), (50, p50), (75, p75)), ((25, p25), (50, p50), (75, p75), (90, p90)))
+                if lo <= wc < hi), "10 百分位以下" if wc < p10 else "90 百分位以上")
+    m["wcpm"]["zone"] = f"三年级秋季 {pos}"
+    m["score"]["zone"] = "四项加起来 100 分"
+    moves = [x for x in lv["metrics"] if x["cls"] != "flat"]
+    lv["lead"] = (f"{lv['n']} 次朗读看下来，准确率稳定在 {m['accuracy']['level']}% 上下（{m['accuracy']['zone']}），"
+                  f"每分钟读对 {m['wcpm']['level']} 个词上下。"
+                  + ("三项都还看不出在涨或在跌 —— 一次比一次的起伏，大多落在正常波动里。" if not moves else
+                     "、".join(f"{x['name']}{x['verdict']}" for x in moves) + "。"))
+    return lv
+
+
 def build_trend(out_dir: Path, pending: list[dict] | None = None) -> bool:
     """趋势页：两条曲线 + 一张全量数据表。
 
@@ -1484,6 +1505,8 @@ def build_trend(out_dir: Path, pending: list[dict] | None = None) -> bool:
     body = tmpl.body(
         "review/trend.html",
         n=len(rows),
+        lv=level_ctx(rows),
+        months=level.monthly(rows),
         accuracy_svg=figures.trend_svg(acc, 86, 100, (90, 95, 98), "准确率 %"),
         wcpm_svg=figures.trend_svg(wcpm, 0, 100, (0, 50, 100), "WCPM", "var(--c-listen)"),
         errs=error_stats(),

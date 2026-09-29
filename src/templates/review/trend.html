@@ -16,6 +16,50 @@
 {% endif %}
   </header>
 
+  <section class="chart level">
+    <h2>现在的水平</h2>
+    <p class="note">拿全部 {{ lv.n }} 次一起估，不是只看最新一次 —— 一次朗读换一段课文就会上下跳。</p>
+    <p class="lead">{{ lv.lead }}</p>
+    <div class="lv">
+{% for x in lv.metrics %}
+      <div class="lvc">
+        <p class="lvn">{{ x.name }}</p>
+        <p class="lvv">{{ x.level }}<small>{{ x.unit }}</small><span class="pm">± {{ x.band }}</span></p>
+        <p class="lvz">{{ x.zone }}</p>
+        <p class="lvs">单次正常会差 ± {{ x.swing }}{{ x.unit }} · 最新一次 {{ x.latest }}{{ x.unit }}</p>
+        <span class="chip {{ x.cls }}">{{ x.verdict }}</span>
+      </div>
+{% endfor %}
+    </div>
+    <p class="note"><b>怎么估的</b></p>
+    <ul class="how">
+      <li><b>回测挑估法</b> —— 站在每一次之前，只用它之前的记录去猜它，哪种猜法平均差得最少就用哪种（从第 4 次猜起，共猜了 {{ lv.tested }} 次）</li>
+{% for x in lv.metrics %}
+      <li>{{ x.name }}：挑中「{{ x.model }}」，平均差 {{ x.mae }}{{ x.unit }}；只看上一次会差 {{ x.mae_last }}{{ x.unit }}</li>
+{% endfor %}
+      <li><b>± 那个数</b>是水平本身的误差范围；<b>单次正常会差</b>是回测的平均误差 —— 下一次落在这个范围里，不算进步也不算退步</li>
+      <li><b>涨跌</b>看全部记录随日期的斜率，t 值不到 2 不下结论。课文蓝思和准确率几乎没关系，所以没按课文难度校正</li>
+    </ul>
+  </section>
+
+{% if months|length > 1 %}
+  <section class="chart">
+    <h2>按月看</h2>
+    <p class="note">一个月合起来算：准确率 = 读对的词 ÷ 总词数，WCPM = 读对的词 ÷ 总时长。
+      灰色的变化在一个月内的正常波动里，算不上涨跌。</p>
+    <div class="scroll">
+      <table class="tbl mon">
+        <thead><tr><th>月份</th><th>次数</th><th>词数</th><th>准确率</th><th>WCPM</th><th>分</th><th>课文蓝思</th></tr></thead>
+        <tbody>
+{% for m in months %}
+      <tr><td>{{ m.label }}</td><td class="n">{{ m.n }}</td><td class="n">{{ m.words }}</td><td class="n">{{ m.acc_s }}{% if m.d_acc %}<span class="chip {{ m.d_acc.cls }}" title="{{ m.d_acc.tip }}">{{ m.d_acc.text }}</span>{% endif %}</td><td class="n">{{ m.wcpm_s }}{% if m.d_wcpm %}<span class="chip {{ m.d_wcpm.cls }}" title="{{ m.d_wcpm.tip }}">{{ m.d_wcpm.text }}</span>{% endif %}</td><td class="n">{{ m.score_s }}</td><td class="n">{% if m.lexile %}约 {{ m.lexile }}L{% endif %}</td></tr>
+{% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+{% endif %}
+
   <section class="chart">
     <h2>准确率</h2>
     <p class="note">读对的词占划线原文的比例。98% 以上能自己读，95–97% 要带一带。</p>

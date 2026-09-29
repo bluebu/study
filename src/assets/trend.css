@@ -59,9 +59,9 @@
 /* 窄屏：8 列挤不下，把能从别处看到的三列收起来（词数 / 错 / 几词一停 ——
    每页的报告里都有）。留下日期、页、准确率、WCPM、分数这五列。 */
 @media (max-width: 560px){
-  .tbl th:nth-child(3), .tbl td:nth-child(3),
-  .tbl th:nth-child(4), .tbl td:nth-child(4),
-  .tbl th:nth-child(7), .tbl td:nth-child(7){ display: none; }
+  .tbl:not(.mon) th:nth-child(3), .tbl:not(.mon) td:nth-child(3),
+  .tbl:not(.mon) th:nth-child(4), .tbl:not(.mon) td:nth-child(4),
+  .tbl:not(.mon) th:nth-child(7), .tbl:not(.mon) td:nth-child(7){ display: none; }
   .tbl th, .tbl td{ padding: 7px 6px; }
 }
 
@@ -112,4 +112,28 @@
   /* .tbl 整体是 nowrap（数字列不许折），跨列这一格放开 —— 390px 上它得能折行，
      不然整张表被撑出横向滚动 */
   white-space: normal;
+}
+
+/* 现在的水平：一句结论 + 三张卡（准确率 / WCPM / 分数） */
+.level .lead{ margin: 4px 0 12px; font-size: .95rem; line-height: 1.6; }
+.lv{ display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 12px; }
+.lvc{ background: var(--english-bg); border-radius: 12px; padding: 12px; }
+.lvc p{ margin: 0; }
+.lvn{ font-size: .78rem; color: var(--ink-soft); }
+.lvv{ font-family: var(--font-display); font-size: 1.7rem; font-weight: 700; line-height: 1.25; }
+.lvv small{ font-size: .6em; margin-left: 1px; }
+.lvv .pm{ font-size: .5em; font-weight: 400; color: var(--ink-soft); margin-left: 6px; }
+.lvz{ font-size: .82rem; margin-top: 2px; }
+.lvs{ font-size: .74rem; color: var(--ink-soft); margin: 6px 0 8px !important; line-height: 1.45; }
+.chip{ display: inline-block; font-size: .72rem; font-weight: 700; border-radius: 999px; padding: 2px 8px; white-space: nowrap; }
+.chip.up{ background: var(--math-bg); color: var(--up); }
+.chip.down{ background: var(--chinese-bg); color: var(--down); }
+.chip.flat{ background: rgba(120,104,84,.08); color: var(--ink-soft); }
+.mon .chip{ display: block; width: max-content; margin: 3px 0 0 auto; }
+.how{ margin: 0; padding-left: 1.1em; color: var(--ink-soft); font-size: .78rem; line-height: 1.55; }
+.how li + li{ margin-top: 4px; }
+.how b{ color: var(--ink); font-weight: 600; }
+@media (max-width: 560px){
+  .lv{ grid-template-columns: 1fr; }
+  .mon th:nth-child(3), .mon td:nth-child(3){ display: none; }
 }

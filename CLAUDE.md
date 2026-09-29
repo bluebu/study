@@ -155,6 +155,7 @@ src/
       review.py       打卡评价：朗读成绩单（数只写 words / errors，其余算出来）
                       末尾落 storage/result/english/review.csv，再出趋势页
       figures.py      三把尺子 + 停顿地图 + 趋势曲线，常模数值是一手来源
+      level.py        趋势页顶上的「现在的水平」（回测挑估法）+ 逐月统计
       ket.py          词汇默写：CSV → A4 默写卷（单主题 / 合集 / 抽选卷 / 答案对照）
       homework.py     每日打卡：群公告 → 一张 A4 作业清单
       retell.py       复述故事：关键词按情节五阶段分组，看着讲一遍
